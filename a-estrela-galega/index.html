@@ -63,7 +63,7 @@
     /* ============================================================
        REVEAL anim
        ============================================================ */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out); }
+    .reveal { opacity: 0;  transition:opacity0.85s var(--ease-out); }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
@@ -835,6 +835,10 @@
   }
   </script>
 
+  <!-- ✦ FONTS-CRITICAL-PRELOAD-START ✦ -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/e463450c44.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/b78d0c75ff.woff2" crossorigin>
+    <!-- ✦ FONTS-CRITICAL-PRELOAD-END ✦ -->
   <!-- ✦ SELFHOST-FONTS-START ✦ -->
   <style>
 /* latin-ext */

@@ -226,8 +226,8 @@
     .inline-link:hover { border-bottom-color: var(--amber); }
 
     .reveal {
-      opacity: 0; transform: translateY(20px);
-      transition: opacity 0.9s var(--ease-cinema), transform 0.9s var(--ease-cinema);
+      opacity: 0; 
+      transition:opacity0.9s var(--ease-cinema);
       transition-delay: var(--delay, 0s);
     }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -1301,6 +1301,10 @@
     .map-cta:hover { background: var(--amber); color: var(--bg); }
     @media (max-width: 600px) { .map-wrap { aspect-ratio: 1/1; } }
   </style>
+  <!-- ✦ FONTS-CRITICAL-PRELOAD-START ✦ -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/389c62c3a9.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/326a7ed2df.woff2" crossorigin>
+    <!-- ✦ FONTS-CRITICAL-PRELOAD-END ✦ -->
   <!-- ✦ SELFHOST-FONTS-START ✦ -->
   <style>
 /* latin-ext */
