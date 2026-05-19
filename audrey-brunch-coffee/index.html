@@ -12,7 +12,11 @@
 <meta property="og:title" content="Audrey Brunch & Coffee · Almuerzo sin prisa en Sants">
 <meta property="og:description" content="Cafetería de almuerzo y café de especialidad en Carrer de la Creu Coberta 42, Sants, Barcelona.">
 <meta property="og:type" content="restaurant">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- ✦ FONTS-PRECONNECT-START ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-PRECONNECT-END ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -721,7 +725,7 @@ dialog.reserve-modal::backdrop{
     </div>
   </div>
   <div class="hero-photo reveal">
-    <img src="img/foto-brunch-1.jpg" alt="Croissant de jamón y queso fundido recién horneado en Audrey, Carrer de la Creu Coberta, Barcelona" loading="eager">
+    <img fetchpriority="high" loading="eager" decoding="async" src="img/foto-brunch-1.webp" alt="Croissant de jamón y queso fundido recién horneado en Audrey, Carrer de la Creu Coberta, Barcelona" loading="eager">
     <span class="hero-photo-label">Audrey · Carrer de la Creu Coberta 42</span>
   </div>
 </section>
@@ -730,13 +734,13 @@ dialog.reserve-modal::backdrop{
 <section class="gallery-section">
   <div class="gallery-grid">
     <figure class="gallery-item reveal">
-      <img src="img/foto-brunch-2.jpg" alt="Croissant de jamón y queso con café espresso servido en Audrey, Sants" loading="lazy">
+      <img decoding="async" src="img/foto-brunch-2.webp" alt="Croissant de jamón y queso con café espresso servido en Audrey, Sants" loading="lazy">
     </figure>
     <figure class="gallery-item reveal">
-      <img src="img/foto-interior.jpg" alt="Interior de Audrey con vitrina de bollería y pizarras del día en Hostafrancs, Barcelona" loading="lazy">
+      <img decoding="async" src="img/foto-interior.webp" alt="Interior de Audrey con vitrina de bollería y pizarras del día en Hostafrancs, Barcelona" loading="lazy">
     </figure>
     <figure class="gallery-item reveal">
-      <img src="img/foto-cafe.jpg" alt="Bandejas de bollería de la casa: croissants de chocolate y napolitanas recién horneadas" loading="lazy">
+      <img decoding="async" src="img/foto-cafe.webp" alt="Bandejas de bollería de la casa: croissants de chocolate y napolitanas recién horneadas" loading="lazy">
     </figure>
   </div>
 </section>
