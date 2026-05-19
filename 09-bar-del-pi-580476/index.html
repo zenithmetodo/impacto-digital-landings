@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bar del Pi — Comer frente a Santa Maria del Pi · Barri Gòtic, Barcelona</title>
+<meta name="description" content="Desde 1927 en la Plaça de Sant Josep Oriol, junto a la basílica gótica de Santa Maria del Pi. Tapas catalanas, vermut Miró de Reus, terraza con vistas a la iglesia del siglo XIV. Barri Gòtic, Barcelona.">
+<meta name="theme-color" content="#f0e6d2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Cormorant+Infant:ital,wght@1,500;1,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f0e6d2;
+  --bg-alt:#e6dcc0;
+  --bg-deep:#dcd1b0;
+  --fg:#2a1f12;
+  --fg-dim:#5c4a35;
+  --accent:#9c7e4a;
+  --accent-deep:#6b1e2e;
+  --accent-soft:#b29469;
+  --line:#c4b596;
+  --font-display:"Cormorant Garamond", "Times New Roman", serif;
+  --font-italic:"Cormorant Infant", "Cormorant Garamond", serif;
+  --font-body:"Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  --pad-x:clamp(20px, 5vw, 64px);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.7;
+  color:var(--fg);
+  background:var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(178,148,105,0.08), transparent 60%),
+    radial-gradient(ellipse at 80% 90%, rgba(107,30,46,0.04), transparent 60%);
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+.container{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad-x);padding-right:var(--pad-x)}
+
+/* ===== TOPBAR ===== */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(240,230,210,0.92);
+  backdrop-filter:saturate(140%) blur(8px);
+  -webkit-backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:var(--maxw);margin:0 auto;
+  padding:16px var(--pad-x);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:600;
+  font-size:clamp(22px, 3.4vw, 28px);
+  letter-spacing:0.5px;
+  color:var(--fg);
+  line-height:1;
+}
+.brand small{
+  display:block;
+  font-family:var(--font-body);
+  font-style:normal;
+  font-weight:500;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-top:4px;
+}
+.topnav{display:flex;align-items:center;gap:18px}
+.topnav a{font-size:13px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;color:var(--fg-dim);transition:color .2s}
+.topnav a:hover{color:var(--accent-deep)}
+.btn-tel{
+  border:1px solid var(--accent-deep);
+  color:var(--accent-deep);
+  padding:9px 18px;
+  border-radius:2px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.6px;
+  transition:all .2s;
+}
+.btn-tel:hover{background:var(--accent-deep);color:var(--bg)}
+@media (max-width:720px){
+  .topnav a:not(.btn-tel){display:none}
+}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  padding:clamp(60px, 9vw, 110px) 0 clamp(50px, 7vw, 90px);
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(28px, 5vw, 64px);
+  align-items:center;
+}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+}
+.hero-text .kicker{
+  display:inline-block;
+  font-family:var(--font-body);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:22px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--accent-soft);
+}
+.hero h1{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:700;
+  font-size:clamp(40px, 6.4vw, 76px);
+  line-height:1.02;
+  letter-spacing:-1px;
+  color:var(--fg);
+  margin-bottom:24px;
+}
+.hero h1 em{
+  font-family:var(--font-italic);
+  font-style:italic;
+  font-weight:500;
+  color:var(--accent-deep);
+}
+.hero-lede{
+  font-family:var(--font-display);
+  font-size:clamp(18px, 2vw, 21px);
+  line-height:1.55;
+  color:var(--fg-dim);
+  max-width:520px;
+  margin-bottom:36px;
+  font-weight:500;
+}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:14px 26px;
+  border-radius:2px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:all .25s;
+  border:1px solid;
+}
+.btn-primary{background:var(--accent-deep);color:var(--bg);border-color:var(--accent-deep)}
+.btn-primary:hover{background:#5a1827;border-color:#5a1827}
+.btn-outline{background:transparent;color:var(--fg);border-color:var(--fg)}
+.btn-outline:hover{background:var(--fg);color:var(--bg)}
+.btn-ghost{background:transparent;color:var(--accent);border-color:var(--accent-soft)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep)}
+
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:24px;
+  font-size:13px;color:var(--fg-dim);
+  padding-top:24px;border-top:1px solid var(--line);
+}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+.hero-meta strong{color:var(--fg);font-weight:600}
+
+.hero-photo{
+  position:relative;
+  background:var(--bg-alt);
+  padding:8px;
+  border:1px solid var(--accent-soft);
+  box-shadow:
+    0 1px 0 var(--bg),
+    0 0 0 1px var(--line),
+    0 30px 60px -20px rgba(42,31,18,0.18);
+}
+.hero-photo img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:center;
+}
+.hero-photo-caption{
+  position:absolute;
+  bottom:-14px;left:50%;transform:translateX(-50%);
+  background:var(--bg);
+  padding:6px 18px;
+  font-family:var(--font-italic);
+  font-style:italic;
+  font-size:13px;
+  color:var(--accent);
+  border:1px solid var(--accent-soft);
+  white-space:nowrap;
+}
+
+/* ===== ORNAMENT DIVIDER ===== */
+.ornament{
+  display:flex;align-items:center;justify-content:center;
+  gap:18px;
+  padding:48px 0;
+  color:var(--accent-soft);
+}
+.ornament::before, .ornament::after{
+  content:"";
+  height:1px;background:var(--line);
+  flex:1;max-width:160px;
+}
+.ornament svg{width:32px;height:32px;flex-shrink:0}
+
+/* ===== SECTION COMMON ===== */
+.section{padding:clamp(60px, 8vw, 96px) 0}
+.section-head{text-align:center;margin-bottom:56px}
+.section-kicker{
+  display:inline-block;
+  font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+}
+.section h2{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:clamp(34px, 4.8vw, 54px);
+  line-height:1.08;
+  letter-spacing:-0.5px;
+  color:var(--fg);
+}
+.section h2 em{
+  font-family:var(--font-italic);
+  font-style:italic;
+  color:var(--accent-deep);
+  font-weight:500;
+}
+
+/* ===== LA PLAZA ===== */
+.plaza{background:var(--bg-alt);position:relative}
+.plaza .plaza-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:clamp(28px, 5vw, 64px);
+  align-items:center;
+}
+@media (max-width:900px){
+  .plaza .plaza-grid{grid-template-columns:1fr}
+}
+.plaza-photo{
+  background:var(--bg);padding:8px;
+  border:1px solid var(--accent-soft);
+}
+.plaza-photo img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;
+}
+.manuscript{font-family:var(--font-display);font-size:19px;line-height:1.7;color:var(--fg-dim);max-width:560px}
+.manuscript p{margin-bottom:18px}
+.manuscript p:first-child::first-letter{
+  font-family:var(--font-display);
+  font-size:5em;
+  float:left;
+  line-height:0.8;
+  margin:6px 12px 0 0;
+  color:var(--accent-deep);
+  font-weight:700;
+  font-style:italic;
+}
+.manuscript em{color:var(--accent-deep);font-style:italic;font-family:var(--font-italic);font-weight:600}
+
+/* ===== LA CARTA ===== */
+.carta{position:relative}
+.carta-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:clamp(24px, 4vw, 48px) clamp(32px, 5vw, 64px);
+  margin-top:40px;
+}
+@media (max-width:760px){
+  .carta-grid{grid-template-columns:1fr}
+}
+.dish{
+  display:flex;gap:20px;
+  padding-bottom:28px;
+  border-bottom:1px dotted var(--line);
+}
+.dish-capital{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:700;
+  font-size:64px;
+  line-height:0.9;
+  color:var(--accent-deep);
+  flex-shrink:0;
+  width:54px;
+  text-align:center;
+}
+.dish-content h3{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:22px;
+  margin-bottom:6px;
+  color:var(--fg);
+}
+.dish-content h3 em{
+  font-family:var(--font-italic);
+  font-style:italic;
+  font-weight:500;
+  color:var(--accent);
+  font-size:0.9em;
+}
+.dish-content p{font-size:15px;line-height:1.6;color:var(--fg-dim)}
+.carta-note{
+  text-align:center;
+  margin-top:48px;
+  font-family:var(--font-italic);
+  font-style:italic;
+  font-size:16px;
+  color:var(--accent);
+}
+
+/* ===== LA TERRAZA ===== */
+.terraza{background:var(--bg-alt)}
+.terraza-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:clamp(28px, 5vw, 64px);
+  align-items:center;
+}
+@media (max-width:900px){
+  .terraza-grid{grid-template-columns:1fr}
+}
+.terraza-photo{
+  background:var(--bg);padding:8px;
+  border:1px solid var(--accent-soft);
+}
+.terraza-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+
+/* ===== DESDE 1927 ===== */
+.desde{
+  position:relative;
+  text-align:center;
+  padding:clamp(70px, 9vw, 120px) 0;
+  background:
+    linear-gradient(180deg, transparent, rgba(178,148,105,0.06) 30%, rgba(178,148,105,0.06) 70%, transparent),
+    var(--bg);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.desde-year{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:700;
+  font-size:clamp(120px, 22vw, 260px);
+  line-height:0.85;
+  color:var(--accent-deep);
+  letter-spacing:-6px;
+  margin-bottom:20px;
+}
+.desde-label{
+  font-family:var(--font-body);
+  font-size:11px;font-weight:600;letter-spacing:5px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:32px;
+}
+.desde-text{
+  font-family:var(--font-display);
+  font-size:clamp(20px, 2.4vw, 26px);
+  font-style:italic;
+  line-height:1.5;
+  color:var(--fg-dim);
+  max-width:680px;margin:0 auto;font-weight:500;
+}
+.desde-text em{color:var(--accent-deep);font-family:var(--font-italic)}
+
+.desde-stats{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  max-width:680px;margin:48px auto 0;
+  padding-top:36px;border-top:1px solid var(--line);
+}
+@media (max-width:600px){.desde-stats{grid-template-columns:1fr;gap:28px}}
+.stat-num{
+  font-family:var(--font-display);font-style:italic;
+  font-size:42px;font-weight:700;color:var(--accent-deep);line-height:1;
+}
+.stat-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fg-dim);margin-top:8px}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{
+  border-bottom:1px solid var(--line);
+  padding:32px 0;
+}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-q{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:clamp(22px, 2.6vw, 28px);
+  color:var(--fg);
+  margin-bottom:14px;
+  display:flex;align-items:baseline;gap:14px;
+}
+.faq-q::before{
+  content:"";
+  font-family:var(--font-italic);
+  font-style:italic;
+  font-size:0.7em;
+  color:var(--accent);
+  font-weight:500;
+}
+.faq-q em{font-family:var(--font-italic);font-style:italic;color:var(--accent-deep);font-weight:500}
+.faq-a{font-size:16px;line-height:1.75;color:var(--fg-dim);padding-left:34px;border-left:1px solid var(--accent-soft);margin-left:6px}
+
+/* ===== VISITA ===== */
+.visita{background:var(--bg-alt)}
+.visita-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(28px, 5vw, 56px);
+}
+@media (max-width:900px){.visita-grid{grid-template-columns:1fr}}
+.visita-info h3{
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:24px;
+  color:var(--fg);
+  margin-bottom:18px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--accent-soft);
+}
+.info-block{margin-bottom:32px;font-size:15px;line-height:1.7;color:var(--fg-dim)}
+.info-block strong{display:block;color:var(--fg);font-weight:600;margin-bottom:4px;font-family:var(--font-display);font-size:18px}
+.info-block .addr{font-family:var(--font-display);font-size:20px;color:var(--accent-deep);font-style:italic;font-weight:600;margin-bottom:4px}
+.hours-grid{display:grid;grid-template-columns:1fr auto;gap:6px 24px;margin-top:6px}
+.hours-grid span:nth-child(odd){font-weight:500;color:var(--fg)}
+.map-wrap{
+  position:relative;
+  background:var(--bg);padding:8px;
+  border:1px solid var(--accent-soft);
+  height:100%;min-height:400px;
+}
+.map-wrap iframe{width:100%;height:100%;min-height:380px;display:block;filter:sepia(20%) saturate(80%)}
+.map-overlay{
+  position:absolute;
+  left:24px;bottom:24px;
+  background:var(--bg);
+  padding:14px 18px;
+  border:1px solid var(--accent-soft);
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:15px;
+  color:var(--fg);
+  max-width:280px;
+  pointer-events:none;
+  box-shadow:0 10px 30px -10px rgba(42,31,18,0.2);
+}
+.map-overlay strong{display:block;color:var(--accent-deep);font-weight:700;margin-bottom:2px}
+
+/* ===== FOOTER ===== */
+.footer{
+  padding:64px 0 32px;
+  text-align:center;
+  border-top:1px solid var(--line);
+  background:var(--bg);
+}
+.footer-quote{
+  font-family:var(--font-italic);
+  font-style:italic;
+  font-size:clamp(20px, 2.6vw, 26px);
+  color:var(--fg-dim);
+  max-width:640px;margin:0 auto 32px;font-weight:500;line-height:1.5;
+}
+.footer-quote::before, .footer-quote::after{
+  content:"";
+  font-family:var(--font-display);
+  font-size:1.5em;
+  color:var(--accent-soft);
+  line-height:0;
+  vertical-align:-0.2em;
+}
+.footer-quote::before{margin-right:8px}
+.footer-quote::after{margin-left:8px}
+.footer-meta{
+  display:flex;justify-content:center;gap:20px;flex-wrap:wrap;
+  font-size:12px;color:var(--fg-dim);letter-spacing:1px;text-transform:uppercase;
+  padding-top:24px;border-top:1px solid var(--line);max-width:600px;margin:0 auto;
+}
+.footer-brand{
+  font-family:var(--font-display);font-style:italic;font-weight:600;
+  font-size:28px;color:var(--accent-deep);margin-bottom:24px;
+}
+
+/* ===== MODAL ===== */
+.modal-backdrop{
+  position:fixed;inset:0;
+  background:rgba(42,31,18,0.6);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  display:none;align-items:center;justify-content:center;
+  z-index:100;padding:20px;
+}
+.modal-backdrop.active{display:flex}
+.modal{
+  background:var(--bg);
+  border:1px solid var(--accent-soft);
+  max-width:500px;width:100%;
+  padding:36px clamp(24px, 5vw, 44px);
+  position:relative;
+  box-shadow:0 40px 80px -20px rgba(42,31,18,0.4);
+}
+.modal-close{
+  position:absolute;top:14px;right:18px;
+  font-size:24px;color:var(--accent);font-family:var(--font-display);
+  width:32px;height:32px;
+  display:flex;align-items:center;justify-content:center;
+}
+.modal h3{
+  font-family:var(--font-display);
+  font-style:italic;font-weight:700;
+  font-size:30px;
+  color:var(--accent-deep);
+  margin-bottom:8px;
+}
+.modal-sub{
+  font-size:13px;color:var(--fg-dim);margin-bottom:24px;letter-spacing:1px;text-transform:uppercase;
+}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.field input, .field select, .field textarea{
+  width:100%;
+  padding:12px 14px;
+  background:var(--bg-alt);
+  border:1px solid var(--line);
+  font-family:var(--font-body);font-size:15px;color:var(--fg);
+  border-radius:2px;
+  transition:border-color .2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:none;border-color:var(--accent-deep);
+}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.modal .btn-primary{width:100%;justify-content:center;margin-top:8px}
+.modal-note{font-size:12px;color:var(--fg-dim);margin-top:14px;text-align:center;font-style:italic}
+
+/* ===== UTIL ===== */
+@media (max-width:600px){
+  .hero{padding-top:40px}
+  .topbar-inner{padding:12px var(--pad-x)}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== TOPBAR ========== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      Bar del Pi
+      <small>Des de 1927</small>
+    </div>
+    <nav class="topnav">
+      <a href="#plaza">La Plaza</a>
+      <a href="#carta">La Carta</a>
+      <a href="#visita">Visita</a>
+      <a class="btn-tel" href="tel:+34933022123">Reservar · 93 302 21 23</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="kicker">Plaça de Sant Josep Oriol · Barri Gòtic</span>
+        <h1>Comer frente a <em>Santa Maria del Pi</em></h1>
+        <p class="hero-lede">
+          En la plaza más bohemia del Gòtic, a la sombra de una basílica gótica del siglo XIV. Tapas catalanas, vermut Miró de Reus servido del grifo y una terraza que mira directamente al rosetón de diez metros más grande de Cataluña.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="openModal()">Reservar mesa</button>
+          <a class="btn btn-outline" href="tel:+34933022123">Llamar 93 302 21 23</a>
+          <a class="btn btn-ghost" href="#visita">Cómo llegar</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>Desde 1927</strong> · familia Martí Pujol</span>
+          <span><strong>Mar — Dom</strong> · 9:00 a 23:00</span>
+          <span><strong>Patrimoni</strong> · Establiment Emblemàtic</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="img/bar-del-pi-vertical.jpg" alt="Fachada modernista del Bar del Pi en la Plaça de Sant Josep Oriol, con su característico letrero de vidrio esgrafiado y los pinos pintados a ambos lados de la puerta" width="2112" height="2816" loading="eager">
+        <div class="hero-photo-caption">Plaça de Sant Josep Oriol, 1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ORNAMENT ========== -->
+<div class="container">
+  <div class="ornament" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M16 4 L16 28 M4 16 L28 16 M16 4 Q20 8 16 12 Q12 8 16 4 Z M16 20 Q20 24 16 28 Q12 24 16 20 Z M4 16 Q8 12 12 16 Q8 20 4 16 Z M20 16 Q24 12 28 16 Q24 20 20 16 Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="16" cy="16" r="2.5"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ========== LA PLAZA ========== -->
+<section class="section plaza" id="plaza">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">El lugar</span>
+      <h2>La plaza <em>de los pintores</em></h2>
+    </div>
+    <div class="plaza-grid">
+      <div class="plaza-photo">
+        <img src="img/santa-maria-fachada.jpg" alt="Fachada gótica de la basílica de Santa Maria del Pi con su rosetón monumental y mercado en primer plano" width="960" height="1280" loading="lazy">
+      </div>
+      <div class="manuscript">
+        <p>
+          Pocos rincones de Barcelona reúnen tantos siglos en tan pocos metros cuadrados. La <em>Plaça de Sant Josep Oriol</em> ocupa el lugar donde se enterraba a los feligreses de la basílica desde el siglo XIV — un cementerio convertido hoy en uno de los espacios más vivos del Barri Gòtic.
+        </p>
+        <p>
+          A un costado se alza la basílica de <em>Santa Maria del Pi</em>, levantada entre 1319 y 1391, con su rosetón gótico de diez metros — el mayor de Cataluña — y un campanario octogonal que se ve desde media ciudad. Al otro lado, la terraza del Bar del Pi, abierta a la piedra dorada de la fachada lateral.
+        </p>
+        <p>
+          Cada sábado y domingo la plaza se llena de caballetes: los pintores del Pi exponen sus cuadros al aire libre, los músicos clásicos y de jazz dan recitales improvisados, y los locales y viajeros se mezclan en una atmósfera que algunos comparan con la <em>Place du Tertre</em> de Montmartre, aunque en versión gótica y mediterránea.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ORNAMENT ========== -->
+<div class="container">
+  <div class="ornament" aria-hidden="true">
+    <svg viewBox="0 0 40 16" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M2 8 Q10 2 20 8 Q30 14 38 8" stroke-linecap="round"/>
+      <circle cx="20" cy="8" r="2.5" fill="currentColor" stroke="none"/>
+      <circle cx="6" cy="8" r="1" fill="currentColor" stroke="none"/>
+      <circle cx="34" cy="8" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ========== LA CARTA ========== -->
+<section class="section carta" id="carta">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">La cocina</span>
+      <h2>Tapas catalanas <em>de siempre</em></h2>
+    </div>
+    <div class="carta-grid">
+      <div class="dish">
+        <div class="dish-capital">P</div>
+        <div class="dish-content">
+          <h3>Pa amb tomàquet <em>· pan con tomate</em></h3>
+          <p>El gesto más catalán del mundo: pan de payés tostado, ajo, tomate de colgar y aceite virgen. Servido con embutido del país o solo, para abrir boca.</p>
+        </div>
+      </div>
+      <div class="dish">
+        <div class="dish-capital">T</div>
+        <div class="dish-content">
+          <h3>Tortilla de patata <em>· l'especialitat</em></h3>
+          <p>«La mejor tortilla», escriben los clientes en los comentarios. Tradicional, jugosa, con cebolla pochada largo rato. Una sola receta, ningún atajo.</p>
+        </div>
+      </div>
+      <div class="dish">
+        <div class="dish-capital">B</div>
+        <div class="dish-content">
+          <h3>Bombas picantes <em>· del Pi</em></h3>
+          <p>Bolas de patata rellenas con carne picada, fritas al momento, bañadas en salsa brava y un toque de alioli suave. Para mojar con pan, sin servilleta.</p>
+        </div>
+      </div>
+      <div class="dish">
+        <div class="dish-capital">E</div>
+        <div class="dish-content">
+          <h3>Esqueixada de bacallà <em>· en fresc</em></h3>
+          <p>Bacalao desalado y desmigado a mano, con tomate, cebolla, pimiento, aceitunas negras y un buen chorro de aceite. Cataluña antigua en un plato frío.</p>
+        </div>
+      </div>
+      <div class="dish">
+        <div class="dish-capital">C</div>
+        <div class="dish-content">
+          <h3>Croquetas de jamón <em>· caseres</em></h3>
+          <p>Bechamel que se deshace, corazón cremoso, costra que cruje. Las hacen aquí, una a una, y se notan. Cinco por ración para no discutir.</p>
+        </div>
+      </div>
+      <div class="dish">
+        <div class="dish-capital">V</div>
+        <div class="dish-content">
+          <h3>Vermut Miró de Reus <em>· del grifo</em></h3>
+          <p>Tirado del barril, con su rodaja de naranja y su aceituna. El vermut catalán por excelencia, el que se pedía aquí ya en los años cuarenta.</p>
+        </div>
+      </div>
+    </div>
+    <p class="carta-note">— La carta cambia con la temporada. Pregunte por los <em>calçots</em> en invierno y los <em>tomates de payés</em> en verano —</p>
+  </div>
+</section>
+
+<!-- ========== LA TERRAZA ========== -->
+<section class="section terraza">
+  <div class="container">
+    <div class="terraza-grid">
+      <div class="terraza-photo">
+        <img src="img/placa-sant-josep-oriol.jpg" alt="La Plaça de Sant Josep Oriol con farolas, plataneros y gente sentada en el suelo, ambiente bohemio del Gòtic" width="1280" height="960" loading="lazy">
+      </div>
+      <div>
+        <span class="section-kicker">La terraza</span>
+        <h2 style="text-align:left;margin-bottom:24px">Una mesa <em>bajo la basílica</em></h2>
+        <div class="manuscript">
+          <p>
+            Si hay un sitio donde merece la pena pedir el aperitivo, es esta terraza. Las mesas están sobre el adoquinado de la plaza, las farolas se encienden poco a poco al caer la tarde, y al fondo se recorta la silueta gótica de Santa Maria del Pi.
+          </p>
+          <p style="font-family:var(--font-italic);font-style:italic;color:var(--accent-deep);font-size:18px">
+            Sentarse aquí no es sentarse en cualquier bar. Es sentarse en una de las plazas más fotografiadas de Barcelona, en uno de los pocos bares centenarios que aún quedan en pie en el Gòtic.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DESDE 1927 ========== -->
+<section class="desde">
+  <div class="container">
+    <div class="desde-label">Una historia que empieza en</div>
+    <div class="desde-year">1927</div>
+    <p class="desde-text">
+      El año en que <em>Pepita i Enric</em>, llegados del Priorat, abrieron este bar en un edificio del siglo XVIII. Dicen que el día de la apertura tiraron las llaves al mar — para no cerrarlo jamás. Casi un siglo después, sigue abierto.
+    </p>
+    <div class="desde-stats">
+      <div>
+        <div class="stat-num">1927</div>
+        <div class="stat-label">Año de fundación</div>
+      </div>
+      <div>
+        <div class="stat-num">XVIII</div>
+        <div class="stat-label">Siglo del edificio</div>
+      </div>
+      <div>
+        <div class="stat-num">14<span style="font-size:0.6em">th</span></div>
+        <div class="stat-label">Siglo · Santa Maria del Pi</div>
+      </div>
+    </div>
+    <p style="margin-top:48px;font-size:14px;color:var(--fg-dim);max-width:580px;margin-left:auto;margin-right:auto;font-style:italic;font-family:var(--font-display);font-size:17px;line-height:1.7">
+      Por aquí pasaron Hemingway, Joan Manuel Serrat, Mariscal y Rafael Alberti, cuyos dibujos y carteles originales todavía cuelgan de las paredes. En julio de 1936 se fundó dentro el <em>Partit Socialista Unificat de Catalunya</em>: una placa lo recuerda. El Bar del Pi es Establiment Emblemàtic de Barcelona — un patrimonio que se come, se bebe y se conversa.
+    </p>
+  </div>
+</section>
+
+<!-- ========== ORNAMENT ========== -->
+<div class="container">
+  <div class="ornament" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M16 4 L16 28 M4 16 L28 16 M16 4 Q20 8 16 12 Q12 8 16 4 Z M16 20 Q20 24 16 28 Q12 24 16 20 Z M4 16 Q8 12 12 16 Q8 20 4 16 Z M20 16 Q24 12 28 16 Q24 20 20 16 Z" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="16" cy="16" r="2.5"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">Preguntas frecuentes</span>
+      <h2>Antes de <em>cruzar la puerta</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><em>I.</em> ¿Hace falta reservar mesa?</div>
+        <div class="faq-a">
+          Recomendamos reservar para el almuerzo de viernes y para las cenas de fin de semana, especialmente si se quiere mesa en la terraza. Llámenos al <strong>93 302 21 23</strong> o use el formulario. En el resto de franjas suele haber sitio en barra y, con suerte, fuera.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><em>II.</em> ¿Qué horario tenéis?</div>
+        <div class="faq-a">
+          Abrimos de <strong>martes a domingo, de 9:00 a 23:00</strong>. Los lunes cerramos. Desayunos al despertar, vermut a partir de las 12, comidas, cervecitas de tarde y cena hasta las once. Cocina caliente durante todo el día.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><em>III.</em> ¿Cuánto cuesta comer aquí?</div>
+        <div class="faq-a">
+          Un menú a base de tapas y dos cañas o vermuts ronda los <strong>10 a 20 € por persona</strong>. Hay platillos para compartir y raciones más generosas si se viene a comer en serio. Sin pretensiones, sin sorpresas en la cuenta.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><em>IV.</em> ¿Cómo se llega desde La Rambla?</div>
+        <div class="faq-a">
+          Desde la <strong>Rambla</strong>, en el cruce con Carrer del Cardenal Casañas, se entra al Gòtic. Tres minutos a pie por callejones medievales y se desemboca en la Plaça del Pi, contigua a la Plaça de Sant Josep Oriol. El metro más cercano es <strong>Liceu (L3)</strong>, a 350 metros.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VISITA ========== -->
+<section class="section visita" id="visita">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-kicker">Visita</span>
+      <h2>Cómo <em>encontrarnos</em></h2>
+    </div>
+    <div class="visita-grid">
+      <div class="visita-info">
+        <div class="info-block">
+          <h3>Dirección</h3>
+          <div class="addr">Plaça de Sant Josep Oriol, 1</div>
+          <div>08002 Barcelona · Barri Gòtic · Ciutat Vella</div>
+        </div>
+        <div class="info-block">
+          <h3>Contacto</h3>
+          <strong>Reservas</strong>
+          <a href="tel:+34933022123" style="color:var(--accent-deep);font-weight:600">+34 933 02 21 23</a>
+        </div>
+        <div class="info-block">
+          <h3>Horario</h3>
+          <div class="hours-grid">
+            <span>Lunes</span><span style="color:var(--accent-deep);font-style:italic">cerrado</span>
+            <span>Martes</span><span>9:00 — 23:00</span>
+            <span>Miércoles</span><span>9:00 — 23:00</span>
+            <span>Jueves</span><span>9:00 — 23:00</span>
+            <span>Viernes</span><span>9:00 — 23:00</span>
+            <span>Sábado</span><span>9:00 — 23:00</span>
+            <span>Domingo</span><span>9:00 — 23:00</span>
+          </div>
+        </div>
+        <div class="info-block">
+          <h3>Cómo llegar</h3>
+          <div><strong style="font-family:var(--font-body);font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--accent)">Metro</strong> Liceu (L3) a 350 m · Catalunya (L1·L3) a 500 m</div>
+          <div style="margin-top:6px"><strong style="font-family:var(--font-body);font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--accent)">A pie</strong> Desde La Rambla por Cardenal Casañas, 3 min</div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=2.1727%2C41.3823%2C2.1747%2C41.3837&amp;layer=mapnik&amp;marker=41.3830%2C2.1737"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Bar del Pi en la Plaça de Sant Josep Oriol"></iframe>
+        <div class="map-overlay">
+          <strong>Bar del Pi</strong>
+          Plaça de Sant Josep Oriol, 1<br>
+          <span style="font-size:12px;color:var(--fg-dim);font-style:normal">Junto a la basílica de Santa Maria del Pi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">Bar del Pi</div>
+    <p class="footer-quote">
+      Sentir-se a casa en una plaça que ha vist passar set segles. Aquesta és la nostra manera d'entendre el Gòtic.
+    </p>
+    <div class="footer-meta">
+      <span>Plaça de Sant Josep Oriol, 1 · 08002 Barcelona</span>
+      <span>·</span>
+      <span>+34 933 02 21 23</span>
+      <span>·</span>
+      <span>Des de 1927</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== MODAL RESERVA ========== -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">×</button>
+    <h3 id="modal-title">Reservar mesa</h3>
+    <p class="modal-sub">Plaça de Sant Josep Oriol, 1</p>
+    <form onsubmit="event.preventDefault(); submitReserva();">
+      <div class="field">
+        <label for="r-name">Nombre</label>
+        <input id="r-name" type="text" required>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="r-phone">Teléfono</label>
+          <input id="r-phone" type="tel" required>
+        </div>
+        <div class="field">
+          <label for="r-people">Personas</label>
+          <select id="r-people" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="r-date">Fecha</label>
+          <input id="r-date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="r-time">Hora</label>
+          <input id="r-time" type="time" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="r-notes">Notas (opcional)</label>
+        <textarea id="r-notes" rows="2" placeholder="Terraza, intolerancias, ocasión..."></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Solicitar reserva</button>
+      <p class="modal-note">Le confirmaremos por teléfono en breve.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal(){document.getElementById('modal').classList.add('active');document.body.style.overflow='hidden'}
+function closeModal(){document.getElementById('modal').classList.remove('active');document.body.style.overflow=''}
+function submitReserva(){
+  closeModal();
+  alert('Gracias. Le llamamos para confirmar.\nSi es urgente: 93 302 21 23');
+}
+document.getElementById('modal').addEventListener('click', e => { if(e.target.id==='modal') closeModal(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+</script>
+
+<!-- ========== JSON-LD ========== -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Bar del Pi",
+  "image":"img/bar-del-pi-vertical.jpg",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Plaça de Sant Josep Oriol, 1",
+    "addressLocality":"Barcelona",
+    "postalCode":"08002",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":41.3830,"longitude":2.1737},
+  "telephone":"+34933022123",
+  "servesCuisine":["Catalana","Tapas","Mediterránea"],
+  "priceRange":"€€",
+  "foundingDate":"1927",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"23:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Hace falta reservar mesa?","acceptedAnswer":{"@type":"Answer","text":"Recomendamos reservar para almuerzos de viernes y cenas de fin de semana, especialmente para terraza. Teléfono 93 302 21 23."}},
+    {"@type":"Question","name":"¿Qué horario tenéis?","acceptedAnswer":{"@type":"Answer","text":"Abrimos martes a domingo de 9:00 a 23:00. Lunes cerrado."}},
+    {"@type":"Question","name":"¿Cuánto cuesta comer aquí?","acceptedAnswer":{"@type":"Answer","text":"Entre 10 y 20 euros por persona, con tapas y bebida."}},
+    {"@type":"Question","name":"¿Cómo se llega desde La Rambla?","acceptedAnswer":{"@type":"Answer","text":"Desde La Rambla por Carrer del Cardenal Casañas, tres minutos a pie hasta Plaça del Pi y Plaça de Sant Josep Oriol. Metro Liceu (L3) a 350 metros."}}
+  ]
+}
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  /* Critical: HTML5 hidden attribute must override display:flex above */
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card {
+    max-width: 640px;
+    text-align: center;
+  }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Bar%20del%20Pi%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Bar del Pi</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Bar%20del%20Pi%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Bar%20del%20Pi%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Bar del Pi y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  // Target absoluto: 2026-05-25T12:00:00+02:00 (Madrid, CEST UTC+2)
+  // Si alguien abre antes del inicio, ya ve countdown vivo hacia el final —
+  // refleja la urgencia desde el momento que Pedro envía el mensaje.
+  var DEADLINE = new Date("2026-05-25T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      // Expira: oculta toda la landing y muestra pantalla "Se acabó"
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      // Quita el padding-bottom para que la pantalla expirada ocupe todo
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+
+
+</body>
+</html>
