@@ -748,7 +748,41 @@
     /* Reveal */
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
-  </style>
+  
+/* ✦ OVERFLOW-FIX-START ✦ */
+/* Defensiva: ningún elemento se sale del viewport en ningún viewport. */
+html, body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+/* Wrappers de mapa (3 nombres usados por los 4 sub-agents):
+   map-wrap, mapa-wrap, .map  — todos limitados a su grid cell. */
+.map-wrap, .mapa-wrap, .visita .map, .map.reveal, .map {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+/* Replaced elements: nunca exceden su contenedor.
+   Crítico para iframe Google Maps con aspect-ratio + align-items: stretch. */
+.map-wrap iframe, .mapa-wrap iframe, .visita iframe, .map iframe {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: 0;
+}
+img, video, picture, iframe {
+  max-width: 100%;
+}
+/* CTAs absolutos dentro del wrap: nunca cortados, pero ojo con tamaño. */
+.map-cta, .mapa-cta {
+  max-width: calc(100% - 28px);
+}
+/* Grid items: min-width: 0 evita que el contenido empuje la columna. */
+.visita-grid > *, .visita > * {
+  min-width: 0;
+}
+/* ✦ OVERFLOW-FIX-END ✦ */
+</style>
 
   <script type="application/ld+json">
   {
