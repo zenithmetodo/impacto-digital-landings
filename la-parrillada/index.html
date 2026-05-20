@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>La Parrillada Grill Steak House · Asador argentino en Barceloneta, Barcelona</title>
+<meta name="description" content="Steak house argentino a un paso de la playa de la Barceloneta. Entraña, bife y empanadas a la parrilla. Carrer de Salamanca 1. Reservas +34 665 65 73 12." />
+<meta name="theme-color" content="#0d0907" />
+<!-- ✦ FONTS-PRECONNECT-START ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-PRECONNECT-END ✦ -->
+
+  <!-- ✦ HERO-PRELOAD-START ✦ -->
+  <link rel="preload" as="image" href="img/hero-parrillada.webp" fetchpriority="high">
+  <!-- ✦ HERO-PRELOAD-END ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/hero-parrillada.webp" fetchpriority="high">
+<!-- ✦ FONTS-CSS-PRELOAD-START ✦ -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <!-- ✦ FONTS-CSS-PRELOAD-END ✦ -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d0907;
+    --bg-alt:#161110;
+    --bg-soft:#1f1714;
+    --fg:#efe6da;
+    --fg-dim:#a08c79;
+    --accent:#c8472c;
+    --accent-warm:#e0b46a;
+    --leather:#5a3520;
+    --line:#2a1f1a;
+    --side-padding:clamp(20px,4.5vw,72px);
+    --display:'Bebas Neue', 'Arial Narrow', sans-serif;
+    --body:'Inter', system-ui, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);color:var(--fg);
+    font-family:var(--body);font-size:17px;line-height:1.65;font-weight:400;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+  .wrap{max-width:1280px;margin:0 auto;padding-left:var(--side-padding);padding-right:var(--side-padding)}
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(13,9,7,.9);
+    backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .tb-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px}
+  .brand{font-family:var(--display);font-size:clamp(24px,3vw,32px);letter-spacing:.08em;color:var(--fg)}
+  .brand .acc{color:var(--accent)}
+  .top-cta{
+    display:inline-flex;align-items:center;gap:8px;padding:11px 18px;
+    border:1.5px solid var(--accent-warm);color:var(--accent-warm);
+    border-radius:2px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;
+    text-transform:uppercase;min-height:44px;
+    transition:background .2s,color .2s;
+  }
+  .top-cta:hover{background:var(--accent-warm);color:var(--bg)}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:clamp(60px,10vw,120px) 0 clamp(60px,9vw,110px);
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(200,71,44,.15), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(224,180,106,.08), transparent 60%),
+      var(--bg);
+    overflow:hidden;
+  }
+  .hero-inner{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media(min-width:980px){.hero-inner{grid-template-columns:1.1fr 1fr;gap:60px}}
+  .kicker{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;
+    color:var(--accent-warm);text-transform:uppercase;
+    display:flex;align-items:center;gap:14px;margin-bottom:28px;
+  }
+  .kicker .bar{width:34px;height:1px;background:var(--accent-warm)}
+  h1.hero-title{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(48px,6vw + 1rem,92px);
+    line-height:.95;letter-spacing:.015em;
+    margin:0 0 24px;color:var(--fg);max-width:13ch;
+  }
+  h1.hero-title .red{color:var(--accent)}
+  .lede{
+    font-size:clamp(17px,1.5vw,19px);line-height:1.6;
+    color:var(--fg-dim);max-width:520px;margin:0 0 32px;
+  }
+  .lede strong{color:var(--fg);font-weight:600}
+
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 26px;min-height:50px;
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;
+    text-transform:uppercase;font-weight:500;border-radius:2px;
+    transition:transform .15s,background .2s,border-color .2s,color .2s;
+  }
+  .btn-primary{background:var(--accent);color:#fff;border:1.5px solid var(--accent)}
+  .btn-primary:hover{background:#a83a23;border-color:#a83a23;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--fg);border:1.5px solid var(--fg)}
+  .btn-ghost:hover{border-color:var(--accent-warm);color:var(--accent-warm)}
+
+  .hero-photo{
+    position:relative;border:1px solid var(--line);border-radius:2px;overflow:hidden;
+    background:var(--bg-alt);
+  }
+  .hero-photo img{width:100%;height:auto;display:block;filter:saturate(1.08) contrast(1.05)}
+  .hero-photo .badge{
+    position:absolute;left:18px;bottom:18px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+    color:var(--fg);text-transform:uppercase;
+    background:rgba(13,9,7,.85);padding:8px 12px;border-radius:2px;
+    border:1px solid var(--accent-warm);
+  }
+  .hero-photo .badge b{color:var(--accent-warm);font-weight:500}
+
+  /* SECTION */
+  section{padding:clamp(70px,9vw,120px) 0}
+  .section-head{margin-bottom:48px;display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px}
+  .section-num{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;
+    color:var(--accent-warm);text-transform:uppercase;margin-bottom:14px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .section-num .bar{width:30px;height:1px;background:var(--accent-warm)}
+  h2{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(42px,5.5vw,78px);line-height:.95;letter-spacing:.015em;
+    margin:0;color:var(--fg);max-width:13ch;
+  }
+  h2 .red{color:var(--accent)}
+  h2 .gold{color:var(--accent-warm)}
+  .section-intro{max-width:460px;color:var(--fg-dim);font-size:16px;line-height:1.65}
+
+  /* MOSTRADOR — la idea distintiva: tarjetas tipo "ficha de corte" */
+  #cortes{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cortes-grid{
+    display:grid;grid-template-columns:1fr;gap:16px;
+  }
+  @media(min-width:760px){.cortes-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1100px){.cortes-grid{grid-template-columns:repeat(3,1fr)}}
+  .ficha{
+    background:var(--bg-soft);border:1px solid var(--line);
+    padding:32px 26px 28px;display:flex;flex-direction:column;gap:14px;
+    transition:transform .2s,border-color .2s,background .2s;
+    position:relative;
+  }
+  .ficha:hover{transform:translateY(-3px);border-color:var(--accent-warm);background:#241a16}
+  .ficha-tag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;
+    color:var(--accent);text-transform:uppercase;
+  }
+  .ficha h3{
+    font-family:var(--display);font-weight:400;
+    font-size:32px;letter-spacing:.02em;margin:0;color:var(--fg);
+  }
+  .ficha .ico{
+    width:48px;height:48px;border:1px solid var(--line);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:6px;
+  }
+  .ficha .ico svg{width:24px;height:24px;stroke:var(--accent-warm);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .ficha p{margin:0;color:var(--fg-dim);font-size:15px;line-height:1.55}
+  .ficha-pin{
+    font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+    color:var(--accent-warm);text-transform:uppercase;
+    border-top:1px solid var(--line);padding-top:14px;margin-top:8px;
+  }
+
+  /* PLAYA — eje narrativo único: "del barrio de pescadores al asador" */
+  #playa{
+    background:
+      linear-gradient(180deg, var(--bg) 0%, #110b08 50%, var(--bg) 100%);
+  }
+  .playa-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;align-items:center;
+  }
+  @media(min-width:880px){.playa-grid{grid-template-columns:1fr 1.05fr;gap:56px}}
+  .playa-text p{font-size:17px;color:var(--fg-dim);line-height:1.7;margin:0 0 16px;max-width:48ch}
+  .playa-text p strong{color:var(--fg)}
+  .playa-cifras{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border:1px solid var(--line);margin-top:24px;
+  }
+  .playa-cifras .cif{
+    padding:22px 18px;border-right:1px solid var(--line);
+    text-align:left;
+  }
+  .playa-cifras .cif:last-child{border-right:none}
+  .playa-cifras .n{font-family:var(--display);font-size:38px;color:var(--accent-warm);line-height:1;margin-bottom:4px}
+  .playa-cifras .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--fg-dim);text-transform:uppercase}
+  .playa-photo{border:1px solid var(--line);overflow:hidden;background:var(--bg-alt)}
+  .playa-photo img{width:100%;height:auto;display:block;filter:saturate(1.05) contrast(1.04)}
+
+  /* GALERIA */
+  #galeria{background:var(--bg)}
+  .gal-grid{column-count:1;column-gap:14px}
+  @media(min-width:680px){.gal-grid{column-count:2}}
+  @media(min-width:1080px){.gal-grid{column-count:3}}
+  .gi{
+    display:block;break-inside:avoid;margin:0 0 14px;position:relative;overflow:hidden;
+    border:1px solid var(--line);background:var(--bg-alt);
+  }
+  .gi img{width:100%;height:auto;display:block;transition:transform .5s ease;filter:saturate(1.05) contrast(1.04)}
+  .gi:hover img{transform:scale(1.04)}
+  .gi-cap{
+    position:absolute;left:12px;bottom:10px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+    color:var(--fg);text-transform:uppercase;
+    background:rgba(13,9,7,.84);padding:6px 10px;border-radius:2px;
+  }
+
+  /* CARTA */
+  #carta{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .carta-grid{display:grid;grid-template-columns:1fr;gap:36px}
+  @media(min-width:960px){.carta-grid{grid-template-columns:1.2fr .8fr;gap:60px}}
+  .menu{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .menu li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:18px;
+    padding:22px 0;border-bottom:1px solid var(--line);
+  }
+  .menu .name{font-family:var(--display);font-size:26px;letter-spacing:.02em;color:var(--fg)}
+  .menu .desc{display:block;font-family:var(--body);font-size:13.5px;color:var(--fg-dim);margin-top:4px;font-weight:400}
+  .menu .dot{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-6px);min-width:24px}
+  .menu .price{font-family:var(--mono);font-size:13px;color:var(--accent-warm);letter-spacing:.04em}
+  .panel{background:var(--bg);padding:32px;border:1px solid var(--line)}
+  .panel .sub{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--accent-warm);text-transform:uppercase;margin-bottom:8px}
+  .panel h3{font-family:var(--display);font-weight:400;font-size:32px;letter-spacing:.02em;margin:0 0 6px;color:var(--fg)}
+  .panel h3 .red{color:var(--accent)}
+  .panel p{color:var(--fg-dim);font-size:15px;line-height:1.65;margin:0 0 18px}
+  .uva{display:flex;gap:8px;flex-wrap:wrap}
+  .uva span{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+    color:var(--fg);text-transform:uppercase;
+    padding:6px 11px;border:1px solid var(--line);
+  }
+
+  /* FAQ */
+  #faq{background:var(--bg)}
+  .faq{list-style:none;margin:0;padding:0;counter-reset:faq;border-top:1px solid var(--line)}
+  .faq li{
+    padding:28px 0;border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:auto 1fr;gap:22px;
+    counter-increment:faq;
+  }
+  @media(min-width:720px){.faq li{grid-template-columns:140px 1fr;gap:40px}}
+  .faq li::before{
+    content:counter(faq, decimal-leading-zero);
+    font-family:var(--display);font-size:clamp(44px,6vw,72px);
+    line-height:.85;color:var(--accent-warm);
+  }
+  .faq h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,28px);letter-spacing:.02em;margin:0 0 6px;color:var(--fg)}
+  .faq p{margin:0;color:var(--fg-dim);font-size:16px;line-height:1.65;max-width:62ch}
+
+  /* VISITA */
+  .visit{background:var(--bg-alt);border-top:1px solid var(--line)}
+  .visit-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+  @media(min-width:900px){.visit-grid{grid-template-columns:1fr 1.1fr;gap:56px}}
+  .vi{display:flex;flex-direction:column;gap:28px}
+  .vi .block{display:flex;flex-direction:column;gap:6px}
+  .vi .label{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--accent-warm);text-transform:uppercase}
+  .vi .val{font-size:17px;color:var(--fg);line-height:1.55}
+  .vi .val.addr{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,32px);letter-spacing:.02em;line-height:1.1}
+  .vi .val a:hover{color:var(--accent-warm)}
+  .hours{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .hours li{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:11px 14px;border-bottom:1px solid var(--line);
+  }
+  .hours .day{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg)}
+  .hours .time{font-family:var(--mono);font-size:12.5px;color:var(--fg-dim)}
+  .hours li.closed .time{font-style:italic}
+  .hours li.now{background:rgba(200,71,44,.12)}
+  .hours li.now .day,.hours li.now .time{color:var(--accent-warm)}
+  .hours li.now .day::before{content:"●";color:var(--accent);margin-right:8px;font-size:10px;vertical-align:middle}
+  .map{position:relative;border:1px solid var(--line);overflow:hidden;background:#0a0605;min-height:420px}
+  .map iframe{display:block;width:100%;height:100%;border:0;position:absolute;inset:0;filter:grayscale(.4) contrast(1.05) brightness(.85)}
+  .map-cta{
+    position:absolute;left:50%;bottom:18px;transform:translateX(-50%);
+    display:inline-flex;align-items:center;gap:8px;padding:12px 20px;min-height:44px;
+    background:var(--bg);border:1.5px solid var(--accent);color:var(--accent);
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    transition:background .2s,color .2s;z-index:2;white-space:nowrap;
+  }
+  .map-cta:hover{background:var(--accent);color:#fff}
+
+  /* FOOTER */
+  footer{padding:44px 0 32px;border-top:1px solid var(--line);background:#0a0605}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
+  .foot small{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--fg-dim);text-transform:uppercase}
+
+  /* DIALOG */
+  dialog{border:none;padding:0;background:transparent;max-width:480px;width:calc(100% - 32px);margin:auto}
+  dialog::backdrop{background:rgba(7,4,3,.78);backdrop-filter:blur(4px)}
+  .dl{background:var(--bg-alt);color:var(--fg);padding:34px 30px 28px;border:1px solid var(--accent-warm);position:relative}
+  .dl h3{font-family:var(--display);font-weight:400;font-size:32px;letter-spacing:.02em;margin:0 0 4px}
+  .dl h3 .red{color:var(--accent)}
+  .dl .sub{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--accent-warm);text-transform:uppercase;margin-bottom:22px}
+  .dl-x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--fg);font-size:20px}
+  .dl-x:hover{background:rgba(239,230,218,.08)}
+  .resv{display:flex;flex-direction:column;gap:14px}
+  .resv label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-warm);display:block;margin-bottom:4px}
+  .resv input,.resv select{width:100%;padding:12px 14px;min-height:44px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;border-radius:2px}
+  .resv input:focus,.resv select:focus{outline:none;border-color:var(--accent)}
+  .resv .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .resv button[type=submit]{margin-top:8px;background:var(--accent);color:#fff;padding:14px;min-height:48px;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;border-radius:2px}
+  .resv button[type=submit]:hover{background:#a83a23}
+  .dl-foot{margin-top:16px;font-size:13px;color:var(--fg-dim)}
+  .dl-foot a{color:var(--accent-warm);border-bottom:1px solid var(--line)}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="wrap tb-inner">
+    <a class="brand" href="#top">LA PARRILLADA<span class="acc">.</span></a>
+    <a class="top-cta" href="tel:+34665657312">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="kicker"><span class="bar"></span>Carrer de Salamanca, 1 · Barceloneta</p>
+      <h1 class="hero-title">Bife,<br/>brasa<br/>y <span class="red">mar</span>.</h1>
+      <p class="lede">Steak house argentino a <strong>cinco minutos andando de la playa</strong>. Entrañas, bifes y empanadas hechas como en Buenos Aires, en una calle tranquila del barrio marinero. Servicio diario, mediodía y noche.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" type="button" id="open-resv">Reservar mesa</button>
+        <a class="btn btn-ghost" href="tel:+34665657312">Llamar</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Carrer+de+Salamanca+1+08003+Barcelona" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+    <aside class="hero-photo reveal">
+      <img loading="lazy" src="img/hero-parrillada.webp" alt="Parrillada mixta del restaurante con bife, morcilla, chorizo, choclo y chimichurri" width="1000" height="644" fetchpriority="high" decoding="async">
+      <span class="badge"><b>·</b>Parrillada mixta · para compartir</span>
+    </aside>
+  </div>
+</section>
+
+<!-- CORTES -->
+<section id="cortes">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-num reveal"><span class="bar"></span>01 · La carta de cortes</p>
+        <h2 class="reveal">Seis fichas,<br/>una sola <span class="red">brasa</span>.</h2>
+      </div>
+      <p class="section-intro reveal">Cada corte tiene su tarjeta: punto recomendado, guarnición pareja, salsa de la casa. Así trabajamos cuando llegas a la mesa, así te lo contamos aquí.</p>
+    </div>
+    <div class="cortes-grid">
+      <article class="ficha reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12c2-4 6-6 9-5 3 1 4 4 4 4M21 12c-2 4-6 6-9 5-3-1-4-4-4-4"/></svg></div>
+        <span class="ficha-tag">Corte premium</span>
+        <h3>Bife de chorizo</h3>
+        <p>El más pedido. Lomo bajo grueso, sellado por fuera, jugoso por dentro. Llega con chimichurri y patatas a la provenzal.</p>
+        <span class="ficha-pin">Punto recomendado · jugoso</span>
+      </article>
+      <article class="ficha reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 8h18l-2 12H5z"/><path d="M3 8l2-3h14l2 3"/><path d="M8 8v12M16 8v12"/></svg></div>
+        <span class="ficha-tag">Especialidad</span>
+        <h3>Entraña</h3>
+        <p>Pieza fina y fibrosa, vuelta y vuelta sobre la parrilla. Sale con sal en escamas y chimichurri verde, como en cualquier asador porteño.</p>
+        <span class="ficha-pin">Punto recomendado · sellada</span>
+      </article>
+      <article class="ficha reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="9" ry="6"/><path d="M3 12c0-3 4-5 9-5s9 2 9 5"/></svg></div>
+        <span class="ficha-tag">Tradicional</span>
+        <h3>Asado de tira</h3>
+        <p>Costilla cortada en tiras, con hueso. Cocción lenta hasta que la carne suelta del hueso sin esfuerzo. Para los que vienen a comer en serio.</p>
+        <span class="ficha-pin">Punto recomendado · bien hecho</span>
+      </article>
+      <article class="ficha reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 8c0-1 2-3 7-3s7 2 7 3v8c0 1-2 3-7 3s-7-2-7-3z"/><path d="M5 12c2 1 4 2 7 2s5-1 7-2"/></svg></div>
+        <span class="ficha-tag">Para compartir</span>
+        <h3>Parrillada mixta</h3>
+        <p>Tabla de varios cortes: entraña, bife, morcilla, chorizo criollo, mollejas. Sale con choclo, papas y dos chimichurris. Para dos o tres.</p>
+        <span class="ficha-pin">Para 2-3 personas</span>
+      </article>
+      <article class="ficha reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12c2-2 6-2 9 0s7 2 9 0"/><path d="M3 16c2-2 6-2 9 0s7 2 9 0"/><path d="M8 8h8"/></svg></div>
+        <span class="ficha-tag">De entrada</span>
+        <h3>Choripán</h3>
+        <p>Chorizo criollo abierto a la parrilla, pan crujiente, chimichurri y salsa criolla. El bocado obligado antes del corte fuerte.</p>
+        <span class="ficha-pin">Comparte o entra solo</span>
+      </article>
+      <article class="ficha reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M6 6c-2 4 0 9 6 11 6-2 8-7 6-11"/><path d="M9 8c2-2 4-2 6 0"/></svg></div>
+        <span class="ficha-tag">Imprescindible</span>
+        <h3>Empanadas argentinas</h3>
+        <p>Masa frita o al horno, repulgue a mano. De carne con huevo, pollo, queso azul. Llegan en tabla con chimichurri suave para mojar.</p>
+        <span class="ficha-pin">Unidad o tabla</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYA — eje narrativo único -->
+<section id="playa">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-num reveal"><span class="bar"></span>02 · El barrio</p>
+        <h2 class="reveal">Del mar<br/>a la <span class="gold">parrilla</span>.</h2>
+      </div>
+      <p class="section-intro reveal">La Barceloneta es un barrio de pescadores. Y aquí, en una calle interior y tranquila, traemos a Argentina al lado del Mediterráneo. Tres cuadras del agua, los manteles puestos, la brasa encendida.</p>
+    </div>
+    <div class="playa-grid">
+      <div class="playa-text reveal">
+        <p>La Barceloneta es callejones estrechos, ropa tendida y chiringuitos. Nosotros estamos en uno de esos rincones que <strong>los locales se guardan para ellos</strong>: una calle interior, sin tráfico, sin pose turística.</p>
+        <p>Bajan los vecinos a tomar el aperitivo. Suben los que vienen de la playa a comer fuerte después del baño. <strong>Cocina argentina, mesa larga, sin prisas</strong>. Como debe ser cuando hay carne de por medio y el reloj no manda.</p>
+        <p>Sin reserva los fines de semana se complica: el comedor es pequeño y se llena rápido. Una llamada de día y medio antes suele resolverlo.</p>
+        <ul class="playa-cifras">
+          <li class="cif"><div class="n">3 min</div><div class="l">A la playa</div></li>
+          <li class="cif"><div class="n">2</div><div class="l">Turnos al día</div></li>
+          <li class="cif"><div class="n">4,8</div><div class="l">Estrellas / 1.700</div></li>
+        </ul>
+      </div>
+      <div class="playa-photo reveal">
+        <img src="img/bife-bandera.webp" alt="Bife sobre tabla con bandera argentina y patata asada en el comedor del restaurante" width="1400" height="1866" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-num reveal"><span class="bar"></span>03 · La parrilla</p>
+        <h2 class="reveal">Lo que sale<br/>del <span class="red">fuego</span>.</h2>
+      </div>
+      <p class="section-intro reveal">Fotos reales del comedor y la cocina. Cortes saliendo, chimichurri preparado al momento, mesa puesta como en cualquier asador de Buenos Aires.</p>
+    </div>
+    <div class="gal-grid">
+      <figure class="gi reveal">
+        <img src="img/choripan.webp" alt="Choripán argentino con chorizo abierto, chimichurri y tomate" width="1400" height="895" loading="lazy" decoding="async">
+        <figcaption class="gi-cap">Choripán</figcaption>
+      </figure>
+      <figure class="gi reveal">
+        <img src="img/entrana-sangria.webp" alt="Entraña sobre tabla de pizarra con chimichurri y sangría de la casa" width="1400" height="1866" loading="lazy" decoding="async">
+        <figcaption class="gi-cap">Entraña + sangría</figcaption>
+      </figure>
+      <figure class="gi reveal">
+        <img src="img/entrana-corte.webp" alt="Entraña entera servida con bandera argentina y chimichurri sobre tabla" width="1400" height="1866" loading="lazy" decoding="async">
+        <figcaption class="gi-cap">Entraña entera</figcaption>
+      </figure>
+      <figure class="gi reveal">
+        <img src="img/empanadas.webp" alt="Empanadas argentinas fritas con chimichurri y salsa criolla" width="1400" height="1866" loading="lazy" decoding="async">
+        <figcaption class="gi-cap">Empanadas</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA Y BODEGA -->
+<section id="carta">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-num reveal"><span class="bar"></span>04 · Carta corta</p>
+        <h2 class="reveal">Lo que <span class="red">rodea</span><br/>al corte.</h2>
+      </div>
+      <p class="section-intro reveal">Empanadas, ensaladas, guarniciones y un puñado de vinos argentinos que aguantan la mesa. Sin sobreelaboración: lo que pide la carne.</p>
+    </div>
+    <div class="carta-grid">
+      <ul class="menu reveal">
+        <li>
+          <div><span class="name">Empanadas argentinas</span><span class="desc">De carne con huevo, pollo o queso azul. Masa fina, repulgue a mano. 2 unidades.</span></div>
+          <span class="dot"></span><span class="price">Entrante</span>
+        </li>
+        <li>
+          <div><span class="name">Provoleta</span><span class="desc">Queso provolone fundido a la parrilla con orégano. Una rebanada de pan y a mojar.</span></div>
+          <span class="dot"></span><span class="price">Entrante</span>
+        </li>
+        <li>
+          <div><span class="name">Chorizo criollo</span><span class="desc">Abierto al medio sobre la parrilla. Servido vuelta y vuelta, con chimichurri.</span></div>
+          <span class="dot"></span><span class="price">Entrante</span>
+        </li>
+        <li>
+          <div><span class="name">Paella de pulpo y sobrasada</span><span class="desc">Guiño al mar y a Mallorca. Para mesa grande, encargo de día y medio antes.</span></div>
+          <span class="dot"></span><span class="price">Compartir</span>
+        </li>
+        <li>
+          <div><span class="name">Patatas a la provenzal</span><span class="desc">Salteadas con perejil y ajo. La guarnición clásica del bife.</span></div>
+          <span class="dot"></span><span class="price">Guarnición</span>
+        </li>
+        <li>
+          <div><span class="name">Ensalada criolla</span><span class="desc">Tomate, cebolla y morrón cortados a cuchillo. Fresca y necesaria entre cortes.</span></div>
+          <span class="dot"></span><span class="price">Guarnición</span>
+        </li>
+      </ul>
+      <aside class="panel reveal">
+        <p class="sub">Bodega argentina</p>
+        <h3>Vinos que <span class="red">aguantan</span> la mesa.</h3>
+        <p>Tintos de Mendoza con cuerpo para los cortes grasos, blancos de Cafayate y Salta para los entrantes. Tenemos también sangría de la casa para los que aún no se animan a un Malbec a las tres de la tarde.</p>
+        <div class="uva">
+          <span>Malbec</span><span>Bonarda</span><span>Cabernet</span><span>Torrontés</span><span>Syrah</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-num reveal"><span class="bar"></span>05 · Preguntas frecuentes</p>
+        <h2 class="reveal">Antes de<br/><span class="gold">venir</span>.</h2>
+      </div>
+      <p class="section-intro reveal">Lo que más nos preguntan al teléfono. Si la tuya no está, llámanos: contestamos rápido.</p>
+    </div>
+    <ol class="faq">
+      <li class="reveal">
+        <div>
+          <h3>¿Aceptan reservas?</h3>
+          <p>Sí, y en fines de semana es casi obligatorio. El comedor es pequeño y se llena. Llámanos con día y medio de antelación, o usa el formulario de la web. Para grupos de cinco o más, mejor por teléfono para cuadrar la mesa larga.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div>
+          <h3>¿De dónde es la carne?</h3>
+          <p>Trabajamos con carne argentina importada y, cuando toca, los mejores cortes nacionales. Cada pieza se elige a mano antes de entrar en cámara. Sin congelados: lo que llega a la parrilla pasó esa semana por las manos del asador.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div>
+          <h3>¿Hay opciones vegetarianas?</h3>
+          <p>Sí. Provoleta a la parrilla, ensalada criolla, patatas, verduras asadas y empanadas de queso azul. No somos cien por cien carnívoros: si vienes con alguien que no come carne, no hace falta cambiar de restaurante.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div>
+          <h3>¿Aceptan grupos grandes?</h3>
+          <p>Sí, hasta doce-catorce personas si avisas con tiempo. Tenemos menú cerrado con asado de tira, empanadas y guarniciones, ideal para cumpleaños o despedidas. Llámanos y lo cuadramos a tu medida.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- VISITA -->
+<section id="visita" class="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="section-num reveal"><span class="bar"></span>06 · Visítanos</p>
+        <h2 class="reveal">En la <span class="red">Barceloneta</span>.</h2>
+      </div>
+      <p class="section-intro reveal">Servicio de mediodía y noche, todos los días. La calle es interior, tranquila — la encuentras fácil saliendo de la parada de metro Barceloneta y caminando hacia el mar.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="vi reveal">
+        <div class="block">
+          <span class="label">Dirección</span>
+          <span class="val addr">Carrer de Salamanca, 1</span>
+          <span class="val" style="color:var(--fg-dim);font-size:14px;font-family:var(--mono);letter-spacing:.08em">08003 Barcelona · Barceloneta</span>
+        </div>
+        <div class="block">
+          <span class="label">Horario</span>
+          <ul class="hours" aria-label="Horario de apertura">
+            <li><span class="day">Lunes</span><span class="time">13:00 – 23:30</span></li>
+            <li><span class="day">Martes</span><span class="time">13:00 – 23:30</span></li>
+            <li><span class="day">Miércoles</span><span class="time">13:00 – 23:30</span></li>
+            <li><span class="day">Jueves</span><span class="time">13:00 – 23:30</span></li>
+            <li><span class="day">Viernes</span><span class="time">13:00 – 23:30</span></li>
+            <li><span class="day">Sábado</span><span class="time">13:00 – 23:30</span></li>
+            <li><span class="day">Domingo</span><span class="time">13:00 – 23:30</span></li>
+          </ul>
+        </div>
+        <div class="block">
+          <span class="label">Teléfono</span>
+          <span class="val"><a href="tel:+34665657312">+34 665 65 73 12</a></span>
+        </div>
+        <div class="block">
+          <span class="label">Cómo llegar</span>
+          <span class="val" style="color:var(--fg-dim);font-size:15px">Metro Barceloneta (L4) a 4 minutos a pie. La calle es interior y peatonal en los últimos metros.</span>
+        </div>
+        <div class="cta-row" style="margin-top:4px">
+          <button class="btn btn-primary" type="button" id="open-resv-2">Reservar mesa</button>
+          <a class="btn btn-ghost" href="tel:+34665657312">Llamar</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=Carrer+de+Salamanca+1+08003+Barcelona&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de La Parrillada Grill Steak House"></iframe>
+        <a class="map-cta" href="https://www.google.com/maps/search/?api=1&query=Carrer+de+Salamanca+1+08003+Barcelona" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top">LA PARRILLADA<span class="acc">.</span></a>
+    <small>Parrilla argentina · Barceloneta · Barcelona</small>
+    <small>© La Parrillada Grill Steak House</small>
+  </div>
+</footer>
+
+<dialog id="resv-dialog" aria-labelledby="rt">
+  <div class="dl">
+    <button class="dl-x" type="button" aria-label="Cerrar" id="close-resv">&times;</button>
+    <h3 id="rt">Reserva tu <span class="red">mesa</span></h3>
+    <p class="sub">Carrer de Salamanca 1 · Barceloneta</p>
+    <form class="resv" onsubmit="event.preventDefault(); window.location.href='tel:+34665657312';">
+      <div><label for="r-name">Nombre</label><input id="r-name" type="text" required placeholder="Tu nombre"></div>
+      <div class="row">
+        <div><label for="r-date">Día</label><input id="r-date" type="date" required></div>
+        <div><label for="r-time">Hora</label>
+          <select id="r-time" required>
+            <option value="">Elegir</option>
+            <option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option>
+            <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div><label for="r-people">Personas</label>
+          <select id="r-people" required>
+            <option value="">Nº</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option>
+          </select>
+        </div>
+        <div><label for="r-phone">Teléfono</label><input id="r-phone" type="tel" required placeholder="+34..."></div>
+      </div>
+      <button type="submit">Confirmar por teléfono</button>
+    </form>
+    <p class="dl-foot">O llámanos al <a href="tel:+34665657312">+34 665 65 73 12</a>.</p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"La Parrillada Grill Steak House","description":"Steak house argentino en la Barceloneta. Bifes, entrañas, empanadas y vinos argentinos.","servesCuisine":["Cocina argentina","Asado","Parrilla","Steakhouse"],"telephone":"+34665657312","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Carrer de Salamanca 1","addressLocality":"Barcelona","postalCode":"08003","addressRegion":"Cataluña","addressCountry":"ES"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"13:00","closes":"23:30"}],"acceptsReservations":true}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Aceptan reservas?","acceptedAnswer":{"@type":"Answer","text":"Sí, recomendamos reservar con día y medio de antelación, especialmente fines de semana. Por teléfono o formulario web."}},
+{"@type":"Question","name":"¿De dónde es la carne?","acceptedAnswer":{"@type":"Answer","text":"Carne argentina importada y los mejores cortes nacionales. Sin congelados, seleccionada pieza por pieza."}},
+{"@type":"Question","name":"¿Hay opciones vegetarianas?","acceptedAnswer":{"@type":"Answer","text":"Sí: provoleta, ensaladas, patatas, verduras a la parrilla y empanadas de queso."}},
+{"@type":"Question","name":"¿Aceptan grupos grandes?","acceptedAnswer":{"@type":"Answer","text":"Hasta doce-catorce personas con menú cerrado de asado de tira y empanadas. Llamar por teléfono."}}
+]}
+</script>
+
+<script>
+(function(){
+  var dlg=document.getElementById('resv-dialog');
+  var o1=document.getElementById('open-resv'), o2=document.getElementById('open-resv-2'), c=document.getElementById('close-resv');
+  function openD(){ if(typeof dlg.showModal==='function'){dlg.showModal();} else {dlg.setAttribute('open','');} }
+  if(o1)o1.addEventListener('click',openD);
+  if(o2)o2.addEventListener('click',openD);
+  if(c)c.addEventListener('click',function(){dlg.close&&dlg.close();dlg.removeAttribute('open');});
+  dlg.addEventListener('click',function(e){
+    var r=dlg.querySelector('.dl').getBoundingClientRect();
+    if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom){dlg.close&&dlg.close();dlg.removeAttribute('open');}
+  });
+  // Hoy
+  (function(){
+    var items=document.querySelectorAll('.hours li');
+    if(!items.length)return;
+    var jsDay=new Date().getDay();
+    var idx=jsDay===0?6:jsDay-1;
+    items[idx]&&items[idx].classList.add('now');
+  })();
+  // Reveal
+  var io=new IntersectionObserver(function(ents){
+    ents.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in');});},2500);
+})();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20La%20Parrillada%20Grill%20Steak%20House%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>La Parrillada Grill Steak House</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20La%20Parrillada%20Grill%20Steak%20House%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20La%20Parrillada%20Grill%20Steak%20House%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de La Parrillada Grill Steak House y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-27T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+</body>
+</html>

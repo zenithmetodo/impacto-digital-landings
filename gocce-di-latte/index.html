@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gocce di Latte — Gelato artigianale italiano en Pla de Palau, Barcelona</title>
+<meta name="description" content="Gelato italiano artesano, sin gluten y sin lactosa. Pistacho, tiramisú, crema bruciata y sabores de temporada. Pla de Palau 4, Barcelona — abierto cada día.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Gocce di Latte — Gelato artigianale en Barcelona">
+<meta property="og:description" content="Gelato italiano de receta, sin lactosa, sin gluten. Cada día, abierto hasta tarde.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<!-- ✦ FONTS-PRECONNECT-START ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-PRECONNECT-END ✦ -->
+
+  <!-- ✦ HERO-PRELOAD-START ✦ -->
+  <link rel="preload" as="image" href="img/gelato-bertinelli.webp" fetchpriority="high">
+  <!-- ✦ HERO-PRELOAD-END ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/gelato-bertinelli.webp" fetchpriority="high">
+<style>
+  :root{
+    --bg:#fbf5ed;
+    --bg-alt:#f4ebd9;
+    --paper:#ffffff;
+    --fg:#1f1813;
+    --fg-dim:#7a695a;
+    --pistacchio:#7fa356;
+    --pistacchio-deep:#4f7036;
+    --cioccolato:#5a3a26;
+    --cioccolato-deep:#3a2317;
+    --caramello:#c69a6a;
+    --crema:#f0d8a8;
+    --fragola:#d24b6a;
+    --vaniglia:#fbe9c2;
+    --line:#e5d6b8;
+    --side-padding:clamp(1.25rem,3vw + 0.5rem,2.75rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--fg);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;max-width:1180px;margin:0 auto;
+    padding-left:var(--side-padding);padding-right:var(--side-padding);
+    position:relative;z-index:1;
+  }
+  .h-display{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.0;letter-spacing:-0.01em}
+  .kicker{
+    font-family:'Inter',sans-serif;text-transform:uppercase;
+    letter-spacing:0.24em;font-size:11px;color:var(--pistacchio-deep);font-weight:600;
+  }
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,245,237,0.94);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  .brand{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:28px;color:var(--cioccolato-deep);font-weight:600;letter-spacing:-0.005em;
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .brand-dot{width:8px;height:8px;border-radius:50%;background:var(--pistacchio);display:inline-block;position:relative;top:-3px}
+  .brand-tag{
+    font-family:'Inter',sans-serif;font-style:normal;font-size:11px;
+    text-transform:uppercase;letter-spacing:0.18em;color:var(--fg-dim);font-weight:500;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;padding:10px 18px;
+    background:var(--cioccolato);color:#fff;border-radius:999px;
+    font-size:13px;font-weight:600;transition:background .25s;
+  }
+  .tel-btn:hover{background:var(--cioccolato-deep)}
+
+  /* HERO */
+  .hero{padding-top:60px;padding-bottom:90px;position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;top:-60px;right:-80px;width:340px;height:340px;
+    background:radial-gradient(circle,var(--vaniglia) 0%,transparent 70%);
+    opacity:0.6;pointer-events:none;
+  }
+  .hero::after{
+    content:"";position:absolute;bottom:-60px;left:-80px;width:280px;height:280px;
+    background:radial-gradient(circle,rgba(127,163,86,0.18) 0%,transparent 70%);
+    opacity:0.5;pointer-events:none;
+  }
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media (min-width:880px){.hero-grid{grid-template-columns:1fr 1fr;gap:72px}}
+  .hero h1{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:clamp(42px,5.8vw + 0.5rem,86px);
+    line-height:1.0;color:var(--cioccolato-deep);letter-spacing:-0.015em;margin:18px 0 26px;
+  }
+  .hero h1 em{font-style:italic;color:var(--pistacchio-deep)}
+  .hero h1 .accent{color:var(--fragola);font-style:italic}
+  .hero-lede{
+    font-size:18px;color:var(--fg-dim);margin-bottom:32px;max-width:480px;line-height:1.6;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;
+    font-weight:600;font-size:14.5px;transition:all 0.25s;
+    border:1.5px solid transparent;min-height:44px;
+  }
+  .btn-primary{background:var(--pistacchio);color:#fff}
+  .btn-primary:hover{background:var(--pistacchio-deep);transform:translateY(-1px)}
+  .btn-secondary{background:var(--cioccolato);color:#fff}
+  .btn-secondary:hover{background:var(--cioccolato-deep);transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--cioccolato);color:var(--cioccolato)}
+  .btn-ghost:hover{background:var(--cioccolato);color:#fff}
+
+  .hero-img-wrap{position:relative}
+  .hero-img-wrap img{
+    border-radius:24px;width:100%;height:auto;
+    box-shadow:0 32px 80px -24px rgba(90,58,38,0.4),0 12px 30px -12px rgba(127,163,86,0.2);
+  }
+  .scoop-badge{
+    position:absolute;bottom:-22px;left:-22px;
+    background:var(--paper);padding:18px 24px;border-radius:999px;
+    box-shadow:0 12px 32px -8px rgba(0,0,0,0.18);
+    display:flex;align-items:center;gap:12px;
+    border:1px solid var(--line);
+  }
+  .scoop-badge-dots{display:flex;gap:6px}
+  .scoop-badge-dots span{
+    width:12px;height:12px;border-radius:50%;
+    box-shadow:inset 0 -2px 4px rgba(0,0,0,0.1);
+  }
+  .scoop-badge-dots span:nth-child(1){background:var(--pistacchio)}
+  .scoop-badge-dots span:nth-child(2){background:var(--fragola)}
+  .scoop-badge-dots span:nth-child(3){background:var(--cioccolato)}
+  .scoop-badge-dots span:nth-child(4){background:var(--vaniglia)}
+  .scoop-badge-txt{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;
+    font-size:16px;color:var(--cioccolato-deep);line-height:1.2;
+  }
+  .scoop-badge-txt small{
+    display:block;font-family:'Inter',sans-serif;font-style:normal;font-weight:500;
+    font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--fg-dim);
+    margin-top:2px;
+  }
+
+  .hero-meta{
+    margin-top:42px;padding-top:24px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:24px;font-size:13px;color:var(--fg-dim);
+  }
+  .hero-meta strong{color:var(--pistacchio-deep);font-weight:700;letter-spacing:0.02em}
+
+  /* SECCIONES */
+  section{padding:80px 0;position:relative;z-index:1}
+  @media (min-width:768px){section{padding:110px 0}}
+  .section-head{margin-bottom:52px;max-width:680px}
+  .section-head.center{text-align:center;margin-left:auto;margin-right:auto}
+  .section-head h2{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:clamp(36px,4.2vw + 0.5rem,62px);
+    margin-top:14px;color:var(--cioccolato-deep);line-height:1.05;letter-spacing:-0.015em;
+  }
+  .section-head h2 em{font-style:italic;color:var(--pistacchio-deep)}
+
+  /* SAPORI / SABORES GRID */
+  .sapori{background:var(--paper)}
+  .sapori-grid{
+    display:grid;grid-template-columns:1fr;gap:20px;
+  }
+  @media (min-width:600px){.sapori-grid{grid-template-columns:1fr 1fr;gap:24px}}
+  @media (min-width:920px){.sapori-grid{grid-template-columns:repeat(3,1fr)}}
+  .sapore{
+    background:var(--bg);border:1px solid var(--line);border-radius:16px;
+    padding:28px 26px;display:flex;flex-direction:column;gap:10px;position:relative;
+    transition:transform .25s,box-shadow .25s;
+  }
+  .sapore:hover{transform:translateY(-3px);box-shadow:0 16px 32px -16px rgba(90,58,38,0.2)}
+  .sapore-scoop{
+    width:60px;height:60px;border-radius:50%;margin-bottom:8px;
+    box-shadow:inset 0 -8px 16px rgba(0,0,0,0.12),inset 0 6px 10px rgba(255,255,255,0.18);
+  }
+  .sapore-pistacchio{background:radial-gradient(circle at 30% 30%,#a9c887 0%,var(--pistacchio) 50%,var(--pistacchio-deep) 100%)}
+  .sapore-tiramisu{background:radial-gradient(circle at 30% 30%,#c9a37a 0%,#9e7449 50%,#5a3a26 100%)}
+  .sapore-fragola{background:radial-gradient(circle at 30% 30%,#f0a4b3 0%,var(--fragola) 50%,#a33855 100%)}
+  .sapore-stracciatella{background:radial-gradient(circle at 30% 30%,#fff 0%,#f0eada 50%,#d9cfba 100%);position:relative}
+  .sapore-stracciatella::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 20% 70%,var(--cioccolato-deep) 6%,transparent 9%),radial-gradient(circle at 70% 30%,var(--cioccolato-deep) 5%,transparent 8%),radial-gradient(circle at 60% 75%,var(--cioccolato-deep) 4%,transparent 6%)}
+  .sapore-cremabruciata{background:radial-gradient(circle at 30% 30%,#f9d490 0%,#e8b56e 50%,#a47436 100%)}
+  .sapore-sesamo{background:radial-gradient(circle at 30% 30%,#5a5045 0%,#2e251c 50%,#1a1410 100%)}
+  .sapore-cocco{background:radial-gradient(circle at 30% 30%,#fff 0%,#f6f0e0 50%,#dcc995 100%)}
+  .sapore-mandorla{background:radial-gradient(circle at 30% 30%,#f4d6a8 0%,#d6a36a 50%,#8e6235 100%)}
+  .sapore-cioccolato{background:radial-gradient(circle at 30% 30%,#7a4f31 0%,var(--cioccolato) 50%,var(--cioccolato-deep) 100%)}
+  .sapore h3{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;
+    font-size:24px;color:var(--cioccolato-deep);line-height:1.15;
+  }
+  .sapore-en{
+    font-family:'Inter',sans-serif;font-size:11px;color:var(--fg-dim);
+    text-transform:uppercase;letter-spacing:0.18em;font-weight:600;margin-top:-2px;
+  }
+  .sapore-desc{color:var(--fg-dim);font-size:14.5px;line-height:1.6;margin-top:4px}
+  .sapore-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .sapore-tag{font-size:10px;text-transform:uppercase;letter-spacing:0.14em;padding:3px 10px;background:var(--bg-alt);color:var(--fg-dim);border-radius:999px;font-weight:600}
+  .sapore-tag.vegan{background:#e6f1d8;color:var(--pistacchio-deep)}
+  .sapore-tag.lactose{background:#fce4eb;color:#a33855}
+
+  .sapori-foot{
+    text-align:center;margin-top:48px;color:var(--fg-dim);font-size:14.5px;
+    font-style:italic;font-family:'Cormorant Garamond',serif;
+  }
+
+  /* PROCESO */
+  .processo{background:var(--bg-alt)}
+  .processo-grid{
+    display:grid;grid-template-columns:1fr;gap:40px;align-items:center;
+  }
+  @media (min-width:880px){.processo-grid{grid-template-columns:0.9fr 1.1fr;gap:64px}}
+  .processo-img{
+    border-radius:16px;overflow:hidden;
+    box-shadow:0 20px 50px -16px rgba(90,58,38,0.3);
+  }
+  .processo-body h3{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;
+    color:var(--cioccolato-deep);margin:24px 0 8px;
+  }
+  .processo-body p{color:var(--fg-dim);font-size:16px;line-height:1.7}
+  .processo-list{list-style:none;padding:0;margin:24px 0 0}
+  .processo-list li{
+    padding:18px 0 18px 36px;border-top:1px solid var(--line);position:relative;
+    font-size:15.5px;line-height:1.55;
+  }
+  .processo-list li:last-child{border-bottom:1px solid var(--line)}
+  .processo-list li::before{
+    content:"";position:absolute;left:8px;top:24px;
+    width:14px;height:14px;border-radius:50%;
+    background:var(--pistacchio);box-shadow:inset 0 -3px 5px rgba(0,0,0,0.15);
+  }
+  .processo-list li:nth-child(2)::before{background:var(--fragola)}
+  .processo-list li:nth-child(3)::before{background:var(--cioccolato)}
+  .processo-list li:nth-child(4)::before{background:var(--vaniglia);box-shadow:inset 0 -3px 5px rgba(0,0,0,0.08),0 0 0 1px var(--line)}
+  .processo-list li strong{color:var(--cioccolato-deep);font-weight:600;display:block;margin-bottom:4px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px}
+
+  /* GALERÍA */
+  .galleria{background:var(--paper)}
+  .gal-masonry{
+    column-count:1;column-gap:20px;
+  }
+  @media (min-width:600px){.gal-masonry{column-count:2}}
+  @media (min-width:920px){.gal-masonry{column-count:3}}
+  .gal-masonry figure{
+    break-inside:avoid;margin:0 0 20px;border-radius:12px;overflow:hidden;
+    background:var(--bg);border:1px solid var(--line);
+  }
+  .gal-masonry img{width:100%;height:auto;display:block}
+  .gal-masonry figcaption{
+    padding:14px 18px;font-size:12px;color:var(--fg-dim);
+    font-style:italic;font-family:'Cormorant Garamond',serif;
+  }
+
+  /* VISITA */
+  .visita{background:var(--bg-alt)}
+  .visit-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-top:48px}
+  @media (min-width:880px){.visit-grid{grid-template-columns:1fr 1fr;gap:56px}}
+  .visit-info{background:var(--paper);padding:36px;border-radius:16px;border:1px solid var(--line)}
+  .visit-info dl{display:grid;grid-template-columns:1fr;gap:22px}
+  .visit-info .row{border-top:1px solid var(--line);padding-top:18px}
+  .visit-info .row:first-child{border-top:0;padding-top:0}
+  .visit-info .row:last-child{border-bottom:1px solid var(--line);padding-bottom:18px}
+  .visit-info .label{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--pistacchio-deep);margin-bottom:12px;font-weight:700}
+  .visit-info .value{font-size:16.5px;color:var(--cioccolato-deep)}
+  .visit-info .value a{color:var(--cioccolato-deep);text-decoration:none;border-bottom:1px solid var(--line)}
+  .visit-info .value a:hover{color:var(--pistacchio-deep);border-color:var(--pistacchio)}
+  .visit-info .city{color:var(--fg-dim);font-size:14px}
+  .hours-list{display:grid;gap:8px;list-style:none;padding:0;margin:0}
+  .hours-list li{display:flex;justify-content:space-between;align-items:center;font-size:15px;padding:6px 0}
+  .hours-list .day{color:var(--fg-dim);text-transform:capitalize}
+  .hours-list .time{color:var(--cioccolato-deep);font-variant-numeric:tabular-nums;font-size:13px}
+  .hours-list li.now{background:color-mix(in srgb,var(--pistacchio) 14%,transparent);padding:8px 12px;border-radius:8px;margin:0 -12px}
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--pistacchio-deep);font-weight:700}
+  .hours-list li.now .day::before{content:"●";color:var(--pistacchio);font-size:9px;margin-right:8px;animation:pulse-dot 1.6s ease-in-out infinite;display:inline-block}
+  @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.3}}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;
+    border:1px solid var(--line);background:var(--paper);
+  }
+  .map-wrap iframe{width:100%;height:100%;border:0;filter:saturate(0.85) brightness(0.96)}
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;background:var(--pistacchio);color:#fff;
+    padding:12px 20px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;
+    border-radius:999px;box-shadow:0 8px 24px rgba(127,163,86,0.4);
+    transition:all .3s;min-height:44px;display:inline-flex;align-items:center;
+  }
+  .map-cta:hover{background:var(--pistacchio-deep);transform:translateY(-2px)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--paper)}
+  .faq-list{margin-top:36px;max-width:760px;margin-left:auto;margin-right:auto;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;padding:22px 0;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:20px;color:var(--cioccolato-deep);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:"+";font-family:'Inter',sans-serif;font-style:normal;font-size:22px;color:var(--pistacchio-deep);transition:transform .3s;flex-shrink:0;font-weight:300}
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item p{padding:0 0 22px;color:var(--fg-dim);font-size:15.5px;line-height:1.7}
+
+  /* FOOTER */
+  footer{background:var(--cioccolato-deep);color:var(--vaniglia);padding:48px 0;font-size:13px}
+  footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center}
+  footer a{color:var(--vaniglia);transition:color .25s}
+  footer a:hover{color:var(--pistacchio)}
+  .footer-attr{font-size:11px;color:rgba(240,216,168,0.55);max-width:520px;line-height:1.6;font-style:italic;font-family:'Cormorant Garamond',serif}
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:1px solid var(--line);border-radius:20px;padding:0;background:var(--paper);
+    max-width:480px;width:92%;box-shadow:0 30px 80px rgba(0,0,0,0.4);color:var(--fg);
+  }
+  dialog::backdrop{background:rgba(58,35,23,0.6);backdrop-filter:blur(4px)}
+  .dlg-head{padding:24px 28px 0}
+  .dlg-head h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:var(--cioccolato-deep);line-height:1.15;margin-top:10px}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:14.5px;color:var(--fg-dim);margin-bottom:18px;line-height:1.55}
+  .dlg-form{display:grid;gap:12px}
+  .dlg-form label{font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--pistacchio-deep);display:block;margin-bottom:4px;font-weight:700}
+  .dlg-form input,.dlg-form select{width:100%;padding:11px 14px;border:1px solid var(--line);background:var(--paper);font-size:15px;color:var(--cioccolato-deep);border-radius:8px;font-family:inherit}
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--pistacchio)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-close{background:none;border:0;color:var(--fg-dim);font-size:13px;cursor:pointer}
+  .dlg-close:hover{color:var(--cioccolato-deep)}
+  .dlg-ok{display:none;text-align:center;padding:32px 24px}
+  .dlg-ok h4{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--cioccolato-deep);margin-bottom:10px}
+  .dlg-ok p{color:var(--fg-dim);font-size:14.5px}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-dot"></span>
+      Gocce di Latte
+      <span class="brand-tag">Gelateria · Barcelona</span>
+    </a>
+    <a href="tel:+34617986186" class="tel-btn">617 98 61 86</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="kicker">Gelateria artigianale · dal 2018</span>
+        <h1>Gelato <em>de verdad.</em><br>Sin atajos.<br><span class="accent">Senza compromessi.</span></h1>
+        <p class="hero-lede">Hacemos gelato como se hace en Italia: fruta fresca, leche, pistacho de Bronte, cacao venezolano. La mayoría sin lactosa. Casi todos sin gluten. Vienes, pruebas, eliges. Sencillo.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar tarta</button>
+          <a href="tel:+34617986186" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Pla+de+Palau+4+08003+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>Sin lactosa ·</strong> Sin gluten · Vegano disponible</span>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal">
+        <img src="img/gelato-bertinelli.webp" alt="Vitrina de gelato artesano italiano con diez cubetas de sabores intensos: pistacho, fragola, chocolate, crema" width="1000" height="753" fetchpriority="high" loading="eager" decoding="async">
+        <div class="scoop-badge">
+          <div class="scoop-badge-dots">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="scoop-badge-txt">
+            18 sabores
+            <small>Cada día</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sapori">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">— i nostri sapori —</span>
+      <h2>Algunos de los <em>fijos.</em></h2>
+    </div>
+    <div class="sapori-grid">
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-pistacchio"></div>
+        <h3>Pistacchio di Bronte</h3>
+        <div class="sapore-en">Pistacho siciliano DOP</div>
+        <p class="sapore-desc">Pistacho de Bronte, Sicilia. Sin colorantes, color verde apagado natural. Notable amargor noble al final.</p>
+        <div class="sapore-tags"><span class="sapore-tag lactose">Sin lactosa</span></div>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-tiramisu"></div>
+        <h3>Tiramisù</h3>
+        <div class="sapore-en">Mascarpone · café · cacao</div>
+        <p class="sapore-desc">Mascarpone fresco, café espresso italiano, savoiardi triturados, cacao en polvo encima. El más pedido de la casa.</p>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-fragola"></div>
+        <h3>Fragola di stagione</h3>
+        <div class="sapore-en">Fresa de temporada</div>
+        <p class="sapore-desc">Fresa fresca, sorbetto a base de agua. Sin lácteos, sin gluten. Solo en temporada (de marzo a junio).</p>
+        <div class="sapore-tags"><span class="sapore-tag vegan">Vegano</span><span class="sapore-tag lactose">Sin lactosa</span></div>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-stracciatella"></div>
+        <h3>Stracciatella</h3>
+        <div class="sapore-en">Crema fior di latte · chocolate</div>
+        <p class="sapore-desc">Crema base con cobertura de chocolate fundido a 60 °C, triturado al congelarse. El clásico que nunca falla.</p>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-cremabruciata"></div>
+        <h3>Crema bruciata</h3>
+        <div class="sapore-en">Crema catalana caramelizada</div>
+        <p class="sapore-desc">Crema de huevo, azúcar caramelizado a fuego directo. Receta italiana con guiño catalán.</p>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-sesamo"></div>
+        <h3>Sesamo nero</h3>
+        <div class="sapore-en">Sesamo negro tostado</div>
+        <p class="sapore-desc">Pasta de sésamo negro tostado, leche, azúcar. Color gris ceniza, sabor intenso a fruto seco quemado.</p>
+        <div class="sapore-tags"><span class="sapore-tag lactose">Sin lactosa</span></div>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-cocco"></div>
+        <h3>Cocco &amp; curcuma</h3>
+        <div class="sapore-en">Coco · cúrcuma fresca</div>
+        <p class="sapore-desc">Leche de coco, cúrcuma rallada, ralladura de lima. Sabor especiado, color amarillo intenso, totalmente vegano.</p>
+        <div class="sapore-tags"><span class="sapore-tag vegan">Vegano</span></div>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-mandorla"></div>
+        <h3>Mandorla &amp; arancia</h3>
+        <div class="sapore-en">Almendra · piel de naranja</div>
+        <p class="sapore-desc">Pasta de almendra siciliana, ralladura de naranja confitada. Recordatorio del sur de Italia en cada cucharada.</p>
+        <div class="sapore-tags"><span class="sapore-tag vegan">Vegano</span></div>
+      </article>
+
+      <article class="sapore reveal">
+        <div class="sapore-scoop sapore-cioccolato"></div>
+        <h3>Cioccolato 70%</h3>
+        <div class="sapore-en">Cacao venezolano puro</div>
+        <p class="sapore-desc">Cacao venezolano 70%, agua, azúcar. Sin leche, sin gluten. Color casi negro, sabor de cacao amargo intenso.</p>
+        <div class="sapore-tags"><span class="sapore-tag vegan">Vegano</span><span class="sapore-tag lactose">Sin lactosa</span></div>
+      </article>
+    </div>
+    <p class="sapori-foot">+ rotación semanal de 9 sabores más · pregunta al entrar</p>
+  </div>
+</section>
+
+<section class="processo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">— il processo —</span>
+      <h2>Cómo se hace<br>el <em>gelato</em> de verdad.</h2>
+    </div>
+    <div class="processo-grid">
+      <div class="processo-img reveal">
+        <img src="img/gelato-cones-florence.webp" alt="Cucuruchos de gofre italianos artesanos en el mostrador de una gelateria" width="1400" height="1050" loading="lazy" decoding="async">
+      </div>
+      <div class="processo-body reveal">
+        <p>El gelato no es helado. Tiene menos aire, menos azúcar, menos grasa y mucha más concentración de sabor. Por eso se sirve a temperatura más alta y se nota más en el paladar.</p>
+        <ul class="processo-list">
+          <li>
+            <strong>01 · Materia prima</strong>
+            Fruta fresca de temporada (mercado de la Boquería), leche entera local, cacao venezolano, pistacho de Bronte, almendra siciliana.
+          </li>
+          <li>
+            <strong>02 · Base &amp; pasteurización</strong>
+            Cada sabor parte de una base distinta: blanca (crema), amarilla (huevo) o sorbetto (agua + fruta). Pasteurizadas a 85 °C.
+          </li>
+          <li>
+            <strong>03 · Mantecación</strong>
+            En máquina vertical italiana. Aire incorporado mínimo (25-30%, vs 50% del helado industrial). Densidad real.
+          </li>
+          <li>
+            <strong>04 · Conservación</strong>
+            Vitrina a -12 °C, no más bajo. Por eso el gelato se ve brillante, se moldea fácil y sabe limpio.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galleria">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">— in vetrina —</span>
+      <h2>En la <em>gelateria.</em></h2>
+    </div>
+    <div class="gal-masonry">
+      <figure class="reveal">
+        <img src="img/gelato-bertinelli.webp" alt="Vitrina con cubetas de gelato artesano de varios colores naturales" width="1000" height="753" loading="lazy" decoding="async">
+        <figcaption>Vitrina con diez sabores activos + nueve rotativos cada semana.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="img/gelato-cones-florence.webp" alt="Cucuruchos de gofre apilados junto a tarrinas de aluminio" width="1400" height="1050" loading="lazy" decoding="async">
+        <figcaption>Cono o tarrina. El cono es de gofre italiano, hecho con horno propio.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="img/gelato-cone-milan.webp" alt="Cono italiano con dos bolas de gelato cremoso coronado con nata" width="1400" height="933" loading="lazy" decoding="async">
+        <figcaption>Doble bola con panna fresca encima. El tope opcional sin coste.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">— vieni a trovarci —</span>
+      <h2>Pla de Palau, <em>4.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              Pla de Palau, 4<br>
+              <span class="city">08003 Barcelona · Born / Barceloneta</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li><span class="day">Lunes</span><span class="time">13:00 – 23:00</span></li>
+              <li><span class="day">Martes</span><span class="time">13:00 – 23:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">13:00 – 23:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">13:00 – 23:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Domingo</span><span class="time">12:00 – 00:00</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <div><a href="tel:+34617986186">+34 617 98 61 86</a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Cómo llegar</div>
+            <div class="value">
+              Metro <strong>Barceloneta</strong> (L4) — 4 min andando<br>
+              <span class="city">Junto al Mercat del Born y la estación de Francia</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Pla+de+Palau+4+08003+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Gocce di Latte">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Pla+de+Palau+4+08003+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">— domande frequenti —</span>
+      <h2>Las preguntas <em>de siempre.</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿De verdad es todo sin lactosa?</summary>
+        <p>Casi todo. Los sabores con base de fruta (sorbetti) son 100% sin lactosa y veganos. Los sabores cremosos llevan leche, pero también tenemos versiones sin lactosa de pistacho, chocolate y crema. Pregunta en barra y te marcamos cuáles llevan qué.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Y sin gluten?</summary>
+        <p>Todos los gelatos son sin gluten. Los conos son de gofre con harina de trigo, pero la tarrina es opción siempre. También tenemos cono sin gluten bajo pedido.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacéis tartas de gelato por encargo?</summary>
+        <p>Sí. Tartas heladas con dos o tres sabores a elegir, base de bizcocho o galleta (con o sin gluten), decoración con fruta o cobertura de chocolate. Mínimo 48 horas de antelación. Pídelo por teléfono o al pasar por la tienda.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Servís cafetería o solo gelato?</summary>
+        <p>Servimos también café espresso italiano, capuccino, affogato (espresso sobre bola de fior di latte) y granita siciliana en verano. Para sentarse hay dos mesas dentro y dos fuera cuando el tiempo acompaña.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta una bola?</summary>
+        <p>Tarrina pequeña una bola 3,30 €. Mediana dos bolas 4,80 €. Grande tres bolas 6,00 €. Cono incluido sin coste extra. Panna y topping de cobertura, también gratis.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>Gocce di Latte · Gelateria artigianale · Barcelona</span>
+    <span><a href="tel:+34617986186">+34 617 98 61 86</a></span>
+  </div>
+  <div class="container">
+    <p class="footer-attr">
+      Fotografías de gelato: Basilicofresco (Bertinelli, Parma) y otros autores Wikimedia Commons (CC BY-SA 4.0). Las fotografías del local serán sustituidas por las propias antes del lanzamiento.
+    </p>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">— prenotazione torta —</span>
+    <h3>Pídenos una tarta de gelato.</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Mínimo 48 h de antelación. Te llamamos para confirmar sabores, tamaño y decoración.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div><label for="r-tel">Teléfono</label><input type="tel" id="r-tel" required></div>
+        <div><label for="r-pax">Personas (aprox.)</label><select id="r-pax" required><option>4-6</option><option>6-8</option><option>8-10</option><option>10-15</option><option>15+</option></select></div>
+      </div>
+      <div class="dlg-row">
+        <div><label for="r-fecha">Fecha de recogida</label><input type="date" id="r-fecha" required></div>
+        <div><label for="r-hora">Hora</label><input type="time" id="r-hora" required></div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Enviar petición</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>¡Recibido!</h4>
+    <p>Te llamamos en pocas horas para concretar sabores y decoración.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FoodEstablishment",
+  "name":"Gocce di Latte",
+  "description":"Gelateria artigianale italiana en Pla de Palau, Barcelona. Gelato artesano sin gluten, sin lactosa y vegano, con sabores rotativos de temporada.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Pla de Palau, 4",
+    "addressLocality":"Barcelona",
+    "postalCode":"08003",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34617986186",
+  "servesCuisine":["Italian","Gelato","Dessert"],
+  "priceRange":"€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"13:00","closes":"23:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday","Sunday"],"opens":"12:00","closes":"00:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿El gelato de Gocce di Latte es sin lactosa?","acceptedAnswer":{"@type":"Answer","text":"Casi todo. Los sorbetti de fruta son 100% sin lactosa y veganos. Los sabores cremosos llevan leche pero también tenemos versiones sin lactosa de pistacho, chocolate y crema. Te indicamos en barra cuáles llevan qué."}},
+    {"@type":"Question","name":"¿Tenéis opciones sin gluten?","acceptedAnswer":{"@type":"Answer","text":"Todos los gelatos son sin gluten. Los conos son de gofre de trigo, pero ofrecemos tarrina siempre. También tenemos cono sin gluten bajo pedido."}},
+    {"@type":"Question","name":"¿Hacéis tartas de gelato por encargo?","acceptedAnswer":{"@type":"Answer","text":"Sí. Tartas heladas con dos o tres sabores, base de bizcocho o galleta (con o sin gluten), decoración con fruta o cobertura de chocolate. Mínimo 48 horas de antelación. Pídelo por teléfono o pasando por la tienda."}},
+    {"@type":"Question","name":"¿Servís cafetería?","acceptedAnswer":{"@type":"Answer","text":"Sí: espresso italiano, capuccino, affogato (espresso sobre bola de fior di latte) y granita siciliana en verano. Tenemos dos mesas dentro y dos fuera cuando el tiempo acompaña."}},
+    {"@type":"Question","name":"¿Cuánto cuesta una bola de gelato?","acceptedAnswer":{"@type":"Answer","text":"Tarrina pequeña una bola 3,30 €. Mediana dos bolas 4,80 €. Grande tres bolas 6,00 €. Cono incluido sin coste extra. Panna y cobertura, también gratis."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('is-visible')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ FONTS-CSS-PRELOAD-START ✦ -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+    <!-- ✦ FONTS-CSS-PRELOAD-END ✦ -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Gocce%20di%20Latte%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Gocce di Latte</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Gocce%20di%20Latte%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Gocce%20di%20Latte%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Gocce di Latte y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-27T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+</body>
+</html>

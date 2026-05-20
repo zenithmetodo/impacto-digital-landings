@@ -1,0 +1,1374 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>El Fruiter del Gòtic — zumos, smoothies y cold press en la Plaça del Regomir</title>
+  <meta name="description" content="Zumo natural exprimido delante de ti, smoothie a tu gusto y prensados en frío. Fruta fresca de mercado en pleno corazón del Barri Gòtic. Plaça del Regomir, 2.">
+  <meta name="theme-color" content="#f8f5ec">
+  <link rel="canonical" href="#">
+
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="El Fruiter del Gòtic — The Best Juice in Barcelona">
+  <meta property="og:description" content="Smoothies, zumos, cold press y tarrinas de fruta. Tú eliges lo que quieres mezclar, nosotros lo exprimimos al momento.">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Hero preload -->
+  <link rel="preload" as="image" href="img/fruiter-3.webp" fetchpriority="high">
+
+  <!-- ✦ FONTS-PRECONNECT-START ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-PRECONNECT-END ✦ -->
+
+  <!-- ✦ HERO-PRELOAD-START ✦ -->
+  <link rel="preload" as="image" href="img/fruiter-3.webp" fetchpriority="high">
+  <!-- ✦ HERO-PRELOAD-END ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-CSS-PRELOAD-START ✦ -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <!-- ✦ FONTS-CSS-PRELOAD-END ✦ -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       EL FRUITER DEL GÒTIC — Pop-funcional fruta de mercado
+       Verde lima fresco + amarillo cítrico + naranja zanahoria + crema.
+       Eje narrativo: las cajas de fruta del local como editorial visual.
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+
+    :root {
+      --bg: #f8f5ec;
+      --bg-card: #fffbf0;
+      --bg-deep: #0f1612;
+      --ink: #0a1410;
+      --ink-soft: #4d5650;
+      --lima: #98c93c;
+      --lima-deep: #5e8917;
+      --citrico: #f5c842;
+      --naranja: #f08c2e;
+      --rosa: #e85f76;
+      --line: #d4d6c8;
+
+      --display: 'Archivo Black', system-ui, sans-serif;
+      --body: 'DM Sans', system-ui, -apple-system, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+      --side-padding: clamp(20px, 4.5vw, 64px);
+      --max: 1280px;
+
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding-left: var(--side-padding);
+      padding-right: var(--side-padding);
+    }
+
+    /* =========================================================
+       TOPBAR
+       ========================================================= */
+    .top {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--bg);
+      border-bottom: 2px solid var(--ink);
+    }
+    .top-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: 14px 0;
+      min-height: 64px;
+    }
+    .brand {
+      font-family: var(--display);
+      font-size: clamp(20px, 2.4vw, 26px);
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-transform: lowercase;
+    }
+    .brand .dot { color: var(--lima-deep); }
+    .top-cta { display: inline-flex; gap: 8px; }
+    .top-cta a {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      min-height: 44px;
+      display: inline-flex; align-items: center;
+      transition: background .18s, color .18s;
+    }
+    .top-cta a.primary { background: var(--ink); color: var(--bg); }
+    .top-cta a.primary:hover { background: var(--lima-deep); border-color: var(--lima-deep); }
+    .top-cta a.ghost:hover { background: var(--citrico); }
+    @media (max-width: 640px) { .top-cta a.ghost { display: none; } }
+
+    /* =========================================================
+       HERO — fachada del local como protagonista
+       ========================================================= */
+    .hero {
+      padding-top: clamp(36px, 6vw, 80px);
+      padding-bottom: clamp(50px, 8vw, 100px);
+      border-bottom: 2px solid var(--ink);
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-card) 100%);
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: clamp(28px, 5vw, 60px);
+      align-items: center;
+    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--lima-deep);
+      margin-bottom: clamp(20px, 3vw, 28px);
+      display: inline-flex; align-items: center; gap: 0.55rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 32px; height: 2px; background: var(--lima-deep);
+    }
+    h1.hero-h1 {
+      font-family: var(--display);
+      font-size: clamp(46px, 8vw + 0.5rem, 90px);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin: 0 0 clamp(20px, 3vw, 32px) 0;
+      color: var(--ink);
+      max-width: 12ch;
+      text-transform: lowercase;
+    }
+    .hero-h1 .pop { color: var(--lima-deep); }
+    .hero-h1 .pop2 { color: var(--naranja); }
+    .hero-h1 .pop3 { color: var(--rosa); }
+    .hero-lede {
+      font-size: clamp(17px, 1.2vw + 0.4rem, 20px);
+      line-height: 1.55;
+      max-width: 50ch;
+      color: var(--ink-soft);
+      margin: 0 0 clamp(24px, 4vw, 36px) 0;
+    }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      min-height: 52px;
+      padding: 0 22px;
+      border: 2px solid var(--ink);
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      transition: transform .18s var(--ease), background .18s, color .18s, border-color .18s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { background: var(--lima); color: var(--ink); }
+    .btn.primary:hover { background: var(--lima-deep); color: var(--bg); border-color: var(--lima-deep); }
+    .btn.ghost:hover { background: var(--citrico); }
+
+    .hero-photo {
+      position: relative;
+    }
+    .hero-photo img {
+      width: 100%; height: auto;
+      border: 3px solid var(--ink);
+      box-shadow: 10px 10px 0 var(--lima);
+    }
+    .hero-photo .badge {
+      position: absolute;
+      top: -16px; left: -16px;
+      background: var(--citrico);
+      border: 2px solid var(--ink);
+      padding: 8px 14px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transform: rotate(-4deg);
+      z-index: 2;
+    }
+    @media (max-width: 900px) {
+      .hero-photo img { box-shadow: 6px 6px 0 var(--lima); }
+    }
+
+    .hero-stats {
+      margin-top: clamp(40px, 6vw, 70px);
+      padding-top: clamp(28px, 4vw, 36px);
+      border-top: 2px solid var(--ink);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 720px) {
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    .hero-stats li {
+      list-style: none;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .hero-stats li strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 30px;
+      color: var(--ink);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+    .hero-stats li:nth-child(1) strong { color: var(--lima-deep); }
+    .hero-stats li:nth-child(2) strong { color: var(--naranja); }
+    .hero-stats li:nth-child(3) strong { color: var(--rosa); }
+    .hero-stats li:nth-child(4) strong { color: var(--citrico); }
+
+    /* =========================================================
+       FRUTAS — tira horizontal con cajas de fruta como en el local
+       Foto fruiter-1 (pizarra + cajas)
+       ========================================================= */
+    .frutas {
+      padding-top: clamp(50px, 8vw, 100px);
+      padding-bottom: clamp(50px, 8vw, 100px);
+      border-bottom: 2px solid var(--ink);
+    }
+    .section-head {
+      max-width: 720px;
+      margin-bottom: clamp(40px, 5vw, 64px);
+    }
+    .section-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--naranja);
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+    h2.section-h {
+      font-family: var(--display);
+      font-size: clamp(36px, 5.5vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0 0 16px 0;
+      max-width: 18ch;
+      text-transform: lowercase;
+    }
+    h2.section-h .pop { color: var(--lima-deep); }
+    h2.section-h .pop2 { color: var(--naranja); }
+    .section-lede {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      max-width: 56ch;
+      margin: 0;
+    }
+
+    .frutas-photo {
+      position: relative;
+      margin-top: clamp(28px, 4vw, 44px);
+      border: 3px solid var(--ink);
+    }
+    .frutas-photo img { width: 100%; height: auto; display: block; }
+    .frutas-photo .cap {
+      position: absolute;
+      bottom: 16px; left: 16px;
+      background: var(--ink);
+      color: var(--bg);
+      padding: 10px 16px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .fruta-chips {
+      margin-top: clamp(28px, 4vw, 40px);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .fruta-chips span {
+      background: var(--bg-card);
+      border: 2px solid var(--ink);
+      padding: 10px 16px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .fruta-chips span:nth-child(3n) { background: var(--citrico); }
+    .fruta-chips span:nth-child(5n) { background: var(--lima); }
+    .fruta-chips span:nth-child(7n) { background: var(--naranja); color: var(--bg); }
+
+    /* =========================================================
+       CARTA — Smoothies, Zumos, Cold Press, Tarrinas
+       Layout: 4 cards en grid, cada una con su color de la pizarra
+       ========================================================= */
+    .carta {
+      padding-top: clamp(60px, 9vw, 110px);
+      padding-bottom: clamp(60px, 9vw, 110px);
+      background: var(--bg-deep);
+      color: var(--bg);
+      border-bottom: 2px solid var(--ink);
+    }
+    .carta .section-eyebrow { color: var(--lima); }
+    .carta h2.section-h { color: var(--bg); }
+    .carta h2.section-h .pop { color: var(--lima); }
+    .carta h2.section-h .pop2 { color: var(--citrico); }
+    .carta .section-lede { color: color-mix(in srgb, var(--bg) 75%, transparent); }
+
+    .carta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(18px, 2.5vw, 28px);
+      margin-top: clamp(36px, 5vw, 56px);
+    }
+    @media (max-width: 700px) { .carta-grid { grid-template-columns: 1fr; } }
+    .carta-card {
+      padding: clamp(28px, 3.5vw, 40px);
+      background: var(--bg);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      position: relative;
+    }
+    .carta-card.lima { background: var(--lima); }
+    .carta-card.citrico { background: var(--citrico); }
+    .carta-card.naranja { background: var(--naranja); color: var(--bg); }
+    .carta-card.rosa { background: var(--rosa); color: var(--bg); }
+    .carta-card .num {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: var(--ink);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .carta-card.naranja .num, .carta-card.rosa .num { color: var(--bg); }
+    .carta-card h3 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 40px);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      margin: 0 0 12px 0;
+      text-transform: lowercase;
+    }
+    .carta-card .sub {
+      font-family: var(--body);
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 24px 0;
+      opacity: 0.85;
+      max-width: 36ch;
+    }
+    .carta-card .items {
+      list-style: none; padding: 0; margin: 0 0 24px 0;
+      display: grid; gap: 8px;
+    }
+    .carta-card .items li {
+      display: flex; justify-content: space-between;
+      font-family: var(--body);
+      font-size: 15px;
+      padding: 6px 0;
+      border-bottom: 1px dashed currentColor;
+      opacity: 0.85;
+    }
+    .carta-card .items li:last-child { border-bottom: 0; }
+    .carta-card .items strong {
+      font-family: var(--mono);
+      font-weight: 500;
+      font-size: 13px;
+    }
+    .carta-card .precio-line {
+      padding-top: 16px;
+      border-top: 2px solid currentColor;
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .carta-card .precio-line strong {
+      font-family: var(--display);
+      font-size: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    /* =========================================================
+       PROCESO — 3 pasos del zumo
+       ========================================================= */
+    .proceso {
+      padding-top: clamp(60px, 9vw, 110px);
+      padding-bottom: clamp(60px, 9vw, 110px);
+      border-bottom: 2px solid var(--ink);
+    }
+    .proceso-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 3vw, 36px);
+      margin-top: clamp(36px, 5vw, 56px);
+    }
+    @media (max-width: 800px) { .proceso-grid { grid-template-columns: 1fr; } }
+    .proceso-step {
+      background: var(--bg-card);
+      border: 2px solid var(--ink);
+      padding: clamp(24px, 3vw, 32px);
+      position: relative;
+    }
+    .proceso-step .num {
+      position: absolute;
+      top: -22px; left: 20px;
+      background: var(--lima);
+      border: 2px solid var(--ink);
+      width: 44px; height: 44px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--display);
+      font-size: 20px;
+      color: var(--ink);
+    }
+    .proceso-step:nth-child(2) .num { background: var(--citrico); }
+    .proceso-step:nth-child(3) .num { background: var(--naranja); color: var(--bg); }
+    .proceso-step h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      margin: 14px 0 12px 0;
+      color: var(--ink);
+      text-transform: lowercase;
+    }
+    .proceso-step p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* =========================================================
+       GALERIA — fotos del local en masonry CSS columns
+       (fruiter-1 pizarra horizontal, fruiter-2 vertical, fruiter-5 vertical, fruiter-4 cuadrada)
+       ========================================================= */
+    .galeria {
+      padding-top: clamp(60px, 9vw, 110px);
+      padding-bottom: clamp(60px, 9vw, 110px);
+      border-bottom: 2px solid var(--ink);
+      background: var(--bg-card);
+    }
+    .masonry {
+      column-count: 3;
+      column-gap: clamp(14px, 2vw, 24px);
+      margin-top: clamp(36px, 5vw, 56px);
+    }
+    @media (max-width: 900px) { .masonry { column-count: 2; } }
+    @media (max-width: 540px) { .masonry { column-count: 1; } }
+    .masonry figure {
+      break-inside: avoid;
+      margin: 0 0 clamp(14px, 2vw, 24px) 0;
+      border: 3px solid var(--ink);
+      background: var(--bg);
+      position: relative;
+    }
+    .masonry figure img { width: 100%; height: auto; display: block; }
+    .masonry figure figcaption {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 10px 12px;
+      border-top: 2px solid var(--ink);
+      background: var(--bg);
+    }
+    .masonry figure.lima figcaption { background: var(--lima); }
+    .masonry figure.citrico figcaption { background: var(--citrico); }
+    .masonry figure.naranja figcaption { background: var(--naranja); color: var(--bg); }
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+    .faq {
+      padding-top: clamp(60px, 9vw, 110px);
+      padding-bottom: clamp(60px, 9vw, 110px);
+      border-bottom: 2px solid var(--ink);
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.3fr);
+      gap: clamp(36px, 5vw, 64px);
+      align-items: start;
+    }
+    @media (max-width: 820px) { .faq-grid { grid-template-columns: 1fr; } }
+    .faq-list { list-style: none; padding: 0; margin: 0; border-top: 2px solid var(--ink); }
+    .faq-list details {
+      border-bottom: 2px solid var(--ink);
+      padding: 22px 0;
+    }
+    .faq-list summary {
+      list-style: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1rem;
+      font-family: var(--display);
+      font-size: clamp(20px, 2.2vw, 26px);
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-transform: lowercase;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+';
+      font-family: var(--display);
+      font-size: 28px;
+      color: var(--lima-deep);
+      transition: transform .25s var(--ease);
+    }
+    .faq-list details[open] summary::after { content: '−'; color: var(--naranja); }
+    .faq-list .faq-body {
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      max-width: 60ch;
+    }
+
+    /* =========================================================
+       VISITA
+       ========================================================= */
+    .visita {
+      padding-top: clamp(60px, 9vw, 110px);
+      padding-bottom: clamp(60px, 9vw, 110px);
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .visita .section-eyebrow { color: var(--lima); }
+    .visita h2.section-h { color: var(--bg); }
+    .visita h2.section-h .pop { color: var(--lima); }
+    .visita .section-lede { color: color-mix(in srgb, var(--bg) 75%, transparent); }
+    .visita-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      gap: clamp(28px, 4vw, 48px);
+      align-items: stretch;
+      margin-top: clamp(36px, 5vw, 56px);
+    }
+    @media (max-width: 880px) { .visita-grid { grid-template-columns: 1fr; } }
+    .visita-info dl { display: grid; gap: 24px; margin: 0; }
+    .visita-info .row {
+      border-top: 1px solid color-mix(in srgb, var(--bg) 25%, transparent);
+      padding-top: 18px;
+    }
+    .visita-info .row:last-child { border-bottom: 1px solid color-mix(in srgb, var(--bg) 25%, transparent); padding-bottom: 18px; }
+    .visita-info .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--lima);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .visita-info .value {
+      font-family: var(--display);
+      font-size: 20px;
+      color: var(--bg);
+      text-transform: lowercase;
+    }
+    .visita-info .value a { border-bottom: 1px solid var(--lima); }
+    .visita-info .value a:hover { color: var(--lima); }
+    .visita-info .city {
+      display: block;
+      font-family: var(--body);
+      font-size: 14px;
+      color: color-mix(in srgb, var(--bg) 70%, transparent);
+      margin-top: 4px;
+      text-transform: none;
+    }
+    .hours-list { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
+    .hours-list li {
+      display: flex; justify-content: space-between;
+      font-family: var(--body);
+      font-size: 15px;
+      padding: 6px 0;
+    }
+    .hours-list .day { color: color-mix(in srgb, var(--bg) 70%, transparent); }
+    .hours-list .time { color: var(--bg); font-family: var(--mono); font-size: 13px; }
+    .hours-list li.now { background: color-mix(in srgb, var(--lima) 25%, transparent); padding: 8px 12px; border-radius: 4px; margin: 0 -12px; }
+    .hours-list li.now .day, .hours-list li.now .time { color: var(--lima); font-weight: 600; }
+    .hours-list li.now .day::before { content: "●"; color: var(--lima); font-size: 9px; margin-right: 8px; animation: pulse 1.6s ease-in-out infinite; display: inline-block; }
+    .hours-list li.closed .time { color: color-mix(in srgb, var(--bg) 35%, transparent); font-style: italic; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .mapa-wrap {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border: 3px solid var(--lima);
+      background: var(--bg);
+      min-height: 360px;
+    }
+    .mapa-wrap iframe { width: 100%; height: 100%; border: 0; filter: saturate(0.85); }
+    .mapa-cta {
+      position: absolute;
+      bottom: 14px; right: 14px;
+      background: var(--lima);
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      padding: 12px 18px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      min-height: 44px;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      transition: all .3s;
+    }
+    .mapa-cta:hover { background: var(--citrico); }
+    @media (max-width: 600px) { .mapa-wrap { aspect-ratio: 1/1; min-height: 320px; } }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    footer.foot {
+      padding: clamp(40px, 6vw, 70px) 0;
+      background: var(--bg);
+    }
+    .foot-row {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      gap: 2rem; flex-wrap: wrap;
+    }
+    .foot-brand {
+      font-family: var(--display);
+      font-size: clamp(40px, 7vw, 84px);
+      letter-spacing: -0.025em;
+      line-height: 0.9;
+      color: var(--ink);
+      text-transform: lowercase;
+    }
+    .foot-brand .dot { color: var(--lima-deep); }
+    .foot-meta {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      text-align: right;
+      line-height: 1.7;
+    }
+    .foot-attr {
+      margin-top: clamp(24px, 3vw, 32px);
+      padding-top: 18px;
+      border-top: 2px solid var(--ink);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+    }
+
+    /* RESERVA DIALOG */
+    .reserva-dialog {
+      border: none; padding: 0;
+      max-width: 460px; width: calc(100% - 2rem);
+      background: var(--bg-card); color: var(--ink);
+      border-radius: 0;
+      box-shadow: 12px 12px 0 var(--lima-deep);
+      border: 3px solid var(--ink);
+    }
+    .reserva-dialog::backdrop { background: rgba(10, 20, 16, 0.75); backdrop-filter: blur(4px); }
+    .reserva-dialog[open] { animation: dialog-in 0.35s var(--ease); }
+    @keyframes dialog-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reserva-form { padding: clamp(1.75rem, 4vw, 2.25rem); display: flex; flex-direction: column; gap: 14px; }
+    .reserva-form h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 4vw, 36px);
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0;
+      text-transform: lowercase;
+    }
+    .reserva-form h2 .pop { color: var(--naranja); }
+    .reserva-intro { font-size: 14px; line-height: 1.55; color: var(--ink-soft); margin: 0 0 0.5rem 0; }
+    .reserva-form label {
+      display: flex; flex-direction: column; gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .reserva-form input, .reserva-form select {
+      font: inherit; font-family: var(--body); font-size: 15px;
+      letter-spacing: normal; text-transform: none;
+      padding: 12px 14px;
+      border: 2px solid var(--ink); background: var(--bg);
+      color: var(--ink); border-radius: 0; min-height: 44px;
+    }
+    .reserva-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .reserva-actions { display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
+    .reserva-actions button { flex: 1 1 auto; min-height: 48px; padding: 0 18px;
+      font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em;
+      text-transform: uppercase; border: 2px solid var(--ink); transition: background .2s; }
+    .reserva-actions .submit { background: var(--ink); color: var(--bg); }
+    .reserva-actions .submit:hover { background: var(--lima-deep); border-color: var(--lima-deep); }
+    .reserva-actions .cancel { background: transparent; color: var(--ink); }
+    .reserva-actions .cancel:hover { background: var(--citrico); }
+    .reserva-foot { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 4px; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "additionalType": "https://schema.org/CafeOrCoffeeShop",
+    "name": "El Fruiter del Gòtic",
+    "image": "img/fruiter-3.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaça del Regomir, 2",
+      "addressLocality": "Barcelona",
+      "postalCode": "08002",
+      "addressRegion": "Catalunya",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34687459672",
+    "url": "https://www.facebook.com/elfuiterdelgotic",
+    "sameAs": ["https://www.facebook.com/elfuiterdelgotic"],
+    "servesCuisine": ["Zumos naturales","Smoothies","Cold press","Fruta fresca"],
+    "priceRange": "€",
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens": "10:00","closes": "21:00"},
+      {"@type": "OpeningHoursSpecification","dayOfWeek": ["Sunday"],"opens": "11:00","closes": "20:00"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question","name": "¿Los zumos son recién exprimidos o embotellados?","acceptedAnswer": {"@type": "Answer","text": "Todos los zumos y smoothies se preparan delante de ti, en el momento. No vendemos zumo embotellado ni de centrifugadora previa. Eliges las frutas o el combinado de la pizarra, lo pasamos por el extractor en frío y te lo damos en menos de tres minutos. Por eso a veces hay cola: la espera es la garantía."}},
+      {"@type": "Question","name": "¿Tenéis opciones sin azúcar añadido?","acceptedAnswer": {"@type": "Answer","text": "Por norma no añadimos azúcar a nada. Si una mezcla queda muy ácida, podemos añadir un dátil natural para suavizar. Los smoothies se hacen con la propia fruta y, si quieres, sin lácteos: leche de almendra, soja o avena, o solo agua de coco. Pídelo al pedir y te avisamos del precio."}},
+      {"@type": "Question","name": "¿Qué es exactamente el cold press?","acceptedAnswer": {"@type": "Answer","text": "Cold press o prensado en frío es una técnica de extracción en la que la fruta y verdura se prensan sin generar calor. Conserva mejor vitaminas y enzimas que el zumo de centrifugadora normal. En el Fruiter usamos máquina Panasonic cold press y trabajamos seis combinaciones fijas más la que tú quieras montar. Precio: 3,99 € los 330 ml."}},
+      {"@type": "Question","name": "¿Hacéis pedido para llevar al hotel o a domicilio?","acceptedAnswer": {"@type": "Answer","text": "Llevar siempre: te lo damos en botella con tapa para que aguante hasta dos horas en frío. Domicilio no tenemos sistema propio, pero estamos en Glovo y Uber Eats en horario de tienda. Eso sí: el zumo es mejor el primer cuarto de hora. No esperes una hora con él fuera del frigorífico."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#top">el fruiter<span class="dot">.</span></a>
+    <nav class="top-cta">
+      <a class="ghost" href="#carta">Carta</a>
+      <a class="ghost" href="#visita">Visita</a>
+      <a class="primary" href="tel:+34687459672">Llamar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="hero-eyebrow">Plaça del Regomir · El Gòtic</span>
+        <h1 class="hero-h1"><span class="pop">zumo</span> recién <span class="pop2">exprimido</span> delante de ti.</h1>
+        <p class="hero-lede">Smoothies, zumos naturales, cold press y tarrinas de fruta de mercado en pleno corazón del Gòtic. Tú eliges lo que mezclas. Nosotros lo prensamos al momento. Sin azúcar añadido, sin conservantes, sin teatro.</p>
+        <div class="hero-actions">
+          <button class="btn primary" onclick="document.getElementById('reservaDialog').showModal()">Reservar para llevar</button>
+          <a class="btn ghost" href="tel:+34687459672">Llamar 687 45 96 72</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Pla%C3%A7a+del+Regomir+2+08002+Barcelona" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="hero-photo reveal">
+        <span class="badge">The best juice in Barcelona</span>
+        <img src="img/fruiter-3.webp" alt="Fachada de El Fruiter del Gòtic con el rótulo de la calle Regomir" width="1000" height="1333" fetchpriority="high" loading="eager" decoding="async">
+      </div>
+    </div>
+
+    <ul class="hero-stats reveal">
+      <li><strong>16</strong>combinaciones</li>
+      <li><strong>3 min</strong>de barra a vaso</li>
+      <li><strong>3,99 €</strong>cold press 330 ml</li>
+      <li><strong>0 g</strong>azúcar añadido</li>
+    </ul>
+  </div>
+</section>
+
+<section class="frutas" id="fruta">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">La fruta del día</span>
+      <h2 class="section-h">Cajas <span class="pop">de mercado</span>, no de cámara.</h2>
+      <p class="section-lede">Cada mañana llegan las cajas. Mango, piña, pomelo, naranja, lima, zanahoria, manzana, pera, fresa cuando es temporada. No tenemos almacén grande: lo que ves en las cajas es lo que hay. Si se acaba, se acabó.</p>
+    </header>
+
+    <figure class="frutas-photo reveal">
+      <img src="img/fruiter-1.webp" alt="Pizarra de la carta con cajas de fruta fresca debajo: limones, limas, fresas, zanahorias, manzanas y naranjas" width="1400" height="1050" loading="lazy" decoding="async">
+      <figcaption class="cap">Mostrador interior · pizarra y cajas</figcaption>
+    </figure>
+
+    <div class="fruta-chips reveal">
+      <span>Mango</span>
+      <span>Piña</span>
+      <span>Naranja</span>
+      <span>Limón</span>
+      <span>Lima</span>
+      <span>Pomelo</span>
+      <span>Mandarina</span>
+      <span>Zanahoria</span>
+      <span>Manzana</span>
+      <span>Pera</span>
+      <span>Apio</span>
+      <span>Jengibre</span>
+      <span>Espinaca</span>
+      <span>Pepino</span>
+      <span>Remolacha</span>
+      <span>Fresa</span>
+      <span>Plátano</span>
+      <span>Aguacate</span>
+    </div>
+  </div>
+</section>
+
+<section class="carta" id="carta">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">La carta</span>
+      <h2 class="section-h">Cuatro <span class="pop">familias</span>, una <span class="pop2">pizarra</span>.</h2>
+      <p class="section-lede">Cuatro maneras de tomar fruta y verdura sin masticar a las nueve de la mañana. Smoothies cremosos, zumos exprimidos, prensados en frío, tarrinas troceadas. Tú eliges la combinación o pides una de la casa.</p>
+    </header>
+
+    <div class="carta-grid">
+      <article class="carta-card lima reveal">
+        <span class="num">01 / Smoothies</span>
+        <h3>smoothies</h3>
+        <p class="sub">Fruta + base líquida + cremosidad. Para desayunar fuerte o para sustituir un postre.</p>
+        <ul class="items">
+          <li>Madurixa <strong>fresa-plátano</strong></li>
+          <li>Verdós <strong>kiwi-manzana</strong></li>
+          <li>Pinya colada <strong>piña-coco</strong></li>
+          <li>Mango-coco <strong>mango-leche coco</strong></li>
+          <li>Tú lo montas <strong>+1 €/combinación</strong></li>
+        </ul>
+        <div class="precio-line"><span>vaso 330 ml</span><strong>4,50 €</strong></div>
+      </article>
+
+      <article class="carta-card citrico reveal">
+        <span class="num">02 / Zumos</span>
+        <h3>zumos naturales</h3>
+        <p class="sub">100 % natural, recién exprimido, sin filtrar. Para empezar el día con vitamina pura.</p>
+        <ul class="items">
+          <li>Naranja sola <strong>vaso o jarra</strong></li>
+          <li>Pomelo-naranja <strong>amargo y dulce</strong></li>
+          <li>Zanahoria-naranja-jengibre <strong>el clásico</strong></li>
+          <li>Piña-naranja <strong>refrescante</strong></li>
+          <li>Combina tú <strong>elige hasta 3</strong></li>
+        </ul>
+        <div class="precio-line"><span>330 ml / 500 ml / litro</span><strong>2 - 6,90 €</strong></div>
+      </article>
+
+      <article class="carta-card naranja reveal">
+        <span class="num">03 / Cold Press</span>
+        <h3>cold press</h3>
+        <p class="sub">Prensados en frío Panasonic. Tres recetas pensadas para mañana, mediodía o tarde.</p>
+        <ul class="items">
+          <li>Verde <strong>espinaca-apio-pepino</strong></li>
+          <li>Naranja <strong>zanahoria-naranja-jengibre</strong></li>
+          <li>Roja <strong>remolacha-manzana-limón</strong></li>
+          <li>Personalizado <strong>consulta</strong></li>
+        </ul>
+        <div class="precio-line"><span>botella 330 ml</span><strong>3,99 €</strong></div>
+      </article>
+
+      <article class="carta-card rosa reveal">
+        <span class="num">04 / Tarrinas</span>
+        <h3>tarrinas de fruta</h3>
+        <p class="sub">Fruta cortada al momento, lista para el bolso. Para el paseo, la playa o el avión.</p>
+        <ul class="items">
+          <li>Tropical <strong>mango-piña-papaya</strong></li>
+          <li>Roja <strong>fresa-sandía-melón</strong></li>
+          <li>Mixta <strong>todo lo de hoy</strong></li>
+          <li>Avocado amanit <strong>aguacate aliñado</strong></li>
+        </ul>
+        <div class="precio-line"><span>tarrina estándar</span><strong>3 - 4,50 €</strong></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="proceso">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">El proceso</span>
+      <h2 class="section-h">De la caja al vaso en <span class="pop">tres minutos</span>.</h2>
+      <p class="section-lede">Sin trucos. Sin almacén oculto. Sin máquina misteriosa. Esto es exactamente lo que pasa entre que pides el zumo y te lo damos en la mano.</p>
+    </header>
+
+    <div class="proceso-grid">
+      <article class="proceso-step reveal">
+        <span class="num">1</span>
+        <h3>eliges en la pizarra</h3>
+        <p>Miras la pizarra y eliges una receta de la casa o nos dices qué frutas y verduras quieres mezclar. Hasta cuatro ingredientes en el mismo vaso. Si dudas, te recomendamos.</p>
+      </article>
+      <article class="proceso-step reveal">
+        <span class="num">2</span>
+        <h3>cogemos la fruta</h3>
+        <p>Cogemos las piezas frescas de las cajas que ves al fondo. Las pelamos y troceamos a la vista. Nada está cortado de antes. Lo del cubo de fruta cortada del supermercado, aquí no existe.</p>
+      </article>
+      <article class="proceso-step reveal">
+        <span class="num">3</span>
+        <h3>extractor o batidora</h3>
+        <p>Smoothie va a batidora con base líquida. Zumo natural va al exprimidor o extractor. Cold press pasa por la Panasonic. Lo verás encenderse cuando llegues a la barra. Tres minutos de ruido y listo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">El local por dentro</span>
+      <h2 class="section-h">Una <span class="pop">vidriera</span>, un <span class="pop2">mostrador</span>, una pizarra enorme.</h2>
+      <p class="section-lede">Estamos en una esquina de la Plaça del Regomir, justo enfrente del Museu d'Idees i Invents (MIBA). El local es pequeño y luminoso: vidriera con el lettering "the best juice in Barcelona" y por dentro mostrador de acero, cajas de madera y una pizarra grande con todo escrito a mano.</p>
+    </header>
+
+    <div class="masonry reveal">
+      <figure class="lima">
+        <img src="img/fruiter-3.webp" alt="Fachada de El Fruiter del Gòtic con rotulación 'The best juice in Barcelona' en la vidriera" width="1000" height="1333" loading="lazy" decoding="async">
+        <figcaption>Fachada · Plaça del Regomir</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fruiter-1.webp" alt="Pizarra con la carta del Fruiter y cajas de fruta debajo del mostrador" width="1400" height="1050" loading="lazy" decoding="async">
+        <figcaption>Mostrador interior</figcaption>
+      </figure>
+      <figure class="citrico">
+        <img src="img/fruiter-5.webp" alt="Pizarra de la carta con cajas de naranjas, manzanas, limas, zanahorias y plátanos debajo" width="1400" height="1867" loading="lazy" decoding="async">
+        <figcaption>La pizarra y las cajas</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fruiter-2.webp" alt="Empleado del Fruiter preparando un zumo detrás del mostrador" width="1400" height="1867" loading="lazy" decoding="async">
+        <figcaption>Detrás de la barra</figcaption>
+      </figure>
+      <figure class="naranja">
+        <img src="img/fruiter-4.webp" alt="Fachada del Fruiter del Gòtic con logo en madera y vidriera decorada" width="1400" height="1400" loading="lazy" decoding="async">
+        <figcaption>Logo y vidriera</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="preguntas">
+  <div class="wrap">
+    <div class="faq-grid">
+      <header class="section-head reveal" style="margin-bottom: 0;">
+        <span class="section-eyebrow">Lo que se pregunta</span>
+        <h2 class="section-h">Antes de <span class="pop">pedir</span>, mira aquí.</h2>
+        <p class="section-lede" style="margin-top: 20px;">Las dudas más habituales sobre la carta, el proceso y el pedido para llevar. Si no encuentras la tuya, ven a la barra y pregunta. Tarda dos minutos.</p>
+      </header>
+      <ul class="faq-list reveal">
+        <li>
+          <details>
+            <summary>¿Los zumos son recién exprimidos o embotellados?</summary>
+            <div class="faq-body">Todos los zumos y smoothies se preparan delante de ti, en el momento. No vendemos zumo embotellado ni de centrifugadora previa. Eliges las frutas o el combinado de la pizarra, lo pasamos por el extractor en frío y te lo damos en menos de tres minutos. Por eso a veces hay cola: la espera es la garantía.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Tenéis opciones sin azúcar añadido?</summary>
+            <div class="faq-body">Por norma no añadimos azúcar a nada. Si una mezcla queda muy ácida, podemos añadir un dátil natural para suavizar. Los smoothies se hacen con la propia fruta y, si quieres, sin lácteos: leche de almendra, soja o avena, o solo agua de coco. Pídelo al pedir y te avisamos del precio.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Qué es exactamente el cold press?</summary>
+            <div class="faq-body">Cold press o prensado en frío es una técnica de extracción en la que la fruta y verdura se prensan sin generar calor. Conserva mejor vitaminas y enzimas que el zumo de centrifugadora normal. En el Fruiter usamos máquina Panasonic cold press y trabajamos seis combinaciones fijas más la que tú quieras montar. Precio: 3,99 € los 330 ml.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Hacéis pedido para llevar al hotel o a domicilio?</summary>
+            <div class="faq-body">Llevar siempre: te lo damos en botella con tapa para que aguante hasta dos horas en frío. Domicilio no tenemos sistema propio, pero estamos en Glovo y Uber Eats en horario de tienda. Eso sí: el zumo es mejor el primer cuarto de hora. No esperes una hora con él fuera del frigorífico.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Hay sitio para sentarse?</summary>
+            <div class="faq-body">Hay un par de banquetas en la barra alta y, cuando hace bueno, sacamos dos mesitas a la plaza. Pero el local es pequeño: lo nuestro es pedir, pasear por la plaza con el vaso, y volver a la rambla. No somos cafetería con mesas.</div>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">Visítanos</span>
+      <h2 class="section-h">Plaça del <span class="pop">Regomir</span>, 2.</h2>
+      <p class="section-lede" style="margin-top: 14px;">Cinco minutos a pie desde Plaça Sant Jaume bajando por Carrer del Regomir. Estamos en la esquina con el Carrer del Correu Vell. Si ves el cartel "The best juice in Barcelona" en la vidriera, llegaste.</p>
+    </header>
+
+    <div class="visita-grid">
+      <div class="visita-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              Plaça del Regomir, 2
+              <span class="city">08002 Barcelona · El Gòtic · Metro Jaume I (L4)</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li><span class="day">Lunes</span><span class="time">10:00 – 21:00</span></li>
+              <li><span class="day">Martes</span><span class="time">10:00 – 21:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">10:00 – 21:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">10:00 – 21:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">10:00 – 21:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">10:00 – 21:00</span></li>
+              <li><span class="day">Domingo</span><span class="time">11:00 – 20:00</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <a href="tel:+34687459672">+34 687 45 96 72</a>
+              <span class="city">Facebook · @elfuiterdelgotic</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="mapa-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Pla%C3%A7a+del+Regomir+2+08002+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de El Fruiter del Gòtic en la Plaça del Regomir 2, Barcelona"></iframe>
+        <a class="mapa-cta" href="https://www.google.com/maps/search/?api=1&query=Pla%C3%A7a+del+Regomir+2+08002+Barcelona" target="_blank" rel="noopener">Cómo llegar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">el fruiter<span class="dot">.</span></div>
+      <div class="foot-meta">
+        Plaça del Regomir, 2<br>
+        08002 Barcelona · El Gòtic<br>
+        +34 687 45 96 72
+      </div>
+    </div>
+    <p class="foot-attr">Fotografías: contenido público del propio negocio · Idioma: castellano peninsular · Sistema de reservas para llevar: demo</p>
+  </div>
+</footer>
+
+<dialog id="reservaDialog" class="reserva-dialog" aria-labelledby="reservaTitle">
+  <form method="dialog" class="reserva-form">
+    <h2 id="reservaTitle">Reservar <span class="pop">para llevar</span></h2>
+    <p class="reserva-intro">Pídelo con antelación y lo tienes listo cuando llegues. Sin cola. Sin esperar.</p>
+    <label>Nombre
+      <input type="text" name="nombre" required minlength="2" autocomplete="name">
+    </label>
+    <div class="reserva-row">
+      <label>Día
+        <input type="date" name="fecha" required>
+      </label>
+      <label>Hora
+        <input type="time" name="hora" required>
+      </label>
+    </div>
+    <label>Qué quieres
+      <input type="text" name="pedido" placeholder="Ej.: 2 cold press verde + tarrina mixta" required>
+    </label>
+    <label>Teléfono
+      <input type="tel" name="tel" autocomplete="tel">
+    </label>
+    <div class="reserva-actions">
+      <button type="submit" class="submit">Enviar pedido</button>
+      <button type="button" class="cancel" onclick="document.getElementById('reservaDialog').close()">Cancelar</button>
+    </div>
+    <p class="reserva-foot">Te confirmamos por whatsapp en 10 minutos · sistema de reserva demo</p>
+  </form>
+</dialog>
+
+<script>
+  // Reveal
+  (() => {
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('is-visible')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    els.forEach(el => io.observe(el));
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => el.classList.add('is-visible'));
+    }, 2500);
+  })();
+
+  // Día actual destacado
+  (() => {
+    const items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    const jsDay = new Date().getDay();
+    const todayIdx = jsDay === 0 ? 6 : jsDay - 1;
+    items[todayIdx]?.classList.add('now');
+  })();
+
+  // Form mock
+  document.querySelector('#reservaDialog form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('reservaDialog').close();
+    alert('Pedido enviado (demo). Te confirmamos por WhatsApp.');
+  });
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20El%20Fruiter%20del%20Gòtic%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>El Fruiter del Gòtic</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20El%20Fruiter%20del%20Gòtic%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20El%20Fruiter%20del%20Gòtic%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de El Fruiter del Gòtic y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-27T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+</body>
+</html>

@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>La Botigueta del Bon Menjar · Comida casera en Gràcia</title>
+<meta name="description" content="La Botigueta del Bon Menjar en Santa Àgata 18, Gràcia. Legumbres cocidas, escalivada, albóndigas caseras. Para llevar o comer en mesa." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://botigueta-bon-menjar.example/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:title" content="La Botigueta del Bon Menjar · Comida casera en Gràcia" />
+<meta property="og:description" content="Cocina catalana del día para llevar. Santa Àgata 18, Barcelona." />
+<meta property="og:type" content="restaurant" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- ✦ FONTS-PRECONNECT-START ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-PRECONNECT-END ✦ -->
+
+  <!-- ✦ HERO-PRELOAD-START ✦ -->
+  <link rel="preload" as="image" href="img/vitrina.webp" fetchpriority="high">
+  <!-- ✦ HERO-PRELOAD-END ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/vitrina.webp" fetchpriority="high">
+<!-- ✦ FONTS-CSS-PRELOAD-START ✦ -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <!-- ✦ FONTS-CSS-PRELOAD-END ✦ -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf6ec;             /* crema mantequilla */
+    --bg-alt:#f0e6cc;
+    --bg-card:#fff8e8;
+    --fg:#3a2418;             /* marrón cacao */
+    --fg-dim:#7a5c48;
+    --accent:#8d2c1e;         /* granate vino */
+    --accent-warm:#d68c2a;    /* mostaza */
+    --accent-leaf:#5e7042;    /* oliva oscura */
+    --line:#d9c8a6;
+    --side-padding: clamp(20px, 4.5vw, 72px);
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:17px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* checkered mantel pattern fade */
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      linear-gradient(45deg, rgba(141,44,30,.018) 25%, transparent 25%, transparent 50%, rgba(141,44,30,.018) 50%, rgba(141,44,30,.018) 75%, transparent 75%, transparent);
+    background-size: 60px 60px;
+    opacity:.5;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding-left:var(--side-padding); padding-right:var(--side-padding); position:relative; z-index:1}
+  a{color:inherit; text-decoration:none}
+  img{max-width:100%; display:block; height:auto}
+  ::selection{background:var(--accent-warm); color:var(--fg)}
+
+  /* HEADER */
+  header.top{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,236,.94);
+    backdrop-filter: blur(10px);
+    border-bottom:2px solid var(--accent);
+  }
+  .top-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:18px}
+  .brand{
+    font-family:'DM Serif Display', serif;
+    font-size:26px;
+    color:var(--fg);
+    line-height:1;
+  }
+  .brand small{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:.18em;
+    color:var(--accent);
+    text-transform:uppercase;
+    margin-top:4px;
+  }
+  .tel-btn{
+    background:var(--accent);
+    color:#fff;
+    padding:10px 18px;
+    font-size:13px;
+    font-weight:600;
+    font-family:'IBM Plex Mono', monospace;
+    transition: all .25s ease;
+    min-height:44px;
+    display:inline-flex; align-items:center; gap:8px;
+    letter-spacing:.05em;
+  }
+  .tel-btn:hover{background:#6e1f12}
+
+  /* HERO */
+  .hero{padding: clamp(50px, 7vw, 90px) 0 clamp(60px, 8vw, 100px); position:relative}
+  .hero-grid{display:grid; grid-template-columns: 1.1fr 1fr; gap:clamp(36px, 5vw, 64px); align-items:center}
+  @media (max-width: 880px){ .hero-grid{ grid-template-columns: 1fr; } }
+  .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:24px;
+    display:inline-flex; align-items:center; gap:14px;
+  }
+  .kicker::before{
+    content:""; width:28px; height:2px; background:var(--accent-warm);
+  }
+  h1.hero-h1{
+    font-family:'DM Serif Display', serif;
+    font-weight:400;
+    font-size: clamp(44px, 6.8vw, 82px);
+    line-height:1.02;
+    letter-spacing:-1px;
+    margin:0 0 24px;
+    color:var(--fg);
+  }
+  h1.hero-h1 em{font-style:italic; color:var(--accent)}
+  .lede{font-size:18px; color:var(--fg-dim); max-width:48ch; margin:0 0 36px; line-height:1.7; font-style:italic}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    padding:14px 22px;
+    font-weight:600;
+    font-size:14px;
+    font-family:'IBM Plex Mono', monospace;
+    min-height:48px;
+    cursor:pointer;
+    border:2px solid transparent;
+    transition: transform .2s ease, background .25s ease, color .25s ease;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .btn svg{width:16px; height:16px; flex-shrink:0}
+  .btn-primary{background:var(--accent); color:#fff}
+  .btn-primary:hover{background:#6e1f12; transform:translateY(-2px)}
+  .btn-secondary{background:transparent; color:var(--fg); border-color:var(--fg)}
+  .btn-secondary:hover{background:var(--fg); color:var(--bg)}
+
+  /* hero photo with frame */
+  .hero-art{position:relative}
+  .hero-art .h-main{
+    position:relative;
+    background:var(--bg-card);
+    padding:14px;
+    border:1px solid var(--line);
+    box-shadow:
+      0 30px 60px -30px rgba(58,36,24,.28),
+      6px 6px 0 var(--accent-warm);
+  }
+  .hero-art .h-main img{display:block; width:100%; border:1px solid var(--line)}
+  .hero-art .tape{
+    position:absolute; top:-16px; left:20px;
+    background:var(--accent-warm);
+    color:var(--fg);
+    padding:8px 18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    transform:rotate(-2deg);
+    box-shadow:2px 2px 0 var(--accent);
+  }
+
+  /* sections */
+  section{padding: clamp(60px, 8vw, 100px) 0; position:relative; z-index:1}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:14px;
+    display:inline-block;
+    border-bottom:2px solid var(--accent-warm);
+    padding-bottom:6px;
+  }
+  h2{
+    font-family:'DM Serif Display', serif;
+    font-weight:400;
+    font-size: clamp(34px, 4.8vw, 54px);
+    line-height:1.08;
+    letter-spacing:-.5px;
+    margin:0 0 18px;
+    color:var(--fg);
+  }
+  h2 em{font-style:italic; color:var(--accent)}
+  .section-lede{color:var(--fg-dim); max-width:60ch; font-size:17px; margin:0 0 48px; font-style:italic}
+
+  /* PLATOS DEL DÍA — pizarra estilo */
+  .pizarra-section{background:var(--accent-leaf); color:#f3eed7; position:relative}
+  .pizarra-section::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,.08), transparent 40%),
+      radial-gradient(ellipse at 80% 80%, rgba(255,255,255,.05), transparent 40%);
+    pointer-events:none;
+  }
+  .pizarra-section h2, .pizarra-section .section-lede{color:#f7f2dc}
+  .pizarra-section .eyebrow{color:var(--accent-warm); border-bottom-color:var(--accent-warm)}
+  .pizarra-section h2 em{color:var(--accent-warm)}
+  .platos-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 36px;
+    background:rgba(0,0,0,.12);
+    padding: clamp(20px, 3vw, 40px);
+    border:1px solid rgba(247,242,220,.18);
+  }
+  @media (min-width: 700px){ .platos-grid{ grid-template-columns: 1fr 1fr; gap: 0 60px; } }
+  .plato{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap:12px 18px;
+    padding:18px 0;
+    border-bottom:1px dashed rgba(247,242,220,.24);
+    align-items:baseline;
+  }
+  .plato:last-child, .plato:nth-last-child(2):not(:last-child){border-bottom:0}
+  @media (max-width: 700px){ .plato:last-child{border-bottom:0} .plato:not(:last-child){border-bottom:1px dashed rgba(247,242,220,.24)} }
+  .plato h3{
+    font-family:'DM Serif Display', serif;
+    font-weight:400;
+    font-size:22px;
+    margin:0;
+    color:#fff;
+    letter-spacing:0;
+  }
+  .plato .price{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+    color:var(--accent-warm);
+    font-weight:500;
+    letter-spacing:.02em;
+  }
+  .plato p{
+    grid-column:1/-1;
+    margin:6px 0 0;
+    color:rgba(247,242,220,.78);
+    font-size:14.5px;
+    font-style:italic;
+    line-height:1.55;
+  }
+
+  /* QUIENES SOMOS — mosaico fotos local */
+  .local-section{background:var(--bg-alt)}
+  .local-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: clamp(28px, 4vw, 56px);
+    align-items:center;
+    margin-top: 24px;
+  }
+  @media (min-width: 880px){ .local-grid{ grid-template-columns: 1fr 1.2fr; } }
+  .local-text p{font-size:16px; line-height:1.75; margin:0 0 16px}
+  .local-text p:first-of-type::first-letter{
+    font-family:'DM Serif Display', serif;
+    font-size:64px;
+    line-height:.85;
+    float:left;
+    margin:6px 12px 0 0;
+    color:var(--accent);
+    font-weight:400;
+  }
+  .local-photos{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:14px;
+  }
+  .local-photos figure{margin:0; background:var(--bg-card); padding:8px; border:1px solid var(--line); position:relative}
+  .local-photos figure img{display:block; width:100%; border:1px solid rgba(217,200,166,.5)}
+  .local-photos figcaption{
+    padding:8px 4px 2px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:.14em;
+  }
+
+  /* TRAYECTORIA */
+  .trayectoria{background:var(--bg)}
+  .tray-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 36px;
+  }
+  @media (min-width: 700px){ .tray-grid{ grid-template-columns: repeat(3, 1fr); } }
+  .tray-card{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    padding: 32px 26px;
+    position:relative;
+  }
+  .tray-card::before{
+    content:"";
+    position:absolute; top:0; left:0;
+    width:50px; height:4px; background:var(--accent-warm);
+  }
+  .tray-card .y{
+    font-family:'DM Serif Display', serif;
+    font-size:42px;
+    color:var(--accent);
+    line-height:1;
+    margin-bottom:10px;
+  }
+  .tray-card h3{
+    font-family:'DM Serif Display', serif;
+    font-weight:400;
+    font-size:22px;
+    margin:0 0 10px;
+    color:var(--fg);
+  }
+  .tray-card p{
+    margin:0; font-size:14.5px; color:var(--fg-dim);
+    font-style:italic; line-height:1.65;
+  }
+
+  /* VISIT */
+  .visit-section{background:var(--bg-alt)}
+  .visit-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 32px;
+  }
+  @media (min-width: 880px){ .visit-grid{ grid-template-columns: 1fr 1.1fr; gap: 56px; } }
+  .visit-info dl{display:grid; gap:24px; margin:0}
+  .visit-info .row{
+    border-top:1px dashed var(--line);
+    padding-top:18px;
+  }
+  .visit-info .row:last-child{border-bottom:1px dashed var(--line); padding-bottom:18px}
+  .visit-info .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+    font-weight:500;
+  }
+  .visit-info .value{font-size:17px; color:var(--fg)}
+  .visit-info .value a{color:var(--fg); border-bottom:1px solid var(--line); padding-bottom:1px}
+  .visit-info .value a:hover{color:var(--accent); border-color:var(--accent)}
+  .visit-info .city{color:var(--fg-dim); font-size:14px; font-style:italic}
+  .hours-list{display:grid; gap:8px; list-style:none; padding:0; margin:0}
+  .hours-list li{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:15px; padding:5px 0;
+  }
+  .hours-list .day{color:var(--fg-dim); text-transform:capitalize; font-family:'Source Serif 4', serif}
+  .hours-list .time{color:var(--fg); font-variant-numeric:tabular-nums; font-size:13px; font-family:'IBM Plex Mono', monospace}
+  .hours-list li.now{
+    background:rgba(214,140,42,.18);
+    padding:8px 12px;
+    margin:0 -12px;
+  }
+  .hours-list li.now .day, .hours-list li.now .time{color:var(--accent); font-weight:600}
+  .hours-list li.now .day::before{
+    content:"●"; color:var(--accent); font-size:9px; margin-right:8px; animation:pulse 1.6s ease-in-out infinite; display:inline-block;
+  }
+  .hours-list li.closed .time{color:rgba(122,92,72,.5); font-style:italic}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .map-wrap{
+    position:relative; aspect-ratio:4/3; overflow:hidden;
+    border:8px solid var(--bg-card);
+    box-shadow:0 0 0 1px var(--line);
+    background:#000;
+  }
+  .map-wrap iframe{width:100%; height:100%; border:0; filter:saturate(.85) brightness(.95)}
+  .map-cta{
+    position:absolute; bottom:18px; right:18px;
+    background:var(--accent); color:#fff;
+    padding:13px 20px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:600;
+    transition: all .3s; min-height:44px;
+    display:inline-flex; align-items:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.3);
+  }
+  .map-cta:hover{background:#6e1f12}
+  @media (max-width: 600px){ .map-wrap{ aspect-ratio:1/1; } }
+
+  /* FAQ */
+  .faq-section{background:var(--bg)}
+  .faq-list{display:grid; gap:8px; margin-top:32px}
+  .faq-item{
+    border-top:1px dashed var(--line);
+    padding:18px 0;
+  }
+  .faq-item:last-child{border-bottom:1px dashed var(--line)}
+  .faq-item summary{
+    cursor:pointer; list-style:none;
+    font-family:'DM Serif Display', serif;
+    font-size:22px;
+    color:var(--fg);
+    display:flex; justify-content:space-between; align-items:center;
+    transition:color .2s;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+"; font-family:'IBM Plex Mono', monospace; font-size:24px; color:var(--accent); margin-left:18px;
+  }
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item summary:hover{color:var(--accent)}
+  .faq-item .answer{
+    padding-top:14px; color:var(--fg-dim); font-size:15.5px; line-height:1.75; max-width:62ch;
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--fg);
+    color:rgba(251,246,236,.7);
+    padding: 56px 0 28px;
+    font-size:13.5px;
+  }
+  footer .wrap{display:grid; grid-template-columns:1fr; gap:28px}
+  @media (min-width: 700px){ footer .wrap{ grid-template-columns: 1.2fr 1fr 1fr; } }
+  footer h4{
+    font-family:'DM Serif Display', serif; font-weight:400; font-size:22px;
+    color:#fff; margin:0 0 14px;
+  }
+  footer h4 small{
+    display:block;
+    font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.18em;
+    color:var(--accent-warm); text-transform:uppercase; margin-top:4px;
+  }
+  footer a{color:rgba(251,246,236,.7); transition:color .2s}
+  footer a:hover{color:var(--accent-warm)}
+  footer p{margin:0 0 8px}
+  .foot-bottom{
+    border-top:1px solid rgba(251,246,236,.14);
+    padding-top:22px; margin-top:36px;
+    text-align:center; font-size:12px; color:rgba(251,246,236,.45);
+    font-family:'IBM Plex Mono', monospace; letter-spacing:.12em;
+  }
+
+  /* DIALOG */
+  dialog.reserve-dialog{
+    border:none; padding:0; background:var(--bg-card);
+    width:min(460px, calc(100% - 32px));
+    border-radius:0;
+    box-shadow:0 20px 60px rgba(58,36,24,.4);
+    margin:auto;
+    border:2px solid var(--accent);
+  }
+  dialog.reserve-dialog::backdrop{background:rgba(58,36,24,.7); backdrop-filter:blur(4px)}
+  dialog.reserve-dialog form{padding:32px}
+  dialog.reserve-dialog h3{
+    font-family:'DM Serif Display', serif; font-weight:400; font-size:28px;
+    margin:0 0 8px; color:var(--fg);
+  }
+  dialog.reserve-dialog p.subtitle{font-size:14px; color:var(--fg-dim); margin:0 0 22px; font-style:italic}
+  dialog.reserve-dialog label{display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--fg-dim); margin:14px 0 6px}
+  dialog.reserve-dialog input, dialog.reserve-dialog select{
+    width:100%; padding:12px 14px; font-size:15px; font-family:'Source Serif 4', serif;
+    border:1px solid var(--line); background:#fff; color:var(--fg);
+  }
+  dialog.reserve-dialog input:focus, dialog.reserve-dialog select:focus{outline:none; border-color:var(--accent)}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  dialog.reserve-dialog .btn-row{display:flex; gap:10px; margin-top:22px}
+  dialog.reserve-dialog .btn-row .btn{flex:1; min-height:46px}
+  .dialog-close{position:absolute; top:14px; right:14px; background:transparent; border:none; cursor:pointer; font-size:20px; color:var(--fg-dim)}
+
+  /* reveal */
+  .reveal{opacity:0; transform:translateY(20px); transition: opacity .8s ease, transform .8s ease}
+  .reveal.is-visible{opacity:1; transform:none}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a href="#" class="brand">La Botigueta<small>del bon menjar · Gràcia</small></a>
+    <a href="tel:+34671671157" class="tel-btn">+34 671 67 11 57</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Comida casera · Para llevar o mesa · Santa Àgata 18</span>
+      <h1 class="hero-h1">Cocina del día<em>como la de casa.</em></h1>
+      <p class="lede">Legumbres cocidas con cariño, escalivada con romesco, albóndigas con guisantes y el plato del día que toque. Producto de mercado, raciones generosas, precio honesto. Para llevarte en tarrina o comer en una de las pocas mesas del local.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" id="open-reserve" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 6V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2M5 6l1 14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1l1-14"/></svg>
+          Reservar tarrina
+        </button>
+        <a href="tel:+34671671157" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20Santa%20%C3%80gata%2018%2C%2008012%20Barcelona" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="h-main">
+        <img src="img/vitrina.webp" alt="Vitrina de La Botigueta con bandejas de comida casera, legumbres y guisos del día" width="1100" height="1466" loading="eager" decoding="async" fetchpriority="high">
+      </div>
+      <span class="tape">Pizarra del día — fresco</span>
+    </div>
+  </div>
+</section>
+
+<section class="pizarra-section reveal">
+  <div class="wrap">
+    <span class="eyebrow">La pizarra · platos del día</span>
+    <h2>Lo que se cuece <em>esta semana</em>.</h2>
+    <p class="section-lede">Cocina catalana de mercado. La carta no es fija: cambia con lo que llega del proveedor. Estos son los clásicos que se repiten cuando es temporada.</p>
+    <div class="platos-grid">
+      <div>
+        <div class="plato">
+          <h3>Llegums cuites del dia</h3>
+          <span class="price">por peso</span>
+          <p>Garbanzos, lentejas pardinas, judías secas. Cocidas con cariño y verdura de la huerta. Se sirven por peso, mínimo 250 g.</p>
+        </div>
+        <div class="plato">
+          <h3>Escalivada con romesco</h3>
+          <span class="price">5,50 €</span>
+          <p>Berenjena, pimiento rojo y cebolla asados al horno. Romesco casero al lado. El pintxo más pedido del local.</p>
+        </div>
+        <div class="plato">
+          <h3>Mandonguilles amb pèsols</h3>
+          <span class="price">8,50 €</span>
+          <p>Albóndigas caseras con guisantes en salsa. La receta de la abuela. Para llevar en tarrina o comer al momento.</p>
+        </div>
+      </div>
+      <div>
+        <div class="plato">
+          <h3>Croquetes casolanes</h3>
+          <span class="price">1,80 € ud</span>
+          <p>De jamón, de pollo a l'ast o de bacalao. Bechamel hecha el día. Pedirlas calientes para llevar.</p>
+        </div>
+        <div class="plato">
+          <h3>Costellar al forn</h3>
+          <span class="price">12 €</span>
+          <p>Costillar de cerdo asado al horno bajito, con su jugo y patatas panadera. Se reserva por la mañana.</p>
+        </div>
+        <div class="plato">
+          <h3>Pa amb tomàquet</h3>
+          <span class="price">3 €</span>
+          <p>Pan de cristal tostado con tomate de la huerta, aceite y sal. Para acompañar cualquier plato.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="local-section reveal">
+  <div class="wrap">
+    <span class="eyebrow">El local</span>
+    <h2>Cocina pequeña, <em>vitrina llena</em>.</h2>
+    <p class="section-lede">Diez metros cuadrados en Carrer de Santa Àgata, en el corazón de Gràcia. Detrás del mostrador, una cocina abierta donde se prepara todo cada mañana.</p>
+    <div class="local-grid">
+      <div class="local-text">
+        <p>La Botigueta no quiere ser un restaurante. Es una tienda de comida casera para llevar, con un par de mesas para quien no quiere irse. La vitrina marca lo que hay hoy. Lo que no entra en la vitrina, mañana se cocina otra cosa.</p>
+        <p>El producto viene del Mercat de la Llibertat, a tres calles. Verdura de temporada, legumbres pesadas al peso, carne del carnicero del barrio. Sin sellos ecológicos llamativos: solo proveedores que llevan ahí toda la vida.</p>
+        <p>El bocado pequeño con romesco encima de pan de cristal está en la ruta gastronómica de Devour Barcelona. La cuchara de palo viene con la cuchara de palo: no hay vajilla bonita ni jugamos a ser sitio cool. Aquí se viene a comer.</p>
+      </div>
+      <div class="local-photos">
+        <figure>
+          <img src="img/vitrina.webp" alt="Vitrina con bandejas de legumbres cocidas, croquetas y verdura del día" width="1100" height="1466" loading="lazy" decoding="async">
+          <figcaption>Vitrina · al peso</figcaption>
+        </figure>
+        <figure>
+          <img src="img/barra.webp" alt="Barra interior con báscula, vinos y pizarra de menú" width="1100" height="1466" loading="lazy" decoding="async">
+          <figcaption>Barra · pesa y paga</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trayectoria reveal">
+  <div class="wrap">
+    <span class="eyebrow">Cómo funciona</span>
+    <h2>Tres pasos. <em>Sin misterio.</em></h2>
+    <div class="tray-grid">
+      <div class="tray-card">
+        <div class="y">01</div>
+        <h3>Miras la vitrina</h3>
+        <p>El menú es lo que ves. Si una bandeja está vacía, ese plato se acabó. Mañana habrá otro. Si lo prefieres por adelantado, llama por la mañana y te lo guardamos.</p>
+      </div>
+      <div class="tray-card">
+        <div class="y">02</div>
+        <h3>Pesas y eliges</h3>
+        <p>Tarrinas medianas o grandes. Cada plato se cobra por peso real, no por ración fija. Pides la cantidad que necesites para una o cuatro personas.</p>
+      </div>
+      <div class="tray-card">
+        <div class="y">03</div>
+        <h3>Llevas o comes</h3>
+        <p>Hay un par de mesas para quien quiere comerlo allí. La mayoría se lo lleva a casa, al parque del Putxet o a la oficina. Tarrina cerrada caliente, aguanta una hora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit-section reveal" id="visita">
+  <div class="wrap">
+    <span class="eyebrow">Visítanos</span>
+    <h2>Carrer de <em>Santa Àgata, 18</em></h2>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              Carrer de Santa Àgata, 18–20<br>
+              <span class="city">08012 Barcelona · Vila de Gràcia · 4 min andando del Mercat de la Llibertat</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li><span class="day">Lunes</span><span class="time">12:00 – 16:00 · 19:00 – 21:00</span></li>
+              <li><span class="day">Martes</span><span class="time">12:00 – 16:00 · 19:00 – 21:00</span></li>
+              <li class="closed"><span class="day">Miércoles</span><span class="time">Cerrado</span></li>
+              <li><span class="day">Jueves</span><span class="time">12:00 – 16:00 · 19:00 – 21:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">12:00 – 16:00 · 19:00 – 21:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">14:00 – 16:00</span></li>
+              <li class="closed"><span class="day">Domingo</span><span class="time">Cerrado</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <div><a href="tel:+34671671157">+34 671 67 11 57</a></div>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer%20de%20Santa%20%C3%80gata%2018%2C%2008012%20Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de La Botigueta en Gràcia"></iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20Santa%20%C3%80gata%2018%2C%2008012%20Barcelona"
+           target="_blank" rel="noopener" class="map-cta">Cómo llegar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section reveal">
+  <div class="wrap">
+    <span class="eyebrow">Antes de venir</span>
+    <h2>Preguntas <em>frecuentes</em>.</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Hay carta fija o cambia cada día?</summary>
+        <div class="answer">La carta cambia cada día según lo que llega del mercado y según lo que el cocinero prepare por la mañana. Hay platos que se repiten varias veces a la semana porque tienen demanda (escalivada, croquetas, albóndigas, legumbres cocidas). Otros son del día y se acaban antes de mediodía.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo encargar para una comida en grupo?</summary>
+        <div class="answer">Sí. Para encargos grandes (más de 4 personas o platos elaborados como costillar al horno o canelones), llama un día antes para que te lo dejen preparado a la hora que necesites. Tarrinas individuales o por kilos, como prefieras. Pago al recoger.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis opciones vegetarianas o veganas?</summary>
+        <div class="answer">Sí, varias. Legumbres cocidas (todas son veganas si las pides sin embutido), escalivada con romesco, pisto del día, espinacas con piñones, ensaladilla rusa vegetal. Tres o cuatro opciones veganas siempre disponibles. Las croquetas y las albóndigas no son aptas.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Las tarrinas se calientan?</summary>
+        <div class="answer">Si te lo llevas para comer en menos de una hora, te lo damos caliente y aguanta bien la temperatura en la tarrina térmica. Si es para más tarde o llevártelo a casa, mejor frío para conservar mejor: lo calientas en sartén o microondas un par de minutos. Las cantidades aguantan en nevera 48 horas.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>La Botigueta<small>del bon menjar</small></h4>
+      <p>Cocina casera catalana para llevar o comer en mesa. Producto de mercado, vitrina llena, raciones honestas. En Gràcia desde hace años.</p>
+    </div>
+    <div>
+      <h4>Visítanos</h4>
+      <p>Carrer de Santa Àgata, 18–20</p>
+      <p>08012 Barcelona · Vila de Gràcia</p>
+      <p><a href="tel:+34671671157">+34 671 67 11 57</a></p>
+    </div>
+    <div>
+      <h4>Síguenos</h4>
+      <p><a href="https://www.facebook.com/labotiguetadelbonmenjar/" target="_blank" rel="noopener">Facebook</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Carrer%20de%20Santa%20%C3%80gata%2018%2C%2008012%20Barcelona" target="_blank" rel="noopener">Google Maps</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom">LA BOTIGUETA DEL BON MENJAR · GRÀCIA · BARCELONA</div>
+</footer>
+
+<dialog class="reserve-dialog" id="reserve-dialog">
+  <form method="dialog">
+    <button class="dialog-close" type="submit" aria-label="Cerrar">✕</button>
+    <h3>Reservar tarrina o mesa</h3>
+    <p class="subtitle">Para encargos grandes, mejor con un día de antelación.</p>
+    <label for="r-name">Nombre</label>
+    <input id="r-name" name="name" type="text" placeholder="Tu nombre" required>
+    <div class="form-row">
+      <div>
+        <label for="r-date">Día</label>
+        <input id="r-date" name="date" type="date" required>
+      </div>
+      <div>
+        <label for="r-pax">Personas</label>
+        <select id="r-pax" name="pax" required>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+        </select>
+      </div>
+    </div>
+    <label for="r-phone">Teléfono</label>
+    <input id="r-phone" name="phone" type="tel" placeholder="+34 ..." required>
+    <div class="btn-row">
+      <button class="btn btn-secondary" type="submit" value="cancel">Cancelar</button>
+      <a class="btn btn-primary" href="tel:+34671671157">Llamar ahora</a>
+    </div>
+  </form>
+</dialog>
+
+<script>
+  const dlg = document.getElementById('reserve-dialog');
+  document.getElementById('open-reserve').addEventListener('click', () => dlg.showModal());
+  (function(){
+    const items = document.querySelectorAll('.hours-list li');
+    if(!items.length) return;
+    const jsDay = new Date().getDay();
+    const idx = jsDay === 0 ? 6 : jsDay - 1;
+    items[idx] && items[idx].classList.add('now');
+  })();
+  (function(){
+    const items = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }});
+      }, { rootMargin: '0px 0px -8% 0px' });
+      items.forEach(el => io.observe(el));
+    }
+    setTimeout(() => items.forEach(el => el.classList.add('is-visible')), 2500);
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "La Botigueta del Bon Menjar",
+  "image": "https://botigueta-bon-menjar.example/img/vitrina.webp",
+  "@id": "https://botigueta-bon-menjar.example/",
+  "url": "https://botigueta-bon-menjar.example/",
+  "telephone": "+34671671157",
+  "servesCuisine": ["Catalana", "Casera", "Comida para llevar"],
+  "priceRange": "€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer de Santa Àgata, 18-20",
+    "addressLocality": "Barcelona",
+    "addressRegion": "Gràcia",
+    "postalCode": "08012",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 41.408, "longitude": 2.156 },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"12:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"19:00","closes":"21:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"14:00","closes":"16:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Hay carta fija o cambia cada día?","acceptedAnswer":{"@type":"Answer","text":"La carta cambia cada día según lo que llega del mercado. Hay platos que se repiten varias veces a la semana por demanda (escalivada, croquetas, albóndigas, legumbres). Otros son del día y se acaban antes de mediodía."}},
+    {"@type":"Question","name":"¿Puedo encargar para una comida en grupo?","acceptedAnswer":{"@type":"Answer","text":"Sí, para encargos grandes (más de 4 personas o platos elaborados como costillar al horno), llama un día antes. Tarrinas individuales o por kilos. Pago al recoger."}},
+    {"@type":"Question","name":"¿Tenéis opciones vegetarianas o veganas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Legumbres cocidas, escalivada con romesco, pisto, espinacas con piñones, ensaladilla vegetal. Tres o cuatro opciones veganas siempre disponibles. Croquetas y albóndigas no son aptas."}},
+    {"@type":"Question","name":"¿Las tarrinas se calientan?","acceptedAnswer":{"@type":"Answer","text":"Si te lo llevas para comer en menos de una hora, te lo damos caliente. Si es para más tarde, mejor frío para conservar mejor: lo calientas en sartén o microondas. Aguanta en nevera 48 horas."}}
+  ]
+}
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20La%20Botigueta%20del%20Bon%20Menjar%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>La Botigueta del Bon Menjar</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20La%20Botigueta%20del%20Bon%20Menjar%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20La%20Botigueta%20del%20Bon%20Menjar%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de La Botigueta del Bon Menjar y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-27T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+</body>
+</html>
