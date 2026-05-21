@@ -785,13 +785,22 @@ img, video, picture, iframe {
 
 /* ✦ VISUAL-BUGS-FIX-START ✦ */
 
-/* ─── BUG 1: dialog HTML5 nativo no se centra solo ─── */
-dialog[open] {
+/* ─── BUG 1: dialog HTML5 nativo no se centra solo ───
+   Cubrimos múltiples nombres de clase usados por los sub-agents:
+   .reserva-dialog (batch 16-20 sub-agent #2), genéricos, etc.
+   La doble especificidad dialog.X[open] supera la del CSS sub-agent. */
+dialog[open],
+.reserva-dialog[open],
+.reserva-modal[open],
+.modal[open],
+dialog.reserva-dialog[open],
+dialog.modal[open] {
   position: fixed !important;
   inset: 0 !important;
   margin: auto !important;
-  max-height: calc(100% - 2rem);
-  box-sizing: border-box;
+  transform: none !important; /* anula translateY de animación entrada */
+  max-height: calc(100% - 2rem) !important;
+  box-sizing: border-box !important;
 }
 /* Backdrop oscurece el resto para no ver layout debajo (UX modal) */
 dialog[open]::backdrop {
