@@ -363,39 +363,43 @@ dialog[open]::backdrop {
 }
 
 /* ─── BUG 2: grids con imágenes de proporciones mixtas dejaban huecos ───
-   Solución: cambiar de CSS Grid (que iguala alturas de fila) a CSS Columns
-   (masonry layout — cada columna fluye independiente). Las imágenes
-   mantienen su aspect-ratio nativo sin generar huecos blancos. */
+   Solución: Flex con wrap + align-items: flex-start.
+   - Cada figure ocupa 50% (gap mediante) — orden DOM se respeta left-to-right
+   - align-items: flex-start evita que las celdas se estiren a la altura mayor
+   - CSS Columns era opción pero con 2 elementos balancea mal (apila ambos en col 2) */
 .gal-grid, .galeria, .galeria-grid, .gallery, .gallery-grid,
 [class*="gallery"], [class*="galer"], [class*="gal-grid"] {
-  display: block !important;
-  column-count: 2 !important;
-  column-gap: clamp(16px, 2.5vw, 32px) !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: clamp(16px, 2.5vw, 32px) !important;
+  align-items: flex-start !important;
   grid-template-columns: none !important;
   grid-template-rows: none !important;
+  column-count: auto !important;
 }
 
-/* Mobile: 1 columna */
-@media (max-width: 640px) {
-  .gal-grid, .galeria, .galeria-grid, .gallery, .gallery-grid,
-  [class*="gallery"], [class*="galer"], [class*="gal-grid"] {
-    column-count: 1 !important;
-  }
-}
-
-/* Figures dentro: no romper entre columnas, altura natural */
+/* Figures dentro: 50% ancho menos mitad del gap, altura natural */
 .gal-figure, .galeria figure, .galeria-grid figure,
 .gallery figure, .gallery-grid figure,
 [class*="galer"] figure, [class*="gallery"] figure,
 figure.reveal {
-  break-inside: avoid !important;
-  -webkit-column-break-inside: avoid !important;
-  page-break-inside: avoid !important;
-  display: block !important;
-  width: 100% !important;
-  margin: 0 0 clamp(16px, 2.5vw, 32px) 0 !important;
+  flex: 0 0 calc(50% - clamp(8px, 1.25vw, 16px)) !important;
+  max-width: calc(50% - clamp(8px, 1.25vw, 16px)) !important;
+  margin: 0 !important;
   height: auto !important;
   min-height: 0 !important;
+  display: block !important;
+}
+
+/* Mobile: 1 columna full-width */
+@media (max-width: 640px) {
+  .gal-figure, .galeria figure, .galeria-grid figure,
+  .gallery figure, .gallery-grid figure,
+  [class*="galer"] figure, [class*="gallery"] figure,
+  figure.reveal {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 /* Imágenes en figures: respetar aspect-ratio natural */
