@@ -362,25 +362,43 @@ dialog[open]::backdrop {
   background: rgba(0, 0, 0, 0.55);
 }
 
-/* ─── BUG 2: grids 2 columnas con imágenes de proporciones mixtas ───
-   align-items: start evita que la celda con imagen horizontal se estire
-   a la altura de la vertical, dejando hueco blanco abajo. */
+/* ─── BUG 2: grids con imágenes de proporciones mixtas dejaban huecos ───
+   Solución: cambiar de CSS Grid (que iguala alturas de fila) a CSS Columns
+   (masonry layout — cada columna fluye independiente). Las imágenes
+   mantienen su aspect-ratio nativo sin generar huecos blancos. */
 .gal-grid, .galeria, .galeria-grid, .gallery, .gallery-grid,
 [class*="gallery"], [class*="galer"], [class*="gal-grid"] {
-  align-items: start !important;
+  display: block !important;
+  column-count: 2 !important;
+  column-gap: clamp(16px, 2.5vw, 32px) !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
 }
 
-/* Figures dentro: altura natural, no estirar */
+/* Mobile: 1 columna */
+@media (max-width: 640px) {
+  .gal-grid, .galeria, .galeria-grid, .gallery, .gallery-grid,
+  [class*="gallery"], [class*="galer"], [class*="gal-grid"] {
+    column-count: 1 !important;
+  }
+}
+
+/* Figures dentro: no romper entre columnas, altura natural */
 .gal-figure, .galeria figure, .galeria-grid figure,
 .gallery figure, .gallery-grid figure,
 [class*="galer"] figure, [class*="gallery"] figure,
 figure.reveal {
+  break-inside: avoid !important;
+  -webkit-column-break-inside: avoid !important;
+  page-break-inside: avoid !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 clamp(16px, 2.5vw, 32px) 0 !important;
   height: auto !important;
   min-height: 0 !important;
-  align-self: start !important;
 }
 
-/* Imágenes en figures: respetar aspect-ratio natural sin object-fit fill */
+/* Imágenes en figures: respetar aspect-ratio natural */
 .gal-figure > img, .galeria figure > img, .galeria-grid figure > img,
 .gallery figure > img, .gallery-grid figure > img,
 [class*="galer"] figure > img, [class*="gallery"] figure > img,
@@ -388,7 +406,8 @@ figure.reveal > img {
   width: 100% !important;
   height: auto !important;
   object-fit: contain !important;
-  display: block;
+  display: block !important;
+  aspect-ratio: auto !important;
 }
 
 /* ✦ VISUAL-BUGS-FIX-END ✦ */
