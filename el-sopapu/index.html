@@ -784,6 +784,52 @@ img, video, picture, iframe {
   min-width: 0;
 }
 /* ✦ OVERFLOW-FIX-END ✦ */
+
+/* ✦ VISUAL-BUGS-FIX-START ✦ */
+
+/* ─── BUG 1: dialog HTML5 nativo no se centra solo ─── */
+dialog[open] {
+  position: fixed !important;
+  inset: 0 !important;
+  margin: auto !important;
+  max-height: calc(100% - 2rem);
+  box-sizing: border-box;
+}
+/* Backdrop oscurece el resto para no ver layout debajo (UX modal) */
+dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ─── BUG 2: grids 2 columnas con imágenes de proporciones mixtas ───
+   align-items: start evita que la celda con imagen horizontal se estire
+   a la altura de la vertical, dejando hueco blanco abajo. */
+.gal-grid, .galeria, .galeria-grid, .gallery, .gallery-grid,
+[class*="gallery"], [class*="galer"], [class*="gal-grid"] {
+  align-items: start !important;
+}
+
+/* Figures dentro: altura natural, no estirar */
+.gal-figure, .galeria figure, .galeria-grid figure,
+.gallery figure, .gallery-grid figure,
+[class*="galer"] figure, [class*="gallery"] figure,
+figure.reveal {
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start !important;
+}
+
+/* Imágenes en figures: respetar aspect-ratio natural sin object-fit fill */
+.gal-figure > img, .galeria figure > img, .galeria-grid figure > img,
+.gallery figure > img, .gallery-grid figure > img,
+[class*="galer"] figure > img, [class*="gallery"] figure > img,
+figure.reveal > img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block;
+}
+
+/* ✦ VISUAL-BUGS-FIX-END ✦ */
 </style>
 
   <script type="application/ld+json">
