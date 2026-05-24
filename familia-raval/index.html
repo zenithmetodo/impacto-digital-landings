@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Familia del Raval — Restaurante filipino familiar en el Raval, Barcelona</title>
+<meta name="description" content="La Familia del Raval: cocina filipina familiar en el Raval. Adobo, sinigang, lechon kawali, halo-halo. Carrer de la Riereta 26, Barcelona.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="La Familia del Raval — Cocina filipina del barrio">
+<meta property="og:description" content="El único filipino real del Raval. Adobo, sinigang, lechon como en Manila. Carrer de la Riereta 26.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --azul-fil:#0038a8;          /* azul bandera filipina */
+    --azul-cielo:#4a90e2;
+    --azul-claro:#e6f0fa;
+    --rojo-fil:#ce1126;          /* rojo bandera */
+    --amarillo-sol:#fcd116;      /* amarillo sol filipino */
+    --crema:#fff8e8;
+    --bg:#fffaf0;
+    --bg-alt:#eef5fc;
+    --paper:#ffffff;
+    --fg:#1a1f3a;
+    --fg-dim:#5a627a;
+    --verde-tropical:#2d7a4a;
+    --line:#dde6f0;
+    --side-padding:clamp(1.25rem,3vw + 0.5rem,2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Manrope',-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--fg);
+    line-height:1.6;
+    font-size:17px;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;max-width:1180px;margin:0 auto;
+    padding-left:var(--side-padding);padding-right:var(--side-padding);
+    position:relative;z-index:1;
+  }
+  .kicker{
+    font-family:'Manrope',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:0.18em;
+    font-size:11px;color:var(--rojo-fil);
+  }
+  .script{font-family:'Caveat',cursive;font-weight:700}
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,240,0.95);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:2px solid var(--azul-fil);
+  }
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{
+    display:flex;align-items:center;gap:12px;
+    font-family:'Manrope',sans-serif;font-weight:800;font-size:20px;color:var(--azul-fil);
+    letter-spacing:-0.01em;
+  }
+  .brand-flag{
+    display:inline-block;width:34px;height:24px;border-radius:3px;
+    background:linear-gradient(to right, var(--azul-fil) 50%, var(--rojo-fil) 50%);
+    position:relative;
+  }
+  .brand-flag::before{
+    content:"";position:absolute;left:0;top:0;
+    border-left:14px solid var(--crema);
+    border-top:12px solid transparent;border-bottom:12px solid transparent;
+  }
+  .brand-flag::after{
+    content:"☀";position:absolute;left:1px;top:3px;
+    color:var(--amarillo-sol);font-size:14px;line-height:1;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 18px;border:2px solid var(--azul-fil);border-radius:999px;
+    font-weight:700;font-size:13px;color:var(--azul-fil);
+    transition:all 0.25s;
+  }
+  .tel-btn:hover{background:var(--azul-fil);color:var(--crema)}
+
+  /* HERO */
+  .hero{padding:60px 0 80px;position:relative;background:linear-gradient(180deg,var(--azul-claro) 0%,var(--bg) 100%)}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media (min-width:880px){.hero-grid{grid-template-columns:1.1fr 0.9fr;gap:56px}}
+  .hero-tagline{
+    display:inline-block;
+    background:var(--amarillo-sol);color:var(--azul-fil);
+    padding:6px 14px;border-radius:999px;
+    font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.12em;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-family:'Manrope',sans-serif;font-weight:800;
+    font-size:clamp(2.4rem,6vw,5.5rem);
+    line-height:1.05;letter-spacing:-0.025em;
+    color:var(--azul-fil);margin-bottom:22px;
+  }
+  .hero h1 .script-accent{
+    font-family:'Caveat',cursive;font-weight:700;
+    color:var(--rojo-fil);font-size:0.85em;display:inline-block;
+    transform:rotate(-2deg);
+  }
+  .hero-lede{
+    font-size:18px;color:var(--fg-dim);margin-bottom:28px;
+    max-width:480px;line-height:1.6;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;border-radius:999px;font-weight:700;font-size:13.5px;
+    transition:all 0.25s;border:2px solid transparent;min-height:44px;
+    text-transform:uppercase;letter-spacing:0.06em;
+  }
+  .btn-primary{background:var(--rojo-fil);color:#fff}
+  .btn-primary:hover{background:var(--azul-fil);transform:translateY(-2px)}
+  .btn-secondary{border-color:var(--azul-fil);color:var(--azul-fil);background:#fff}
+  .btn-secondary:hover{background:var(--azul-fil);color:#fff}
+  .btn-ghost{border-color:var(--fg-dim);color:var(--fg)}
+  .btn-ghost:hover{border-color:var(--azul-fil);color:var(--azul-fil)}
+  .hero-img-wrap{
+    border-radius:20px;overflow:hidden;
+    box-shadow:0 24px 60px -20px rgba(0,56,168,0.35);
+    border:4px solid #fff;position:relative;
+    aspect-ratio:4/5;
+    background:linear-gradient(135deg,var(--azul-cielo) 0%,var(--azul-fil) 100%);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;text-align:center;padding:24px;
+  }
+  .hero-img-wrap .ph-emoji{font-size:64px;margin-bottom:12px}
+  .hero-img-wrap .ph-text{font-weight:600;font-size:14px;opacity:0.95;line-height:1.4}
+
+  /* SECCIONES */
+  section{padding:80px 0;position:relative;z-index:1}
+  @media (min-width:768px){section{padding:100px 0}}
+  .section-head{margin-bottom:48px;max-width:680px}
+  .section-head h2{
+    font-family:'Manrope',sans-serif;font-weight:800;
+    font-size:clamp(2rem,4vw,3.4rem);
+    margin-top:14px;color:var(--azul-fil);line-height:1.1;letter-spacing:-0.02em;
+  }
+  .section-head h2 .script-accent{
+    font-family:'Caveat',cursive;color:var(--rojo-fil);
+    font-weight:700;display:inline-block;transform:rotate(-1deg);
+  }
+
+  /* OCEANO - Bloque narrativo intro */
+  .oceano{background:var(--bg)}
+  .oceano-grid{
+    display:grid;grid-template-columns:1fr;gap:32px;align-items:center;
+  }
+  @media (min-width:760px){.oceano-grid{grid-template-columns:1fr 1fr;gap:64px}}
+  .oceano-text p{
+    font-size:17px;color:var(--fg-dim);line-height:1.75;margin-bottom:18px;
+  }
+  .oceano-text p strong{color:var(--azul-fil)}
+  .oceano-img{
+    aspect-ratio:1/1;border-radius:20px;
+    background:linear-gradient(135deg,var(--amarillo-sol),var(--rojo-fil));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;padding:24px;text-align:center;
+    box-shadow:0 20px 40px -16px rgba(206,17,38,0.4);
+  }
+  .oceano-img .ph-emoji{font-size:72px}
+  .oceano-img .ph-text{font-weight:600;font-size:14px;margin-top:14px}
+
+  /* PLATOS ICÓNICOS - 4 cards */
+  .platos{background:var(--azul-claro)}
+  .platos-grid{
+    display:grid;grid-template-columns:1fr;gap:24px;
+  }
+  @media (min-width:600px){.platos-grid{grid-template-columns:repeat(2,1fr);gap:28px}}
+  @media (min-width:960px){.platos-grid{grid-template-columns:repeat(4,1fr);gap:24px}}
+  .plato-card{
+    background:#fff;border-radius:16px;overflow:hidden;
+    box-shadow:0 8px 24px -10px rgba(0,56,168,0.15);
+    transition:transform 0.3s;
+    border:1px solid var(--line);
+  }
+  .plato-card:hover{transform:translateY(-4px)}
+  .plato-img{
+    aspect-ratio:4/3;
+    background:linear-gradient(135deg,var(--amarillo-sol) 0%,var(--rojo-fil) 100%);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;padding:16px;text-align:center;
+  }
+  .plato-img .ph-emoji{font-size:48px}
+  .plato-img .ph-text{font-weight:600;font-size:12px;margin-top:8px;opacity:0.95}
+  .plato-body{padding:22px 20px}
+  .plato-tagalog{
+    font-family:'Caveat',cursive;font-size:18px;
+    color:var(--rojo-fil);font-weight:700;margin-bottom:4px;line-height:1;
+  }
+  .plato-name{
+    font-family:'Manrope',sans-serif;font-weight:800;font-size:18px;
+    color:var(--azul-fil);margin-bottom:10px;line-height:1.2;
+  }
+  .plato-desc{font-size:14.5px;color:var(--fg-dim);line-height:1.55}
+
+  /* GALERIA */
+  .galeria{background:var(--bg)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:20px;
+  }
+  .gal-figure{
+    flex:1 1 calc(50% - 10px);
+    background:#fff;border-radius:14px;overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 6px 16px -8px rgba(0,56,168,0.12);
+  }
+  @media (max-width:640px){.gal-figure{flex:1 1 100%}}
+  .gal-img-ph{
+    aspect-ratio:4/3;
+    background:linear-gradient(135deg,var(--azul-cielo),var(--azul-fil));
+    display:flex;align-items:center;justify-content:center;color:#fff;
+    padding:20px;text-align:center;flex-direction:column;
+  }
+  .gal-img-ph.alt{background:linear-gradient(135deg,var(--verde-tropical),var(--amarillo-sol))}
+  .gal-img-ph .ph-emoji{font-size:56px;margin-bottom:8px}
+  .gal-img-ph .ph-text{font-weight:600;font-size:13px;opacity:0.95}
+  .gal-figure figcaption{
+    padding:16px 20px;font-weight:600;font-size:13px;
+    color:var(--fg);letter-spacing:0.02em;
+  }
+  .gal-figure figcaption strong{color:var(--rojo-fil);text-transform:uppercase;font-size:11px;letter-spacing:0.14em;display:block;margin-bottom:4px}
+
+  /* HISTORIA / FAMILIA */
+  .familia{background:var(--azul-fil);color:var(--crema);position:relative;overflow:hidden}
+  .familia::after{
+    content:"";position:absolute;top:-50px;right:-50px;
+    width:300px;height:300px;border-radius:50%;
+    background:radial-gradient(circle,var(--amarillo-sol) 0%,transparent 70%);
+    opacity:0.15;
+  }
+  .familia h2{color:var(--crema)}
+  .familia .kicker{color:var(--amarillo-sol)}
+  .familia-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;
+    position:relative;z-index:1;
+  }
+  @media (min-width:880px){.familia-grid{grid-template-columns:0.4fr 0.6fr;gap:56px}}
+  .familia-quote{
+    font-family:'Caveat',cursive;font-weight:700;
+    font-size:clamp(28px,3vw,42px);line-height:1.3;
+    color:var(--amarillo-sol);
+  }
+  .familia-body p{
+    margin-bottom:18px;font-size:16.5px;line-height:1.75;
+    color:rgba(255,248,232,0.92);
+  }
+  .familia-body p strong{color:#fff}
+  .familia-firma{
+    margin-top:28px;padding-top:20px;
+    border-top:1px solid rgba(252,209,22,0.3);
+    font-size:13px;color:var(--amarillo-sol);
+    text-transform:uppercase;letter-spacing:0.18em;font-weight:700;
+  }
+
+  /* VISITA */
+  .visita{background:var(--bg)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;margin-top:48px;
+  }
+  @media (min-width:880px){.visit-grid{grid-template-columns:1fr 1fr;gap:48px}}
+  .visit-info dl{display:grid;gap:20px}
+  .visit-info .row{
+    border-top:2px solid var(--azul-claro);padding-top:18px;
+  }
+  .visit-info .row:last-child{border-bottom:2px solid var(--azul-claro);padding-bottom:18px}
+  .visit-info .label{
+    font-weight:700;font-size:11px;letter-spacing:0.18em;
+    text-transform:uppercase;color:var(--rojo-fil);margin-bottom:10px;
+  }
+  .visit-info .value{font-size:16.5px;color:var(--fg)}
+  .visit-info .value a{color:var(--azul-fil);font-weight:600}
+  .visit-info .value a:hover{text-decoration:underline}
+  .visit-info .city{color:var(--fg-dim);font-size:14px;display:block;margin-top:4px}
+  .hours-list{display:grid;gap:6px;list-style:none}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:15px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--fg-dim)}
+  .hours-list .time{color:var(--fg);font-variant-numeric:tabular-nums;font-size:13.5px;font-weight:600}
+  .hours-list li.now{
+    background:var(--amarillo-sol);
+    padding:8px 12px;border-radius:6px;margin:0 -12px;
+  }
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--azul-fil);font-weight:700}
+  .hours-list li.now .day::before{
+    content:"●";color:var(--rojo-fil);font-size:9px;margin-right:8px;
+    animation:pulse 1.6s ease-in-out infinite;display:inline-block;
+  }
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;
+    border:3px solid var(--azul-fil);background:var(--paper);
+  }
+  .map-wrap iframe{width:100%;height:100%;border:0}
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:#fff;color:var(--azul-fil);
+    padding:12px 18px;font-weight:700;font-size:12px;
+    letter-spacing:0.1em;text-transform:uppercase;
+    border-radius:999px;border:2px solid var(--azul-fil);
+    min-height:44px;display:inline-flex;align-items:center;
+    transition:all 0.25s;
+  }
+  .map-cta:hover{background:var(--azul-fil);color:#fff}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--azul-claro)}
+  .faq-list{margin-top:36px}
+  .faq-item{
+    background:#fff;border-radius:12px;margin-bottom:12px;
+    border:1px solid var(--line);overflow:hidden;
+  }
+  .faq-item summary{
+    list-style:none;cursor:pointer;padding:20px 24px;
+    font-weight:700;font-size:17px;color:var(--azul-fil);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-size:22px;color:var(--rojo-fil);
+    transition:transform .3s;flex-shrink:0;font-weight:400;
+  }
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item p{padding:0 24px 22px;color:var(--fg-dim);font-size:15.5px;line-height:1.7}
+
+  /* CTA FINAL */
+  .cta-final{background:var(--rojo-fil);color:#fff;text-align:center}
+  .cta-final h2{color:#fff}
+  .cta-final h2 .script-accent{color:var(--amarillo-sol)}
+  .cta-final .kicker{color:var(--amarillo-sol)}
+  .cta-final p{max-width:540px;margin:18px auto 32px;font-size:17px;color:rgba(255,255,255,0.9)}
+  .cta-final .hero-cta{justify-content:center}
+  .cta-final .btn-primary{background:#fff;color:var(--rojo-fil)}
+  .cta-final .btn-primary:hover{background:var(--amarillo-sol);color:var(--azul-fil)}
+  .cta-final .btn-secondary{border-color:#fff;color:#fff;background:transparent}
+  .cta-final .btn-secondary:hover{background:#fff;color:var(--rojo-fil)}
+
+  /* FOOTER */
+  footer{
+    background:var(--azul-fil);color:var(--crema);
+    padding:40px 0;font-size:13px;
+  }
+  footer .container{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center;
+  }
+  footer a{color:var(--amarillo-sol)}
+  footer a:hover{text-decoration:underline}
+  .footer-attr{font-size:11.5px;opacity:0.7;max-width:520px;line-height:1.5;font-style:italic;margin-top:12px;width:100%}
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:0;border-radius:18px;padding:0;background:#fff;
+    max-width:460px;width:92%;
+    box-shadow:0 30px 80px rgba(0,0,0,0.35);color:var(--fg);
+  }
+  dialog::backdrop{background:rgba(0,56,168,0.55);backdrop-filter:blur(4px)}
+  .dlg-head{padding:24px 28px 0;border-top:6px solid var(--rojo-fil);border-radius:18px 18px 0 0}
+  .dlg-head .kicker{margin-bottom:8px}
+  .dlg-head h3{font-family:'Manrope',sans-serif;font-weight:800;font-size:24px;color:var(--azul-fil)}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:14.5px;color:var(--fg-dim);margin-bottom:18px;line-height:1.55}
+  .dlg-form{display:grid;gap:12px}
+  .dlg-form label{font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--rojo-fil);display:block;margin-bottom:4px}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:11px 14px;border:2px solid var(--line);background:#fff;
+    font-family:inherit;font-size:15px;color:var(--fg);border-radius:8px;
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--azul-fil)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px;flex-wrap:wrap}
+  .dlg-actions .btn{padding:12px 20px}
+  .dlg-close{
+    background:none;border:0;color:var(--fg-dim);font-size:12px;
+    letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-weight:600;
+  }
+  .dlg-close:hover{color:var(--rojo-fil)}
+  .dlg-ok{display:none;text-align:center;padding:32px 24px}
+  .dlg-ok h4{font-family:'Manrope',sans-serif;font-weight:800;font-size:22px;color:var(--azul-fil);margin-bottom:10px}
+  .dlg-ok p{color:var(--fg-dim);font-size:14.5px}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  /* OVERFLOW + DIALOG CENTER FIX */
+  html,body{overflow-x:clip;max-width:100%}
+  dialog[open],.reserva-dialog[open]{
+    position:fixed!important;inset:0!important;margin:auto!important;
+    transform:none!important;max-height:calc(100% - 2rem)!important;box-sizing:border-box!important;
+  }
+  dialog[open]::backdrop{background:rgba(0,56,168,0.55)}
+  img,video,picture,iframe{max-width:100%}
+  .map-cta{max-width:calc(100% - 28px)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-flag"></span>
+      La Familia del Raval
+    </a>
+    <a href="tel:+34931644575" class="tel-btn">931 64 45 75</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="hero-tagline">🇵🇭 Cocina filipina real · Raval</span>
+        <h1>Como en <span class="script-accent">Manila,</span><br>pero en el Raval.</h1>
+        <p class="hero-lede">Adobo de pollo, sinigang ácido y reconfortante, lechon kawali crujiente y halo-halo de postre. El único restaurante filipino REAL del Raval, hecho como en casa de la lola. Bienvenidos a la familia.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+          <a href="tel:+34931644575" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+la+Riereta+26+08001+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal">
+        <div class="ph-emoji">🍲</div>
+        <div class="ph-text">[FOTO DEL LOCAL — sustituir antes del pitch]<br>Adobo en cazuela, mesa familiar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oceano">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Filipinas + Barcelona</span>
+      <h2>Sabores que cruzan <span class="script-accent">el océano.</span></h2>
+    </div>
+    <div class="oceano-grid">
+      <div class="oceano-text reveal">
+        <p>La cocina filipina es una mezcla preciosa: <strong>raíces malayas, influencia española de tres siglos, toques chinos y americanos</strong>. Todo eso convive en un mismo plato — el adobo es prima del escabeche, el lechon viene del cochinillo, y el halo-halo es nuestro postre nacional con leche evaporada, gelatina y fruta del trópico.</p>
+        <p>En el Raval llevamos años cocinando <strong>como se cocina en casa</strong>: nada de fusión moderna, nada de inventos. Lo que probarías si te invitara una familia filipina a comer un domingo, eso es lo que ponemos en el plato.</p>
+        <p>Somos uno de los pocos sitios filipinos reales de Barcelona. Si nunca has probado nuestra cocina, prepárate para enamorarte. Si eres filipino y echas de menos casa — bienvenido, esta es tu mesa.</p>
+      </div>
+      <div class="oceano-img reveal">
+        <div>
+          <div class="ph-emoji">🌴</div>
+          <div class="ph-text">[FOTO HALO-HALO o LECHON — sustituir antes del pitch]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="platos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Los imprescindibles</span>
+      <h2>Cuatro platos que <span class="script-accent">tienes que probar.</span></h2>
+    </div>
+    <div class="platos-grid">
+      <article class="plato-card reveal">
+        <div class="plato-img">
+          <div>
+            <div class="ph-emoji">🍗</div>
+            <div class="ph-text">[FOTO ADOBO]</div>
+          </div>
+        </div>
+        <div class="plato-body">
+          <div class="plato-tagalog">Adobo</div>
+          <div class="plato-name">Pollo en adobo filipino</div>
+          <div class="plato-desc">Marinado con vinagre, soja, ajo y laurel. Cocido hasta que la carne se deshace. El plato nacional, sin discusión.</div>
+        </div>
+      </article>
+      <article class="plato-card reveal">
+        <div class="plato-img">
+          <div>
+            <div class="ph-emoji">🍜</div>
+            <div class="ph-text">[FOTO SINIGANG]</div>
+          </div>
+        </div>
+        <div class="plato-body">
+          <div class="plato-tagalog">Sinigang</div>
+          <div class="plato-name">Sopa ácida de tamarindo</div>
+          <div class="plato-desc">Caldo agrio con tamarindo, verduras y cerdo o gambas. Reconfortante como ninguno. El abrazo líquido de Filipinas.</div>
+        </div>
+      </article>
+      <article class="plato-card reveal">
+        <div class="plato-img">
+          <div>
+            <div class="ph-emoji">🥩</div>
+            <div class="ph-text">[FOTO LECHON KAWALI]</div>
+          </div>
+        </div>
+        <div class="plato-body">
+          <div class="plato-tagalog">Lechon Kawali</div>
+          <div class="plato-name">Panceta crujiente</div>
+          <div class="plato-desc">Panceta de cerdo frita hasta que la piel queda como un cristal. Servida con salsa de hígado dulce. Sin más explicaciones.</div>
+        </div>
+      </article>
+      <article class="plato-card reveal">
+        <div class="plato-img">
+          <div>
+            <div class="ph-emoji">🍧</div>
+            <div class="ph-text">[FOTO HALO-HALO]</div>
+          </div>
+        </div>
+        <div class="plato-body">
+          <div class="plato-tagalog">Halo-Halo</div>
+          <div class="plato-name">Postre nacional filipino</div>
+          <div class="plato-desc">Hielo picado, leche evaporada, gelatinas de colores, judías dulces, fruta tropical y helado de ube morado. Fiesta en un vaso.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">La cocina · la mesa · la familia</span>
+      <h2>Una mirada a lo que <span class="script-accent">ponemos en el plato.</span></h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">
+        <div class="gal-img-ph">
+          <div>
+            <div class="ph-emoji">🍛</div>
+            <div class="ph-text">[FOTO PLATO ADOBO — sustituir]</div>
+          </div>
+        </div>
+        <figcaption><strong>El plato del día</strong>Adobo de pollo recién hecho, con arroz blanco</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="gal-img-ph alt">
+          <div>
+            <div class="ph-emoji">🍴</div>
+            <div class="ph-text">[FOTO MESA FAMILIAR — sustituir]</div>
+          </div>
+        </div>
+        <figcaption><strong>Comer en familia</strong>Mesa de barrio, sin pretensión, todos juntos</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="familia">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Quiénes somos</span>
+      <h2>No es un restaurante,<br>es <span class="script-accent">una familia.</span></h2>
+    </div>
+    <div class="familia-grid">
+      <div class="reveal">
+        <p class="familia-quote">"Mabuhay" significa "bienvenido". Aquí lo decimos cada día.</p>
+      </div>
+      <div class="familia-body reveal">
+        <p>El Raval es un barrio que ha acogido a gente de medio mundo. <strong>La comunidad filipina lleva décadas viviendo aquí</strong>, en sus calles estrechas, en sus pisos compartidos, trabajando en limpieza, cuidados y restauración. Nosotros somos parte de eso.</p>
+        <p>Abrimos La Familia del Raval con una idea clara: <strong>servir la comida que nos da hogar</strong>. Sin adaptarla al paladar occidental, sin "suavizarla", sin disculparla. Adobo es adobo. Sinigang es ácido de verdad. El lechon lleva su piel crujiente y su salsa de hígado.</p>
+        <p>Si eres filipino, ya sabes lo que vas a encontrar. Si no lo eres, vente con la mente abierta y deja que te enseñemos. Te aseguramos que vas a volver.</p>
+        <p class="familia-firma">— La Familia del Raval</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cómo encontrarnos</span>
+      <h2>En el corazón del <span class="script-accent">Raval.</span></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              Carrer de la Riereta, 26
+              <span class="city">08001 Barcelona · Raval</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li><span class="day">Lunes</span><span class="time">18:00 – 00:00</span></li>
+              <li><span class="day">Martes</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Domingo</span><span class="time">12:00 – 00:00</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <a href="tel:+34931644575">+34 931 64 45 75</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Cómo llegar</div>
+            <div class="value">
+              Metro <strong>Sant Antoni</strong> (L2) — 5 min andando
+              <span class="city">Metro Liceu (L3) — 7 min · Bus 120, H14</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+de+la+Riereta+26+08001+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de La Familia del Raval">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+la+Riereta+26+08001+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Lo que <span class="script-accent">nos preguntáis.</span></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué es exactamente la cocina filipina?</summary>
+        <p>Es una mezcla única: raíces malayas autóctonas, tres siglos de influencia española (de ahí palabras como adobo, lechon, mecado, paksiw), influencia china (los noodles pancit, los lumpia parecidos a los rollitos), y toques americanos del siglo XX. El resultado es una cocina que mezcla agrio, dulce y salado, con mucho arroz y muchísima alma de fiesta familiar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hace falta reservar?</summary>
+        <p>Para entre semana al mediodía normalmente entras directo. Para viernes noche, sábados y domingos enteros sí recomendamos mucho reservar — somos un local pequeño y la comunidad filipina de Barcelona nos llena, especialmente cuando hay celebraciones. Llama o usa el formulario de reserva.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis opciones para vegetarianos?</summary>
+        <p>Sí, varias. El sinigang lo hacemos también con verduras, los lumpia vegetales son muy ricos, hay arroces con verduras, y las ensaladas tropicales filipinas son una sorpresa para mucha gente. La cocina filipina tiene carne y pescado como protagonistas, pero adaptamos sin problema.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Servís cerveza San Miguel filipina?</summary>
+        <p>Sí, claro. La San Miguel Pale Pilsen filipina (no la española, son recetas distintas) y la Red Horse que es más fuerte. También tenemos refrescos filipinos como el Royal Tru-Orange y zumos de calamansí cuando llega temporada.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo es el ambiente del local?</summary>
+        <p>Familiar, ruidoso a veces, lleno de filipinos celebrando cumpleaños o despedidas, mesas largas que se juntan, niños correteando los domingos. No es un restaurante "instagrameable" — es un sitio donde se come bien y se está cómodo. Como ir a comer a casa de un amigo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <span class="kicker">Mabuhay! · Bienvenidos</span>
+    <h2>Vente <span class="script-accent">a probarlo.</span></h2>
+    <p>Reserva mesa o pásate sin más. Si es tu primera vez en cocina filipina, te recomendamos el menú degustación familiar: adobo, lechon kawali, pancit y halo-halo para terminar. Saldrás conociendo Filipinas por dentro.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+      <a href="tel:+34931644575" class="btn btn-secondary">Llamar al 931 64 45 75</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>La Familia del Raval · Cocina filipina · Barcelona</span>
+    <span><a href="tel:+34931644575">+34 931 64 45 75</a></span>
+    <p class="footer-attr">Imágenes pendientes: se sustituyen por fotos reales del local antes del lanzamiento. La cocina filipina mostrada es representativa del menú habitual.</p>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">Reserva en La Familia</span>
+    <h3>Dinos cuándo y para cuántos.</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Te confirmamos por teléfono en pocos minutos. Si vienes mañana o pasado, mejor llamar directamente al 931 64 45 75.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Teléfono</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-pax">Personas</label>
+          <select id="r-pax" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7-8</option><option>9+</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-fecha">Fecha</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+        <div>
+          <label for="r-hora">Hora</label>
+          <input type="time" id="r-hora" required>
+        </div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Enviar petición</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>¡Salamat! Recibido.</h4>
+    <p>Te llamamos en breve para confirmar la mesa.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"La Familia del Raval",
+  "description":"Restaurante filipino familiar en el Raval, Barcelona. Adobo, sinigang, lechon kawali, halo-halo y cocina tradicional de Filipinas.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Carrer de la Riereta, 26",
+    "addressLocality":"Barcelona",
+    "postalCode":"08001",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34931644575",
+  "servesCuisine":["Filipino","Asian"],
+  "priceRange":"€€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"18:00","closes":"00:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"00:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Qué es exactamente la cocina filipina?","acceptedAnswer":{"@type":"Answer","text":"Es una mezcla única de raíces malayas, tres siglos de influencia española (adobo, lechon, paksiw), influencia china (pancit, lumpia) y toques americanos. Mezcla agrio, dulce y salado, con mucho arroz y alma de fiesta familiar."}},
+    {"@type":"Question","name":"¿Hace falta reservar en La Familia del Raval?","acceptedAnswer":{"@type":"Answer","text":"Entre semana al mediodía no suele hacer falta. Viernes noche, sábados y domingos sí recomendamos reservar porque el local es pequeño y la comunidad filipina de Barcelona nos llena. Llama al 931 64 45 75."}},
+    {"@type":"Question","name":"¿Hay opciones vegetarianas en cocina filipina?","acceptedAnswer":{"@type":"Answer","text":"Sí, tenemos sinigang de verduras, lumpia vegetales, arroces con verduras y ensaladas tropicales filipinas. Adaptamos sin problema aunque la cocina filipina tradicional es de carne y pescado."}},
+    {"@type":"Question","name":"¿Tenéis cerveza San Miguel filipina?","acceptedAnswer":{"@type":"Answer","text":"Sí, San Miguel Pale Pilsen filipina (receta distinta a la española), Red Horse más fuerte, y refrescos filipinos como Royal Tru-Orange y zumos de calamansí en temporada."}},
+    {"@type":"Question","name":"¿Cómo es el ambiente del restaurante?","acceptedAnswer":{"@type":"Answer","text":"Familiar y animado. Filipinos celebrando cumpleaños, mesas largas que se juntan, niños correteando los domingos. No es un sitio instagrameable, es un sitio donde comes bien y estás cómodo como en casa."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-visible')});return}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}});
+    },{threshold:0.08,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){e.classList.add('is-visible')})},2500);
+  })();
+  (function(){
+    var items=document.querySelectorAll('.hours-list li');
+    if(!items.length)return;
+    var jsDay=new Date().getDay();
+    var idx=jsDay===0?6:jsDay-1;
+    if(items[idx])items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20La%20Familia%20del%20Raval%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>La Familia del Raval</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20La%20Familia%20del%20Raval%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20La%20Familia%20del%20Raval%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de La Familia del Raval y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-29T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+
+
+
+</body>
+</html>

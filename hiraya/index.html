@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiraya — Cocina japonesa contemporánea en el Eixample, Barcelona</title>
+<meta name="description" content="Hiraya, restaurante japonés moderno en Carrer d'Ausiàs Marc 127, Barcelona. Sashimi, donburi y plato sin clichés: técnica japonesa, producto del día y emplatado limpio.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Hiraya — Japonés contemporáneo en el Eixample">
+<meta property="og:description" content="Casa de día. Cocina japonesa moderna, sashimi de mercado y donburi pulidos. Ausiàs Marc 127, Barcelona.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0e0f10;
+    --ink-soft:#3c3e40;
+    --ink-faint:#7a7d80;
+    --porcelain:#f8f7f4;
+    --porcelain-soft:#efeee9;
+    --shadow:#dad8d2;
+    --matcha:#7d9263;
+    --matcha-soft:#a8b896;
+    --salmon:#e1764a;
+    --salmon-deep:#b2532e;
+    --copper:#a5713b;
+    --line:rgba(14,15,16,0.1);
+    --line-strong:rgba(14,15,16,0.18);
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--porcelain);
+    color:var(--ink);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
+    font-weight:400;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+    padding-left:var(--side-padding);
+    padding-right:var(--side-padding);
+    position:relative;
+  }
+  .narrow{max-width:980px;margin:0 auto;padding-left:var(--side-padding);padding-right:var(--side-padding)}
+  .display{font-family:'Cormorant Garamond', serif;font-weight:300;letter-spacing:-0.015em}
+  .jp{font-family:'Noto Serif JP', serif}
+  .label{
+    font-family:'Inter', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.28em;
+    font-size:11px;
+    font-weight:500;
+    color:var(--ink-faint);
+  }
+  .label-num::before{
+    content:"〇 / ";color:var(--matcha);font-family:'Noto Serif JP', serif;
+  }
+
+  /* TOPBAR — ultra minimal */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(248,247,244,0.92);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:18px;padding-bottom:18px;gap:24px;
+  }
+  .brand{
+    display:flex;align-items:baseline;gap:14px;
+  }
+  .brand-name{
+    font-family:'Cormorant Garamond', serif;
+    font-size:26px;color:var(--ink);letter-spacing:-0.005em;font-weight:400;
+  }
+  .brand-jp{
+    font-family:'Noto Serif JP', serif;font-size:13px;color:var(--ink-faint);
+    font-weight:400;letter-spacing:0.18em;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 18px;border:1px solid var(--ink);
+    font-family:'Inter', sans-serif;font-size:12px;font-weight:500;
+    color:var(--ink);text-transform:uppercase;letter-spacing:0.14em;
+    transition:all 0.25s;
+  }
+  .tel-btn:hover{background:var(--ink);color:var(--porcelain)}
+
+  /* HERO — asymmetric, mucho aire */
+  .hero{padding:100px 0 80px;position:relative}
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;
+  }
+  @media (min-width:920px){
+    .hero-grid{grid-template-columns:0.55fr 0.45fr;gap:80px;align-items:end}
+  }
+  .hero-text{position:relative}
+  .hero-label-row{display:flex;align-items:center;gap:18px;margin-bottom:36px}
+  .hero-line{flex:1;height:1px;background:var(--line-strong);max-width:80px}
+  .hero h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:300;
+    font-size:clamp(2.4rem, 6vw, 5.5rem);
+    line-height:1;letter-spacing:-0.025em;color:var(--ink);
+    margin:0 0 32px;
+  }
+  .hero h1 em{font-style:italic;color:var(--ink-soft);font-weight:300}
+  .hero h1 .accent{color:var(--matcha);font-style:italic}
+  .hero-lede{
+    font-size:18px;color:var(--ink-soft);margin:0 0 36px;max-width:440px;
+    line-height:1.6;
+  }
+  .hero-meaning{
+    font-family:'Cormorant Garamond', serif;font-style:italic;
+    font-size:15px;color:var(--matcha);margin-bottom:18px;letter-spacing:0.02em;
+  }
+  .hero-meaning .jp{
+    font-family:'Noto Serif JP', serif;font-weight:400;
+    color:var(--ink);font-size:18px;font-style:normal;margin-right:8px;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;
+    font-family:'Inter', sans-serif;font-weight:500;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:0.14em;
+    transition:all 0.25s;border:1px solid transparent;min-height:44px;
+  }
+  .btn-primary{background:var(--ink);color:var(--porcelain)}
+  .btn-primary:hover{background:var(--matcha);transform:translateY(-1px)}
+  .btn-secondary{border-color:var(--ink);color:var(--ink)}
+  .btn-secondary:hover{background:var(--ink);color:var(--porcelain)}
+  .btn-ghost{border-color:var(--ink-faint);color:var(--ink-soft)}
+  .btn-ghost:hover{border-color:var(--ink);background:rgba(14,15,16,0.04);color:var(--ink)}
+
+  /* Hero side: dual block — plato + frase pequeña */
+  .hero-side{display:flex;flex-direction:column;gap:24px}
+  .placeholder-photo{
+    width:100%;
+    background:var(--porcelain-soft);
+    border:1px solid var(--line);
+    position:relative;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:14px;
+    color:var(--ink-faint);text-align:center;padding:32px;
+  }
+  .placeholder-photo .ph-icon{font-size:48px;color:var(--matcha);line-height:1;font-family:'Noto Serif JP', serif}
+  .placeholder-photo .ph-text{
+    font-family:'Inter', sans-serif;font-size:10px;
+    text-transform:uppercase;letter-spacing:0.22em;font-weight:500;max-width:220px;
+  }
+  .placeholder-photo .ph-sub{
+    font-family:'Cormorant Garamond', serif;font-style:italic;font-size:13.5px;
+    color:var(--ink-soft);max-width:220px;line-height:1.5;
+  }
+  .hero-side .placeholder-photo{aspect-ratio:1/1}
+  .hero-quote-card{
+    border-left:2px solid var(--matcha);padding:6px 0 6px 20px;
+    font-family:'Cormorant Garamond', serif;font-style:italic;
+    font-size:18px;color:var(--ink-soft);line-height:1.5;
+  }
+  .hero-quote-card cite{
+    display:block;margin-top:10px;font-style:normal;font-family:'Inter', sans-serif;
+    font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);
+  }
+
+  /* SECCIONES */
+  section{padding:100px 0;position:relative}
+  @media (min-width:768px){section{padding:130px 0}}
+  .section-head{margin-bottom:64px;max-width:760px}
+  .section-head h2{
+    font-family:'Cormorant Garamond', serif;font-weight:300;
+    font-size:clamp(2rem, 4vw, 3.6rem);
+    margin-top:18px;color:var(--ink);line-height:1.05;letter-spacing:-0.02em;
+  }
+  .section-head h2 em{font-style:italic;color:var(--matcha);font-weight:300}
+
+  /* ICHIGO-ICHIE — 3 columnas con caracter japonés grande */
+  .filosofia{background:var(--porcelain-soft)}
+  .filo-intro{
+    max-width:680px;font-family:'Cormorant Garamond', serif;font-weight:300;
+    font-size:clamp(1.4rem, 2vw + 0.5rem, 2rem);font-style:italic;
+    color:var(--ink-soft);line-height:1.4;margin-bottom:64px;
+  }
+  .filo-intro .jp{
+    font-family:'Noto Serif JP', serif;color:var(--matcha);font-style:normal;
+    font-weight:400;
+  }
+  .filo-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;
+  }
+  @media (min-width:760px){
+    .filo-grid{grid-template-columns:repeat(3, 1fr);gap:48px}
+  }
+  .filo-item .filo-num{
+    font-family:'Noto Serif JP', serif;font-size:48px;font-weight:300;
+    color:var(--matcha);margin-bottom:24px;line-height:1;
+    border-bottom:1px solid var(--line-strong);padding-bottom:18px;display:inline-block;
+  }
+  .filo-item h3{
+    font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.5rem;
+    color:var(--ink);margin-bottom:14px;line-height:1.2;letter-spacing:-0.01em;
+  }
+  .filo-item p{color:var(--ink-soft);font-size:16px;line-height:1.7}
+
+  /* CARTA — bento layout asimétrico */
+  .carta{background:var(--porcelain)}
+  .carta-grid{
+    display:grid;grid-template-columns:1fr;gap:32px;
+  }
+  @media (min-width:880px){
+    .carta-grid{
+      grid-template-columns:repeat(6, 1fr);
+      grid-template-rows:auto auto auto;
+      gap:24px;
+    }
+  }
+  .carta-cell{
+    border:1px solid var(--line);background:var(--porcelain);padding:32px 28px;
+    display:flex;flex-direction:column;gap:18px;
+  }
+  @media (min-width:880px){
+    .carta-cell--lead{grid-column:span 4;grid-row:span 2}
+    .carta-cell--a{grid-column:span 2}
+    .carta-cell--b{grid-column:span 2}
+    .carta-cell--c{grid-column:span 3}
+    .carta-cell--d{grid-column:span 3}
+  }
+  .carta-cell-head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+    border-bottom:1px solid var(--line);padding-bottom:14px;
+  }
+  .carta-cell h3{
+    font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.5rem;
+    color:var(--ink);line-height:1.2;
+  }
+  .carta-cell h3 em{font-style:italic;color:var(--matcha);font-weight:400}
+  .carta-cell--lead h3{font-size:2rem}
+  .carta-cell-jp{
+    font-family:'Noto Serif JP', serif;font-size:14px;color:var(--ink-faint);
+    letter-spacing:0.1em;
+  }
+  .carta-cell ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+  .carta-cell li{
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+    font-size:15.5px;color:var(--ink);
+  }
+  .carta-cell li .name{flex:1;line-height:1.4}
+  .carta-cell li .name small{display:block;font-size:13px;color:var(--ink-faint);font-style:italic;margin-top:2px}
+  .carta-cell li .price{font-variant-numeric:tabular-nums;color:var(--matcha);font-weight:500;font-size:14px}
+
+  /* GALERIA contenida */
+  .galeria{background:var(--porcelain-soft)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:clamp(16px,2vw,24px);
+    align-items:flex-start;
+  }
+  .gal-figure{
+    flex:0 0 calc(50% - clamp(8px,1vw,12px));
+    max-width:calc(50% - clamp(8px,1vw,12px));
+    background:var(--porcelain);
+  }
+  @media (max-width:640px){
+    .gal-figure{flex:0 0 100%;max-width:100%}
+  }
+  .gal-figure .placeholder-photo{aspect-ratio:1/1;border:1px solid var(--line)}
+  .gal-figure figcaption{
+    padding:16px 4px 0;font-family:'Inter', sans-serif;
+    font-size:12px;color:var(--ink-faint);font-weight:400;
+    letter-spacing:0.04em;line-height:1.5;
+  }
+  .gal-figure figcaption strong{color:var(--ink);font-weight:500;display:block;margin-bottom:2px;letter-spacing:0.06em;text-transform:uppercase;font-size:10px}
+
+  /* VISITA */
+  .visita{background:var(--porcelain)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:40px;margin-top:48px;
+  }
+  @media (min-width:880px){
+    .visit-grid{grid-template-columns:0.85fr 1fr;gap:64px}
+  }
+  .visit-info dl{display:grid;grid-template-columns:1fr;gap:24px}
+  .visit-info .row{border-top:1px solid var(--line);padding-top:20px}
+  .visit-info .row:last-child{border-bottom:1px solid var(--line);padding-bottom:20px}
+  .visit-info .row-label{
+    font-family:'Inter', sans-serif;font-size:11px;font-weight:500;
+    letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--ink-faint);margin-bottom:12px;
+  }
+  .visit-info .value{font-size:16.5px;color:var(--ink);line-height:1.55}
+  .visit-info .value a{
+    color:var(--ink);border-bottom:1px solid var(--line);
+    transition:color .3s,border-color .3s;
+  }
+  .visit-info .value a:hover{color:var(--matcha);border-color:var(--matcha)}
+  .visit-info .city{color:var(--ink-faint);font-size:14.5px}
+  .hours-list{display:grid;gap:8px;list-style:none;padding:0;margin:0}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:15px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--ink-faint);text-transform:capitalize}
+  .hours-list .time{color:var(--ink);font-variant-numeric:tabular-nums;font-family:'Inter', sans-serif;font-size:13px}
+  .hours-list li.now{
+    background:rgba(125,146,99,0.1);
+    padding:8px 12px;margin:0 -12px;
+  }
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--matcha);font-weight:600}
+  .hours-list li.now .day::before{
+    content:"●";color:var(--matcha);font-size:9px;margin-right:8px;
+    animation:pulse-dot 1.6s ease-in-out infinite;display:inline-block;
+  }
+  .hours-list li.closed .time{color:rgba(60,62,64,0.4);font-style:italic}
+  @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.3}}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    border:1px solid var(--line);background:var(--porcelain-soft);
+  }
+  .map-wrap iframe{
+    width:100%;height:100%;border:0;
+    filter:saturate(0.7) brightness(0.97);
+  }
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:var(--ink);
+    border:1px solid var(--ink);color:var(--porcelain);
+    padding:12px 18px;font-family:'Inter', sans-serif;
+    font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;
+    transition:all .3s;min-height:44px;display:inline-flex;align-items:center;
+  }
+  .map-cta:hover{background:var(--matcha);border-color:var(--matcha)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--porcelain-soft)}
+  .faq-list{margin-top:40px;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;
+    padding:24px 0;
+    font-family:'Cormorant Garamond', serif;font-size:1.3rem;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    font-weight:400;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Inter', sans-serif;font-size:22px;
+    color:var(--matcha);transition:transform .3s;flex-shrink:0;font-weight:300;
+  }
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item p{padding:0 0 26px;color:var(--ink-soft);font-size:16px;line-height:1.7;max-width:720px}
+
+  /* FOOTER */
+  footer{
+    background:var(--ink);color:rgba(248,247,244,0.6);
+    padding:64px 0 32px;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:36px;
+    align-items:start;
+  }
+  @media (min-width:720px){
+    .foot-grid{grid-template-columns:1.2fr 1fr 1fr}
+  }
+  .foot-col h4{
+    font-family:'Inter', sans-serif;font-size:10px;font-weight:500;
+    text-transform:uppercase;letter-spacing:0.28em;
+    color:var(--matcha-soft);margin-bottom:16px;
+  }
+  .foot-col p, .foot-col a{
+    font-size:14.5px;line-height:1.7;color:rgba(248,247,244,0.7);
+    display:block;
+  }
+  .foot-col a:hover{color:var(--matcha-soft)}
+  .foot-col strong{color:var(--porcelain);font-weight:500}
+  .foot-brand{
+    font-family:'Cormorant Garamond', serif;font-size:32px;font-weight:300;
+    color:var(--porcelain);margin-bottom:10px;letter-spacing:-0.01em;
+  }
+  .foot-brand-jp{
+    font-family:'Noto Serif JP', serif;font-size:13px;
+    color:var(--matcha-soft);letter-spacing:0.2em;
+  }
+  .foot-bottom{
+    border-top:1px solid rgba(248,247,244,0.12);padding-top:24px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
+    font-family:'Inter', sans-serif;font-size:11px;letter-spacing:0.16em;
+    text-transform:uppercase;color:rgba(248,247,244,0.4);
+  }
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:1px solid var(--line-strong);padding:0;background:var(--porcelain);
+    max-width:460px;width:92%;box-shadow:0 30px 80px rgba(0,0,0,0.4);
+    color:var(--ink);
+  }
+  dialog::backdrop{background:rgba(14,15,16,0.65);backdrop-filter:blur(6px)}
+  .dlg-head{padding:30px 30px 0}
+  .dlg-head .label{margin-bottom:10px}
+  .dlg-head h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.7rem;color:var(--ink);line-height:1.15}
+  .dlg-body{padding:20px 30px 30px}
+  .dlg-body p{font-size:14.5px;color:var(--ink-soft);margin-bottom:18px;line-height:1.55}
+  .dlg-form{display:grid;gap:14px}
+  .dlg-form label{font-family:'Inter', sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-faint);display:block;margin-bottom:4px;font-weight:500}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:12px 14px;border:1px solid var(--line-strong);background:var(--porcelain);
+    font-family:'Inter', sans-serif;font-size:15px;color:var(--ink);
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--matcha)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-actions .btn{padding:12px 20px}
+  .dlg-close{
+    background:none;border:0;color:var(--ink-faint);
+    font-family:'Inter', sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;
+  }
+  .dlg-close:hover{color:var(--matcha)}
+  .dlg-ok{display:none;text-align:center;padding:40px 24px}
+  .dlg-ok h4{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.6rem;color:var(--ink);margin-bottom:10px}
+  .dlg-ok p{color:var(--ink-soft);font-size:14.5px}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  dialog[open], .reserva-dialog[open]{
+    position:fixed !important;
+    inset:0 !important;
+    margin:auto !important;
+    transform:none !important;
+    max-height:calc(100% - 2rem) !important;
+    box-sizing:border-box !important;
+  }
+  dialog[open]::backdrop{background:rgba(0,0,0,0.55)}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  html, body{overflow-x:clip;max-width:100%}
+  img, video, picture, iframe{max-width:100%}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-name">Hiraya</span>
+      <span class="brand-jp">ヒラヤ</span>
+    </a>
+    <a href="tel:+34931929530" class="tel-btn">931 92 95 30</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <div class="hero-label-row">
+          <span class="hero-line"></span>
+          <span class="label">Restaurante japonés · Eixample</span>
+        </div>
+        <h1>Cocina<br><em>japonesa</em> sin<br><span class="accent">clichés.</span></h1>
+        <p class="hero-meaning"><span class="jp">ヒラヤ</span>· Hiraya · "casa de día" en filipino.</p>
+        <p class="hero-lede">No buscamos zen ni postureo. Buscamos producto del día, técnica japonesa hecha bien y un plato que se entiende solo cuando llega a la mesa. Comedor pequeño, carta corta, todo recién cortado.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+          <a href="tel:+34931929530" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Carrer+d%27Ausi%C3%A0s+Marc+127+08013+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-side reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">魚</span>
+          <span class="ph-text">Foto del plato · sustituir antes del pitch</span>
+          <span class="ph-sub">Sashimi cortado a la vista sobre plato de pizarra negra</span>
+        </div>
+        <div class="hero-quote-card">
+          "Hiraya cuece de día como otros cuecen de noche: con la calma de quien sabe que mañana también va a estar aquí."
+          <cite>— Filosofía del local</cite>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="filosofia">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label label-num">Cómo lo hacemos</span>
+      <h2>Tres ideas <em>que se notan</em><br>en el plato.</h2>
+    </div>
+    <p class="filo-intro reveal">
+      <span class="jp">一期一会</span> — <em>ichigo-ichie.</em> Una sola vez, un solo encuentro.
+      Cada servicio es una tirada nueva. Por eso no repetimos carta ni siglo: cocinamos lo que esta semana nos parece honesto.
+    </p>
+    <div class="filo-grid">
+      <article class="filo-item reveal">
+        <div class="filo-num">一</div>
+        <h3>Producto de mercado real.</h3>
+        <p>Compramos cada mañana en la Boqueria y en lonja directa cuando hay barco. Si el bonito de hoy no nos convence, no lo servimos. Eso significa que la carta cambia más de lo que te imaginas — y que confíes un poco en la sugerencia del camarero.</p>
+      </article>
+      <article class="filo-item reveal">
+        <div class="filo-num">二</div>
+        <h3>Técnica japonesa, plato propio.</h3>
+        <p>Aprendimos a cortar y a cocer en Japón, pero no estamos repitiendo recetas de Tokio en Barcelona. Combinamos lo que tenemos aquí (el atún del Mediterráneo, las verduras del Maresme) con la técnica japonesa. El resultado se parece a las dos cosas y a la vez no se parece del todo.</p>
+      </article>
+      <article class="filo-item reveal">
+        <div class="filo-num">三</div>
+        <h3>Sin postureo de wabi-sabi.</h3>
+        <p>No te vamos a explicar cada plato durante diez minutos. No hay música zen, ni piedras decorativas, ni candelitas. La luz es cálida, la vajilla es de un alfarero de Granollers, y el camarero te trata como adulto. Eso es todo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="carta">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label label-num">Lo que esta semana hay</span>
+      <h2>Carta <em>corta.</em><br>Mercado de hoy.</h2>
+    </div>
+    <div class="carta-grid">
+      <div class="carta-cell carta-cell--lead reveal">
+        <div class="carta-cell-head">
+          <h3>Sashimi <em>del día</em></h3>
+          <span class="carta-cell-jp">刺身</span>
+        </div>
+        <ul>
+          <li><span class="name">Atún rojo del Mediterráneo<small>Tres cortes: akami, chutoro, otoro</small></span><span class="price">28 €</span></li>
+          <li><span class="name">Lubina salvaje al sake-shio<small>Cinco láminas, sal de yuzu</small></span><span class="price">22 €</span></li>
+          <li><span class="name">Vieira con ponzu cítrico<small>Tres piezas, ralladura de lima</small></span><span class="price">19 €</span></li>
+          <li><span class="name">Sashimi degustación 12 piezas<small>Lo que esa noche nos enamore</small></span><span class="price">42 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-cell carta-cell--a reveal">
+        <div class="carta-cell-head">
+          <h3>Donburi</h3>
+          <span class="carta-cell-jp">丼</span>
+        </div>
+        <ul>
+          <li><span class="name">Chirashi del chef<small>Mix sashimi sobre arroz sushi</small></span><span class="price">24 €</span></li>
+          <li><span class="name">Donburi de salmón teriyaki<small>Con huevo onsen y nori</small></span><span class="price">17 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-cell carta-cell--b reveal">
+        <div class="carta-cell-head">
+          <h3>Calientes</h3>
+          <span class="carta-cell-jp">温</span>
+        </div>
+        <ul>
+          <li><span class="name">Gyoza casera de cerdo ibérico<small>Seis piezas, vinagre negro</small></span><span class="price">11 €</span></li>
+          <li><span class="name">Berenjena nasu dengaku<small>Glaseado de miso rojo</small></span><span class="price">9 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-cell carta-cell--c reveal">
+        <div class="carta-cell-head">
+          <h3>Pequeños</h3>
+          <span class="carta-cell-jp">小皿</span>
+        </div>
+        <ul>
+          <li><span class="name">Edamame al carbón con sal yuzu</span><span class="price">5,50 €</span></li>
+          <li><span class="name">Tofu de la casa, ponzu y bonito seco</span><span class="price">8 €</span></li>
+          <li><span class="name">Pepino sunomono con sésamo</span><span class="price">5 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-cell carta-cell--d reveal">
+        <div class="carta-cell-head">
+          <h3>Dulces</h3>
+          <span class="carta-cell-jp">甘味</span>
+        </div>
+        <ul>
+          <li><span class="name">Mochi de matcha y chocolate negro</span><span class="price">6 €</span></li>
+          <li><span class="name">Crema catalana con miso y miel</span><span class="price">7 €</span></li>
+          <li><span class="name">Cítricos de temporada con shiso</span><span class="price">6,50 €</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label label-num">El comedor y el plato</span>
+      <h2>Pequeño <em>vistazo.</em></h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">店</span>
+          <span class="ph-text">Foto sala · sustituir antes del pitch</span>
+          <span class="ph-sub">Comedor de Hiraya con luz natural y barra de cocina abierta</span>
+        </div>
+        <figcaption><strong>Sala</strong> Comedor de día, luz cálida, mesas de roble.</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">寿</span>
+          <span class="ph-text">Foto plato · sustituir antes del pitch</span>
+          <span class="ph-sub">Chirashi con piezas de sashimi y rodajas de pepino sobre arroz</span>
+        </div>
+        <figcaption><strong>Chirashi</strong> Lo que entra fresco esa mañana, en bol.</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">茶</span>
+          <span class="ph-text">Foto detalle · sustituir antes del pitch</span>
+          <span class="ph-sub">Detalle de salsa ponzu cítrica con shiso verde</span>
+        </div>
+        <figcaption><strong>Ponzu</strong> Cítricos del Maresme, salsa que hacemos en casa.</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">器</span>
+          <span class="ph-text">Foto vajilla · sustituir antes del pitch</span>
+          <span class="ph-sub">Vajilla artesanal de Granollers — plato de pizarra con palillos</span>
+        </div>
+        <figcaption><strong>Vajilla</strong> Plato a plato, de alfarero local de Granollers.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label label-num">Encontrarnos</span>
+      <h2>Ausiàs Marc, <em>127.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="row">
+            <div class="row-label">Dirección</div>
+            <div class="value">
+              Carrer d'Ausiàs Marc, 127<br>
+              <span class="city">08013 Barcelona · Eixample Dret</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row-label">Horarios</div>
+            <ul class="hours-list">
+              <li class="closed"><span class="day">Lunes</span><span class="time">Cerrado</span></li>
+              <li><span class="day">Martes</span><span class="time">13:30 – 16:00 · 20:00 – 23:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">13:30 – 16:00 · 20:00 – 23:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">13:30 – 16:00 · 20:00 – 23:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">13:30 – 16:00 · 20:00 – 23:30</span></li>
+              <li><span class="day">Sábado</span><span class="time">13:30 – 16:00 · 20:00 – 23:30</span></li>
+              <li class="closed"><span class="day">Domingo</span><span class="time">Cerrado</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="row-label">Contacto</div>
+            <div class="value">
+              <div><a href="tel:+34931929530">+34 931 92 95 30</a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row-label">Cómo llegar</div>
+            <div class="value">
+              Metro <strong>Arc de Triomf</strong> (L1) — 3 min andando<br>
+              <span class="city">Bus V19, H16 · Renfe Arc de Triomf</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+d%27Ausi%C3%A0s+Marc+127+08013+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Hiraya">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+d%27Ausi%C3%A0s+Marc+127+08013+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label label-num">Lo que solemos contar antes</span>
+      <h2>Preguntas <em>frecuentes.</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Hay que reservar?</summary>
+        <p>Para cenar prácticamente siempre: la sala es pequeña y la mesa última se va con la primera llamada del día. Para comer entre semana solemos tener algo libre, pero una llamada al 931 92 95 30 nos permite preparar tu mesa con calma y reservarte la pieza si quieres algo concreto.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis menú degustación?</summary>
+        <p>No tenemos un menú fijo a la carta. Lo que sí tenemos es un omakase abierto: nos dices presupuesto por persona, alguna alergia o cosa que no comas, y el chef te monta el recorrido. La media suele salir entre 55 y 75 € por persona.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hay opciones sin pescado o vegetarianas?</summary>
+        <p>Sí. Tenemos gyoza vegetal, tofu casero, berenjena nasu dengaku, edamame, sunomono, donburi de verduras del Maresme y mochi de matcha. Para celíacos y veganos avísanos al reservar y adaptamos sin problema.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Aceptáis grupos grandes?</summary>
+        <p>Hasta 10 personas sí, en mesa corrida. Más de 10 podemos privatizar la sala los lunes (que cerramos al público) o aprovechar la sobremesa entre servicios. Llámanos y lo organizamos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo pagáis?</summary>
+        <p>Tarjeta, Bizum y efectivo. Si necesitas factura nominal para empresa, dínoslo al pedir cuenta y la emitimos en el momento.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">Hiraya</div>
+        <p class="foot-brand-jp">ヒラヤ · Casa de día</p>
+        <p style="margin-top:14px">Cocina japonesa contemporánea<br>en el Eixample Dret · Barcelona</p>
+      </div>
+      <div class="foot-col">
+        <h4>Visítanos</h4>
+        <p>Carrer d'Ausiàs Marc, 127<br>08013 Barcelona · Eixample</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+d%27Ausi%C3%A0s+Marc+127+08013+Barcelona" target="_blank" rel="noopener">Cómo llegar →</a>
+      </div>
+      <div class="foot-col">
+        <h4>Reservas</h4>
+        <a href="tel:+34931929530"><strong>+34 931 92 95 30</strong></a>
+        <p style="margin-top:8px">Martes a sábado<br>13:30–16:00 · 20:00–23:30</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Hiraya · Restaurante japonés</span>
+      <span>Eixample · Barcelona</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="label">Reserva · Hiraya</span>
+    <h3>Dinos cuándo y para cuántos.</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Te confirmamos por teléfono en pocos minutos. Si es para hoy o mañana, mejor llamar directamente al 931 92 95 30.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Teléfono</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-pax">Personas</label>
+          <select id="r-pax" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7-8</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-fecha">Fecha</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+        <div>
+          <label for="r-hora">Hora</label>
+          <input type="time" id="r-hora" required>
+        </div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Enviar petición</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>Recibido.</h4>
+    <p>Te llamamos en breve para confirmar.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Hiraya",
+  "description":"Restaurante japonés contemporáneo en el Eixample Dret. Sashimi de mercado, donburi y cocina japonesa con producto local. Sin clichés ni postureo.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Carrer d'Ausiàs Marc, 127",
+    "addressLocality":"Barcelona",
+    "postalCode":"08013",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34931929530",
+  "servesCuisine":["Japanese","Sushi"],
+  "priceRange":"€€€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"13:30","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"20:00","closes":"23:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"13:30","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"20:00","closes":"23:30"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Hay que reservar mesa en Hiraya?","acceptedAnswer":{"@type":"Answer","text":"Para cenar es prácticamente imprescindible porque el comedor es pequeño y se llena el mismo día. Para comer entre semana solemos tener mesa libre, pero una llamada al 931 92 95 30 nos permite preparar tu mesa con calma y reservar piezas específicas si las quieres."}},
+    {"@type":"Question","name":"¿Tenéis menú degustación u omakase?","acceptedAnswer":{"@type":"Answer","text":"No tenemos menú fijo. Trabajamos con omakase abierto: nos dices presupuesto por persona y alguna alergia, y el chef te monta el recorrido. La media suele salir entre 55 y 75 € por persona según producto."}},
+    {"@type":"Question","name":"¿Hiraya tiene opciones vegetarianas o sin pescado?","acceptedAnswer":{"@type":"Answer","text":"Sí, tenemos gyoza vegetal, tofu casero, berenjena nasu dengaku, edamame, donburi de verduras del Maresme y mochi de matcha. Para celíacos o veganos estrictos avísanos al reservar y adaptamos el menú sin problema."}},
+    {"@type":"Question","name":"¿Aceptáis grupos grandes para celebraciones?","acceptedAnswer":{"@type":"Answer","text":"Hasta 10 personas en mesa corrida sin problema. Para grupos mayores podemos privatizar la sala los lunes (cerramos al público) o aprovechar la sobremesa entre servicios. Llámanos y lo organizamos en función de tu fecha."}},
+    {"@type":"Question","name":"¿Qué métodos de pago aceptáis?","acceptedAnswer":{"@type":"Answer","text":"Tarjeta, Bizum y efectivo. Si necesitas factura nominal para empresa, dínoslo al pedir la cuenta y la emitimos en el momento."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Hiraya%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Hiraya</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Hiraya%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Hiraya%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Hiraya y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-29T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+
+
+
+</body>
+</html>

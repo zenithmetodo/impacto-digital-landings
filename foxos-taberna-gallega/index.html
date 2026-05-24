@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foxos — Taberna gallega de barrio en Sant Martí, Barcelona</title>
+<meta name="description" content="Foxos: taberna gallega familiar en Sant Martí. Pulpo a feira, empanada, queso tetilla, ribeiro. Gran Via 1095, Barcelona. Boa mesa, boa xente.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Foxos — Taberna gallega en Sant Martí">
+<meta property="og:description" content="Pulpo a feira con pimentón, empanada gallega, queso tetilla y ribeiro de barro. Cocina gallega de barrio en Barcelona.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --verde-galicia:#1f5c3a;     /* verde Galicia profundo */
+    --verde-dk:#143d24;
+    --verde-light:#4e8a68;
+    --amarillo:#ecc94b;          /* amarillo banderín */
+    --ocre-mar:#a87d3a;          /* ocre madera */
+    --azulejo:#5b8ba8;           /* azulejo gallego */
+    --azulejo-light:#b8d1e1;
+    --bg:#fdf9ef;
+    --bg-alt:#f4ecd8;
+    --paper:#fffdf5;
+    --fg:#1a2a1f;
+    --fg-dim:#5a6358;
+    --rojo-pimenton:#b8442b;     /* rojo pimentón */
+    --line:#d9d1b8;
+    --side-padding:clamp(1.25rem,3vw + 0.5rem,2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Lora',Georgia,serif;
+    background:var(--bg);
+    color:var(--fg);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;max-width:1180px;margin:0 auto;
+    padding-left:var(--side-padding);padding-right:var(--side-padding);
+    position:relative;z-index:1;
+  }
+  .h-display{font-family:'Playfair Display',serif;font-weight:700;line-height:1.08}
+  .script{font-family:'Caveat',cursive;font-weight:700}
+  .kicker{
+    font-family:'Lora',serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.2em;
+    font-size:11px;color:var(--rojo-pimenton);
+  }
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(253,249,239,0.95);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:2px solid var(--azulejo);
+  }
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{
+    display:flex;align-items:center;gap:12px;
+    font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--verde-galicia);
+    letter-spacing:-0.01em;
+  }
+  .brand-icon{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:42px;height:42px;border-radius:50%;
+    background:var(--verde-galicia);color:var(--amarillo);
+    font-family:'Caveat',cursive;font-size:26px;font-weight:700;line-height:1;
+    border:2px solid var(--amarillo);
+  }
+  .brand-tag{
+    font-family:'Lora',serif;font-style:italic;font-size:13px;
+    color:var(--fg-dim);font-weight:500;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 18px;border:2px solid var(--verde-galicia);border-radius:999px;
+    font-family:'Lora',serif;font-weight:600;font-size:13px;
+    color:var(--verde-galicia);background:var(--paper);
+    transition:all 0.25s;
+  }
+  .tel-btn:hover{background:var(--verde-galicia);color:var(--paper)}
+
+  /* HERO con azulejos decorativos */
+  .hero{
+    padding:60px 0 90px;position:relative;
+    background:
+      linear-gradient(180deg,var(--azulejo-light) 0%,transparent 30%),
+      var(--bg);
+  }
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media (min-width:880px){.hero-grid{grid-template-columns:1.05fr 0.95fr;gap:60px}}
+  .hero-tagline{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--verde-galicia);color:var(--amarillo);
+    padding:8px 16px;border-radius:999px;
+    font-family:'Lora',serif;font-weight:700;font-size:12px;
+    text-transform:uppercase;letter-spacing:0.14em;
+    margin-bottom:18px;
+  }
+  .hero-tagline::before{content:"●";color:var(--amarillo);font-size:10px}
+  .hero h1{
+    font-family:'Playfair Display',serif;font-weight:700;
+    font-size:clamp(2.4rem,6vw,5.5rem);
+    line-height:1.04;letter-spacing:-0.02em;
+    color:var(--verde-dk);margin-bottom:22px;
+  }
+  .hero h1 em{font-style:italic;color:var(--rojo-pimenton);font-weight:400}
+  .hero h1 .script{
+    font-family:'Caveat',cursive;color:var(--ocre-mar);font-weight:700;
+    display:inline-block;transform:rotate(-2deg);font-size:0.75em;
+  }
+  .hero-lede{
+    font-size:18px;color:var(--fg-dim);margin-bottom:30px;
+    max-width:480px;line-height:1.65;
+  }
+  .hero-lede strong{color:var(--verde-galicia)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;border-radius:999px;
+    font-family:'Lora',serif;font-weight:600;font-size:14px;
+    transition:all 0.25s;border:2px solid transparent;min-height:44px;
+  }
+  .btn-primary{background:var(--rojo-pimenton);color:var(--paper)}
+  .btn-primary:hover{background:#8a2f1c;transform:translateY(-1px)}
+  .btn-secondary{border-color:var(--verde-galicia);color:var(--verde-galicia);background:var(--paper)}
+  .btn-secondary:hover{background:var(--verde-galicia);color:var(--paper)}
+  .btn-ghost{border-color:var(--ocre-mar);color:var(--ocre-mar)}
+  .btn-ghost:hover{background:var(--ocre-mar);color:var(--paper)}
+  .hero-img-wrap{
+    border-radius:8px;overflow:hidden;
+    box-shadow:0 24px 50px -20px rgba(31,92,58,0.4);
+    border:5px solid var(--paper);
+    aspect-ratio:1/1;
+    background:
+      repeating-linear-gradient(45deg,var(--azulejo) 0,var(--azulejo) 20px,var(--azulejo-light) 20px,var(--azulejo-light) 40px);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--paper);text-align:center;padding:24px;
+    position:relative;
+  }
+  .hero-img-wrap::before{
+    content:"";position:absolute;inset:8px;border:2px solid rgba(255,255,255,0.4);border-radius:4px;
+  }
+  .hero-img-wrap .ph-emoji{font-size:72px;margin-bottom:10px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))}
+  .hero-img-wrap .ph-text{font-weight:600;font-size:13px;background:rgba(20,61,36,0.7);padding:8px 14px;border-radius:4px}
+
+  /* SECCIONES */
+  section{padding:80px 0;position:relative;z-index:1}
+  @media (min-width:768px){section{padding:110px 0}}
+  .section-head{margin-bottom:48px;max-width:680px}
+  .section-head h2{
+    font-family:'Playfair Display',serif;font-weight:700;
+    font-size:clamp(2rem,4vw,3.4rem);
+    margin-top:14px;color:var(--verde-dk);line-height:1.08;letter-spacing:-0.015em;
+  }
+  .section-head h2 em{font-style:italic;color:var(--rojo-pimenton);font-weight:400}
+  .section-head h2 .script{font-family:'Caveat',cursive;color:var(--ocre-mar);font-weight:700}
+
+  /* DÍA DE LA TABERNA - TIMELINE HORARIO */
+  .dia-taberna{background:var(--paper)}
+  .timeline{
+    display:grid;grid-template-columns:1fr;gap:18px;
+    margin-top:36px;position:relative;
+  }
+  @media (min-width:760px){
+    .timeline{grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+    .timeline::before{
+      content:"";position:absolute;top:32px;left:8%;right:8%;
+      height:3px;background:repeating-linear-gradient(90deg,var(--verde-galicia) 0,var(--verde-galicia) 8px,transparent 8px,transparent 16px);
+      z-index:0;
+    }
+  }
+  .time-block{
+    text-align:center;padding:20px 16px;
+    position:relative;z-index:1;
+  }
+  .time-hour{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:64px;height:64px;border-radius:50%;
+    background:var(--paper);border:3px solid var(--verde-galicia);
+    font-family:'Playfair Display',serif;font-weight:700;font-size:15px;
+    color:var(--verde-galicia);margin:0 auto 16px;line-height:1;
+  }
+  .time-icon{font-size:28px;margin-bottom:8px}
+  .time-title{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:18px;
+    color:var(--verde-dk);margin-bottom:6px;
+  }
+  .time-desc{font-size:14px;color:var(--fg-dim);line-height:1.5}
+
+  /* CARTA GALLEGA */
+  .carta{background:var(--bg-alt)}
+  .carta-grid{
+    display:grid;grid-template-columns:1fr;gap:56px;align-items:start;
+  }
+  @media (min-width:920px){.carta-grid{grid-template-columns:1fr 1fr;gap:64px}}
+  .carta-img-wrap{
+    aspect-ratio:3/4;border-radius:8px;
+    background:linear-gradient(135deg,var(--rojo-pimenton),var(--ocre-mar));
+    display:flex;align-items:center;justify-content:center;color:var(--paper);
+    padding:24px;text-align:center;
+    box-shadow:0 16px 36px -16px rgba(184,68,43,0.4);
+    border:5px solid var(--paper);position:relative;
+  }
+  .carta-img-wrap .ph-emoji{font-size:80px}
+  .carta-img-wrap .ph-text{font-weight:600;font-size:14px;margin-top:12px;opacity:0.95}
+  .carta-list{list-style:none;padding:0;margin:0}
+  .carta-item{
+    display:flex;align-items:baseline;gap:18px;padding:16px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .carta-item:first-child{border-top:1px dashed var(--line)}
+  .carta-name{
+    font-family:'Playfair Display',serif;font-weight:400;font-size:18px;color:var(--verde-dk);
+    flex:1;line-height:1.3;
+  }
+  .carta-name em{
+    display:block;font-family:'Lora',serif;font-style:italic;font-size:13.5px;
+    color:var(--fg-dim);margin-top:3px;
+  }
+  .carta-dots{flex:1;border-bottom:1.5px dotted var(--line);margin:0 4px;align-self:end;margin-bottom:8px}
+  .carta-price{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:15.5px;
+    color:var(--rojo-pimenton);
+  }
+  .carta-foot{margin-top:24px;font-style:italic;font-size:13.5px;color:var(--fg-dim)}
+  .carta-section-title{
+    font-family:'Caveat',cursive;font-weight:700;font-size:24px;
+    color:var(--verde-galicia);margin:24px 0 12px;
+  }
+  .carta-section-title:first-child{margin-top:0}
+
+  /* GALERÍA */
+  .galeria{background:var(--bg)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:22px;
+  }
+  .gal-figure{
+    flex:1 1 calc(50% - 11px);
+    background:var(--paper);border:1px solid var(--line);border-radius:6px;
+    overflow:hidden;box-shadow:0 8px 24px -10px rgba(31,92,58,0.18);
+  }
+  @media (max-width:640px){.gal-figure{flex:1 1 100%}}
+  .gal-img-ph{
+    aspect-ratio:4/3;
+    background:linear-gradient(135deg,var(--verde-galicia),var(--verde-dk));
+    display:flex;align-items:center;justify-content:center;color:var(--amarillo);
+    padding:20px;text-align:center;flex-direction:column;
+  }
+  .gal-img-ph.alt{background:linear-gradient(135deg,var(--azulejo),var(--verde-light))}
+  .gal-img-ph .ph-emoji{font-size:56px;margin-bottom:8px}
+  .gal-img-ph .ph-text{font-weight:600;font-size:13px;opacity:0.95;font-family:'Lora',serif;font-style:italic}
+  .gal-figure figcaption{
+    padding:16px 20px;font-family:'Playfair Display',serif;font-size:16px;
+    color:var(--verde-dk);
+  }
+  .gal-figure figcaption strong{color:var(--rojo-pimenton);display:block;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:0.14em;font-family:'Lora',serif;font-weight:700}
+
+  /* AMBIENTE / HISTORIA */
+  .historia{background:var(--verde-dk);color:var(--bg);position:relative;overflow:hidden}
+  .historia::after{
+    content:"";position:absolute;top:0;right:0;bottom:0;left:0;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(236,201,75,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(184,68,43,0.06) 0%, transparent 50%);
+    pointer-events:none;
+  }
+  .historia h2{color:var(--bg)}
+  .historia h2 em{color:var(--amarillo)}
+  .historia h2 .script{color:var(--amarillo)}
+  .historia .kicker{color:var(--amarillo)}
+  .historia-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;
+    position:relative;z-index:1;
+  }
+  @media (min-width:880px){.historia-grid{grid-template-columns:0.45fr 0.55fr;gap:56px}}
+  .historia-quote{
+    font-family:'Caveat',cursive;font-weight:700;
+    font-size:clamp(28px,3vw,40px);line-height:1.3;color:var(--amarillo);
+  }
+  .historia-quote::before{content:"« ";color:var(--amarillo)}
+  .historia-quote::after{content:" »";color:var(--amarillo)}
+  .historia-body p{
+    margin-bottom:18px;color:rgba(253,249,239,0.88);font-size:16.5px;line-height:1.75;
+  }
+  .historia-body p strong{color:#fff}
+  .historia-firma{
+    margin-top:28px;padding-top:20px;
+    border-top:1px solid rgba(236,201,75,0.3);
+    font-family:'Caveat',cursive;font-weight:700;font-size:22px;
+    color:var(--amarillo);
+  }
+
+  /* VISITA */
+  .visita{background:var(--bg)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;margin-top:48px;
+  }
+  @media (min-width:880px){.visit-grid{grid-template-columns:1fr 1fr;gap:48px}}
+  .visit-info dl{display:grid;gap:22px}
+  .visit-info .row{border-top:1px solid var(--line);padding-top:18px}
+  .visit-info .row:last-child{border-bottom:1px solid var(--line);padding-bottom:18px}
+  .visit-info .label{
+    font-family:'Lora',serif;font-weight:700;font-size:11px;
+    letter-spacing:0.2em;text-transform:uppercase;color:var(--rojo-pimenton);
+    margin-bottom:12px;
+  }
+  .visit-info .value{font-size:16.5px;color:var(--fg)}
+  .visit-info .value a{color:var(--verde-galicia);border-bottom:1px solid var(--line);transition:all 0.3s}
+  .visit-info .value a:hover{color:var(--rojo-pimenton);border-color:var(--rojo-pimenton)}
+  .visit-info .city{color:var(--fg-dim);font-size:14px;display:block;margin-top:4px}
+  .hours-list{display:grid;gap:6px;list-style:none}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:15px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--fg-dim);text-transform:capitalize}
+  .hours-list .time{color:var(--fg);font-variant-numeric:tabular-nums;font-size:13.5px;font-family:'Lora',serif;font-weight:600}
+  .hours-list li.now{
+    background:var(--amarillo);
+    padding:8px 12px;border-radius:4px;margin:0 -12px;
+  }
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--verde-dk);font-weight:700}
+  .hours-list li.now .day::before{
+    content:"●";color:var(--rojo-pimenton);font-size:9px;margin-right:8px;
+    animation:pulse 1.6s ease-in-out infinite;display:inline-block;
+  }
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;
+    border:3px solid var(--verde-galicia);background:var(--paper);
+  }
+  .map-wrap iframe{width:100%;height:100%;border:0}
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:var(--paper);color:var(--verde-galicia);
+    padding:12px 18px;font-family:'Lora',serif;font-weight:700;font-size:12px;
+    letter-spacing:0.12em;text-transform:uppercase;
+    border-radius:999px;border:2px solid var(--verde-galicia);
+    min-height:44px;display:inline-flex;align-items:center;
+    transition:all 0.25s;
+  }
+  .map-cta:hover{background:var(--verde-galicia);color:var(--paper)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--bg-alt)}
+  .faq-list{margin-top:36px;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;padding:22px 0;
+    font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--verde-dk);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Lora',serif;font-size:24px;color:var(--rojo-pimenton);
+    transition:transform .3s;flex-shrink:0;font-weight:400;
+  }
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item p{padding:0 0 24px;color:var(--fg-dim);font-size:15.5px;line-height:1.7;max-width:680px}
+
+  /* CTA FINAL */
+  .cta-final{background:var(--verde-galicia);color:var(--bg);text-align:center}
+  .cta-final h2{color:var(--bg)}
+  .cta-final h2 em{color:var(--amarillo)}
+  .cta-final h2 .script{color:var(--amarillo)}
+  .cta-final .kicker{color:var(--amarillo)}
+  .cta-final p{max-width:560px;margin:18px auto 32px;font-size:17px;color:rgba(253,249,239,0.9)}
+  .cta-final .hero-cta{justify-content:center}
+  .cta-final .btn-primary{background:var(--amarillo);color:var(--verde-dk)}
+  .cta-final .btn-primary:hover{background:var(--paper);color:var(--rojo-pimenton)}
+  .cta-final .btn-secondary{border-color:var(--amarillo);color:var(--amarillo);background:transparent}
+  .cta-final .btn-secondary:hover{background:var(--amarillo);color:var(--verde-dk)}
+
+  /* FOOTER */
+  footer{
+    background:var(--verde-dk);color:var(--amarillo);
+    padding:40px 0;font-family:'Lora',serif;font-size:13px;
+  }
+  footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+  footer a{color:var(--bg);font-weight:600}
+  footer a:hover{color:var(--amarillo)}
+  .footer-attr{font-size:11.5px;opacity:0.65;max-width:520px;line-height:1.5;font-style:italic;margin-top:12px;width:100%}
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:0;border-radius:8px;padding:0;background:var(--paper);
+    max-width:480px;width:92%;
+    box-shadow:0 30px 80px rgba(20,61,36,0.45);color:var(--fg);
+  }
+  dialog::backdrop{background:rgba(20,61,36,0.65);backdrop-filter:blur(4px)}
+  .dlg-head{padding:24px 28px 0;border-top:6px solid var(--verde-galicia);border-radius:8px 8px 0 0}
+  .dlg-head .kicker{margin-bottom:8px;display:block}
+  .dlg-head h3{font-family:'Playfair Display',serif;font-weight:700;font-size:24px;color:var(--verde-dk)}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:14.5px;color:var(--fg-dim);margin-bottom:18px;line-height:1.55}
+  .dlg-form{display:grid;gap:12px}
+  .dlg-form label{font-family:'Lora',serif;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--rojo-pimenton);display:block;margin-bottom:4px}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:11px 14px;border:1.5px solid var(--line);background:var(--bg);
+    font-family:'Lora',serif;font-size:15px;color:var(--fg);border-radius:6px;
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--verde-galicia)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px;flex-wrap:wrap}
+  .dlg-close{
+    background:none;border:0;color:var(--fg-dim);font-family:'Lora',serif;font-size:12px;
+    letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-weight:600;
+  }
+  .dlg-close:hover{color:var(--rojo-pimenton)}
+  .dlg-ok{display:none;text-align:center;padding:32px 24px}
+  .dlg-ok h4{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--verde-dk);margin-bottom:10px}
+  .dlg-ok p{color:var(--fg-dim);font-size:14.5px}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  /* OVERFLOW + DIALOG */
+  html,body{overflow-x:clip;max-width:100%}
+  dialog[open],.reserva-dialog[open]{
+    position:fixed!important;inset:0!important;margin:auto!important;
+    transform:none!important;max-height:calc(100% - 2rem)!important;box-sizing:border-box!important;
+  }
+  dialog[open]::backdrop{background:rgba(20,61,36,0.65)}
+  img,video,picture,iframe{max-width:100%}
+  .map-cta{max-width:calc(100% - 28px)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-icon">F</span>
+      Foxos
+      <span class="brand-tag">Taberna gallega</span>
+    </a>
+    <a href="tel:+34933144760" class="tel-btn">93 314 47 60</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="hero-tagline">Taberna gallega de barrio · Sant Martí</span>
+        <h1>Pulpo a feira, <em>ribeiro</em><br>y <span class="script">trato familiar.</span></h1>
+        <p class="hero-lede">Una taberna gallega como las de toda la vida. <strong>Pulpo a feira con su buen pimentón, empanada gallega cortada en cuadrados, queso tetilla y ribeiro servido en taza de barro.</strong> Boa mesa, boa xente, sin prisa ninguna.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+          <a href="tel:+34933144760" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Gran+Via+de+les+Corts+Catalanes+1095+08020+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal">
+        <div>
+          <div class="ph-emoji">🐙</div>
+          <div class="ph-text">[FOTO PULPO A FEIRA — sustituir antes del pitch]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dia-taberna">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Un día en Foxos</span>
+      <h2>De doce a doce <em>de la noche,</em><br>la taberna <span class="script">no para.</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="time-block reveal">
+        <div class="time-hour">12-14h</div>
+        <div class="time-icon">☕</div>
+        <div class="time-title">Cafetín y cazo</div>
+        <div class="time-desc">Tazas de café cargado, primer vino del día. Llegan los jubilados a leer La Vanguardia.</div>
+      </div>
+      <div class="time-block reveal">
+        <div class="time-hour">14-17h</div>
+        <div class="time-icon">🥘</div>
+        <div class="time-title">Comida fuerte</div>
+        <div class="time-desc">Pulpo a feira, caldo gallego, empanada, lacón con grelos. Vino tinto del Ribeiro Sacra.</div>
+      </div>
+      <div class="time-block reveal">
+        <div class="time-hour">19-21h</div>
+        <div class="time-icon">🍷</div>
+        <div class="time-title">Vermut tardío</div>
+        <div class="time-desc">Vermut casero con aceituna, tabla de queso tetilla, fuet del país, charla larga.</div>
+      </div>
+      <div class="time-block reveal">
+        <div class="time-hour">21-00h</div>
+        <div class="time-icon">🍴</div>
+        <div class="time-title">Cena de mesa larga</div>
+        <div class="time-desc">Mariscada, almejas a la marinera, mero al horno. Cierre con queixo con membrillo y orujo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carta">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cocina gallega · sin trucos</span>
+      <h2>La carta de <em>siempre,</em><br>como en <span class="script">Lugo.</span></h2>
+    </div>
+    <div class="carta-grid">
+      <div class="carta-img-wrap reveal">
+        <div>
+          <div class="ph-emoji">🧀</div>
+          <div class="ph-text">[FOTO EMPANADA + RIBEIRO — sustituir]</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 class="carta-section-title">Para empezar</h3>
+        <ul class="carta-list">
+          <li class="carta-item">
+            <div class="carta-name">Pulpo a feira<em>Con pimentón dulce, sal gorda, aceite de oliva</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">19,50 €</span>
+          </li>
+          <li class="carta-item">
+            <div class="carta-name">Empanada gallega<em>De carne, atún o zorza · cortada en cuadrados</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">3,50 €/u</span>
+          </li>
+          <li class="carta-item">
+            <div class="carta-name">Tabla de queso tetilla<em>Con membrillo casero y nueces</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">9,80 €</span>
+          </li>
+          <li class="carta-item">
+            <div class="carta-name">Caldo gallego<em>Con grelos, judías blancas y unto</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">6,50 €</span>
+          </li>
+        </ul>
+        <h3 class="carta-section-title">Platos principales</h3>
+        <ul class="carta-list">
+          <li class="carta-item">
+            <div class="carta-name">Lacón con grelos<em>Con chorizo, patata y un buen pan</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">14,50 €</span>
+          </li>
+          <li class="carta-item">
+            <div class="carta-name">Almejas a la marinera<em>Salsa de vino blanco, ajo y perejil</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">17,80 €</span>
+          </li>
+          <li class="carta-item">
+            <div class="carta-name">Mero al horno con patatas<em>Con cachelos al pimentón</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">21,90 €</span>
+          </li>
+          <li class="carta-item">
+            <div class="carta-name">Mariscada para 2<em>Pedir con 24h · gambas, percebes, nécoras</em></div>
+            <span class="carta-dots"></span>
+            <span class="carta-price">68,00 €</span>
+          </li>
+        </ul>
+        <p class="carta-foot">La carta cambia con la temporada. Lo que se pesca, lo que llega de Galicia, eso ponemos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Del mar al plato</span>
+      <h2>Lo que se come <em>en Foxos.</em></h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">
+        <div class="gal-img-ph">
+          <div>
+            <div class="ph-emoji">🐙</div>
+            <div class="ph-text">[FOTO PULPO A FEIRA — sustituir]</div>
+          </div>
+        </div>
+        <figcaption><strong>Pulpo a feira</strong>Cortado en rodajas, con pimentón y aceite de oliva</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="gal-img-ph alt">
+          <div>
+            <div class="ph-emoji">🥧</div>
+            <div class="ph-text">[FOTO EMPANADA — sustituir]</div>
+          </div>
+        </div>
+        <figcaption><strong>Empanada gallega</strong>Cortada en cuadrados, masa fina y crujiente</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="historia">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Quiénes somos</span>
+      <h2>Una <em>esquinita</em> de Galicia <br>en Sant Martí, <span class="script">Barcelona.</span></h2>
+    </div>
+    <div class="historia-grid">
+      <div class="reveal">
+        <p class="historia-quote">Aquí entras a comer y sales con un amigo nuevo y una receta de la abuela.</p>
+      </div>
+      <div class="historia-body reveal">
+        <p>Foxos lleva años en Gran Via de les Corts Catalanes, en pleno Sant Martí, atendiendo a vecinos del barrio que vienen <strong>a comer como se come en su pueblo</strong>. Pulpo a feira los domingos, caldo gallego en invierno, empanada todos los días, vermut casero los sábados.</p>
+        <p>El producto viene <strong>directo de Galicia</strong> en la medida de lo posible: el queso tetilla de un proveedor de Arzúa, el ribeiro del Avia, el lacón curado en casa de la familia. Las almejas y los percebes los pedimos a la lonja cuando hay buen género.</p>
+        <p>No somos un sitio "gourmet" ni "de tendencia". Somos una taberna de barrio, con los manteles de cuadros, las paredes con azulejos azules como en Pontevedra, y la radio puesta bajita con la Radio Galega cuando hay partido del Celta.</p>
+        <p class="historia-firma">— Foxos, taberna gallega</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cómo encontrarnos</span>
+      <h2>Gran Via, <em>1095.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              Gran Via de les Corts Catalanes, 1095
+              <span class="city">08020 Barcelona · Sant Martí</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li><span class="day">Lunes</span><span class="time">12:00 – 16:00 · 19:00 – 23:30</span></li>
+              <li><span class="day">Martes</span><span class="time">12:00 – 16:00 · 19:00 – 23:30</span></li>
+              <li><span class="day">Miércoles</span><span class="time">12:00 – 16:00 · 19:00 – 23:30</span></li>
+              <li><span class="day">Jueves</span><span class="time">12:00 – 16:00 · 19:00 – 00:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Domingo</span><span class="time">12:00 – 17:00</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <a href="tel:+34933144760">+34 93 314 47 60</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Cómo llegar</div>
+            <div class="value">
+              Metro <strong>La Pau</strong> (L2, L4) — 5 min andando
+              <span class="city">Bus H12, V31 — Gran Via / Bac de Roda</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Gran+Via+de+les+Corts+Catalanes+1095+08020+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Foxos">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Gran+Via+de+les+Corts+Catalanes+1095+08020+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Lo que <em>nos preguntáis.</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Hace falta reservar?</summary>
+        <p>Entre semana al mediodía normalmente entras sin problema. Para sábado y domingo al mediodía sí recomendamos reservar — el local se llena de familias que vienen a comer pulpo. Para mariscada llama 24 horas antes para que la pidamos a la lonja con buen género.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿El pulpo es fresco o congelado?</summary>
+        <p>Cocido al momento. Lo recibimos congelado (es la práctica habitual también en Galicia — congelar rompe la fibra y queda más tierno), pero la cocción la hacemos cada día. Lo cortamos a la vista, le ponemos sal gorda, pimentón y aceite de oliva. Como en Lugo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis opciones vegetarianas?</summary>
+        <p>Algunas: empanada de zorza vegetariana (con cebolla y pimiento), caldo gallego sin chorizo, ensaladas grandes, queso tetilla con membrillo, patatas a la importancia. La cocina gallega no es la más fácil para vegetarianos pero algo siempre sale.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis vinos del Ribeiro y Albariño?</summary>
+        <p>Sí, varios de cada. Ribeiro y Albariño jóvenes para acompañar marisco y pulpo, Mencía del Bierzo para carnes, y orujo blanco y de hierbas para terminar. También tenemos vermouth de la casa y cerveza Estrella Galicia, claro.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Aceptáis grupos para celebraciones?</summary>
+        <p>Sí, hasta 30 personas. Tenemos menús cerrados para grupos: incluye empanada, pulpo o caldo, lacón o mero, queso con membrillo y orujo. Llama unos días antes y te lo preparamos a medida del presupuesto.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <span class="kicker">Boa mesa · Boa xente</span>
+    <h2>Vente <em>a comer</em> <span class="script">como en casa.</span></h2>
+    <p>Reserva una mesa o pásate sin avisar a tomarte un vermut y una empanada. Estamos en Gran Via 1095, con la puerta abierta de doce a doce de la noche. Te esperamos.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+      <a href="tel:+34933144760" class="btn btn-secondary">Llamar al 93 314 47 60</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>Foxos · Taberna gallega · Barcelona</span>
+    <span><a href="tel:+34933144760">+34 93 314 47 60</a></span>
+    <p class="footer-attr">Imágenes representativas pendientes de sustituir por fotos reales del local antes del lanzamiento.</p>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">Reserva en Foxos</span>
+    <h3>Dinos cuándo y para cuántos.</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Te confirmamos por teléfono o WhatsApp en pocos minutos. Si quieres mariscada, pide con 24h de antelación. Para hoy, mejor llamar.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Teléfono</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-pax">Personas</label>
+          <select id="r-pax" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7-8</option><option>9+</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-fecha">Fecha</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+        <div>
+          <label for="r-hora">Hora</label>
+          <input type="time" id="r-hora" required>
+        </div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Enviar petición</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>¡Recibido! Saúde.</h4>
+    <p>Te llamamos en breve para confirmar la mesa.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Foxos Taberna Gallega",
+  "description":"Taberna gallega familiar en Sant Martí, Barcelona. Pulpo a feira, empanada gallega, queso tetilla, ribeiro y cocina tradicional de Galicia.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Gran Via de les Corts Catalanes, 1095",
+    "addressLocality":"Barcelona",
+    "postalCode":"08020",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34933144760",
+  "servesCuisine":["Galician","Spanish","Seafood"],
+  "priceRange":"€€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday"],"opens":"12:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday"],"opens":"19:00","closes":"23:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"12:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"19:00","closes":"00:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:00","closes":"00:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:00","closes":"17:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Hace falta reservar en Foxos?","acceptedAnswer":{"@type":"Answer","text":"Entre semana al mediodía normalmente entras sin reserva. Para sábado y domingo al mediodía recomendamos reservar — el local se llena de familias. Para mariscada llama 24 horas antes para pedirla a la lonja con buen género."}},
+    {"@type":"Question","name":"¿El pulpo de Foxos es fresco o congelado?","acceptedAnswer":{"@type":"Answer","text":"Cocido al momento. Lo recibimos congelado (práctica habitual también en Galicia — rompe la fibra y queda más tierno), pero la cocción es diaria. Lo cortamos a la vista con sal gorda, pimentón dulce y aceite de oliva, como en Lugo."}},
+    {"@type":"Question","name":"¿Tenéis opciones vegetarianas?","acceptedAnswer":{"@type":"Answer","text":"Sí: empanada de zorza vegetariana, caldo gallego sin chorizo, ensaladas grandes, queso tetilla con membrillo, patatas a la importancia. La cocina gallega no es la más sencilla para vegetarianos pero adaptamos."}},
+    {"@type":"Question","name":"¿Tenéis vinos del Ribeiro y Albariño?","acceptedAnswer":{"@type":"Answer","text":"Sí, varios de cada. Ribeiro y Albariño jóvenes para marisco y pulpo, Mencía del Bierzo para carnes, orujo blanco y de hierbas para terminar. También vermouth de la casa y Estrella Galicia."}},
+    {"@type":"Question","name":"¿Aceptáis grupos para celebraciones?","acceptedAnswer":{"@type":"Answer","text":"Sí, hasta 30 personas. Menús cerrados que incluyen empanada, pulpo o caldo, lacón o mero, queso con membrillo y orujo. Llama unos días antes y lo adaptamos al presupuesto."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('is-visible')});return}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}});
+    },{threshold:0.08,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(function(){els.forEach(function(e){e.classList.add('is-visible')})},2500);
+  })();
+  (function(){
+    var items=document.querySelectorAll('.hours-list li');
+    if(!items.length)return;
+    var jsDay=new Date().getDay();
+    var idx=jsDay===0?6:jsDay-1;
+    if(items[idx])items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Foxos%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Foxos</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Foxos%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Foxos%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Foxos y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-29T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+
+
+
+</body>
+</html>

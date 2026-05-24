@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estraperlo Barceloneta — Craft Beer & Cuina Catalana de Mercat</title>
+<meta name="description" content="Estraperlo Barceloneta. Cervesa artesana, cuina catalana de mercat, plats del dia. Carrer Atlàntida 65, Barceloneta. Obert cada dia.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://estraperlo.example/">
+<meta property="og:title" content="Estraperlo Barceloneta — Craft Beer & Cuina Catalana">
+<meta property="og:description" content="Cervesa artesana, cuina catalana de mercat. Barceloneta.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#fafafa;
+    --paper:#ffffff;
+    --ink:#0a0a0a;
+    --ink-dim:#3a3a3a;
+    --ink-mute:#7a7a7a;
+    --line:#e8e8e8;
+    --line-strong:#1a1a1a;
+    --carbon:#161616;
+    --gold:#b8935a;
+    --hop:#5a6b3a;
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  html,body{overflow-x:clip;max-width:100%}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:16.5px;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+
+  .container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding-left:var(--side-padding);
+    padding-right:var(--side-padding);
+  }
+
+  .mono{font-family:'Space Grotesk',monospace;letter-spacing:0.04em}
+  .kicker{
+    font-family:'Space Grotesk',monospace;
+    text-transform:uppercase;
+    letter-spacing:0.32em;
+    font-size:10.5px;
+    color:var(--ink-mute);
+    font-weight:500;
+    display:inline-block;
+  }
+  .kicker::before{content:"·  ";color:var(--ink)}
+  .kicker::after{content:"  ·";color:var(--ink)}
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,250,250,0.92);
+    backdrop-filter:saturate(160%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0;
+  }
+  .brand{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:18px;letter-spacing:0.36em;
+    font-weight:600;color:var(--ink);
+    text-transform:uppercase;
+  }
+  .brand-mark{
+    display:inline-block;width:8px;height:8px;background:var(--ink);
+    margin-right:12px;vertical-align:middle;
+  }
+  .tel-btn{
+    font-family:'Space Grotesk',monospace;
+    font-size:12px;text-transform:uppercase;letter-spacing:0.2em;
+    padding:11px 18px;border:1px solid var(--ink);
+    transition:all .25s;font-weight:500;
+  }
+  .tel-btn:hover{background:var(--ink);color:var(--bg)}
+
+  /* HERO BIG WORD */
+  .hero{
+    padding:64px 0 80px;
+    position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-meta-top{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;
+    font-family:'Space Grotesk',monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:0.22em;color:var(--ink-mute);
+    padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:48px;
+  }
+  .hero-bigword{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:clamp(54px, 14vw, 220px);
+    line-height:0.88;
+    letter-spacing:-0.05em;
+    color:var(--ink);
+    margin:0 0 28px;
+    text-transform:uppercase;
+    word-break:break-word;
+  }
+  .hero-bigword em{
+    font-style:italic;
+    font-family:'DM Serif Display',serif;
+    font-weight:400;
+    color:var(--gold);
+    letter-spacing:-0.02em;
+  }
+  .hero-sub-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:32px;
+    margin-top:48px;
+  }
+  @media (min-width:760px){
+    .hero-sub-row{grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+  }
+  .hero-lede{
+    font-size:clamp(17px, 1.4vw + 0.5rem, 22px);
+    line-height:1.55;
+    color:var(--ink-dim);
+    max-width:520px;
+    font-weight:400;
+  }
+  .hero-lede strong{color:var(--ink);font-weight:600}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;
+    font-family:'Space Grotesk',monospace;font-weight:500;font-size:12px;
+    text-transform:uppercase;letter-spacing:0.18em;
+    transition:all .25s;border:1px solid transparent;min-height:44px;
+  }
+  .btn-primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .btn-primary:hover{background:transparent;color:var(--ink)}
+  .btn-secondary{border-color:var(--ink);color:var(--ink)}
+  .btn-secondary:hover{background:var(--ink);color:var(--bg)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink);opacity:0.7}
+  .btn-ghost:hover{opacity:1;background:var(--ink);color:var(--bg)}
+
+  /* HISTORICAL NOTE — el guiño */
+  .hist-note{
+    background:var(--ink);
+    color:var(--bg);
+    padding:64px 0;
+    position:relative;
+  }
+  .hist-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:36px;
+    align-items:start;
+  }
+  @media (min-width:860px){
+    .hist-grid{grid-template-columns:0.35fr 0.65fr;gap:80px}
+  }
+  .hist-label{
+    font-family:'Space Grotesk',monospace;
+    font-size:11px;letter-spacing:0.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:500;
+  }
+  .hist-text h2{
+    font-family:'DM Serif Display',serif;
+    font-style:italic;font-weight:400;
+    font-size:clamp(28px, 3vw + 0.5rem, 44px);
+    line-height:1.2;color:var(--bg);margin:14px 0 24px;
+  }
+  .hist-text p{
+    color:rgba(250,250,250,0.72);
+    font-size:16.5px;line-height:1.65;margin-bottom:14px;
+  }
+  .hist-text p strong{color:var(--gold);font-weight:500}
+
+  /* CERVESES — list with tap numbers */
+  section{padding:96px 0;border-bottom:1px solid var(--line)}
+  @media (max-width:760px){section{padding:72px 0}}
+  .section-head{margin-bottom:56px;max-width:680px}
+  .section-head h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:clamp(32px, 4vw + 0.5rem, 60px);
+    line-height:1;letter-spacing:-0.03em;
+    margin-top:18px;color:var(--ink);
+    text-transform:uppercase;
+  }
+  .section-head h2 em{
+    font-family:'DM Serif Display',serif;
+    font-style:italic;font-weight:400;color:var(--gold);
+    text-transform:none;letter-spacing:-0.01em;
+  }
+
+  .taps-grid{
+    display:grid;grid-template-columns:1fr;
+    border-top:1px solid var(--line-strong);
+  }
+  .tap{
+    display:grid;
+    grid-template-columns:60px 1fr auto;
+    gap:18px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+    align-items:baseline;
+  }
+  @media (min-width:680px){
+    .tap{grid-template-columns:80px 1fr 1fr auto;gap:24px}
+  }
+  .tap-num{
+    font-family:'Space Grotesk',monospace;
+    font-size:13px;color:var(--ink-mute);letter-spacing:0.1em;
+    font-weight:500;
+  }
+  .tap-name{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:18px;font-weight:600;color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  .tap-style{
+    font-family:'Inter',sans-serif;
+    font-size:14px;color:var(--ink-mute);
+    grid-column:2/3;
+  }
+  @media (min-width:680px){
+    .tap-style{grid-column:auto;font-style:italic}
+  }
+  .tap-price{
+    font-family:'Space Grotesk',monospace;
+    font-size:14px;color:var(--ink);font-weight:600;
+    letter-spacing:0.04em;
+  }
+  .taps-foot{
+    margin-top:24px;font-size:14px;color:var(--ink-mute);font-style:italic;
+  }
+
+  /* CUINA — split image+text */
+  .cuina{background:var(--paper)}
+  .cuina-split{
+    display:grid;grid-template-columns:1fr;gap:48px;
+    align-items:center;
+  }
+  @media (min-width:860px){
+    .cuina-split{grid-template-columns:1fr 1fr;gap:80px}
+  }
+  .cuina-img{
+    background:var(--line);
+    aspect-ratio:4/5;
+    position:relative;
+    overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ink-mute);font-family:'Space Grotesk',monospace;
+    font-size:11px;text-transform:uppercase;letter-spacing:0.22em;
+    text-align:center;padding:24px;line-height:1.6;
+    border:1px solid var(--line-strong);
+  }
+  .cuina-img::after{content:"🍽";position:absolute;top:24px;right:24px;font-size:28px;opacity:0.5;filter:grayscale(1)}
+  .cuina-list{display:grid;gap:18px;list-style:none;padding:0;margin:24px 0 0;
+    border-top:1px solid var(--line);
+  }
+  .cuina-list li{
+    padding:16px 0;border-bottom:1px dashed var(--line);
+    display:flex;align-items:baseline;gap:16px;
+  }
+  .cuina-list .num{
+    font-family:'Space Grotesk',monospace;font-size:11px;
+    color:var(--ink-mute);letter-spacing:0.1em;min-width:24px;
+  }
+  .cuina-list .nom{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;
+    color:var(--ink);flex:1;
+  }
+  .cuina-list .nom small{
+    display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:13.5px;
+    color:var(--ink-mute);margin-top:3px;font-style:italic;letter-spacing:0;
+  }
+
+  /* GALERIA — B&N */
+  .galeria{background:var(--bg)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:clamp(16px, 2vw, 28px);
+    align-items:flex-start;
+  }
+  .gal-figure{
+    flex:0 0 calc(50% - clamp(8px, 1vw, 14px));
+    max-width:calc(50% - clamp(8px, 1vw, 14px));
+    background:var(--line);
+    aspect-ratio:1/1;
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ink-mute);font-family:'Space Grotesk',monospace;
+    font-size:11px;text-transform:uppercase;letter-spacing:0.22em;
+    text-align:center;padding:18px;line-height:1.6;
+    border:1px solid var(--line-strong);
+    filter:grayscale(1);
+  }
+  .gal-figure::after{content:"📷";position:absolute;bottom:14px;right:14px;font-size:18px;opacity:0.4;filter:grayscale(1)}
+  @media (max-width:640px){
+    .gal-figure{flex:0 0 100%;max-width:100%}
+  }
+
+  /* VISITA */
+  .visita{background:var(--paper)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;margin-top:48px;
+  }
+  @media (min-width:880px){
+    .visit-grid{grid-template-columns:1fr 1fr;gap:64px}
+  }
+  .visit-info dl{display:grid;gap:28px;margin:0}
+  .visit-row{border-top:1px solid var(--line);padding-top:20px}
+  .visit-row:last-child{border-bottom:1px solid var(--line);padding-bottom:20px}
+  .visit-label{
+    font-family:'Space Grotesk',monospace;font-size:10.5px;
+    letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--ink-mute);margin-bottom:10px;font-weight:500;
+  }
+  .visit-value{font-size:16px;color:var(--ink);line-height:1.55}
+  .visit-value strong{font-weight:600}
+  .visit-value a{border-bottom:1px solid var(--line-strong);transition:opacity .25s}
+  .visit-value a:hover{opacity:0.6}
+  .visit-city{color:var(--ink-mute);font-size:14px;display:block;margin-top:4px}
+
+  .hours-list{display:grid;gap:6px;list-style:none;padding:0;margin:0}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:14.5px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--ink-mute);text-transform:capitalize}
+  .hours-list .time{color:var(--ink);font-family:'Space Grotesk',monospace;font-size:13px;font-variant-numeric:tabular-nums}
+  .hours-list li.now{
+    background:var(--ink);color:var(--bg);padding:8px 12px;margin:0 -12px;
+  }
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--bg)}
+  .hours-list li.now .day::before{content:"● ";color:var(--gold)}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    border:1px solid var(--line-strong);background:var(--line);
+  }
+  .map-wrap iframe{
+    width:100%;height:100%;border:0;
+    filter:grayscale(1) contrast(1.05);
+  }
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:var(--paper);
+    border:1px solid var(--ink);color:var(--ink);
+    padding:12px 18px;font-family:'Space Grotesk',monospace;
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;
+    transition:all .25s;min-height:44px;display:inline-flex;align-items:center;
+  }
+  .map-cta:hover{background:var(--ink);color:var(--paper)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--bg)}
+  .faq-list{margin-top:36px;border-top:1px solid var(--line-strong)}
+  .faq-item{border-bottom:1px solid var(--line);padding:0}
+  .faq-item summary{
+    list-style:none;cursor:pointer;
+    padding:24px 0;
+    font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    letter-spacing:-0.01em;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Space Grotesk',monospace;font-size:22px;
+    color:var(--ink-mute);transition:transform .3s;flex-shrink:0;
+  }
+  .faq-item[open] summary::after{content:"−";color:var(--gold)}
+  .faq-item p{padding:0 0 24px;color:var(--ink-dim);font-size:15.5px;line-height:1.7;max-width:680px}
+
+  /* CTA FINAL */
+  .cta-final{
+    background:var(--ink);color:var(--bg);
+    text-align:left;border-bottom:0;
+  }
+  .cta-final h2{color:var(--bg)}
+  .cta-final h2 em{color:var(--gold)}
+  .cta-final p{color:rgba(250,250,250,0.7);font-size:17px;max-width:520px;margin:18px 0 36px}
+  .cta-final .btn-primary{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  .cta-final .btn-primary:hover{background:transparent;color:var(--gold)}
+  .cta-final .btn-secondary{border-color:var(--bg);color:var(--bg)}
+  .cta-final .btn-secondary:hover{background:var(--bg);color:var(--ink)}
+
+  /* FOOTER */
+  footer{
+    background:var(--carbon);color:var(--ink-mute);
+    padding:48px 0;font-family:'Space Grotesk',monospace;font-size:12px;
+    text-transform:uppercase;letter-spacing:0.18em;border-bottom:0;
+  }
+  footer .container{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;
+  }
+  footer a{color:var(--bg)}
+  footer a:hover{color:var(--gold)}
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:1px solid var(--ink);padding:0;background:var(--paper);
+    max-width:480px;width:92%;box-shadow:0 30px 80px rgba(0,0,0,0.4);
+    color:var(--ink);
+  }
+  dialog[open],.reserva-dialog[open]{
+    position:fixed!important;inset:0!important;margin:auto!important;
+    transform:none!important;max-height:calc(100% - 2rem)!important;
+    box-sizing:border-box!important;
+  }
+  dialog::backdrop{background:rgba(10,10,10,0.7);backdrop-filter:blur(6px)}
+  .dlg-head{padding:24px 28px 0}
+  .dlg-head .kicker{margin-bottom:10px}
+  .dlg-head h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:24px;color:var(--ink);line-height:1.15;letter-spacing:-0.02em;text-transform:uppercase}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:14.5px;color:var(--ink-dim);margin-bottom:18px;line-height:1.55}
+  .dlg-form{display:grid;gap:12px}
+  .dlg-form label{font-family:'Space Grotesk',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-mute);display:block;margin-bottom:4px;font-weight:600}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:11px 14px;border:1px solid var(--line-strong);background:var(--bg);
+    font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--gold)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-close{
+    background:none;border:0;color:var(--ink-mute);
+    font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;
+  }
+  .dlg-close:hover{color:var(--ink)}
+  .dlg-ok{display:none;text-align:center;padding:32px 24px}
+  .dlg-ok h4{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;color:var(--ink);margin-bottom:10px;text-transform:uppercase;letter-spacing:-0.01em}
+  .dlg-ok p{color:var(--ink-dim);font-size:14.5px}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand"><span class="brand-mark"></span>Estraperlo</a>
+    <a href="tel:+34931234567" class="tel-btn">Trucar</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-meta-top">
+      <span>Barceloneta · Atlàntida 65</span>
+      <span>Craft Beer · Cuina Catalana</span>
+      <span>Obert cada dia</span>
+    </div>
+
+    <h1 class="hero-bigword reveal">ESTRA<em>perlo</em></h1>
+
+    <div class="hero-sub-row">
+      <p class="hero-lede reveal">
+        <strong>Cervesa artesana</strong> de tirador i <strong>cuina catalana de mercat</strong>
+        a un local sense soroll, sense filtres i sense pretensions. A la Barceloneta de tota la vida.
+      </p>
+      <div class="reveal">
+        <p class="kicker" style="margin-bottom:18px">El nom és un guiny</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar taula</button>
+          <a href="tel:+34931234567" class="btn btn-secondary">Trucar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Carrer+Atl%C3%A0ntida+65+Barceloneta+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Com arribar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hist-note">
+  <div class="container">
+    <div class="hist-grid">
+      <div class="reveal">
+        <span class="hist-label">L'origen del nom</span>
+      </div>
+      <div class="hist-text reveal">
+        <h2>«Estraperlo» — paraula que la postguerra va deixar a Catalunya per parlar del mercat clandestí.</h2>
+        <p>Als anys 40, quan res no estava a les botigues oficials, l'<strong>estraperlo</strong> era el que feia possible que la gent menjés. Pa amagat sota la jaqueta, oli per la porta del darrere, cigarrons que canviaven de mà al carreró.</p>
+        <p>Ara no amaguem res. Però el nom ens va agradar per la càrrega de carrer, de barri, d'allò que es feia perquè s'havia de fer. <strong>Cervesa de la bona i cuina honesta</strong> — sense gaire més manual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cervesa">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Carta de tiradors</span>
+      <h2>Set <em>cerveses</em> que canviem cada setmana.</h2>
+    </div>
+
+    <div class="taps-grid reveal">
+      <div class="tap">
+        <span class="tap-num">01 ·</span>
+        <span class="tap-name">Edge Brewing Hoptimista</span>
+        <span class="tap-style">IPA · Barcelona · 6.6%</span>
+        <span class="tap-price">5,80 €</span>
+      </div>
+      <div class="tap">
+        <span class="tap-num">02 ·</span>
+        <span class="tap-name">Garage Soup</span>
+        <span class="tap-style">NEIPA · La Pineda · 6.2%</span>
+        <span class="tap-price">6,20 €</span>
+      </div>
+      <div class="tap">
+        <span class="tap-num">03 ·</span>
+        <span class="tap-name">La Pirata Black Block</span>
+        <span class="tap-style">Imperial Stout · Súria · 9.5%</span>
+        <span class="tap-price">6,50 €</span>
+      </div>
+      <div class="tap">
+        <span class="tap-num">04 ·</span>
+        <span class="tap-name">Espiga Tothom</span>
+        <span class="tap-style">Lager artesana · Sant Esteve · 4.8%</span>
+        <span class="tap-price">4,80 €</span>
+      </div>
+      <div class="tap">
+        <span class="tap-num">05 ·</span>
+        <span class="tap-name">Guineu Riner Pale</span>
+        <span class="tap-style">Pale Ale · Riner · 5.4%</span>
+        <span class="tap-price">5,40 €</span>
+      </div>
+      <div class="tap">
+        <span class="tap-num">06 ·</span>
+        <span class="tap-name">Cyclic Stay Calm</span>
+        <span class="tap-style">Saison · Castellet · 5.6%</span>
+        <span class="tap-price">5,60 €</span>
+      </div>
+      <div class="tap">
+        <span class="tap-num">07 ·</span>
+        <span class="tap-name">Convidat de la setmana</span>
+        <span class="tap-style">Sorpresa del cellerer · pregunteu</span>
+        <span class="tap-price">—</span>
+      </div>
+    </div>
+    <p class="taps-foot">Rotem cerveses cada setmana. La carta de l'aparador mana. Si busqueu alguna cosa concreta, demaneu i mirem què hi ha.</p>
+  </div>
+</section>
+
+<section class="cuina">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cuina de mercat</span>
+      <h2>Plats del <em>dia</em>, segons mercat.</h2>
+    </div>
+
+    <div class="cuina-split">
+      <div class="cuina-img reveal">
+        [FOTO DEL PLAT DEL DIA —<br>sustituir abans del pitch]
+      </div>
+      <div class="reveal">
+        <p style="font-size:16px;color:var(--ink-dim);line-height:1.65">
+          La cuina canvia cada setmana segons el que arriba de la <strong>llotja de la Barceloneta</strong>
+          i del mercat. No hi ha carta tancada — hi ha pissarra. Aquestes són les coses que solem fer.
+        </p>
+        <ul class="cuina-list">
+          <li>
+            <span class="num">01</span>
+            <span class="nom">Tartar de tonyina vermella<small>Amb alvocat, ravanet i tendrums de soja</small></span>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <span class="nom">Caps de pop a la brasa<small>Patata kennebec, pebre vermell i oli d'all</small></span>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <span class="nom">Ous estrellats amb sobrassada<small>Patates de Prades i ou de pagès</small></span>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <span class="nom">Croquetes de bull blanc<small>Receta de cal Ramon, sis unitats</small></span>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <span class="nom">Calamars a l'andalusa<small>Mahonesa de llima i fonoll fresc</small></span>
+          </li>
+          <li>
+            <span class="num">06</span>
+            <span class="nom">Esqueixada de bacallà<small>Tomàquet del Prat, ceba dolça i olives Arbequina</small></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">El local</span>
+      <h2>Carrer, <em>barra</em> i tirador.</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">[FOTO BARRA AMB TIRADORS — sustituir]</figure>
+      <figure class="gal-figure reveal">[FOTO FAÇANA EXTERIOR — sustituir]</figure>
+      <figure class="gal-figure reveal">[FOTO PINTA DE CERVESA — sustituir]</figure>
+      <figure class="gal-figure reveal">[FOTO PLAT CUINA MERCAT — sustituir]</figure>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">On som</span>
+      <h2>Atlàntida, <em>65.</em></h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="visit-row">
+            <div class="visit-label">Adreça</div>
+            <div class="visit-value">
+              Carrer Atlàntida, 65
+              <span class="visit-city">08003 Barcelona · Barceloneta</span>
+            </div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Horaris</div>
+            <ul class="hours-list">
+              <li><span class="day">Dilluns</span><span class="time">18:00 – 00:00</span></li>
+              <li><span class="day">Dimarts</span><span class="time">18:00 – 00:00</span></li>
+              <li><span class="day">Dimecres</span><span class="time">18:00 – 00:00</span></li>
+              <li><span class="day">Dijous</span><span class="time">18:00 – 00:00</span></li>
+              <li><span class="day">Divendres</span><span class="time">18:00 – 00:00</span></li>
+              <li><span class="day">Dissabte</span><span class="time">12:00 – 00:00</span></li>
+              <li><span class="day">Diumenge</span><span class="time">12:00 – 00:00</span></li>
+            </ul>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Telèfon</div>
+            <div class="visit-value"><a href="tel:+34931234567">+34 93 123 45 67</a></div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Com arribar</div>
+            <div class="visit-value">
+              Metro <strong>Barceloneta</strong> (L4) — 6 min caminant<br>
+              <span class="visit-city">Bus V15, V17 — parada Pg. Joan de Borbó</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+Atl%C3%A0ntida+65+Barceloneta+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de l'Estraperlo Barceloneta">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+Atl%C3%A0ntida+65+Barceloneta+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Com arribar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Preguntes</span>
+      <h2>El que <em>ens pregunten.</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quins tipus de cervesa serviu de tirador?</summary>
+        <p>Tenim set tiradors permanents amb rotació setmanal. Sempre hi ha una IPA o NEIPA potent, una lager artesana per qui no busca complicacions, una stout o porter fosca de més grau, una saison o sour de baixa fermentació i un tirador convidat amb el que ens vingui de gust aquella setmana. Si dubteu, demaneu prova abans.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Cal reservar taula?</summary>
+        <p>Per beure cervesa a la barra no — entreu i demaneu. Per menjar sopant en cap de setmana sí que recomanem reservar, el local és petit i ens omplim ràpid. Truqueu al 93 123 45 67 o feu servir el formulari de reserva d'aquesta pàgina.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Teniu opcions vegetarianes a la cuina?</summary>
+        <p>Sí, no és el nostre fort però sempre hi ha 2-3 plats vegetarians a la pissarra: l'esqueixada amb verdures, hummus amb llavors, ous estrellats sense sobrassada, croquetes vegetals quan toca. Avis al cambrer i us guiem.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Feu sopars de grup o esdeveniments?</summary>
+        <p>Per grups de més de 8 persones millor truqueu abans — adaptem la carta i podem oferir menú tancat. Per esdeveniments privats fora d'horari obert, escriviu-nos i parlem dels detalls. Tenim espai per uns 25-30 comensals com a màxim.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Per què us dieu Estraperlo?</summary>
+        <p>El nom és un guiny històric — l'estraperlo era el mercat negre clandestí de la postguerra a Catalunya. Ens va agradar la càrrega de carrer, de barri, d'allò que es feia perquè s'havia de fer. Ara no amaguem res, però la idea de cervesa i menjar honest sense pretensions ens sembla que hi connecta bé.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <span class="kicker" style="color:var(--gold)">A la Barceloneta</span>
+    <h2 style="margin-top:14px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(32px,4vw + 0.5rem,60px);line-height:1;letter-spacing:-0.03em;text-transform:uppercase">Veniu <em>quan vulgueu.</em></h2>
+    <p>Obrim cada dia a la tarda. Cap de setmana també al migdia. Si veniu en grup, truqueu abans — el local és petit i ens hi cabem els que hi cabem.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar taula</button>
+      <a href="tel:+34931234567" class="btn btn-secondary">Trucar al 93 123 45 67</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>Estraperlo · Barceloneta · Barcelona</span>
+    <span><a href="tel:+34931234567">+34 93 123 45 67</a></span>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">Reserva a l'Estraperlo</span>
+    <h3>Digueu-nos quan i quants sou.</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Us confirmem per telèfon o WhatsApp en pocs minuts. Si és per avui, millor truqueu directament.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nom</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Telèfon</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-pax">Persones</label>
+          <select id="r-pax" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7-8</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-fecha">Data</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+        <div>
+          <label for="r-hora">Hora</label>
+          <input type="time" id="r-hora" required>
+        </div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancel·lar</button>
+        <button type="submit" class="btn btn-primary">Enviar petició</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>Rebut!</h4>
+    <p>Us truquem aviat per confirmar.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Tancar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BarOrPub",
+  "name":"Estraperlo Barceloneta",
+  "description":"Cervesa artesana de tirador i cuina catalana de mercat a la Barceloneta.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Carrer Atlàntida, 65",
+    "addressLocality":"Barcelona",
+    "postalCode":"08003",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34931234567",
+  "servesCuisine":["Catalan","Tapas","Craft Beer"],
+  "priceRange":"€€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"18:00","closes":"00:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"12:00","closes":"00:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Quins tipus de cervesa serviu de tirador?","acceptedAnswer":{"@type":"Answer","text":"Set tiradors permanents amb rotació setmanal: IPA o NEIPA potent, lager artesana, stout o porter fosca, saison o sour, i un tirador convidat. Si dubteu, demaneu prova abans."}},
+    {"@type":"Question","name":"Cal reservar taula a l'Estraperlo?","acceptedAnswer":{"@type":"Answer","text":"Per beure cervesa a la barra no cal. Per sopar en cap de setmana sí: el local és petit i s'omple. Truqueu al 93 123 45 67 o feu servir el formulari de reserva."}},
+    {"@type":"Question","name":"Teniu opcions vegetarianes?","acceptedAnswer":{"@type":"Answer","text":"Sí, sempre hi ha 2-3 plats vegetarians a la pissarra: esqueixada amb verdures, hummus, ous estrellats sense sobrassada, croquetes vegetals. Avis al cambrer i us guiem."}},
+    {"@type":"Question","name":"Feu sopars de grup o esdeveniments?","acceptedAnswer":{"@type":"Answer","text":"Per grups de més de 8 persones truqueu abans, adaptem carta i podem oferir menú tancat. Per esdeveniments privats fora d'horari obert, escriviu-nos. Espai per 25-30 comensals."}},
+    {"@type":"Question","name":"Per què us dieu Estraperlo?","acceptedAnswer":{"@type":"Answer","text":"L'estraperlo era el mercat negre clandestí de la postguerra a Catalunya. Ens va agradar la càrrega de carrer i barri. Cervesa i menjar honest sense pretensions hi connecta bé."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Estraperlo%20Barceloneta%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Estraperlo Barceloneta</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Estraperlo%20Barceloneta%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Estraperlo%20Barceloneta%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Estraperlo Barceloneta y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-29T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafetería Liadísimo — 20 años de pequeños placeres en Sant Gervasi, Barcelona</title>
+<meta name="description" content="Cafetería Liadísimo. Veinte años en Sant Gervasi sirviendo cafés, tartas y desayunos del día. Pequeños placeres del día a día. Guillem Tell 25, Barcelona.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://liadisimo.example/">
+<meta property="og:title" content="Cafetería Liadísimo — 20 años en Sant Gervasi">
+<meta property="og:description" content="Pequeños placeres del día a día. Cafés, tartas, desayunos. Sant Gervasi.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#fffdf8;
+    --bg-2:#fff8ec;
+    --paper:#ffffff;
+    --ink:#1a1818;
+    --ink-dim:#4a4444;
+    --ink-mute:#7a7575;
+    --rosa:#ff6b9d;
+    --amarillo:#ffd23f;
+    --turquesa:#3ec1d3;
+    --lila:#9b7cc7;
+    --naranja:#ff8c42;
+    --verde:#7bc950;
+    --line:#ece6d8;
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  html,body{overflow-x:clip;max-width:100%}
+  body{
+    font-family:'Lexend',system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.65;
+    font-size:16.5px;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+
+  .container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding-left:var(--side-padding);
+    padding-right:var(--side-padding);
+    position:relative;z-index:2;
+  }
+
+  .hand{font-family:'Caveat',cursive;font-weight:600;line-height:1}
+  .fat{font-family:'Sniglet',sans-serif;font-weight:800;letter-spacing:-0.01em}
+  .kicker{
+    font-family:'Caveat',cursive;font-weight:600;font-size:22px;
+    color:var(--rosa);display:inline-block;line-height:1;
+  }
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,253,248,0.95);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1.5px solid var(--ink);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 0;gap:14px;
+  }
+  .brand{
+    display:flex;align-items:center;gap:12px;
+  }
+  .brand-circle{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--amarillo);border:2.5px solid var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Sniglet',sans-serif;font-weight:800;
+    font-size:18px;color:var(--ink);position:relative;
+    transform:rotate(-4deg);
+  }
+  .brand-circle::after{
+    content:"";position:absolute;width:8px;height:8px;
+    border-radius:50%;background:var(--rosa);
+    top:-3px;right:-3px;border:2px solid var(--ink);
+  }
+  .brand-text{
+    font-family:'Sniglet',sans-serif;font-weight:800;font-size:20px;
+    color:var(--ink);line-height:1;
+  }
+  .brand-text small{
+    display:block;font-family:'Caveat',cursive;font-weight:600;
+    font-size:14px;color:var(--turquesa);margin-top:2px;line-height:1;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 20px;border:2.5px solid var(--ink);border-radius:999px;
+    font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;
+    color:var(--ink);background:var(--amarillo);
+    transition:all .2s;
+  }
+  .tel-btn:hover{background:var(--rosa);color:var(--paper);transform:rotate(-2deg)}
+
+  /* HERO */
+  .hero{
+    padding:64px 0 100px;
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 12% 16%, rgba(255,107,157,0.12) 0, transparent 30%),
+      radial-gradient(circle at 88% 84%, rgba(62,193,211,0.12) 0, transparent 30%),
+      var(--bg);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;
+    align-items:center;
+  }
+  @media (min-width:920px){
+    .hero-grid{grid-template-columns:1.15fr 0.85fr;gap:56px}
+  }
+  .hero-anniversary{
+    display:inline-flex;align-items:baseline;gap:8px;
+    background:var(--ink);color:var(--amarillo);
+    padding:8px 18px;border-radius:999px;
+    font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.12em;
+    margin-bottom:18px;
+    transform:rotate(-2deg);
+  }
+  .hero-anniversary span{font-family:'Sniglet',sans-serif;font-weight:800;font-size:18px;color:var(--rosa)}
+  .hero h1{
+    font-family:'Sniglet',sans-serif;
+    font-weight:800;
+    font-size:clamp(48px, 8vw + 0.5rem, 110px);
+    line-height:0.9;letter-spacing:-0.03em;
+    color:var(--ink);margin:0 0 14px;
+  }
+  .hero h1 .word-pop{
+    display:inline-block;color:var(--rosa);
+    transform:rotate(-3deg);
+  }
+  .hero h1 .word-pop-2{
+    display:inline-block;color:var(--turquesa);
+    transform:rotate(2deg);
+  }
+  .hero-sub-hand{
+    font-family:'Caveat',cursive;font-weight:600;
+    font-size:clamp(28px, 3vw + 0.5rem, 42px);
+    color:var(--ink-dim);line-height:1.1;
+    margin-bottom:24px;display:block;
+  }
+  .hero-lede{
+    font-size:17.5px;color:var(--ink-dim);margin-bottom:32px;max-width:520px;line-height:1.65;
+  }
+  .hero-lede strong{color:var(--ink);font-weight:600}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 24px;border-radius:999px;
+    font-family:'Lexend',sans-serif;font-weight:600;font-size:13.5px;
+    transition:all .2s;border:2.5px solid var(--ink);min-height:44px;
+  }
+  .btn-primary{background:var(--rosa);color:var(--paper)}
+  .btn-primary:hover{background:var(--amarillo);color:var(--ink);transform:rotate(-1deg)}
+  .btn-secondary{background:var(--paper);color:var(--ink)}
+  .btn-secondary:hover{background:var(--turquesa);color:var(--paper)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--amarillo)}
+
+  /* Hero illustrated mock */
+  .hero-illust{
+    position:relative;aspect-ratio:1/1;max-width:480px;margin:0 auto;
+  }
+  .ill-blob{
+    position:absolute;border:2.5px solid var(--ink);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Sniglet',sans-serif;font-weight:800;
+  }
+  .ill-blob-1{
+    width:60%;height:60%;top:5%;left:8%;
+    background:var(--amarillo);
+    font-size:36px;color:var(--ink);
+    transform:rotate(-6deg);
+    z-index:2;
+  }
+  .ill-blob-2{
+    width:45%;height:45%;bottom:8%;right:10%;
+    background:var(--rosa);color:var(--paper);
+    font-size:24px;
+    transform:rotate(8deg);
+    z-index:3;
+  }
+  .ill-blob-3{
+    width:30%;height:30%;top:48%;left:38%;
+    background:var(--turquesa);color:var(--ink);
+    font-size:18px;
+    transform:rotate(-15deg);
+    z-index:4;
+  }
+  .ill-star{
+    position:absolute;color:var(--lila);font-size:32px;
+    font-family:'Sniglet',sans-serif;font-weight:800;
+    text-shadow:2px 2px 0 var(--ink);
+  }
+  .ill-star-1{top:10%;right:5%;transform:rotate(15deg);z-index:5}
+  .ill-star-2{bottom:25%;left:0%;transform:rotate(-10deg);z-index:5}
+
+  /* SECCIONES */
+  section{padding:96px 0;position:relative;z-index:1}
+  @media (max-width:760px){section{padding:72px 0}}
+  .section-head{margin-bottom:48px;max-width:780px}
+  .section-head h2{
+    font-family:'Sniglet',sans-serif;font-weight:800;
+    font-size:clamp(36px, 5vw + 0.5rem, 64px);
+    line-height:1;letter-spacing:-0.025em;
+    margin-top:12px;color:var(--ink);
+  }
+  .section-head h2 em{
+    font-style:normal;color:var(--rosa);
+    display:inline-block;transform:rotate(-2deg);
+  }
+
+  /* 20 AÑOS TIMELINE */
+  .timeline{background:var(--bg-2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .timeline-strip{
+    margin-top:32px;display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  @media (min-width:760px){
+    .timeline-strip{grid-template-columns:repeat(4,1fr);gap:24px}
+  }
+  .tl-card{
+    background:var(--paper);
+    border:2.5px solid var(--ink);border-radius:24px;
+    padding:24px 22px 22px;
+    position:relative;transition:all .2s;
+  }
+  .tl-card:nth-child(1){box-shadow:6px 6px 0 var(--rosa)}
+  .tl-card:nth-child(2){box-shadow:6px 6px 0 var(--amarillo)}
+  .tl-card:nth-child(3){box-shadow:6px 6px 0 var(--turquesa)}
+  .tl-card:nth-child(4){box-shadow:6px 6px 0 var(--lila)}
+  .tl-card:hover{transform:translate(-1px,-2px)}
+  .tl-year{
+    font-family:'Sniglet',sans-serif;font-weight:800;font-size:32px;
+    color:var(--ink);line-height:1;
+  }
+  .tl-card:nth-child(1) .tl-year{color:var(--rosa)}
+  .tl-card:nth-child(2) .tl-year{color:var(--naranja)}
+  .tl-card:nth-child(3) .tl-year{color:var(--turquesa)}
+  .tl-card:nth-child(4) .tl-year{color:var(--lila)}
+  .tl-card h3{
+    font-family:'Lexend',sans-serif;font-size:17px;font-weight:600;
+    color:var(--ink);margin:10px 0 8px;line-height:1.2;
+  }
+  .tl-card p{color:var(--ink-mute);font-size:14px;line-height:1.55}
+  .tl-deco{
+    position:absolute;font-family:'Caveat',cursive;font-weight:700;
+    font-size:18px;color:var(--ink);transform:rotate(8deg);
+    top:-12px;right:-8px;background:var(--amarillo);
+    padding:4px 12px;border-radius:999px;border:2px solid var(--ink);
+  }
+
+  /* CARTA DEL DÍA */
+  .carta{background:var(--bg)}
+  .carta-head-decor{
+    text-align:center;margin-bottom:32px;
+    font-family:'Caveat',cursive;font-size:24px;color:var(--turquesa);
+  }
+  .carta-grid{
+    display:grid;grid-template-columns:1fr;gap:32px;
+  }
+  @media (min-width:760px){
+    .carta-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+  }
+  .carta-block{
+    background:var(--paper);
+    border:2.5px solid var(--ink);border-radius:32px;
+    padding:32px 28px;
+    transition:all .2s;
+  }
+  .carta-block:nth-child(odd){box-shadow:8px 8px 0 var(--amarillo)}
+  .carta-block:nth-child(even){box-shadow:8px 8px 0 var(--rosa)}
+  .carta-block:hover{transform:translate(-2px,-2px)}
+  .carta-block h3{
+    font-family:'Sniglet',sans-serif;font-weight:800;font-size:28px;
+    color:var(--ink);margin-bottom:6px;line-height:1;
+  }
+  .carta-block .sub{
+    font-family:'Caveat',cursive;font-weight:600;font-size:20px;
+    color:var(--rosa);margin-bottom:18px;
+  }
+  .carta-block:nth-child(2) .sub{color:var(--turquesa)}
+  .carta-block:nth-child(3) .sub{color:var(--lila)}
+  .carta-block:nth-child(4) .sub{color:var(--naranja)}
+  .carta-block ul{list-style:none;padding:0;margin:0;border-top:2px dashed var(--line)}
+  .carta-block li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+    padding:14px 0;border-bottom:1.5px dashed var(--line);
+  }
+  .carta-block li:last-child{border-bottom:0}
+  .carta-block .nom{
+    font-family:'Lexend',sans-serif;font-size:15.5px;font-weight:500;
+    color:var(--ink);flex:1;
+  }
+  .carta-block .nom small{
+    display:block;font-family:'Caveat',cursive;font-weight:500;font-size:14px;
+    color:var(--ink-mute);margin-top:2px;
+  }
+  .carta-block .precio{
+    font-family:'Sniglet',sans-serif;font-weight:800;font-size:15px;
+    color:var(--ink);flex:none;
+  }
+
+  /* GALERIA */
+  .galeria{background:var(--bg-2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:clamp(16px, 2vw, 28px);
+    align-items:flex-start;justify-content:center;
+  }
+  .gal-figure{
+    flex:0 0 calc(50% - clamp(8px, 1vw, 14px));
+    max-width:calc(50% - clamp(8px, 1vw, 14px));
+    aspect-ratio:1/1;
+    border:2.5px solid var(--ink);border-radius:24px;
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--ink);font-family:'Caveat',cursive;
+    font-size:18px;font-weight:600;
+    text-align:center;padding:20px;line-height:1.3;
+    overflow:hidden;
+  }
+  .gal-figure:nth-child(1){background:var(--amarillo);transform:rotate(-1deg);box-shadow:6px 6px 0 var(--ink)}
+  .gal-figure:nth-child(2){background:var(--rosa);color:var(--paper);transform:rotate(2deg);box-shadow:6px 6px 0 var(--ink)}
+  .gal-figure:nth-child(3){background:var(--turquesa);transform:rotate(-2deg);box-shadow:6px 6px 0 var(--ink)}
+  .gal-figure:nth-child(4){background:var(--lila);color:var(--paper);transform:rotate(1deg);box-shadow:6px 6px 0 var(--ink)}
+  .gal-figure::after{content:"📷";position:absolute;bottom:14px;right:14px;font-size:22px}
+  @media (max-width:640px){
+    .gal-figure{flex:0 0 100%;max-width:100%}
+  }
+
+  /* HISTORIA */
+  .historia{background:var(--ink);color:var(--paper)}
+  .historia h2{color:var(--paper)}
+  .historia h2 em{color:var(--amarillo)}
+  .historia .kicker{color:var(--amarillo)}
+  .historia-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;
+  }
+  @media (min-width:860px){
+    .historia-grid{grid-template-columns:0.4fr 0.6fr;gap:64px}
+  }
+  .historia-grid p{color:rgba(255,255,255,0.78);font-size:16.5px;line-height:1.75;margin-bottom:16px}
+  .historia-grid p strong{color:var(--amarillo);font-weight:600}
+  .historia-quote{
+    font-family:'Caveat',cursive;font-weight:600;
+    font-size:clamp(26px, 3vw + 0.5rem, 38px);
+    line-height:1.25;color:var(--rosa);
+  }
+
+  /* VISITA */
+  .visita{background:var(--bg)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;margin-top:48px;
+  }
+  @media (min-width:880px){
+    .visit-grid{grid-template-columns:1fr 1fr;gap:64px}
+  }
+  .visit-info dl{display:grid;gap:24px;margin:0}
+  .visit-row{border-top:2px solid var(--line);padding-top:18px}
+  .visit-row:last-child{border-bottom:2px solid var(--line);padding-bottom:18px}
+  .visit-label{
+    font-family:'Caveat',cursive;font-weight:700;font-size:20px;
+    color:var(--rosa);margin-bottom:8px;line-height:1;
+  }
+  .visit-value{font-size:16px;color:var(--ink);line-height:1.55}
+  .visit-value strong{color:var(--ink);font-weight:600}
+  .visit-value a{border-bottom:2.5px solid var(--amarillo);transition:all .25s;font-weight:500}
+  .visit-value a:hover{color:var(--rosa);border-color:var(--rosa)}
+  .visit-city{color:var(--ink-mute);font-size:14px;display:block;margin-top:4px}
+
+  .hours-list{display:grid;gap:5px;list-style:none;padding:0;margin:0}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:15px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--ink-mute);text-transform:capitalize}
+  .hours-list .time{color:var(--ink);font-family:'Lexend',sans-serif;font-weight:500;font-size:14px}
+  .hours-list li.now{
+    background:var(--amarillo);padding:8px 14px;border-radius:14px;margin:0 -14px;
+    border:2px solid var(--ink);
+  }
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--ink);font-weight:700}
+  .hours-list li.now .day::before{content:"☀ ";color:var(--naranja)}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    border:2.5px solid var(--ink);border-radius:24px;background:var(--line);
+    box-shadow:8px 8px 0 var(--turquesa);
+  }
+  .map-wrap iframe{
+    width:100%;height:100%;border:0;
+    filter:saturate(1.05);
+  }
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:var(--rosa);color:var(--paper);
+    padding:12px 22px;font-family:'Lexend',sans-serif;
+    font-size:13px;font-weight:600;
+    border-radius:999px;transition:all .25s;min-height:44px;display:inline-flex;align-items:center;
+    border:2.5px solid var(--ink);
+  }
+  .map-cta:hover{background:var(--amarillo);color:var(--ink)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--bg-2)}
+  .faq-list{margin-top:36px;max-width:840px;margin-left:auto;margin-right:auto}
+  .faq-item{
+    background:var(--paper);
+    border:2.5px solid var(--ink);border-radius:20px;
+    padding:0 22px;margin-bottom:14px;
+    box-shadow:4px 4px 0 var(--turquesa);
+  }
+  .faq-item:nth-child(even){box-shadow:4px 4px 0 var(--rosa)}
+  .faq-item:nth-child(3n){box-shadow:4px 4px 0 var(--amarillo)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;
+    padding:18px 0;
+    font-family:'Sniglet',sans-serif;font-weight:800;font-size:18px;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.25;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Sniglet',sans-serif;font-weight:800;font-size:26px;
+    color:var(--rosa);transition:transform .3s;flex-shrink:0;
+  }
+  .faq-item[open] summary::after{content:"−";color:var(--turquesa)}
+  .faq-item p{padding:0 0 20px;color:var(--ink-dim);font-size:15.5px;line-height:1.7}
+
+  /* CTA FINAL */
+  .cta-final{
+    background:var(--amarillo);color:var(--ink);text-align:center;
+    border-top:3px solid var(--ink);
+    background-image:
+      radial-gradient(circle at 15% 25%, rgba(255,107,157,0.18) 0, transparent 30%),
+      radial-gradient(circle at 85% 75%, rgba(62,193,211,0.18) 0, transparent 30%);
+  }
+  .cta-final h2 em{color:var(--rosa)}
+  .cta-final .kicker{color:var(--ink);background:var(--paper);padding:6px 16px;border-radius:999px;border:2px solid var(--ink);font-size:18px}
+  .cta-final p{max-width:580px;margin:18px auto 32px;color:var(--ink);font-size:17px;font-weight:500}
+  .cta-final .hero-cta{justify-content:center}
+  .cta-final .btn-primary{background:var(--ink);color:var(--amarillo)}
+  .cta-final .btn-primary:hover{background:var(--rosa);color:var(--paper)}
+  .cta-final .btn-secondary{background:var(--paper);color:var(--ink)}
+  .cta-final .btn-secondary:hover{background:var(--turquesa);color:var(--paper)}
+
+  /* FOOTER */
+  footer{
+    background:var(--ink);color:rgba(255,255,255,0.55);
+    padding:48px 0;font-family:'Lexend',sans-serif;font-size:13px;font-weight:400;
+  }
+  footer .container{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;
+  }
+  footer a{color:var(--amarillo);font-weight:600}
+  footer a:hover{color:var(--rosa)}
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:3px solid var(--ink);padding:0;background:var(--paper);
+    max-width:480px;width:92%;box-shadow:10px 10px 0 var(--rosa);
+    color:var(--ink);border-radius:28px;
+  }
+  dialog[open],.reserva-dialog[open]{
+    position:fixed!important;inset:0!important;margin:auto!important;
+    transform:none!important;max-height:calc(100% - 2rem)!important;
+    box-sizing:border-box!important;
+  }
+  dialog::backdrop{background:rgba(26,24,24,0.7);backdrop-filter:blur(6px)}
+  .dlg-head{padding:24px 28px 0}
+  .dlg-head .kicker{margin-bottom:6px;color:var(--rosa)}
+  .dlg-head h3{font-family:'Sniglet',sans-serif;font-weight:800;font-size:26px;color:var(--ink);line-height:1.15}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:15px;color:var(--ink-dim);margin-bottom:18px;line-height:1.55}
+  .dlg-form{display:grid;gap:12px}
+  .dlg-form label{font-family:'Caveat',cursive;font-weight:700;font-size:18px;color:var(--rosa);display:block;margin-bottom:2px}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:11px 14px;border:2px solid var(--ink);background:var(--bg);
+    font-family:'Lexend',sans-serif;font-size:15px;color:var(--ink);border-radius:12px;
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--rosa)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-close{
+    background:none;border:0;color:var(--ink-mute);
+    font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;cursor:pointer;
+  }
+  .dlg-close:hover{color:var(--rosa)}
+  .dlg-ok{display:none;text-align:center;padding:36px 24px}
+  .dlg-ok h4{font-family:'Sniglet',sans-serif;font-weight:800;font-size:30px;color:var(--rosa);margin-bottom:10px}
+  .dlg-ok p{color:var(--ink-dim);font-size:15px}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-circle">L</span>
+      <span class="brand-text">Liadísimo<small>cafetería · sant gervasi</small></span>
+    </a>
+    <a href="tel:+34931234567" class="tel-btn">Llámanos</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="hero-anniversary">Celebramos <span>20</span> años</div>
+        <h1><span class="word-pop">Pequeños</span><br><span class="word-pop-2">placeres</span><br>del día a día.</h1>
+        <p class="hero-sub-hand">cafés, tartas y desayunos del Liadísimo</p>
+        <p class="hero-lede">
+          Veinte años abriendo la persiana a las ocho en Sant Gervasi.
+          <strong>Café de especialidad</strong>, tartas hechas en casa, desayunos completos,
+          bocadillos del día y la conversación de siempre. Sin prisas.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar tarta</button>
+          <a href="tel:+34931234567" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Guillem+Tell+25+Sant+Gervasi+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-illust reveal" aria-hidden="true">
+        <span class="ill-star ill-star-1">★</span>
+        <span class="ill-star ill-star-2">✦</span>
+        <div class="ill-blob ill-blob-1">☕</div>
+        <div class="ill-blob ill-blob-2">🍰</div>
+        <div class="ill-blob ill-blob-3">20</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">20 años en el barri</span>
+      <h2>Una <em>cafetería</em> que ha visto muchas cosas.</h2>
+    </div>
+    <div class="timeline-strip">
+      <div class="tl-card reveal">
+        <span class="tl-deco">¡abrimos!</span>
+        <div class="tl-year">2005</div>
+        <h3>Liadísimo abre persiana</h3>
+        <p>Guillem Tell 25, bajo. Una cafetera Faema usada, doce mesas, un menú escrito a mano.</p>
+      </div>
+      <div class="tl-card reveal">
+        <div class="tl-year">2010</div>
+        <h3>Llegan las tartas</h3>
+        <p>La cocina pequeña gana una mesa de pastelería. Empiezan a hacer todas las tartas en casa.</p>
+      </div>
+      <div class="tl-card reveal">
+        <div class="tl-year">2015</div>
+        <h3>El café de especialidad</h3>
+        <p>Cambiamos el café por uno de tueste local de Barcelona. La gente del barri lo nota.</p>
+      </div>
+      <div class="tl-card reveal">
+        <span class="tl-deco">¡20!</span>
+        <div class="tl-year">2025</div>
+        <h3>Veinte años después</h3>
+        <p>Los mismos clientes, sus hijos y los hijos de sus hijos. Y el café sigue saliendo bien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carta">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="kicker">Lo que servimos</span>
+      <h2>La <em>carta</em> del día.</h2>
+    </div>
+    <p class="carta-head-decor reveal">↓ cambia cada semana según temporada ↓</p>
+
+    <div class="carta-grid">
+      <div class="carta-block reveal">
+        <h3>Cafés</h3>
+        <p class="sub">grano de tueste local</p>
+        <ul>
+          <li><span class="nom">Espresso<small>doble shot</small></span><span class="precio">1,80 €</span></li>
+          <li><span class="nom">Cappuccino<small>con leche de la mañana</small></span><span class="precio">2,40 €</span></li>
+          <li><span class="nom">Flat white<small>nuestro favorito</small></span><span class="precio">2,80 €</span></li>
+          <li><span class="nom">Café con hielo<small>en verano</small></span><span class="precio">2,40 €</span></li>
+          <li><span class="nom">Té y matcha<small>varias opciones</small></span><span class="precio">2,80 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-block reveal">
+        <h3>Tartas</h3>
+        <p class="sub">hechas cada mañana en casa</p>
+        <ul>
+          <li><span class="nom">Tarta de zanahoria<small>la clásica con crema queso</small></span><span class="precio">4,80 €</span></li>
+          <li><span class="nom">Tarta de chocolate<small>tres capas, glaseado</small></span><span class="precio">4,80 €</span></li>
+          <li><span class="nom">Lemon pie<small>con merengue tostado</small></span><span class="precio">4,50 €</span></li>
+          <li><span class="nom">Cheesecake<small>con frutos rojos</small></span><span class="precio">4,80 €</span></li>
+          <li><span class="nom">Tarta vegana del día<small>siempre hay una</small></span><span class="precio">4,80 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-block reveal">
+        <h3>Desayunos</h3>
+        <p class="sub">hasta el mediodía</p>
+        <ul>
+          <li><span class="nom">Tostadas con tomate<small>pan de masa madre</small></span><span class="precio">3,80 €</span></li>
+          <li><span class="nom">Huevos benedict<small>con jamón y muffin</small></span><span class="precio">8,50 €</span></li>
+          <li><span class="nom">Bowl de yogur + granola<small>casera, con fruta</small></span><span class="precio">6,80 €</span></li>
+          <li><span class="nom">Tortitas con frutos rojos<small>con sirope de arce</small></span><span class="precio">7,80 €</span></li>
+          <li><span class="nom">Desayuno Liadísimo<small>café + tostada + zumo + bollo</small></span><span class="precio">7,50 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-block reveal">
+        <h3>Bocadillos y ensaladas</h3>
+        <p class="sub">para el almuerzo del barri</p>
+        <ul>
+          <li><span class="nom">Bocata de pollo + curry<small>pan brioche</small></span><span class="precio">7,50 €</span></li>
+          <li><span class="nom">Sandwich vegano<small>hummus, aguacate, tomate</small></span><span class="precio">7,20 €</span></li>
+          <li><span class="nom">Ensalada del día<small>cambia cada semana</small></span><span class="precio">9,50 €</span></li>
+          <li><span class="nom">Tabla de la casa<small>queso, jamón, tomate, pan</small></span><span class="precio">10,80 €</span></li>
+          <li><span class="nom">Empanada del día<small>casera, dos por persona</small></span><span class="precio">5,80 €</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">El día a día</span>
+      <h2>Color, <em>café</em> y mañanas largas.</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">[FOTO LATTE ART<br>+ tarta]</figure>
+      <figure class="gal-figure reveal">[FOTO INTERIOR<br>con murales]</figure>
+      <figure class="gal-figure reveal">[FOTO TARTA<br>de zanahoria]</figure>
+      <figure class="gal-figure reveal">[FOTO FACHADA<br>con toldo]</figure>
+    </div>
+  </div>
+</section>
+
+<section class="historia">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cómo llegamos hasta aquí</span>
+      <h2>Veinte años <em>sirviendo</em> el mismo barrio.</h2>
+    </div>
+    <div class="historia-grid">
+      <div class="reveal">
+        <p class="historia-quote">«Hay clientes que vinieron con el carrito de bebé y ahora vienen con su hijo a desayunar antes de ir al instituto. Eso lo es todo.»</p>
+      </div>
+      <div class="reveal">
+        <p>Liadísimo abrió en <strong>2005</strong> en un local pequeño de Guillem Tell, justo donde el barri de Sant Gervasi se vuelve más tranquilo. La idea era sencilla: una cafetería <strong>de barrio, de las que abren temprano y cierran cuando los clientes se van</strong>.</p>
+        <p>Veinte años después seguimos en el mismo sitio. La cafetera ha cambiado dos veces, los muebles tres, pero el café sigue saliendo de la misma máquina italiana y las tartas se siguen haciendo en la cocina de atrás cada mañana, antes de las ocho.</p>
+        <p>El mural de la pared lo pintó una clienta hace doce años. La <strong>colección de tazas</strong> diferentes la fueron trayendo los habituales cada vez que viajaban. La planta del rincón es la cuarta — las tres anteriores murieron y aquí seguimos.</p>
+        <p>Si vienes por primera vez, pide tarta de zanahoria, café flat white y mira el techo — verás por qué la gente se queda más rato del que pensaba.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Te esperamos</span>
+      <h2>Guillem <em>Tell</em>, 25.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="visit-row">
+            <div class="visit-label">Dirección</div>
+            <div class="visit-value">
+              Carrer de Guillem Tell, 25, bajo
+              <span class="visit-city">08006 Barcelona · Sant Gervasi</span>
+            </div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Horarios</div>
+            <ul class="hours-list">
+              <li><span class="day">Lunes</span><span class="time">8:00 – 20:00</span></li>
+              <li><span class="day">Martes</span><span class="time">8:00 – 20:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">8:00 – 20:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">8:00 – 20:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">8:00 – 21:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">9:00 – 21:00</span></li>
+              <li><span class="day">Domingo</span><span class="time">9:00 – 18:00</span></li>
+            </ul>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Teléfono</div>
+            <div class="visit-value"><a href="tel:+34931234567">+34 93 123 45 67</a></div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Cómo llegar</div>
+            <div class="visit-value">
+              FGC <strong>Plaça Molina</strong> — 3 min andando<br>
+              <span class="visit-city">Bus 14, 16, V11 — parada Pàdua / Guillem Tell</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Guillem+Tell+25+Sant+Gervasi+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Cafetería Liadísimo">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Guillem+Tell+25+Sant+Gervasi+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Lo que <em>nos preguntáis.</em></h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Hace falta reservar?</summary>
+        <p>Para café o desayuno entre semana no — entras, te sientas donde haya hueco y pides en la barra. Para fin de semana al mediodía o para grupos sí es recomendable, sobre todo en sábado y domingo de 10:00 a 13:00 que es el momento punta. Llama o usa el formulario de esta página.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacéis tartas por encargo?</summary>
+        <p>Sí, todas las tartas que aparecen en la carta se pueden encargar enteras (6, 8 o 12 raciones) con 24-48h de antelación. Si quieres una decoración personalizada (cumpleaños, nombre, color) avísanos con 3 días. Tenemos opciones veganas y sin gluten — pregunta al pedir.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis opciones veganas y sin gluten?</summary>
+        <p>Sí, siempre hay una tarta vegana en el mostrador (cambia cada semana), bowls de yogur con yogur vegetal, sándwich vegano y ensaladas. Sin gluten tenemos pan rústico de masa madre certificado y un par de bollos. Avísanos al pedir y te indicamos qué sí y qué no.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Sirvéis comidas o solo desayunos?</summary>
+        <p>Servimos desayunos hasta las 12:30, y a partir de las 13:00 abrimos la carta de almuerzo: bocadillos calientes, ensaladas, empanadas, tablas para compartir. Por la tarde volvemos a café + tartas + algún snack. No somos restaurante, somos cafetería con buena comida.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis WiFi para trabajar?</summary>
+        <p>Sí, WiFi gratis y enchufes en las mesas del fondo. Eso sí: pedimos que en las horas punta (12:00-14:00 y fines de semana) liberes la mesa si llega gente esperando, sobre todo si llevas más de 2 horas. Hay un montón de cafeterías de "trabajo" en BCN — esta es de barrio antes que de coworking.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <span class="kicker">¡Os esperamos!</span>
+    <h2 style="font-family:'Sniglet',sans-serif;font-weight:800;font-size:clamp(36px,5vw + 0.5rem,64px);line-height:1;letter-spacing:-0.025em;margin-top:14px">Pásate <em>cuando quieras.</em></h2>
+    <p>Abrimos a las ocho cada día, también los domingos. Si vienes por primera vez, prueba la tarta de zanahoria — y dile a quien te atienda que vienes de nuevo. Te invitamos al café.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar tarta</button>
+      <a href="tel:+34931234567" class="btn btn-secondary">Llamar al 93 123 45 67</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>Cafetería Liadísimo · Guillem Tell 25 · Sant Gervasi · Barcelona · Desde 2005</span>
+    <span><a href="tel:+34931234567">+34 93 123 45 67</a></span>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">Reserva o encargo</span>
+    <h3>¿Qué necesitas?</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Tarta de cumple, mesa para fin de semana o pedido grande. Te contestamos en pocas horas.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div>
+        <label for="r-tipo">Tipo</label>
+        <select id="r-tipo" required>
+          <option>Encargo de tarta</option>
+          <option>Mesa fin de semana</option>
+          <option>Desayuno grupo</option>
+          <option>Otra consulta</option>
+        </select>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Teléfono</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-fecha">Fecha</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Enviar petición</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>¡Recibido!</h4>
+    <p>Te contactamos en breve para confirmar.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"Cafetería Liadísimo",
+  "description":"Cafetería de barrio en Sant Gervasi con 20 años de historia. Café de especialidad, tartas caseras, desayunos del día.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Carrer de Guillem Tell, 25",
+    "addressLocality":"Barcelona",
+    "postalCode":"08006",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34931234567",
+  "servesCuisine":["Coffee","Breakfast","Cake","Cafe"],
+  "priceRange":"€",
+  "foundingDate":"2005",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"20:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"21:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"21:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"09:00","closes":"18:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Hace falta reservar en Liadísimo?","acceptedAnswer":{"@type":"Answer","text":"Para café o desayuno entre semana no. Para fin de semana al mediodía o grupos sí es recomendable, sobre todo sábado y domingo de 10:00 a 13:00. Llama o usa el formulario."}},
+    {"@type":"Question","name":"¿Hacéis tartas por encargo?","acceptedAnswer":{"@type":"Answer","text":"Sí, todas las tartas se pueden encargar enteras (6, 8 o 12 raciones) con 24-48h de antelación. Decoración personalizada con 3 días. Opciones veganas y sin gluten disponibles."}},
+    {"@type":"Question","name":"¿Tenéis opciones veganas y sin gluten?","acceptedAnswer":{"@type":"Answer","text":"Sí, siempre hay tarta vegana en el mostrador, yogur vegetal, sándwich vegano y ensaladas. Sin gluten: pan rústico certificado y bollos. Avísanos al pedir."}},
+    {"@type":"Question","name":"¿Sirvéis comidas o solo desayunos?","acceptedAnswer":{"@type":"Answer","text":"Desayunos hasta las 12:30. A partir de las 13:00 abrimos carta de almuerzo: bocadillos calientes, ensaladas, empanadas, tablas. Por la tarde café + tartas."}},
+    {"@type":"Question","name":"¿Tenéis WiFi para trabajar?","acceptedAnswer":{"@type":"Answer","text":"Sí, WiFi gratis y enchufes en las mesas del fondo. Pedimos liberar mesa en horas punta (12:00-14:00 y fines de semana) si llega gente esperando, sobre todo si llevas más de 2 horas."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta {
+    opacity: .85;
+    font-size: 13px;
+  }
+  .id-countdown__cta strong {
+    color: var(--id-accent);
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px);
+    line-height: 0.9;
+    margin: 0 0 24px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    margin: 0 auto 36px;
+    max-width: 520px;
+    color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa);
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent;
+    color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px;
+    color: var(--id-cream-dk);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Cafetería%20Liadísimo%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Cafetería Liadísimo</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Cafetería%20Liadísimo%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Cafetería%20Liadísimo%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Cafetería Liadísimo y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-29T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+
+  if (tick()) {
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+</body>
+</html>
