@@ -1133,5 +1133,173 @@
 
 
 
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-START ✦ -->
+<style>
+  .id-lang {
+    position: fixed; bottom: 80px; left: 12px;
+    z-index: 9500;
+    display: inline-flex; gap: 4px;
+    padding: 4px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.08);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  }
+  .id-lang button {
+    width: 30px; height: 30px;
+    border: 0; border-radius: 999px;
+    background: transparent; cursor: pointer;
+    font-family: inherit; font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1a1410;
+    text-transform: uppercase;
+    transition: all .18s ease;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .id-lang button:hover { background: rgba(0,0,0,.07); }
+  .id-lang button[aria-pressed="true"] {
+    background: #1a1410; color: #fff;
+  }
+  @media (max-width: 640px) {
+    .id-lang { bottom: 70px; left: 8px; padding: 3px; gap: 2px; }
+    .id-lang button { width: 26px; height: 26px; font-size: 9.5px; }
+  }
+  /* No tapar al expirar */
+  body.id-locked .id-lang { display: none; }
+</style>
+
+<nav class="id-lang" id="id-lang" role="group" aria-label="Cambiar idioma">
+  <button data-lang="es" aria-pressed="false" title="Español">ES</button>
+  <button data-lang="ca" aria-pressed="false" title="Català">CA</button>
+  <button data-lang="en" aria-pressed="false" title="English">EN</button>
+  <button data-lang="fr" aria-pressed="false" title="Français">FR</button>
+  <button data-lang="it" aria-pressed="false" title="Italiano">IT</button>
+  <button data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
+</nav>
+
+<script>
+(function () {
+  // Diccionario UI crítica — fácil de mantener/extender
+  // Solo traduce CTAs comunes + textos del switcher; el copy long-form
+  // se mantiene en el idioma original de la landing (esto es honesto:
+  // la web real traducirá todo cuando el cliente contrate)
+  var DICT = {
+    es: {
+      reservar: "Reservar mesa", llamar: "Llamar", comoLlegar: "Cómo llegar",
+      ubicacion: "Dónde estamos", horarios: "Horarios", carta: "Carta",
+      reservas: "Reservas", contacto: "Contacto",
+      langNote: "Demo en castellano · web final 100% multilingüe"
+    },
+    ca: {
+      reservar: "Reservar taula", llamar: "Trucar", comoLlegar: "Com arribar",
+      ubicacion: "On som", horarios: "Horaris", carta: "Carta",
+      reservas: "Reserves", contacto: "Contacte",
+      langNote: "Demo en català · web final 100% multilingüe"
+    },
+    en: {
+      reservar: "Book a table", llamar: "Call us", comoLlegar: "Get directions",
+      ubicacion: "Find us", horarios: "Hours", carta: "Menu",
+      reservas: "Reservations", contacto: "Contact",
+      langNote: "Demo in EN preview · final site fully multilingual"
+    },
+    fr: {
+      reservar: "Réserver", llamar: "Appeler", comoLlegar: "Itinéraire",
+      ubicacion: "Nous trouver", horarios: "Horaires", carta: "Carte",
+      reservas: "Réservations", contacto: "Contact",
+      langNote: "Démo en FR · site final 100% multilingue"
+    },
+    it: {
+      reservar: "Prenota", llamar: "Chiamaci", comoLlegar: "Come arrivare",
+      ubicacion: "Dove siamo", horarios: "Orari", carta: "Menù",
+      reservas: "Prenotazioni", contacto: "Contatti",
+      langNote: "Demo in IT · sito finale 100% multilingue"
+    },
+    de: {
+      reservar: "Tisch buchen", llamar: "Anrufen", comoLlegar: "Wegbeschreibung",
+      ubicacion: "Hier finden Sie uns", horarios: "Öffnungszeiten", carta: "Karte",
+      reservas: "Reservierungen", contacto: "Kontakt",
+      langNote: "DE-Demo · finale Website 100% mehrsprachig"
+    }
+  };
+
+  var defaultLang = document.documentElement.lang || "es";
+  if (defaultLang.length > 2) defaultLang = defaultLang.slice(0, 2);
+
+  var buttons = document.querySelectorAll(".id-lang button");
+  buttons.forEach(function (btn) {
+    if (btn.dataset.lang === defaultLang) btn.setAttribute("aria-pressed", "true");
+    btn.addEventListener("click", function () {
+      var lang = btn.dataset.lang;
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      document.documentElement.lang = lang;
+
+      // Traduce textos críticos por heurística (busca textos comunes en español/catalán)
+      var d = DICT[lang];
+      var patterns = [
+        // CTAs / botones (texto suelto que coincida — case-insensitive)
+        { re: /(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)/gi, val: d.reservar },
+        { re: /(Llamar|Truca'ns|Trucar|Llámanos)/gi, val: d.llamar },
+        { re: /(Cómo llegar|Com arribar|Com hi arribem)/gi, val: d.comoLlegar },
+        // Section titles muy comunes
+        { re: /(Dónde estamos|On som|Visita|Visita'ns)/gi, val: d.ubicacion },
+        { re: /(Horarios|Horaris)/gi, val: d.horarios },
+        { re: /(Reservas|Reserves)/gi, val: d.reservas },
+        { re: /(Contacto|Contacte)/gi, val: d.contacto },
+      ];
+
+      // Solo cambia nodos de texto dentro de botones / encabezados nav, NO el body completo
+      var targets = document.querySelectorAll(
+        ".btn, .tel-btn, button:not(.id-lang button), " +
+        "nav a, .topbar a, .topbar button, " +
+        "[data-i18n], h2.section-title, h3.section-title"
+      );
+      targets.forEach(function (node) {
+        // No tocar el switcher mismo ni el countdown
+        if (node.closest(".id-lang") || node.closest(".id-countdown") || node.closest(".id-expired")) return;
+        // Solo nodos hoja con texto simple
+        if (node.children.length > 0 && node.children[0].tagName) {
+          // tiene hijos elemento — buscar solo el primer #text descendiente
+          var walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+          var txt;
+          while ((txt = walker.nextNode())) {
+            patterns.forEach(function (p) {
+              if (p.re.test(txt.nodeValue)) {
+                txt.nodeValue = txt.nodeValue.replace(p.re, p.val);
+              }
+            });
+          }
+        } else {
+          patterns.forEach(function (p) {
+            if (p.re.test(node.textContent)) {
+              node.textContent = node.textContent.replace(p.re, p.val);
+            }
+          });
+        }
+      });
+
+      // Tooltip honesta
+      var ln = document.getElementById("id-lang-note");
+      if (!ln) {
+        ln = document.createElement("div");
+        ln.id = "id-lang-note";
+        ln.style.cssText = "position:fixed;bottom:120px;left:12px;z-index:9499;background:rgba(26,20,16,.92);color:#fff;padding:10px 14px;border-radius:10px;font-family:-apple-system,Inter,sans-serif;font-size:11.5px;max-width:240px;line-height:1.4;animation:idLangFade .3s ease;box-shadow:0 4px 14px rgba(0,0,0,.18);";
+        document.body.appendChild(ln);
+        var style = document.createElement("style");
+        style.textContent = "@keyframes idLangFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}";
+        document.head.appendChild(style);
+      }
+      ln.textContent = d.langNote;
+      clearTimeout(window.__idLangTimer);
+      window.__idLangTimer = setTimeout(function () { if (ln) ln.remove(); }, 3500);
+    });
+  });
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-END ✦ -->
+
+
 </body>
 </html>
