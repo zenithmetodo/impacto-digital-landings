@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finorri — Cuina de territori i coctelería propia · Boqueria 23, Barcelona</title>
+<meta name="description" content="Finorri, bistro català al cor de la Boqueria. Cuina de territori, coctelería pròpia i ambient vintage parisí. Carrer de la Boqueria 23, Barcelona.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Finorri — Cuina de territori + coctelería pròpia · Boqueria 23">
+<meta property="og:description" content="Bistro català elegant amb guinyo parisí. Coctelería pròpia. Boqueria 23, Barcelona.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="ca_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Italianno&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --burdeos:#6b1d2a;
+    --burdeos-dk:#4a121d;
+    --burdeos-soft:#8a3140;
+    --crema:#f4ecd8;
+    --crema-dk:#e6dbc0;
+    --marfil:#fbf6e9;
+    --or:#b8893a;
+    --or-clar:#d4a857;
+    --oliva:#586239;
+    --negre:#1a0e0f;
+    --negre-soft:#3a2628;
+    --line:#d4c9aa;
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Playfair Display', Georgia, serif;
+    background:var(--crema);
+    color:var(--negre);
+    line-height:1.65;
+    font-size:18px;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;
+    max-width:1140px;
+    margin:0 auto;
+    padding-left:var(--side-padding);
+    padding-right:var(--side-padding);
+    position:relative;
+  }
+  .script{font-family:'Italianno', cursive;font-weight:400}
+  .kicker{
+    font-family:'Inter', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.32em;
+    font-size:11px;
+    color:var(--burdeos);
+    font-weight:600;
+  }
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(244,236,216,0.94);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:16px;padding-bottom:16px;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-medall{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--burdeos);color:var(--crema);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display', serif;font-weight:700;font-size:22px;
+    border:2px solid var(--or);
+    box-shadow:inset 0 0 0 1px var(--burdeos);
+  }
+  .brand-name{
+    font-family:'Playfair Display', serif;
+    font-size:24px;color:var(--burdeos);letter-spacing:0.04em;font-weight:600;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:11px 18px;border:1px solid var(--burdeos);
+    font-family:'Inter', sans-serif;font-size:12px;font-weight:600;
+    color:var(--burdeos);text-transform:uppercase;letter-spacing:0.14em;
+    transition:all 0.25s;
+  }
+  .tel-btn:hover{background:var(--burdeos);color:var(--crema)}
+
+  /* HERO amb medalló F */
+  .hero{padding:80px 0 100px;position:relative;background:var(--crema)}
+  .hero::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+    background:linear-gradient(90deg,transparent,var(--or),transparent);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+  }
+  @media (min-width:900px){
+    .hero-grid{grid-template-columns:1.05fr 0.95fr;gap:72px}
+  }
+  .hero-text{position:relative}
+  .hero-medall{
+    width:96px;height:96px;border-radius:50%;
+    background:var(--burdeos);color:var(--marfil);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display', serif;font-weight:700;font-size:54px;
+    border:3px solid var(--or);
+    box-shadow:0 0 0 1px var(--burdeos), 0 10px 30px rgba(107,29,42,0.25);
+    margin-bottom:24px;
+    position:relative;
+  }
+  .hero-medall::after{
+    content:"BOQUERIA · 23";position:absolute;bottom:-22px;left:50%;
+    transform:translateX(-50%);
+    font-family:'Inter', sans-serif;font-size:9px;letter-spacing:0.22em;
+    color:var(--burdeos);font-weight:600;white-space:nowrap;
+  }
+  .hero h1{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    font-size:clamp(2.4rem, 6vw, 5.5rem);
+    line-height:1.02;letter-spacing:-0.015em;color:var(--negre);
+    margin:48px 0 20px;
+  }
+  .hero h1 em{font-family:'Italianno', cursive;font-style:normal;color:var(--burdeos);font-weight:400;font-size:1.15em;line-height:0.9}
+  .hero-lede{
+    font-family:'Playfair Display', serif;
+    font-size:19px;color:var(--negre-soft);margin:24px 0 36px;max-width:480px;
+    line-height:1.55;font-style:italic;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;
+    font-family:'Inter', sans-serif;font-weight:600;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:0.14em;
+    transition:all 0.25s;border:1.5px solid transparent;min-height:44px;
+  }
+  .btn-primary{background:var(--burdeos);color:var(--marfil)}
+  .btn-primary:hover{background:var(--burdeos-dk);transform:translateY(-1px)}
+  .btn-secondary{border-color:var(--negre);color:var(--negre)}
+  .btn-secondary:hover{background:var(--negre);color:var(--crema)}
+  .btn-ghost{border-color:var(--negre-soft);color:var(--negre-soft)}
+  .btn-ghost:hover{border-color:var(--burdeos);background:rgba(107,29,42,0.06);color:var(--burdeos)}
+
+  /* Placeholder photo amb marc vintage */
+  .placeholder-photo{
+    width:100%;aspect-ratio:4/5;
+    background:linear-gradient(160deg, var(--crema-dk) 0%, var(--marfil) 60%, var(--crema-dk) 100%);
+    border:1px solid var(--line);
+    position:relative;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:16px;
+    color:var(--negre-soft);text-align:center;padding:24px;
+  }
+  .placeholder-photo::before{
+    content:"";position:absolute;top:14px;left:14px;right:14px;bottom:14px;
+    border:1px solid var(--or);
+    pointer-events:none;
+  }
+  .placeholder-photo::after{
+    content:"";position:absolute;top:22px;left:22px;right:22px;bottom:22px;
+    border:1px dashed var(--line);
+    pointer-events:none;
+  }
+  .placeholder-photo .ph-icon{font-family:'Italianno', cursive;font-size:90px;color:var(--burdeos);line-height:0.8}
+  .placeholder-photo .ph-text{
+    font-family:'Inter', sans-serif;font-size:11px;
+    text-transform:uppercase;letter-spacing:0.22em;font-weight:600;max-width:230px;
+  }
+  .placeholder-photo .ph-sub{
+    font-family:'Playfair Display', serif;font-style:italic;font-size:14px;
+    color:var(--negre);max-width:240px;
+  }
+
+  /* SECCIONS */
+  section{padding:90px 0;position:relative}
+  @media (min-width:768px){section{padding:120px 0}}
+  .section-head{margin-bottom:56px;max-width:720px}
+  .section-head h2{
+    font-family:'Playfair Display', serif;font-weight:600;
+    font-size:clamp(2rem, 4vw, 3.4rem);
+    margin-top:16px;color:var(--negre);line-height:1.05;
+  }
+  .section-head h2 em{font-family:'Italianno', cursive;font-style:normal;color:var(--burdeos);font-weight:400;font-size:1.2em;line-height:0.85}
+
+  /* COCTELERIA — secció única */
+  .coctel{background:var(--burdeos);color:var(--marfil);position:relative;overflow:hidden}
+  .coctel::before{
+    content:"";position:absolute;inset:18px;border:1px solid rgba(212,168,87,0.35);
+    pointer-events:none;
+  }
+  .coctel .kicker{color:var(--or-clar)}
+  .coctel h2{color:var(--marfil)}
+  .coctel h2 em{color:var(--or-clar)}
+  .coctel-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;
+  }
+  @media (min-width:820px){
+    .coctel-grid{grid-template-columns:repeat(3,1fr);gap:0}
+  }
+  .coctel-card{
+    padding:32px 28px;background:transparent;
+    border-top:1px solid rgba(212,168,87,0.35);
+  }
+  @media (min-width:820px){
+    .coctel-card{border-top:0;border-left:1px solid rgba(212,168,87,0.35);padding:24px 28px}
+    .coctel-card:first-child{border-left:0;padding-left:0}
+    .coctel-card:last-child{padding-right:0}
+  }
+  .coctel-num{
+    font-family:'Italianno', cursive;font-size:64px;color:var(--or-clar);
+    line-height:0.9;margin-bottom:14px;
+  }
+  .coctel-card h3{
+    font-family:'Playfair Display', serif;font-weight:500;font-size:1.5rem;
+    color:var(--marfil);margin-bottom:12px;line-height:1.25;
+  }
+  .coctel-card h3 em{font-style:italic;color:var(--or-clar)}
+  .coctel-card p{color:rgba(244,236,216,0.78);font-size:16px;line-height:1.7}
+  .coctel-card .price{
+    display:inline-block;margin-top:14px;
+    font-family:'Inter', sans-serif;font-size:12px;letter-spacing:0.18em;
+    color:var(--or-clar);font-weight:600;
+    border-top:1px solid rgba(212,168,87,0.35);padding-top:8px;
+  }
+
+  /* CARTA DE TERRITORI */
+  .carta{background:var(--marfil)}
+  .carta-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;align-items:start;
+  }
+  @media (min-width:900px){
+    .carta-grid{grid-template-columns:0.95fr 1fr;gap:72px}
+  }
+  .carta-block{margin-bottom:36px}
+  .carta-block-title{
+    font-family:'Inter', sans-serif;font-size:12px;font-weight:700;
+    color:var(--burdeos);text-transform:uppercase;letter-spacing:0.2em;
+    padding-bottom:8px;border-bottom:2px solid var(--burdeos);
+    margin-bottom:16px;display:inline-block;
+  }
+  .carta-list{list-style:none;padding:0;margin:0}
+  .carta-item{
+    display:flex;align-items:baseline;gap:18px;padding:14px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .carta-item-name{
+    font-family:'Playfair Display', serif;font-size:1.2rem;color:var(--negre);
+    flex:1;line-height:1.3;font-weight:500;
+  }
+  .carta-item-desc{
+    font-size:14px;color:var(--negre-soft);font-style:italic;display:block;
+    margin-top:4px;
+  }
+  .carta-dots{flex:1;border-bottom:1.5px dotted var(--line);margin:0 8px;align-self:end;margin-bottom:8px}
+  .carta-price{
+    font-family:'Inter', sans-serif;font-size:14px;font-weight:600;
+    color:var(--burdeos);
+  }
+  .carta-note{
+    margin-top:32px;padding:20px;background:var(--crema-dk);
+    border-left:3px solid var(--or);
+    font-family:'Playfair Display', serif;
+    font-style:italic;color:var(--negre-soft);font-size:15.5px;line-height:1.6;
+  }
+
+  /* GALERIA */
+  .galeria{background:var(--crema)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:clamp(16px,2.5vw,24px);
+    align-items:flex-start;
+  }
+  .gal-figure{
+    flex:0 0 calc(50% - clamp(8px,1.25vw,12px));
+    max-width:calc(50% - clamp(8px,1.25vw,12px));
+    background:var(--marfil);border:1px solid var(--line);
+  }
+  @media (max-width:640px){
+    .gal-figure{flex:0 0 100%;max-width:100%}
+  }
+  .gal-figure .placeholder-photo{aspect-ratio:4/3}
+  .gal-figure figcaption{
+    padding:16px 20px;font-family:'Inter', sans-serif;
+    font-size:11px;text-transform:uppercase;letter-spacing:0.16em;
+    color:var(--negre-soft);font-weight:500;
+  }
+  .gal-figure figcaption strong{color:var(--burdeos);font-weight:700}
+
+  /* VISITA */
+  .visita{background:var(--marfil)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:40px;margin-top:48px;
+  }
+  @media (min-width:880px){
+    .visit-grid{grid-template-columns:1fr 1fr;gap:56px}
+  }
+  .visit-info dl{display:grid;grid-template-columns:1fr;gap:24px}
+  .visit-info .row{border-top:1px solid var(--line);padding-top:20px}
+  .visit-info .row:last-child{border-bottom:1px solid var(--line);padding-bottom:20px}
+  .visit-info .label{
+    font-family:'Inter', sans-serif;font-size:11px;font-weight:600;
+    letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--burdeos);margin-bottom:12px;
+  }
+  .visit-info .value{font-size:17px;color:var(--negre);line-height:1.55}
+  .visit-info .value a{color:var(--negre);border-bottom:1px solid var(--line);transition:color .3s,border-color .3s}
+  .visit-info .value a:hover{color:var(--burdeos);border-color:var(--burdeos)}
+  .visit-info .city{color:var(--negre-soft);font-size:14.5px}
+  .hours-list{display:grid;gap:8px;list-style:none;padding:0;margin:0}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:15px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--negre-soft);text-transform:capitalize}
+  .hours-list .time{color:var(--negre);font-variant-numeric:tabular-nums;font-family:'Inter', sans-serif;font-size:13px}
+  .hours-list li.now{
+    background:rgba(107,29,42,0.08);
+    padding:8px 12px;margin:0 -12px;
+  }
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--burdeos);font-weight:600}
+  .hours-list li.now .day::before{
+    content:"●";color:var(--burdeos);font-size:9px;margin-right:8px;
+    animation:pulse-dot 1.6s ease-in-out infinite;display:inline-block;
+  }
+  .hours-list li.closed .time{color:rgba(58,38,40,0.4);font-style:italic}
+  @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.3}}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    border:1px solid var(--line);background:var(--marfil);
+  }
+  .map-wrap iframe{
+    width:100%;height:100%;border:0;
+    filter:saturate(0.85) brightness(0.97);
+  }
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:rgba(251,246,233,0.94);
+    border:1px solid var(--burdeos);color:var(--burdeos);
+    padding:12px 18px;font-family:'Inter', sans-serif;
+    font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;
+    backdrop-filter:blur(8px);
+    transition:all .3s;min-height:44px;display:inline-flex;align-items:center;
+  }
+  .map-cta:hover{background:var(--burdeos);color:var(--marfil)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--crema)}
+  .faq-list{margin-top:40px;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;
+    padding:24px 0;
+    font-family:'Playfair Display', serif;font-size:1.3rem;color:var(--negre);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    font-weight:500;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Inter', sans-serif;font-size:24px;
+    color:var(--burdeos);transition:transform .3s;flex-shrink:0;font-weight:300;
+  }
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item p{padding:0 0 26px;color:var(--negre-soft);font-size:16.5px;line-height:1.7;max-width:720px}
+
+  /* FOOTER */
+  footer{
+    background:var(--burdeos-dk);color:rgba(244,236,216,0.7);
+    padding:56px 0 36px;position:relative;
+  }
+  footer::before{
+    content:"";position:absolute;left:0;right:0;top:0;height:2px;
+    background:linear-gradient(90deg,transparent,var(--or),transparent);
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:32px;
+  }
+  @media (min-width:720px){
+    .foot-grid{grid-template-columns:1.2fr 1fr 1fr}
+  }
+  .foot-col h4{
+    font-family:'Inter', sans-serif;font-size:11px;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.22em;
+    color:var(--or-clar);margin-bottom:16px;
+  }
+  .foot-col p, .foot-col a{font-size:14.5px;line-height:1.7;color:rgba(244,236,216,0.7);display:block}
+  .foot-col a:hover{color:var(--or-clar)}
+  .foot-col strong{color:var(--marfil);font-weight:600}
+  .foot-script{
+    font-family:'Italianno', cursive;font-size:48px;color:var(--or-clar);
+    margin-bottom:10px;line-height:0.9;
+  }
+  .foot-bottom{
+    border-top:1px solid rgba(212,168,87,0.18);padding-top:24px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
+    font-family:'Inter', sans-serif;font-size:11px;letter-spacing:0.16em;
+    text-transform:uppercase;color:rgba(244,236,216,0.5);
+  }
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:1px solid var(--line);padding:0;background:var(--marfil);
+    max-width:480px;width:92%;box-shadow:0 30px 80px rgba(0,0,0,0.4);
+    color:var(--negre);
+  }
+  dialog::backdrop{background:rgba(26,14,15,0.65);backdrop-filter:blur(4px)}
+  .dlg-head{padding:28px 28px 0;border-top:4px solid var(--burdeos)}
+  .dlg-head .kicker{margin-bottom:10px}
+  .dlg-head h3{font-family:'Playfair Display', serif;font-weight:600;font-size:1.7rem;color:var(--negre);line-height:1.15}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:14.5px;color:var(--negre-soft);margin-bottom:18px;line-height:1.55}
+  .dlg-form{display:grid;gap:14px}
+  .dlg-form label{font-family:'Inter', sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--burdeos);display:block;margin-bottom:4px;font-weight:600}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--crema);
+    font-family:'Playfair Display', serif;font-size:16px;color:var(--negre);
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--burdeos)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-actions .btn{padding:12px 20px}
+  .dlg-close{
+    background:none;border:0;color:var(--negre-soft);
+    font-family:'Inter', sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;
+  }
+  .dlg-close:hover{color:var(--burdeos)}
+  .dlg-ok{display:none;text-align:center;padding:36px 24px}
+  .dlg-ok h4{font-family:'Playfair Display', serif;font-weight:500;font-size:1.6rem;color:var(--negre);margin-bottom:10px}
+  .dlg-ok p{color:var(--negre-soft);font-size:14.5px}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  /* Modal centrat defensiu */
+  dialog[open], .reserva-dialog[open]{
+    position:fixed !important;
+    inset:0 !important;
+    margin:auto !important;
+    transform:none !important;
+    max-height:calc(100% - 2rem) !important;
+    box-sizing:border-box !important;
+  }
+  dialog[open]::backdrop{background:rgba(0,0,0,0.55)}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  html, body{overflow-x:clip;max-width:100%}
+  img, video, picture, iframe{max-width:100%}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-medall">F</span>
+      <span class="brand-name">Finorri</span>
+    </a>
+    <a href="tel:+34937374011" class="tel-btn">
+      <span>937 37 40 11</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <div class="hero-medall">F</div>
+        <span class="kicker" style="display:inline-block;margin-top:8px">Bistro català · coctelería pròpia · Boqueria</span>
+        <h1>Cuina de territori<br>amb <em>guinyo</em><br>parisí.</h1>
+        <p class="hero-lede">Un bistro que se sent com una taula de Lió i un celler de l'Empordà a parts iguals. Cuinem el que el mercat ens porta i barregem còctels que no veureu enlloc més de la Boqueria. Sense pressa.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar taula</button>
+          <a href="tel:+34937374011" class="btn btn-secondary">Trucar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+la+Boqueria+23+08002+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Com arribar</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">F</span>
+          <span class="ph-text">Foto de la sala · substituir abans del pitch</span>
+          <span class="ph-sub">Sala interior amb miralls vintage, barra de coctelería i taules amb estovalles blanques</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="coctel">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Coctelería pròpia · barra de Finorri</span>
+      <h2>Tres còctels que <em>només</em><br>trobaràs aquí.</h2>
+    </div>
+    <div class="coctel-grid">
+      <article class="coctel-card reveal">
+        <div class="coctel-num">I</div>
+        <h3>Negroni <em>Boqueria</em></h3>
+        <p>Bitter català fet a casa amb pell de taronja sanguina del mercat, vermut de Reus i ginebra empordanesa. El nostre saludo a Florència, signat des del Raval.</p>
+        <span class="price">14 €</span>
+      </article>
+      <article class="coctel-card reveal">
+        <div class="coctel-num">II</div>
+        <h3>Martini <em>de finestral</em></h3>
+        <p>Ginebra macerada amb herbes del Montseny i vermut blanc reposat. Es serveix amb una oliva farcida amb anxova de l'Escala. Sec, lluminós, parisí.</p>
+        <span class="price">12 €</span>
+      </article>
+      <article class="coctel-card reveal">
+        <div class="coctel-num">III</div>
+        <h3>Sour de <em>codony</em></h3>
+        <p>Whisky escocès, codony rostit al forn, llimona i una mica de mel del Bages. Tardor en un got, encara que sigui maig. Per a qui ja n'ha tastat de tots.</p>
+        <span class="price">13 €</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="carta">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Carta breu · de mercat</span>
+      <h2>El que avui<br>val la <em>pena</em>.</h2>
+    </div>
+    <div class="carta-grid">
+      <div class="reveal">
+        <div class="placeholder-photo" style="aspect-ratio:3/4">
+          <span class="ph-icon">F</span>
+          <span class="ph-text">Foto del plat · substituir abans del pitch</span>
+          <span class="ph-sub">Tàrtar de tonyina amb pa de pagès torrat i alvocat</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="carta-block">
+          <span class="carta-block-title">Per començar</span>
+          <ul class="carta-list">
+            <li class="carta-item">
+              <div class="carta-item-name">Tàrtar de tonyina<span class="carta-item-desc">Amb mostassa antiga, alvocat i pa de pagès torrat</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">17,50 €</span>
+            </li>
+            <li class="carta-item">
+              <div class="carta-item-name">Croquetes de pollastre rostit<span class="carta-item-desc">Beixamel feta com a casa, sis unitats</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">11,00 €</span>
+            </li>
+            <li class="carta-item">
+              <div class="carta-item-name">Burrata amb tomàquet de col·lecció<span class="carta-item-desc">Amb albahaca i oli d'Arbequina del Priorat</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">14,50 €</span>
+            </li>
+          </ul>
+        </div>
+        <div class="carta-block">
+          <span class="carta-block-title">Plats de territori</span>
+          <ul class="carta-list">
+            <li class="carta-item">
+              <div class="carta-item-name">Suquet de peix del dia<span class="carta-item-desc">El que ens han portat aquest matí de la llotja</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">22,00 €</span>
+            </li>
+            <li class="carta-item">
+              <div class="carta-item-name">Magret de pato amb cireres<span class="carta-item-desc">Reducció de vi negre i puré de moniato</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">24,50 €</span>
+            </li>
+            <li class="carta-item">
+              <div class="carta-item-name">Risotto de bolets del Berguedà<span class="carta-item-desc">Amb parmesà reggiano i oli de tòfona</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">19,00 €</span>
+            </li>
+          </ul>
+        </div>
+        <div class="carta-block">
+          <span class="carta-block-title">Per acabar</span>
+          <ul class="carta-list">
+            <li class="carta-item">
+              <div class="carta-item-name">Crema catalana amb crocant d'avellana<span class="carta-item-desc">Cremada al moment a taula</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">8,00 €</span>
+            </li>
+            <li class="carta-item">
+              <div class="carta-item-name">Tarta de poma del padrí<span class="carta-item-desc">Amb gelat de vainilla artesà</span></div>
+              <span class="carta-dots"></span>
+              <span class="carta-price">8,50 €</span>
+            </li>
+          </ul>
+        </div>
+        <p class="carta-note">Els preus poden moure's una mica segons el que el mercat ens porta. Si vols saber el plat del dia abans de venir, truca'ns i te'l contem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">La sala · els plats · la barra</span>
+      <h2>Com és <em>això</em><br>per dins.</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">F</span>
+          <span class="ph-text">Foto del local · substituir abans del pitch</span>
+          <span class="ph-sub">Façana de Finorri al carrer Boqueria amb tendal i finestrals</span>
+        </div>
+        <figcaption><strong>La façana ·</strong> Boqueria 23, just al cor del Raval</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">F</span>
+          <span class="ph-text">Foto de la barra · substituir abans del pitch</span>
+          <span class="ph-sub">Barra de coctelería amb ampolles vintage i miralls de cristall</span>
+        </div>
+        <figcaption><strong>La barra ·</strong> Coctelería pròpia obrint cada nit</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">F</span>
+          <span class="ph-text">Foto del plat · substituir abans del pitch</span>
+          <span class="ph-sub">Suquet de peix amb pa torrat i alioli suau</span>
+        </div>
+        <figcaption><strong>Suquet del dia ·</strong> El que arriba de la llotja</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">F</span>
+          <span class="ph-text">Foto del còctel · substituir abans del pitch</span>
+          <span class="ph-sub">Negroni Boqueria amb pell de taronja sanguina i pedra de gel tallada</span>
+        </div>
+        <figcaption><strong>Negroni Boqueria ·</strong> Bitter català fet a casa</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Com trobar-nos</span>
+      <h2>Boqueria, <em>23</em>.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Adreça</div>
+            <div class="value">
+              Carrer de la Boqueria, 23<br>
+              <span class="city">08002 Barcelona · Raval / Gòtic</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horaris</div>
+            <ul class="hours-list">
+              <li class="closed"><span class="day">Dilluns</span><span class="time">Tancat</span></li>
+              <li><span class="day">Dimarts</span><span class="time">13:00 – 16:00 · 19:30 – 23:30</span></li>
+              <li><span class="day">Dimecres</span><span class="time">13:00 – 16:00 · 19:30 – 23:30</span></li>
+              <li><span class="day">Dijous</span><span class="time">13:00 – 16:00 · 19:30 – 23:30</span></li>
+              <li><span class="day">Divendres</span><span class="time">13:00 – 16:00 · 19:30 – 00:00</span></li>
+              <li><span class="day">Dissabte</span><span class="time">13:00 – 16:00 · 19:30 – 00:00</span></li>
+              <li><span class="day">Diumenge</span><span class="time">13:00 – 16:00</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacte</div>
+            <div class="value">
+              <div><a href="tel:+34937374011">+34 937 37 40 11</a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Com arribar</div>
+            <div class="value">
+              Metro <strong>Liceu</strong> (L3) — 2 min caminant<br>
+              <span class="city">Mercat de la Boqueria a 50 m · Bus 59, 91, V13</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+de+la+Boqueria+23+08002+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Finorri">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+la+Boqueria+23+08002+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Com arribar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Preguntes freqüents</span>
+      <h2>El que ens<br>pregunteu <em>abans</em><br>de venir.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Heu de reservar?</summary>
+        <p>Per a sopars de dijous a dissabte sí que recomanem reservar: tenim una sala petita i intima i s'omple. Per a dinars entre setmana solem tenir taula, però una trucada de cinc minuts ens estalvia el viatge en va. Truqueu al 937 37 40 11 i us l'apuntem amb gust.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puc venir només a prendre una copa?</summary>
+        <p>I tant. Tenim la barra de coctelería oberta cada nit a partir de les 19:30. Tres tamborets per als clients que només volen un còctel i un platillo. No cal reservar per la barra però si veniu en grup, val la pena avisar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quin preu té un sopar a Finorri?</summary>
+        <p>Un sopar tranquil per a dos amb un per començar, un plat principal cadascú, una copa de vi i postres surt al voltant dels 50-60 € per persona. Si afegiu un còctel de la nostra carta abans, calculeu uns 12-14 € més. No tenim menú degustació fixe però sí carta tancada per a grups.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Teniu opcions vegetarianes?</summary>
+        <p>Sí, tenim sempre tres o quatre plats vegetarians a la carta i un parell de vegans. El risotto de bolets, la burrata, la sopa del dia i alguna verdura rostida segons temporada. Si teniu intolerància o al·lèrgia, aviseu al reservar i ho organitzem sense problema.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Accepteu targeta?</summary>
+        <p>Sí, acceptem targeta, Bizum i efectiu sense cap problema. També podem fer factura per a empresa: només cal demanar-la al cambrer en demanar el compte i us l'emetem al moment.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-script">Finorri</div>
+        <p><strong>Finorri</strong><br>Bistro català + coctelería pròpia<br>Al cor de la Boqueria</p>
+      </div>
+      <div class="foot-col">
+        <h4>Visiteu-nos</h4>
+        <p>Carrer de la Boqueria, 23<br>08002 Barcelona</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+la+Boqueria+23+08002+Barcelona" target="_blank" rel="noopener">Com arribar →</a>
+      </div>
+      <div class="foot-col">
+        <h4>Reserves</h4>
+        <a href="tel:+34937374011"><strong>+34 937 37 40 11</strong></a>
+        <p style="margin-top:8px">Dimarts a diumenge<br>Migdia i nit</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Finorri · Boqueria 23, Barcelona</span>
+      <span>Cuina de territori · Coctelería pròpia</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">Reservar a Finorri</span>
+    <h3>Digues-nos quan i per a quants.</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Us confirmem per telèfon en pocs minuts. Si és per avui o demà, millor truqueu directament al 937 37 40 11.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nom</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Telèfon</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-pax">Persones</label>
+          <select id="r-pax" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7-8</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-fecha">Data</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+        <div>
+          <label for="r-hora">Hora</label>
+          <input type="time" id="r-hora" required>
+        </div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancel·lar</button>
+        <button type="submit" class="btn btn-primary">Enviar petició</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>Rebuda!</h4>
+    <p>Us truquem aviat per confirmar.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Tancar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Finorri",
+  "description":"Bistro català al cor de la Boqueria. Cuina de territori, coctelería pròpia i ambient vintage parisí. Carrer de la Boqueria 23, Barcelona.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Carrer de la Boqueria, 23",
+    "addressLocality":"Barcelona",
+    "postalCode":"08002",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34937374011",
+  "servesCuisine":["Catalan","Mediterranean","Cocktails"],
+  "priceRange":"€€€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"13:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"19:30","closes":"23:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"13:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"19:30","closes":"00:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"13:00","closes":"16:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Cal reservar taula a Finorri?","acceptedAnswer":{"@type":"Answer","text":"Per a sopars de dijous a dissabte recomanem reservar perquè la sala és petita i s'omple. Per a dinars entre setmana solem tenir taula lliure, però una trucada al 937 37 40 11 ens permet organitzar millor el servei i us estalvia el viatge en va."}},
+    {"@type":"Question","name":"Puc venir només a la barra de coctelería?","acceptedAnswer":{"@type":"Answer","text":"Sí, la barra de coctelería està oberta cada nit a partir de les 19:30 amb tres tamborets per a clients que només volen una copa i un platillo. No cal reservar per la barra però si veniu en grup val la pena avisar abans."}},
+    {"@type":"Question","name":"Quant costa un sopar a Finorri?","acceptedAnswer":{"@type":"Answer","text":"Un sopar tranquil per a dos amb un entrant, un plat principal cadascú, una copa de vi i postres ronda els 50-60 € per persona. Si afegiu un còctel de la carta calculeu uns 12-14 € més. No tenim menú degustació fix però sí carta tancada per a grups."}},
+    {"@type":"Question","name":"Teniu opcions vegetarianes o veganes?","acceptedAnswer":{"@type":"Answer","text":"Sí, tenim sempre tres o quatre plats vegetarians a la carta i un parell de vegans, com el risotto de bolets, la burrata o verdures rostides de temporada. Si teniu intolerància o al·lèrgia, aviseu al reservar i us preparem el menú adaptat sense problema."}},
+    {"@type":"Question","name":"Accepteu targeta o només efectiu?","acceptedAnswer":{"@type":"Answer","text":"Acceptem targeta, Bizum i efectiu sense problema. També emetem factura per a empresa: només cal demanar-la al cambrer en demanar el compte i us l'enviem al moment per correu electrònic."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta { opacity: .85; font-size: 13px; }
+  .id-countdown__cta strong { color: var(--id-accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase; letter-spacing: 0.28em;
+    font-size: 12px; color: var(--id-cream-dk);
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px); line-height: 0.9;
+    margin: 0 0 24px; font-weight: 900;
+    letter-spacing: -0.04em; color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px); line-height: 1.55;
+    margin: 0 auto 36px; max-width: 520px; color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 999px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa); color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent; color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px; color: var(--id-cream-dk);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin: 0; font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Finorri%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Finorri</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Finorri%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Finorri%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Finorri y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-29T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+  if (tick()) { setInterval(tick, 1000); }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+</body>
+</html>

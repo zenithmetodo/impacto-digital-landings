@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryushio 流 — Omakase japonés en Santaló · Sant Gervasi, Barcelona</title>
+<meta name="description" content="Ryushio Omakase, restaurante japonés moderno en Sant Gervasi. Barra abierta a la carta y barra privada con omakase del día. Carrer de Santaló 88, Barcelona.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Ryushio 流 — Omakase japonés moderno · Santaló 88">
+<meta property="og:description" content="Barra abierta a la carta. Barra privada omakase. Santaló 88, Sant Gervasi.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --grafito:#1c1d20;
+    --grafito-dk:#0e0f11;
+    --grafito-mid:#2a2c30;
+    --plata:#9a9da3;
+    --plata-clara:#c7cad0;
+    --crema:#f0ece4;
+    --crema-soft:#e7e2d6;
+    --sumi:#ff3b30;
+    --sumi-dk:#c52e25;
+    --cobre:#b46d3b;
+    --line:rgba(154,157,163,0.22);
+    --line-dk:rgba(28,29,32,0.12);
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--grafito);
+    color:var(--crema);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
+    font-weight:400;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding-left:var(--side-padding);
+    padding-right:var(--side-padding);
+    position:relative;
+  }
+  .jp{font-family:'Noto Serif JP', serif;font-weight:600}
+  .serif{font-family:'Cormorant Garamond', serif}
+  .kicker{
+    font-family:'Inter', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.38em;
+    font-size:10.5px;
+    color:var(--plata);
+    font-weight:500;
+  }
+  .kicker em{color:var(--sumi);font-style:normal;font-family:'Noto Serif JP', serif;margin-right:4px}
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(14,15,17,0.92);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:18px;padding-bottom:18px;gap:16px;
+  }
+  .brand{display:flex;align-items:baseline;gap:14px}
+  .brand-jp{
+    font-family:'Noto Serif JP', serif;
+    font-size:26px;color:var(--sumi);font-weight:700;letter-spacing:0.02em;
+  }
+  .brand-name{
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;color:var(--crema);letter-spacing:0.18em;font-weight:500;
+    text-transform:uppercase;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:11px 18px;border:1px solid var(--plata);
+    font-family:'Inter', sans-serif;font-size:11px;font-weight:500;
+    color:var(--crema);text-transform:uppercase;letter-spacing:0.18em;
+    transition:all 0.25s;
+  }
+  .tel-btn:hover{background:var(--crema);color:var(--grafito);border-color:var(--crema)}
+
+  /* HERO minimal */
+  .hero{padding:90px 0 100px;position:relative;background:var(--grafito)}
+  .hero::before{
+    content:"流";position:absolute;top:50%;right:-4%;transform:translateY(-50%);
+    font-family:'Noto Serif JP', serif;font-size:clamp(280px,42vw,560px);
+    color:rgba(255,59,48,0.04);font-weight:700;line-height:0.8;pointer-events:none;
+    user-select:none;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+    position:relative;z-index:1;
+  }
+  @media (min-width:900px){
+    .hero-grid{grid-template-columns:1.1fr 0.9fr;gap:80px}
+  }
+  .hero-jp-mark{
+    font-family:'Noto Serif JP', serif;font-size:120px;color:var(--sumi);
+    line-height:0.85;font-weight:700;margin-bottom:12px;letter-spacing:-0.04em;
+  }
+  .hero h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:400;
+    font-size:clamp(2.4rem, 6vw, 5.5rem);
+    line-height:1.02;letter-spacing:-0.015em;color:var(--crema);
+    margin:24px 0 24px;
+  }
+  .hero h1 em{font-style:italic;color:var(--plata-clara);font-weight:400}
+  .hero-lede{
+    font-size:17px;color:var(--plata-clara);margin:24px 0 36px;max-width:480px;
+    line-height:1.7;font-weight:300;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;
+    font-family:'Inter', sans-serif;font-weight:500;font-size:11.5px;
+    text-transform:uppercase;letter-spacing:0.2em;
+    transition:all 0.25s;border:1px solid transparent;min-height:44px;
+  }
+  .btn-primary{background:var(--sumi);color:var(--crema)}
+  .btn-primary:hover{background:var(--sumi-dk);transform:translateY(-1px)}
+  .btn-secondary{border-color:var(--crema);color:var(--crema)}
+  .btn-secondary:hover{background:var(--crema);color:var(--grafito)}
+  .btn-ghost{border-color:var(--plata);color:var(--plata)}
+  .btn-ghost:hover{border-color:var(--crema);color:var(--crema)}
+
+  /* Placeholder photo */
+  .placeholder-photo{
+    width:100%;aspect-ratio:4/5;
+    background:linear-gradient(160deg, var(--grafito-mid) 0%, var(--grafito-dk) 60%, var(--grafito-mid) 100%);
+    border:1px solid var(--line);
+    position:relative;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:16px;
+    color:var(--plata);text-align:center;padding:24px;
+  }
+  .placeholder-photo::before{
+    content:"";position:absolute;top:18px;left:18px;right:18px;bottom:18px;
+    border:1px dashed var(--line);
+    pointer-events:none;
+  }
+  .placeholder-photo .ph-icon{font-family:'Noto Serif JP', serif;font-size:84px;color:var(--cobre);line-height:1;font-weight:700}
+  .placeholder-photo .ph-text{
+    font-family:'Inter', sans-serif;font-size:10.5px;
+    text-transform:uppercase;letter-spacing:0.28em;font-weight:500;max-width:230px;
+  }
+  .placeholder-photo .ph-sub{
+    font-family:'Cormorant Garamond', serif;font-style:italic;font-size:15px;
+    color:var(--plata-clara);max-width:240px;
+  }
+
+  /* SECCIONES */
+  section{padding:100px 0;position:relative}
+  @media (min-width:768px){section{padding:130px 0}}
+  .section-head{margin-bottom:60px;max-width:760px}
+  .section-head h2{
+    font-family:'Cormorant Garamond', serif;font-weight:400;
+    font-size:clamp(2rem, 4vw, 3.4rem);
+    margin-top:18px;color:var(--crema);line-height:1.05;letter-spacing:-0.01em;
+  }
+  .section-head h2 em{font-style:italic;color:var(--plata-clara)}
+
+  /* OMAKASE — dos cards diferenciadas (estructura única) */
+  .omakase{background:var(--grafito-dk);position:relative}
+  .omakase-grid{
+    display:grid;grid-template-columns:1fr;gap:24px;
+  }
+  @media (min-width:820px){
+    .omakase-grid{grid-template-columns:1fr 1fr;gap:28px}
+  }
+  .om-card{
+    padding:40px 32px;
+    border:1px solid var(--line);
+    background:var(--grafito);
+    position:relative;display:flex;flex-direction:column;gap:18px;
+    transition:border-color .3s,background .3s;
+  }
+  .om-card:hover{border-color:var(--plata);background:var(--grafito-mid)}
+  .om-card.featured{background:linear-gradient(180deg,var(--grafito-mid),var(--grafito-dk));border-color:var(--sumi)}
+  .om-card-num{
+    font-family:'Noto Serif JP', serif;font-size:40px;color:var(--sumi);
+    line-height:0.9;font-weight:700;
+  }
+  .om-card h3{
+    font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.85rem;
+    color:var(--crema);line-height:1.15;
+  }
+  .om-card h3 em{font-style:italic;color:var(--plata-clara)}
+  .om-card .om-tag{
+    display:inline-flex;align-items:center;gap:6px;
+    font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:0.22em;
+    text-transform:uppercase;color:var(--cobre);font-weight:500;
+  }
+  .om-card p{color:var(--plata-clara);font-size:16px;line-height:1.75;font-weight:300}
+  .om-card .om-feats{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+  .om-card .om-feats li{
+    display:flex;gap:10px;color:var(--plata-clara);font-size:14.5px;
+    padding-left:18px;position:relative;
+  }
+  .om-card .om-feats li::before{
+    content:"・";color:var(--sumi);position:absolute;left:0;top:-2px;
+    font-family:'Noto Serif JP', serif;font-weight:700;
+  }
+  .om-card .om-price{
+    margin-top:auto;padding-top:18px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:baseline;
+  }
+  .om-card .om-price .num{
+    font-family:'Cormorant Garamond', serif;font-size:1.8rem;color:var(--crema);font-weight:500;
+  }
+  .om-card .om-price .lab{
+    font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:0.22em;
+    text-transform:uppercase;color:var(--plata);font-weight:500;
+  }
+
+  /* FILOSOFIA */
+  .filosofia{background:var(--grafito);position:relative}
+  .filosofia .container{max-width:860px}
+  .filosofia-quote{
+    font-family:'Cormorant Garamond', serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.5rem, 3.2vw, 2.4rem);
+    color:var(--crema);line-height:1.35;text-align:left;
+    padding:24px 0;border-left:2px solid var(--sumi);padding-left:32px;
+    margin-bottom:32px;
+  }
+  .filosofia-body{
+    color:var(--plata-clara);font-size:17px;line-height:1.8;font-weight:300;
+    max-width:680px;
+  }
+  .filosofia-body p{margin-bottom:18px}
+  .filosofia-body strong{color:var(--crema);font-weight:500}
+
+  /* GALERIA */
+  .galeria{background:var(--grafito-dk)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:clamp(16px,2.5vw,24px);
+    align-items:flex-start;
+  }
+  .gal-figure{
+    flex:0 0 calc(50% - clamp(8px,1.25vw,12px));
+    max-width:calc(50% - clamp(8px,1.25vw,12px));
+    background:var(--grafito);border:1px solid var(--line);
+  }
+  @media (max-width:640px){
+    .gal-figure{flex:0 0 100%;max-width:100%}
+  }
+  .gal-figure .placeholder-photo{aspect-ratio:4/3}
+  .gal-figure figcaption{
+    padding:16px 20px;font-family:'Inter', sans-serif;
+    font-size:10.5px;text-transform:uppercase;letter-spacing:0.2em;
+    color:var(--plata);font-weight:500;
+  }
+  .gal-figure figcaption strong{color:var(--sumi);font-weight:600}
+
+  /* VISITA */
+  .visita{background:var(--grafito)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:40px;margin-top:48px;
+  }
+  @media (min-width:880px){
+    .visit-grid{grid-template-columns:1fr 1fr;gap:56px}
+  }
+  .visit-info dl{display:grid;grid-template-columns:1fr;gap:24px}
+  .visit-info .row{border-top:1px solid var(--line);padding-top:20px}
+  .visit-info .row:last-child{border-bottom:1px solid var(--line);padding-bottom:20px}
+  .visit-info .label{
+    font-family:'Inter', sans-serif;font-size:10.5px;font-weight:500;
+    letter-spacing:0.28em;text-transform:uppercase;
+    color:var(--sumi);margin-bottom:12px;
+  }
+  .visit-info .value{font-size:16.5px;color:var(--crema);line-height:1.55;font-weight:300}
+  .visit-info .value a{color:var(--crema);border-bottom:1px solid var(--line);transition:color .3s,border-color .3s}
+  .visit-info .value a:hover{color:var(--sumi);border-color:var(--sumi)}
+  .visit-info .city{color:var(--plata);font-size:14.5px}
+  .hours-list{display:grid;gap:8px;list-style:none;padding:0;margin:0}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:14.5px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--plata);text-transform:capitalize;font-weight:300}
+  .hours-list .time{color:var(--crema);font-variant-numeric:tabular-nums;font-family:'Inter', sans-serif;font-size:13px;font-weight:400}
+  .hours-list li.now{background:rgba(255,59,48,0.1);padding:8px 12px;margin:0 -12px}
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--sumi);font-weight:500}
+  .hours-list li.now .day::before{
+    content:"●";color:var(--sumi);font-size:9px;margin-right:8px;
+    animation:pulse-dot 1.6s ease-in-out infinite;display:inline-block;
+  }
+  .hours-list li.closed .time{color:rgba(154,157,163,0.4);font-style:italic}
+  @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.3}}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    border:1px solid var(--line);background:var(--grafito-dk);
+  }
+  .map-wrap iframe{
+    width:100%;height:100%;border:0;
+    filter:saturate(0.4) brightness(0.7) invert(0.92) hue-rotate(180deg);
+  }
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:rgba(14,15,17,0.94);
+    border:1px solid var(--sumi);color:var(--sumi);
+    padding:12px 18px;font-family:'Inter', sans-serif;
+    font-size:11px;letter-spacing:0.22em;text-transform:uppercase;font-weight:500;
+    backdrop-filter:blur(8px);
+    transition:all .3s;min-height:44px;display:inline-flex;align-items:center;
+  }
+  .map-cta:hover{background:var(--sumi);color:var(--crema)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--grafito-dk)}
+  .faq-list{margin-top:40px;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;
+    padding:24px 0;
+    font-family:'Cormorant Garamond', serif;font-size:1.4rem;color:var(--crema);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    font-weight:400;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Inter', sans-serif;font-size:22px;
+    color:var(--sumi);transition:transform .3s;flex-shrink:0;font-weight:300;
+  }
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item p{padding:0 0 26px;color:var(--plata-clara);font-size:16px;line-height:1.75;max-width:720px;font-weight:300}
+
+  /* FOOTER */
+  footer{
+    background:var(--grafito-dk);color:var(--plata);
+    padding:56px 0 36px;border-top:1px solid var(--line);
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:32px;
+  }
+  @media (min-width:720px){
+    .foot-grid{grid-template-columns:1.2fr 1fr 1fr}
+  }
+  .foot-col h4{
+    font-family:'Inter', sans-serif;font-size:10.5px;font-weight:500;
+    text-transform:uppercase;letter-spacing:0.28em;
+    color:var(--sumi);margin-bottom:16px;
+  }
+  .foot-col p, .foot-col a{font-size:14.5px;line-height:1.7;color:var(--plata-clara);display:block;font-weight:300}
+  .foot-col a:hover{color:var(--crema)}
+  .foot-col strong{color:var(--crema);font-weight:500}
+  .foot-jp{
+    font-family:'Noto Serif JP', serif;font-size:36px;font-weight:700;
+    color:var(--sumi);margin-bottom:8px;line-height:1;
+  }
+  .foot-bottom{
+    border-top:1px solid var(--line);padding-top:24px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
+    font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:0.22em;
+    text-transform:uppercase;color:var(--plata);font-weight:400;
+  }
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:1px solid var(--line);padding:0;background:var(--grafito-dk);
+    max-width:480px;width:92%;box-shadow:0 30px 80px rgba(0,0,0,0.7);
+    color:var(--crema);
+  }
+  dialog::backdrop{background:rgba(14,15,17,0.78);backdrop-filter:blur(4px)}
+  .dlg-head{padding:28px 28px 0;border-top:3px solid var(--sumi)}
+  .dlg-head .kicker{margin-bottom:10px}
+  .dlg-head h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.7rem;color:var(--crema);line-height:1.15}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:14.5px;color:var(--plata-clara);margin-bottom:18px;line-height:1.55;font-weight:300}
+  .dlg-form{display:grid;gap:14px}
+  .dlg-form label{font-family:'Inter', sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.22em;color:var(--sumi);display:block;margin-bottom:4px;font-weight:500}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--grafito);
+    font-family:'Inter', sans-serif;font-size:15px;color:var(--crema);
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--sumi)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-actions .btn{padding:12px 20px}
+  .dlg-close{
+    background:none;border:0;color:var(--plata);
+    font-family:'Inter', sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;
+  }
+  .dlg-close:hover{color:var(--crema)}
+  .dlg-ok{display:none;text-align:center;padding:36px 24px}
+  .dlg-ok h4{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.6rem;color:var(--crema);margin-bottom:10px}
+  .dlg-ok p{color:var(--plata-clara);font-size:14.5px;font-weight:300}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  /* Modal centrado defensivo */
+  dialog[open], .reserva-dialog[open]{
+    position:fixed !important;
+    inset:0 !important;
+    margin:auto !important;
+    transform:none !important;
+    max-height:calc(100% - 2rem) !important;
+    box-sizing:border-box !important;
+  }
+  dialog[open]::backdrop{background:rgba(0,0,0,0.7)}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  html, body{overflow-x:clip;max-width:100%}
+  img, video, picture, iframe{max-width:100%}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-jp">流</span>
+      <span class="brand-name">Ryushio</span>
+    </a>
+    <a href="tel:+34614041619" class="tel-btn">
+      <span>614 04 16 19</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <div class="hero-jp-mark">流</div>
+        <span class="kicker"><em>・</em>Omakase · Santaló 88 · Sant Gervasi</span>
+        <h1>El pescado<br>de hoy. <em>Como</em><br>debe servirse.</h1>
+        <p class="hero-lede">Dos barras. Una abierta, a la carta, para quien quiera entrar a comer sin compromiso. Otra privada, donde el chef decide pieza a pieza qué llega a tu plato según lo que esa mañana entró de lonja. Sin carta, sin sorpresas malas.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar omakase</button>
+          <a href="tel:+34614041619" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+Santal%C3%B3+88+08021+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">流</span>
+          <span class="ph-text">Foto de la barra · sustituir antes del pitch</span>
+          <span class="ph-sub">Barra de madera clara con chef cortando pieza de pescado a contraluz</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="omakase">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker"><em>・</em>Dos formas de comer en Ryushio</span>
+      <h2>A la carta, o <em>déjate llevar</em>.</h2>
+    </div>
+    <div class="omakase-grid">
+      <article class="om-card reveal">
+        <span class="om-card-num">一</span>
+        <span class="om-tag">Barra abierta · à la carte</span>
+        <h3>Carta <em>completa</em>.<br>Cuando tú quieras.</h3>
+        <p>La barra de fuera está abierta a la calle. Entras, te sientas, eliges qué quieres del menú y comes. Sashimi del día, nigiris al gusto, gunkan, una sopa. Sin compromiso de tiempo ni de cubierto.</p>
+        <ul class="om-feats">
+          <li>15 puestos en barra + 6 mesas bajas</li>
+          <li>Carta abierta de mediodía y noche</li>
+          <li>Sin menú mínimo · pides lo que te apetece</li>
+          <li>Reserva recomendada los fines de semana</li>
+        </ul>
+        <div class="om-price">
+          <span class="num">€€</span>
+          <span class="lab">Ticket medio 35-50 €</span>
+        </div>
+      </article>
+      <article class="om-card featured reveal">
+        <span class="om-card-num">二</span>
+        <span class="om-tag">Barra privada · omakase</span>
+        <h3>Omakase del <em>día</em>.<br>Decide el chef.</h3>
+        <p>Ocho puestos máximo. Una sola hora de servicio. El chef te enseña cada pieza antes de cortarla, te cuenta de dónde viene y por qué la sirve hoy. Vas con lo que decida él. Sin carta. Sin elegir. Para venir cuando ya sabes que quieres confiar.</p>
+        <ul class="om-feats">
+          <li>8 comensales máximo por servicio</li>
+          <li>Menú cerrado · 14-16 pases del chef</li>
+          <li>Solo con reserva previa por WhatsApp</li>
+          <li>Pareados de sake y vino opcionales</li>
+        </ul>
+        <div class="om-price">
+          <span class="num">€€€€</span>
+          <span class="lab">Menú cerrado 85 € pp</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="filosofia">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker"><em>・</em>Cómo trabajamos</span>
+      <h2>El <em>flujo</em>.<br>Eso es Ryushio.</h2>
+    </div>
+    <div class="reveal">
+      <p class="filosofia-quote">流 (Ryū) es flujo. Shio (汐) es la marea.<br>Trabajamos con lo que el mar nos manda hoy. No con lo que nos gustaría tener.</p>
+      <div class="filosofia-body">
+        <p>El chef llega a las seis de la mañana a Mercabarna. Si esa mañana lo que viene es bonito merece ese servicio, sale en el omakase. Si llega un atún de almadraba en su momento, ese es el plato del día. Si no llega nada que valga la pena, ese día <strong>no servimos esa pieza</strong>. Punto.</p>
+        <p>Eso lo entendemos como respeto al producto y al cliente. No vamos a servirte un sashimi cansado porque la carta lo pide. Antes te ofrecemos otra cosa que esté en su momento. Por eso la carta cambia cada semana y el omakase cambia cada día.</p>
+        <p>Para nosotros la <strong>simplicidad no es un estilo, es una consecuencia</strong>: cuando el producto es bueno de verdad, el plato termina solo. Un corte limpio, un toque de wasabi rallado al momento, un grano de arroz cocido a su temperatura. Y poco más.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker"><em>・</em>La sala · la barra · el corte</span>
+      <h2>Cómo es <em>esto</em><br>por dentro.</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">寿</span>
+          <span class="ph-text">Foto del nigiri · sustituir antes del pitch</span>
+          <span class="ph-sub">Nigiri de toro con grano de wasabi rallado encima sobre tabla negra</span>
+        </div>
+        <figcaption><strong>Nigiri del día ·</strong> Lo que esa mañana mereció ese servicio</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">魚</span>
+          <span class="ph-text">Foto del sashimi · sustituir antes del pitch</span>
+          <span class="ph-sub">Sashimi variado en plato de cerámica artesanal japonesa</span>
+        </div>
+        <figcaption><strong>Sashimi ·</strong> Corte limpio · pieza fresca · sin atajos</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">板</span>
+          <span class="ph-text">Foto del chef · sustituir antes del pitch</span>
+          <span class="ph-sub">Chef detrás de la barra cortando una pieza grande a contraluz</span>
+        </div>
+        <figcaption><strong>El chef ·</strong> Pieza a pieza · pase a pase</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">店</span>
+          <span class="ph-text">Foto de la sala · sustituir antes del pitch</span>
+          <span class="ph-sub">Comedor con barra de madera clara y luces cálidas bajas</span>
+        </div>
+        <figcaption><strong>La sala ·</strong> Barra abierta + mesas + barra privada</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker"><em>・</em>Cómo encontrarnos</span>
+      <h2>Santaló, <em>88</em>.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              Carrer de Santaló, 88<br>
+              <span class="city">08021 Barcelona · Sarrià-Sant Gervasi</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li class="closed"><span class="day">Lunes</span><span class="time">Cerrado</span></li>
+              <li><span class="day">Martes</span><span class="time">13:00 – 16:30 · 20:00 – 00:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">13:00 – 16:30 · 20:00 – 00:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">13:00 – 16:30 · 20:00 – 00:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">13:00 – 16:30 · 20:00 – 00:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">13:00 – 16:30 · 20:00 – 00:00</span></li>
+              <li><span class="day">Domingo</span><span class="time">13:00 – 16:30 · 20:00 – 00:00</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <div><a href="tel:+34614041619">+34 614 04 16 19</a></div>
+              <div style="margin-top:6px"><a href="https://wa.me/34614041619" target="_blank" rel="noopener">WhatsApp directo</a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Cómo llegar</div>
+            <div class="value">
+              FGC <strong>Muntaner</strong> (L6/L7) — 4 min andando<br>
+              <span class="city">Metro Hospital Clínic (L5) · Bus V13, 6, 7, 14</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+de+Santal%C3%B3+88+08021+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Ryushio">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+Santal%C3%B3+88+08021+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker"><em>・</em>Preguntas frecuentes</span>
+      <h2>Lo que nos<br><em>preguntan</em> antes<br>de venir.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Cuál es la diferencia entre barra abierta y barra privada?</summary>
+        <p>La barra abierta es à la carte: entras, te sientas, eliges del menú y comes a tu ritmo. La barra privada es omakase: ocho puestos, menú cerrado de 14-16 pases que decide el chef según lo que llegó esa mañana de Mercabarna. La barra abierta admite walk-ins; la privada solo con reserva previa por WhatsApp.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que reservar para la barra abierta?</summary>
+        <p>Entre semana al mediodía solemos tener puestos libres y puedes pasarte sin avisar. Para los fines de semana y para cenas a partir de las 21:00 sí conviene reservar porque se llena. Un mensaje al WhatsApp +34 614 04 16 19 y te lo apuntamos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta el omakase de la barra privada?</summary>
+        <p>El menú cerrado del chef sale a 85 € por persona. Incluye 14-16 pases servidos pieza a pieza durante hora y media. Los pareados de sake (45 €) y de vinos europeos (35 €) son opcionales. No tenemos cubierto extra ni servicio de copas obligatorio.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Servís comida cocinada o solo crudo?</summary>
+        <p>Servimos tanto crudo como cocinado. Además de sashimi, nigiri y maki tenemos tempura, gyozas, sopas calientes, arroces de la casa y algún plato a la parrilla con pescado del día. La proporción de crudo y cocido en el omakase varía según la temporada y según lo que mejor se sirva ese día.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hay opciones sin pescado o vegetarianas?</summary>
+        <p>En la barra abierta tenemos gyozas vegetarianas, sopa miso, tempura de verduras y ensalada wakame que son aptas. La barra privada está pensada para amantes del pescado y no podemos adaptarla a un menú totalmente vegetariano. Si vienes en grupo con alguien que no come pescado, dínoslo al reservar y le preparamos un menú alternativo en la barra abierta.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-jp">流</div>
+        <p><strong>Ryushio Omakase</strong><br>Restaurante japonés moderno<br>Sant Gervasi · Barcelona</p>
+      </div>
+      <div class="foot-col">
+        <h4>Visítanos</h4>
+        <p>Carrer de Santaló, 88<br>08021 Barcelona</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+de+Santal%C3%B3+88+08021+Barcelona" target="_blank" rel="noopener">Cómo llegar →</a>
+      </div>
+      <div class="foot-col">
+        <h4>Reservas</h4>
+        <a href="tel:+34614041619"><strong>+34 614 04 16 19</strong></a>
+        <a href="https://wa.me/34614041619" target="_blank" rel="noopener" style="margin-top:6px">WhatsApp directo →</a>
+        <p style="margin-top:8px">Martes a domingo<br>13:00–16:30 · 20:00–00:00</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Ryushio · Santaló 88, Barcelona</span>
+      <span>Omakase · Barra abierta · 流</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker"><em>・</em>Reservar en Ryushio</span>
+    <h3>Dinos cuándo y qué barra.</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Te confirmamos por WhatsApp en pocos minutos. Para la barra privada (omakase) reserva con al menos 48 h de antelación.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Teléfono</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-pax">Personas</label>
+          <select id="r-pax" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7-8</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-fecha">Fecha</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+        <div>
+          <label for="r-hora">Hora</label>
+          <input type="time" id="r-hora" required>
+        </div>
+      </div>
+      <div>
+        <label for="r-barra">Barra</label>
+        <select id="r-barra" required>
+          <option>Barra abierta (a la carta)</option>
+          <option>Barra privada (omakase)</option>
+        </select>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Enviar petición</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>¡Recibido!</h4>
+    <p>Te confirmamos por WhatsApp en breve.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Ryushio Omakase",
+  "alternateName":"流",
+  "description":"Restaurante japonés moderno en Sant Gervasi, Barcelona. Barra abierta a la carta y barra privada con omakase del día.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Carrer de Santaló, 88",
+    "addressLocality":"Barcelona",
+    "postalCode":"08021",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34614041619",
+  "servesCuisine":["Japanese","Sushi","Omakase","Sashimi"],
+  "priceRange":"€€€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"13:00","closes":"16:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"20:00","closes":"00:00"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Cuál es la diferencia entre barra abierta y barra privada en Ryushio?","acceptedAnswer":{"@type":"Answer","text":"La barra abierta es à la carte: entras, te sientas, eliges del menú y comes a tu ritmo sin compromiso. La barra privada es omakase: ocho puestos máximo, menú cerrado de 14 a 16 pases que decide el chef según lo que llegó esa mañana de Mercabarna. La barra abierta admite walk-ins, la privada solo con reserva previa."}},
+    {"@type":"Question","name":"¿Tengo que reservar para la barra abierta de Ryushio?","acceptedAnswer":{"@type":"Answer","text":"Entre semana al mediodía solemos tener puestos libres y se puede pasar sin avisar. Para los fines de semana y para cenas a partir de las 21:00 conviene reservar porque se llena rápido. Un WhatsApp al +34 614 04 16 19 con día y hora basta para apuntarte."}},
+    {"@type":"Question","name":"¿Cuánto cuesta el omakase de la barra privada?","acceptedAnswer":{"@type":"Answer","text":"El menú cerrado del chef en la barra privada sale a 85 € por persona e incluye entre 14 y 16 pases servidos pieza a pieza durante una hora y media. Los pareados de sake (45 €) y de vinos europeos (35 €) son opcionales. No tenemos cubierto ni servicio extra obligatorio."}},
+    {"@type":"Question","name":"¿En Ryushio servís comida cocinada o solo crudo?","acceptedAnswer":{"@type":"Answer","text":"Servimos crudo y cocinado. Además de sashimi, nigiri y maki tenemos tempura, gyozas, sopas calientes, arroces de la casa y algún plato a la parrilla con pescado del día. La proporción en el omakase varía según temporada y según lo que mejor se sirva esa noche."}},
+    {"@type":"Question","name":"¿Hay opciones sin pescado o vegetarianas en Ryushio?","acceptedAnswer":{"@type":"Answer","text":"En la barra abierta tenemos gyozas vegetarianas, sopa miso, tempura de verduras y ensalada wakame que son aptas. La barra privada está pensada para amantes del pescado. Si vienes en grupo con alguien que no come pescado, dínoslo al reservar y preparamos un menú alternativo en la barra abierta."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg:        #0f0c0a;
+    --id-fg:        #f4ede1;
+    --id-accent:    #c89e5a;
+    --id-cream:     #f4ede1;
+    --id-cream-dk:  #8a7458;
+    --id-ink:       #1a1410;
+    --id-wa:        #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) {
+    body:not(.id-locked) { padding-bottom: 56px; }
+  }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg);
+    color: var(--id-fg);
+    border-top: 2px solid var(--id-accent);
+    padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--id-accent);
+    font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .id-countdown__cta { opacity: .85; font-size: 13px; }
+  .id-countdown__cta strong { color: var(--id-accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream);
+    color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase; letter-spacing: 0.28em;
+    font-size: 12px; color: var(--id-cream-dk);
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px); line-height: 0.9;
+    margin: 0 0 24px; font-weight: 900;
+    letter-spacing: -0.04em; color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px); line-height: 1.55;
+    margin: 0 auto 36px; max-width: 520px; color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 999px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa); color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent; color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px; color: var(--id-cream-dk);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin: 0; font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Ryushio%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Ryushio</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Ryushio%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Ryushio%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Ryushio y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-29T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+  if (tick()) { setInterval(tick, 1000); }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+</body>
+</html>
