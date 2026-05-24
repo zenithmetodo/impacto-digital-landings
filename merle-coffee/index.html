@@ -162,7 +162,8 @@
     background:var(--naranja);opacity:0.3;
     top:-30px;right:-30px;
   }
-  .placeholder-emoji{font-size:54px;position:relative;z-index:1}
+  .placeholder-emoji{font-size:54px;position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center}
+  .placeholder-emoji svg{width:72px;height:72px;color:var(--verde);opacity:.9}
   .placeholder-label{
     font-family:'Inter',sans-serif;font-size:11px;font-weight:700;
     text-transform:uppercase;letter-spacing:0.2em;color:var(--naranja-claro);position:relative;z-index:1;
@@ -180,7 +181,10 @@
   }
   .ribbon-inner{display:flex;gap:36px;animation:slide 28s linear infinite}
   .ribbon-inner span{flex-shrink:0;display:inline-flex;align-items:center;gap:36px}
-  .ribbon-inner span::after{content:"✺";color:var(--verde);font-size:14px}
+  .ribbon-inner span::after{
+    content:"";display:inline-block;width:12px;height:12px;
+    background:no-repeat center/contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232f5a3a'><circle cx='12' cy='12' r='4'/><path d='M12 0 L13 8 L20 4 L16 11 L24 12 L16 13 L20 20 L13 16 L12 24 L11 16 L4 20 L8 13 L0 12 L8 11 L4 4 L11 8 Z' opacity='0.55'/></svg>");
+  }
   @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* SECCIONES */
@@ -409,7 +413,7 @@
       </div>
       <div class="hero-img-wrap reveal">
         <div class="placeholder-photo hero-photo">
-          <span class="placeholder-emoji">☕</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 22h36v14a10 10 0 0 1-10 10H20a10 10 0 0 1-10-10z"/><path d="M46 26h6a6 6 0 0 1 0 12h-6"/><path d="M20 12c0-3 3-3 3-6M28 12c0-3 3-3 3-6M36 12c0-3 3-3 3-6"/></svg></span>
           <span class="placeholder-label">[FOTO LATTE + CROISSANT]</span>
           <span class="placeholder-note">Latte art en taza verde + croissant en plato — sustituir antes del pitch</span>
         </div>
@@ -542,7 +546,7 @@
     <div class="gal-flex">
       <figure class="gal-figure reveal">
         <div class="placeholder-photo" style="aspect-ratio:4/5;border-radius:0">
-          <span class="placeholder-emoji">🥐</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38c0-8 6-18 16-22s22 2 28 10c4 6 4 10-2 12-4 1-8-2-12-4s-10-4-16-2-10 4-14 6z"/><path d="M14 36c4-4 10-6 14-4M22 30c4-3 10-3 14-1M32 26c4-2 8-1 12 1" opacity=".5"/></svg></span>
           <span class="placeholder-label">[FOTO PASTELERÍA]</span>
           <span class="placeholder-note">Vitrina con croissants, cinnamon rolls, tarta</span>
         </div>
@@ -550,7 +554,7 @@
       </figure>
       <figure class="gal-figure reveal">
         <div class="placeholder-photo" style="aspect-ratio:4/5;border-radius:0">
-          <span class="placeholder-emoji">☕</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 64 56" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18h40v18a14 14 0 0 1-14 14H22a14 14 0 0 1-14-14z"/><path d="M48 22h6a5 5 0 0 1 0 10h-6"/><path d="M28 32c-3-3-3-7 1-7 1 0 2 .6 3 1.6 1-1 2-1.6 3-1.6 4 0 4 4 1 7l-4 4z" fill="currentColor" opacity=".7"/></svg></span>
           <span class="placeholder-label">[FOTO LATTE ART]</span>
           <span class="placeholder-note">Cappuccino con corazón en taza verde</span>
         </div>
@@ -558,7 +562,7 @@
       </figure>
       <figure class="gal-figure reveal">
         <div class="placeholder-photo" style="aspect-ratio:4/5;border-radius:0">
-          <span class="placeholder-emoji">🌿</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 50V18"/><path d="M24 30c0-6-6-12-14-12 0 8 6 14 14 14z"/><path d="M24 24c0-6 6-10 12-10 0 8-6 12-12 12z"/><path d="M24 18c0-5-4-8-10-8 0 6 4 10 10 10z" opacity=".7"/><path d="M24 14c0-4 4-7 8-7 0 5-4 8-8 8z" opacity=".7"/></svg></span>
           <span class="placeholder-label">[FOTO INTERIOR]</span>
           <span class="placeholder-note">Mesa de madera, plantas, ventana al barrio</span>
         </div>
@@ -566,7 +570,7 @@
       </figure>
       <figure class="gal-figure reveal">
         <div class="placeholder-photo" style="aspect-ratio:4/5;border-radius:0">
-          <span class="placeholder-emoji">🥑</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8c-9 0-15 8-15 20s7 22 15 22 15-10 15-22S33 8 24 8z"/><ellipse cx="24" cy="36" rx="7" ry="9" fill="currentColor" opacity=".55"/><path d="M24 16c-5 0-9 6-9 14" opacity=".4"/></svg></span>
           <span class="placeholder-label">[FOTO TOSTADA]</span>
           <span class="placeholder-note">Tostada de aguacate con huevo escalfado</span>
         </div>

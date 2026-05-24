@@ -282,7 +282,8 @@
     content:"";position:absolute;inset:12px;
     border:1px solid var(--dorado);opacity:0.4;
   }
-  .placeholder-emoji{font-size:42px}
+  .placeholder-emoji{font-size:42px;display:inline-flex;align-items:center;justify-content:center}
+  .placeholder-emoji svg{width:60px;height:60px;color:var(--dorado);opacity:.9}
   .placeholder-label{
     font-family:'Inter',sans-serif;font-size:11px;
     text-transform:uppercase;letter-spacing:0.2em;color:var(--burdeos);font-weight:700;
@@ -527,7 +528,7 @@
     <div class="gal-flex">
       <figure class="gal-figure reveal">
         <div class="placeholder-photo">
-          <span class="placeholder-emoji">🚞</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 72 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="64" height="26" rx="3"/><path d="M4 22h64"/><rect x="9" y="13" width="10" height="7" rx="0.5"/><rect x="22" y="13" width="10" height="7" rx="0.5"/><rect x="35" y="13" width="10" height="7" rx="0.5"/><rect x="48" y="13" width="10" height="7" rx="0.5"/><path d="M11 30h6M22 30h6M33 30h6M44 30h6M55 30h6"/><circle cx="18" cy="40" r="3"/><circle cx="54" cy="40" r="3"/><path d="M4 36h64"/></svg></span>
           <span class="placeholder-label">[FOTO VAGÓN INTERIOR]</span>
           <span class="placeholder-note">Terciopelo burdeos, lámparas latón, mesa con mantel</span>
         </div>
@@ -535,7 +536,7 @@
       </figure>
       <figure class="gal-figure reveal">
         <div class="placeholder-photo">
-          <span class="placeholder-emoji">🍸</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8h32L24 30z"/><path d="M24 30v18"/><path d="M14 48h20"/><path d="M12 12l24 0" opacity=".4"/><circle cx="32" cy="14" r="1.5" fill="currentColor"/><path d="M32 14l4-6" opacity=".7"/></svg></span>
           <span class="placeholder-label">[FOTO CÓCTEL CON SELLO]</span>
           <span class="placeholder-note">Copa champagne con casís, sello dorado</span>
         </div>
@@ -543,7 +544,7 @@
       </figure>
       <figure class="gal-figure reveal">
         <div class="placeholder-photo">
-          <span class="placeholder-emoji">📜</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="6" width="28" height="42" rx="2"/><circle cx="24" cy="20" r="6"/><path d="M24 14v12M18 20h12" opacity=".6"/><path d="M14 34h20M14 38h20M14 42h14" opacity=".55"/><path d="M10 8c-2 0-2 2-2 4s0 4 2 4M38 8c2 0 2 2 2 4s0 4-2 4" opacity=".4"/></svg></span>
           <span class="placeholder-label">[FOTO PASAPORTE]</span>
           <span class="placeholder-note">Cartilla cuero con sellos de cada ciudad</span>
         </div>
@@ -551,7 +552,7 @@
       </figure>
       <figure class="gal-figure reveal">
         <div class="placeholder-photo">
-          <span class="placeholder-emoji">🎺</span>
+          <span class="placeholder-emoji" aria-hidden="true"><svg viewBox="0 0 64 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h32"/><path d="M36 16l16-4v24l-16-4z"/><circle cx="14" cy="24" r="2"/><circle cx="22" cy="24" r="2"/><circle cx="30" cy="24" r="2"/><path d="M14 22v-4M22 22v-4M30 22v-4"/><path d="M52 12v24" opacity=".5"/><path d="M55 18l4-1M55 24l4-1M55 30l4-1" opacity=".4"/></svg></span>
           <span class="placeholder-label">[FOTO JAZZ EN DIRECTO]</span>
           <span class="placeholder-note">Pianista o trío de jazz en el vagón</span>
         </div>

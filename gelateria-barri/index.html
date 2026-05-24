@@ -167,24 +167,15 @@
 
   .hero-cono-mock{
     position:relative;aspect-ratio:1/1;
-    background:var(--paper);border:3px solid var(--ink);border-radius:50%;
+    background:radial-gradient(circle at 30% 25%, #fff8ee 0%, var(--paper) 65%, #f5e7c8 100%);
+    border:3px solid var(--ink);border-radius:50%;
     box-shadow:14px 14px 0 var(--mango);
     display:flex;align-items:center;justify-content:center;
     overflow:hidden;
   }
-  .hero-cono-mock::before,
-  .hero-cono-mock::after{
-    content:"";position:absolute;border-radius:50%;
-  }
-  .hero-cono-mock::before{
-    width:55%;height:55%;top:18%;left:22%;
-    background:radial-gradient(circle at 30% 30%, #ffb0c4 0%, var(--rosa) 60%);
-    box-shadow:0 4px 12px rgba(232,69,101,0.3);
-  }
-  .hero-cono-mock::after{
-    width:40%;height:40%;top:38%;left:32%;
-    background:radial-gradient(circle at 30% 30%, #ffd470 0%, var(--mango) 60%);
-    box-shadow:0 4px 12px rgba(240,163,10,0.3);
+  .hero-cono-svg{
+    width:74%;height:auto;display:block;
+    filter:drop-shadow(0 6px 14px rgba(20,15,5,.18));
   }
   .hero-cono-label{
     position:absolute;bottom:-20px;left:50%;transform:translateX(-50%) rotate(-3deg);
@@ -235,8 +226,9 @@
   .mani-emoji{
     width:62px;height:62px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
-    font-size:32px;margin-bottom:18px;border:3px solid var(--ink);
+    margin-bottom:18px;border:3px solid var(--ink);
   }
+  .mani-emoji svg{width:34px;height:34px;display:block}
   .mani-card:nth-child(1) .mani-emoji{background:var(--rosa)}
   .mani-card:nth-child(2) .mani-emoji{background:var(--mango)}
   .mani-card:nth-child(3) .mani-emoji{background:var(--menta)}
@@ -304,7 +296,11 @@
   .gal-figure:nth-child(2){background:linear-gradient(135deg, var(--mango) 0%, var(--rosa) 100%)}
   .gal-figure:nth-child(3){background:linear-gradient(135deg, var(--menta) 0%, var(--mango) 100%)}
   .gal-figure:nth-child(4){background:linear-gradient(135deg, var(--choco) 0%, var(--mango-deep) 100%);color:var(--paper)}
-  .gal-figure::after{content:"📷";position:absolute;bottom:16px;right:16px;font-size:20px;opacity:0.65}
+  .gal-figure::after{
+    content:"";position:absolute;bottom:14px;right:14px;
+    width:22px;height:18px;opacity:0.7;
+    background:no-repeat center/contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 20' fill='none' stroke='%23241715' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M3 6h4l1.5-2h7l1.5 2h4a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z'/><circle cx='12' cy='12' r='3.5'/></svg>");
+  }
   @media (max-width:640px){
     .gal-figure{flex:0 0 100%;max-width:100%}
   }
@@ -499,8 +495,53 @@
           <a href="https://www.google.com/maps/search/?api=1&query=La+Gelateria+del+Barri+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
         </div>
       </div>
-      <div class="hero-cono-mock reveal" aria-hidden="true">
-        <span class="hero-cono-label">Frambuesa + mango</span>
+      <div class="hero-cono-mock reveal">
+        <svg class="hero-cono-svg" viewBox="0 0 280 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cono de helado artesano vegano: bola de fresa, mango y chocolate con hoja de menta">
+          <defs>
+            <radialGradient id="gel-fresa" cx="35%" cy="32%" r="70%">
+              <stop offset="0%" stop-color="#ffe0e6"/>
+              <stop offset="55%" stop-color="#e84565"/>
+              <stop offset="100%" stop-color="#7d1f33"/>
+            </radialGradient>
+            <radialGradient id="gel-mango" cx="35%" cy="32%" r="70%">
+              <stop offset="0%" stop-color="#fff0c0"/>
+              <stop offset="55%" stop-color="#f0a30a"/>
+              <stop offset="100%" stop-color="#7a4d00"/>
+            </radialGradient>
+            <radialGradient id="gel-choco" cx="35%" cy="32%" r="70%">
+              <stop offset="0%" stop-color="#a06848"/>
+              <stop offset="55%" stop-color="#5a3018"/>
+              <stop offset="100%" stop-color="#2a1408"/>
+            </radialGradient>
+            <linearGradient id="gel-cono" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#deb481"/>
+              <stop offset="100%" stop-color="#6e4218"/>
+            </linearGradient>
+            <pattern id="gel-waffle" patternUnits="userSpaceOnUse" width="16" height="16" patternTransform="rotate(45)">
+              <path d="M0 0H16M0 8H16M0 0V16M8 0V16" stroke="#3a1f08" stroke-width="1.5" opacity="0.45" fill="none"/>
+            </pattern>
+          </defs>
+          <!-- CONO waffle -->
+          <path d="M86 190L194 190L140 340Z" fill="url(#gel-cono)" stroke="#3a1f08" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M86 190L194 190L140 340Z" fill="url(#gel-waffle)"/>
+          <ellipse cx="140" cy="190" rx="54" ry="6" fill="#8a5828"/>
+          <ellipse cx="140" cy="188" rx="50" ry="4" fill="#3a1f08" opacity="0.5"/>
+          <!-- BOLA chocolate (base) -->
+          <circle cx="140" cy="175" r="62" fill="url(#gel-choco)" stroke="#2a1408" stroke-width="2"/>
+          <ellipse cx="118" cy="148" rx="14" ry="8" fill="#fff" opacity="0.20" transform="rotate(-25 118 148)"/>
+          <!-- BOLA mango (medio) -->
+          <circle cx="140" cy="118" r="55" fill="url(#gel-mango)" stroke="#7a4d00" stroke-width="2"/>
+          <ellipse cx="120" cy="94" rx="13" ry="7" fill="#fff" opacity="0.40" transform="rotate(-25 120 94)"/>
+          <!-- BOLA fresa (cima) -->
+          <circle cx="140" cy="70" r="47" fill="url(#gel-fresa)" stroke="#7d1f33" stroke-width="2"/>
+          <ellipse cx="123" cy="50" rx="11" ry="6" fill="#fff" opacity="0.50" transform="rotate(-25 123 50)"/>
+          <!-- HOJA MENTA -->
+          <g transform="translate(140 22)">
+            <path d="M0 0 Q-12 -10 -16 -22 Q-8 -32 0 -28 Q8 -32 16 -22 Q12 -10 0 0 Z" fill="#5fb066" stroke="#2d6a3a" stroke-width="1.5"/>
+            <line x1="0" y1="0" x2="0" y2="-26" stroke="#2d6a3a" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <span class="hero-cono-label">Frambuesa + mango + chocolate</span>
       </div>
     </div>
   </div>
@@ -514,17 +555,17 @@
     </div>
     <div class="mani-grid">
       <article class="mani-card reveal">
-        <div class="mani-emoji">🌱</div>
+        <div class="mani-emoji"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-label="Brote vegano"><path d="M20 34 V18" stroke="#241715" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M20 22 Q10 20 6 11 Q14 8 20 18 Z" fill="#2d6a3a" stroke="#1a3f22" stroke-width="1.5"/><path d="M20 22 Q30 20 34 11 Q26 8 20 18 Z" fill="#5fb066" stroke="#1a3f22" stroke-width="1.5"/><circle cx="20" cy="34" r="2" fill="#241715"/></svg></div>
         <h3>100% vegano. Sin excepción.</h3>
         <p>Cero leche de vaca, cero nata, cero huevo. Solo bases de almendra, coco, anacardo, avena o agua de fruta — según receta. Sabe a fruta de verdad porque está hecha de fruta de verdad.</p>
       </article>
       <article class="mani-card reveal">
-        <div class="mani-emoji">🍓</div>
+        <div class="mani-emoji"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-label="Fresa de temporada"><path d="M20 9 Q11 12 11 21 Q11 32 20 36 Q29 32 29 21 Q29 12 20 9 Z" fill="#e84565" stroke="#7d1f33" stroke-width="1.6"/><path d="M14 10 Q17 6 20 8 Q23 6 26 10 Q24 13 20 12 Q16 13 14 10 Z" fill="#2d6a3a" stroke="#1a3f22" stroke-width="1.2"/><circle cx="16" cy="19" r="1" fill="#fff7c2"/><circle cx="20" cy="22" r="1" fill="#fff7c2"/><circle cx="24" cy="19" r="1" fill="#fff7c2"/><circle cx="17" cy="26" r="1" fill="#fff7c2"/><circle cx="23" cy="26" r="1" fill="#fff7c2"/><circle cx="20" cy="30" r="1" fill="#fff7c2"/></svg></div>
         <h3>Temporada manda</h3>
         <p>En verano hay frambuesa, melocotón, melón. En invierno, naranja sanguina, mandarina, granada. Si la fruta no está buena en mercado, no la metemos en la mantecadora. Punto.</p>
       </article>
       <article class="mani-card reveal">
-        <div class="mani-emoji">👋</div>
+        <div class="mani-emoji"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-label="Cuchara de helado"><path d="M14 6 Q24 4 26 14 Q26 22 18 22 Q12 22 12 16 Q12 8 14 6 Z" fill="#fff" stroke="#241715" stroke-width="1.8"/><path d="M18 22 L24 36" stroke="#241715" stroke-width="2.8" stroke-linecap="round"/><circle cx="19" cy="14" r="6" fill="#e84565" stroke="#7d1f33" stroke-width="1.3"/><ellipse cx="17" cy="11" rx="2" ry="1.2" fill="#fff" opacity="0.55"/></svg></div>
         <h3>De autor. Hecho a mano.</h3>
         <p>Cada mañana, en el obrador del local. Sin mezclas industriales ni saborizantes. La receta es nuestra, la cantidad de azúcar la decidimos nosotros y los chocolates son de origen.</p>
       </article>

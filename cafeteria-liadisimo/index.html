@@ -344,7 +344,7 @@
   .gal-figure:nth-child(2){background:var(--rosa);color:var(--paper);transform:rotate(2deg);box-shadow:6px 6px 0 var(--ink)}
   .gal-figure:nth-child(3){background:var(--turquesa);transform:rotate(-2deg);box-shadow:6px 6px 0 var(--ink)}
   .gal-figure:nth-child(4){background:var(--lila);color:var(--paper);transform:rotate(1deg);box-shadow:6px 6px 0 var(--ink)}
-  .gal-figure::after{content:"📷";position:absolute;bottom:14px;right:14px;font-size:22px}
+  .gal-figure::after{content:"";position:absolute;bottom:14px;right:14px;width:28px;height:28px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%231a1a1a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 13h6l3-4h12l3 4h6v19H5z' fill='%23fffaf2'/><circle cx='20' cy='22' r='6.5' fill='none'/><circle cx='20' cy='22' r='2.5' fill='%231a1a1a'/><circle cx='30' cy='16.5' r='1' fill='%23E66A8B' stroke='none'/></svg>") center/contain no-repeat}
   @media (max-width:640px){
     .gal-figure{flex:0 0 100%;max-width:100%}
   }
@@ -401,7 +401,7 @@
     border:2px solid var(--ink);
   }
   .hours-list li.now .day,.hours-list li.now .time{color:var(--ink);font-weight:700}
-  .hours-list li.now .day::before{content:"☀ ";color:var(--naranja)}
+  .hours-list li.now .day::before{content:"";display:inline-block;width:16px;height:16px;margin-right:6px;vertical-align:-3px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%23F5894A' stroke-width='2.6' stroke-linecap='round'><circle cx='20' cy='20' r='7' fill='%23F5894A'/><path d='M20 4v4M20 32v4M4 20h4M32 20h4M8 8l3 3M29 29l3 3M32 8l-3 3M11 29l-3 3'/></svg>") center/contain no-repeat}
 
   .map-wrap{
     position:relative;aspect-ratio:4/3;overflow:hidden;
@@ -552,8 +552,8 @@
       <div class="hero-illust reveal" aria-hidden="true">
         <span class="ill-star ill-star-1">★</span>
         <span class="ill-star ill-star-2">✦</span>
-        <div class="ill-blob ill-blob-1">☕</div>
-        <div class="ill-blob ill-blob-2">🍰</div>
+        <div class="ill-blob ill-blob-1"><svg viewBox="0 0 40 40" width="60%" height="60%" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h20v10c0 4-3 8-10 8s-10-4-10-8z"/><path d="M28 17c3 0 5 1.5 5 4s-2 4-5 4"/><path d="M14 6c0 2 2 3 2 5s-2 3-2 5"/><path d="M20 6c0 2 2 3 2 5s-2 3-2 5"/></svg></div>
+        <div class="ill-blob ill-blob-2"><svg viewBox="0 0 40 40" width="62%" height="62%" fill="none" stroke="#fffaf2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 30l3-12c0-2 2-3 4-3h12c2 0 4 1 4 3l3 12z"/><path d="M7 30v3h26v-3"/><path d="M11 18c1.5 1.5 3 1.5 4.5 0s3-1.5 4.5 0s3 1.5 4.5 0s3-1.5 4.5 0"/><path d="M20 10v-4M18 6h4"/></svg></div>
         <div class="ill-blob ill-blob-3">20</div>
       </div>
     </div>
