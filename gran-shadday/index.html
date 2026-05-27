@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gran Shadday — Café, restaurante y sushi en Sta Coloma</title>
+<meta name="description" content="Gran Shadday: café, restaurante y sushi en Santa Coloma de Gramenet. Cocina latina y rolls de autor en un mismo sitio. Promo sushi 10/22/33. Reservas.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Gran Shadday — Café, restaurante y sushi · Sta Coloma">
+<meta property="og:description" content="Multifuncional: café, cocina latina y sushi. Promo 10/22/33 rolls. Sta Coloma.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://impactodigital.example/gran-shadday/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0a0a0a;
+    --negro-2:#161616;
+    --gris-d:#262626;
+    --gris-m:#3a3a3a;
+    --rojo:#e1242a;
+    --rojo-d:#a01419;
+    --cafe:#5a3b2a;
+    --plata:#c8c8c8;
+    --crema:#f4ede2;
+    --line:rgba(244,237,226,0.12);
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    background:var(--negro);
+    color:var(--crema);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;max-width:1180px;margin:0 auto;
+    padding-left:var(--side-padding);padding-right:var(--side-padding);
+  }
+  .display{font-family:'Anton', sans-serif;letter-spacing:0.02em;text-transform:uppercase;line-height:0.95}
+  .bebas{font-family:'Bebas Neue', sans-serif;letter-spacing:0.08em}
+  .kicker{
+    font-family:'Bebas Neue', sans-serif;
+    letter-spacing:0.3em;font-size:13px;
+    color:var(--rojo);font-weight:400;
+  }
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,10,0.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 0;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-mark{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--negro-2);
+    border:2px solid var(--crema);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--rojo);font-family:'Anton',sans-serif;font-size:24px;
+    position:relative;
+  }
+  .brand-name{
+    font-family:'Anton', sans-serif;font-size:20px;
+    letter-spacing:0.08em;text-transform:uppercase;
+  }
+  .brand-name .red{color:var(--rojo)}
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 18px;
+    background:var(--rojo);color:#fff;
+    font-family:'Bebas Neue', sans-serif;letter-spacing:0.15em;
+    font-size:14px;font-weight:600;
+    min-height:44px;
+    transition:background .2s;
+  }
+  .tel-btn:hover{background:var(--rojo-d)}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:90px 0 70px;
+    background:
+      linear-gradient(135deg, rgba(10,10,10,0.92) 30%, rgba(160,20,25,0.4) 100%),
+      repeating-linear-gradient(45deg, var(--negro) 0 20px, var(--negro-2) 20px 40px);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"7";
+    position:absolute;
+    right:-3%;top:5%;
+    font-family:'Anton', sans-serif;
+    font-size:clamp(20rem, 45vw, 38rem);
+    color:rgba(225,36,42,0.08);
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+  }
+  .hero-inner{position:relative;z-index:1}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:8px 16px;border:1px solid var(--rojo);
+    color:var(--rojo);font-family:'Bebas Neue', sans-serif;
+    letter-spacing:0.2em;font-size:13px;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(2.8rem, 8vw, 5.4rem);
+    line-height:0.95;text-transform:uppercase;
+    margin-bottom:24px;
+    max-width:900px;
+  }
+  .hero h1 .red{color:var(--rojo)}
+  .hero h1 .blk{
+    -webkit-text-stroke:1.5px var(--crema);color:transparent;
+  }
+  .hero-lead{
+    font-size:clamp(1.05rem, 2vw, 1.25rem);
+    color:var(--plata);
+    max-width:620px;margin-bottom:30px;
+  }
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 26px;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:15px;letter-spacing:0.15em;font-weight:600;
+    min-height:48px;
+    transition:transform .2s, background .2s, color .2s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--rojo);color:#fff}
+  .btn-primary:hover{background:#fff;color:var(--negro)}
+  .btn-secondary{background:transparent;color:var(--crema);border:2px solid var(--crema)}
+  .btn-secondary:hover{background:var(--crema);color:var(--negro)}
+  .btn-ghost{background:transparent;color:var(--crema);border:2px solid var(--gris-m)}
+  .btn-ghost:hover{border-color:var(--rojo);color:var(--rojo)}
+
+  /* TRIPLE PERFIL */
+  .triple{padding:80px 0;background:var(--negro)}
+  .triple-grid{
+    display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px;
+  }
+  @media(min-width:880px){.triple-grid{grid-template-columns:repeat(3,1fr)}}
+  .triple-card{
+    background:var(--negro-2);
+    border:1px solid var(--line);
+    padding:36px 28px;
+    transition:border-color .2s, transform .2s;
+    position:relative;
+  }
+  .triple-card:hover{border-color:var(--rojo);transform:translateY(-3px)}
+  .triple-num{
+    font-family:'Anton', sans-serif;
+    color:var(--rojo);
+    font-size:3rem;
+    line-height:1;margin-bottom:14px;
+  }
+  .triple-card h3{
+    font-family:'Anton', sans-serif;
+    font-size:1.7rem;text-transform:uppercase;letter-spacing:0.05em;
+    margin-bottom:12px;
+  }
+  .triple-card p{font-size:15px;color:var(--plata);line-height:1.6}
+
+  /* PROMO SUSHI — protagonista */
+  .promo{
+    padding:90px 0;
+    background:
+      linear-gradient(135deg, var(--rojo) 0%, var(--rojo-d) 100%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .promo::before{
+    content:"";position:absolute;inset:0;
+    background:
+      repeating-linear-gradient(-45deg, transparent 0 30px, rgba(0,0,0,0.06) 30px 32px);
+    pointer-events:none;
+  }
+  .promo-inner{position:relative;z-index:1}
+  .promo .kicker{color:#fff;opacity:0.85}
+  .promo h2{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(2.4rem, 7vw, 4.6rem);
+    line-height:0.95;text-transform:uppercase;
+    margin:10px 0 18px;
+    color:#fff;
+  }
+  .promo-lead{
+    max-width:640px;font-size:1.1rem;color:#fff;opacity:0.92;
+    margin-bottom:36px;
+  }
+  .promo-rolls{
+    display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  @media(min-width:680px){.promo-rolls{grid-template-columns:repeat(3,1fr)}}
+  .roll-card{
+    background:var(--negro);
+    border:2px solid #fff;
+    padding:30px 24px;
+    text-align:center;
+    position:relative;
+    transition:transform .25s;
+  }
+  .roll-card:hover{transform:translateY(-4px)}
+  .roll-card::before{
+    content:"";position:absolute;top:-2px;left:-2px;right:-2px;
+    height:6px;background:#fff;
+  }
+  .roll-num{
+    font-family:'Anton', sans-serif;
+    font-size:5.2rem;color:#fff;
+    line-height:1;display:block;
+  }
+  .roll-tag{
+    font-family:'Bebas Neue', sans-serif;
+    color:var(--rojo);font-size:18px;letter-spacing:0.2em;
+    display:block;margin:8px 0 14px;
+  }
+  .roll-card p{font-size:14px;color:var(--plata);line-height:1.6}
+  .promo-foot{
+    margin-top:30px;font-size:13px;opacity:0.85;
+  }
+
+  /* CARTA LATINO+SUSHI */
+  .carta{padding:80px 0;background:var(--negro-2)}
+  .carta-grid{
+    display:grid;grid-template-columns:1fr;gap:14px;margin-top:30px;
+  }
+  @media(min-width:680px){.carta-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.carta-grid{grid-template-columns:repeat(3,1fr)}}
+  .item{
+    background:var(--negro);
+    padding:24px 22px;
+    border-left:4px solid var(--rojo);
+    transition:transform .2s;
+  }
+  .item:hover{transform:translateX(4px)}
+  .item-cat{
+    font-family:'Bebas Neue', sans-serif;
+    color:var(--rojo);font-size:12px;letter-spacing:0.25em;
+    display:block;margin-bottom:6px;
+  }
+  .item h4{
+    font-family:'Anton', sans-serif;
+    font-size:1.4rem;text-transform:uppercase;letter-spacing:0.04em;
+    margin-bottom:8px;
+  }
+  .item p{font-size:14.5px;color:var(--plata)}
+
+  /* AMBIENTE */
+  .ambiente{padding:80px 0;background:var(--negro)}
+  .amb-grid{
+    display:grid;grid-template-columns:1fr;gap:16px;margin-top:30px;
+  }
+  @media(min-width:680px){.amb-grid{grid-template-columns:repeat(3,1fr)}}
+  .amb-cell{
+    background:var(--gris-d);
+    aspect-ratio:1/1;
+    display:flex;align-items:center;justify-content:center;
+    padding:18px;text-align:center;
+    border:1px dashed var(--gris-m);
+  }
+  .amb-cell span{
+    font-family:'Bebas Neue', sans-serif;
+    color:var(--plata);font-size:14px;letter-spacing:0.15em;
+  }
+
+  /* SECTION TITLE */
+  .section-title{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(2rem, 5.5vw, 3.4rem);
+    text-transform:uppercase;line-height:1;
+    margin:10px 0 16px;
+  }
+  .section-lead{
+    color:var(--plata);max-width:640px;
+    font-size:1.05rem;margin-bottom:24px;
+  }
+
+  /* VISITA */
+  .visita{padding:80px 0;background:var(--negro-2)}
+  .visita-grid{
+    display:grid;grid-template-columns:1fr;gap:24px;
+  }
+  @media(min-width:880px){.visita-grid{grid-template-columns:1fr 1fr;gap:36px}}
+  .visita-info{
+    background:var(--negro);
+    padding:32px 28px;
+    border-top:4px solid var(--rojo);
+  }
+  .visita-info h3{
+    font-family:'Anton', sans-serif;
+    font-size:1.7rem;text-transform:uppercase;letter-spacing:0.05em;
+    margin-bottom:18px;
+  }
+  .visita-info p{margin-bottom:10px;font-size:15px;color:var(--plata)}
+  .visita-info strong{color:var(--crema)}
+  .horarios{list-style:none;margin:18px 0}
+  .horarios li{
+    display:flex;justify-content:space-between;
+    padding:9px 0;border-bottom:1px solid var(--line);
+    font-size:14.5px;
+  }
+  .horarios li.today{color:var(--rojo);font-weight:700}
+  .map-wrap{
+    position:relative;
+    border:1px solid var(--line);
+    overflow:hidden;min-height:380px;
+  }
+  .map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:saturate(0.7) brightness(0.85)}
+  .map-cta{
+    position:absolute;bottom:14px;left:14px;
+    padding:12px 20px;background:var(--rojo);color:#fff;
+    font-family:'Bebas Neue', sans-serif;letter-spacing:0.15em;
+    font-size:14px;min-height:44px;display:inline-flex;align-items:center;
+  }
+
+  /* FAQ */
+  .faq{padding:80px 0;background:var(--negro)}
+  details{
+    background:var(--negro-2);
+    padding:18px 22px;
+    border-left:3px solid var(--rojo);
+    margin-bottom:12px;
+  }
+  details[open]{background:var(--gris-d)}
+  summary{
+    cursor:pointer;font-weight:700;font-size:1.05rem;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;
+    font-family:'Bebas Neue', sans-serif;letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.6rem;color:var(--rojo);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{margin-top:10px;color:var(--plata);font-size:15px}
+
+  /* FOOTER */
+  footer{background:#000;color:var(--crema);padding:50px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:24px}
+  @media(min-width:680px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+  .foot-brand{font-family:'Anton', sans-serif;font-size:2rem;text-transform:uppercase;letter-spacing:0.06em}
+  .foot-brand .red{color:var(--rojo)}
+  .foot h5{
+    font-family:'Bebas Neue', sans-serif;font-size:13px;letter-spacing:0.25em;
+    margin-bottom:12px;color:var(--rojo);
+  }
+  .foot a{display:block;padding:4px 0;font-size:14.5px;color:var(--plata)}
+  .foot a:hover{color:var(--crema)}
+  .foot-base{
+    margin-top:30px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--plata);
+    display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
+  }
+
+  /* MODAL */
+  dialog.reserva-modal{
+    border:1px solid var(--rojo);background:var(--negro);color:var(--crema);
+    padding:0;border-radius:0;
+    max-width:480px;width:calc(100% - 32px);margin:auto;
+  }
+  dialog::backdrop{background:rgba(0,0,0,0.85)}
+  .modal-inner{padding:30px 28px}
+  .modal-inner h3{font-family:'Anton', sans-serif;font-size:1.7rem;text-transform:uppercase;margin-bottom:8px}
+  .modal-inner p{margin-bottom:18px;font-size:14.5px;color:var(--plata)}
+  .modal-inner label{display:block;font-size:12px;font-weight:600;margin-bottom:6px;margin-top:12px;letter-spacing:0.15em;text-transform:uppercase}
+  .modal-inner input,.modal-inner select,.modal-inner textarea{
+    width:100%;padding:12px 14px;font-family:inherit;font-size:15px;
+    border:1px solid var(--gris-m);background:var(--negro-2);color:var(--crema);
+  }
+  .modal-actions{display:flex;gap:10px;margin-top:22px}
+  .modal-actions button{flex:1}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="brand" aria-label="Gran Shadday, inicio">
+      <span class="brand-mark" aria-hidden="true">7</span>
+      <span class="brand-name"><span class="red">7</span> Gran Shadday</span>
+    </a>
+    <a href="tel:+34000000000" class="tel-btn" aria-label="Llamar al restaurante">Llamar</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="hero-tag bebas">Café · Restaurante · Sushi · Sta Coloma</span>
+      <h1>Todo lo que<br><span class="red">necesitas</span><br><span class="blk">en un solo sitio.</span></h1>
+      <p class="hero-lead">Café por la mañana, comida latina al mediodía, sushi por la noche. Tres cocinas, un equipo, un mismo Gran Shadday. Sin reservas eternas ni cartas confusas: lo que te apetece, lo tenemos.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary" id="open-reserva" type="button">Reservar mesa</button>
+        <a class="btn btn-secondary" href="tel:+34000000000">Llamar</a>
+        <a class="btn btn-ghost" href="#visita">Cómo llegar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="triple">
+    <div class="container">
+      <span class="kicker">Tres cocinas, un equipo</span>
+      <h2 class="section-title">¿A qué vienes hoy?</h2>
+      <p class="section-lead">No somos un sitio cualquiera. Somos el bar de la mañana, el restaurante del mediodía y el sushi de la noche. Eliges tú.</p>
+      <div class="triple-grid">
+        <article class="triple-card reveal">
+          <div class="triple-num">01</div>
+          <h3>Café</h3>
+          <p>Cafés bien tirados, tostadas, bocadillos calientes y desayunos completos. Antes del curro, después del curro, o como excusa para sentarte un rato.</p>
+        </article>
+        <article class="triple-card reveal">
+          <div class="triple-num">02</div>
+          <h3>Restaurante latino</h3>
+          <p>Cocina venezolana y latinoamericana del día. Arepas, pabellón, churrasco, asado, ceviche, ensaladas y postres caseros. Menú a mediodía y carta a la noche.</p>
+        </article>
+        <article class="triple-card reveal">
+          <div class="triple-num">03</div>
+          <h3>Sushi</h3>
+          <p>Rolls a la carta y promociones por bandeja. Nigiris, makis clásicos y de autor, hosomakis y rolls calientes tempurizados. Ver promo abajo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo" id="promo">
+    <div class="container promo-inner">
+      <span class="kicker bebas">★ Promoción permanente</span>
+      <h2 class="display">Promo sushi<br>10 / 22 / 33</h2>
+      <p class="promo-lead">Tres bandejas con precio fijo según cuántas piezas pidas. Compartes con la mesa, mezclas rolls clásicos y de autor, y no te peleas con la cuenta al final.</p>
+      <div class="promo-rolls">
+        <div class="roll-card reveal">
+          <span class="roll-num">10</span>
+          <span class="roll-tag">Rolls</span>
+          <p>Bandeja para 1-2 personas. Selección del chef con clásicos: salmón, atún, california y veggie.</p>
+        </div>
+        <div class="roll-card reveal">
+          <span class="roll-num">22</span>
+          <span class="roll-tag">Rolls</span>
+          <p>Bandeja para 2-3 personas. Mezcla clásicos + 2 rolls de autor con salsas tibias y crujientes.</p>
+        </div>
+        <div class="roll-card reveal">
+          <span class="roll-num">33</span>
+          <span class="roll-tag">Rolls</span>
+          <p>Bandeja para 3-4 personas. Carta abierta de clásicos, autor, hosomakis y un roll caliente tempurizado.</p>
+        </div>
+      </div>
+      <p class="promo-foot">Para tomar aquí o llevar. Precios y combinaciones exactas: pregunta en el local o por teléfono.</p>
+    </div>
+  </section>
+
+  <section class="carta">
+    <div class="container">
+      <span class="kicker">Lo que más sale</span>
+      <h2 class="section-title">Carta destacada.</h2>
+      <p class="section-lead">Una muestra de lo que más se pide. Carta completa al llegar o por teléfono.</p>
+      <div class="carta-grid">
+        <article class="item reveal">
+          <span class="item-cat">Café · Desayuno</span>
+          <h4>Tostada con arepa</h4>
+          <p>Arepa rellena con jamón, queso y aguacate, café de la casa incluido.</p>
+        </article>
+        <article class="item reveal">
+          <span class="item-cat">Latino · Plato</span>
+          <h4>Pabellón criollo</h4>
+          <p>Carne mechada, frijoles negros, arroz blanco y plátano maduro. El clásico.</p>
+        </article>
+        <article class="item reveal">
+          <span class="item-cat">Latino · Plato</span>
+          <h4>Ceviche del día</h4>
+          <p>Pescado fresco macerado en lima, cebolla morada, cilantro, ají. Servido con boniato y maíz.</p>
+        </article>
+        <article class="item reveal">
+          <span class="item-cat">Sushi · Roll</span>
+          <h4>Roll Gran Shadday</h4>
+          <p>Salmón, langostino tempurizado, queso crema, aguacate, cebollino y salsa de la casa.</p>
+        </article>
+        <article class="item reveal">
+          <span class="item-cat">Sushi · Roll</span>
+          <h4>Roll caliente fuego</h4>
+          <p>Tempurizado por fuera, atún picante por dentro, mayo de sriracha y sésamo tostado.</p>
+        </article>
+        <article class="item reveal">
+          <span class="item-cat">Postre</span>
+          <h4>Quesillo de la casa</h4>
+          <p>Flan venezolano con caramelo oscuro. Receta de la abuela del equipo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ambiente">
+    <div class="container">
+      <span class="kicker">El local</span>
+      <h2 class="section-title">Industrial, cálido, sin pretensión.</h2>
+      <p class="section-lead">Mesas grandes para venir en grupo, barra de café para sentarte solo con el portátil, y una zona de sushi con el chef a la vista. Música presente sin pasarse, luz cálida, ambiente latino.</p>
+      <div class="amb-grid">
+        <div class="amb-cell reveal"><span>[Foto barra café · sustituir antes del pitch]</span></div>
+        <div class="amb-cell reveal"><span>[Foto mesa con sushi · sustituir antes del pitch]</span></div>
+        <div class="amb-cell reveal"><span>[Foto plato latino · sustituir antes del pitch]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visita" id="visita">
+    <div class="container">
+      <span class="kicker">Visítanos</span>
+      <h2 class="section-title">Sta Coloma de Gramenet.</h2>
+      <p class="section-lead">A pie de calle, fácil de llegar en transporte y con parking de zona azul alrededor.</p>
+      <div class="visita-grid">
+        <div class="visita-info reveal">
+          <h3>Cómo encontrarnos</h3>
+          <p><strong>Dirección:</strong> Santa Coloma de Gramenet (dirección exacta al confirmar reserva)</p>
+          <p><strong>Teléfono:</strong> al llegar te lo damos</p>
+          <p><strong>Instagram:</strong> @restaurantgranshadday</p>
+          <ul class="horarios" id="horarios">
+            <li data-day="1"><span>Lunes</span><span>08:00 – 23:00</span></li>
+            <li data-day="2"><span>Martes</span><span>08:00 – 23:00</span></li>
+            <li data-day="3"><span>Miércoles</span><span>08:00 – 23:00</span></li>
+            <li data-day="4"><span>Jueves</span><span>08:00 – 23:30</span></li>
+            <li data-day="5"><span>Viernes</span><span>08:00 – 01:00</span></li>
+            <li data-day="6"><span>Sábado</span><span>10:00 – 01:30</span></li>
+            <li data-day="0"><span>Domingo</span><span>10:00 – 23:00</span></li>
+          </ul>
+          <div class="hero-ctas" style="margin-top:12px">
+            <button class="btn btn-primary" id="open-reserva-2" type="button">Reservar mesa</button>
+            <a class="btn btn-secondary" href="tel:+34000000000">Llamar</a>
+          </div>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe loading="lazy" title="Mapa de Gran Shadday en Sta Coloma" src="https://www.google.com/maps?q=Santa+Coloma+de+Gramenet+restaurante&output=embed"></iframe>
+          <a class="map-cta" href="https://www.google.com/maps/search/?api=1&query=Gran%20Shadday%20Santa%20Coloma%20de%20Gramenet" target="_blank" rel="noopener">Cómo llegar →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2 class="section-title">Lo que la gente pregunta.</h2>
+      <details>
+        <summary>¿Las promos sushi 10/22/33 son para llevar o también en mesa?</summary>
+        <p>Las dos cosas. Puedes pedir la bandeja para llevar a casa, recoger por la puerta, o sentarte en mesa y disfrutarla allí con bebida aparte. Las bandejas vienen montadas con la selección del chef, pero puedes pedir cambios razonables (por ejemplo, quitar el picante o sustituir un roll específico) avisando al pedir.</p>
+      </details>
+      <details>
+        <summary>¿Hacéis menú del día por la mañana o al mediodía?</summary>
+        <p>Sí. Por la mañana tenemos desayunos a precio cerrado con café, zumo o batido, y opción de tostada, arepa rellena o sándwich. A mediodía hay menú del día con primero, segundo, bebida y postre o café. Cambia según la semana y lo anunciamos en Instagram.</p>
+      </details>
+      <details>
+        <summary>¿Puedo venir solo a tomar café o a trabajar un rato?</summary>
+        <p>Claro. Por la mañana y media tarde hay zona de barra y mesas pequeñas pensadas para venir solo, leer, trabajar o esperar a alguien. Wifi disponible al preguntar al equipo. Tomamos en serio el café: granos seleccionados, leche fresca y latte art cuando da tiempo.</p>
+      </details>
+      <details>
+        <summary>¿Hacéis cumpleaños o eventos privados?</summary>
+        <p>Sí. Para cumples y celebraciones de hasta 30 personas montamos menú cerrado con tapas latinas + bandeja de sushi + bebida. Para grupos mayores cerramos zona o el local entero según fecha. Escríbenos por Instagram o llamando con al menos una semana de antelación.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot">
+        <div class="foot-brand"><span class="red">7</span> Gran Shadday</div>
+        <p style="margin-top:10px;max-width:380px;font-size:14.5px;color:var(--plata)">Café, cocina latina y sushi en Santa Coloma de Gramenet. Multifuncional, sin pretensiones.</p>
+      </div>
+      <div class="foot">
+        <h5>Visita</h5>
+        <a href="#visita">Sta Coloma de Gramenet</a>
+        <a href="#visita">Horario semanal</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Gran+Shadday+Santa+Coloma+de+Gramenet" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="foot">
+        <h5>Contacto</h5>
+        <a href="tel:+34000000000">Llamar</a>
+        <a href="#" id="open-reserva-3">Reservar mesa</a>
+        <a href="https://instagram.com/restaurantgranshadday" target="_blank" rel="noopener">@restaurantgranshadday</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© Gran Shadday — Sta Coloma de Gramenet</span>
+      <span>Demo · sistema de reservas powered by Impacto Digital</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="reserva-dialog" class="reserva-modal" aria-labelledby="reserva-title">
+  <form class="modal-inner" method="dialog">
+    <h3 id="reserva-title">Reservar mesa</h3>
+    <p>Te confirmamos por teléfono o WhatsApp lo antes posible.</p>
+    <label for="r-nombre">Nombre</label>
+    <input id="r-nombre" name="nombre" type="text" required>
+    <label for="r-tel">Teléfono</label>
+    <input id="r-tel" name="tel" type="tel" required>
+    <label for="r-fecha">Día y hora</label>
+    <input id="r-fecha" name="fecha" type="datetime-local" required>
+    <label for="r-personas">Personas</label>
+    <select id="r-personas" name="personas">
+      <option>1-2</option><option>3-4</option><option>5-6</option><option>7-10</option><option>10+</option>
+    </select>
+    <label for="r-notas">Notas (opcional)</label>
+    <textarea id="r-notas" name="notas" rows="2" placeholder="Sushi, cumple, alérgenos…"></textarea>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-ghost" id="close-reserva">Cerrar</button>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Gran Shadday",
+  "servesCuisine":["Latin American","Venezuelan","Japanese","Sushi","Cafe"],
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Santa Coloma de Gramenet",
+    "postalCode":"08921",
+    "addressCountry":"ES"
+  },
+  "sameAs":["https://instagram.com/restaurantgranshadday"],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday"],"opens":"08:00","closes":"23:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:00","closes":"23:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"01:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"01:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"23:00"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Las promos sushi 10/22/33 son para llevar o también en mesa?","acceptedAnswer":{"@type":"Answer","text":"Las dos cosas. Pides para llevar, recogida en puerta o disfrutas en mesa. Las bandejas vienen con selección del chef pero admites cambios razonables avisando al pedir, como quitar picante o sustituir un roll concreto."}},
+    {"@type":"Question","name":"¿Hacéis menú del día por la mañana o al mediodía?","acceptedAnswer":{"@type":"Answer","text":"Sí. Desayunos a precio cerrado por la mañana con café, zumo o batido y opción tostada, arepa o sándwich. Menú del día al mediodía con primero, segundo, bebida y postre o café. Cambia semanal y se anuncia en Instagram."}},
+    {"@type":"Question","name":"¿Puedo venir solo a tomar café o trabajar un rato?","acceptedAnswer":{"@type":"Answer","text":"Sí. Por la mañana y media tarde hay barra y mesas pequeñas para venir solo, leer, trabajar o esperar a alguien. Wifi a pedido. Café cuidado: granos seleccionados, leche fresca y latte art cuando hay tiempo."}},
+    {"@type":"Question","name":"¿Hacéis cumpleaños o eventos privados?","acceptedAnswer":{"@type":"Answer","text":"Sí. Hasta 30 personas, menú cerrado con tapas latinas, bandeja de sushi y bebida. Para grupos mayores cerramos zona o local entero según fecha. Avisar con al menos una semana por Instagram o teléfono."}}
+  ]
+}
+</script>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible')), 2500);
+
+  const today = new Date().getDay();
+  const li = document.querySelector(`#horarios li[data-day="${today}"]`);
+  if(li) li.classList.add('today');
+
+  const dlg = document.getElementById('reserva-dialog');
+  document.querySelectorAll('#open-reserva, #open-reserva-2, #open-reserva-3').forEach(b=>{
+    b.addEventListener('click', e=>{ e.preventDefault(); if(dlg && typeof dlg.showModal==='function') dlg.showModal(); });
+  });
+  document.getElementById('close-reserva')?.addEventListener('click', ()=>dlg.close());
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg: #0f0c0a; --id-fg: #f4ede1; --id-accent: #c89e5a;
+    --id-cream: #f4ede1; --id-cream-dk: #8a7458;
+    --id-ink: #1a1410; --id-wa: #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) { body:not(.id-locked) { padding-bottom: 56px; } }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg); color: var(--id-fg);
+    border-top: 2px solid var(--id-accent); padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px; line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; color: var(--id-accent); font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums; font-weight: 700;
+    font-size: 16px; letter-spacing: 0.02em;
+  }
+  .id-countdown__cta { opacity: .85; font-size: 13px; }
+  .id-countdown__cta strong { color: var(--id-accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream); color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase; letter-spacing: 0.28em;
+    font-size: 12px; color: var(--id-cream-dk);
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px); line-height: 0.9;
+    margin: 0 0 24px; font-weight: 900;
+    letter-spacing: -0.04em; color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px); line-height: 1.55;
+    margin: 0 auto 36px; max-width: 520px; color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 999px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa); color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent; color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px; color: var(--id-cream-dk);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin: 0; font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20El%20Gran%20Shadday%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>El Gran Shadday</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20El%20Gran%20Shadday%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20El%20Gran%20Shadday%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de El Gran Shadday y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-31T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+  if (tick()) { setInterval(tick, 1000); }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-START ✦ -->
+<style>
+  .id-lang {
+    position: fixed; bottom: 80px; left: 12px;
+    z-index: 9500;
+    display: inline-flex; gap: 4px;
+    padding: 4px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.08);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  }
+  .id-lang button {
+    width: 30px; height: 30px;
+    border: 0; border-radius: 999px;
+    background: transparent; cursor: pointer;
+    font-family: inherit; font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1a1410;
+    text-transform: uppercase;
+    transition: all .18s ease;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .id-lang button:hover { background: rgba(0,0,0,.07); }
+  .id-lang button[aria-pressed="true"] {
+    background: #1a1410; color: #fff;
+  }
+  @media (max-width: 640px) {
+    .id-lang { bottom: 70px; left: 8px; padding: 3px; gap: 2px; }
+    .id-lang button { width: 26px; height: 26px; font-size: 9.5px; }
+  }
+  /* No tapar al expirar */
+  body.id-locked .id-lang { display: none; }
+</style>
+
+<nav class="id-lang" id="id-lang" role="group" aria-label="Cambiar idioma">
+  <button data-lang="es" aria-pressed="false" title="Español">ES</button>
+  <button data-lang="ca" aria-pressed="false" title="Català">CA</button>
+  <button data-lang="en" aria-pressed="false" title="English">EN</button>
+  <button data-lang="fr" aria-pressed="false" title="Français">FR</button>
+  <button data-lang="it" aria-pressed="false" title="Italiano">IT</button>
+  <button data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
+</nav>
+
+<script>
+(function () {
+  // Diccionario UI crítica — fácil de mantener/extender
+  // Solo traduce CTAs comunes + textos del switcher; el copy long-form
+  // se mantiene en el idioma original de la landing (esto es honesto:
+  // la web real traducirá todo cuando el cliente contrate)
+  var DICT = {
+    es: {
+      reservar: "Reservar mesa", llamar: "Llamar", comoLlegar: "Cómo llegar",
+      ubicacion: "Dónde estamos", horarios: "Horarios", carta: "Carta",
+      reservas: "Reservas", contacto: "Contacto",
+      langNote: "Demo en castellano · web final 100% multilingüe"
+    },
+    ca: {
+      reservar: "Reservar taula", llamar: "Trucar", comoLlegar: "Com arribar",
+      ubicacion: "On som", horarios: "Horaris", carta: "Carta",
+      reservas: "Reserves", contacto: "Contacte",
+      langNote: "Demo en català · web final 100% multilingüe"
+    },
+    en: {
+      reservar: "Book a table", llamar: "Call us", comoLlegar: "Get directions",
+      ubicacion: "Find us", horarios: "Hours", carta: "Menu",
+      reservas: "Reservations", contacto: "Contact",
+      langNote: "Demo in EN preview · final site fully multilingual"
+    },
+    fr: {
+      reservar: "Réserver", llamar: "Appeler", comoLlegar: "Itinéraire",
+      ubicacion: "Nous trouver", horarios: "Horaires", carta: "Carte",
+      reservas: "Réservations", contacto: "Contact",
+      langNote: "Démo en FR · site final 100% multilingue"
+    },
+    it: {
+      reservar: "Prenota", llamar: "Chiamaci", comoLlegar: "Come arrivare",
+      ubicacion: "Dove siamo", horarios: "Orari", carta: "Menù",
+      reservas: "Prenotazioni", contacto: "Contatti",
+      langNote: "Demo in IT · sito finale 100% multilingue"
+    },
+    de: {
+      reservar: "Tisch buchen", llamar: "Anrufen", comoLlegar: "Wegbeschreibung",
+      ubicacion: "Hier finden Sie uns", horarios: "Öffnungszeiten", carta: "Karte",
+      reservas: "Reservierungen", contacto: "Kontakt",
+      langNote: "DE-Demo · finale Website 100% mehrsprachig"
+    }
+  };
+
+  var defaultLang = document.documentElement.lang || "es";
+  if (defaultLang.length > 2) defaultLang = defaultLang.slice(0, 2);
+
+  var buttons = document.querySelectorAll(".id-lang button");
+  buttons.forEach(function (btn) {
+    if (btn.dataset.lang === defaultLang) btn.setAttribute("aria-pressed", "true");
+    btn.addEventListener("click", function () {
+      var lang = btn.dataset.lang;
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      document.documentElement.lang = lang;
+
+      // Traduce textos críticos por heurística (busca textos comunes en español/catalán)
+      var d = DICT[lang];
+      var patterns = [
+        // CTAs / botones (texto suelto que coincida — case-insensitive)
+        { re: /\b(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)\b/gi, val: d.reservar },
+        { re: /\b(Llamar|Truca'ns|Trucar|Llámanos)\b/gi, val: d.llamar },
+        { re: /\b(Cómo llegar|Com arribar|Com hi arribem)\b/gi, val: d.comoLlegar },
+        // Section titles muy comunes
+        { re: /\b(Dónde estamos|On som|Visita|Visita'ns)\b/gi, val: d.ubicacion },
+        { re: /\b(Horarios|Horaris)\b/gi, val: d.horarios },
+        { re: /\b(Reservas|Reserves)\b/gi, val: d.reservas },
+        { re: /\b(Contacto|Contacte)\b/gi, val: d.contacto },
+      ];
+
+      // Solo cambia nodos de texto dentro de botones / encabezados nav, NO el body completo
+      var targets = document.querySelectorAll(
+        ".btn, .tel-btn, button:not(.id-lang button), " +
+        "nav a, .topbar a, .topbar button, " +
+        "[data-i18n], h2.section-title, h3.section-title"
+      );
+      targets.forEach(function (node) {
+        // No tocar el switcher mismo ni el countdown
+        if (node.closest(".id-lang") || node.closest(".id-countdown") || node.closest(".id-expired")) return;
+        // Solo nodos hoja con texto simple
+        if (node.children.length > 0 && node.children[0].tagName) {
+          // tiene hijos elemento — buscar solo el primer #text descendiente
+          var walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+          var txt;
+          while ((txt = walker.nextNode())) {
+            patterns.forEach(function (p) {
+              if (p.re.test(txt.nodeValue)) {
+                txt.nodeValue = txt.nodeValue.replace(p.re, p.val);
+              }
+            });
+          }
+        } else {
+          patterns.forEach(function (p) {
+            if (p.re.test(node.textContent)) {
+              node.textContent = node.textContent.replace(p.re, p.val);
+            }
+          });
+        }
+      });
+
+      // Tooltip honesta
+      var ln = document.getElementById("id-lang-note");
+      if (!ln) {
+        ln = document.createElement("div");
+        ln.id = "id-lang-note";
+        ln.style.cssText = "position:fixed;bottom:120px;left:12px;z-index:9499;background:rgba(26,20,16,.92);color:#fff;padding:10px 14px;border-radius:10px;font-family:-apple-system,Inter,sans-serif;font-size:11.5px;max-width:240px;line-height:1.4;animation:idLangFade .3s ease;box-shadow:0 4px 14px rgba(0,0,0,.18);";
+        document.body.appendChild(ln);
+        var style = document.createElement("style");
+        style.textContent = "@keyframes idLangFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}";
+        document.head.appendChild(style);
+      }
+      ln.textContent = d.langNote;
+      clearTimeout(window.__idLangTimer);
+      window.__idLangTimer = setTimeout(function () { if (ln) ln.remove(); }, 3500);
+    });
+  });
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-END ✦ -->
+
+</body>
+</html>

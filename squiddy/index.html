@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Squiddy — Fried seafood snacks · Raval, Barcelona</title>
+<meta name="description" content="Squiddy, fried seafood snacks fast-casual en el Raval. Calamares, shrimp cones, Korean shrimp, mixed platters. Tallers 76, Barcelona. Pickup y mesa.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Squiddy — Fried Seafood Snacks · Raval Barcelona">
+<meta property="og:description" content="Bringing the ocean to you. Calamares, shrimps y más. Tallers 76, Raval.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://impactodigital.example/squiddy/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marino:#0d2e4a;
+    --marino-d:#071c2e;
+    --marino-l:#1d4a72;
+    --azul-cielo:#2980b9;
+    --crema:#fff7e6;
+    --crema-d:#f5e8c8;
+    --naranja:#ff8a3d;
+    --amarillo-fri:#f5c451;
+    --rojo-neon:#ff3d57;
+    --gris-claro:#e6e9ed;
+    --line:rgba(255,247,230,0.18);
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    background:var(--marino);color:var(--crema);
+    line-height:1.65;font-size:17px;overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;max-width:1180px;margin:0 auto;
+    padding-left:var(--side-padding);padding-right:var(--side-padding);
+  }
+  .display{font-family:'Bebas Neue', sans-serif;letter-spacing:0.06em;line-height:0.95;text-transform:uppercase}
+  .hand{font-family:'Caveat', cursive}
+  .kicker{
+    font-family:'Bebas Neue', sans-serif;letter-spacing:0.3em;
+    font-size:13px;color:var(--naranja);font-weight:400;
+  }
+
+  /* WAVE PATTERN */
+  .wave-divider{
+    background-color:var(--marino);
+    overflow:hidden;
+    line-height:0;
+  }
+  .wave-divider svg{display:block;width:100%;height:60px}
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(13,46,74,0.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 0;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{
+    width:46px;height:46px;border-radius:50%;
+    background:var(--crema);
+    border:2px solid var(--crema);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .brand-name{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:22px;letter-spacing:0.1em;color:var(--crema);
+  }
+  .brand-name .em{color:var(--naranja)}
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 18px;
+    background:var(--naranja);color:var(--marino-d);
+    font-family:'Bebas Neue', sans-serif;font-size:14px;letter-spacing:0.15em;
+    min-height:44px;
+    transition:background .2s;
+  }
+  .tel-btn:hover{background:var(--amarillo-fri)}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:80px 0 90px;
+    background:
+      radial-gradient(circle at 80% 30%, rgba(41,128,185,0.4) 0%, transparent 50%),
+      radial-gradient(circle at 15% 75%, rgba(255,138,61,0.25) 0%, transparent 50%),
+      linear-gradient(180deg, var(--marino-d) 0%, var(--marino) 100%);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(circle 2px at 20% 25%, rgba(255,247,230,0.18) 0, transparent 3px),
+      radial-gradient(circle 2px at 80% 65%, rgba(255,247,230,0.15) 0, transparent 3px),
+      radial-gradient(circle 1px at 45% 80%, rgba(255,247,230,0.2) 0, transparent 2px),
+      radial-gradient(circle 1px at 65% 20%, rgba(255,247,230,0.2) 0, transparent 2px);
+    background-size:200px 200px;
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:36px;
+    align-items:center;position:relative;
+  }
+  @media(min-width:880px){
+    .hero-grid{grid-template-columns:1.3fr 1fr;gap:48px}
+  }
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:8px 16px;
+    background:var(--naranja);color:var(--marino-d);
+    font-family:'Bebas Neue', sans-serif;letter-spacing:0.18em;
+    font-size:13px;font-weight:600;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:clamp(2.8rem, 7.5vw, 5.4rem);
+    line-height:0.92;text-transform:uppercase;letter-spacing:0.02em;
+    margin-bottom:20px;
+    color:var(--crema);
+  }
+  .hero h1 .em{color:var(--naranja)}
+  .hero h1 .yel{color:var(--amarillo-fri)}
+  .hero-sub{
+    font-family:'Caveat', cursive;
+    color:var(--amarillo-fri);font-size:1.7rem;
+    margin-bottom:20px;display:block;
+  }
+  .hero-lead{
+    font-size:clamp(1.05rem, 2vw, 1.2rem);
+    color:var(--crema-d);max-width:560px;margin-bottom:30px;
+  }
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 24px;
+    font-family:'Bebas Neue', sans-serif;font-size:15px;
+    letter-spacing:0.15em;font-weight:600;
+    min-height:48px;
+    border:2px solid transparent;
+    transition:transform .2s, background .2s, color .2s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--naranja);color:var(--marino-d)}
+  .btn-primary:hover{background:var(--amarillo-fri)}
+  .btn-secondary{background:transparent;color:var(--crema);border-color:var(--crema)}
+  .btn-secondary:hover{background:var(--crema);color:var(--marino)}
+  .btn-ghost{background:transparent;color:var(--amarillo-fri);border-color:var(--amarillo-fri)}
+  .btn-ghost:hover{background:var(--amarillo-fri);color:var(--marino)}
+
+  /* MARINE CREATURES SVG */
+  .creatures-wrap{
+    position:relative;display:flex;justify-content:center;
+    align-items:center;min-height:280px;
+  }
+  .squid-svg{
+    width:100%;max-width:340px;height:auto;
+    filter:drop-shadow(0 8px 20px rgba(7,28,46,0.6));
+  }
+  @keyframes swim{
+    0%,100%{transform:translateY(0) rotate(-3deg)}
+    50%{transform:translateY(-15px) rotate(3deg)}
+  }
+  .squid-svg{animation:swim 6s ease-in-out infinite}
+
+  /* MENU PRINCIPAL */
+  .menu{padding:90px 0;background:var(--crema);color:var(--marino-d)}
+  .menu .kicker{color:var(--naranja)}
+  .section-title{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:clamp(2.4rem, 6vw, 4rem);
+    text-transform:uppercase;line-height:0.95;letter-spacing:0.03em;
+    color:var(--marino-d);margin:10px 0 18px;
+  }
+  .section-lead{
+    color:var(--marino-l);max-width:660px;
+    font-size:1.05rem;margin-bottom:30px;
+  }
+  .bilingual{
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    margin-bottom:24px;
+  }
+  .bilingual span{
+    font-family:'Caveat', cursive;font-size:18px;
+    color:var(--marino-l);
+  }
+  .bilingual em{color:var(--naranja);font-style:normal;font-weight:600}
+  .menu-grid{
+    display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  @media(min-width:680px){.menu-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+  .snack{
+    background:#fff;
+    border-top:5px solid var(--azul-cielo);
+    padding:26px 24px;position:relative;
+    transition:transform .2s;
+  }
+  .snack:hover{transform:translateY(-4px)}
+  .snack:nth-child(2){border-top-color:var(--naranja)}
+  .snack:nth-child(3){border-top-color:var(--rojo-neon)}
+  .snack:nth-child(4){border-top-color:var(--amarillo-fri)}
+  .snack:nth-child(5){border-top-color:var(--marino-l)}
+  .snack:nth-child(6){border-top-color:var(--naranja)}
+  .snack-icon{
+    width:54px;height:54px;border-radius:50%;
+    background:var(--marino-d);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--amarillo-fri);
+    margin-bottom:16px;
+  }
+  .snack h4{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:1.5rem;letter-spacing:0.05em;
+    margin-bottom:4px;color:var(--marino-d);
+  }
+  .snack .en{
+    font-family:'Caveat', cursive;font-size:1rem;
+    color:var(--azul-cielo);display:block;margin-bottom:10px;
+  }
+  .snack p{font-size:14.5px;color:var(--marino-l);line-height:1.55}
+
+  /* SAUCE BAR */
+  .sauces{padding:90px 0;background:var(--marino);color:var(--crema)}
+  .sauces-grid{
+    display:grid;grid-template-columns:1fr;gap:14px;margin-top:30px;
+  }
+  @media(min-width:680px){.sauces-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1000px){.sauces-grid{grid-template-columns:repeat(4,1fr)}}
+  .sauce{
+    background:var(--marino-d);
+    border-left:4px solid var(--naranja);
+    padding:22px 20px;
+    transition:border-color .2s;
+  }
+  .sauce:nth-child(2){border-left-color:var(--rojo-neon)}
+  .sauce:nth-child(3){border-left-color:var(--amarillo-fri)}
+  .sauce:nth-child(4){border-left-color:var(--azul-cielo)}
+  .sauce h5{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:1.2rem;letter-spacing:0.08em;
+    margin-bottom:8px;color:var(--amarillo-fri);
+  }
+  .sauce p{font-size:14px;color:var(--crema-d);line-height:1.5}
+
+  /* PROMESA OCEAN */
+  .promesa{
+    padding:100px 0;
+    background:
+      linear-gradient(135deg, var(--azul-cielo) 0%, var(--marino-l) 100%);
+    color:var(--crema);position:relative;overflow:hidden;text-align:center;
+  }
+  .promesa::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle 3px at 10% 20%, rgba(255,247,230,0.2) 0, transparent 4px),
+      radial-gradient(circle 3px at 90% 80%, rgba(255,247,230,0.2) 0, transparent 4px),
+      radial-gradient(circle 2px at 50% 40%, rgba(255,247,230,0.15) 0, transparent 3px),
+      radial-gradient(circle 2px at 30% 70%, rgba(255,247,230,0.15) 0, transparent 3px);
+    background-size:250px 250px;pointer-events:none;
+  }
+  .promesa-inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
+  .promesa h2{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
+    text-transform:uppercase;letter-spacing:0.04em;line-height:1;
+    margin-bottom:20px;
+  }
+  .promesa p{
+    font-size:1.15rem;line-height:1.7;color:var(--crema-d);
+    margin-bottom:14px;
+  }
+  .promesa .hand{
+    font-family:'Caveat', cursive;font-size:2rem;
+    color:var(--amarillo-fri);margin-top:14px;display:block;
+  }
+
+  /* AMBIENTE */
+  .ambiente{padding:90px 0;background:var(--marino)}
+  .amb-grid{
+    display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px;
+  }
+  @media(min-width:680px){.amb-grid{grid-template-columns:repeat(3,1fr)}}
+  .amb-cell{
+    background:var(--marino-d);
+    aspect-ratio:1/1;
+    display:flex;align-items:center;justify-content:center;
+    padding:18px;text-align:center;
+    border:1px dashed var(--naranja);
+  }
+  .amb-cell span{
+    font-family:'Caveat', cursive;color:var(--amarillo-fri);
+    font-size:1.2rem;
+  }
+
+  /* VISITA */
+  .visita{padding:90px 0;background:var(--marino-d);color:var(--crema)}
+  .visita-grid{
+    display:grid;grid-template-columns:1fr;gap:28px;
+  }
+  @media(min-width:880px){.visita-grid{grid-template-columns:1fr 1fr;gap:36px}}
+  .visita-info{
+    background:var(--marino);
+    padding:32px 28px;
+    border-top:4px solid var(--naranja);
+  }
+  .visita-info h3{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:1.7rem;letter-spacing:0.06em;
+    text-transform:uppercase;margin-bottom:18px;color:var(--amarillo-fri);
+  }
+  .visita-info p{margin-bottom:8px;font-size:15px;color:var(--crema-d)}
+  .visita-info strong{color:var(--crema)}
+  .horarios{list-style:none;margin:18px 0}
+  .horarios li{
+    display:flex;justify-content:space-between;
+    padding:9px 0;border-bottom:1px solid var(--line);
+    font-size:14.5px;color:var(--crema-d);
+  }
+  .horarios li.today{color:var(--naranja);font-weight:700}
+  .map-wrap{
+    position:relative;border:2px solid var(--naranja);
+    overflow:hidden;min-height:380px;
+  }
+  .map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+  .map-cta{
+    position:absolute;bottom:14px;left:14px;
+    padding:12px 22px;background:var(--naranja);color:var(--marino-d);
+    font-family:'Bebas Neue', sans-serif;letter-spacing:0.15em;
+    font-size:14px;min-height:44px;display:inline-flex;align-items:center;
+  }
+
+  /* FAQ */
+  .faq{padding:90px 0;background:var(--marino)}
+  details{
+    background:var(--marino-d);padding:20px 24px;margin-bottom:12px;
+    border-left:3px solid var(--naranja);
+  }
+  details[open]{background:var(--marino-l);border-left-color:var(--amarillo-fri)}
+  summary{
+    cursor:pointer;font-family:'Bebas Neue', sans-serif;
+    font-size:1.05rem;letter-spacing:0.06em;text-transform:uppercase;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;
+    color:var(--crema);line-height:1.3;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.6rem;color:var(--naranja);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg);color:var(--amarillo-fri)}
+  details p{margin-top:10px;color:var(--crema-d);font-size:15px;font-family:'Inter', sans-serif}
+
+  /* FOOTER */
+  footer{background:#020c18;color:var(--crema);padding:50px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:24px}
+  @media(min-width:680px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+  .foot-brand{
+    font-family:'Bebas Neue', sans-serif;font-size:2.2rem;
+    letter-spacing:0.1em;color:var(--naranja);
+  }
+  .foot-tag{
+    font-family:'Caveat', cursive;color:var(--amarillo-fri);
+    font-size:1.2rem;margin-top:4px;display:block;
+  }
+  .foot h5{
+    font-family:'Bebas Neue', sans-serif;font-size:13px;
+    letter-spacing:0.25em;color:var(--amarillo-fri);
+    margin-bottom:12px;
+  }
+  .foot a{display:block;padding:4px 0;font-size:14.5px;color:var(--crema-d)}
+  .foot a:hover{color:var(--naranja)}
+  .foot-base{
+    margin-top:30px;padding-top:20px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;color:rgba(255,247,230,0.6);
+    display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;
+  }
+
+  /* MODAL */
+  dialog.reserva-modal{
+    border:2px solid var(--naranja);background:var(--marino);color:var(--crema);
+    padding:0;
+    max-width:480px;width:calc(100% - 32px);margin:auto;
+  }
+  dialog::backdrop{background:rgba(7,28,46,0.85)}
+  .modal-inner{padding:30px 28px}
+  .modal-inner h3{font-family:'Bebas Neue', sans-serif;font-size:1.6rem;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;color:var(--amarillo-fri)}
+  .modal-inner p{margin-bottom:18px;font-size:14.5px;color:var(--crema-d)}
+  .modal-inner label{display:block;font-family:'Bebas Neue', sans-serif;font-size:12px;letter-spacing:0.15em;margin-bottom:6px;margin-top:12px;color:var(--naranja)}
+  .modal-inner input,.modal-inner select,.modal-inner textarea{
+    width:100%;padding:12px 14px;font-family:'Inter', sans-serif;font-size:15px;
+    border:1.5px solid var(--marino-l);background:var(--marino-d);color:var(--crema);
+  }
+  .modal-actions{display:flex;gap:10px;margin-top:22px}
+  .modal-actions button{flex:1}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="brand" aria-label="Squiddy, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 32 32"><path d="M16 4 Q22 4 22 10 Q22 13 20 15 L20 18 Q20 20 22 21 L22 24 Q22 26 20 26 L19 24 Q19 22 18 22 Q17 24 17 26 L15 26 Q15 24 14 22 Q13 22 13 24 L12 26 Q10 26 10 24 L10 21 Q12 20 12 18 L12 15 Q10 13 10 10 Q10 4 16 4 Z" fill="#0d2e4a"/><circle cx="13.5" cy="9" r="1.4" fill="#fff7e6"/><circle cx="18.5" cy="9" r="1.4" fill="#fff7e6"/></svg>
+      </span>
+      <span class="brand-name">Squi<span class="em">ddy</span></span>
+    </a>
+    <a href="tel:+34000000000" class="tel-btn" aria-label="Llamar al local">Llamar</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="hero-tag">★ Tallers 76 · Raval · Barcelona</span>
+          <h1>Fried <span class="em">seafood</span><br><span class="yel">snacks</span>,<br>en el Raval.</h1>
+          <span class="hero-sub">~ Bringing the ocean to you ~</span>
+          <p class="hero-lead">Calamares crujientes, shrimp cones para coger con la mano, Korean shrimp con salsa picante, y mixed platters para compartir entre amigos. Fast-casual a pie de calle. Pedir, esperar tres minutos, y a comer.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" id="open-reserva" type="button">Reservar mesa</button>
+            <a class="btn btn-secondary" href="tel:+34000000000">Llamar</a>
+            <a class="btn btn-ghost" href="#visita">Cómo llegar</a>
+          </div>
+        </div>
+        <div class="creatures-wrap reveal" aria-hidden="true">
+          <!-- SVG calamar + sardina -->
+          <svg class="squid-svg" viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sardina arriba -->
+            <g transform="translate(40, 50)">
+              <ellipse cx="60" cy="30" rx="55" ry="16" fill="#f5c451"/>
+              <ellipse cx="60" cy="30" rx="50" ry="14" fill="#ff8a3d"/>
+              <path d="M5 30 L-15 18 L-12 30 L-15 42 Z" fill="#f5c451"/>
+              <path d="M5 30 L-12 22 L-10 30 L-12 38 Z" fill="#ff8a3d"/>
+              <circle cx="90" cy="26" r="4" fill="#fff7e6"/>
+              <circle cx="91" cy="26" r="2" fill="#071c2e"/>
+              <path d="M50 18 L55 25 L50 32 Z" fill="#fff7e6" opacity="0.6"/>
+              <path d="M65 18 L70 25 L65 32 Z" fill="#fff7e6" opacity="0.6"/>
+              <path d="M30 12 Q35 8 40 12 L40 18 Q35 16 30 18 Z" fill="#fff7e6"/>
+              <path d="M30 42 Q35 48 40 42 L40 38 Q35 40 30 38 Z" fill="#fff7e6"/>
+            </g>
+            <!-- Calamar grande -->
+            <g transform="translate(80, 130)">
+              <!-- Cuerpo -->
+              <path d="M90 0 Q150 0 150 60 Q150 90 130 100 L130 130 Q130 145 145 150 L145 180 Q145 195 130 195 L125 180 Q125 165 120 165 Q115 175 115 195 L100 195 Q100 175 95 165 Q88 165 88 180 L83 195 Q68 195 68 180 L68 150 Q83 145 83 130 L83 100 Q63 90 63 60 Q63 0 105 0 Z" fill="#fff7e6"/>
+              <path d="M105 5 Q145 5 145 60 Q145 85 125 95 L125 130 Q125 140 138 145 L138 175 Q138 188 128 188 L125 175 Q125 162 120 162 Q116 172 116 188 L102 188 Q102 172 98 162 Q92 162 92 175 L89 188 Q79 188 79 175 L79 145 Q92 140 92 130 L92 95 Q72 85 72 60 Q72 5 105 5 Z" fill="#ff8a3d"/>
+              <!-- Ojos grandes -->
+              <ellipse cx="90" cy="55" rx="10" ry="11" fill="#fff7e6"/>
+              <ellipse cx="125" cy="55" rx="10" ry="11" fill="#fff7e6"/>
+              <circle cx="92" cy="57" r="5" fill="#071c2e"/>
+              <circle cx="127" cy="57" r="5" fill="#071c2e"/>
+              <circle cx="93" cy="55" r="1.5" fill="#fff7e6"/>
+              <circle cx="128" cy="55" r="1.5" fill="#fff7e6"/>
+              <!-- Sonrisa -->
+              <path d="M90 80 Q108 90 125 80" stroke="#071c2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="80" cy="82" r="4" fill="#ff3d57" opacity="0.5"/>
+              <circle cx="135" cy="82" r="4" fill="#ff3d57" opacity="0.5"/>
+              <!-- Ventosas en tentaculos -->
+              <circle cx="98" cy="170" r="1.8" fill="#0d2e4a"/>
+              <circle cx="98" cy="178" r="1.8" fill="#0d2e4a"/>
+              <circle cx="116" cy="170" r="1.8" fill="#0d2e4a"/>
+              <circle cx="116" cy="178" r="1.8" fill="#0d2e4a"/>
+            </g>
+            <!-- Burbujas -->
+            <circle cx="280" cy="100" r="6" fill="#fff7e6" opacity="0.4"/>
+            <circle cx="295" cy="130" r="4" fill="#fff7e6" opacity="0.3"/>
+            <circle cx="285" cy="60" r="3" fill="#fff7e6" opacity="0.5"/>
+            <circle cx="45" cy="200" r="5" fill="#fff7e6" opacity="0.4"/>
+            <circle cx="30" cy="240" r="3" fill="#fff7e6" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,40 Q150,0 300,30 T600,30 T900,30 T1200,30 L1200,60 L0,60 Z" fill="#fff7e6"/>
+    </svg>
+  </div>
+
+  <section class="menu">
+    <div class="container">
+      <span class="kicker">Menu · Carta</span>
+      <h2 class="section-title">Six snacks, one ocean.</h2>
+      <div class="bilingual">
+        <span>~ Carta bilingüe ES/EN</span>
+        <em>·</em>
+        <span>~ <em>Made to share or solo</em></span>
+      </div>
+      <p class="section-lead">Carta corta y directa. Cada snack pensado para coger con la mano, mojar en salsa, y repetir. Sin tonterías.</p>
+      <div class="menu-grid">
+        <article class="snack reveal">
+          <div class="snack-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><circle cx="9" cy="7" r="1.5"/><circle cx="15" cy="7" r="1.5"/><circle cx="9" cy="17" r="1.5"/><circle cx="15" cy="17" r="1.5"/></svg>
+          </div>
+          <h4>Calamares Madrid</h4>
+          <span class="en">~ classic squid rings, Madrid style</span>
+          <p>Anillas frescas rebozadas finas y fritas al momento. Limón al lado y la salsa que tú elijas.</p>
+        </article>
+        <article class="snack reveal">
+          <div class="snack-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 Q6 8 6 14 L4 22 L20 22 L18 14 Q18 8 12 2 Z"/></svg>
+          </div>
+          <h4>Shrimp Cone</h4>
+          <span class="en">~ crispy shrimps in a paper cone</span>
+          <p>Gambas pequeñas tempurizadas, servidas en cono de papel para comer caminando o en barra. Para ti solo.</p>
+        </article>
+        <article class="snack reveal">
+          <div class="snack-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M5 6 Q5 3 8 3 L16 3 Q19 3 19 6 L18 18 Q18 20 16 20 L8 20 Q6 20 6 18 Z"/></svg>
+          </div>
+          <h4>Korean Shrimp</h4>
+          <span class="en">~ sweet & spicy Korean glaze</span>
+          <p>Gambas fritas glaseadas con salsa coreana gochujang dulce-picante. Sésamo tostado y cebollino. Pegan adicción.</p>
+        </article>
+        <article class="snack reveal">
+          <div class="snack-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4 18 L4 8 Q4 6 6 6 L18 6 Q20 6 20 8 L20 18 Z"/><path d="M4 12 L20 12" stroke="#fff7e6" stroke-width="1"/></svg>
+          </div>
+          <h4>Mixed Platter</h4>
+          <span class="en">~ the squiddy classic for sharing</span>
+          <p>Calamares + shrimp + boquerones + chips, todo en una bandeja para 2-3. Cuatro salsas a elegir. El plato más pedido.</p>
+        </article>
+        <article class="snack reveal">
+          <div class="snack-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 4 Q14 12 12 20 Q10 12 12 4 Z" fill="#0d2e4a"/></svg>
+          </div>
+          <h4>Boquerones fritos</h4>
+          <span class="en">~ crispy fried anchovies</span>
+          <p>Boquerones de bahía, rebozados ligeros y fritos. Sal Maldon, limón y vermouth de barril aparte.</p>
+        </article>
+        <article class="snack reveal">
+          <div class="snack-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4 L6 18 Q6 20 8 20 L16 20 Q18 20 18 18 L18 4 Z"/></svg>
+          </div>
+          <h4>Squiddy chips</h4>
+          <span class="en">~ thick cut hand chips</span>
+          <p>Patatas gruesas cortadas a cuchillo, fritas dos veces. Crujientes por fuera, mantequilla por dentro. Sal de Cádiz.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sauces">
+    <div class="container">
+      <span class="kicker">Sauce bar</span>
+      <h2 class="section-title">Cuatro salsas, una elige.</h2>
+      <p class="section-lead">Todas hechas en casa. Pides cuál con cada snack y mojas a tu ritmo. Si te gusta una, pides más.</p>
+      <div class="sauces-grid">
+        <div class="sauce reveal">
+          <h5>Brava Squiddy</h5>
+          <p>Nuestra brava: pimentón ahumado, tomate, ajo confitado y un toque de cayena. Pica justa.</p>
+        </div>
+        <div class="sauce reveal">
+          <h5>Lemon Aioli</h5>
+          <p>Mayonesa de ajo y limón confitado. Espesa, cremosa, equilibra el frito.</p>
+        </div>
+        <div class="sauce reveal">
+          <h5>Gochujang Glaze</h5>
+          <p>Pasta coreana fermentada con miel y soja. Pica un puntito, dulce, agarra al paladar.</p>
+        </div>
+        <div class="sauce reveal">
+          <h5>Salsa verde</h5>
+          <p>Perejil fresco, alcaparras, anchoa, limón y AOVE. Acidez para limpiar boca.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promesa">
+    <div class="container promesa-inner">
+      <span class="kicker" style="color:#fff;opacity:0.9">Why squiddy</span>
+      <h2>Bringing the ocean to you.</h2>
+      <p>Trabajamos con pescaderos del puerto. El género entra cada mañana, se rebozada al momento, se fríe a la temperatura exacta y sale a tu mesa en minutos. Cero stock congelado, cero atajos.</p>
+      <p>Local pequeño, barra de cara a la calle, mesas altas. Pides en el mostrador, pagas y al rato te llaman por nombre. Pickup y mesa a la vez. Fast pero con producto serio.</p>
+      <span class="hand">~ Para llevar, para barra o para mesa ~</span>
+    </div>
+  </section>
+
+  <section class="ambiente">
+    <div class="container">
+      <span class="kicker">El sitio</span>
+      <h2 class="section-title">Azul + crema + cocina abierta.</h2>
+      <p class="section-lead">Paredes azul marino con paneles blancos, neón naranja con el logo, barra alta a la calle. Capacidad 16. Ves al chef trabajar mientras esperas tu cono.</p>
+      <div class="amb-grid">
+        <div class="amb-cell reveal"><span>[Foto barra azul · sustituir antes del pitch]</span></div>
+        <div class="amb-cell reveal"><span>[Foto calamares plato · sustituir antes del pitch]</span></div>
+        <div class="amb-cell reveal"><span>[Foto neón fachada · sustituir antes del pitch]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visita" id="visita">
+    <div class="container">
+      <span class="kicker">Encuéntranos</span>
+      <h2 class="section-title">Calle Tallers 76, Raval.</h2>
+      <p class="section-lead">A dos minutos de Plaça Universitat. Calle peatonal con bares y tiendas. Metro L1/L2 Universitat o L3 Catalunya.</p>
+      <div class="visita-grid">
+        <div class="visita-info reveal">
+          <h3>Cómo encontrarnos</h3>
+          <p><strong>Dirección:</strong> Calle de Tallers 76, 08001 Raval, Barcelona</p>
+          <p><strong>Teléfono:</strong> al llegar te lo damos</p>
+          <p><strong>Instagram:</strong> @squiddy_bcn</p>
+          <ul class="horarios" id="horarios">
+            <li data-day="1"><span>Lunes</span><span>Cerrado</span></li>
+            <li data-day="2"><span>Martes</span><span>13:00 – 23:00</span></li>
+            <li data-day="3"><span>Miércoles</span><span>13:00 – 23:00</span></li>
+            <li data-day="4"><span>Jueves</span><span>13:00 – 23:30</span></li>
+            <li data-day="5"><span>Viernes</span><span>13:00 – 00:30</span></li>
+            <li data-day="6"><span>Sábado</span><span>13:00 – 00:30</span></li>
+            <li data-day="0"><span>Domingo</span><span>13:00 – 23:00</span></li>
+          </ul>
+          <div class="hero-ctas" style="margin-top:18px">
+            <button class="btn btn-primary" id="open-reserva-2" type="button">Reservar mesa</button>
+            <a class="btn btn-secondary" href="tel:+34000000000">Llamar</a>
+          </div>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe loading="lazy" title="Mapa de Squiddy en el Raval" src="https://www.google.com/maps?q=Calle+de+Tallers+76+Barcelona&output=embed"></iframe>
+          <a class="map-cta" href="https://www.google.com/maps/search/?api=1&query=Calle%20de%20Tallers%2076%20Barcelona" target="_blank" rel="noopener">Cómo llegar →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2 class="section-title">Antes de venir.</h2>
+      <details>
+        <summary>¿Hace falta reserva?</summary>
+        <p>Para mesa sí recomendamos, sobre todo viernes y sábado noche. Tenemos 16 cubiertos en sala. Para barra a pie y pickup no hace falta: vienes, pides, comes en barra o te lo llevas. Mediodías entre semana suele haber sitio sin reservar.</p>
+      </details>
+      <details>
+        <summary>¿El pescado es fresco o congelado?</summary>
+        <p>Fresco. Trabajamos con pescaderos del puerto de Barcelona. Entrada de género cada mañana de martes a sábado. Calamares, gambas, boquerones y pescado del día llegan limpios, los rebozamos al momento y los freímos al pedir. No usamos producto congelado.</p>
+      </details>
+      <details>
+        <summary>¿Tenéis opciones vegetarianas o sin gluten?</summary>
+        <p>Sin gluten: tenemos rebozado sin gluten al pedirlo, las patatas Squiddy chips son aptas, y las cuatro salsas son sin gluten. Vegetarianas: chips, ensalada del día, boquerones se pueden cambiar por verdura tempurizada según día. Para celiacos severos avisa al pedir para preparar en zona separada.</p>
+      </details>
+      <details>
+        <summary>¿Pickup, delivery o solo en sitio?</summary>
+        <p>Las tres cosas. Pickup: llamas, encargas, recoges en mostrador en 10 minutos. Delivery: trabajamos con Glovo y Uber Eats con radio limitado para que llegue caliente. Mesa: reservas o vienes sin reserva si hay sitio. Lo ideal del frito es comerlo en el sitio recién hecho, pero el pickup llega bien si lo abres rápido.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot">
+        <div class="foot-brand">SQUIDDY</div>
+        <span class="foot-tag">~ Bringing the ocean to you ~</span>
+        <p style="margin-top:14px;max-width:380px;font-size:14.5px;color:var(--crema-d)">Fried seafood snacks fast-casual en el Raval. Calle de Tallers 76, Barcelona.</p>
+      </div>
+      <div class="foot">
+        <h5>Visit</h5>
+        <a href="#visita">Tallers 76, Raval</a>
+        <a href="#visita">Horario semanal</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Calle+de+Tallers+76+Barcelona" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="foot">
+        <h5>Contact</h5>
+        <a href="tel:+34000000000">Llamar</a>
+        <a href="#" id="open-reserva-3">Reservar mesa</a>
+        <a href="https://instagram.com/squiddy_bcn" target="_blank" rel="noopener">@squiddy_bcn</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© Squiddy — Raval, Barcelona</span>
+      <span>Demo · sistema de reservas powered by Impacto Digital</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="reserva-dialog" class="reserva-modal" aria-labelledby="reserva-title">
+  <form class="modal-inner" method="dialog">
+    <h3 id="reserva-title">Reservar mesa</h3>
+    <p>Te confirmamos por teléfono lo antes posible. Para pickup llama directamente.</p>
+    <label for="r-nombre">Nombre</label>
+    <input id="r-nombre" name="nombre" type="text" required>
+    <label for="r-tel">Teléfono</label>
+    <input id="r-tel" name="tel" type="tel" required>
+    <label for="r-fecha">Día y hora</label>
+    <input id="r-fecha" name="fecha" type="datetime-local" required>
+    <label for="r-personas">Personas</label>
+    <select id="r-personas" name="personas">
+      <option>1-2</option><option>3-4</option><option>5-6</option><option>7-8</option>
+    </select>
+    <label for="r-notas">Notas (alérgenos, ocasión…)</label>
+    <textarea id="r-notas" name="notas" rows="2"></textarea>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-ghost" id="close-reserva">Cerrar</button>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Squiddy",
+  "servesCuisine":["Seafood","Fast Casual","Spanish"],
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle de Tallers 76",
+    "addressLocality":"Barcelona",
+    "addressRegion":"El Raval",
+    "postalCode":"08001",
+    "addressCountry":"ES"
+  },
+  "sameAs":["https://instagram.com/squiddy_bcn"],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday"],"opens":"13:00","closes":"23:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"13:00","closes":"23:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"13:00","closes":"00:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"13:00","closes":"23:00"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Hace falta reserva?","acceptedAnswer":{"@type":"Answer","text":"Para mesa recomendamos, sobre todo viernes y sábado noche. 16 cubiertos en sala. Para barra y pickup no hace falta. Mediodías entre semana suele haber sitio sin reservar."}},
+    {"@type":"Question","name":"¿El pescado es fresco o congelado?","acceptedAnswer":{"@type":"Answer","text":"Fresco. Pescaderos del puerto de Barcelona. Entrada de género cada mañana de martes a sábado. Calamares, gambas, boquerones y pescado del día llegan limpios, rebozamos al momento, freímos al pedir. Sin congelado."}},
+    {"@type":"Question","name":"¿Opciones vegetarianas o sin gluten?","acceptedAnswer":{"@type":"Answer","text":"Sin gluten: rebozado sin gluten a pedir, Squiddy chips aptas, las cuatro salsas son sin gluten. Veggie: chips, ensalada del día, verdura tempurizada según día. Para celiacos severos avisar al pedir para zona separada."}},
+    {"@type":"Question","name":"¿Pickup, delivery o solo en sitio?","acceptedAnswer":{"@type":"Answer","text":"Las tres. Pickup: encargas, recoges en mostrador en 10 min. Delivery: Glovo y Uber Eats con radio limitado para que llegue caliente. Mesa: reservas o sin reserva si hay sitio. Ideal del frito es comerlo en sitio recién hecho."}}
+  ]
+}
+</script>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible')), 2500);
+
+  const today = new Date().getDay();
+  const li = document.querySelector(`#horarios li[data-day="${today}"]`);
+  if(li) li.classList.add('today');
+
+  const dlg = document.getElementById('reserva-dialog');
+  document.querySelectorAll('#open-reserva, #open-reserva-2, #open-reserva-3').forEach(b=>{
+    b.addEventListener('click', e=>{ e.preventDefault(); if(dlg && typeof dlg.showModal==='function') dlg.showModal(); });
+  });
+  document.getElementById('close-reserva')?.addEventListener('click', ()=>dlg.close());
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg: #0f0c0a; --id-fg: #f4ede1; --id-accent: #c89e5a;
+    --id-cream: #f4ede1; --id-cream-dk: #8a7458;
+    --id-ink: #1a1410; --id-wa: #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) { body:not(.id-locked) { padding-bottom: 56px; } }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg); color: var(--id-fg);
+    border-top: 2px solid var(--id-accent); padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px; line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; color: var(--id-accent); font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums; font-weight: 700;
+    font-size: 16px; letter-spacing: 0.02em;
+  }
+  .id-countdown__cta { opacity: .85; font-size: 13px; }
+  .id-countdown__cta strong { color: var(--id-accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream); color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase; letter-spacing: 0.28em;
+    font-size: 12px; color: var(--id-cream-dk);
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px); line-height: 0.9;
+    margin: 0 0 24px; font-weight: 900;
+    letter-spacing: -0.04em; color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px); line-height: 1.55;
+    margin: 0 auto 36px; max-width: 520px; color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 999px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa); color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent; color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px; color: var(--id-cream-dk);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin: 0; font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Squiddy%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Squiddy</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Squiddy%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Squiddy%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Squiddy y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-31T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+  if (tick()) { setInterval(tick, 1000); }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-START ✦ -->
+<style>
+  .id-lang {
+    position: fixed; bottom: 80px; left: 12px;
+    z-index: 9500;
+    display: inline-flex; gap: 4px;
+    padding: 4px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.08);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  }
+  .id-lang button {
+    width: 30px; height: 30px;
+    border: 0; border-radius: 999px;
+    background: transparent; cursor: pointer;
+    font-family: inherit; font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1a1410;
+    text-transform: uppercase;
+    transition: all .18s ease;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .id-lang button:hover { background: rgba(0,0,0,.07); }
+  .id-lang button[aria-pressed="true"] {
+    background: #1a1410; color: #fff;
+  }
+  @media (max-width: 640px) {
+    .id-lang { bottom: 70px; left: 8px; padding: 3px; gap: 2px; }
+    .id-lang button { width: 26px; height: 26px; font-size: 9.5px; }
+  }
+  /* No tapar al expirar */
+  body.id-locked .id-lang { display: none; }
+</style>
+
+<nav class="id-lang" id="id-lang" role="group" aria-label="Cambiar idioma">
+  <button data-lang="es" aria-pressed="false" title="Español">ES</button>
+  <button data-lang="ca" aria-pressed="false" title="Català">CA</button>
+  <button data-lang="en" aria-pressed="false" title="English">EN</button>
+  <button data-lang="fr" aria-pressed="false" title="Français">FR</button>
+  <button data-lang="it" aria-pressed="false" title="Italiano">IT</button>
+  <button data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
+</nav>
+
+<script>
+(function () {
+  // Diccionario UI crítica — fácil de mantener/extender
+  // Solo traduce CTAs comunes + textos del switcher; el copy long-form
+  // se mantiene en el idioma original de la landing (esto es honesto:
+  // la web real traducirá todo cuando el cliente contrate)
+  var DICT = {
+    es: {
+      reservar: "Reservar mesa", llamar: "Llamar", comoLlegar: "Cómo llegar",
+      ubicacion: "Dónde estamos", horarios: "Horarios", carta: "Carta",
+      reservas: "Reservas", contacto: "Contacto",
+      langNote: "Demo en castellano · web final 100% multilingüe"
+    },
+    ca: {
+      reservar: "Reservar taula", llamar: "Trucar", comoLlegar: "Com arribar",
+      ubicacion: "On som", horarios: "Horaris", carta: "Carta",
+      reservas: "Reserves", contacto: "Contacte",
+      langNote: "Demo en català · web final 100% multilingüe"
+    },
+    en: {
+      reservar: "Book a table", llamar: "Call us", comoLlegar: "Get directions",
+      ubicacion: "Find us", horarios: "Hours", carta: "Menu",
+      reservas: "Reservations", contacto: "Contact",
+      langNote: "Demo in EN preview · final site fully multilingual"
+    },
+    fr: {
+      reservar: "Réserver", llamar: "Appeler", comoLlegar: "Itinéraire",
+      ubicacion: "Nous trouver", horarios: "Horaires", carta: "Carte",
+      reservas: "Réservations", contacto: "Contact",
+      langNote: "Démo en FR · site final 100% multilingue"
+    },
+    it: {
+      reservar: "Prenota", llamar: "Chiamaci", comoLlegar: "Come arrivare",
+      ubicacion: "Dove siamo", horarios: "Orari", carta: "Menù",
+      reservas: "Prenotazioni", contacto: "Contatti",
+      langNote: "Demo in IT · sito finale 100% multilingue"
+    },
+    de: {
+      reservar: "Tisch buchen", llamar: "Anrufen", comoLlegar: "Wegbeschreibung",
+      ubicacion: "Hier finden Sie uns", horarios: "Öffnungszeiten", carta: "Karte",
+      reservas: "Reservierungen", contacto: "Kontakt",
+      langNote: "DE-Demo · finale Website 100% mehrsprachig"
+    }
+  };
+
+  var defaultLang = document.documentElement.lang || "es";
+  if (defaultLang.length > 2) defaultLang = defaultLang.slice(0, 2);
+
+  var buttons = document.querySelectorAll(".id-lang button");
+  buttons.forEach(function (btn) {
+    if (btn.dataset.lang === defaultLang) btn.setAttribute("aria-pressed", "true");
+    btn.addEventListener("click", function () {
+      var lang = btn.dataset.lang;
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      document.documentElement.lang = lang;
+
+      // Traduce textos críticos por heurística (busca textos comunes en español/catalán)
+      var d = DICT[lang];
+      var patterns = [
+        // CTAs / botones (texto suelto que coincida — case-insensitive)
+        { re: /\b(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)\b/gi, val: d.reservar },
+        { re: /\b(Llamar|Truca'ns|Trucar|Llámanos)\b/gi, val: d.llamar },
+        { re: /\b(Cómo llegar|Com arribar|Com hi arribem)\b/gi, val: d.comoLlegar },
+        // Section titles muy comunes
+        { re: /\b(Dónde estamos|On som|Visita|Visita'ns)\b/gi, val: d.ubicacion },
+        { re: /\b(Horarios|Horaris)\b/gi, val: d.horarios },
+        { re: /\b(Reservas|Reserves)\b/gi, val: d.reservas },
+        { re: /\b(Contacto|Contacte)\b/gi, val: d.contacto },
+      ];
+
+      // Solo cambia nodos de texto dentro de botones / encabezados nav, NO el body completo
+      var targets = document.querySelectorAll(
+        ".btn, .tel-btn, button:not(.id-lang button), " +
+        "nav a, .topbar a, .topbar button, " +
+        "[data-i18n], h2.section-title, h3.section-title"
+      );
+      targets.forEach(function (node) {
+        // No tocar el switcher mismo ni el countdown
+        if (node.closest(".id-lang") || node.closest(".id-countdown") || node.closest(".id-expired")) return;
+        // Solo nodos hoja con texto simple
+        if (node.children.length > 0 && node.children[0].tagName) {
+          // tiene hijos elemento — buscar solo el primer #text descendiente
+          var walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+          var txt;
+          while ((txt = walker.nextNode())) {
+            patterns.forEach(function (p) {
+              if (p.re.test(txt.nodeValue)) {
+                txt.nodeValue = txt.nodeValue.replace(p.re, p.val);
+              }
+            });
+          }
+        } else {
+          patterns.forEach(function (p) {
+            if (p.re.test(node.textContent)) {
+              node.textContent = node.textContent.replace(p.re, p.val);
+            }
+          });
+        }
+      });
+
+      // Tooltip honesta
+      var ln = document.getElementById("id-lang-note");
+      if (!ln) {
+        ln = document.createElement("div");
+        ln.id = "id-lang-note";
+        ln.style.cssText = "position:fixed;bottom:120px;left:12px;z-index:9499;background:rgba(26,20,16,.92);color:#fff;padding:10px 14px;border-radius:10px;font-family:-apple-system,Inter,sans-serif;font-size:11.5px;max-width:240px;line-height:1.4;animation:idLangFade .3s ease;box-shadow:0 4px 14px rgba(0,0,0,.18);";
+        document.body.appendChild(ln);
+        var style = document.createElement("style");
+        style.textContent = "@keyframes idLangFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}";
+        document.head.appendChild(style);
+      }
+      ln.textContent = d.langNote;
+      clearTimeout(window.__idLangTimer);
+      window.__idLangTimer = setTimeout(function () { if (ln) ln.remove(); }, 3500);
+    });
+  });
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-END ✦ -->
+
+</body>
+</html>

@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzería Obras Cumbres — Pizza argentina + empanadas · Badalona</title>
+<meta name="description" content="Pizza argentina con mucha mozzarella, empanadas, fugazzeta y fainá en Badalona. Calle Lleó 7, junto Carrer del Mar y Metro Badalona. Hecha al momento.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Obras Cumbres — Pizza argentina + empanadas · Badalona">
+<meta property="og:description" content="Auténtica pizza argentina con sardel, olivas y media muzza. Empanadas, fugazzeta y fainá en Badalona.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0a0a0a;
+    --negro-soft:#181818;
+    --negro-mid:#272727;
+    --crema:#f3ecde;
+    --crema-dk:#e8dec6;
+    --dorado:#d49b32;
+    --dorado-dk:#a87519;
+    --oliva:#5a6f2b;
+    --oliva-dk:#3f4f1a;
+    --tomate:#c93220;
+    --tomate-dk:#9a2516;
+    --celeste:#74acdf;
+    --celeste-dk:#4f8cc8;
+    --line:rgba(243,236,222,0.16);
+    --line-dk:rgba(10,10,10,0.14);
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--crema);
+    color:var(--negro);
+    line-height:1.65;
+    font-size:17px;
+    overflow-x:hidden;
+    font-weight:400;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+  .container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding-left:var(--side-padding);
+    padding-right:var(--side-padding);
+    position:relative;
+  }
+  .display{font-family:'Anton', sans-serif;letter-spacing:0.01em}
+  .serif{font-family:'Playfair Display', serif}
+  .kicker{
+    font-family:'Inter', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.32em;
+    font-size:11px;
+    color:var(--tomate);
+    font-weight:600;
+    display:inline-flex;align-items:center;gap:12px;
+  }
+  .kicker::before{
+    content:"";width:28px;height:2px;background:var(--tomate);
+  }
+
+  /* TOPBAR */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--negro);
+    color:var(--crema);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:14px;padding-bottom:14px;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-circle{
+    width:54px;height:54px;border-radius:50%;
+    background:var(--negro);border:2px solid var(--crema);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Anton', sans-serif;
+    color:var(--crema);font-size:18px;letter-spacing:0.01em;line-height:1;
+  }
+  .brand-name{
+    font-family:'Anton', sans-serif;
+    font-size:22px;color:var(--crema);letter-spacing:0.04em;text-transform:uppercase;line-height:1;
+  }
+  .brand-sub{
+    display:block;font-family:'Playfair Display', serif;font-style:italic;
+    font-size:13px;color:var(--dorado);font-weight:400;letter-spacing:0;margin-top:3px;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:11px 18px;background:var(--tomate);
+    font-family:'Anton', sans-serif;font-size:15px;
+    color:var(--crema);text-transform:uppercase;letter-spacing:0.06em;
+    transition:all 0.25s;
+  }
+  .tel-btn:hover{background:var(--dorado);color:var(--negro)}
+
+  /* HERO */
+  .hero{padding:90px 0 110px;position:relative;background:var(--crema);overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;top:0;right:0;width:55%;height:8px;
+    background:linear-gradient(90deg, var(--celeste) 0%, var(--celeste) 33%, var(--crema) 33%, var(--crema) 66%, var(--celeste) 66%, var(--celeste) 100%);
+  }
+  .hero::after{
+    content:"OC";position:absolute;bottom:-50px;right:-3%;
+    font-family:'Anton', sans-serif;font-size:clamp(280px,38vw,520px);
+    color:rgba(10,10,10,0.04);font-weight:400;line-height:0.8;pointer-events:none;
+    user-select:none;letter-spacing:-0.02em;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+    position:relative;z-index:1;
+  }
+  @media (min-width:900px){
+    .hero-grid{grid-template-columns:1.05fr 0.95fr;gap:72px}
+  }
+  .hero-display{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(2.4rem, 6vw, 5.5rem);
+    line-height:0.95;letter-spacing:0.02em;color:var(--negro);
+    margin:14px 0 22px;text-transform:uppercase;
+  }
+  .hero-display .serif-line{
+    font-family:'Playfair Display', serif;font-weight:400;font-style:italic;
+    letter-spacing:-0.01em;color:var(--tomate);text-transform:none;
+    font-size:0.7em;display:inline-block;line-height:1.05;
+  }
+  .hero-display .dorado{color:var(--dorado-dk)}
+  .hero-lede{
+    font-size:17.5px;color:var(--negro-mid);margin:24px 0 36px;max-width:520px;
+    line-height:1.7;font-weight:400;
+  }
+  .hero-lede strong{color:var(--negro);font-weight:600}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 24px;
+    font-family:'Anton', sans-serif;font-weight:400;font-size:16px;
+    text-transform:uppercase;letter-spacing:0.06em;
+    transition:all 0.25s;border:2px solid transparent;min-height:48px;
+  }
+  .btn-primary{background:var(--tomate);color:var(--crema)}
+  .btn-primary:hover{background:var(--negro);transform:translateY(-1px)}
+  .btn-secondary{border-color:var(--negro);color:var(--negro);background:transparent}
+  .btn-secondary:hover{background:var(--negro);color:var(--crema)}
+  .btn-ghost{border-color:var(--celeste-dk);color:var(--celeste-dk);background:transparent}
+  .btn-ghost:hover{background:var(--celeste);color:var(--negro);border-color:var(--celeste)}
+
+  /* Placeholder */
+  .placeholder-photo{
+    width:100%;aspect-ratio:4/5;
+    background:
+      radial-gradient(circle at 30% 35%, rgba(212,155,50,0.12) 0%, transparent 55%),
+      radial-gradient(circle at 70% 70%, rgba(201,50,32,0.1) 0%, transparent 60%),
+      var(--crema-dk);
+    border:3px solid var(--negro);
+    position:relative;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:16px;
+    color:var(--negro);text-align:center;padding:24px;
+  }
+  .placeholder-photo::before{
+    content:"";position:absolute;top:12px;left:12px;right:12px;bottom:12px;
+    border:1px dashed rgba(10,10,10,0.3);
+    pointer-events:none;
+  }
+  .placeholder-photo .ph-icon{
+    width:72px;height:72px;border-radius:50%;
+    background:var(--negro);color:var(--crema);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Anton', sans-serif;font-size:30px;letter-spacing:0;
+    line-height:1;
+  }
+  .placeholder-photo .ph-text{
+    font-family:'Inter', sans-serif;font-size:11px;
+    text-transform:uppercase;letter-spacing:0.24em;font-weight:600;max-width:240px;
+  }
+  .placeholder-photo .ph-sub{
+    font-family:'Playfair Display', serif;font-style:italic;font-size:16px;
+    color:var(--negro-mid);max-width:260px;font-weight:400;
+  }
+
+  /* SECCIONES */
+  section{padding:100px 0;position:relative}
+  @media (min-width:768px){section{padding:130px 0}}
+  .section-head{margin-bottom:60px;max-width:800px}
+  .section-head h2{
+    font-family:'Anton', sans-serif;font-weight:400;
+    font-size:clamp(2.2rem, 4.5vw, 4rem);
+    margin-top:18px;color:var(--negro);line-height:0.98;letter-spacing:0.01em;
+    text-transform:uppercase;
+  }
+  .section-head h2 .serif{font-family:'Playfair Display', serif;font-style:italic;font-weight:400;text-transform:none;color:var(--tomate);letter-spacing:-0.01em}
+
+  /* INGREDIENTES — apilamiento visual (estructura única: pizza por capas) */
+  .ingredientes{background:var(--negro);color:var(--crema);position:relative}
+  .ingredientes .section-head h2{color:var(--crema)}
+  .ingredientes .kicker{color:var(--dorado)}
+  .ingredientes .kicker::before{background:var(--dorado)}
+  .stack{
+    margin-top:48px;
+    display:grid;grid-template-columns:1fr;gap:8px;
+    max-width:880px;margin-left:auto;margin-right:auto;
+  }
+  .stack-row{
+    display:grid;grid-template-columns:1fr;gap:0;
+    border:1px solid var(--line);
+    padding:24px 28px;
+    background:var(--negro-soft);
+    position:relative;
+    transition:background .3s, transform .3s;
+  }
+  @media (min-width:760px){
+    .stack-row{grid-template-columns:140px 1fr;gap:32px;align-items:center}
+  }
+  .stack-row:hover{background:var(--negro-mid);transform:translateX(4px)}
+  .stack-row .num{
+    font-family:'Anton', sans-serif;font-size:54px;line-height:0.85;
+    color:var(--dorado);letter-spacing:0.01em;
+  }
+  .stack-row .num small{
+    display:block;font-family:'Playfair Display', serif;font-style:italic;
+    font-size:13px;color:var(--crema);font-weight:400;margin-top:4px;letter-spacing:0;
+  }
+  .stack-row h3{
+    font-family:'Anton', sans-serif;font-size:22px;color:var(--crema);
+    letter-spacing:0.02em;text-transform:uppercase;line-height:1.1;margin-bottom:8px;
+  }
+  .stack-row h3 .serif{font-family:'Playfair Display', serif;font-style:italic;font-weight:400;color:var(--tomate);text-transform:none;letter-spacing:-0.01em}
+  .stack-row p{color:rgba(243,236,222,0.78);font-size:15.5px;line-height:1.65;font-weight:400}
+  .stack-row p strong{color:var(--crema);font-weight:600}
+
+  /* CARTA */
+  .carta{background:var(--crema)}
+  .carta-grid{
+    display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  @media (min-width:760px){.carta-grid{grid-template-columns:1fr 1fr;gap:22px}}
+  @media (min-width:1040px){.carta-grid{grid-template-columns:repeat(3,1fr)}}
+  .item-card{
+    padding:28px 26px;background:#fff;
+    border:2px solid var(--negro);
+    display:flex;flex-direction:column;gap:12px;
+    position:relative;transition:transform .3s, box-shadow .3s;
+  }
+  .item-card:hover{transform:translateY(-3px);box-shadow:8px 8px 0 var(--negro)}
+  .item-card.dest{background:var(--negro);color:var(--crema);border-color:var(--negro)}
+  .item-card.dest h3{color:var(--crema)}
+  .item-card.dest .item-desc{color:rgba(243,236,222,0.78)}
+  .item-card.dest .item-price{color:var(--dorado);border-color:var(--line)}
+  .item-card.dest .item-tag{color:var(--dorado)}
+  .item-tag{
+    font-family:'Anton', sans-serif;font-size:13px;letter-spacing:0.12em;
+    text-transform:uppercase;color:var(--tomate);
+  }
+  .item-card h3{
+    font-family:'Anton', sans-serif;font-weight:400;font-size:1.6rem;
+    color:var(--negro);line-height:1;letter-spacing:0.02em;text-transform:uppercase;
+  }
+  .item-card h3 .serif{font-family:'Playfair Display', serif;font-style:italic;font-weight:400;text-transform:none;color:var(--tomate);letter-spacing:-0.01em;display:inline-block;font-size:0.78em}
+  .item-desc{color:var(--negro-mid);font-size:14.5px;line-height:1.65;font-weight:400}
+  .item-desc strong{color:var(--negro);font-weight:600}
+  .item-price{
+    margin-top:auto;padding-top:14px;border-top:2px solid var(--negro-mid);
+    display:flex;justify-content:space-between;align-items:baseline;
+    font-family:'Anton', sans-serif;letter-spacing:0.04em;
+  }
+  .item-price .num{font-size:1.55rem;color:var(--negro)}
+  .item-price .lab{
+    font-family:'Inter', sans-serif;font-size:10.5px;letter-spacing:0.2em;
+    text-transform:uppercase;color:var(--oliva-dk);font-weight:600;
+  }
+
+  /* HISTORIA */
+  .historia{background:var(--celeste);color:var(--negro);position:relative;overflow:hidden}
+  .historia::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:6px;
+    background:repeating-linear-gradient(90deg,var(--crema) 0 30px,var(--celeste-dk) 30px 60px);
+  }
+  .historia .kicker{color:var(--negro)}
+  .historia .kicker::before{background:var(--negro)}
+  .historia .section-head h2{color:var(--negro)}
+  .historia .section-head h2 .serif{color:var(--negro)}
+  .historia .container{max-width:880px}
+  .historia-body{
+    font-size:17.5px;line-height:1.8;color:var(--negro);font-weight:400;
+  }
+  .historia-body p{margin-bottom:18px}
+  .historia-body strong{color:var(--negro);font-weight:700}
+  .quote{
+    font-family:'Playfair Display', serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.5rem, 3vw, 2.2rem);
+    color:var(--negro);line-height:1.3;text-align:left;
+    padding:0 0 0 32px;border-left:4px solid var(--negro);
+    margin:32px 0;
+  }
+
+  /* GALERIA */
+  .galeria{background:var(--crema-dk)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:clamp(16px,2.5vw,22px);
+    align-items:flex-start;
+  }
+  .gal-figure{
+    flex:0 0 calc(50% - clamp(8px,1.25vw,11px));
+    max-width:calc(50% - clamp(8px,1.25vw,11px));
+    background:#fff;border:3px solid var(--negro);
+  }
+  @media (max-width:640px){.gal-figure{flex:0 0 100%;max-width:100%}}
+  .gal-figure .placeholder-photo{aspect-ratio:4/3;border:0;border-bottom:2px solid var(--negro)}
+  .gal-figure figcaption{
+    padding:14px 18px;font-family:'Anton', sans-serif;
+    font-size:14px;text-transform:uppercase;letter-spacing:0.06em;
+    color:var(--negro);
+  }
+  .gal-figure figcaption .serif{font-family:'Playfair Display', serif;font-style:italic;font-weight:400;text-transform:none;color:var(--tomate);letter-spacing:-0.01em}
+
+  /* VISITA */
+  .visita{background:var(--negro);color:var(--crema)}
+  .visita .kicker{color:var(--dorado)}
+  .visita .kicker::before{background:var(--dorado)}
+  .visita .section-head h2{color:var(--crema)}
+  .visit-grid{
+    display:grid;grid-template-columns:1fr;gap:40px;margin-top:48px;
+  }
+  @media (min-width:880px){
+    .visit-grid{grid-template-columns:1fr 1fr;gap:56px}
+  }
+  .visit-info dl{display:grid;grid-template-columns:1fr;gap:24px}
+  .visit-info .row{border-top:1px solid var(--line);padding-top:20px}
+  .visit-info .row:last-child{border-bottom:1px solid var(--line);padding-bottom:20px}
+  .visit-info .label{
+    font-family:'Anton', sans-serif;font-size:14px;font-weight:400;
+    letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--dorado);margin-bottom:12px;
+  }
+  .visit-info .value{font-size:16.5px;color:var(--crema);line-height:1.55;font-weight:400}
+  .visit-info .value a{color:var(--crema);border-bottom:1px solid var(--line);transition:.3s}
+  .visit-info .value a:hover{color:var(--dorado);border-color:var(--dorado)}
+  .visit-info .city{color:rgba(243,236,222,0.6);font-size:14.5px}
+  .hours-list{display:grid;gap:8px;list-style:none;padding:0;margin:0}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:14.5px;padding:6px 0;
+  }
+  .hours-list .day{color:rgba(243,236,222,0.6);text-transform:capitalize;font-weight:400}
+  .hours-list .time{color:var(--crema);font-variant-numeric:tabular-nums;font-size:13px}
+  .hours-list li.now{background:rgba(212,155,50,0.14);padding:8px 12px;margin:0 -12px}
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--dorado);font-weight:600}
+  .hours-list li.now .day::before{
+    content:"●";color:var(--dorado);font-size:9px;margin-right:8px;
+    animation:pulse-dot 1.6s ease-in-out infinite;display:inline-block;
+  }
+  .hours-list li.closed .time{color:rgba(243,236,222,0.35);font-style:italic}
+  @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.3}}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;overflow:hidden;
+    border:3px solid var(--dorado);background:var(--negro-soft);
+  }
+  .map-wrap iframe{width:100%;height:100%;border:0;filter:saturate(0.5) brightness(0.85)}
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:var(--tomate);color:var(--crema);
+    padding:12px 18px;
+    font-family:'Anton', sans-serif;font-size:15px;letter-spacing:0.06em;
+    text-transform:uppercase;
+    transition:all .3s;min-height:44px;display:inline-flex;align-items:center;
+    border:2px solid var(--crema);
+  }
+  .map-cta:hover{background:var(--dorado);color:var(--negro)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--crema)}
+  .faq-list{margin-top:40px;border-top:2px solid var(--negro)}
+  .faq-item{border-bottom:1px solid var(--line-dk)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;
+    padding:24px 0;
+    font-family:'Anton', sans-serif;font-size:1.5rem;color:var(--negro);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    text-transform:uppercase;letter-spacing:0.01em;line-height:1.1;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Anton', sans-serif;font-size:28px;
+    color:var(--tomate);transition:transform .3s;flex-shrink:0;
+  }
+  .faq-item[open] summary::after{content:"−"}
+  .faq-item p{padding:0 0 26px;color:var(--negro-mid);font-size:16px;line-height:1.75;max-width:740px;font-weight:400}
+
+  /* FOOTER */
+  footer{
+    background:var(--negro);color:rgba(243,236,222,0.72);
+    padding:56px 0 36px;border-top:6px solid var(--celeste);
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:32px;
+  }
+  @media (min-width:720px){.foot-grid{grid-template-columns:1.2fr 1fr 1fr}}
+  .foot-col h4{
+    font-family:'Anton', sans-serif;font-size:15px;letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--dorado);margin-bottom:16px;
+  }
+  .foot-col p, .foot-col a{font-size:14.5px;line-height:1.7;color:rgba(243,236,222,0.78);display:block;font-weight:400}
+  .foot-col a:hover{color:var(--crema)}
+  .foot-col strong{color:var(--crema);font-weight:600}
+  .foot-brand-circle{
+    width:64px;height:64px;border-radius:50%;
+    background:var(--negro);border:2px solid var(--crema);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Anton', sans-serif;font-size:22px;
+    color:var(--crema);margin-bottom:10px;
+  }
+  .foot-bottom{
+    border-top:1px solid var(--line);padding-top:24px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
+    font-family:'Anton', sans-serif;font-size:12px;letter-spacing:0.12em;
+    text-transform:uppercase;color:rgba(243,236,222,0.55);
+  }
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:3px solid var(--negro);padding:0;background:var(--crema);
+    max-width:480px;width:92%;box-shadow:10px 10px 0 var(--negro);
+    color:var(--negro);
+  }
+  dialog::backdrop{background:rgba(10,10,10,0.78);backdrop-filter:blur(4px)}
+  .dlg-head{padding:28px 28px 0;border-top:6px solid var(--tomate)}
+  .dlg-head .kicker{margin-bottom:10px}
+  .dlg-head h3{font-family:'Anton', sans-serif;font-size:1.7rem;color:var(--negro);text-transform:uppercase;letter-spacing:0.02em;line-height:1.1}
+  .dlg-head h3 .serif{font-family:'Playfair Display', serif;font-style:italic;font-weight:400;text-transform:none;color:var(--tomate);letter-spacing:-0.01em}
+  .dlg-body{padding:18px 28px 28px}
+  .dlg-body p{font-size:14.5px;color:var(--negro-mid);margin-bottom:18px;line-height:1.55;font-weight:400}
+  .dlg-form{display:grid;gap:14px}
+  .dlg-form label{font-family:'Anton', sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.12em;color:var(--tomate);display:block;margin-bottom:4px}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:12px 14px;border:2px solid var(--negro);background:#fff;
+    font-family:'Inter', sans-serif;font-size:15px;color:var(--negro);
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--tomate)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-actions .btn{padding:12px 20px;font-size:13px}
+  .dlg-close{
+    background:none;border:0;color:var(--negro-mid);
+    font-family:'Anton', sans-serif;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;
+  }
+  .dlg-close:hover{color:var(--tomate)}
+  .dlg-ok{display:none;text-align:center;padding:36px 24px}
+  .dlg-ok h4{font-family:'Anton', sans-serif;font-size:1.6rem;color:var(--negro);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.02em}
+  .dlg-ok p{color:var(--negro-mid);font-size:14.5px;font-weight:400}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  /* Modal centrado defensivo */
+  dialog[open], .reserva-dialog[open]{
+    position:fixed !important;
+    inset:0 !important;
+    margin:auto !important;
+    transform:none !important;
+    max-height:calc(100% - 2rem) !important;
+    box-sizing:border-box !important;
+  }
+  dialog[open]::backdrop{background:rgba(0,0,0,0.7)}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  html, body{overflow-x:clip;max-width:100%}
+  img, video, picture, iframe{max-width:100%}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-circle">OC</span>
+      <div>
+        <span class="brand-name">Obras Cumbres</span>
+        <span class="brand-sub">Pizzas · Empanadas · Argentinas</span>
+      </div>
+    </a>
+    <a href="tel:+34931455666" class="tel-btn">
+      <span>931 455 666</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="kicker">Pizza argentina · Empanadas · Badalona</span>
+        <h1 class="hero-display">Auténtica<br><span class="dorado">PIZZA</span> argentina,<br><span class="serif-line">hecha al momento</span>.</h1>
+        <p class="hero-lede">Pizza argentina con la <strong>media muzza</strong> generosa que toca, fugazzeta de cebolla, fainá de garbanzo, empanadas <strong>tucumanas, mendocinas y de carne cortada a cuchillo</strong>. No es pizza italiana fina. Es pizza argentina: alta, con mucho queso, sardel cruzado encima y aceituna en el medio. Como en Buenos Aires.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+          <a href="tel:+34931455666" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Calle+Lle%C3%B3+7+08911+Badalona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">OC</span>
+          <span class="ph-text">Foto pizza argentina · sustituir antes del pitch</span>
+          <span class="ph-sub">Pizza muzzarella con olivas verdes, anchoas en cruz y orégano sobre fondo oscuro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ingredientes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cómo se monta una pizza argentina</span>
+      <h2>Cinco capas.<br>Una <span class="serif">cumbre</span> de muzza.</h2>
+    </div>
+    <div class="stack">
+      <article class="stack-row reveal">
+        <div class="num">01<small>La base</small></div>
+        <div>
+          <h3>Masa <span class="serif">alta</span>, no fina</h3>
+          <p>La argentina <strong>no es la napolitana</strong>. La nuestra es <strong>media masa</strong>: alta, esponjosa, con miga por dentro y borde dorado. Fermentada 24 horas, estirada gruesa. La base tiene que aguantar la montaña de queso que va arriba sin venirse abajo.</p>
+        </div>
+      </article>
+      <article class="stack-row reveal">
+        <div class="num">02<small>El tomate</small></div>
+        <div>
+          <h3>Salsa <span class="serif">de tomate</span> hecha en casa</h3>
+          <p>Tomate triturado italiano, sal, una pizca de azúcar, orégano. Sin albahaca ni hierbas raras. <strong>La salsa argentina es discreta</strong>: el protagonismo es del queso. Pero tiene que estar.</p>
+        </div>
+      </article>
+      <article class="stack-row reveal">
+        <div class="num">03<small>El queso</small></div>
+        <div>
+          <h3>Media <span class="serif">muzza</span> generosa</h3>
+          <p>Mozzarella en lonchas gruesas, no fior di latte. <strong>"Media muzza"</strong> significa que la dosis es generosa — la pizza tiene que cubrirse entera, sin huecos. El queso se funde en la piedra hasta dorarse por arriba. <strong>Ese es el momento</strong>: queso burbujeante con mancha tostada.</p>
+        </div>
+      </article>
+      <article class="stack-row reveal">
+        <div class="num">04<small>El acabado</small></div>
+        <div>
+          <h3>Aceituna <span class="serif">verde</span> y sardel cruzado</h3>
+          <p>Una aceituna verde grande en el centro (a veces dos). <strong>Anchoas de Cantábrico cruzadas encima</strong> — eso es el "sardel" argentino. Orégano. Aceite de oliva en hilo. Sin perejil ni rúcula. Limpieza absoluta de toppings: solo lo que toca.</p>
+        </div>
+      </article>
+      <article class="stack-row reveal">
+        <div class="num">05<small>Al horno</small></div>
+        <div>
+          <h3>Piedra <span class="serif">caliente</span>, 90 segundos</h3>
+          <p>Horno a 320 °C piedra refractaria. Noventa segundos. <strong>Sale burbujeando</strong>, con queso fundido por arriba y base crujiente. La pizza argentina se come <strong>con la mano si querés</strong> — el borde es lo bastante consistente para sostenerla. Se acompaña con fainá encima — la cuña de garbanzo que es marca de la casa.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="carta">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Lo que sale del horno</span>
+      <h2>La <span class="serif">carta</span>.<br>Lo argentino que vale.</h2>
+    </div>
+    <div class="carta-grid">
+      <article class="item-card dest reveal">
+        <span class="item-tag">El clásico</span>
+        <h3>Pizza <span class="serif">muzzarella</span></h3>
+        <p class="item-desc">Salsa de tomate, <strong>mozzarella generosa</strong>, oliva verde grande, sardel (anchoa) cruzado encima, orégano y aceite EVOO en hilo. La pizza argentina por excelencia. Tamaño grande para 2-3 personas. Como en cualquier pizzería de Buenos Aires que se respete.</p>
+        <div class="item-price">
+          <span class="num">14,50 €</span>
+          <span class="lab">Grande · 8 porciones</span>
+        </div>
+      </article>
+      <article class="item-card reveal">
+        <span class="item-tag">Especial</span>
+        <h3>Pizza <span class="serif">fugazzeta</span></h3>
+        <p class="item-desc">Sin tomate. Mozzarella + <strong>montaña de cebolla blanca finita</strong>, orégano y aceite. La cebolla se hace en el horno hasta dorarse. La fugazzeta es el orgullo porteño — discutida pero adorada. Sin queso al medio (esa es la <strong>fugazzeta rellena</strong>, otra carta).</p>
+        <div class="item-price">
+          <span class="num">15,90 €</span>
+          <span class="lab">Grande · sin tomate</span>
+        </div>
+      </article>
+      <article class="item-card reveal">
+        <span class="item-tag">Para acompañar</span>
+        <h3>Cuña de <span class="serif">fainá</span></h3>
+        <p class="item-desc">Harina de garbanzo, agua, sal y aceite. Cocida en plancha de pizzera. Sale como una cuña dorada, crujiente por fuera, cremosa por dentro. <strong>Se come encima de la pizza muzza</strong> — "pizza con fainá", como decimos los argentinos. Acompañamiento perfecto.</p>
+        <div class="item-price">
+          <span class="num">3,50 €</span>
+          <span class="lab">La porción</span>
+        </div>
+      </article>
+      <article class="item-card reveal">
+        <span class="item-tag">Empanadas</span>
+        <h3>Empanada <span class="serif">tucumana</span></h3>
+        <p class="item-desc">Carne cortada a <strong>cuchillo</strong>, no picada. Cebolla, ají molido, comino, cebolla de verdeo, una pasa de uva, aceituna y huevo duro. <strong>Repulgo a mano</strong>. Hornadas. La empanada del norte de Argentina, jugosa y especiada.</p>
+        <div class="item-price">
+          <span class="num">2,80 €</span>
+          <span class="lab">La unidad · 6 por docena</span>
+        </div>
+      </article>
+      <article class="item-card reveal">
+        <span class="item-tag">Empanadas</span>
+        <h3>Empanada <span class="serif">mendocina</span></h3>
+        <p class="item-desc">Carne picada con buena grasa, cebolla rehogada, pimentón dulce, cebolla de verdeo, sin pasa ni huevo. <strong>Repulgo diferente al de Tucumán</strong>. Hornadas. La empanada cuyana, más suave de sabor pero igual de jugosa. Saber cuál te gusta más.</p>
+        <div class="item-price">
+          <span class="num">2,80 €</span>
+          <span class="lab">La unidad</span>
+        </div>
+      </article>
+      <article class="item-card reveal">
+        <span class="item-tag">Empanadas</span>
+        <h3>Empanada de <span class="serif">queso y cebolla</span></h3>
+        <p class="item-desc">Mozzarella, cebolla blanca dorada, orégano. Para los vegetarianos o para variar dentro de una docena. <strong>Repulgo torcido al revés</strong> para diferenciarla en la cesta. Hornadas o fritas — preguntá qué preferís al pedir.</p>
+        <div class="item-price">
+          <span class="num">2,60 €</span>
+          <span class="lab">La unidad</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="historia">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">De dónde venimos</span>
+      <h2>De Buenos Aires<br>a <span class="serif">Lleó 7</span>.</h2>
+    </div>
+    <div class="reveal">
+      <p class="quote">No queremos hacer pizza italiana en Badalona. Queremos hacer pizza argentina en Badalona. Es otra cocina.</p>
+      <div class="historia-body">
+        <p>Somos una familia argentina que abrió Obras Cumbres en Badalona hace unos años. La carta la diseñamos con dos reglas simples: <strong>ningún plato es de inspiración</strong> y <strong>ningún plato es fusión</strong>. La pizza argentina es pizza argentina — alta, con muchísima muzza, oliva verde en el medio, sardel cruzado encima. Las empanadas son del norte (tucumanas) y de Cuyo (mendocinas), las dos hechas con repulgo a mano, una con carne a cuchillo, otra picada.</p>
+        <p>En Barcelona y alrededores hay muchas pizzerías italianas buenas. <strong>No competimos con ellas</strong>. Hacemos otra cosa: la pizza con la que crecimos nosotros, que un argentino reconoce en cuanto la ve y un español la prueba y entiende que es distinto sin que tenga que ser peor o mejor. <strong>Es otra carta</strong>.</p>
+        <p>Estamos en la <strong>calle Lleó número 7</strong>, junto al Carrer del Mar, a pocos pasos del metro Badalona (L2). Local pequeño, mesas para comer ahí, también para llevar. Para grupos grandes mejor reservar. Si pasáis por delante y ven a alguien rebozando una empanada en el cristal — somos nosotros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Lo que comerás</span>
+      <h2>Una <span class="serif">cumbre</span><br>argentina, sí.</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">P</span>
+          <span class="ph-text">Pizza muzza con sardel · sustituir antes del pitch</span>
+          <span class="ph-sub">Pizza grande argentina con queso burbujeante, anchoas cruzadas y oliva al centro</span>
+        </div>
+        <figcaption>La <span class="serif">muzza</span> · El plato bandera</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">F</span>
+          <span class="ph-text">Fugazzeta · sustituir antes del pitch</span>
+          <span class="ph-sub">Fugazzeta sin tomate con montaña de cebolla blanca dorada en el horno</span>
+        </div>
+        <figcaption>La <span class="serif">fugazzeta</span> · Sin tomate · solo cebolla</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">E</span>
+          <span class="ph-text">Empanadas tucumanas · sustituir antes del pitch</span>
+          <span class="ph-sub">Empanadas tucumanas con repulgo a mano, doradas, recién salidas del horno</span>
+        </div>
+        <figcaption>Las <span class="serif">empanadas</span> · Repulgo a mano · jugosas</figcaption>
+      </figure>
+      <figure class="gal-figure reveal">
+        <div class="placeholder-photo">
+          <span class="ph-icon">L</span>
+          <span class="ph-text">Local en Lleó · sustituir antes del pitch</span>
+          <span class="ph-sub">Interior del local en calle Lleó 7, Badalona, con horno de pizza visible</span>
+        </div>
+        <figcaption>El <span class="serif">local</span> · Calle Lleó 7 · Badalona</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cómo encontrarnos</span>
+      <h2>Calle <span class="serif">Lleó 7</span>,<br>Badalona.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              Calle Lleó, 7<br>
+              <span class="city">08911 Badalona · junto Carrer del Mar y metro Badalona</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li class="closed"><span class="day">Lunes</span><span class="time">Cerrado</span></li>
+              <li><span class="day">Martes</span><span class="time">19:30 – 23:30</span></li>
+              <li><span class="day">Miércoles</span><span class="time">19:30 – 23:30</span></li>
+              <li><span class="day">Jueves</span><span class="time">19:30 – 23:30</span></li>
+              <li><span class="day">Viernes</span><span class="time">13:00 – 16:00 · 19:30 – 00:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">13:00 – 16:00 · 19:30 – 00:00</span></li>
+              <li><span class="day">Domingo</span><span class="time">13:00 – 16:00 · 19:30 – 23:00</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <div><a href="tel:+34931455666">+34 931 45 56 66</a></div>
+              <div style="margin-top:6px"><a href="https://www.instagram.com/pizzeriaobrascumbres/" target="_blank" rel="noopener">@pizzeriaobrascumbres en Instagram</a></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Cómo llegar</div>
+            <div class="value">
+              Metro <strong>Badalona Pompeu Fabra</strong> (L2) — 3 min andando<br>
+              <span class="city">A pocos pasos del Carrer del Mar · cerca de la playa</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Calle+Lle%C3%B3+7+08911+Badalona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa Obras Cumbres">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Calle+Lle%C3%B3+7+08911+Badalona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Lo que <span class="serif">preguntan</span><br>antes de venir.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Qué diferencia hay entre pizza argentina e italiana?</summary>
+        <p>La argentina es masa media-alta (no fina como la napolitana), con mucho más queso por porción, oliva verde grande en el medio y anchoa cruzada encima (eso es el "sardel"). La italiana tradicional es masa fina, menos queso y toppings más sutiles. Las dos son ricas pero son cocinas diferentes — la argentina viene de la emigración italiana que se adaptó a los gustos locales y al precio del queso en Argentina. La nuestra es la argentina, no la italiana adaptada.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacéis pizza para llevar o solo para comer ahí?</summary>
+        <p>Las dos cosas. Tenemos mesas dentro para comer, pero también preparamos pizza y empanadas para llevar con pedido previo por teléfono o WhatsApp. La pizza viaja bien si se come en los primeros 15-20 minutos — para distancias más largas mejor encargar y pasar a recoger. Para delivery a casa trabajamos con Glovo en la zona, pero la calidad es mejor si la recoges tú.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Las empanadas son congeladas?</summary>
+        <p>No. La masa la hacemos en casa cada día. El relleno se prepara fresco también — la carne tucumana cortada a cuchillo lleva su tiempo y por eso a veces se nos terminan. Las hacemos por la mañana, las apilamos en la nevera y se hornean al momento de pedirlas, por eso tardan unos 15-18 minutos. Vale la pena la espera.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis opciones sin gluten o vegetarianas?</summary>
+        <p>Vegetarianas sí: pizza muzzarella sin sardel, pizza fugazzeta, fainá, empanada de queso y cebolla, ensaladas. Sin gluten no — toda la masa lleva harina de trigo y la cocina se contamina con harina por todas partes, así que para celíacos estrictos no es buen sitio. Para alguien con intolerancia leve la fainá es 100% harina de garbanzo, sin trigo, pero la plancha es la misma.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hay que reservar mesa?</summary>
+        <p>Entre semana al mediodía no hace falta. Para los viernes, sábados y domingos noche sí conviene reservar porque tenemos pocas mesas y se llenan rápido — sobre todo si venís 4 o más personas. Un mensaje al WhatsApp o llamada al 931 45 56 66 sobran. Si no llegáis al sitio o queréis tomar la pizza para llevar, no hace falta reservar nada.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand-circle">OC</div>
+        <p><strong>Pizzería Obras Cumbres</strong><br>Pizza argentina · Empanadas<br>Badalona desde Buenos Aires</p>
+      </div>
+      <div class="foot-col">
+        <h4>Visítanos</h4>
+        <p>Calle Lleó, 7<br>08911 Badalona</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Calle+Lle%C3%B3+7+08911+Badalona" target="_blank" rel="noopener">Cómo llegar →</a>
+      </div>
+      <div class="foot-col">
+        <h4>Reservas</h4>
+        <a href="tel:+34931455666"><strong>+34 931 45 56 66</strong></a>
+        <a href="https://www.instagram.com/pizzeriaobrascumbres/" target="_blank" rel="noopener" style="margin-top:6px">@pizzeriaobrascumbres</a>
+        <p style="margin-top:8px">Martes a domingo<br>Noches · viernes a domingo también mediodía</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Obras Cumbres · Calle Lleó 7, Badalona</span>
+      <span>Pizza argentina · Empanadas · Fainá</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">Reservar en Obras Cumbres</span>
+    <h3>¿Cuándo <span class="serif">venís</span>?</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Cuéntanos día, hora y cuántos sois. Te confirmamos por teléfono o WhatsApp.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Teléfono</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-pax">Personas</label>
+          <select id="r-pax" required>
+            <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7-8</option><option>9+</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-fecha">Fecha</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+        <div>
+          <label for="r-hora">Hora</label>
+          <input type="time" id="r-hora" required>
+        </div>
+      </div>
+      <div>
+        <label for="r-tipo">Tipo</label>
+        <select id="r-tipo" required>
+          <option>Mesa en local</option>
+          <option>Pedido para recoger</option>
+        </select>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Enviar petición</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>¡Recibido!</h4>
+    <p>Te confirmamos en breve.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Pizzería Obras Cumbres",
+  "alternateName":"Obras Cumbres",
+  "description":"Pizzería argentina en Badalona con pizza muzzarella, fugazzeta, fainá y empanadas tucumanas y mendocinas hechas con repulgo a mano.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Calle Lleó, 7",
+    "addressLocality":"Badalona",
+    "postalCode":"08911",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "telephone":"+34931455666",
+  "servesCuisine":["Argentinian","Pizza","Empanadas","Latin American"],
+  "priceRange":"€€",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"19:30","closes":"23:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"13:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"19:30","closes":"00:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"13:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"19:30","closes":"23:00"}
+  ],
+  "sameAs":["https://www.instagram.com/pizzeriaobrascumbres/"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Qué diferencia hay entre la pizza argentina de Obras Cumbres y una pizza italiana?","acceptedAnswer":{"@type":"Answer","text":"La pizza argentina es masa media-alta no fina como la napolitana, lleva mucho más queso por porción (media muzza generosa), oliva verde grande en el medio y anchoa cruzada encima que es el sardel. La italiana tradicional es fina, con menos queso y toppings sutiles. Son cocinas diferentes: la argentina viene de la emigración italiana adaptada a los gustos locales de Buenos Aires."}},
+    {"@type":"Question","name":"¿Hacéis pizza para llevar o solo para comer en Obras Cumbres?","acceptedAnswer":{"@type":"Answer","text":"Las dos cosas. Tenemos mesas dentro y también preparamos pizza y empanadas para llevar con pedido previo por teléfono o WhatsApp. La pizza viaja bien si se come en los primeros 15-20 minutos. Para delivery a casa trabajamos con Glovo en la zona de Badalona, pero la calidad es mejor recogiendo en local."}},
+    {"@type":"Question","name":"¿Las empanadas de Obras Cumbres son congeladas?","acceptedAnswer":{"@type":"Answer","text":"No, la masa la hacemos en casa cada día y el relleno se prepara fresco. La carne tucumana se corta a cuchillo y lleva su tiempo. Las empanadas se montan por la mañana y se hornean al momento de pedirlas, por eso tardan 15-18 minutos. Vale la pena la espera."}},
+    {"@type":"Question","name":"¿Tenéis opciones sin gluten o vegetarianas en Obras Cumbres?","acceptedAnswer":{"@type":"Answer","text":"Vegetarianas sí: pizza muzzarella sin sardel, pizza fugazzeta, fainá, empanada de queso y cebolla y ensaladas. Sin gluten no porque toda la masa lleva harina de trigo y la cocina está contaminada. Para celíacos estrictos no es buen sitio. La fainá es 100% harina de garbanzo pero la plancha es la misma."}},
+    {"@type":"Question","name":"¿Es necesario reservar mesa en Obras Cumbres?","acceptedAnswer":{"@type":"Answer","text":"Entre semana al mediodía no hace falta. Para los viernes, sábados y domingos noche conviene reservar porque tenemos pocas mesas y se llenan rápido, sobre todo en grupos de 4 o más. Un mensaje al WhatsApp o llamada al 931 45 56 66 sobran. Para pedidos para llevar no hace falta reservar."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg: #0f0c0a; --id-fg: #f4ede1; --id-accent: #c89e5a;
+    --id-cream: #f4ede1; --id-cream-dk: #8a7458;
+    --id-ink: #1a1410; --id-wa: #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) { body:not(.id-locked) { padding-bottom: 56px; } }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg); color: var(--id-fg);
+    border-top: 2px solid var(--id-accent); padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px; line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; color: var(--id-accent); font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums; font-weight: 700;
+    font-size: 16px; letter-spacing: 0.02em;
+  }
+  .id-countdown__cta { opacity: .85; font-size: 13px; }
+  .id-countdown__cta strong { color: var(--id-accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream); color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase; letter-spacing: 0.28em;
+    font-size: 12px; color: var(--id-cream-dk);
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px); line-height: 0.9;
+    margin: 0 0 24px; font-weight: 900;
+    letter-spacing: -0.04em; color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px); line-height: 1.55;
+    margin: 0 auto 36px; max-width: 520px; color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 999px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa); color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent; color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px; color: var(--id-cream-dk);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin: 0; font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Pizzería%20Obras%20Cumbres%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Pizzería Obras Cumbres</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Pizzería%20Obras%20Cumbres%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Pizzería%20Obras%20Cumbres%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Pizzería Obras Cumbres y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-31T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+  if (tick()) { setInterval(tick, 1000); }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-START ✦ -->
+<style>
+  .id-lang {
+    position: fixed; bottom: 80px; left: 12px;
+    z-index: 9500;
+    display: inline-flex; gap: 4px;
+    padding: 4px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.08);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  }
+  .id-lang button {
+    width: 30px; height: 30px;
+    border: 0; border-radius: 999px;
+    background: transparent; cursor: pointer;
+    font-family: inherit; font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1a1410;
+    text-transform: uppercase;
+    transition: all .18s ease;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .id-lang button:hover { background: rgba(0,0,0,.07); }
+  .id-lang button[aria-pressed="true"] {
+    background: #1a1410; color: #fff;
+  }
+  @media (max-width: 640px) {
+    .id-lang { bottom: 70px; left: 8px; padding: 3px; gap: 2px; }
+    .id-lang button { width: 26px; height: 26px; font-size: 9.5px; }
+  }
+  /* No tapar al expirar */
+  body.id-locked .id-lang { display: none; }
+</style>
+
+<nav class="id-lang" id="id-lang" role="group" aria-label="Cambiar idioma">
+  <button data-lang="es" aria-pressed="false" title="Español">ES</button>
+  <button data-lang="ca" aria-pressed="false" title="Català">CA</button>
+  <button data-lang="en" aria-pressed="false" title="English">EN</button>
+  <button data-lang="fr" aria-pressed="false" title="Français">FR</button>
+  <button data-lang="it" aria-pressed="false" title="Italiano">IT</button>
+  <button data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
+</nav>
+
+<script>
+(function () {
+  // Diccionario UI crítica — fácil de mantener/extender
+  // Solo traduce CTAs comunes + textos del switcher; el copy long-form
+  // se mantiene en el idioma original de la landing (esto es honesto:
+  // la web real traducirá todo cuando el cliente contrate)
+  var DICT = {
+    es: {
+      reservar: "Reservar mesa", llamar: "Llamar", comoLlegar: "Cómo llegar",
+      ubicacion: "Dónde estamos", horarios: "Horarios", carta: "Carta",
+      reservas: "Reservas", contacto: "Contacto",
+      langNote: "Demo en castellano · web final 100% multilingüe"
+    },
+    ca: {
+      reservar: "Reservar taula", llamar: "Trucar", comoLlegar: "Com arribar",
+      ubicacion: "On som", horarios: "Horaris", carta: "Carta",
+      reservas: "Reserves", contacto: "Contacte",
+      langNote: "Demo en català · web final 100% multilingüe"
+    },
+    en: {
+      reservar: "Book a table", llamar: "Call us", comoLlegar: "Get directions",
+      ubicacion: "Find us", horarios: "Hours", carta: "Menu",
+      reservas: "Reservations", contacto: "Contact",
+      langNote: "Demo in EN preview · final site fully multilingual"
+    },
+    fr: {
+      reservar: "Réserver", llamar: "Appeler", comoLlegar: "Itinéraire",
+      ubicacion: "Nous trouver", horarios: "Horaires", carta: "Carte",
+      reservas: "Réservations", contacto: "Contact",
+      langNote: "Démo en FR · site final 100% multilingue"
+    },
+    it: {
+      reservar: "Prenota", llamar: "Chiamaci", comoLlegar: "Come arrivare",
+      ubicacion: "Dove siamo", horarios: "Orari", carta: "Menù",
+      reservas: "Prenotazioni", contacto: "Contatti",
+      langNote: "Demo in IT · sito finale 100% multilingue"
+    },
+    de: {
+      reservar: "Tisch buchen", llamar: "Anrufen", comoLlegar: "Wegbeschreibung",
+      ubicacion: "Hier finden Sie uns", horarios: "Öffnungszeiten", carta: "Karte",
+      reservas: "Reservierungen", contacto: "Kontakt",
+      langNote: "DE-Demo · finale Website 100% mehrsprachig"
+    }
+  };
+
+  var defaultLang = document.documentElement.lang || "es";
+  if (defaultLang.length > 2) defaultLang = defaultLang.slice(0, 2);
+
+  var buttons = document.querySelectorAll(".id-lang button");
+  buttons.forEach(function (btn) {
+    if (btn.dataset.lang === defaultLang) btn.setAttribute("aria-pressed", "true");
+    btn.addEventListener("click", function () {
+      var lang = btn.dataset.lang;
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      document.documentElement.lang = lang;
+
+      // Traduce textos críticos por heurística (busca textos comunes en español/catalán)
+      var d = DICT[lang];
+      var patterns = [
+        // CTAs / botones (texto suelto que coincida — case-insensitive)
+        { re: /\b(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)\b/gi, val: d.reservar },
+        { re: /\b(Llamar|Truca'ns|Trucar|Llámanos)\b/gi, val: d.llamar },
+        { re: /\b(Cómo llegar|Com arribar|Com hi arribem)\b/gi, val: d.comoLlegar },
+        // Section titles muy comunes
+        { re: /\b(Dónde estamos|On som|Visita|Visita'ns)\b/gi, val: d.ubicacion },
+        { re: /\b(Horarios|Horaris)\b/gi, val: d.horarios },
+        { re: /\b(Reservas|Reserves)\b/gi, val: d.reservas },
+        { re: /\b(Contacto|Contacte)\b/gi, val: d.contacto },
+      ];
+
+      // Solo cambia nodos de texto dentro de botones / encabezados nav, NO el body completo
+      var targets = document.querySelectorAll(
+        ".btn, .tel-btn, button:not(.id-lang button), " +
+        "nav a, .topbar a, .topbar button, " +
+        "[data-i18n], h2.section-title, h3.section-title"
+      );
+      targets.forEach(function (node) {
+        // No tocar el switcher mismo ni el countdown
+        if (node.closest(".id-lang") || node.closest(".id-countdown") || node.closest(".id-expired")) return;
+        // Solo nodos hoja con texto simple
+        if (node.children.length > 0 && node.children[0].tagName) {
+          // tiene hijos elemento — buscar solo el primer #text descendiente
+          var walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+          var txt;
+          while ((txt = walker.nextNode())) {
+            patterns.forEach(function (p) {
+              if (p.re.test(txt.nodeValue)) {
+                txt.nodeValue = txt.nodeValue.replace(p.re, p.val);
+              }
+            });
+          }
+        } else {
+          patterns.forEach(function (p) {
+            if (p.re.test(node.textContent)) {
+              node.textContent = node.textContent.replace(p.re, p.val);
+            }
+          });
+        }
+      });
+
+      // Tooltip honesta
+      var ln = document.getElementById("id-lang-note");
+      if (!ln) {
+        ln = document.createElement("div");
+        ln.id = "id-lang-note";
+        ln.style.cssText = "position:fixed;bottom:120px;left:12px;z-index:9499;background:rgba(26,20,16,.92);color:#fff;padding:10px 14px;border-radius:10px;font-family:-apple-system,Inter,sans-serif;font-size:11.5px;max-width:240px;line-height:1.4;animation:idLangFade .3s ease;box-shadow:0 4px 14px rgba(0,0,0,.18);";
+        document.body.appendChild(ln);
+        var style = document.createElement("style");
+        style.textContent = "@keyframes idLangFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}";
+        document.head.appendChild(style);
+      }
+      ln.textContent = d.langNote;
+      clearTimeout(window.__idLangTimer);
+      window.__idLangTimer = setTimeout(function () { if (ln) ln.remove(); }, 3500);
+    });
+  });
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-END ✦ -->
+
+</body>
+</html>

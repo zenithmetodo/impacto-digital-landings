@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ✦ NOINDEX-START ✦ -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<!-- ✦ NOINDEX-END ✦ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suzanne — Cocina francesa de la abuela · Poblenou, Barcelona</title>
+<meta name="description" content="Suzanne. Bistró francés en Poblenou. Cocina de la abuela, café de especialidad, latte art y desayunos parisinos. C/ Bilbao 98, Barcelona.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://suzannebcn.example/">
+<meta property="og:title" content="Suzanne — Cocina francesa de la abuela">
+<meta property="og:description" content="Bistró francés matinal en Poblenou. Oeufs-coque, mouillettes, café de especialidad.">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --crema:#f5efe0;
+    --crema-2:#ebe2cb;
+    --crema-3:#ddd0b3;
+    --mantel:#f9f4e8;
+    --azul:#365a8a;
+    --azul-2:#264776;
+    --azul-3:#5f80ac;
+    --azul-flor:#7d9cc0;
+    --roble:#8b6f47;
+    --roble-dark:#5c4a30;
+    --verde-matcha:#7a8a4a;
+    --amarillo-yema:#e6b94e;
+    --ink:#1e1810;
+    --ink-mute:#6f6149;
+    --line:rgba(30,24,16,0.10);
+    --line-2:rgba(30,24,16,0.20);
+    --side-padding:clamp(1.25rem, 3vw + 0.5rem, 2.5rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  html,body{overflow-x:clip;max-width:100%}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--crema);color:var(--ink);
+    line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;
+  }
+  /* Fondo con flores azules estampadas (porcelana francesa) */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:0.06;
+    background-image:
+      radial-gradient(circle at 12% 18%, var(--azul) 0, var(--azul) 4px, transparent 5px),
+      radial-gradient(circle at 12% 18%, transparent 5px, var(--azul-flor) 6px, var(--azul-flor) 7px, transparent 8px),
+      radial-gradient(circle at 38% 62%, var(--azul) 0, var(--azul) 3px, transparent 4px),
+      radial-gradient(circle at 78% 30%, var(--azul) 0, var(--azul) 4px, transparent 5px),
+      radial-gradient(circle at 78% 30%, transparent 5px, var(--azul-flor) 6px, var(--azul-flor) 7px, transparent 8px),
+      radial-gradient(circle at 58% 88%, var(--azul) 0, var(--azul) 3px, transparent 4px);
+    background-size:180px 180px;
+  }
+  img{max-width:100%;display:block;height:auto}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:0;background:none}
+
+  .container{
+    width:100%;max-width:1180px;margin:0 auto;
+    padding-left:var(--side-padding);padding-right:var(--side-padding);
+    position:relative;z-index:2;
+  }
+
+  .script{font-family:'Italianno',cursive;font-weight:400;line-height:0.95}
+  .serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+  .kicker{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:15px;letter-spacing:0.18em;color:var(--azul);display:inline-block;
+    text-transform:uppercase;
+  }
+
+  /* TOPBAR */
+  .topbar{
+    background:rgba(245,239,224,0.94);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 0;gap:14px;
+  }
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-mark{
+    font-family:'Italianno',cursive;font-size:54px;line-height:0.7;
+    color:var(--azul);font-weight:400;
+  }
+  .brand-text{
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;
+    color:var(--ink);line-height:1;letter-spacing:0.02em;
+  }
+  .brand-text small{
+    display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:10px;
+    letter-spacing:0.28em;color:var(--azul);margin-top:5px;text-transform:uppercase;
+  }
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 18px;border:1.5px solid var(--azul);
+    font-family:'Cormorant Garamond',serif;font-weight:500;font-size:14px;
+    letter-spacing:0.08em;color:var(--azul);background:transparent;
+    transition:all .25s;border-radius:4px;
+  }
+  .tel-btn:hover{background:var(--azul);color:var(--crema)}
+
+  /* HERO */
+  .hero{
+    background:var(--mantel);padding:80px 0 100px;position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;top:40px;left:-60px;
+    width:200px;height:200px;border-radius:50%;
+    background:radial-gradient(circle, var(--azul-flor) 0%, transparent 65%);
+    opacity:0.18;pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1fr;gap:48px;align-items:center;
+    position:relative;z-index:2;
+  }
+  @media (min-width:920px){
+    .hero-grid{grid-template-columns:1.05fr 0.95fr;gap:64px}
+  }
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:6px 16px;border:1px solid var(--azul);
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;
+    letter-spacing:0.06em;color:var(--azul);margin-bottom:28px;border-radius:4px;
+  }
+  .hero-tag::before{
+    content:"";width:6px;height:6px;border-radius:50%;background:var(--azul);
+  }
+  .hero h1{
+    font-family:'Italianno',cursive;font-weight:400;
+    font-size:clamp(3.8rem, 10vw, 8rem);
+    line-height:0.85;color:var(--azul);margin:0 0 14px;
+  }
+  .hero h1 .sub{
+    display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:clamp(1.4rem, 3vw, 2.2rem);
+    line-height:1.1;color:var(--ink);margin-top:6px;font-weight:500;letter-spacing:0.005em;
+  }
+  .hero-lede{
+    font-family:'Inter',sans-serif;font-size:16.5px;
+    color:var(--roble-dark);max-width:540px;line-height:1.8;margin:30px 0 36px;
+  }
+  .hero-lede strong{color:var(--azul);font-weight:600}
+  .hero-lede em{color:var(--roble-dark);font-style:italic;font-weight:500}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:13px 26px;
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;
+    letter-spacing:0.04em;transition:all .25s;border:1.5px solid;min-height:44px;
+    border-radius:4px;
+  }
+  .btn-primary{background:var(--azul);color:var(--crema);border-color:var(--azul)}
+  .btn-primary:hover{background:var(--azul-2);border-color:var(--azul-2)}
+  .btn-secondary{background:transparent;color:var(--azul);border-color:var(--azul)}
+  .btn-secondary:hover{background:var(--azul);color:var(--crema)}
+  .btn-ghost{background:transparent;color:var(--roble-dark);border-color:var(--roble)}
+  .btn-ghost:hover{background:var(--roble);color:var(--crema);border-color:var(--roble)}
+
+  /* Cita central + vajilla SVG */
+  .hero-vajilla{
+    position:relative;max-width:440px;margin:0 auto;aspect-ratio:1/1;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .vajilla-svg{width:100%;height:auto;filter:drop-shadow(0 12px 24px rgba(54,90,138,0.15))}
+  .vajilla-card{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    text-align:center;padding:30px 40px;background:var(--crema);
+    border:1px solid var(--azul-flor);border-radius:50%;
+    width:78%;aspect-ratio:1;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+  }
+  .vajilla-card .script{
+    font-family:'Italianno',cursive;font-size:clamp(36px, 6vw, 64px);
+    color:var(--azul);line-height:0.9;margin-bottom:10px;
+  }
+  .vajilla-card .quote{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:clamp(13px, 1.4vw, 16px);
+    color:var(--roble-dark);line-height:1.4;max-width:240px;
+  }
+  .vajilla-card .quote::before,
+  .vajilla-card .quote::after{
+    content:"";display:block;width:30px;height:1px;background:var(--azul-flor);
+    margin:8px auto;
+  }
+  .vajilla-card .author{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;
+    color:var(--azul);margin-top:6px;letter-spacing:0.06em;
+  }
+
+  /* SECCIONES */
+  section{padding:90px 0;position:relative;z-index:1}
+  @media (max-width:760px){section{padding:68px 0}}
+  .section-head{margin-bottom:48px;max-width:780px}
+  .section-head h2{
+    font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:clamp(2rem, 4vw + 0.5rem, 3.4rem);
+    line-height:1.05;letter-spacing:-0.005em;margin-top:12px;color:var(--ink);
+  }
+  .section-head h2 em{
+    font-family:'Italianno',cursive;font-weight:400;font-style:normal;
+    font-size:1.4em;color:var(--azul);letter-spacing:0;line-height:0.7;
+  }
+  .section-head p{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:18px;color:var(--roble-dark);margin-top:18px;max-width:600px;line-height:1.6;
+  }
+
+  /* COCINA DE LA ABUELA — historia */
+  .abuela{background:var(--crema-2);position:relative;overflow:hidden}
+  .abuela::before{
+    content:"";position:absolute;top:-100px;right:-100px;width:400px;height:400px;
+    background:radial-gradient(circle, var(--azul-flor) 0%, transparent 65%);
+    opacity:0.10;pointer-events:none;
+  }
+  .abuela-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+  @media (min-width:860px){
+    .abuela-grid{grid-template-columns:0.55fr 0.45fr;gap:72px}
+  }
+  .abuela-quote{
+    font-family:'Italianno',cursive;font-weight:400;
+    font-size:clamp(40px, 5vw + 0.4rem, 72px);
+    line-height:0.9;color:var(--azul);margin-bottom:22px;
+  }
+  .abuela-text p{
+    font-family:'Inter',sans-serif;font-size:16px;color:var(--roble-dark);
+    line-height:1.85;margin-bottom:16px;
+  }
+  .abuela-text p strong{color:var(--azul-2);font-weight:600}
+  .abuela-text p em{font-style:italic;color:var(--ink)}
+  .abuela-signature{
+    margin-top:24px;font-family:'Italianno',cursive;font-size:38px;
+    color:var(--azul);line-height:0.9;
+  }
+  .abuela-signature small{
+    display:block;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:14px;color:var(--ink-mute);letter-spacing:0.08em;margin-top:6px;
+  }
+  .abuela-portrait{
+    aspect-ratio:3/4;background:var(--mantel);
+    border:1px solid var(--azul-flor);position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;padding:24px;
+  }
+  .abuela-portrait::before{
+    content:"";position:absolute;inset:18px;border:1px solid var(--azul-flor);
+    pointer-events:none;
+  }
+  .abuela-portrait-content{
+    text-align:center;padding:30px;
+  }
+  .abuela-portrait .script{
+    font-family:'Italianno',cursive;font-size:clamp(60px, 8vw, 96px);
+    color:var(--azul);line-height:0.85;margin-bottom:10px;
+  }
+  .abuela-portrait .sub{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:15px;color:var(--roble-dark);letter-spacing:0.06em;line-height:1.4;
+    margin-bottom:18px;
+  }
+  .abuela-portrait .flowers{
+    display:flex;justify-content:center;gap:8px;
+  }
+  .abuela-portrait .flower{
+    width:20px;height:20px;border-radius:50%;
+    background:radial-gradient(circle, var(--azul-flor) 0 4px, transparent 5px),
+              radial-gradient(circle, var(--azul) 0 2px, transparent 3px);
+  }
+
+  /* CARTA FRANCESA */
+  .carta{background:var(--mantel)}
+  .carta-grid{display:grid;grid-template-columns:1fr;gap:28px}
+  @media (min-width:760px){.carta-grid{grid-template-columns:repeat(2,1fr);gap:32px}}
+  .carta-block{
+    background:var(--crema);border:1px solid var(--azul-flor);
+    padding:36px 32px;position:relative;
+  }
+  .carta-block::before{
+    content:"";position:absolute;top:0;left:24px;right:24px;height:3px;background:var(--azul);
+  }
+  .carta-block:nth-child(2)::before{background:var(--roble)}
+  .carta-block:nth-child(3)::before{background:var(--azul-flor)}
+  .carta-block:nth-child(4)::before{background:var(--verde-matcha)}
+  .carta-block h3{
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;
+    color:var(--ink);margin-bottom:4px;line-height:1;
+  }
+  .carta-block .sub{
+    font-family:'Italianno',cursive;font-size:26px;color:var(--azul);
+    margin-bottom:20px;display:block;line-height:0.9;
+  }
+  .carta-block ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+  .carta-block li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+    padding:14px 0;border-bottom:1px dashed var(--line);
+  }
+  .carta-block li:last-child{border-bottom:0}
+  .carta-block .nom{font-size:15px;color:var(--ink);flex:1;font-weight:500}
+  .carta-block .nom small{
+    display:block;font-style:italic;font-weight:400;font-size:13px;
+    color:var(--ink-mute);margin-top:3px;
+  }
+  .carta-block .precio{
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;
+    color:var(--azul);flex:none;
+  }
+
+  /* LATTE ART — café especialidad */
+  .latte{background:var(--azul);color:var(--crema);position:relative;overflow:hidden}
+  .latte::before{
+    content:"";position:absolute;bottom:-120px;right:-120px;width:400px;height:400px;
+    background:radial-gradient(circle, var(--azul-flor) 0%, transparent 70%);
+    opacity:0.20;pointer-events:none;
+  }
+  .latte .section-head h2{color:var(--crema)}
+  .latte .section-head h2 em{color:var(--amarillo-yema)}
+  .latte .section-head p{color:var(--crema-3)}
+  .latte .kicker{color:var(--amarillo-yema)}
+  .latte-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:36px}
+  @media (min-width:760px){.latte-grid{grid-template-columns:repeat(3,1fr);gap:30px}}
+  .latte-card{
+    background:rgba(245,239,224,0.06);border:1px solid rgba(245,239,224,0.20);
+    padding:32px 26px;transition:all .3s;
+  }
+  .latte-card:hover{border-color:var(--amarillo-yema);background:rgba(245,239,224,0.10)}
+  .latte-card .icon{
+    width:64px;height:64px;border-radius:50%;background:var(--crema);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+    font-family:'Italianno',cursive;font-size:42px;color:var(--azul);line-height:0.7;
+  }
+  .latte-card h3{
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;
+    color:var(--crema);margin-bottom:10px;line-height:1.15;
+  }
+  .latte-card p{color:var(--crema-3);font-size:15px;line-height:1.7}
+  .latte-card p strong{color:var(--amarillo-yema);font-weight:500}
+
+  /* GALERÍA */
+  .galeria{background:var(--crema)}
+  .gal-grid{
+    display:flex;flex-wrap:wrap;gap:clamp(14px, 1.8vw, 22px);
+    align-items:flex-start;justify-content:center;
+  }
+  .gal-figure{
+    flex:0 0 calc(50% - clamp(7px, 0.9vw, 11px));
+    max-width:calc(50% - clamp(7px, 0.9vw, 11px));
+    aspect-ratio:4/5;background:var(--mantel);
+    border:1px solid var(--azul-flor);position:relative;overflow:hidden;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:var(--azul);text-align:center;padding:24px;transition:all .3s;
+  }
+  .gal-figure .gal-script{
+    font-family:'Italianno',cursive;font-size:48px;line-height:0.85;color:var(--azul);
+  }
+  .gal-figure .gal-sub{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;
+    color:var(--ink);margin-top:8px;
+  }
+  .gal-figure small{
+    display:block;font-family:'Cormorant Garamond',serif;font-size:11px;
+    letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--ink-mute);margin-top:14px;
+  }
+  @media (max-width:640px){
+    .gal-figure{flex:0 0 100%;max-width:100%;aspect-ratio:1/1}
+  }
+
+  /* HORARIOS MATINAL */
+  .horarios-mat{background:var(--crema-2);text-align:center}
+  .horarios-mat .container{position:relative}
+  .horarios-mat h2 em{color:var(--azul)}
+  .hm-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;
+    max-width:900px;margin:48px auto 0;
+  }
+  .hm-block{
+    background:var(--mantel);border:1px solid var(--azul-flor);padding:30px 24px;
+    position:relative;
+  }
+  .hm-block h3{
+    font-family:'Italianno',cursive;font-size:54px;color:var(--azul);
+    line-height:0.8;margin-bottom:10px;font-weight:400;
+  }
+  .hm-block .time{
+    font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;
+    color:var(--ink);margin-bottom:12px;
+  }
+  .hm-block p{font-size:14.5px;color:var(--roble-dark);line-height:1.6;font-style:italic;font-family:'Cormorant Garamond',serif}
+
+  /* VISITA */
+  .visita{background:var(--crema)}
+  .visit-grid{display:grid;grid-template-columns:1fr;gap:48px;margin-top:40px}
+  @media (min-width:880px){
+    .visit-grid{grid-template-columns:1fr 1fr;gap:56px}
+  }
+  .visit-info dl{display:grid;gap:24px;margin:0}
+  .visit-row{border-top:1px solid var(--azul-flor);padding-top:18px}
+  .visit-row:last-child{border-bottom:1px solid var(--azul-flor);padding-bottom:18px}
+  .visit-label{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:14px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--azul);margin-bottom:10px;
+  }
+  .visit-value{font-size:15.5px;color:var(--ink);line-height:1.65}
+  .visit-value strong{color:var(--azul-2);font-weight:600}
+  .visit-value a{border-bottom:1px solid var(--azul);transition:all .25s}
+  .visit-value a:hover{color:var(--azul)}
+  .visit-city{color:var(--ink-mute);font-size:14px;display:block;margin-top:4px}
+  .hours-list{display:grid;gap:4px;list-style:none;padding:0;margin:0}
+  .hours-list li{
+    display:flex;justify-content:space-between;font-size:15px;padding:6px 0;
+  }
+  .hours-list .day{color:var(--ink-mute)}
+  .hours-list .time{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:16px;color:var(--ink)}
+  .hours-list li.now{background:var(--azul);color:var(--crema);padding:8px 14px;margin:0 -14px}
+  .hours-list li.now .day,.hours-list li.now .time{color:var(--crema)}
+
+  .map-wrap{
+    position:relative;aspect-ratio:4/3;
+    border:1px solid var(--azul-flor);background:var(--mantel);
+  }
+  .map-wrap iframe{width:100%;height:100%;border:0;filter:sepia(0.15) saturate(0.92)}
+  .map-cta{
+    position:absolute;bottom:14px;right:14px;
+    background:var(--azul);color:var(--crema);
+    padding:12px 22px;font-family:'Cormorant Garamond',serif;font-weight:600;
+    font-size:14px;letter-spacing:0.06em;
+    transition:all .25s;min-height:44px;display:inline-flex;align-items:center;border-radius:4px;
+  }
+  .map-cta:hover{background:var(--azul-2)}
+  @media (max-width:600px){.map-wrap{aspect-ratio:1/1}}
+
+  /* FAQ */
+  .faq{background:var(--mantel)}
+  .faq-list{margin-top:36px;max-width:840px;margin-left:auto;margin-right:auto}
+  .faq-item{border-top:1px solid var(--azul-flor);padding:8px 0}
+  .faq-item:last-child{border-bottom:1px solid var(--azul-flor)}
+  .faq-item summary{
+    list-style:none;cursor:pointer;padding:20px 0;
+    font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;
+    color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.25;
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";font-family:'Italianno',cursive;font-size:48px;
+    color:var(--azul);transition:transform .3s;flex-shrink:0;line-height:0.4;font-weight:400;
+  }
+  .faq-item[open] summary::after{content:"−";color:var(--roble)}
+  .faq-item p{padding:0 0 22px;color:var(--roble-dark);font-size:15.5px;line-height:1.78;max-width:680px}
+
+  /* CTA FINAL */
+  .cta-final{background:var(--crema-2);color:var(--ink);text-align:center;border-top:1px solid var(--azul-flor)}
+  .cta-final h2 em{color:var(--azul);font-style:normal}
+  .cta-final p{max-width:580px;margin:18px auto 32px;color:var(--roble-dark);font-size:16px;line-height:1.7;font-family:'Cormorant Garamond',serif;font-style:italic}
+  .cta-final .hero-cta{justify-content:center}
+
+  /* FOOTER */
+  footer{
+    background:var(--azul-2);color:rgba(245,239,224,0.7);
+    padding:40px 0;font-family:'Inter',sans-serif;font-size:13px;
+  }
+  footer .container{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;
+  }
+  footer a{color:var(--amarillo-yema)}
+  footer a:hover{color:var(--crema)}
+
+  /* DIALOG */
+  dialog.reserva-dialog{
+    border:1px solid var(--azul);padding:0;background:var(--crema);
+    max-width:480px;width:92%;color:var(--ink);
+  }
+  dialog[open],.reserva-dialog[open]{
+    position:fixed!important;inset:0!important;margin:auto!important;
+    transform:none!important;max-height:calc(100% - 2rem)!important;
+    box-sizing:border-box!important;
+  }
+  dialog::backdrop{background:rgba(38,71,118,0.75)}
+  .dlg-head{padding:26px 30px 18px;border-bottom:1px solid var(--azul-flor)}
+  .dlg-head .kicker{margin-bottom:8px}
+  .dlg-head h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--ink);font-weight:600;line-height:1.05}
+  .dlg-body{padding:24px 30px 30px}
+  .dlg-body p{font-size:14.5px;color:var(--roble-dark);margin-bottom:22px;line-height:1.7}
+  .dlg-form{display:grid;gap:14px}
+  .dlg-form label{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:13px;letter-spacing:0.08em;color:var(--azul);margin-bottom:4px;display:block}
+  .dlg-form input,.dlg-form select{
+    width:100%;padding:11px 14px;border:1px solid var(--azul-flor);background:var(--mantel);
+    font-family:'Inter',sans-serif;font-size:14.5px;color:var(--ink);border-radius:4px;
+  }
+  .dlg-form input:focus,.dlg-form select:focus{outline:none;border-color:var(--azul)}
+  .dlg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .dlg-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px;flex-wrap:wrap}
+  .dlg-close{background:none;border:0;color:var(--ink-mute);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;cursor:pointer}
+  .dlg-close:hover{color:var(--azul)}
+  .dlg-ok{display:none;text-align:center;padding:36px 24px}
+  .dlg-ok h4{font-family:'Italianno',cursive;font-size:48px;color:var(--azul);margin-bottom:10px;font-weight:400;line-height:0.9}
+  .dlg-ok p{color:var(--roble-dark);font-size:15px;font-family:'Cormorant Garamond',serif;font-style:italic}
+  dialog.is-sent .dlg-body{display:none}
+  dialog.is-sent .dlg-ok{display:block}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark">S</span>
+      <span class="brand-text">Suzanne<small>bistró francés · poblenou</small></span>
+    </a>
+    <a href="tel:+34000000000" class="tel-btn">Llamar</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="hero-tag">Bistró matinal · Poblenou</div>
+        <h1>Suzanne<span class="sub">cocina francesa de la abuela, café de especialidad</span></h1>
+        <p class="hero-lede">
+          Un bistró de barrio en Poblenou donde el desayuno se hace despacio.
+          <strong>Oeufs-coque con mouillettes</strong>, latte art en taza de porcelana
+          y la vajilla con flores azules que tu abuela tenía guardada para los domingos.
+          <em>Solo abrimos por las mañanas</em> — para que cada mañana cuente.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+          <a href="tel:+34000000000" class="btn btn-secondary">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Carrer+Bilbao+98+Poblenou+Barcelona" target="_blank" rel="noopener" class="btn btn-ghost">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero-vajilla reveal" aria-hidden="true">
+        <svg class="vajilla-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Plato exterior con flores azules -->
+          <circle cx="200" cy="200" r="190" fill="#f9f4e8" stroke="#7d9cc0" stroke-width="2"/>
+          <circle cx="200" cy="200" r="180" fill="none" stroke="#365a8a" stroke-width="1" opacity="0.4"/>
+          <!-- Flores estampadas en el borde -->
+          <g fill="#365a8a" opacity="0.85">
+            <circle cx="200" cy="20" r="4"/>
+            <circle cx="380" cy="200" r="4"/>
+            <circle cx="200" cy="380" r="4"/>
+            <circle cx="20" cy="200" r="4"/>
+            <circle cx="327" cy="73" r="4"/>
+            <circle cx="327" cy="327" r="4"/>
+            <circle cx="73" cy="327" r="4"/>
+            <circle cx="73" cy="73" r="4"/>
+          </g>
+          <g fill="#7d9cc0" opacity="0.8">
+            <circle cx="200" cy="20" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+            <circle cx="380" cy="200" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+            <circle cx="200" cy="380" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+            <circle cx="20" cy="200" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+            <circle cx="327" cy="73" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+            <circle cx="327" cy="327" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+            <circle cx="73" cy="327" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+            <circle cx="73" cy="73" r="9" fill="none" stroke="#7d9cc0" stroke-width="2"/>
+          </g>
+          <!-- Centro interior -->
+          <circle cx="200" cy="200" r="135" fill="#f5efe0" stroke="#7d9cc0" stroke-width="1"/>
+        </svg>
+        <div class="vajilla-card">
+          <span class="script">Bon<br>matin.</span>
+          <p class="quote">"La cocina de la abuela no necesita ser entendida — solo se hace despacio, con tiempo y con cariño."</p>
+          <span class="author">— Suzanne, abuela paris.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="abuela" id="abuela">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Cocina de la abuela</span>
+      <h2>La receta no se <em>improvisa</em>.</h2>
+      <p>Suzanne fue una abuela parisina que cocinaba como cocinaban en los bistrós de su barrio: con tiempo, con técnica heredada y con la vajilla bonita siempre puesta.</p>
+    </div>
+    <div class="abuela-grid">
+      <div class="reveal">
+        <p class="abuela-quote">"Le petit déjeuner, c'est sacré."</p>
+        <div class="abuela-text">
+          <p>Suzanne abrió porque <strong>nos faltaba un bistró francés honesto</strong> en el barrio. No fusión, no concepto: cocina del bistró parisino de toda la vida, hecha despacio y servida en vajilla bonita.</p>
+          <p>El <em>oeuf-coque con mouillettes</em> es la receta de Suzanne tal cual: huevo cocido tres minutos justos, soldaditos de pan tostado con mantequilla salada, sal de Bretaña encima. Tarda lo que tarda.</p>
+          <p>Solo abrimos por las mañanas. <strong>De ocho a tres</strong>. Para que cada mañana cuente y para no agotar al equipo. Las tardes las dedicamos a probar recetas nuevas y a descansar.</p>
+        </div>
+        <p class="abuela-signature">Mathilde &amp; Lucas<small>— equipo de Suzanne</small></p>
+      </div>
+      <div class="abuela-portrait reveal" aria-hidden="true">
+        <div class="abuela-portrait-content">
+          <span class="script">Suzanne</span>
+          <p class="sub">"Cuando llega gente nueva,<br>pongo el mantel bueno."</p>
+          <div class="flowers">
+            <span class="flower"></span><span class="flower"></span><span class="flower"></span>
+            <span class="flower"></span><span class="flower"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carta" id="carta">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">La carta</span>
+      <h2>Para empezar la <em>journée</em>.</h2>
+      <p>Carta de mañana, sencilla y honesta. Pequeña porque preferimos hacer pocas cosas bien que muchas regular. Cambios estacionales cada seis semanas según la fruta y el queso de temporada.</p>
+    </div>
+    <div class="carta-grid">
+      <div class="carta-block reveal">
+        <h3>Para abrir el día</h3>
+        <span class="sub">Le petit déjeuner</span>
+        <ul>
+          <li><span class="nom">Oeuf-coque &amp; mouillettes<small>huevo cocido 3 minutos, soldaditos de pan, mantequilla salada</small></span><span class="precio">8,80 €</span></li>
+          <li><span class="nom">Tartine du jour<small>tostada de masa madre, queso o jamón de pays, fruta</small></span><span class="precio">7,50 €</span></li>
+          <li><span class="nom">Croissant artesano<small>de Fleca Sant Adrià, mantequilla francesa AOC</small></span><span class="precio">2,80 €</span></li>
+          <li><span class="nom">Pain au chocolat<small>chocolate Valrhona 66%, hojaldre del día</small></span><span class="precio">3,20 €</span></li>
+          <li><span class="nom">Yogur con miel y nueces<small>yogur griego artesano, miel del Montseny</small></span><span class="precio">5,80 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-block reveal">
+        <h3>Café de especialidad</h3>
+        <span class="sub">Le café, comme à Paris</span>
+        <ul>
+          <li><span class="nom">Espresso<small>blend Slow Mov, Etiopía + Colombia</small></span><span class="precio">2,20 €</span></li>
+          <li><span class="nom">Latte art<small>flat white o cortado con latte art</small></span><span class="precio">3,80 €</span></li>
+          <li><span class="nom">Café crème grande<small>tradicional francés, taza grande</small></span><span class="precio">3,20 €</span></li>
+          <li><span class="nom">Filtro V60<small>extracción manual, origen único rotativo</small></span><span class="precio">4,20 €</span></li>
+          <li><span class="nom">Café au lait con croissant<small>set tradicional matinal</small></span><span class="precio">6,80 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-block reveal">
+        <h3>Para acompañar</h3>
+        <span class="sub">Les plats du matin</span>
+        <ul>
+          <li><span class="nom">Quiche lorraine<small>masa quebrada, beicon ahumado, crème fraîche</small></span><span class="precio">8,80 €</span></li>
+          <li><span class="nom">Tabla de quesos franceses<small>tres referencias: brie, comté, chèvre cendré</small></span><span class="precio">12,50 €</span></li>
+          <li><span class="nom">Ensalada del huerto<small>hojas frescas, tomate, queso fresco, vinagreta dijon</small></span><span class="precio">9,50 €</span></li>
+          <li><span class="nom">Tartine au saumon<small>salmón ahumado, queso fresco, eneldo, alcaparras</small></span><span class="precio">10,80 €</span></li>
+          <li><span class="nom">Soupe à l'oignon<small>versión de mañana, gratinada con comté</small></span><span class="precio">8,50 €</span></li>
+        </ul>
+      </div>
+      <div class="carta-block reveal">
+        <h3>Para terminar</h3>
+        <span class="sub">Le sucré de Suzanne</span>
+        <ul>
+          <li><span class="nom">Tarte au citron<small>limón de Menton, merengue italiano flambeado</small></span><span class="precio">5,50 €</span></li>
+          <li><span class="nom">Crêpe au beurre &amp; sucre<small>versión clásica, mantequilla salada y azúcar</small></span><span class="precio">5,80 €</span></li>
+          <li><span class="nom">Cannelé bordelais<small>caramelizado por fuera, esponjoso por dentro</small></span><span class="precio">3,20 €</span></li>
+          <li><span class="nom">Madeleines del día<small>tres unidades, recién horneadas</small></span><span class="precio">4,80 €</span></li>
+          <li><span class="nom">Chocolat chaud<small>chocolate caliente espeso a la francesa</small></span><span class="precio">4,20 €</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="latte">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">El café importa</span>
+      <h2>De grano <em>verde</em> a la taza.</h2>
+      <p>Trabajamos con Slow Mov, tostadores de Gràcia, para tener café siempre fresco y trazable. Tres referencias rotativas según temporada y un blend estable de la casa.</p>
+    </div>
+    <div class="latte-grid">
+      <div class="latte-card reveal">
+        <span class="icon">B</span>
+        <h3>Blend de la casa</h3>
+        <p>Mezcla estable de <strong>Etiopía Yirgacheffe</strong> y <strong>Colombia Huila</strong>. Notas a chocolate con leche, mandarina y caramelo. Ideal con leche para cortados y flat whites.</p>
+      </div>
+      <div class="latte-card reveal">
+        <span class="icon">F</span>
+        <h3>Filtro de temporada</h3>
+        <p>Origen único en rotación cada tres semanas. Esta temporada: <strong>Kenya Nyeri</strong>, proceso lavado. Notas a frutos rojos, grosella negra, final cítrico.</p>
+      </div>
+      <div class="latte-card reveal">
+        <span class="icon">L</span>
+        <h3>Latte art en porcelana</h3>
+        <p>Las tazas son francesas, de porcelana de Limoges. <strong>El latte art tarda lo que tarda</strong>. Si pides para llevar, te lo damos en vaso compostable — pero te animamos a quedarte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Mira</span>
+      <h2>Las mañanas de <em>Suzanne</em>.</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal-figure reveal">
+        <span class="gal-script">Oeuf-coque</span>
+        <span class="gal-sub">avec mouillettes</span>
+        <small>3 minutos justos</small>
+      </figure>
+      <figure class="gal-figure reveal">
+        <span class="gal-script">Latte art</span>
+        <span class="gal-sub">porcelana de Limoges</span>
+        <small>Tarda lo que tarda</small>
+      </figure>
+      <figure class="gal-figure reveal">
+        <span class="gal-script">Vajilla</span>
+        <span class="gal-sub">con flores azules</span>
+        <small>De la abuela</small>
+      </figure>
+      <figure class="gal-figure reveal">
+        <span class="gal-script">Croissant</span>
+        <span class="gal-sub">mantequilla AOC</span>
+        <small>De la Fleca Sant Adrià</small>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="horarios-mat">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center">
+      <span class="kicker">Solo por las mañanas</span>
+      <h2>Cada mañana <em>cuenta</em>.</h2>
+      <p>Abrimos siete días a la semana, todos por la mañana. Cerramos a las tres en punto para descansar y probar recetas nuevas.</p>
+    </div>
+    <div class="hm-grid">
+      <div class="hm-block reveal">
+        <h3>Lun – Vie</h3>
+        <div class="time">8:00 – 15:00</div>
+        <p>Ambiente tranquilo entre semana, ideal para venir solx a desayunar.</p>
+      </div>
+      <div class="hm-block reveal">
+        <h3>Sáb – Dom</h3>
+        <div class="time">9:00 – 15:30</div>
+        <p>Desayunos largos de fin de semana, mejor reservar para mesa de cuatro.</p>
+      </div>
+      <div class="hm-block reveal">
+        <h3>Festivos</h3>
+        <div class="time">9:30 – 15:00</div>
+        <p>Abrimos todos los festivos. La carta es la misma, los croissants también.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Pásate</span>
+      <h2>C/ Bilbao, <em>98</em>.</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <dl>
+          <div class="visit-row">
+            <div class="visit-label">Dirección</div>
+            <div class="visit-value">
+              Carrer de Bilbao, 98
+              <span class="visit-city">08005 Barcelona · Poblenou</span>
+            </div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Horario</div>
+            <ul class="hours-list">
+              <li><span class="day">Lunes</span><span class="time">8:00 – 15:00</span></li>
+              <li><span class="day">Martes</span><span class="time">8:00 – 15:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">8:00 – 15:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">8:00 – 15:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">8:00 – 15:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">9:00 – 15:30</span></li>
+              <li><span class="day">Domingo</span><span class="time">9:00 – 15:30</span></li>
+            </ul>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Reservas</div>
+            <div class="visit-value"><a href="#" onclick="document.getElementById('reserva-modal').showModal();return false;">Reservar mesa online</a> o por teléfono</div>
+          </div>
+          <div class="visit-row">
+            <div class="visit-label">Cómo llegar</div>
+            <div class="visit-value">
+              Metro <strong>Llacuna</strong> (L4) · 6 min andando<br>
+              <span class="visit-city">Bus H14, V27 — parada Bilbao / Llull · Bicing junto al local</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+Bilbao+98+Poblenou+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Suzanne Barcelona">
+        </iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrer+Bilbao+98+Poblenou+Barcelona"
+           target="_blank" rel="noopener" class="map-cta">
+          Cómo llegar →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2>Lo que <em>nos preguntáis</em>.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Hace falta reservar?</summary>
+        <p>Entre semana no — entras y casi siempre hay mesa libre. Para sábados y domingos, especialmente entre las diez y la una del mediodía, sí recomendamos reservar con un día de antelación. Para mesas de cuatro o más personas es imprescindible. Reserva por el formulario online, por teléfono o por mensaje directo de Instagram.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Solo abrís por la mañana?</summary>
+        <p>Solo por las mañanas. De ocho a tres entre semana, de nueve a tres y media los fines de semana. Cerramos a las tres en punto sin excepciones. Las tardes las dedicamos a probar recetas nuevas, descansar y preparar el café del día siguiente. Para nosotros es importante que cada mañana esté impecable, por eso preferimos no estirar el horario.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tenéis opciones veganas y sin gluten?</summary>
+        <p>Sí. Opciones veganas: tartine du jour vegetal, ensalada del huerto sin queso, tostada de aguacate con tomate, yogur vegetal con frutos del bosque y miel de agave. Sin gluten: pan sin gluten artesano para tartinas, quiche con base de almendra disponible bajo pedido del día anterior, todas las opciones de café y la mayoría de postres. Avísanos al pedir.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué tipo de café servís?</summary>
+        <p>Especialidad. Trabajamos con Slow Mov, tostadores de Gràcia. Tenemos un blend estable de la casa (Etiopía y Colombia) y un origen único de filtro que rotamos cada tres semanas. Esta temporada el filtro es Kenya Nyeri. El espresso lo sacamos en taza pequeña de porcelana, los lattes en taza grande con latte art. No hacemos café para llevar en vaso de papel salvo petición.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo venir solx a desayunar?</summary>
+        <p>Sí, la barra está pensada exactamente para eso. Tres taburetes con vistas a la cocina abierta, un buen libro o tu cuaderno y un café tranquilo. Entre semana de ocho a diez es el momento más calmado. Si te apetece, también hay mesa pequeña junto a la ventana que reservamos para quien viene a desayunar solx. Sin prisa, sin que nadie te mire raro.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <span class="kicker">Te esperamos</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw + 0.5rem,3.4rem);line-height:1.05;margin-top:14px;font-weight:600">Ven a desayunar <em>despacio</em>.</h2>
+    <p>C/ Bilbao 98, Poblenou. Todos los días por la mañana — para que cada mañana cuente.</p>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('reserva-modal').showModal()">Reservar mesa</button>
+      <a href="#carta" class="btn btn-secondary">Ver la carta</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>Suzanne · C/ Bilbao 98 · Poblenou · Barcelona · Bistró francés matinal</span>
+    <span><a href="#carta">La carta</a> · <a href="#visita">Cómo llegar</a></span>
+  </div>
+</footer>
+
+<dialog id="reserva-modal" class="reserva-dialog">
+  <div class="dlg-head">
+    <span class="kicker">Reservar mesa</span>
+    <h3>Reservar en Suzanne</h3>
+  </div>
+  <div class="dlg-body">
+    <p>Recomendamos reservar para fines de semana y mesas de cuatro o más. Entre semana casi siempre hay mesa libre, especialmente antes de las diez.</p>
+    <form class="dlg-form" onsubmit="event.preventDefault();this.closest('dialog').classList.add('is-sent')">
+      <div>
+        <label for="r-nom">Nombre</label>
+        <input type="text" id="r-nom" required>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-personas">Personas</label>
+          <select id="r-personas" required>
+            <option>1 persona</option>
+            <option>2 personas</option>
+            <option>3-4 personas</option>
+            <option>5+ personas</option>
+          </select>
+        </div>
+        <div>
+          <label for="r-tipo">Franja</label>
+          <select id="r-tipo" required>
+            <option>8:00 – 10:00</option>
+            <option>10:00 – 12:00</option>
+            <option>12:00 – 14:00</option>
+            <option>Fin de semana desayuno largo</option>
+          </select>
+        </div>
+      </div>
+      <div class="dlg-row">
+        <div>
+          <label for="r-tel">Teléfono</label>
+          <input type="tel" id="r-tel" required>
+        </div>
+        <div>
+          <label for="r-fecha">Día</label>
+          <input type="date" id="r-fecha" required>
+        </div>
+      </div>
+      <div class="dlg-actions">
+        <button type="button" class="dlg-close" onclick="this.closest('dialog').close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Reservar</button>
+      </div>
+    </form>
+  </div>
+  <div class="dlg-ok">
+    <h4>Merci !</h4>
+    <p>Te contactamos para confirmar la reserva en pocas horas.<br><br>
+      <button class="dlg-close" onclick="this.closest('dialog').close()">Cerrar</button>
+    </p>
+  </div>
+</dialog>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"Suzanne",
+  "description":"Bistró francés matinal en Poblenou. Cocina de la abuela, oeufs-coque con mouillettes, café de especialidad y latte art en porcelana de Limoges.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Carrer de Bilbao, 98",
+    "addressLocality":"Barcelona",
+    "postalCode":"08005",
+    "addressRegion":"Catalunya",
+    "addressCountry":"ES"
+  },
+  "servesCuisine":["French","Bistro","Specialty coffee","Breakfast"],
+  "priceRange":"€€",
+  "acceptsReservations":"True",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"15:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"15:30"}
+  ],
+  "sameAs":["https://www.instagram.com/suzanne_barcelona/"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"¿Hace falta reservar en Suzanne?","acceptedAnswer":{"@type":"Answer","text":"Entre semana casi siempre hay mesa libre. Para sábados y domingos entre 10h y 13h recomendamos reservar con un día de antelación. Para mesas de 4+ es imprescindible. Reserva por formulario, teléfono o Instagram."}},
+    {"@type":"Question","name":"¿Solo abrís por la mañana?","acceptedAnswer":{"@type":"Answer","text":"Solo por las mañanas. De 8 a 15h entre semana, de 9 a 15:30 fines de semana. Cerramos a las 15:00 sin excepciones. Las tardes las dedicamos a probar recetas, descansar y preparar el café del día siguiente."}},
+    {"@type":"Question","name":"¿Tenéis opciones veganas y sin gluten?","acceptedAnswer":{"@type":"Answer","text":"Sí. Veganas: tartine vegetal, ensalada del huerto sin queso, tostada aguacate, yogur vegetal. Sin gluten: pan artesano, quiche con base almendra bajo pedido del día anterior. Café y mayoría de postres también."}},
+    {"@type":"Question","name":"¿Qué tipo de café servís?","acceptedAnswer":{"@type":"Answer","text":"Café de especialidad. Trabajamos con Slow Mov de Gràcia. Blend estable de la casa (Etiopía + Colombia) y un filtro de origen único que rotamos cada 3 semanas. Esta temporada Kenya Nyeri."}},
+    {"@type":"Question","name":"¿Puedo venir solx a desayunar a Suzanne?","acceptedAnswer":{"@type":"Answer","text":"Sí, la barra está pensada para eso. 3 taburetes con vistas a cocina abierta. Mesa pequeña junto a ventana reservada para quien viene solx. Entre semana de 8 a 10h es el momento más calmado."}}
+  ]
+}
+</script>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function(e){ e.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+    setTimeout(function(){ els.forEach(function(e){ e.classList.add('is-visible'); }); }, 2500);
+  })();
+
+  (function(){
+    var items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    var jsDay = new Date().getDay();
+    var idx = jsDay === 0 ? 6 : jsDay - 1;
+    if (items[idx]) items[idx].classList.add('now');
+  })();
+</script>
+
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-START ✦ -->
+<style>
+  :root {
+    --id-bg: #0f0c0a; --id-fg: #f4ede1; --id-accent: #c89e5a;
+    --id-cream: #f4ede1; --id-cream-dk: #8a7458;
+    --id-ink: #1a1410; --id-wa: #25d366;
+  }
+  body.id-locked { overflow: hidden !important; }
+  body:not(.id-locked) { padding-bottom: 64px; }
+  @media (max-width: 640px) { body:not(.id-locked) { padding-bottom: 56px; } }
+
+  .id-countdown {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--id-bg); color: var(--id-fg);
+    border-top: 2px solid var(--id-accent); padding: 12px 20px;
+    z-index: 9000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    font-size: 14px; line-height: 1.3;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; text-decoration: none;
+    transition: background .25s ease;
+  }
+  .id-countdown:hover { background: #1a1410; }
+  .id-countdown__label {
+    text-transform: uppercase; letter-spacing: 0.12em;
+    font-weight: 600; color: var(--id-accent); font-size: 11px;
+  }
+  .id-countdown__time {
+    font-variant-numeric: tabular-nums; font-weight: 700;
+    font-size: 16px; letter-spacing: 0.02em;
+  }
+  .id-countdown__cta { opacity: .85; font-size: 13px; }
+  .id-countdown__cta strong { color: var(--id-accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .id-countdown { padding: 10px 12px; gap: 10px; font-size: 13px; }
+    .id-countdown__cta { display: none; }
+    .id-countdown__label { font-size: 10px; }
+    .id-countdown__time { font-size: 14px; }
+  }
+
+  .id-expired {
+    position: fixed; inset: 0;
+    background: var(--id-cream); color: var(--id-ink);
+    z-index: 99999;
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    animation: id-fade .5s ease;
+  }
+  .id-expired[hidden] { display: none !important; }
+  @keyframes id-fade { from { opacity: 0; } to { opacity: 1; } }
+  .id-expired__card { max-width: 640px; text-align: center; }
+  .id-expired__kicker {
+    text-transform: uppercase; letter-spacing: 0.28em;
+    font-size: 12px; color: var(--id-cream-dk);
+    margin: 0 0 16px; font-weight: 600;
+  }
+  .id-expired__title {
+    font-size: clamp(64px, 16vw, 140px); line-height: 0.9;
+    margin: 0 0 24px; font-weight: 900;
+    letter-spacing: -0.04em; color: var(--id-ink);
+  }
+  .id-expired__text {
+    font-size: clamp(16px, 2.2vw, 19px); line-height: 1.55;
+    margin: 0 auto 36px; max-width: 520px; color: #3d322a;
+  }
+  .id-expired__text strong { color: var(--id-ink); }
+  .id-expired__ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; margin-bottom: 32px;
+  }
+  .id-expired__btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 999px;
+    font-size: 16px; font-weight: 700; text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .id-expired__btn:hover { transform: translateY(-2px); }
+  .id-expired__btn--wa {
+    background: var(--id-wa); color: #fff;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, .35);
+  }
+  .id-expired__btn--wa:hover { box-shadow: 0 10px 28px rgba(37, 211, 102, .45); }
+  .id-expired__btn--mail {
+    background: transparent; color: var(--id-ink);
+    border: 2px solid var(--id-cream-dk);
+  }
+  .id-expired__btn--mail:hover { border-color: var(--id-ink); }
+  .id-expired__foot {
+    font-size: 12px; color: var(--id-cream-dk);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    margin: 0; font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .id-expired__btn { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+</style>
+
+<a class="id-countdown" id="id-countdown"
+   href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Suzanne%20y%20me%20interesa%20hablar."
+   aria-label="Demo disponible — pulsa para hablar por WhatsApp">
+  <span class="id-countdown__label">Demo</span>
+  <span class="id-countdown__time" id="id-time">— — —</span>
+  <span class="id-countdown__cta">Si te gusta, <strong>escríbenos antes</strong></span>
+</a>
+
+<section class="id-expired" id="id-expired" hidden role="dialog" aria-modal="true" aria-labelledby="id-expired-title">
+  <div class="id-expired__card">
+    <p class="id-expired__kicker">Esto era una demo</p>
+    <h1 class="id-expired__title" id="id-expired-title">Se acabó.</h1>
+    <p class="id-expired__text">
+      Esta web era una <strong>muestra</strong> de lo que podríamos hacer para <strong>Suzanne</strong>.
+      Si te ha gustado y quieres una para tu negocio, <strong>escríbenos</strong> —
+      Pedro te responde personalmente y la web final la adaptamos al 100% a tu gusto.
+    </p>
+    <div class="id-expired__ctas">
+      <a class="id-expired__btn id-expired__btn--wa"
+         href="https://wa.me/34678643381?text=Hola%20Pedro,%20vi%20la%20web%20demo%20de%20Suzanne%20y%20me%20interesa%20hablar.">
+        WhatsApp · Hablar con Pedro
+      </a>
+      <a class="id-expired__btn id-expired__btn--mail"
+         href="mailto:pedronuneztrabajos@gmail.com?subject=Web%20demo%20Suzanne%20—%20me%20interesa&body=Hola Pedro,%0A%0AVi la demo de Suzanne y me gustaría hablar.%0A%0AGracias.">
+        Escríbenos un email
+      </a>
+    </div>
+    <p class="id-expired__foot">Pedro Núñez · Impacto Digital</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var DEADLINE = new Date("2026-05-31T12:00:00+02:00").getTime();
+  var banner = document.getElementById("id-countdown");
+  var timeEl = document.getElementById("id-time");
+  var expired = document.getElementById("id-expired");
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function tick() {
+    var ms = DEADLINE - Date.now();
+    if (ms <= 0) {
+      banner.style.display = "none";
+      expired.hidden = false;
+      document.body.classList.add("id-locked");
+      document.body.style.paddingBottom = "0";
+      return false;
+    }
+    var d = Math.floor(ms / 86400000);
+    var h = Math.floor((ms % 86400000) / 3600000);
+    var m = Math.floor((ms % 3600000) / 60000);
+    var s = Math.floor((ms % 60000) / 1000);
+    timeEl.textContent = d + "d " + pad(h) + "h " + pad(m) + "m " + pad(s) + "s";
+    return true;
+  }
+  if (tick()) { setInterval(tick, 1000); }
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
+
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-START ✦ -->
+<style>
+  .id-lang {
+    position: fixed; bottom: 80px; left: 12px;
+    z-index: 9500;
+    display: inline-flex; gap: 4px;
+    padding: 4px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.08);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  }
+  .id-lang button {
+    width: 30px; height: 30px;
+    border: 0; border-radius: 999px;
+    background: transparent; cursor: pointer;
+    font-family: inherit; font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1a1410;
+    text-transform: uppercase;
+    transition: all .18s ease;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .id-lang button:hover { background: rgba(0,0,0,.07); }
+  .id-lang button[aria-pressed="true"] {
+    background: #1a1410; color: #fff;
+  }
+  @media (max-width: 640px) {
+    .id-lang { bottom: 70px; left: 8px; padding: 3px; gap: 2px; }
+    .id-lang button { width: 26px; height: 26px; font-size: 9.5px; }
+  }
+  /* No tapar al expirar */
+  body.id-locked .id-lang { display: none; }
+</style>
+
+<nav class="id-lang" id="id-lang" role="group" aria-label="Cambiar idioma">
+  <button data-lang="es" aria-pressed="false" title="Español">ES</button>
+  <button data-lang="ca" aria-pressed="false" title="Català">CA</button>
+  <button data-lang="en" aria-pressed="false" title="English">EN</button>
+  <button data-lang="fr" aria-pressed="false" title="Français">FR</button>
+  <button data-lang="it" aria-pressed="false" title="Italiano">IT</button>
+  <button data-lang="de" aria-pressed="false" title="Deutsch">DE</button>
+</nav>
+
+<script>
+(function () {
+  // Diccionario UI crítica — fácil de mantener/extender
+  // Solo traduce CTAs comunes + textos del switcher; el copy long-form
+  // se mantiene en el idioma original de la landing (esto es honesto:
+  // la web real traducirá todo cuando el cliente contrate)
+  var DICT = {
+    es: {
+      reservar: "Reservar mesa", llamar: "Llamar", comoLlegar: "Cómo llegar",
+      ubicacion: "Dónde estamos", horarios: "Horarios", carta: "Carta",
+      reservas: "Reservas", contacto: "Contacto",
+      langNote: "Demo en castellano · web final 100% multilingüe"
+    },
+    ca: {
+      reservar: "Reservar taula", llamar: "Trucar", comoLlegar: "Com arribar",
+      ubicacion: "On som", horarios: "Horaris", carta: "Carta",
+      reservas: "Reserves", contacto: "Contacte",
+      langNote: "Demo en català · web final 100% multilingüe"
+    },
+    en: {
+      reservar: "Book a table", llamar: "Call us", comoLlegar: "Get directions",
+      ubicacion: "Find us", horarios: "Hours", carta: "Menu",
+      reservas: "Reservations", contacto: "Contact",
+      langNote: "Demo in EN preview · final site fully multilingual"
+    },
+    fr: {
+      reservar: "Réserver", llamar: "Appeler", comoLlegar: "Itinéraire",
+      ubicacion: "Nous trouver", horarios: "Horaires", carta: "Carte",
+      reservas: "Réservations", contacto: "Contact",
+      langNote: "Démo en FR · site final 100% multilingue"
+    },
+    it: {
+      reservar: "Prenota", llamar: "Chiamaci", comoLlegar: "Come arrivare",
+      ubicacion: "Dove siamo", horarios: "Orari", carta: "Menù",
+      reservas: "Prenotazioni", contacto: "Contatti",
+      langNote: "Demo in IT · sito finale 100% multilingue"
+    },
+    de: {
+      reservar: "Tisch buchen", llamar: "Anrufen", comoLlegar: "Wegbeschreibung",
+      ubicacion: "Hier finden Sie uns", horarios: "Öffnungszeiten", carta: "Karte",
+      reservas: "Reservierungen", contacto: "Kontakt",
+      langNote: "DE-Demo · finale Website 100% mehrsprachig"
+    }
+  };
+
+  var defaultLang = document.documentElement.lang || "es";
+  if (defaultLang.length > 2) defaultLang = defaultLang.slice(0, 2);
+
+  var buttons = document.querySelectorAll(".id-lang button");
+  buttons.forEach(function (btn) {
+    if (btn.dataset.lang === defaultLang) btn.setAttribute("aria-pressed", "true");
+    btn.addEventListener("click", function () {
+      var lang = btn.dataset.lang;
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      document.documentElement.lang = lang;
+
+      // Traduce textos críticos por heurística (busca textos comunes en español/catalán)
+      var d = DICT[lang];
+      var patterns = [
+        // CTAs / botones (texto suelto que coincida — case-insensitive)
+        { re: /\b(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)\b/gi, val: d.reservar },
+        { re: /\b(Llamar|Truca'ns|Trucar|Llámanos)\b/gi, val: d.llamar },
+        { re: /\b(Cómo llegar|Com arribar|Com hi arribem)\b/gi, val: d.comoLlegar },
+        // Section titles muy comunes
+        { re: /\b(Dónde estamos|On som|Visita|Visita'ns)\b/gi, val: d.ubicacion },
+        { re: /\b(Horarios|Horaris)\b/gi, val: d.horarios },
+        { re: /\b(Reservas|Reserves)\b/gi, val: d.reservas },
+        { re: /\b(Contacto|Contacte)\b/gi, val: d.contacto },
+      ];
+
+      // Solo cambia nodos de texto dentro de botones / encabezados nav, NO el body completo
+      var targets = document.querySelectorAll(
+        ".btn, .tel-btn, button:not(.id-lang button), " +
+        "nav a, .topbar a, .topbar button, " +
+        "[data-i18n], h2.section-title, h3.section-title"
+      );
+      targets.forEach(function (node) {
+        // No tocar el switcher mismo ni el countdown
+        if (node.closest(".id-lang") || node.closest(".id-countdown") || node.closest(".id-expired")) return;
+        // Solo nodos hoja con texto simple
+        if (node.children.length > 0 && node.children[0].tagName) {
+          // tiene hijos elemento — buscar solo el primer #text descendiente
+          var walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+          var txt;
+          while ((txt = walker.nextNode())) {
+            patterns.forEach(function (p) {
+              if (p.re.test(txt.nodeValue)) {
+                txt.nodeValue = txt.nodeValue.replace(p.re, p.val);
+              }
+            });
+          }
+        } else {
+          patterns.forEach(function (p) {
+            if (p.re.test(node.textContent)) {
+              node.textContent = node.textContent.replace(p.re, p.val);
+            }
+          });
+        }
+      });
+
+      // Tooltip honesta
+      var ln = document.getElementById("id-lang-note");
+      if (!ln) {
+        ln = document.createElement("div");
+        ln.id = "id-lang-note";
+        ln.style.cssText = "position:fixed;bottom:120px;left:12px;z-index:9499;background:rgba(26,20,16,.92);color:#fff;padding:10px 14px;border-radius:10px;font-family:-apple-system,Inter,sans-serif;font-size:11.5px;max-width:240px;line-height:1.4;animation:idLangFade .3s ease;box-shadow:0 4px 14px rgba(0,0,0,.18);";
+        document.body.appendChild(ln);
+        var style = document.createElement("style");
+        style.textContent = "@keyframes idLangFade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}";
+        document.head.appendChild(style);
+      }
+      ln.textContent = d.langNote;
+      clearTimeout(window.__idLangTimer);
+      window.__idLangTimer = setTimeout(function () { if (ln) ln.remove(); }, 3500);
+    });
+  });
+})();
+</script>
+<!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-END ✦ -->
+
+</body>
+</html>
