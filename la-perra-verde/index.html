@@ -1084,6 +1084,7 @@ footer { background: var(--negre); color: var(--crema); padding: 56px 0 32px; }
 <!-- ✦ IMPACTO-DIGITAL-COUNTDOWN-END ✦ -->
 
 
+
 <!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-START ✦ -->
 <style>
   .id-lang {
@@ -1191,14 +1192,14 @@ footer { background: var(--negre); color: var(--crema); padding: 56px 0 32px; }
       var d = DICT[lang];
       var patterns = [
         // CTAs / botones (texto suelto que coincida — case-insensitive)
-        { re: /\b(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)\b/gi, val: d.reservar },
-        { re: /\b(Llamar|Truca'ns|Trucar|Llámanos)\b/gi, val: d.llamar },
-        { re: /\b(Cómo llegar|Com arribar|Com hi arribem)\b/gi, val: d.comoLlegar },
+        { re: /(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)/gi, val: d.reservar },
+        { re: /(Llamar|Truca'ns|Trucar|Llámanos)/gi, val: d.llamar },
+        { re: /(Cómo llegar|Com arribar|Com hi arribem)/gi, val: d.comoLlegar },
         // Section titles muy comunes
-        { re: /\b(Dónde estamos|On som|Visita|Visita'ns)\b/gi, val: d.ubicacion },
-        { re: /\b(Horarios|Horaris)\b/gi, val: d.horarios },
-        { re: /\b(Reservas|Reserves)\b/gi, val: d.reservas },
-        { re: /\b(Contacto|Contacte)\b/gi, val: d.contacto },
+        { re: /(Dónde estamos|On som|Visita|Visita'ns)/gi, val: d.ubicacion },
+        { re: /(Horarios|Horaris)/gi, val: d.horarios },
+        { re: /(Reservas|Reserves)/gi, val: d.reservas },
+        { re: /(Contacto|Contacte)/gi, val: d.contacto },
       ];
 
       // Solo cambia nodos de texto dentro de botones / encabezados nav, NO el body completo
@@ -1250,6 +1251,7 @@ footer { background: var(--negre); color: var(--crema); padding: 56px 0 32px; }
 })();
 </script>
 <!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-END ✦ -->
+
 
 </body>
 </html>
