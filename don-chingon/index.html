@@ -15,9 +15,16 @@
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://impactodigital.example/don-chingon/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- ✦ FONTS-PRECONNECT-START ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-PRECONNECT-END ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Anton&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- ✦ FONTS-CSS-PRELOAD-START ✦ -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bungee&family=Anton&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap">
+    <!-- ✦ FONTS-CSS-PRELOAD-END ✦ -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Anton&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --negro:#0c0c0c;
@@ -995,14 +1002,14 @@
       var d = DICT[lang];
       var patterns = [
         // CTAs / botones (texto suelto que coincida — case-insensitive)
-        { re: /\b(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)\b/gi, val: d.reservar },
-        { re: /\b(Llamar|Truca'ns|Trucar|Llámanos)\b/gi, val: d.llamar },
-        { re: /\b(Cómo llegar|Com arribar|Com hi arribem)\b/gi, val: d.comoLlegar },
+        { re: /(Reservar mesa|Reservar taula|Reservar|Reserva mesa|Vull venir)/gi, val: d.reservar },
+        { re: /(Llamar|Truca'ns|Trucar|Llámanos)/gi, val: d.llamar },
+        { re: /(Cómo llegar|Com arribar|Com hi arribem)/gi, val: d.comoLlegar },
         // Section titles muy comunes
-        { re: /\b(Dónde estamos|On som|Visita|Visita'ns)\b/gi, val: d.ubicacion },
-        { re: /\b(Horarios|Horaris)\b/gi, val: d.horarios },
-        { re: /\b(Reservas|Reserves)\b/gi, val: d.reservas },
-        { re: /\b(Contacto|Contacte)\b/gi, val: d.contacto },
+        { re: /(Dónde estamos|On som|Visita|Visita'ns)/gi, val: d.ubicacion },
+        { re: /(Horarios|Horaris)/gi, val: d.horarios },
+        { re: /(Reservas|Reserves)/gi, val: d.reservas },
+        { re: /(Contacto|Contacte)/gi, val: d.contacto },
       ];
 
       // Solo cambia nodos de texto dentro de botones / encabezados nav, NO el body completo
@@ -1054,6 +1061,7 @@
 })();
 </script>
 <!-- ✦ IMPACTO-DIGITAL-LANG-SWITCHER-END ✦ -->
+
 
 </body>
 </html>
