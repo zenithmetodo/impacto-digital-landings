@@ -351,6 +351,43 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
 @keyframes btnflow{to{background-position:220% 0}}
 @keyframes ctaGlow{0%,100%{box-shadow:0 8px 22px -10px rgba(5,130,131,.5)}50%{box-shadow:0 12px 40px -6px rgba(10,163,164,.75)}}
 
+/* ============ METODO TIMELINE ============ */
+.metodo{background:var(--paper-2);position:relative;overflow:hidden;padding:clamp(4rem,10vh,7rem) 0 clamp(5rem,13vh,9rem)}
+.metodo-orb{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(149,193,173,.28),transparent 70%);top:22%;left:-12%;filter:blur(50px);pointer-events:none;will-change:transform;z-index:0}
+.metodo-head{text-align:center;max-width:48ch;margin-inline:auto;margin-bottom:clamp(3rem,7vh,5.5rem);position:relative;z-index:2}
+.metodo-head .sec-tag{justify-content:center}
+.metodo-head h2{font-size:clamp(2rem,5.2vw,3.6rem);color:var(--navy)}
+.metodo-head h2 em{font-style:italic;color:var(--teal);font-weight:400}
+.metodo-head p{margin-top:1.1rem;color:var(--muted);font-size:clamp(1rem,1.2vw,1.12rem)}
+.timeline{position:relative;max-width:900px}
+.tl-rail,.tl-fill{position:absolute;left:50%;top:10px;width:2px;transform:translateX(-50%);border-radius:3px;z-index:1}
+.tl-rail{bottom:10px;background:rgba(16,45,63,.12)}
+.tl-fill{height:0;background:linear-gradient(180deg,var(--sage),var(--teal-bright),var(--teal));background-size:100% 220%;box-shadow:0 0 16px rgba(5,130,131,.55);animation:railflow 4s linear infinite}
+@keyframes railflow{to{background-position:0 -220%}}
+.tl-dot{position:absolute;left:50%;top:10px;width:14px;height:14px;transform:translate(-50%,-50%);border-radius:50%;background:var(--teal-bright);z-index:4;box-shadow:0 0 0 6px rgba(5,130,131,.16),0 0 22px rgba(5,130,131,.75);animation:tlpulse 2.1s ease-in-out infinite}
+@keyframes tlpulse{0%,100%{box-shadow:0 0 0 6px rgba(5,130,131,.16),0 0 22px rgba(5,130,131,.7)}50%{box-shadow:0 0 0 12px rgba(5,130,131,0),0 0 30px rgba(5,130,131,.95)}}
+.tl-steps{display:flex;flex-direction:column;gap:clamp(2.4rem,5.5vh,4.5rem);position:relative;z-index:2;padding-block:10px}
+.tl-step{position:relative}
+.tl-node{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--paper);border:2px solid var(--line);display:grid;place-items:center;z-index:3;transition:border-color .45s var(--ease),background .45s,box-shadow .45s}
+.tl-node i{font-family:var(--font-mono);font-size:.82rem;font-style:normal;color:var(--muted);transition:color .45s}
+.tl-step.lit .tl-node{border-color:var(--teal);background:var(--navy);box-shadow:0 0 0 5px rgba(5,130,131,.14),0 0 24px rgba(5,130,131,.55)}
+.tl-step.lit .tl-node i{color:var(--sage)}
+.tl-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.5rem,2.6vw,2.1rem);position:relative;width:43%;box-shadow:0 26px 54px -36px rgba(16,45,63,.45);transition:box-shadow .45s var(--ease)}
+.tl-card:hover{box-shadow:0 34px 64px -32px rgba(16,45,63,.6)}
+.tl-step.s-right .tl-card{margin-left:57%}
+.tl-step.s-left .tl-card{margin-left:0}
+.tl-card .step-fx{position:absolute;top:clamp(1.1rem,2vw,1.5rem);right:clamp(1.1rem,2vw,1.5rem);width:clamp(54px,7vw,76px)}
+.tl-card .sn{display:block;font-family:var(--font-mono);font-size:.72rem;color:var(--teal);letter-spacing:.1em;margin-bottom:.5rem}
+.tl-card h3{font-size:clamp(1.3rem,2.4vw,1.75rem);font-weight:500;color:var(--navy);margin-bottom:.55rem;letter-spacing:-.01em}
+.tl-card p{color:var(--muted);font-size:.95rem}
+@media(max-width:760px){
+  .tl-rail,.tl-fill,.tl-dot{left:26px}
+  .tl-node{left:26px;top:42px;width:42px;height:42px}
+  .tl-node i{font-size:.74rem}
+  .tl-step.s-right .tl-card,.tl-step.s-left .tl-card{margin-left:64px;width:auto}
+  .tl-card .step-fx{width:50px}
+}
+
 /* ============ RESPONSIVE ============ */
 @media(max-width:920px){
   .hero-grid{grid-template-columns:1fr;gap:2.5rem}.hero-visual{max-width:440px;order:-1}
@@ -521,51 +558,72 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
     </div>
   </section>
 
-  <!-- PROCESO (horizontal) -->
-  <section class="proceso" id="proceso">
-    <div class="wrap proceso-head sec-head reveal">
+  <!-- METODO (timeline animada) -->
+  <section class="metodo" id="proceso">
+    <span class="metodo-orb" aria-hidden="true"></span>
+    <div class="wrap metodo-head reveal">
       <span class="sec-tag"><span class="mono">Cómo trabajamos</span></span>
-      <h2 data-split>De la incertidumbre a la defensa.</h2>
-      <p>Un método de cuatro tiempos. Desliza para recorrerlo.</p>
+      <h2 data-split>De la incertidumbre a la <em>defensa.</em></h2>
+      <p>Cuatro tiempos. Cada paso, un ángulo más de claridad.</p>
     </div>
-    <div class="proceso-pin" id="procesoPin">
-      <div class="proceso-track" id="procesoTrack">
-        <article class="step">
-          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <circle cx="16" cy="32" r="4.5" fill="#058283"/>
-            <path class="s-wave w1" d="M26 23a13 13 0 0 1 0 18" stroke="#058283" stroke-width="2.6" stroke-linecap="round"/>
-            <path class="s-wave w2" d="M34 17a22 22 0 0 1 0 30" stroke="#0aa3a4" stroke-width="2.6" stroke-linecap="round"/>
-            <path class="s-wave w3" d="M42 11a31 31 0 0 1 0 42" stroke="#95c1ad" stroke-width="2.6" stroke-linecap="round"/>
-          </svg></div>
-          <span class="sn">PASO 01</span><span class="big">01</span><h3>Escucha</h3><p>Entendemos tu caso desde dentro: contexto, cifras, riesgos y objetivos. Sin prisa y sin tecnicismos vacíos.</p>
+    <div class="wrap timeline" id="timeline">
+      <div class="tl-rail" aria-hidden="true"></div>
+      <div class="tl-fill" id="tlFill" aria-hidden="true"></div>
+      <div class="tl-dot" id="tlDot" aria-hidden="true"></div>
+      <div class="tl-steps">
+
+        <article class="tl-step s-right">
+          <span class="tl-node"><i>01</i></span>
+          <div class="tl-card">
+            <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="16" cy="32" r="4.5" fill="#058283"/>
+              <path class="s-wave w1" d="M26 23a13 13 0 0 1 0 18" stroke="#058283" stroke-width="2.6" stroke-linecap="round"/>
+              <path class="s-wave w2" d="M34 17a22 22 0 0 1 0 30" stroke="#0aa3a4" stroke-width="2.6" stroke-linecap="round"/>
+              <path class="s-wave w3" d="M42 11a31 31 0 0 1 0 42" stroke="#95c1ad" stroke-width="2.6" stroke-linecap="round"/>
+            </svg></div>
+            <span class="sn">PASO 01</span><h3>Escucha</h3><p>Entendemos tu caso desde dentro: contexto, cifras, riesgos y objetivos. Sin prisa y sin tecnicismos vacíos.</p>
+          </div>
         </article>
-        <article class="step">
-          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <circle cx="32" cy="32" r="23" stroke="#95c1ad" stroke-width="2" opacity=".5"/>
-            <circle cx="32" cy="32" r="14" stroke="#95c1ad" stroke-width="1.4" opacity=".3"/>
-            <circle cx="32" cy="32" r="3.4" fill="#058283"/>
-            <g class="s-spin"><line x1="32" y1="32" x2="32" y2="11" stroke="#058283" stroke-width="2.6" stroke-linecap="round"/></g>
-            <g class="s-orbit"><circle cx="32" cy="9" r="3.4" fill="#0aa3a4"/></g>
-          </svg></div>
-          <span class="sn">PASO 02</span><span class="big">02</span><h3>Análisis 360°</h3><p>Estudiamos el expediente desde los cuatro ángulos fiscales a la vez. Lo que uno no ve, lo ve otro.</p>
+
+        <article class="tl-step s-left">
+          <span class="tl-node"><i>02</i></span>
+          <div class="tl-card">
+            <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="23" stroke="#95c1ad" stroke-width="2" opacity=".5"/>
+              <circle cx="32" cy="32" r="14" stroke="#95c1ad" stroke-width="1.4" opacity=".3"/>
+              <circle cx="32" cy="32" r="3.4" fill="#058283"/>
+              <g class="s-spin"><line x1="32" y1="32" x2="32" y2="11" stroke="#058283" stroke-width="2.6" stroke-linecap="round"/></g>
+              <g class="s-orbit"><circle cx="32" cy="9" r="3.4" fill="#0aa3a4"/></g>
+            </svg></div>
+            <span class="sn">PASO 02</span><h3>Análisis 360°</h3><p>Estudiamos el expediente desde los cuatro ángulos fiscales a la vez. Lo que uno no ve, lo ve otro.</p>
+          </div>
         </article>
-        <article class="step">
-          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path class="s-draw" d="M10 50 L26 30 L40 40 L54 14" stroke="#058283" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle class="s-node n1" cx="10" cy="50" r="3.2" fill="#95c1ad"/>
-            <circle class="s-node n2" cx="26" cy="30" r="3.2" fill="#95c1ad"/>
-            <circle class="s-node n3" cx="40" cy="40" r="3.2" fill="#95c1ad"/>
-            <circle class="s-node n4" cx="54" cy="14" r="4" fill="#058283"/>
-          </svg></div>
-          <span class="sn">PASO 03</span><span class="big">03</span><h3>Estrategia</h3><p>Diseñamos la vía con menos riesgo y más valor, anticipando cada movimiento de la Administración.</p>
+
+        <article class="tl-step s-right">
+          <span class="tl-node"><i>03</i></span>
+          <div class="tl-card">
+            <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <path class="s-draw" d="M10 50 L26 30 L40 40 L54 14" stroke="#058283" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle class="s-node n1" cx="10" cy="50" r="3.2" fill="#95c1ad"/>
+              <circle class="s-node n2" cx="26" cy="30" r="3.2" fill="#95c1ad"/>
+              <circle class="s-node n3" cx="40" cy="40" r="3.2" fill="#95c1ad"/>
+              <circle class="s-node n4" cx="54" cy="14" r="4" fill="#058283"/>
+            </svg></div>
+            <span class="sn">PASO 03</span><h3>Estrategia</h3><p>Diseñamos la vía con menos riesgo y más valor, anticipando cada movimiento de la Administración.</p>
+          </div>
         </article>
-        <article class="step">
-          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <path class="s-pulse" d="M32 7 L53 15 V31 c0 13.5-9 19.5-21 23.5 C20 50.5 11 44.5 11 31 V15 Z" stroke="#058283" stroke-width="2.6" stroke-linejoin="round"/>
-            <path class="s-check" d="M22 33 l6.5 6.5 12.5-15" stroke="#0aa3a4" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg></div>
-          <span class="sn">PASO 04</span><span class="big">04</span><h3>Defensa</h3><p>Te acompañamos hasta el final, ante inspección, recurso o tribunal. Con uñas, dientes y doctrina.</p>
+
+        <article class="tl-step s-left">
+          <span class="tl-node"><i>04</i></span>
+          <div class="tl-card">
+            <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <path class="s-pulse" d="M32 7 L53 15 V31 c0 13.5-9 19.5-21 23.5 C20 50.5 11 44.5 11 31 V15 Z" stroke="#058283" stroke-width="2.6" stroke-linejoin="round"/>
+              <path class="s-check" d="M22 33 l6.5 6.5 12.5-15" stroke="#0aa3a4" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></div>
+            <span class="sn">PASO 04</span><h3>Defensa</h3><p>Te acompañamos hasta el final, ante inspección, recurso o tribunal. Con uñas, dientes y doctrina.</p>
+          </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -705,6 +763,9 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
     if(pre) pre.style.display='none'; finishLoad();
     document.querySelectorAll('.reveal,.line-mask').forEach(function(e){ e.classList.add('in'); });
     document.querySelectorAll('.manifesto-q').forEach(function(q){ var w=splitWords(q); w.forEach(function(x){x.style.opacity=1;}); });
+    var _tf=document.getElementById('tlFill'); if(_tf) _tf.style.height='100%';
+    var _td=document.getElementById('tlDot'); if(_td) _td.style.top='100%';
+    document.querySelectorAll('.tl-step').forEach(function(s){ s.classList.add('lit'); });
     return;
   }
 
@@ -761,6 +822,22 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
   (function(){
     var q=document.getElementById('manifestoQ'); var ws=q.querySelectorAll('.word'); if(!ws.length)return;
     gsap.to(ws,{opacity:1,stagger:.08,ease:'none',scrollTrigger:{trigger:q,start:'top 82%',end:'top 40%',scrub:true}});
+  })();
+
+  /* ---------- método timeline (línea que se dibuja + nodos + tarjetas) ---------- */
+  (function(){
+    var tl=document.getElementById('timeline'); if(!tl) return;
+    var st={trigger:tl,start:'top 60%',end:'bottom 72%',scrub:.4};
+    gsap.to('#tlFill',{height:'100%',ease:'none',scrollTrigger:st});
+    gsap.fromTo('#tlDot',{top:10},{top:'100%',ease:'none',scrollTrigger:st});
+    gsap.to('.metodo-orb',{x:80,y:-60,ease:'sine.inOut',duration:13,yoyo:true,repeat:-1});
+    gsap.utils.toArray('.tl-step').forEach(function(step){
+      var card=step.querySelector('.tl-card'), node=step.querySelector('.tl-node');
+      var dir=step.classList.contains('s-left')?-50:50;
+      gsap.from(card,{x:dir,opacity:0,duration:.85,ease:'power3.out',clearProps:'transform',scrollTrigger:{trigger:step,start:'top 85%'}});
+      gsap.from(node,{scale:.4,opacity:0,duration:.5,ease:'power2.out',scrollTrigger:{trigger:step,start:'top 85%'}});
+      ScrollTrigger.create({trigger:step,start:'top 58%',onEnter:function(){step.classList.add('lit');},onLeaveBack:function(){step.classList.remove('lit');}});
+    });
   })();
 
 
