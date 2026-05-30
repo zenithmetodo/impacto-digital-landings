@@ -356,7 +356,7 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
 .metodo-orb{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(149,193,173,.28),transparent 70%);top:22%;left:-12%;filter:blur(50px);pointer-events:none;will-change:transform;z-index:0}
 .metodo-head{text-align:center;max-width:48ch;margin-inline:auto;margin-bottom:clamp(3rem,7vh,5.5rem);position:relative;z-index:2}
 .metodo-head .sec-tag{justify-content:center}
-.metodo-head h2{font-size:clamp(2rem,5.2vw,3.6rem);color:var(--navy)}
+.metodo-head h2{font-size:clamp(1.9rem,5vw,3.4rem);color:var(--navy);line-height:1.1;text-wrap:balance}
 .metodo-head h2 em{font-style:italic;color:var(--teal);font-weight:400}
 .metodo-head p{margin-top:1.1rem;color:var(--muted);font-size:clamp(1rem,1.2vw,1.12rem)}
 .timeline{position:relative;max-width:900px}
@@ -563,7 +563,7 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
     <span class="metodo-orb" aria-hidden="true"></span>
     <div class="wrap metodo-head reveal">
       <span class="sec-tag"><span class="mono">Cómo trabajamos</span></span>
-      <h2 data-split>De la incertidumbre a la <em>defensa.</em></h2>
+      <h2>De la incertidumbre a la <em>defensa.</em></h2>
       <p>Cuatro tiempos. Cada paso, un ángulo más de claridad.</p>
     </div>
     <div class="wrap timeline" id="timeline">
@@ -751,6 +751,8 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
 
   /* ---------- always-on interactions ---------- */
   buildCompass(); initQuiz(); initCounters(); initMagnetic(); initConstellation(); initSpotlight(); initTilt(); initScramble(); initRotator();
+  (function(){ var s0=document.querySelectorAll('#segments .seg')[0]; if(s0) selectArea(0,s0,true); })(); // la brújula empieza en el ángulo 01 (1/4)
+  document.querySelectorAll('.manifesto-img,.member,.article').forEach(function(e){ e.classList.remove('reveal'); e.classList.add('wipe'); }); // revelado clip-path en vez de fade
 
   var pre=document.getElementById('preloader');
   function finishLoad(){ document.body.classList.remove('loading'); }
@@ -810,6 +812,12 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
     setTimeout(function(){ if(el.classList.contains('line-mask')){ var inr=el.firstElementChild; if(inr) inr.style.transform='none'; } else { el.style.opacity='1'; el.style.transform='none'; } }, 1300);
   }});},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.reveal, .line-mask').forEach(function(el){ if(el.closest('.hero')) return; io.observe(el); });
+
+  /* ---------- clip-path "cortina" reveal en imágenes (finale moderno, móvil-friendly) ---------- */
+  gsap.utils.toArray('.wipe').forEach(function(el){
+    gsap.set(el,{willChange:'clip-path'});
+    gsap.fromTo(el,{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:1.05,ease:'power3.inOut',scrollTrigger:{trigger:el,start:'top 86%'},onComplete:function(){el.style.clipPath='none';el.style.willChange='auto';}});
+  });
 
   /* ---------- split-heading word reveal ---------- */
   document.querySelectorAll('[data-split]').forEach(function(h){
