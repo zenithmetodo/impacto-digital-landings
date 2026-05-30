@@ -295,9 +295,7 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
 @keyframes radarspin{to{transform:rotate(360deg)}}
 .spot-host{position:relative}
 .spot-host::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(360px circle at var(--mx,50%) var(--my,20%),rgba(149,193,173,.15),transparent 60%);
-  opacity:0;transition:opacity .5s var(--ease)}
-.spot-host:hover::after{opacity:1}
+  background:radial-gradient(340px circle at var(--mx,50%) var(--my,28%),rgba(149,193,173,.13),transparent 60%)}
 #angulos>.wrap{position:relative;z-index:2}
 .team-grid,.insights-grid{perspective:1100px}
 .tilt{will-change:transform}
@@ -305,6 +303,30 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
 .btn.lg::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.30),transparent);transform:skewX(-18deg);pointer-events:none}
 .btn.lg:hover::after{animation:sheen .85s var(--ease)}
 @keyframes sheen{to{left:150%}}
+/* step illustrations (autonomous CSS anim — work on mobile) */
+.step-fx{position:absolute;top:clamp(1.3rem,2.4vw,1.9rem);right:clamp(1.3rem,2.4vw,1.9rem);width:clamp(68px,9vw,100px);z-index:2}
+.stepfx{display:block;width:100%;height:auto;overflow:visible}
+.s-wave{transform-box:view-box;transform-origin:16px 32px;animation:swave 2.8s ease-out infinite}
+.s-wave.w2{animation-delay:.35s}.s-wave.w3{animation-delay:.7s}
+@keyframes swave{0%{opacity:0;transform:translateX(-3px)}25%{opacity:1}100%{opacity:0;transform:translateX(5px)}}
+.s-spin{transform-box:view-box;transform-origin:32px 32px;animation:sspin 4.5s linear infinite}
+.s-orbit{transform-box:view-box;transform-origin:32px 32px;animation:sspin 7s linear infinite reverse}
+@keyframes sspin{to{transform:rotate(360deg)}}
+.s-draw{stroke-dasharray:76;stroke-dashoffset:76;animation:sdraw 3.6s ease-in-out infinite}
+@keyframes sdraw{0%{stroke-dashoffset:76}55%,100%{stroke-dashoffset:0}}
+.s-node{transform-box:fill-box;transform-origin:center;animation:snode 3.6s ease-in-out infinite}
+.s-node.n2{animation-delay:.45s}.s-node.n3{animation-delay:.9s}.s-node.n4{animation-delay:1.35s}
+@keyframes snode{0%,55%{transform:scale(.5);opacity:.35}72%{transform:scale(1.2);opacity:1}100%{transform:scale(1);opacity:.95}}
+.s-check{stroke-dasharray:42;stroke-dashoffset:42;animation:scheck 3.2s ease-in-out infinite}
+@keyframes scheck{0%,25%{stroke-dashoffset:42}60%,100%{stroke-dashoffset:0}}
+.s-pulse{transform-box:view-box;transform-origin:32px 32px;animation:spulse 3.2s ease-in-out infinite}
+@keyframes spulse{0%,100%{opacity:.9}50%{opacity:.5;transform:scale(1.04)}}
+/* mobile-friendly card life (Ken-Burns; no mouse needed) */
+@media (hover:none){
+  .member img{animation:kenb 9s ease-in-out infinite alternate}
+  .article .pic img{animation:kenb 11s ease-in-out infinite alternate}
+}
+@keyframes kenb{from{transform:scale(1.02)}to{transform:scale(1.1)}}
 
 /* ============ RESPONSIVE ============ */
 @media(max-width:920px){
@@ -327,6 +349,9 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .reveal{opacity:1!important;transform:none!important}.line-mask>span{transform:none!important}
   .manifesto-q .word{opacity:1!important}.preloader{display:none!important}.cursor,.cursor-ring{display:none!important}
+  .s-draw,.s-check{stroke-dashoffset:0!important}
+  .s-node,.s-wave,.s-pulse,.s-spin,.s-orbit{opacity:1!important;transform:none!important}
+  .member img,.article .pic img{animation:none!important}
 }
 </style>
 </head>
@@ -482,10 +507,42 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
     </div>
     <div class="proceso-pin" id="procesoPin">
       <div class="proceso-track" id="procesoTrack">
-        <article class="step"><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 11l18-8-8 18-2-8-8-2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span><span class="sn">PASO 01</span><span class="big">01</span><h3>Escucha</h3><p>Entendemos tu caso desde dentro: contexto, cifras, riesgos y objetivos. Sin prisa y sin tecnicismos vacíos.</p></article>
-        <article class="step"><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M12 3v9l6 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="sn">PASO 02</span><span class="big">02</span><h3>Análisis 360°</h3><p>Estudiamos el expediente desde los cuatro ángulos fiscales a la vez. Lo que uno no ve, lo ve otro.</p></article>
-        <article class="step"><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 20l8-16 8 16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 14h8" stroke="currentColor" stroke-width="1.4"/></svg></span><span class="sn">PASO 03</span><span class="big">03</span><h3>Estrategia</h3><p>Diseñamos la vía con menos riesgo y más valor, anticipando cada movimiento de la Administración.</p></article>
-        <article class="step"><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6l8-3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span><span class="sn">PASO 04</span><span class="big">04</span><h3>Defensa</h3><p>Te acompañamos hasta el final, ante inspección, recurso o tribunal. Con uñas, dientes y doctrina.</p></article>
+        <article class="step">
+          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="16" cy="32" r="4.5" fill="#058283"/>
+            <path class="s-wave w1" d="M26 23a13 13 0 0 1 0 18" stroke="#058283" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="s-wave w2" d="M34 17a22 22 0 0 1 0 30" stroke="#0aa3a4" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="s-wave w3" d="M42 11a31 31 0 0 1 0 42" stroke="#95c1ad" stroke-width="2.6" stroke-linecap="round"/>
+          </svg></div>
+          <span class="sn">PASO 01</span><span class="big">01</span><h3>Escucha</h3><p>Entendemos tu caso desde dentro: contexto, cifras, riesgos y objetivos. Sin prisa y sin tecnicismos vacíos.</p>
+        </article>
+        <article class="step">
+          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="32" cy="32" r="23" stroke="#95c1ad" stroke-width="2" opacity=".5"/>
+            <circle cx="32" cy="32" r="14" stroke="#95c1ad" stroke-width="1.4" opacity=".3"/>
+            <circle cx="32" cy="32" r="3.4" fill="#058283"/>
+            <g class="s-spin"><line x1="32" y1="32" x2="32" y2="11" stroke="#058283" stroke-width="2.6" stroke-linecap="round"/></g>
+            <g class="s-orbit"><circle cx="32" cy="9" r="3.4" fill="#0aa3a4"/></g>
+          </svg></div>
+          <span class="sn">PASO 02</span><span class="big">02</span><h3>Análisis 360°</h3><p>Estudiamos el expediente desde los cuatro ángulos fiscales a la vez. Lo que uno no ve, lo ve otro.</p>
+        </article>
+        <article class="step">
+          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path class="s-draw" d="M10 50 L26 30 L40 40 L54 14" stroke="#058283" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle class="s-node n1" cx="10" cy="50" r="3.2" fill="#95c1ad"/>
+            <circle class="s-node n2" cx="26" cy="30" r="3.2" fill="#95c1ad"/>
+            <circle class="s-node n3" cx="40" cy="40" r="3.2" fill="#95c1ad"/>
+            <circle class="s-node n4" cx="54" cy="14" r="4" fill="#058283"/>
+          </svg></div>
+          <span class="sn">PASO 03</span><span class="big">03</span><h3>Estrategia</h3><p>Diseñamos la vía con menos riesgo y más valor, anticipando cada movimiento de la Administración.</p>
+        </article>
+        <article class="step">
+          <div class="step-fx"><svg class="stepfx" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <path class="s-pulse" d="M32 7 L53 15 V31 c0 13.5-9 19.5-21 23.5 C20 50.5 11 44.5 11 31 V15 Z" stroke="#058283" stroke-width="2.6" stroke-linejoin="round"/>
+            <path class="s-check" d="M22 33 l6.5 6.5 12.5-15" stroke="#0aa3a4" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></div>
+          <span class="sn">PASO 04</span><span class="big">04</span><h3>Defensa</h3><p>Te acompañamos hasta el final, ante inspección, recurso o tribunal. Con uñas, dientes y doctrina.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -861,15 +918,18 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
     var canvas=document.getElementById('net'); if(!canvas) return;
     var ctx=canvas.getContext('2d'); if(!ctx) return;
     var hero=document.querySelector('.hero'); if(!hero) return;
-    var DPR=Math.min(window.devicePixelRatio||1,2), W=0,H=0, pts=[], mouse={x:-9999,y:-9999}, rafId=null, MAX=0;
+    var DPR=Math.min(window.devicePixelRatio||1,2), W=0,H=0, pts=[], mouse={x:-9999,y:-9999}, rafId=null, MAX=0, lastInput=0, tA=0;
     var COUNT=window.innerWidth<760?24:52;
     function resize(){ var r=hero.getBoundingClientRect(); W=Math.max(1,r.width)*DPR; H=Math.max(1,r.height)*DPR; canvas.width=W; canvas.height=H; canvas.style.width=r.width+'px'; canvas.style.height=r.height+'px'; MAX=110*DPR; }
     function seed(){ pts=[]; for(var i=0;i<COUNT;i++) pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*0.16*DPR,vy:(Math.random()-.5)*0.16*DPR}); }
     resize(); seed();
     window.addEventListener('resize',function(){ resize(); seed(); });
-    hero.addEventListener('pointermove',function(e){ var r=hero.getBoundingClientRect(); mouse.x=(e.clientX-r.left)*DPR; mouse.y=(e.clientY-r.top)*DPR; });
-    hero.addEventListener('pointerleave',function(){ mouse.x=mouse.y=-9999; });
+    hero.addEventListener('pointermove',function(e){ var r=hero.getBoundingClientRect(); mouse.x=(e.clientX-r.left)*DPR; mouse.y=(e.clientY-r.top)*DPR; lastInput=Date.now(); });
+    hero.addEventListener('pointerleave',function(){ lastInput=0; });
+    hero.addEventListener('touchmove',function(e){ if(e.touches&&e.touches[0]){ var r=hero.getBoundingClientRect(); mouse.x=(e.touches[0].clientX-r.left)*DPR; mouse.y=(e.touches[0].clientY-r.top)*DPR; lastInput=Date.now(); } },{passive:true});
     function draw(){
+      tA+=0.006;
+      if(Date.now()-lastInput>1600){ mouse.x=(0.5+0.30*Math.sin(tA))*W; mouse.y=(0.42+0.26*Math.cos(tA*0.85))*H; } // autonomous roaming focus (mobile + idle)
       ctx.clearRect(0,0,W,H);
       var i,j,a,b,dx,dy,d;
       for(i=0;i<pts.length;i++){ a=pts[i]; a.x+=a.vx; a.y+=a.vy; if(a.x<0||a.x>W)a.vx*=-1; if(a.y<0||a.y>H)a.vy*=-1;
@@ -885,10 +945,16 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
   }
 
   function initSpotlight(){
-    if(window.matchMedia('(pointer: coarse)').matches) return;
-    document.querySelectorAll('.spot-host').forEach(function(sec){
-      sec.addEventListener('pointermove',function(e){ var r=sec.getBoundingClientRect(); sec.style.setProperty('--mx',(e.clientX-r.left)+'px'); sec.style.setProperty('--my',(e.clientY-r.top)+'px'); });
+    var hosts=[].slice.call(document.querySelectorAll('.spot-host')); if(!hosts.length) return;
+    hosts.forEach(function(sec){
+      sec.addEventListener('pointermove',function(e){ if(e.pointerType==='mouse'){ var r=sec.getBoundingClientRect(); sec.style.setProperty('--mx',(e.clientX-r.left)+'px'); sec.style.setProperty('--my',(e.clientY-r.top)+'px'); sec._lm=Date.now(); } });
     });
+    if(reduce) return;
+    var t=0;
+    (function loop(){ t+=0.008;
+      hosts.forEach(function(sec,i){ if(Date.now()-(sec._lm||0)>1500){ var r=sec.getBoundingClientRect(); sec.style.setProperty('--mx',((0.5+0.32*Math.sin(t+i*1.3))*r.width)+'px'); sec.style.setProperty('--my',((0.42+0.27*Math.cos(t*0.9+i))*r.height)+'px'); } });
+      requestAnimationFrame(loop);
+    })();
   }
 
   function initTilt(){
