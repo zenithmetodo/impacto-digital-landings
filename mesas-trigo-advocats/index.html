@@ -18,7 +18,7 @@
   --navy:#102d3f;--navy-deep:#0b1f2c;
   --teal:#058283;--teal-bright:#0aa3a4;--sage:#95c1ad;
   --ink:#1c2528;--muted:#5e6b6a;--line:#d8d0bf;--line-soft:rgba(16,45,63,.12);--gold:#c9a96a;
-  --side:clamp(1.25rem,4vw+.4rem,5rem);--maxw:1240px;
+  --side:clamp(1.5rem,5vw,7rem);--maxw:1240px;
   --font-display:"Fraunces",Georgia,serif;--font-body:"Hanken Grotesk",system-ui,sans-serif;--font-mono:"Space Mono",ui-monospace,monospace;
   --r:18px;--ease:cubic-bezier(.22,1,.36,1);
 }
@@ -328,6 +328,29 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
 }
 @keyframes kenb{from{transform:scale(1.02)}to{transform:scale(1.1)}}
 
+/* ============ FLASHY FX (autonomous — work on mobile) ============ */
+/* hero accent gradient shimmer */
+.hero h1 .accent{font-style:italic;font-weight:400;background:linear-gradient(100deg,#058283 0%,#95c1ad 30%,#0aa3a4 50%,#95c1ad 70%,#058283 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+/* hero image periodic shine */
+.hero-visual::before{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;z-index:5;background:linear-gradient(100deg,transparent,rgba(255,255,255,.20),transparent);transform:skewX(-16deg);animation:imgshine 7s ease-in-out infinite;pointer-events:none}
+@keyframes imgshine{0%,72%{left:-60%}100%{left:135%}}
+/* CTA aurora */
+#contacto .aurora{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;filter:blur(70px);opacity:.5;transform:translateZ(0);isolation:isolate}
+#contacto .aurora span{position:absolute;width:52vmax;height:52vmax;border-radius:50%;will-change:transform;animation:aurora 20s ease-in-out infinite}
+#contacto .aurora span:nth-child(1){background:radial-gradient(circle,#0aa3a4,transparent 60%);top:-12%;left:-6%}
+#contacto .aurora span:nth-child(2){background:radial-gradient(circle,#95c1ad,transparent 60%);bottom:-16%;right:-6%;animation-delay:-7s}
+#contacto .aurora span:nth-child(3){background:radial-gradient(circle,#1c6e76,transparent 62%);top:28%;left:42%;animation-delay:-14s}
+@keyframes aurora{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(9%,-7%) scale(1.18)}66%{transform:translate(-7%,9%) scale(.88)}}
+/* kinetic rotating word */
+.kinetic-line{font-family:var(--font-display);font-size:clamp(1.05rem,2vw,1.55rem);color:rgba(244,241,234,.78);margin:.3rem auto 1.9rem;font-style:italic;font-weight:400}
+.rotator{display:inline-block;color:var(--sage);font-weight:500;min-width:8.5ch;text-align:left}
+/* glowing CTA button */
+.btn.cta-pop{background:linear-gradient(120deg,#95c1ad,#0aa3a4,#95c1ad);background-size:220% 100%;color:var(--navy);animation:btnflow 5s linear infinite,ctaGlow 2.8s ease-in-out infinite}
+.btn.cta-pop:hover{background:linear-gradient(120deg,#f4f1ea,#95c1ad);color:var(--navy);transform:translateY(-2px)}
+@keyframes btnflow{to{background-position:220% 0}}
+@keyframes ctaGlow{0%,100%{box-shadow:0 8px 22px -10px rgba(5,130,131,.5)}50%{box-shadow:0 12px 40px -6px rgba(10,163,164,.75)}}
+
 /* ============ RESPONSIVE ============ */
 @media(max-width:920px){
   .hero-grid{grid-template-columns:1fr;gap:2.5rem}.hero-visual{max-width:440px;order:-1}
@@ -589,13 +612,15 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
 
   <!-- CTA -->
   <section class="section spot-host" id="contacto">
+    <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
     <span class="cta-ring" id="ctaRing" aria-hidden="true"></span><span class="cta-glow" id="ctaGlow"></span>
     <div class="wrap cta-inner">
       <span class="sec-tag"><span class="mono">Concierta una consulta</span></span>
       <h2 class="reveal" data-split>Tu caso merece todos los ángulos.</h2>
+      <p class="kinetic-line reveal">Especialistas en fiscalidad <span class="rotator" id="rotator">contenciosa</span></p>
       <p class="reveal">Cuéntanos tu situación fiscal y te diremos, sin compromiso, desde qué ángulo podemos ayudarte.</p>
       <div class="cta-btns reveal">
-        <a class="btn lg sage magnetic" href="mailto:info@mesastrigoadvocats.com">Escríbenos <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4l6 4 6-4M2 4h12v8H2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+        <a class="btn lg cta-pop magnetic" href="mailto:info@mesastrigoadvocats.com">Escríbenos <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4l6 4 6-4M2 4h12v8H2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
         <a class="btn lg outline magnetic" href="#diagnostico">Hacer el diagnóstico exprés</a>
       </div>
       <div class="cta-meta"><span><span class="mono">Ubicación</span> · Andorra la Vella, Principat d'Andorra</span><a href="mailto:info@mesastrigoadvocats.com"><span class="mono">Email</span> · info@mesastrigoadvocats.com</a></div>
@@ -667,7 +692,7 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
   }
 
   /* ---------- always-on interactions ---------- */
-  buildCompass(); initQuiz(); initCounters(); initMagnetic(); initConstellation(); initSpotlight(); initTilt(); initScramble();
+  buildCompass(); initQuiz(); initCounters(); initMagnetic(); initConstellation(); initSpotlight(); initTilt(); initScramble(); initRotator();
 
   var pre=document.getElementById('preloader');
   function finishLoad(){ document.body.classList.remove('loading'); }
@@ -720,7 +745,9 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
   gsap.to('.compass-rot',{rotation:360,svgOrigin:'200 200',duration:90,ease:'none',repeat:-1});
 
   /* ---------- reveals via IntersectionObserver (reliable for in-view-at-load) ---------- */
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target; el.classList.add('in'); io.unobserve(el);
+    setTimeout(function(){ if(el.classList.contains('line-mask')){ var inr=el.firstElementChild; if(inr) inr.style.transform='none'; } else { el.style.opacity='1'; el.style.transform='none'; } }, 1300);
+  }});},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.reveal, .line-mask').forEach(function(el){ if(el.closest('.hero')) return; io.observe(el); });
 
   /* ---------- split-heading word reveal ---------- */
@@ -982,6 +1009,17 @@ footer{background:var(--navy-deep);color:rgba(244,241,234,.7);padding:clamp(3rem
     }
     var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target); } }); },{threshold:.5});
     els.forEach(function(el){ io.observe(el); });
+  }
+
+  function initRotator(){
+    var el=document.getElementById('rotator'); if(!el) return;
+    var words=['contenciosa','corporativa','financiera','indirecta'], i=0;
+    if(reduce){ el.textContent=words[0]; return; }
+    setInterval(function(){ i=(i+1)%words.length;
+      el.style.transition='none'; el.style.transform='translateY(10px)'; el.style.opacity='0';
+      el.textContent=words[i];
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ el.style.transition='transform .5s var(--ease),opacity .5s'; el.style.transform='translateY(0)'; el.style.opacity='1'; }); });
+    }, 2400);
   }
 
 })();
