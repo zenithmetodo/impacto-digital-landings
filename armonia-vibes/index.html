@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="robots" content="noindex, nofollow" />
 <title>Armonía · Kitchen & Drinks · Cocina mediterránea en Can Pastilla, Mallorca</title>
-<meta name="description" content="Armonía Kitchen & Drinks — cocina mediterránea, vinos españoles y cócteles de autor frente al mar de Can Pastilla, Mallorca. Rabo de toro, atún sellado, burgers gourmet y más." />
+<meta name="description" content="Armonía Kitchen & Drinks — cocina mediterránea, vinos españoles y cócteles de autor frente al mar de Can Pastilla, Mallorca. Una experiencia." />
 <meta name="theme-color" content="#faf6ee" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +18,9 @@
   --paper:#faf6ee;--paper-2:#f2ead9;--paper-3:#e9ddc7;
   --ink:#221b12;--ink-soft:#6a5d49;--muted:#8a7c65;
   --gold:#bd8f33;--gold-bright:#d8ab47;--gold-soft:#e8c87a;
-  --terra:#b65c36;--olive:#7c7c4d;--sky:#5d7f92;
-  --night:#1b140d;--night-2:#241a10;
+  --terra:#b65c36;--night:#171009;--night-2:#211710;
   --line:#e2d5bd;--line-soft:rgba(34,27,18,.1);
-  --side:clamp(1.4rem,5vw,7rem);--maxw:1280px;--r:6px;
+  --side:clamp(1.4rem,5vw,7rem);--maxw:1280px;
   --font-display:"Cormorant Garamond",Georgia,serif;
   --font-body:"Manrope",system-ui,sans-serif;
   --font-mono:"Space Mono",ui-monospace,monospace;
@@ -38,31 +37,33 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--side)}
 .mono{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase}
 
-/* warm grain */
 .grain{position:fixed;inset:0;z-index:120;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:130;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--gold),var(--gold-bright))}
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1.1rem;z-index:210}
 .skip:focus{left:0}
 
 /* ============ PRELOADER ============ */
-.preloader{position:fixed;inset:0;z-index:300;background:var(--paper);display:grid;place-items:center;color:var(--ink)}
+.preloader{position:fixed;inset:0;z-index:300;background:var(--paper);display:grid;place-items:center}
 .pre-inner{text-align:center}
-.pre-name{font-family:var(--font-display);font-size:clamp(3rem,11vw,6rem);font-weight:600;line-height:1;overflow:hidden}
+.pre-name{font-family:var(--font-display);font-size:clamp(3rem,11vw,6rem);font-weight:600;line-height:1;overflow:hidden;color:var(--ink)}
 .pre-name span{display:inline-block;transform:translateY(110%)}
 .pre-line{height:1px;background:var(--gold);margin:1rem auto 0;width:0}
 .pre-sub{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:.9rem;opacity:0}
 
 /* ============ TOPBAR ============ */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:clamp(1rem,2.2vw,1.6rem) var(--side);transition:background .4s var(--ease),backdrop-filter .4s,box-shadow .4s,padding .4s}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:clamp(1rem,2.2vw,1.6rem) var(--side);transition:background .4s var(--ease),backdrop-filter .4s,box-shadow .4s,padding .4s,color .4s;mix-blend-mode:normal}
 .topbar.scrolled{background:rgba(250,246,238,.82);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line-soft);padding-top:.7rem;padding-bottom:.7rem}
-.brand{font-family:var(--font-display);font-size:1.6rem;font-weight:600;letter-spacing:.01em;color:var(--ink);display:flex;align-items:center;gap:.5rem}
+.topbar.on-dark:not(.scrolled){color:var(--paper)}
+.topbar.on-dark:not(.scrolled) .brand,.topbar.on-dark:not(.scrolled) .nav-link{color:var(--paper)}
+.topbar.on-dark:not(.scrolled) .btn{background:var(--paper);color:var(--ink)}
+.brand{font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:.5rem;transition:color .4s}
 .brand .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;margin-bottom:.5rem}
 .nav-actions{display:flex;align-items:center;gap:1.5rem}
-.nav-link{font-size:.8rem;font-weight:600;letter-spacing:.02em;color:var(--ink);opacity:.78;position:relative;transition:opacity .2s}
+.nav-link{font-size:.8rem;font-weight:600;letter-spacing:.02em;color:var(--ink);opacity:.82;position:relative;transition:opacity .2s,color .4s}
 .nav-link::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
 .nav-link:hover{opacity:1}.nav-link:hover::after{transform:scaleX(1);transform-origin:left}
-.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--paper);padding:.7rem 1.2rem;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.04em;min-height:44px;transition:transform .3s var(--ease),background .3s,box-shadow .3s;box-shadow:0 8px 20px -12px rgba(34,27,18,.6)}
-.btn:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(189,143,51,.7)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--paper);padding:.7rem 1.2rem;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.04em;min-height:44px;transition:transform .3s var(--ease),background .3s,box-shadow .3s,color .3s;box-shadow:0 8px 20px -12px rgba(34,27,18,.6)}
+.btn:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(189,143,51,.7);color:#fff}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .btn.lg{padding:1rem 1.7rem;font-size:.85rem}
@@ -76,24 +77,24 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 .line-mask>span{display:block;transform:translateY(110%);transition:transform 1.05s var(--ease);transition-delay:var(--delay,0s)}
 .line-mask.in>span{transform:none}
 .wipe{will-change:clip-path}
+.word{display:inline-block}
 
 /* ============ HERO ============ */
-.hero{position:relative;padding:clamp(7rem,15vh,10rem) 0 clamp(2.5rem,6vh,4rem);overflow:hidden}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:clamp(6rem,12vh,9rem) 0 clamp(3rem,8vh,5rem);overflow:hidden}
 .hero-glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;will-change:transform;z-index:0}
-.hero-glow.g1{width:480px;height:480px;background:radial-gradient(circle,rgba(216,171,71,.4),transparent 70%);top:-120px;right:-60px}
+.hero-glow.g1{width:480px;height:480px;background:radial-gradient(circle,rgba(216,171,71,.42),transparent 70%);top:-120px;right:-60px}
 .hero-glow.g2{width:420px;height:420px;background:radial-gradient(circle,rgba(182,92,54,.22),transparent 70%);bottom:-160px;left:-120px}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.dust{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;width:100%}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;color:var(--gold);margin-bottom:1.4rem}
 .hero-eyebrow .ln{width:34px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(4.5rem,16vw,10rem);font-weight:600;color:var(--ink);line-height:.9;letter-spacing:-.01em;margin-bottom:.4rem}
-.hero h1 .a-accent{font-style:italic;color:var(--gold)}
+.hero h1{font-size:clamp(4.5rem,16vw,10rem);font-weight:600;color:var(--ink);line-height:.88;letter-spacing:-.01em;margin-bottom:.4rem}
+.hero h1 .a-accent{font-style:italic;background:linear-gradient(100deg,var(--gold),var(--gold-bright) 40%,var(--gold-soft) 50%,var(--gold-bright) 60%,var(--gold));background-size:240% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shimmerGold 5s linear infinite}
+@keyframes shimmerGold{to{background-position:-240% 0}}
 .hero-tag{font-family:var(--font-display);font-style:italic;font-size:clamp(1.4rem,3.2vw,2.1rem);color:var(--ink-soft);font-weight:500;margin-bottom:1.6rem;max-width:20ch}
 .hero-sub{color:var(--ink-soft);font-size:clamp(1rem,1.2vw,1.1rem);max-width:38ch;margin-bottom:2.2rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
-.hero-meta{display:flex;gap:2rem;margin-top:2.6rem;flex-wrap:wrap;color:var(--muted)}
-.hero-meta .item .l{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.35rem}
-.hero-meta .item .v{font-family:var(--font-display);font-size:1.15rem;color:var(--ink);font-weight:600}
-.hero-visual{position:relative;aspect-ratio:.84;border-radius:8px;overflow:hidden;background:var(--paper-3);box-shadow:0 40px 80px -40px rgba(34,27,18,.5)}
+.hero-visual{position:relative;aspect-ratio:.82;border-radius:8px;overflow:hidden;background:var(--paper-3);box-shadow:0 40px 80px -40px rgba(34,27,18,.5)}
 .hero-visual img{width:100%;height:112%;margin-top:-6%;object-fit:cover;will-change:transform}
 .hero-visual .frame{position:absolute;inset:12px;border:1px solid rgba(250,246,238,.5);border-radius:4px;pointer-events:none;z-index:3}
 .hero-visual .cap{position:absolute;left:18px;bottom:16px;z-index:4;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
@@ -105,77 +106,77 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 .hero-badge .spin text{font-family:var(--font-mono);font-size:8.5px;letter-spacing:1.5px;fill:var(--gold-soft);text-transform:uppercase}
 .hero-badge .star{font-size:1.3rem;color:var(--gold-bright)}
 @keyframes spin{to{transform:rotate(360deg)}}
-.dust{position:absolute;inset:0;z-index:1;pointer-events:none}
-.hero h1 .a-accent{font-style:italic;background:linear-gradient(100deg,var(--gold),var(--gold-bright) 40%,var(--gold-soft) 50%,var(--gold-bright) 60%,var(--gold));background-size:240% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shimmerGold 5s linear infinite}
-@keyframes shimmerGold{to{background-position:-240% 0}}
+.scroll-cue{position:absolute;left:50%;bottom:1.6rem;transform:translateX(-50%);z-index:5;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--muted);font-family:var(--font-mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase}
+.scroll-cue .bar{width:1px;height:40px;background:linear-gradient(var(--gold),transparent);overflow:hidden;position:relative}
+.scroll-cue .bar i{position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--gold);animation:cue 1.8s ease-in infinite}
+@keyframes cue{to{top:100%}}
 
 /* ============ MARQUEE ============ */
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.1rem 0;margin-top:clamp(2.5rem,6vh,4rem);overflow:hidden;background:var(--paper-2)}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.1rem 0;overflow:hidden;background:var(--paper-2)}
 .marquee-track{display:flex;gap:2.5rem;width:max-content;animation:scrollx 40s linear infinite}
 .marquee span{font-family:var(--font-display);font-style:italic;font-size:1.5rem;color:var(--ink);opacity:.65;display:inline-flex;align-items:center;gap:2.5rem;white-space:nowrap}
 .marquee span::after{content:"✦";color:var(--gold);font-style:normal;font-size:.8rem}
 @keyframes scrollx{to{transform:translateX(-50%)}}
 
-/* ============ SECTION ============ */
-.section{padding:clamp(4rem,11vh,8rem) 0}
-.sec-head{margin-bottom:clamp(2.4rem,5vw,3.5rem);max-width:60ch}
-.sec-tag{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);margin-bottom:1rem}
-.sec-tag::before{content:"";width:24px;height:1px;background:var(--gold)}
-.sec-head h2{font-size:clamp(2.4rem,6vw,4.2rem);color:var(--ink);font-weight:600;line-height:1}
-.sec-head h2 em{font-style:italic;color:var(--gold)}
-.sec-head p{margin-top:1.1rem;color:var(--ink-soft);font-size:clamp(1rem,1.2vw,1.12rem);max-width:50ch}
-
-/* ============ MANIFESTO ============ */
-.manifesto{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.manifesto-q{font-family:var(--font-display);font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.16;color:var(--ink);font-weight:500;letter-spacing:-.005em}
+/* ============ MANIFESTO (momento tipográfico) ============ */
+.manifesto{position:relative;padding:clamp(5rem,15vh,10rem) 0;text-align:center;overflow:hidden}
+.manifesto .sec-tag{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);margin-bottom:1.6rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase}
+.manifesto-q{font-family:var(--font-display);font-size:clamp(2rem,5.5vw,4.6rem);line-height:1.12;color:var(--ink);font-weight:500;max-width:18ch;margin:0 auto;letter-spacing:-.01em}
 .manifesto-q em{font-style:italic;color:var(--gold)}
-.manifesto-sub{color:var(--ink-soft);margin-top:1.6rem;max-width:42ch}
-.manifesto-sign{margin-top:1.8rem;display:flex;align-items:center;gap:1rem}
-.manifesto-sign .ln{width:38px;height:1px;background:var(--gold)}
-.manifesto-sign b{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--ink);font-weight:600}
-.manifesto-img{position:relative;aspect-ratio:.86;border-radius:8px;overflow:hidden;background:var(--paper-3);box-shadow:0 36px 70px -40px rgba(34,27,18,.45)}
-.manifesto-img img{width:100%;height:112%;margin-top:-6%;object-fit:cover;will-change:transform}
+.manifesto-sign{margin-top:2rem;font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--muted)}
 
-/* ============ COCINA (signature dishes) ============ */
-#cocina{background:var(--paper-2)}
-.dishes{display:flex;flex-direction:column;gap:clamp(3rem,8vh,6rem)}
-.dish{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,4rem);align-items:center}
-.dish.alt .dish-media{order:2}
-.dish-media{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden;background:var(--paper-3);box-shadow:0 34px 70px -40px rgba(34,27,18,.5)}
-.dish-media img{width:100%;height:100%;object-fit:cover;will-change:transform}
-.dish-media .num{position:absolute;top:14px;left:16px;z-index:3;font-family:var(--font-mono);font-size:.7rem;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5)}
-.dish-body .dish-tag{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
-.dish-body h3{font-size:clamp(2rem,4.4vw,3.1rem);color:var(--ink);font-weight:600;line-height:1.02;margin-bottom:.6rem}
-.dish-body h3 em{font-style:italic;color:var(--gold)}
-.dish-body p{color:var(--ink-soft);font-size:1.02rem;max-width:40ch}
-.dish-price{margin-top:1rem;font-family:var(--font-display);font-style:italic;font-size:1.3rem;color:var(--ink);font-weight:600}
+/* ============ REEL (platos cinematográficos, pinned) ============ */
+.reel{position:relative;background:var(--night)}
+.reel-stage{height:100svh;position:relative;overflow:hidden}
+.reel-slide{position:absolute;inset:0}
+.reel-slide img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.reel-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,13,6,.35) 0%,rgba(20,13,6,.05) 30%,rgba(20,13,6,.45) 62%,rgba(20,13,6,.88) 100%)}
+.reel-info{position:absolute;left:0;right:0;bottom:0;padding:clamp(1.8rem,5vw,4.5rem);color:var(--paper);z-index:2;max-width:760px}
+.reel-info .rtag{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.7rem;display:block}
+.reel-info h2{font-family:var(--font-display);font-size:clamp(2.6rem,8.5vw,6.5rem);font-weight:600;line-height:.95;color:#fff;margin-bottom:.6rem}
+.reel-info h2 em{font-style:italic;color:var(--gold-bright)}
+.reel-info p{max-width:42ch;color:rgba(250,246,238,.86);font-size:clamp(1rem,1.5vw,1.25rem)}
+.reel-hud{position:absolute;top:clamp(5.5rem,11vh,7rem);left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding-inline:clamp(1.8rem,5vw,4.5rem);pointer-events:none}
+.reel-hud .lab{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,246,238,.7)}
+.reel-count{font-family:var(--font-display);font-size:1.3rem;color:var(--gold-soft)}
+.reel-count b{color:#fff;font-weight:600}
+.reel-bar{position:absolute;left:clamp(1.8rem,5vw,4.5rem);right:clamp(1.8rem,5vw,4.5rem);top:calc(clamp(5.5rem,11vh,7rem) + 2rem);height:2px;background:rgba(250,246,238,.18);z-index:5;border-radius:2px;overflow:hidden}
+.reel-bar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-bright));transform:scaleX(0);transform-origin:left}
 
-/* ============ GALERÍA ============ */
-.gallery{columns:3;column-gap:clamp(.8rem,1.6vw,1.3rem)}
-.gallery figure{break-inside:avoid;margin-bottom:clamp(.8rem,1.6vw,1.3rem);position:relative;border-radius:6px;overflow:hidden;background:var(--paper-3)}
-.gallery figure img{width:100%;display:block;will-change:transform}
-.gallery figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(27,20,13,.45));opacity:0;transition:opacity .4s}
-.gallery figure:hover::after{opacity:1}
-.gallery figure figcaption{position:absolute;left:12px;bottom:10px;z-index:2;color:#fff;font-family:var(--font-display);font-style:italic;font-size:1.05rem;opacity:0;transform:translateY(6px);transition:.4s var(--ease)}
-.gallery figure:hover figcaption{opacity:1;transform:none}
-.gallery-foot{margin-top:clamp(2rem,4vw,3rem);text-align:center}
+/* ============ STRIP (galería tira de cine) ============ */
+.strip{padding:clamp(4rem,10vh,7rem) 0 clamp(4rem,9vh,6rem);overflow:hidden}
+.strip-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-bottom:clamp(1.6rem,3.5vw,2.6rem)}
+.strip-head .sec-tag{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);margin-bottom:.8rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase}
+.strip-head h2{font-size:clamp(2.2rem,5.5vw,3.8rem);color:var(--ink);font-weight:600;line-height:1}
+.strip-head h2 em{font-style:italic;color:var(--gold)}
+.strip-hint{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.strip-rail{display:flex;gap:clamp(.8rem,2vw,1.4rem);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-inline:var(--side);cursor:grab}
+.strip-rail::-webkit-scrollbar{display:none}
+.strip-rail.dragging{cursor:grabbing;scroll-snap-type:none}
+.strip-fig{flex:0 0 auto;width:clamp(250px,72vw,400px);aspect-ratio:.82;position:relative;border-radius:8px;overflow:hidden;background:var(--paper-3);scroll-snap-align:center}
+.strip-fig img{width:100%;height:100%;object-fit:cover;pointer-events:none;will-change:transform}
+.strip-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,13,6,.6))}
+.strip-fig figcaption{position:absolute;left:14px;bottom:12px;z-index:2;color:#fff;font-family:var(--font-display);font-style:italic;font-size:1.15rem}
 
-/* ============ AMBIENTE ============ */
-#ambiente{background:var(--night);color:var(--paper);position:relative;overflow:hidden}
-#ambiente .sec-head h2{color:var(--paper)}#ambiente .sec-head h2 em{color:var(--gold-bright)}
-#ambiente .sec-tag{color:var(--gold-bright)}#ambiente .sec-tag::before{background:var(--gold-bright)}
-#ambiente .sec-head p{color:rgba(250,246,238,.66)}
-.amb-glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(216,171,71,.3),transparent 70%);filter:blur(80px);pointer-events:none;z-index:0;will-change:transform}
-.amb-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;position:relative;z-index:2}
-.amb-img{position:relative;aspect-ratio:1.05;border-radius:8px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.7)}
-.amb-img img{width:100%;height:112%;margin-top:-6%;object-fit:cover;will-change:transform}
-.amb-body h3{font-size:clamp(1.8rem,3.6vw,2.6rem);color:var(--paper);font-weight:500;margin-bottom:1rem;line-height:1.1}
-.amb-body h3 em{font-style:italic;color:var(--gold-bright)}
-.amb-body p{color:rgba(250,246,238,.72);max-width:44ch;margin-bottom:1.3rem}
-.amb-feats{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
-.amb-feats .chip{font-size:.74rem;font-weight:600;letter-spacing:.03em;padding:.5rem .95rem;border-radius:100px;background:rgba(250,246,238,.06);border:1px solid rgba(216,171,71,.3);color:var(--gold-soft)}
+/* ============ AMBIENTE (a sangre completa) ============ */
+.ambiente{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:var(--paper)}
+.ambiente .amb-bg{position:absolute;inset:0;z-index:0}
+.ambiente .amb-bg img{width:100%;height:118%;margin-top:-9%;object-fit:cover;will-change:transform}
+.ambiente .amb-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,13,6,.5) 0%,rgba(20,13,6,.15) 35%,rgba(20,13,6,.85) 100%)}
+.amb-content{position:relative;z-index:2;width:100%;padding-bottom:clamp(3rem,8vh,5rem)}
+.amb-content .sec-tag{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold-bright);margin-bottom:1.1rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase}
+.amb-content h2{font-size:clamp(2.4rem,7vw,5rem);color:#fff;font-weight:600;line-height:1;margin-bottom:1.2rem;max-width:16ch}
+.amb-content h2 em{font-style:italic;color:var(--gold-bright)}
+.amb-content p{color:rgba(250,246,238,.84);max-width:46ch;font-size:clamp(1.02rem,1.4vw,1.2rem);margin-bottom:1.5rem}
+.amb-feats{display:flex;flex-wrap:wrap;gap:.6rem}
+.amb-feats .chip{font-size:.74rem;font-weight:600;padding:.5rem .95rem;border-radius:100px;background:rgba(250,246,238,.08);border:1px solid rgba(216,171,71,.35);color:var(--gold-soft);backdrop-filter:blur(4px)}
 
 /* ============ VISITA ============ */
+.visita{padding:clamp(4rem,11vh,8rem) 0}
+.sec-head{margin-bottom:clamp(2.4rem,5vw,3.5rem)}
+.sec-tag-i{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);margin-bottom:1rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase}
+.sec-head h2{font-size:clamp(2.4rem,6vw,4.2rem);color:var(--ink);font-weight:600;line-height:1}
+.sec-head h2 em{font-style:italic;color:var(--gold)}
 .visita-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:stretch}
 .visita-info .block{padding:1.3rem 0;border-bottom:1px solid var(--line)}
 .visita-info .block:first-child{padding-top:0}
@@ -198,23 +199,18 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
 .foot-col a,.foot-col p{display:block;font-size:.9rem;margin-bottom:.55rem;color:rgba(250,246,238,.72)}
 .foot-col a:hover{color:var(--paper)}
 .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1.8rem;font-size:.76rem;color:rgba(250,246,238,.5)}
-.foot-watermark{font-family:var(--font-display);font-size:clamp(3.5rem,18vw,13rem);line-height:.8;color:rgba(250,246,238,.05);letter-spacing:.02em;margin-top:1.5rem;text-align:center;font-style:italic;user-select:none;white-space:nowrap;will-change:transform}
+.foot-watermark{font-family:var(--font-display);font-size:clamp(3.5rem,18vw,13rem);line-height:.8;color:rgba(250,246,238,.05);margin-top:1.5rem;text-align:center;font-style:italic;user-select:none;white-space:nowrap;will-change:transform}
 
 /* ============ RESPONSIVE ============ */
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:2.5rem}.hero-visual{max-width:440px;order:-1}
-  .manifesto{grid-template-columns:1fr;gap:2rem}.manifesto-img{max-width:440px;aspect-ratio:1.1}
-  .dish,.dish.alt{grid-template-columns:1fr;gap:1.4rem}.dish.alt .dish-media{order:0}.dish-media{max-width:480px}
-  .amb-grid{grid-template-columns:1fr;gap:2rem}.amb-img{max-width:480px;aspect-ratio:1.2}
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem}.hero-visual{max-width:420px;order:-1}
   .visita-grid{grid-template-columns:1fr;gap:2rem}
-  .gallery{columns:2}
+  .reel-info p{font-size:1.02rem}
 }
 @media(max-width:520px){
-  .hero h1{font-size:clamp(4rem,22vw,7rem)}
-  .hero-meta{gap:1.3rem}.hero-badge{width:74px;height:74px;top:-12px;left:-12px}
-  .foot-top{flex-direction:column;gap:1.6rem}
-  .gallery{columns:2;column-gap:.6rem}.gallery figure{margin-bottom:.6rem}
-  .marquee span{font-size:1.25rem;gap:1.8rem}
+  .hero h1{font-size:clamp(4rem,22vw,7rem)}.hero-badge{width:74px;height:74px;top:-12px;left:-12px}
+  .foot-top{flex-direction:column;gap:1.6rem}.scroll-cue{display:none}
+  .strip-fig{width:78vw}
 }
 
 /* ============ REDUCED MOTION ============ */
@@ -222,6 +218,7 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .reveal{opacity:1!important;transform:none!important}.line-mask>span{transform:none!important}
   .pre-name span{transform:none!important}.preloader{display:none!important}.wipe{clip-path:none!important}
+  .reel-slide{opacity:1!important}
 }
 </style>
 </head>
@@ -260,24 +257,16 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <span class="hero-eyebrow reveal"><span class="ln"></span><span class="mono">Kitchen &amp; Drinks · Can Pastilla</span></span>
-        <h1>
-          <span class="line-mask"><span>Armon<span class="a-accent">í</span>a</span></span>
-        </h1>
+        <h1><span class="line-mask"><span>Armon<span class="a-accent">í</span>a</span></span></h1>
         <p class="hero-tag reveal">Donde el Mediterráneo sabe a casa.</p>
         <p class="hero-sub reveal">Cocina mediterránea, vinos españoles y cócteles de autor. Producto de temporada, técnica sin pretensiones y muy buen rollo — frente al mar de Mallorca.</p>
         <div class="hero-ctas reveal">
           <a class="btn lg magnetic" href="tel:+34871735575">Reservar mesa
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="btn ghost lg magnetic" href="#cocina">Ver la cocina</a>
-        </div>
-        <div class="hero-meta">
-          <div class="item reveal"><div class="l">Horario</div><div class="v">13–16 · 19–00</div></div>
-          <div class="item reveal"><div class="l">Cierra</div><div class="v">Lunes</div></div>
-          <div class="item reveal"><div class="l">Dónde</div><div class="v">Mallorca</div></div>
+          <a class="btn ghost lg magnetic" href="#cocina">Vivir la experiencia</a>
         </div>
       </div>
-
       <div class="hero-visual">
         <img src="img/atun-sesamo.webp" alt="Atún sellado con costra de sésamo y ensalada de mango" width="640" height="640" loading="eager" decoding="async" fetchpriority="high" />
         <span class="frame"></span>
@@ -288,124 +277,88 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
         </div>
       </div>
     </div>
-
-    <div class="marquee" aria-hidden="true"><div class="marquee-track">
-      <span>Rabo de toro</span><span>Atún sellado</span><span>Burger gourmet</span><span>Tartar</span><span>Vieiras</span><span>Cócteles de autor</span>
-      <span>Rabo de toro</span><span>Atún sellado</span><span>Burger gourmet</span><span>Tartar</span><span>Vieiras</span><span>Cócteles de autor</span>
-    </div></div>
+    <div class="scroll-cue" aria-hidden="true"><span>Desliza</span><span class="bar"><i></i></span></div>
   </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>Rabo de toro</span><span>Atún sellado</span><span>Burger gourmet</span><span>Tartar</span><span>Vieiras</span><span>Cócteles de autor</span>
+    <span>Rabo de toro</span><span>Atún sellado</span><span>Burger gourmet</span><span>Tartar</span><span>Vieiras</span><span>Cócteles de autor</span>
+  </div></div>
 
   <!-- MANIFESTO -->
-  <section class="section">
-    <div class="wrap manifesto">
-      <div>
-        <span class="sec-tag reveal"><span class="mono">Nuestra filosofía</span></span>
-        <p class="manifesto-q" id="manifestoQ">Pasamos poco tiempo en las redes y mucho en la cocina. Y, sinceramente, es ahí donde pasan <em>las mejores cosas.</em></p>
-        <p class="manifesto-sub reveal">Tenemos platos sofisticados… pero a veces son los más sencillos los que saben a casa. Eso es Armonía: producto honesto, mano cuidada y la calma del Mediterráneo en cada mesa.</p>
-        <div class="manifesto-sign reveal"><span class="ln"></span><b>El equipo de Armonía</b></div>
-      </div>
-      <div class="manifesto-img wipe"><img src="img/rabo-guiso.webp" alt="Rabo de toro guisado con patatas y zanahoria en plato de cerámica" width="640" height="640" loading="lazy" decoding="async" /></div>
+  <section class="manifesto">
+    <span class="sec-tag">Nuestra filosofía</span>
+    <p class="manifesto-q" id="manifestoQ">Lo más sencillo, cuando se hace con alma, es lo que más sabe a <em>casa.</em></p>
+    <div class="manifesto-sign reveal">— El equipo de Armonía</div>
+  </section>
+
+  <!-- REEL cinematográfico -->
+  <section class="reel" id="cocina">
+    <div class="reel-stage">
+      <article class="reel-slide">
+        <img src="img/rabo-timbal.webp" alt="Timbal de rabo de toro sobre cremoso de patata" width="640" height="640" loading="lazy" decoding="async" />
+        <div class="reel-info"><span class="rtag">01 · Signature</span><h2>Rabo de toro <em>a nuestra manera</em></h2><p>Estofado a fuego lento hasta deshacerse, deshilachado sobre un cremoso de patata. Lo habrás probado mil veces; así, no.</p></div>
+      </article>
+      <article class="reel-slide">
+        <img src="img/atun-sesamo.webp" alt="Atún rojo sellado con costra de sésamo" width="640" height="640" loading="lazy" decoding="async" />
+        <div class="reel-info"><span class="rtag">02 · Del mar</span><h2>Atún sellado <em>al sésamo</em></h2><p>Lomo de atún rojo marcado al punto, costra de sésamo y ensalada fresca de mango y aguacate. Mediterráneo en estado puro.</p></div>
+      </article>
+      <article class="reel-slide">
+        <img src="img/burger.webp" alt="Burger gourmet con pan brioche, pesto y bacon" width="640" height="640" loading="lazy" decoding="async" />
+        <div class="reel-info"><span class="rtag">03 · De la brasa</span><h2>Burger <em>gourmet</em></h2><p>Pan brioche, carne jugosa, pesto y bacon crujiente. No somos una hamburguesería… solo hacemos las mejores hamburguesas.</p></div>
+      </article>
+      <article class="reel-slide">
+        <img src="img/vieiras.webp" alt="Vieiras a la brasa en su concha" width="640" height="640" loading="lazy" decoding="async" />
+        <div class="reel-info"><span class="rtag">04 · Del mar</span><h2>Vieiras <em>a la brasa</em></h2><p>Servidas en su concha, con un toque verde y lima. Pequeñas, delicadas y de las que piden repetir.</p></div>
+      </article>
+      <article class="reel-slide">
+        <img src="img/rabo-guiso.webp" alt="Rabo de toro guisado con patatas" width="640" height="640" loading="lazy" decoding="async" />
+        <div class="reel-info"><span class="rtag">05 · De casa</span><h2>El guiso <em>de siempre</em></h2><p>Rabo guisado con patata y verdura en plato de cerámica mallorquina. La cocina de la abuela, con otra mano.</p></div>
+      </article>
+      <div class="reel-hud"><span class="lab">La cocina</span><span class="reel-count"><b id="reelNum">01</b> / 05</span></div>
+      <div class="reel-bar"><i id="reelFill"></i></div>
     </div>
   </section>
 
-  <!-- COCINA -->
-  <section class="section" id="cocina">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="sec-tag"><span class="mono">La cocina</span></span>
-        <h2 data-split>Mar y montaña, <em>sin pretensiones.</em></h2>
-        <p>Algunos de los platos por los que la gente vuelve. La carta cambia con la temporada y con lo que el mercado nos regale ese día.</p>
-      </div>
-      <div class="dishes">
-        <article class="dish">
-          <div class="dish-media wipe"><span class="num">01</span><img src="img/rabo-timbal.webp" alt="Timbal de rabo de toro deshilachado sobre cremoso de patata" width="640" height="640" loading="lazy" decoding="async" /></div>
-          <div class="dish-body">
-            <div class="dish-tag">Signature</div>
-            <h3>Rabo de toro <em>a nuestra manera</em></h3>
-            <p>Estofado a fuego lento hasta deshacerse, deshilachado sobre un cremoso de patata. Lo habrás probado mil veces; así, no.</p>
-            <div class="dish-price">El que más repite</div>
-          </div>
-        </article>
-        <article class="dish alt">
-          <div class="dish-media wipe"><span class="num">02</span><img src="img/atun-sesamo.webp" alt="Atún rojo sellado con costra de sésamo, mango y aguacate" width="640" height="640" loading="lazy" decoding="async" /></div>
-          <div class="dish-body">
-            <div class="dish-tag">Del mar</div>
-            <h3>Atún sellado <em>al sésamo</em></h3>
-            <p>Lomo de atún rojo marcado al punto, costra de sésamo y una ensalada fresca de mango y aguacate. Mediterráneo en estado puro.</p>
-            <div class="dish-price">Frescura del día</div>
-          </div>
-        </article>
-        <article class="dish">
-          <div class="dish-media wipe"><span class="num">03</span><img src="img/burger.webp" alt="Burger gourmet con pan brioche, pesto y bacon" width="640" height="640" loading="lazy" decoding="async" /></div>
-          <div class="dish-body">
-            <div class="dish-tag">De la brasa</div>
-            <h3>Burger <em>gourmet</em></h3>
-            <p>Pan brioche, carne jugosa, pesto y bacon crujiente. No somos una hamburguesería… solo hacemos las mejores hamburguesas.</p>
-            <div class="dish-price">Para los clásicos</div>
-          </div>
-        </article>
-        <article class="dish alt">
-          <div class="dish-media wipe"><span class="num">04</span><img src="img/vieiras.webp" alt="Vieiras a la brasa servidas en su concha con toque verde y lima" width="640" height="640" loading="lazy" decoding="async" /></div>
-          <div class="dish-body">
-            <div class="dish-tag">Del mar</div>
-            <h3>Vieiras <em>a la brasa</em></h3>
-            <p>Servidas en su concha, con un toque verde y lima. Pequeñas, delicadas y de las que piden repetir.</p>
-            <div class="dish-price">Para compartir (o no)</div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERÍA -->
-  <section class="section" id="galeria">
-    <div class="wrap">
-      <div class="sec-head reveal" style="max-width:62ch">
-        <span class="sec-tag"><span class="mono">Del feed a la mesa</span></span>
+  <!-- STRIP galería -->
+  <section class="strip" id="galeria">
+    <div class="wrap strip-head">
+      <div class="reveal">
+        <span class="sec-tag">Del feed a la mesa</span>
         <h2 data-split>Para abrir el <em>apetito.</em></h2>
-        <p>Un paseo por lo que sale de nuestra cocina cada día. Lo de verdad — sin filtros raros, sólo buena luz y mejor producto.</p>
       </div>
-      <div class="gallery">
-        <figure class="wipe"><img src="img/tartar-carne.webp" alt="Tartar de ternera con puntos de salsa" loading="lazy" decoding="async"/><figcaption>Tartar de ternera</figcaption></figure>
-        <figure class="wipe"><img src="img/postre-mango.webp" alt="Postre cremoso de mango y maracuyá en copa" loading="lazy" decoding="async"/><figcaption>Postre de mango</figcaption></figure>
-        <figure class="wipe"><img src="img/jamon.webp" alt="Jamón ibérico cortado a cuchillo" loading="lazy" decoding="async"/><figcaption>Ibérico a cuchillo</figcaption></figure>
-        <figure class="wipe"><img src="img/tostadas.webp" alt="Tostadas con mousse de aguacate" loading="lazy" decoding="async"/><figcaption>Tostadas de aguacate</figcaption></figure>
-        <figure class="wipe"><img src="img/rabo-timbal.webp" alt="Timbal de rabo de toro" loading="lazy" decoding="async"/><figcaption>Rabo de toro</figcaption></figure>
-        <figure class="wipe"><img src="img/tartar-atun.webp" alt="Tartar de atún con mango" loading="lazy" decoding="async"/><figcaption>Tartar de atún</figcaption></figure>
-        <figure class="wipe"><img src="img/plato-menu.webp" alt="Plato con salsa cremosa y microgreens" loading="lazy" decoding="async"/><figcaption>De la carta</figcaption></figure>
-        <figure class="wipe"><img src="img/vieiras.webp" alt="Vieiras a la brasa" loading="lazy" decoding="async"/><figcaption>Vieiras</figcaption></figure>
-        <figure class="wipe"><img src="img/ambiente.webp" alt="Atún sellado con copa de vino y la barra de fondo" loading="lazy" decoding="async"/><figcaption>Sobremesa</figcaption></figure>
-      </div>
-      <div class="gallery-foot reveal">
-        <a class="btn ghost lg magnetic" href="https://www.instagram.com/armoniavibes/" target="_blank" rel="noopener">Ver más en Instagram
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </a>
-      </div>
+      <span class="strip-hint reveal">← Desliza →</span>
+    </div>
+    <div class="strip-rail" id="stripRail">
+      <figure class="strip-fig"><img src="img/tartar-carne.webp" alt="Tartar de ternera" loading="lazy" decoding="async"/><figcaption>Tartar de ternera</figcaption></figure>
+      <figure class="strip-fig"><img src="img/postre-mango.webp" alt="Postre de mango" loading="lazy" decoding="async"/><figcaption>Postre de mango</figcaption></figure>
+      <figure class="strip-fig"><img src="img/jamon.webp" alt="Jamón ibérico" loading="lazy" decoding="async"/><figcaption>Ibérico a cuchillo</figcaption></figure>
+      <figure class="strip-fig"><img src="img/tostadas.webp" alt="Tostadas de aguacate" loading="lazy" decoding="async"/><figcaption>Tostadas de aguacate</figcaption></figure>
+      <figure class="strip-fig"><img src="img/tartar-atun.webp" alt="Tartar de atún" loading="lazy" decoding="async"/><figcaption>Tartar de atún</figcaption></figure>
+      <figure class="strip-fig"><img src="img/plato-menu.webp" alt="Plato de la carta" loading="lazy" decoding="async"/><figcaption>De la carta</figcaption></figure>
+      <figure class="strip-fig"><img src="img/rabo-timbal.webp" alt="Rabo de toro" loading="lazy" decoding="async"/><figcaption>Rabo de toro</figcaption></figure>
+      <figure class="strip-fig"><img src="img/ambiente.webp" alt="Sobremesa con copa de vino" loading="lazy" decoding="async"/><figcaption>Sobremesa</figcaption></figure>
     </div>
   </section>
 
-  <!-- AMBIENTE -->
-  <section class="section" id="ambiente">
-    <span class="amb-glow" id="ambGlow" aria-hidden="true" style="top:10%;right:-8%"></span>
-    <div class="wrap amb-grid">
-      <div class="amb-img wipe"><img src="img/ambiente.webp" alt="Interior de Armonía: barra, sillas y luz natural del Mediterráneo" width="640" height="640" loading="lazy" decoding="async" /></div>
-      <div class="amb-body">
-        <span class="sec-tag"><span class="mono">El lugar</span></span>
-        <h3 class="reveal" data-split>Buen rollo <em>frente al mar.</em></h3>
-        <p class="reveal">Madera cálida, luz del Mediterráneo y la calma de Can Pastilla. El sitio perfecto para una comida que se alarga, una copa de vino español o un cóctel de autor cuando cae el sol.</p>
-        <p class="reveal" style="margin-bottom:0">Aquí no hay prisa. Hay armonía.</p>
-        <div class="amb-feats reveal">
-          <span class="chip">Vinos españoles</span><span class="chip">Cócteles de autor</span><span class="chip">Terraza</span><span class="chip">A 1 min de la playa</span>
-        </div>
+  <!-- AMBIENTE a sangre completa -->
+  <section class="ambiente" id="ambiente">
+    <div class="amb-bg"><img src="img/ambiente.webp" alt="Interior de Armonía con barra, sillas y luz natural" width="640" height="640" loading="lazy" decoding="async" /></div>
+    <div class="wrap amb-content">
+      <span class="sec-tag">El lugar</span>
+      <h2 data-split>Buen rollo <em>frente al mar.</em></h2>
+      <p class="reveal">Madera cálida, luz del Mediterráneo y la calma de Can Pastilla. El sitio para una comida que se alarga, una copa de vino español o un cóctel de autor cuando cae el sol. Aquí no hay prisa: hay armonía.</p>
+      <div class="amb-feats reveal">
+        <span class="chip">Vinos españoles</span><span class="chip">Cócteles de autor</span><span class="chip">Terraza</span><span class="chip">A 1 min de la playa</span>
       </div>
     </div>
   </section>
 
   <!-- VISITA -->
-  <section class="section" id="visita">
+  <section class="visita" id="visita">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-tag"><span class="mono">Te esperamos</span></span>
+        <span class="sec-tag-i">Te esperamos</span>
         <h2 data-split>Reserva tu <em>mesa.</em></h2>
       </div>
       <div class="visita-grid">
@@ -430,10 +383,7 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <div class="foot-brand">
-        <div class="fb-name">Armonía</div>
-        <p>Kitchen &amp; Drinks. Cocina mediterránea, vinos y cócteles frente al mar de Can Pastilla, Mallorca.</p>
-      </div>
+      <div class="foot-brand"><div class="fb-name">Armonía</div><p>Kitchen &amp; Drinks. Cocina mediterránea, vinos y cócteles frente al mar de Can Pastilla, Mallorca.</p></div>
       <div class="foot-col"><h4>Carta</h4><a href="#cocina">La cocina</a><a href="#galeria">Galería</a><a href="#ambiente">El lugar</a><a href="#visita">Visita</a></div>
       <div class="foot-col"><h4>Horario</h4><p>Mar–Dom</p><p>13:00–16:00</p><p>19:00–00:00</p></div>
       <div class="foot-col"><h4>Contacto</h4><a href="tel:+34871735575">+34 871 735 575</a><a href="https://www.instagram.com/armoniavibes/" target="_blank" rel="noopener">@armoniavibes</a><a href="https://www.google.com/maps/dir/?api=1&destination=Carrer+de+Virgili+5,+Can+Pastilla,+07610+Palma+de+Mallorca" target="_blank" rel="noopener">Can Pastilla, Mallorca</a></div>
@@ -453,27 +403,24 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
   var HAS_GSAP = !!(window.gsap && window.ScrollTrigger);
   if(HAS_GSAP){ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin); ScrollTrigger.config({ignoreMobileResize:true}); }
 
-  /* ---------- topbar + progress ---------- */
   var topbar=document.getElementById('topbar');
   window.addEventListener('scroll',function(){ topbar.classList.toggle('scrolled', window.scrollY>30); },{passive:true});
   var prog=document.getElementById('progress');
   window.addEventListener('scroll',function(){ var h=document.documentElement, sc=h.scrollHeight-h.clientHeight; prog.style.transform='scaleX('+(sc>0?window.scrollY/sc:0)+')'; },{passive:true});
 
-  /* ---------- split helper (words, DOM-only, keeps <em>) ---------- */
   function splitWords(el){
     if(el.dataset.split==='done') return [];
     var parts=[], frag=document.createDocumentFragment();
     (function walk(node,target){ Array.prototype.forEach.call(node.childNodes,function(n){
-      if(n.nodeType===3){ n.textContent.split(/(\s+)/).forEach(function(t){ if(t==='')return; if(/^\s+$/.test(t)){target.appendChild(document.createTextNode(t));return;} var w=document.createElement('span'); w.className='word'; w.style.display='inline-block'; w.textContent=t; target.appendChild(w); parts.push(w); }); }
+      if(n.nodeType===3){ n.textContent.split(/(\s+)/).forEach(function(t){ if(t==='')return; if(/^\s+$/.test(t)){target.appendChild(document.createTextNode(t));return;} var w=document.createElement('span'); w.className='word'; w.textContent=t; target.appendChild(w); parts.push(w); }); }
       else if(n.nodeType===1){ var c=n.cloneNode(false); target.appendChild(c); walk(n,c); }
     });})(el,frag);
     while(el.firstChild) el.removeChild(el.firstChild);
     el.appendChild(frag); el.dataset.split='done'; return parts;
   }
 
-  /* ---------- always-on ---------- */
   document.querySelectorAll('img').forEach(function(e){ try{ if(!e.getAttribute('decoding')) e.decoding='async'; }catch(_){} });
-  initMagnetic();
+  initMagnetic(); initStripDrag();
 
   var pre=document.getElementById('preloader');
   function finishLoad(){ document.body.classList.remove('loading'); }
@@ -489,7 +436,6 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
 
   document.querySelectorAll('[data-split]').forEach(splitWords);
 
-  /* ---------- preloader timeline ---------- */
   var ptl=gsap.timeline({onComplete:finishLoad});
   ptl.to('.pre-name span',{y:'0%',duration:.9,ease:'power3.out'})
      .to('#preLine',{width:'180px',duration:.7,ease:'power2.inOut'},'-=.4')
@@ -500,73 +446,92 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
 
   function startHero(){
     gsap.utils.toArray('.hero .line-mask').forEach(function(m){ m.classList.add('in'); });
-    gsap.delayedCall(.1,function(){ var e=document.querySelector('.hero-eyebrow'); if(e)e.classList.add('in'); });
-    gsap.delayedCall(.45,function(){ var e=document.querySelector('.hero-tag'); if(e)e.classList.add('in'); });
-    gsap.delayedCall(.6,function(){ var e=document.querySelector('.hero-sub'); if(e)e.classList.add('in'); });
-    gsap.delayedCall(.72,function(){ var e=document.querySelector('.hero-ctas'); if(e)e.classList.add('in'); });
-    gsap.delayedCall(.85,function(){ document.querySelectorAll('.hero-meta .item').forEach(function(e){e.classList.add('in');}); });
+    ['.hero-eyebrow','.hero-tag','.hero-sub','.hero-ctas'].forEach(function(sel,i){ gsap.delayedCall(.1+i*.16,function(){ var e=document.querySelector(sel); if(e)e.classList.add('in'); }); });
     gsap.fromTo('.hero-visual',{opacity:0,scale:.95,y:40},{opacity:1,scale:1,y:0,duration:1.1,ease:'power4.out',delay:.2});
     gsap.fromTo('.hero-visual img',{clipPath:'inset(0 0 100% 0)'},{clipPath:'inset(0 0 0% 0)',duration:1.2,ease:'power3.inOut',delay:.35});
     gsap.from('.hero-badge',{scale:0,opacity:0,duration:.6,ease:'back.out(1.7)',delay:1});
+    gsap.from('.scroll-cue',{opacity:0,duration:.6,delay:1.2});
   }
 
-  /* ---------- ambient ---------- */
+  /* ambient */
   gsap.to('.hero-glow.g1',{x:40,y:30,duration:10,ease:'sine.inOut',yoyo:true,repeat:-1});
   gsap.to('.hero-glow.g2',{x:-40,y:-30,duration:13,ease:'sine.inOut',yoyo:true,repeat:-1});
-  gsap.to('#ambGlow',{x:-60,y:40,duration:12,ease:'sine.inOut',yoyo:true,repeat:-1});
-  initMarquee();
+  initDust(); initMarquee();
 
-  /* ---------- MOVIMIENTO CONSTANTE Y DELICADO ---------- */
-  initDust();
-  // Ken Burns lento (zoom imperceptible) en todas las imágenes
-  gsap.utils.toArray('.hero-visual img, .manifesto-img img, .amb-img img, .dish-media img, .gallery figure img').forEach(function(img,i){
-    gsap.fromTo(img,{scale:1},{scale:1.07,duration:15+(i%6),ease:'sine.inOut',yoyo:true,repeat:-1,delay:.6+(i%5)*.2});
-  });
-  // parallax suave en TODOS los dispositivos (también móvil)
-  gsap.fromTo('.hero-visual img',{yPercent:-5},{yPercent:9,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
-  ['.manifesto-img img','.amb-img img'].forEach(function(sel){ var img=document.querySelector(sel); if(!img)return; gsap.fromTo(img,{yPercent:7},{yPercent:-9,ease:'none',scrollTrigger:{trigger:img.closest('section'),start:'top bottom',end:'bottom top',scrub:true}}); });
-  // flotación delicada en contenedores y badge
-  gsap.utils.toArray('.dish-media, .manifesto-img, .amb-img').forEach(function(el,i){ gsap.to(el,{y:-8,duration:5+i*0.5,ease:'sine.inOut',yoyo:true,repeat:-1,delay:i*0.35}); });
-  gsap.to('.hero-badge',{y:-9,duration:4.6,ease:'sine.inOut',yoyo:true,repeat:-1,delay:1.7});
-
-  /* ---------- reveals (IntersectionObserver + safety net) ---------- */
+  /* reveals + safety net */
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target; el.classList.add('in'); io.unobserve(el);
     setTimeout(function(){ if(el.classList.contains('line-mask')){ var inr=el.firstElementChild; if(inr) inr.style.transform='none'; } else { el.style.opacity='1'; el.style.transform='none'; } },1300);
   }});},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.reveal, .line-mask').forEach(function(el){ if(el.closest('.hero')) return; io.observe(el); });
 
-  /* ---------- clip-path "curtain" reveal on images ---------- */
-  gsap.utils.toArray('.wipe').forEach(function(el){
-    gsap.fromTo(el,{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:1.05,ease:'power3.inOut',scrollTrigger:{trigger:el,start:'top 86%'},onComplete:function(){el.style.clipPath='none';el.style.willChange='auto';}});
-  });
-
-  /* ---------- split-heading word reveal ---------- */
+  /* split headings */
   document.querySelectorAll('[data-split]').forEach(function(h){
     var ws=h.querySelectorAll('.word'); if(!ws.length) return;
+    var dark=!!h.closest('.ambiente');
     gsap.set(ws,{yPercent:115,opacity:0});
-    gsap.to(ws,{yPercent:0,opacity:1,stagger:.05,duration:.75,ease:'power3.out',scrollTrigger:{trigger:h,start:'top 86%'}});
+    gsap.to(ws,{yPercent:0,opacity:1,stagger:.05,duration:.75,ease:'power3.out',scrollTrigger:{trigger:h,start: dark?'top 70%':'top 86%'}});
   });
 
-  /* ---------- manifesto quote light-up ---------- */
+  /* manifesto word light-up (scrub) */
   (function(){ var q=document.getElementById('manifestoQ'); if(!q) return; var ws=splitWords(q);
-    gsap.set(ws,{opacity:.22}); gsap.to(ws,{opacity:1,stagger:.06,ease:'none',scrollTrigger:{trigger:q,start:'top 82%',end:'top 42%',scrub:true}});
+    gsap.set(ws,{opacity:.16}); gsap.to(ws,{opacity:1,stagger:.06,ease:'none',scrollTrigger:{trigger:q,start:'top 80%',end:'top 35%',scrub:true}});
   })();
 
-  /* ---------- parallax (desktop only) ---------- */
+  /* topbar light over dark sections */
+  ['.reel','.ambiente'].forEach(function(sel){ var s=document.querySelector(sel); if(!s) return;
+    ScrollTrigger.create({trigger:s,start:'top 60px',end:'bottom 60px',onToggle:function(self){ topbar.classList.toggle('on-dark', self.isActive); }});
+  });
+
+  /* ===== REEL cinematográfico (pin + scrub crossfade) ===== */
+  (function(){
+    var reel=document.querySelector('.reel'); if(!reel) return;
+    var slides=gsap.utils.toArray('.reel-slide'); if(slides.length<2) return;
+    var numEl=document.getElementById('reelNum'), fill=document.getElementById('reelFill');
+    gsap.set(slides,{autoAlpha:0}); gsap.set(slides[0],{autoAlpha:1,scale:1}); gsap.set(slides.slice(1),{scale:1.1});
+    var tl=gsap.timeline({scrollTrigger:{
+      trigger:reel, start:'top top', end:function(){ return '+='+(slides.length*0.95*window.innerHeight); },
+      pin:'.reel-stage', scrub:.6, anticipatePin:1, invalidateOnRefresh:true,
+      onUpdate:function(self){ var idx=Math.min(slides.length, Math.floor(self.progress*slides.length)+1); if(numEl) numEl.textContent=('0'+idx).slice(-2); if(fill) fill.style.transform='scaleX('+self.progress+')'; }
+    }});
+    slides.forEach(function(slide,i){
+      if(i===0){ tl.to({},{duration:.7}); return; }
+      tl.to(slides[i-1],{autoAlpha:0,scale:1.1,ease:'power1.in',duration:.55});
+      tl.fromTo(slide,{autoAlpha:0,scale:1.1},{autoAlpha:1,scale:1,ease:'power1.out',duration:.55},'<');
+      tl.to({},{duration:.7});
+    });
+    // delicate Ken Burns on the visible reel images via the slide img (continuous, subtle)
+    gsap.utils.toArray('.reel-slide img').forEach(function(img,i){ gsap.fromTo(img,{scale:1},{scale:1.08,duration:18+(i%4),ease:'sine.inOut',yoyo:true,repeat:-1}); });
+  })();
+
+  /* ===== STRIP galería: pin + scrub horizontal en desktop ===== */
   var mm=gsap.matchMedia();
+  mm.add('(min-width: 901px)', function(){
+    var rail=document.getElementById('stripRail'); if(!rail) return;
+    rail.style.overflowX='visible';
+    var amount=function(){ return Math.max(0, rail.scrollWidth - window.innerWidth + parseFloat(getComputedStyle(rail).paddingLeft)); };
+    var tw=gsap.to(rail,{x:function(){return -amount();},ease:'none',scrollTrigger:{trigger:'.strip',start:'top top',end:function(){return '+='+amount();},pin:true,scrub:.6,invalidateOnRefresh:true,anticipatePin:1}});
+    return function(){ if(tw){ if(tw.scrollTrigger) tw.scrollTrigger.kill(); tw.kill(); } gsap.set(rail,{clearProps:'x'}); rail.style.overflowX='auto'; };
+  });
+  mm.add('(max-width: 900px)', function(){ return function(){}; });
+
+  /* ===== AMBIENTE parallax + footer watermark (desktop) ===== */
+  gsap.fromTo('.amb-bg img',{yPercent:-6},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.ambiente',start:'top bottom',end:'bottom top',scrub:true}});
+  gsap.fromTo('.hero-visual img',{yPercent:-5},{yPercent:9,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.fromTo('.hero-visual img',{scale:1},{scale:1.07,duration:16,ease:'sine.inOut',yoyo:true,repeat:-1,delay:1.6});
+  gsap.utils.toArray('.strip-fig img').forEach(function(img,i){ gsap.fromTo(img,{scale:1},{scale:1.07,duration:15+(i%5),ease:'sine.inOut',yoyo:true,repeat:-1,delay:i*.2}); });
   mm.add('(min-width: 900px) and (pointer: fine)', function(){
     gsap.fromTo('#footWm',{xPercent:6},{xPercent:-6,ease:'none',scrollTrigger:{trigger:'footer',start:'top bottom',end:'bottom bottom',scrub:true}});
     return function(){};
   });
 
-  /* ---------- smooth anchors ---------- */
+  /* smooth anchors */
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click',function(e){ var id=a.getAttribute('href'); if(id==='#'||id.length<2)return; var t=document.querySelector(id); if(!t)return; e.preventDefault(); gsap.to(window,{duration:1,ease:'power3.inOut',scrollTo:{y:t,offsetY:64}}); });
+    a.addEventListener('click',function(e){ var id=a.getAttribute('href'); if(id==='#'||id.length<2)return; var t=document.querySelector(id); if(!t)return; e.preventDefault(); gsap.to(window,{duration:1,ease:'power3.inOut',scrollTo:{y:t,offsetY:0}}); });
   });
 
   ScrollTrigger.refresh();
 
-  /* ---------- magnetic ---------- */
+  /* ---------- helpers ---------- */
   function initMagnetic(){
     if(window.matchMedia('(pointer: coarse)').matches) return;
     document.querySelectorAll('.magnetic').forEach(function(el){ var r=null;
@@ -575,8 +540,15 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
       el.addEventListener('pointerleave',function(){el.style.transform='';});
     });
   }
-
-  /* ---------- marquee infinito y sin pausa (clona hasta llenar 2x viewport, bucle GSAP) ---------- */
+  function initStripDrag(){
+    var rail=document.getElementById('stripRail'); if(!rail) return;
+    if(window.matchMedia('(pointer: coarse)').matches) return; // móvil: swipe nativo
+    var down=false,sx=0,sl=0;
+    rail.addEventListener('pointerdown',function(e){ down=true; sx=e.clientX; sl=rail.scrollLeft; rail.classList.add('dragging'); rail.setPointerCapture(e.pointerId); });
+    rail.addEventListener('pointermove',function(e){ if(!down)return; rail.scrollLeft=sl-(e.clientX-sx); });
+    rail.addEventListener('pointerup',function(){ down=false; rail.classList.remove('dragging'); });
+    rail.addEventListener('pointercancel',function(){ down=false; rail.classList.remove('dragging'); });
+  }
   function initMarquee(){
     document.querySelectorAll('.marquee-track').forEach(function(track){
       track.style.animation='none'; gsap.set(track,{x:0});
@@ -586,8 +558,6 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
       gsap.to(track,{x:-unit, duration:Math.max(14, unit/85), ease:'none', repeat:-1});
     });
   }
-
-  /* ---------- polvo dorado flotante en el hero (motas en la luz mediterránea) ---------- */
   function initDust(){
     if(reduce) return;
     var c=document.getElementById('dust'); if(!c) return;
@@ -601,8 +571,8 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
     window.addEventListener('resize',function(){ resize(); seed(); });
     function draw(){ ctx.clearRect(0,0,W,H); for(var i=0;i<pts.length;i++){ var p=pts[i]; p.y+=p.vy; p.x+=p.vx+Math.sin(p.y*0.01+p.ph)*0.14*DPR; if(p.y<-12){ p.y=H+12; p.x=Math.random()*W; } ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.2832); ctx.fillStyle='rgba(201,160,72,'+p.a+')'; ctx.fill(); } }
     function loop(){ draw(); rafId=requestAnimationFrame(loop); }
-    var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ if(!rafId)loop(); } else if(rafId){ cancelAnimationFrame(rafId); rafId=null; } },{threshold:0});
-    io.observe(hero);
+    var io2=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ if(!rafId)loop(); } else if(rafId){ cancelAnimationFrame(rafId); rafId=null; } },{threshold:0});
+    io2.observe(hero);
   }
 })();
 </script>
