@@ -108,8 +108,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 
 /* ============ MARQUEE ============ */
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.1rem 0;margin-top:clamp(2.5rem,6vh,4rem);overflow:hidden;background:var(--paper-2)}
-.marquee-track{display:flex;gap:2.5rem;width:max-content;animation:scrollx 26s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track{display:flex;gap:2.5rem;width:max-content;animation:scrollx 40s linear infinite}
 .marquee span{font-family:var(--font-display);font-style:italic;font-size:1.5rem;color:var(--ink);opacity:.65;display:inline-flex;align-items:center;gap:2.5rem;white-space:nowrap}
 .marquee span::after{content:"✦";color:var(--gold);font-style:normal;font-size:.8rem}
 @keyframes scrollx{to{transform:translateX(-50%)}}
@@ -513,6 +512,7 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
   gsap.to('.hero-glow.g1',{x:40,y:30,duration:10,ease:'sine.inOut',yoyo:true,repeat:-1});
   gsap.to('.hero-glow.g2',{x:-40,y:-30,duration:13,ease:'sine.inOut',yoyo:true,repeat:-1});
   gsap.to('#ambGlow',{x:-60,y:40,duration:12,ease:'sine.inOut',yoyo:true,repeat:-1});
+  initMarquee();
 
   /* ---------- reveals (IntersectionObserver + safety net) ---------- */
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target; el.classList.add('in'); io.unobserve(el);
@@ -561,6 +561,17 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
       el.addEventListener('pointerenter',function(){r=el.getBoundingClientRect();});
       el.addEventListener('pointermove',function(e){ if(!r)r=el.getBoundingClientRect(); var x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2); el.style.transform='translate('+x*0.25+'px,'+y*0.35+'px)'; });
       el.addEventListener('pointerleave',function(){el.style.transform='';});
+    });
+  }
+
+  /* ---------- marquee infinito y sin pausa (clona hasta llenar 2x viewport, bucle GSAP) ---------- */
+  function initMarquee(){
+    document.querySelectorAll('.marquee-track').forEach(function(track){
+      track.style.animation='none'; gsap.set(track,{x:0});
+      var unit = track.scrollWidth; if(!unit) return;
+      var seed = Array.prototype.slice.call(track.children), guard=0;
+      while(track.scrollWidth < window.innerWidth*2 + unit && guard<16){ seed.forEach(function(n){ track.appendChild(n.cloneNode(true)); }); guard++; }
+      gsap.to(track,{x:-unit, duration:Math.max(14, unit/85), ease:'none', repeat:-1});
     });
   }
 })();
