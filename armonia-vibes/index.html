@@ -52,7 +52,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 
 /* ============ TOPBAR ============ */
 .topbar{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:clamp(1rem,2.2vw,1.6rem) var(--side);transition:background .4s var(--ease),backdrop-filter .4s,box-shadow .4s,padding .4s,color .4s;mix-blend-mode:normal}
-.topbar.scrolled{background:rgba(250,246,238,.82);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line-soft);padding-top:.7rem;padding-bottom:.7rem}
+.topbar.scrolled{background:rgba(250,246,238,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line-soft);padding-top:.7rem;padding-bottom:.7rem}
 .topbar.on-dark:not(.scrolled){color:var(--paper)}
 .topbar.on-dark:not(.scrolled) .brand,.topbar.on-dark:not(.scrolled) .nav-link{color:var(--paper)}
 .topbar.on-dark:not(.scrolled) .btn{background:var(--paper);color:var(--ink)}
@@ -129,16 +129,16 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 .reel{position:relative;background:var(--night)}
 .reel-stage{height:100svh;position:relative;overflow:hidden}
 .reel-slide{position:absolute;inset:0}
-.reel-slide img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.reel-slide img{width:100%;height:100%;object-fit:cover}
 .reel-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,9,3,.72) 0%,rgba(14,9,3,.36) 15%,rgba(14,9,3,.12) 37%,rgba(14,9,3,.52) 60%,rgba(14,9,3,.94) 100%)}
 .reel-info{position:absolute;left:0;right:0;bottom:0;padding:clamp(1.8rem,5vw,4.5rem);color:var(--paper);z-index:2;max-width:780px;text-shadow:0 1px 24px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.55)}
-.reel-info .rtag{font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1rem;display:inline-block;background:rgba(14,9,3,.62);border:1px solid rgba(232,200,122,.45);padding:.46rem .9rem;border-radius:100px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);text-shadow:none}
+.reel-info .rtag{font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1rem;display:inline-block;background:rgba(12,7,2,.82);border:1px solid rgba(232,200,122,.45);padding:.46rem .9rem;border-radius:100px;text-shadow:none}
 .reel-info h2{font-family:var(--font-display);font-size:clamp(2.6rem,8.5vw,6.5rem);font-weight:600;line-height:.95;color:#fff;margin-bottom:.7rem;text-shadow:0 2px 36px rgba(0,0,0,.55),0 1px 5px rgba(0,0,0,.5)}
 .reel-info h2 em{font-style:italic;color:var(--gold-soft)}
 .reel-info p{max-width:42ch;color:#fff;font-size:clamp(1.04rem,1.5vw,1.25rem);font-weight:500}
 .reel-hud{position:absolute;top:clamp(5.5rem,11vh,7rem);left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding-inline:clamp(1.8rem,5vw,4.5rem);pointer-events:none}
-.reel-hud .lab{font-family:var(--font-mono);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(14,9,3,.62);padding:.42rem .85rem;border-radius:100px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.reel-count{font-family:var(--font-display);font-size:1.55rem;color:#fff;background:rgba(14,9,3,.62);padding:.12rem .85rem;border-radius:100px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.reel-hud .lab{font-family:var(--font-mono);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(12,7,2,.82);padding:.42rem .85rem;border-radius:100px}
+.reel-count{font-family:var(--font-display);font-size:1.55rem;color:#fff;background:rgba(12,7,2,.82);padding:.12rem .85rem;border-radius:100px}
 .reel-count b{color:var(--gold-soft);font-weight:700}
 .reel-bar{position:absolute;left:clamp(1.8rem,5vw,4.5rem);right:clamp(1.8rem,5vw,4.5rem);top:calc(clamp(5.5rem,11vh,7rem) + 2.7rem);height:3px;background:rgba(255,255,255,.3);z-index:5;border-radius:3px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.45)}
 .reel-bar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-bright));transform:scaleX(0);transform-origin:left}
@@ -154,7 +154,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 .strip-rail::-webkit-scrollbar{display:none}
 .strip-rail.dragging{cursor:grabbing;scroll-snap-type:none}
 .strip-fig{flex:0 0 auto;width:clamp(250px,72vw,400px);aspect-ratio:.82;position:relative;border-radius:8px;overflow:hidden;background:var(--paper-3);scroll-snap-align:center}
-.strip-fig img{width:100%;height:100%;object-fit:cover;pointer-events:none;will-change:transform}
+.strip-fig img{width:100%;height:100%;object-fit:cover;pointer-events:none}
 .strip-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(14,9,3,.8))}
 .strip-fig figcaption{position:absolute;left:16px;bottom:13px;z-index:2;color:#fff;font-family:var(--font-display);font-style:italic;font-size:1.2rem;text-shadow:0 1px 14px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.6)}
 
@@ -487,20 +487,19 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
     var reel=document.querySelector('.reel'); if(!reel) return;
     var slides=gsap.utils.toArray('.reel-slide'); if(slides.length<2) return;
     var numEl=document.getElementById('reelNum'), fill=document.getElementById('reelFill');
-    gsap.set(slides,{autoAlpha:0}); gsap.set(slides[0],{autoAlpha:1,scale:1}); gsap.set(slides.slice(1),{scale:1.1});
+    gsap.set(slides,{autoAlpha:0}); gsap.set(slides[0],{autoAlpha:1});
     var tl=gsap.timeline({scrollTrigger:{
-      trigger:reel, start:'top top', end:function(){ return '+='+(slides.length*0.95*window.innerHeight); },
-      pin:'.reel-stage', scrub:.6, anticipatePin:1, invalidateOnRefresh:true,
+      trigger:reel, start:'top top', end:function(){ return '+='+Math.round(slides.length*0.58*window.innerHeight); },
+      pin:'.reel-stage', scrub:.25, anticipatePin:1, invalidateOnRefresh:true, fastScrollEnd:true,
       onUpdate:function(self){ var idx=Math.min(slides.length, Math.floor(self.progress*slides.length)+1); if(numEl) numEl.textContent=('0'+idx).slice(-2); if(fill) fill.style.transform='scaleX('+self.progress+')'; }
     }});
     slides.forEach(function(slide,i){
-      if(i===0){ tl.to({},{duration:.7}); return; }
-      tl.to(slides[i-1],{autoAlpha:0,scale:1.1,ease:'power1.in',duration:.55});
-      tl.fromTo(slide,{autoAlpha:0,scale:1.1},{autoAlpha:1,scale:1,ease:'power1.out',duration:.55},'<');
-      tl.to({},{duration:.7});
+      if(i===0){ tl.to({},{duration:.45}); return; }
+      tl.to(slides[i-1],{autoAlpha:0,ease:'none',duration:.5});
+      tl.fromTo(slide,{autoAlpha:0},{autoAlpha:1,ease:'none',duration:.5},'<');
+      tl.to({},{duration:.45});
     });
-    // delicate Ken Burns on the visible reel images via the slide img (continuous, subtle)
-    gsap.utils.toArray('.reel-slide img').forEach(function(img,i){ gsap.fromTo(img,{scale:1},{scale:1.08,duration:18+(i%4),ease:'sine.inOut',yoyo:true,repeat:-1}); });
+    // Crossfade de opacidad pura (sin escalado): lo más barato para la GPU = máxima fluidez
   })();
 
   /* ===== STRIP galería: pin + scrub horizontal en desktop ===== */
@@ -518,7 +517,7 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
   gsap.fromTo('.amb-bg img',{yPercent:-6},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.ambiente',start:'top bottom',end:'bottom top',scrub:true}});
   gsap.fromTo('.hero-visual img',{yPercent:-5},{yPercent:9,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
   gsap.fromTo('.hero-visual img',{scale:1},{scale:1.07,duration:16,ease:'sine.inOut',yoyo:true,repeat:-1,delay:1.6});
-  gsap.utils.toArray('.strip-fig img').forEach(function(img,i){ gsap.fromTo(img,{scale:1},{scale:1.07,duration:15+(i%5),ease:'sine.inOut',yoyo:true,repeat:-1,delay:i*.2}); });
+  // Ken Burns de la galería eliminado para fluidez (el desplazamiento horizontal ya da el movimiento)
   mm.add('(min-width: 900px) and (pointer: fine)', function(){
     gsap.fromTo('#footWm',{xPercent:6},{xPercent:-6,ease:'none',scrollTrigger:{trigger:'footer',start:'top bottom',end:'bottom bottom',scrub:true}});
     return function(){};
