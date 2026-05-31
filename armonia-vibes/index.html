@@ -27,7 +27,7 @@
   --ease:cubic-bezier(.22,1,.36,1);
 }
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:clamp(15px,.5vw+14px,16.5px)}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip;font-size:clamp(15px,.5vw+14px,16.5px)}
 body.loading{overflow:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
@@ -125,23 +125,25 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.02;letter
 .manifesto-q em{font-style:italic;color:var(--gold)}
 .manifesto-sign{margin-top:2rem;font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:var(--muted)}
 
-/* ============ REEL (platos cinematográficos, pinned) ============ */
-.reel{position:relative;background:var(--night)}
-.reel-stage{height:100svh;position:relative;overflow:hidden}
-.reel-slide{position:absolute;inset:0}
-.reel-slide img{width:100%;height:100%;object-fit:cover}
-.reel-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,9,3,.72) 0%,rgba(14,9,3,.36) 15%,rgba(14,9,3,.12) 37%,rgba(14,9,3,.52) 60%,rgba(14,9,3,.94) 100%)}
-.reel-info{position:absolute;left:0;right:0;bottom:0;padding:clamp(1.8rem,5vw,4.5rem);color:var(--paper);z-index:2;max-width:780px;text-shadow:0 1px 24px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.55)}
-.reel-info .rtag{font-family:var(--font-mono);font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1rem;display:inline-block;background:rgba(12,7,2,.82);border:1px solid rgba(232,200,122,.45);padding:.46rem .9rem;border-radius:100px;text-shadow:none}
-.reel-info h2{font-family:var(--font-display);font-size:clamp(2.6rem,8.5vw,6.5rem);font-weight:600;line-height:.95;color:#fff;margin-bottom:.7rem;text-shadow:0 2px 36px rgba(0,0,0,.55),0 1px 5px rgba(0,0,0,.5)}
-.reel-info h2 em{font-style:italic;color:var(--gold-soft)}
-.reel-info p{max-width:42ch;color:#fff;font-size:clamp(1.04rem,1.5vw,1.25rem);font-weight:500}
-.reel-hud{position:absolute;top:clamp(5.5rem,11vh,7rem);left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding-inline:clamp(1.8rem,5vw,4.5rem);pointer-events:none}
-.reel-hud .lab{font-family:var(--font-mono);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(12,7,2,.82);padding:.42rem .85rem;border-radius:100px}
-.reel-count{font-family:var(--font-display);font-size:1.55rem;color:#fff;background:rgba(12,7,2,.82);padding:.12rem .85rem;border-radius:100px}
-.reel-count b{color:var(--gold-soft);font-weight:700}
-.reel-bar{position:absolute;left:clamp(1.8rem,5vw,4.5rem);right:clamp(1.8rem,5vw,4.5rem);top:calc(clamp(5.5rem,11vh,7rem) + 2.7rem);height:3px;background:rgba(255,255,255,.3);z-index:5;border-radius:3px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,.45)}
-.reel-bar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-bright));transform:scaleX(0);transform-origin:left}
+/* ============ COCINA (baraja de tarjetas que se apila — sticky nativo) ============ */
+.cocina{position:relative;padding:clamp(4rem,9vh,7rem) 0 0;background:linear-gradient(180deg,var(--paper) 0%,var(--paper-2) 60%,var(--paper) 100%)}
+.cocina-head{text-align:center;max-width:760px;margin:0 auto clamp(1.6rem,4vh,2.6rem);padding-inline:var(--side)}
+.cocina-head .sec-tag{display:inline-flex;align-items:center;gap:.5rem;color:var(--gold);margin-bottom:1rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase}
+.cocina-head h2{font-size:clamp(2.2rem,6.5vw,4rem);color:var(--ink);font-weight:600;line-height:1.02}
+.cocina-head h2 em{font-style:italic;color:var(--gold)}
+.cocina-head p{color:var(--ink-soft);margin-top:.9rem;font-size:clamp(1rem,1.3vw,1.12rem)}
+.cards{position:relative;padding-bottom:clamp(2rem,8vh,6rem)}
+.card{position:sticky;top:9vh;width:min(91%,560px);height:min(78vh,700px);margin:0 auto;border-radius:26px;overflow:hidden;box-shadow:0 40px 70px -34px rgba(20,13,6,.6),0 4px 14px -6px rgba(20,13,6,.4);background:var(--paper-3)}
+.card:not(:first-child){margin-top:clamp(2.4rem,6vh,5rem)}
+.card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.22);transform-origin:50% 60%}
+.card-grad{position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 44%,rgba(14,9,3,.55) 70%,rgba(14,9,3,.94) 100%)}
+.card-text{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:clamp(1.5rem,5.5vw,2.6rem);color:#fff;text-shadow:0 1px 22px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.5)}
+.card-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.85rem}
+.card-num{font-family:var(--font-display);font-size:2.5rem;font-weight:600;color:var(--gold-soft);line-height:1;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.card-tag{font-family:var(--font-mono);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(12,7,2,.8);padding:.4rem .8rem;border-radius:100px;text-shadow:none}
+.card h3{font-family:var(--font-display);font-size:clamp(2rem,7.5vw,3.4rem);font-weight:600;line-height:1;color:#fff;margin-bottom:.55rem}
+.card h3 em{font-style:italic;color:var(--gold-soft)}
+.card-text p{color:#fff;font-weight:500;font-size:clamp(.98rem,1.3vw,1.14rem);max-width:42ch;line-height:1.5}
 
 /* ============ STRIP (galería tira de cine) ============ */
 .strip{padding:clamp(4rem,10vh,7rem) 0 clamp(4rem,9vh,6rem);overflow:hidden}
@@ -205,7 +207,7 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:2.5rem}.hero-visual{max-width:420px;order:-1}
   .visita-grid{grid-template-columns:1fr;gap:2rem}
-  .reel-info p{font-size:1.02rem}
+  .card{height:min(82vh,680px)}
 }
 @media(max-width:520px){
   .hero h1{font-size:clamp(4rem,22vw,7rem)}.hero-badge{width:74px;height:74px;top:-12px;left:-12px}
@@ -218,7 +220,7 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .reveal{opacity:1!important;transform:none!important}.line-mask>span{transform:none!important}
   .pre-name span{transform:none!important}.preloader{display:none!important}.wipe{clip-path:none!important}
-  .reel-slide{opacity:1!important}
+  .card{position:relative!important;transform:none!important}
 }
 </style>
 </head>
@@ -292,31 +294,39 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
     <div class="manifesto-sign reveal">— El equipo de Armonía</div>
   </section>
 
-  <!-- REEL cinematográfico -->
-  <section class="reel" id="cocina">
-    <div class="reel-stage">
-      <article class="reel-slide">
+  <!-- COCINA: baraja de tarjetas que se apila al deslizar -->
+  <section class="cocina" id="cocina">
+    <div class="cocina-head reveal">
+      <span class="sec-tag">La cocina</span>
+      <h2 data-split>Cinco platos que nos <em>definen.</em></h2>
+      <p>Desliza y vélos apilarse — producto de temporada y técnica sin pretensiones.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
         <img src="img/rabo-timbal.webp" alt="Timbal de rabo de toro sobre cremoso de patata" width="640" height="640" loading="lazy" decoding="async" />
-        <div class="reel-info"><span class="rtag">01 · Signature</span><h2>Rabo de toro <em>a nuestra manera</em></h2><p>Estofado a fuego lento hasta deshacerse, deshilachado sobre un cremoso de patata. Lo habrás probado mil veces; así, no.</p></div>
+        <div class="card-grad"></div>
+        <div class="card-text"><div class="card-meta"><span class="card-num">01</span><span class="card-tag">Signature</span></div><h3>Rabo de toro <em>a nuestra manera</em></h3><p>Estofado a fuego lento hasta deshacerse, sobre un cremoso de patata. Lo habrás probado mil veces; así, no.</p></div>
       </article>
-      <article class="reel-slide">
+      <article class="card">
         <img src="img/atun-sesamo.webp" alt="Atún rojo sellado con costra de sésamo" width="640" height="640" loading="lazy" decoding="async" />
-        <div class="reel-info"><span class="rtag">02 · Del mar</span><h2>Atún sellado <em>al sésamo</em></h2><p>Lomo de atún rojo marcado al punto, costra de sésamo y ensalada fresca de mango y aguacate. Mediterráneo en estado puro.</p></div>
+        <div class="card-grad"></div>
+        <div class="card-text"><div class="card-meta"><span class="card-num">02</span><span class="card-tag">Del mar</span></div><h3>Atún sellado <em>al sésamo</em></h3><p>Lomo de atún rojo marcado al punto, costra de sésamo y ensalada de mango y aguacate. Mediterráneo en estado puro.</p></div>
       </article>
-      <article class="reel-slide">
+      <article class="card">
         <img src="img/burger.webp" alt="Burger gourmet con pan brioche, pesto y bacon" width="640" height="640" loading="lazy" decoding="async" />
-        <div class="reel-info"><span class="rtag">03 · De la brasa</span><h2>Burger <em>gourmet</em></h2><p>Pan brioche, carne jugosa, pesto y bacon crujiente. No somos una hamburguesería… solo hacemos las mejores hamburguesas.</p></div>
+        <div class="card-grad"></div>
+        <div class="card-text"><div class="card-meta"><span class="card-num">03</span><span class="card-tag">De la brasa</span></div><h3>Burger <em>gourmet</em></h3><p>Pan brioche, carne jugosa, pesto y bacon crujiente. No somos una hamburguesería… solo hacemos las mejores hamburguesas.</p></div>
       </article>
-      <article class="reel-slide">
+      <article class="card">
         <img src="img/vieiras.webp" alt="Vieiras a la brasa en su concha" width="640" height="640" loading="lazy" decoding="async" />
-        <div class="reel-info"><span class="rtag">04 · Del mar</span><h2>Vieiras <em>a la brasa</em></h2><p>Servidas en su concha, con un toque verde y lima. Pequeñas, delicadas y de las que piden repetir.</p></div>
+        <div class="card-grad"></div>
+        <div class="card-text"><div class="card-meta"><span class="card-num">04</span><span class="card-tag">Del mar</span></div><h3>Vieiras <em>a la brasa</em></h3><p>Servidas en su concha, con un toque verde y lima. Pequeñas, delicadas y de las que piden repetir.</p></div>
       </article>
-      <article class="reel-slide">
-        <img src="img/rabo-guiso.webp" alt="Rabo de toro guisado con patatas" width="640" height="640" loading="lazy" decoding="async" />
-        <div class="reel-info"><span class="rtag">05 · De casa</span><h2>El guiso <em>de siempre</em></h2><p>Rabo guisado con patata y verdura en plato de cerámica mallorquina. La cocina de la abuela, con otra mano.</p></div>
+      <article class="card">
+        <img src="img/rabo-guiso.webp" alt="Rabo de toro guisado con patatas en cerámica mallorquina" width="640" height="640" loading="lazy" decoding="async" />
+        <div class="card-grad"></div>
+        <div class="card-text"><div class="card-meta"><span class="card-num">05</span><span class="card-tag">De casa</span></div><h3>El guiso <em>de siempre</em></h3><p>Rabo guisado con patata y verdura en cerámica mallorquina. La cocina de la abuela, con otra mano.</p></div>
       </article>
-      <div class="reel-hud"><span class="lab">La cocina</span><span class="reel-count"><b id="reelNum">01</b> / 05</span></div>
-      <div class="reel-bar"><i id="reelFill"></i></div>
     </div>
   </section>
 
@@ -478,28 +488,18 @@ footer{background:var(--night-2);color:rgba(250,246,238,.7);padding:clamp(3rem,7
   })();
 
   /* topbar light over dark sections */
-  ['.reel','.ambiente'].forEach(function(sel){ var s=document.querySelector(sel); if(!s) return;
+  ['.ambiente'].forEach(function(sel){ var s=document.querySelector(sel); if(!s) return;
     ScrollTrigger.create({trigger:s,start:'top 60px',end:'bottom 60px',onToggle:function(self){ topbar.classList.toggle('on-dark', self.isActive); }});
   });
 
-  /* ===== REEL cinematográfico (pin + scrub crossfade) ===== */
+  /* ===== COCINA: baraja de tarjetas (sticky nativo = fluido; escala ligera para profundidad, sin pin) ===== */
   (function(){
-    var reel=document.querySelector('.reel'); if(!reel) return;
-    var slides=gsap.utils.toArray('.reel-slide'); if(slides.length<2) return;
-    var numEl=document.getElementById('reelNum'), fill=document.getElementById('reelFill');
-    gsap.set(slides,{autoAlpha:0}); gsap.set(slides[0],{autoAlpha:1});
-    var tl=gsap.timeline({scrollTrigger:{
-      trigger:reel, start:'top top', end:function(){ return '+='+Math.round(slides.length*0.58*window.innerHeight); },
-      pin:'.reel-stage', scrub:.25, anticipatePin:1, invalidateOnRefresh:true, fastScrollEnd:true,
-      onUpdate:function(self){ var idx=Math.min(slides.length, Math.floor(self.progress*slides.length)+1); if(numEl) numEl.textContent=('0'+idx).slice(-2); if(fill) fill.style.transform='scaleX('+self.progress+')'; }
-    }});
-    slides.forEach(function(slide,i){
-      if(i===0){ tl.to({},{duration:.45}); return; }
-      tl.to(slides[i-1],{autoAlpha:0,ease:'none',duration:.5});
-      tl.fromTo(slide,{autoAlpha:0},{autoAlpha:1,ease:'none',duration:.5},'<');
-      tl.to({},{duration:.45});
+    var cards=gsap.utils.toArray('.cocina .card'); if(cards.length<2) return;
+    cards.forEach(function(card,i){
+      if(i===cards.length-1) return; // la última no se encoge
+      gsap.fromTo(card,{scale:1,yPercent:0},{scale:0.9,yPercent:-4,ease:'none',
+        scrollTrigger:{trigger:cards[i+1],start:'top 90%',end:'top 11%',scrub:.3}});
     });
-    // Crossfade de opacidad pura (sin escalado): lo más barato para la GPU = máxima fluidez
   })();
 
   /* ===== STRIP galería: pin + scrub horizontal en desktop ===== */
