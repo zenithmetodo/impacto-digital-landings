@@ -38,7 +38,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 h1,h2,h3{line-height:1;letter-spacing:0;font-weight:400}
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--side)}
 .mono{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase}
-.fire-text{background:linear-gradient(100deg,#f4751f,#fcab40 42%,#ffd784 50%,#fcab40 58%,#f4751f);background-size:165% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:fireShimmer 5.5s linear infinite;text-shadow:0 1px 7px rgba(0,0,0,.4)}
+.fire-text{background:linear-gradient(100deg,#f4751f,#fcab40 42%,#ffd784 50%,#fcab40 58%,#f4751f);background-size:165% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:fireShimmer 5.5s linear infinite}
 @keyframes fireShimmer{to{background-position:-165% 0}}
 
 .grain{position:fixed;inset:0;z-index:120;pointer-events:none;opacity:.045;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -91,7 +91,7 @@ h1,h2,h3{line-height:1;letter-spacing:0;font-weight:400}
 .hero-grid{position:relative;z-index:3;width:100%}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1.4rem;color:var(--ember-hot)}
 .hero-eyebrow .ln{width:30px;height:2px;background:var(--fire)}
-.hero h1{font-family:var(--f-display);font-size:clamp(4.2rem,19vw,16rem);line-height:.92;letter-spacing:.005em;text-transform:uppercase;color:var(--bone);text-shadow:0 6px 50px rgba(0,0,0,.5)}
+.hero h1{font-family:var(--f-display);font-size:clamp(4.2rem,19vw,16rem);line-height:.92;letter-spacing:.005em;text-transform:uppercase;color:var(--bone)}
 .hero h1 .line-mask{padding-top:.32em}
 .hero h1 .em{display:inline-block}
 .hero-sub{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin-top:1rem;font-family:var(--f-head);font-weight:500;font-size:clamp(1.1rem,2.6vw,1.7rem);letter-spacing:.04em;text-transform:uppercase;color:var(--bone)}
