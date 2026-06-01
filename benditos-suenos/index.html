@@ -170,9 +170,9 @@ nav.links a:hover::after{transform:scaleX(1)}
 .cantina .lead{color:#d8ccb8}
 .neon{font-family:var(--display);color:var(--turq);text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);animation:neonflk 4s linear infinite}
 @keyframes neonflk{0%,88%,100%{text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);color:var(--turq)}90%{text-shadow:none;color:#0a6b63}92%{text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);color:var(--turq)}94%{text-shadow:none;color:#0a6b63}96%{text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);color:var(--turq)}}
-.cantina-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;margin-top:2rem}
+.cantina-grid{display:grid;grid-template-columns:minmax(0,430px) 1fr;gap:clamp(1.5rem,4vw,3.2rem);align-items:center;margin-top:2rem}
 .cantina-photo{border:5px solid var(--crudo);border-radius:10px;overflow:hidden;box-shadow:10px 10px 0 var(--rosa);transform:rotate(-1.5deg)}
-.cantina-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+.cantina-photo img{width:100%;display:block;height:clamp(300px,34vw,430px);object-fit:cover}
 .drinks{display:flex;flex-direction:column;gap:.8rem}
 .drink{display:flex;align-items:center;gap:.9rem;border-bottom:2px dashed rgba(248,240,222,.25);padding-bottom:.7rem}
 .drink .ic{font-size:2rem}
@@ -183,9 +183,9 @@ nav.links a:hover::after{transform:scaleX(1)}
 .ambiente{background:var(--turq);border-block:3px solid var(--tinta);color:#fff}
 .ambiente .kicker{color:var(--maiz)}
 .ambiente .sec-title{color:var(--crudo)}
-.amb-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;margin-top:2rem}
+.amb-grid{display:grid;grid-template-columns:minmax(0,430px) 1fr;gap:clamp(1.5rem,4vw,3.2rem);align-items:center;margin-top:2rem}
 .amb-photo{border:5px solid var(--tinta);border-radius:10px;overflow:hidden;box-shadow:10px 10px 0 var(--maiz)}
-.amb-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+.amb-photo img{width:100%;display:block;height:clamp(300px,34vw,430px);object-fit:cover}
 .amb-text p{color:#effbfa;font-size:1.05rem;font-weight:500;margin-bottom:1rem;max-width:30rem}
 .amb-strip{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
 .chip{background:var(--crudo);color:var(--tinta);border:3px solid var(--tinta);border-radius:40px;padding:.4em .9em;font-weight:800;font-size:.82rem;display:inline-flex;align-items:center;gap:.4em;box-shadow:3px 3px 0 var(--tinta)}
