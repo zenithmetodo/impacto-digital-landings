@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Ala Madrid · Alitas peruanas en Madrid y Getafe</title>
+<meta name="description" content="Ala Madrid — las alitas peruanas que están petando Madrid. Broaster, BBQ, acevichada, al rokoto y más. Pueblo Nuevo y Getafe. A domicilio con Uber Eats y Glovo." />
+<meta name="theme-color" content="#ED6A1E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&display=swap" rel="stylesheet" />
+<style>
+/* ===== RESET & TOKENS ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#ED6A1E;--orange-2:#F58320;--orange-deep:#C9461A;
+  --yellow:#FBB30E;--yellow-2:#FFD03C;
+  --red:#E22A1C;--red-deep:#B81C16;
+  --green:#5FA92E;--green-2:#7BC53F;
+  --blue:#2C74E0;
+  --cream:#FFF3DF;--cream-2:#FFE7C2;--paper:#FFFAF0;
+  --ink:#2B1A0E;--ink-soft:#6b4a32;--muted:#a98a6c;
+  --line:rgba(43,26,14,.14);
+  --hot:linear-gradient(120deg,var(--red) 0%,var(--orange) 42%,var(--yellow) 100%);
+  --side:clamp(1.2rem,4.5vw,6rem);--maxw:1240px;
+  --f-display:"Bricolage Grotesque",system-ui,sans-serif;
+  --f-body:"DM Sans",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--bounce:cubic-bezier(.34,1.56,.64,1);
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--f-body);background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;font-size:clamp(15px,.5vw+14px,16.5px)}
+body.loading{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
+::selection{background:var(--red);color:#fff}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:.98;letter-spacing:-.02em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--side)}
+
+.progress{position:fixed;top:0;left:0;height:4px;width:100%;z-index:130;transform:scaleX(0);transform-origin:left;background:var(--hot)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1.1rem;z-index:210;border-radius:0 0 10px 0}
+.skip:focus{left:0}
+
+/* ===== PRELOADER ===== */
+.preloader{position:fixed;inset:0;z-index:300;background:var(--orange);display:grid;place-items:center;overflow:hidden}
+.pre-emoji{width:clamp(3.4rem,13vw,5.2rem);height:clamp(3.4rem,13vw,5.2rem);margin:0 auto;transform:scale(0)}
+.pre-emoji svg{width:100%;height:100%}
+.pre-name{font-family:var(--f-display);font-weight:800;font-size:clamp(2rem,8vw,3.4rem);color:#fff;margin-top:.4rem;opacity:0;letter-spacing:-.02em}
+.pre-bar{height:5px;width:0;background:#fff;border-radius:10px;margin-top:1rem}
+
+/* ===== ANIMATED BG (blobs) ===== */
+.blobs{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.55;will-change:transform}
+@media(max-width:760px){.blob{filter:blur(28px)}}
+
+/* ===== TOPBAR ===== */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:clamp(.7rem,2vw,1.1rem) var(--side);transition:background .35s,box-shadow .35s,padding .35s}
+.topbar.scrolled{background:rgba(255,243,223,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 2px 0 rgba(43,26,14,.08)}
+.brand{display:flex;align-items:center;gap:.45rem;font-family:var(--f-display);font-size:1.4rem;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.brand .ico{font-size:1.2rem}
+.brand b{color:var(--orange-deep)}
+.nav-actions{display:flex;align-items:center;gap:1.2rem}
+.nav-link{font-weight:700;font-size:.86rem;color:var(--ink);opacity:.8}
+.nav-link:hover{opacity:1;color:var(--orange-deep)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:#fff;padding:.7rem 1.2rem;border-radius:100px;font-weight:700;font-size:.85rem;min-height:44px;transition:transform .25s var(--bounce),box-shadow .25s,background .25s;box-shadow:0 6px 0 rgba(43,26,14,.25)}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(43,26,14,.25)}
+.btn.red{background:var(--red);box-shadow:0 6px 0 var(--red-deep)}
+.btn.org{background:var(--orange);box-shadow:0 6px 0 var(--orange-deep)}
+.btn.grn{background:var(--green);box-shadow:0 6px 0 #3f7a1e}
+.btn.wht{background:#fff;color:var(--ink);box-shadow:0 6px 0 rgba(43,26,14,.2)}
+.btn.lg{padding:.95rem 1.6rem;font-size:.95rem}
+@media(max-width:820px){.nav-link{display:none}.nav-actions{gap:.5rem}.brand{font-size:1.25rem}}
+
+/* ===== reveal pop ===== */
+.pop{opacity:0;transform:translateY(26px) scale(.94);transition:opacity .7s var(--ease),transform .7s var(--bounce);transition-delay:var(--delay,0s)}
+.pop.in{opacity:1;transform:none}
+.spin-in{opacity:0;transform:rotate(-8deg) scale(.8)}
+.spin-in.in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .8s var(--bounce);transition-delay:var(--delay,0s)}
+/* ===== custom SVG icons ===== */
+.ic{display:inline-block;width:1em;height:1em;vertical-align:-.16em;flex:none}
+.ic-scoot{display:inline-block;width:1.5em;height:1.08em;vertical-align:-.2em;flex:none}
+.float{position:absolute;z-index:5;width:clamp(2.9rem,6.2vw,4.3rem);height:clamp(2.9rem,6.2vw,4.3rem);border-radius:50%;background:#fff;border:2.5px solid var(--ink);display:grid;place-items:center;box-shadow:0 6px 0 rgba(43,26,14,.16);will-change:transform;pointer-events:none}
+.float svg{width:58%;height:58%}
+.heat{display:inline-flex;gap:.15em;align-items:center}
+.heat .ic{width:1.05em;height:1.05em}
+.heat .dim{opacity:.24}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:clamp(5.5rem,14vh,8rem) 0 clamp(3rem,7vh,5rem);background:var(--cream)}
+.hero-emojis{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-emojis span{position:absolute;font-size:clamp(1.6rem,4vw,3rem);will-change:transform;opacity:.9;filter:drop-shadow(0 6px 10px rgba(43,26,14,.18))}
+.hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:2.5px solid var(--ink);border-radius:100px;padding:.4rem .9rem;font-weight:700;font-size:.78rem;color:var(--ink);box-shadow:0 5px 0 rgba(43,26,14,.18);margin-bottom:1.1rem}
+.hero-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(95,169,46,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(95,169,46,0)}100%{box-shadow:0 0 0 0 rgba(95,169,46,0)}}
+.hero h1{font-size:clamp(3.3rem,12vw,8rem);line-height:.86;letter-spacing:-.035em;color:var(--ink)}
+.hero h1 .l1{display:block;color:var(--orange-deep)}
+.hero h1 .l2{display:block}
+.hero h1 .pep{display:inline-block;background:var(--hot);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font-family:var(--f-display);font-weight:700;font-size:clamp(1.1rem,2.4vw,1.6rem);color:var(--ink);margin-top:.9rem;max-width:18ch}
+.hero-sub .u{background:linear-gradient(transparent 62%,var(--yellow-2) 62%)}
+.hero-desc{margin-top:.9rem;color:var(--ink-soft);max-width:34ch;font-size:clamp(1rem,1.2vw,1.1rem);font-weight:500}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.3rem;margin-top:1.8rem}
+.hero-meta .m{display:flex;align-items:center;gap:.5rem}
+.hero-meta .m .e{font-size:1.3rem}
+.hero-meta .m .t b{display:block;font-family:var(--f-display);font-weight:800;font-size:1rem;line-height:1}
+.hero-meta .m .t span{font-size:.74rem;color:var(--muted);font-weight:600}
+.hero-art{position:relative;aspect-ratio:1;display:grid;place-items:center}
+.hero-disc{position:absolute;inset:6%;border-radius:50%;background:var(--hot);box-shadow:0 30px 60px -20px rgba(226,42,28,.5);will-change:transform}
+.hero-disc::after{content:"";position:absolute;inset:8px;border-radius:50%;border:3px dashed rgba(255,255,255,.5)}
+.hero-food{position:relative;width:78%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 20px 40px -16px rgba(43,26,14,.5);will-change:transform}
+.hero-food img{width:100%;height:100%;object-fit:cover}
+.hero-tag{position:absolute;z-index:4;background:#fff;border:2.5px solid var(--ink);border-radius:14px;padding:.5rem .8rem;font-family:var(--f-display);font-weight:800;font-size:.95rem;box-shadow:0 6px 0 rgba(43,26,14,.2);white-space:nowrap}
+.hero-tag.t1{top:4%;left:-4%;color:var(--red);rotate:-8deg}
+.hero-tag.t2{bottom:8%;right:-6%;color:var(--green);rotate:7deg}
+@media(max-width:820px){
+  .hero-grid{grid-template-columns:1fr;gap:2rem;text-align:center}
+  .hero-badge{margin-inline:auto}.hero-sub,.hero-desc{margin-inline:auto}
+  .hero-ctas,.hero-meta{justify-content:center}
+  .hero-art{max-width:340px;margin:0 auto;order:-1}
+}
+
+/* ===== MARQUEE bands ===== */
+.bands{position:relative;z-index:5;margin:clamp(1rem,3vh,2.5rem) 0}
+.band{padding:.7rem 0;overflow:hidden;white-space:nowrap}
+.band.b1{background:var(--ink);transform:rotate(-2deg) scale(1.04)}
+.band.b2{background:var(--red);transform:rotate(1.5deg) scale(1.04);margin-top:-6px}
+.band-track{display:inline-flex;gap:1.6rem;width:max-content;will-change:transform}
+.band span{font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.01em;display:inline-flex;align-items:center;gap:1.6rem}
+.band.b1 span{color:var(--yellow-2)}.band.b2 span{color:#fff}
+.band span::after{content:"";width:.5em;height:.5em;border-radius:50%;background:currentColor;display:inline-block;flex:none}
+
+/* ===== SECTION shells ===== */
+.sec{position:relative;padding:clamp(4rem,11vh,8rem) 0;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--f-display);font-weight:800;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--orange-deep);background:var(--cream-2);padding:.4rem .9rem;border-radius:100px;margin-bottom:1rem}
+.h2{font-size:clamp(2.4rem,7vw,5rem);line-height:.95;color:var(--ink);letter-spacing:-.03em}
+.h2 .c1{color:var(--red)}.h2 .c2{color:var(--orange-deep)}.h2 .c3{color:var(--green)}
+.lead{color:var(--ink-soft);font-weight:500;font-size:clamp(1.02rem,1.4vw,1.18rem);max-width:46ch;margin-top:1rem}
+
+/* ===== SABORES (carrusel) ===== */
+.sabores{background:var(--paper)}
+.sab-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:clamp(1.4rem,3vw,2.2rem)}
+.sab-hint{font-weight:700;color:var(--muted);font-size:.85rem;display:flex;align-items:center;gap:.4rem}
+.rail{display:flex;gap:clamp(.9rem,2vw,1.4rem);overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .5rem 1.6rem;margin-inline:calc(var(--side)*-1);padding-inline:var(--side);-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.flav{scroll-snap-align:center;flex:0 0 clamp(248px,76vw,320px);border-radius:24px;overflow:hidden;position:relative;color:#fff;border:3px solid var(--ink);box-shadow:0 12px 0 rgba(43,26,14,.18);transition:transform .3s var(--bounce)}
+.flav:hover{transform:translateY(-6px) rotate(-1deg)}
+.flav-img{aspect-ratio:1.15;overflow:hidden;position:relative}
+.flav-img img{width:100%;height:100%;object-fit:cover}
+.flav-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,var(--fc,rgba(0,0,0,.6)))}
+.flav-body{padding:1rem 1.2rem 1.3rem;background:var(--fc,#333)}
+.flav-body h3{font-size:1.7rem;color:#fff;margin-bottom:.3rem}
+.flav-body p{font-size:.88rem;color:rgba(255,255,255,.92);font-weight:500;min-height:2.4em}
+.flav-heat{margin-top:.7rem;font-size:.95rem;letter-spacing:.15em}
+.flav-num{position:absolute;top:.7rem;left:.9rem;z-index:2;font-family:var(--f-display);font-weight:800;font-size:1.3rem;color:#fff;background:rgba(43,26,14,.5);width:2em;height:2em;display:grid;place-items:center;border-radius:50%;backdrop-filter:blur(2px)}
+.flav-chip{position:absolute;top:.8rem;right:.9rem;z-index:2;background:#fff;color:var(--ink);font-weight:800;font-size:.66rem;padding:.3rem .6rem;border-radius:100px;text-transform:uppercase;letter-spacing:.05em}
+
+/* ===== MASYQUE (no solo alitas) ===== */
+.mas{background:var(--orange);color:#fff}
+.mas .eyebrow{background:rgba(255,255,255,.18);color:#fff}
+.mas .h2{color:#fff}.mas .h2 .c2{color:var(--yellow-2)}
+.mas .lead{color:rgba(255,255,255,.92)}
+.mas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.9rem,2vw,1.4rem);margin-top:clamp(1.6rem,4vw,2.5rem)}
+.mcard{background:var(--paper);color:var(--ink);border-radius:22px;overflow:hidden;border:3px solid var(--ink);box-shadow:0 10px 0 rgba(43,26,14,.3);transition:transform .3s var(--bounce)}
+.mcard:hover{transform:translateY(-6px)}
+.mcard .ph{aspect-ratio:1.2;overflow:hidden}
+.mcard .ph img{width:100%;height:100%;object-fit:cover}
+.mcard .tx{padding:1rem 1.1rem 1.2rem}
+.mcard h3{font-size:1.35rem;margin-bottom:.2rem}
+.mcard p{font-size:.85rem;color:var(--ink-soft);font-weight:500}
+@media(max-width:760px){.mas-grid{grid-template-columns:1fr 1fr}.mcard:last-child{grid-column:1/-1}}
+
+/* ===== COMBOS ===== */
+.combos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.9rem,2vw,1.4rem);margin-top:clamp(1.6rem,4vw,2.5rem)}
+.combo{position:relative;border-radius:22px;padding:1.6rem 1.4rem;border:3px solid var(--ink);box-shadow:0 10px 0 rgba(43,26,14,.2);background:#fff;transition:transform .3s var(--bounce)}
+.combo:hover{transform:translateY(-6px) rotate(1deg)}
+.combo.feat{background:var(--yellow);transform:scale(1.03)}
+.combo.feat:hover{transform:scale(1.03) translateY(-6px)}
+.combo .ribbon{position:absolute;top:-14px;right:14px;background:var(--red);color:#fff;font-weight:800;font-size:.7rem;padding:.3rem .7rem;border-radius:100px;text-transform:uppercase;letter-spacing:.04em;box-shadow:0 4px 0 var(--red-deep)}
+.combo .k{font-family:var(--f-display);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--orange-deep)}
+.combo .price{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,5vw,3.2rem);line-height:1;margin:.3rem 0 .6rem}
+.combo ul{list-style:none;display:grid;gap:.4rem}
+.combo li{font-size:.9rem;font-weight:500;display:flex;gap:.5rem;align-items:flex-start}
+.combo li::before{content:"";width:1.15em;height:1.15em;flex:none;margin-top:.05em;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.8 2.6a6.4 6.4 0 0 1 1.7 12.6c-.8 2.5-3.1 4.3-5.8 4.3-.8 0-1.5-.2-2.2-.5l-3.1 3.1a1.7 1.7 0 0 1-2.4-2.4l3.1-3.1a6 6 0 0 1-.5-2.2 6 6 0 0 1 4.3-5.8 6 6 0 0 1 4.9-6z' fill='%23E8943C'/%3E%3Ccircle cx='5.3' cy='18.7' r='2.3' fill='%23F7E2BD'/%3E%3Ccircle cx='3.5' cy='20.5' r='1.5' fill='%23F7E2BD'/%3E%3C/svg%3E") center/contain no-repeat}
+@media(max-width:760px){.combos-grid{grid-template-columns:1fr}.combo.feat{transform:none}.combo.feat:hover{transform:translateY(-6px)}}
+
+/* ===== PERU vibe ===== */
+.peru{position:relative;color:#fff;background:var(--ink);overflow:hidden}
+.peru .kraft{position:absolute;inset:0;z-index:0;opacity:.08;background-size:200px;will-change:transform}
+.peru-in{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3.5rem);align-items:center}
+.peru .eyebrow{background:rgba(255,255,255,.14);color:var(--yellow-2)}
+.peru h2{color:#fff}.peru h2 .c2{color:var(--orange-2)}
+.peru p{color:rgba(255,255,255,.9);font-weight:500;margin-top:1rem;max-width:42ch}
+.peru-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.peru-pill{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);border-radius:100px;padding:.5rem .9rem;font-weight:700;font-size:.84rem}
+.peru-art{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:1.1;border:4px solid #fff;box-shadow:0 24px 50px -20px rgba(0,0,0,.6);transform:rotate(2deg)}
+.peru-art img{width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.peru-in{grid-template-columns:1fr;gap:2rem}.peru-art{order:-1;max-width:420px}}
+
+/* ===== PEDIR (locales + delivery) ===== */
+.pedir{background:var(--cream)}
+.deliv{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:clamp(1.4rem,3vw,2rem)}
+.deliv a{display:inline-flex;align-items:center;gap:.6rem;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:.9rem 1.3rem;font-family:var(--f-display);font-weight:800;font-size:1.05rem;box-shadow:0 8px 0 rgba(43,26,14,.2);transition:transform .25s var(--bounce)}
+.deliv a:hover{transform:translateY(-4px)}.deliv a:active{transform:translateY(2px);box-shadow:0 3px 0 rgba(43,26,14,.2)}
+.deliv a .e{font-size:1.5rem}
+.deliv a.uber{background:#06C167;color:#fff;border-color:#05863f;box-shadow:0 8px 0 #05863f}
+.deliv a.glovo{background:#FFC244;color:var(--ink);border-color:#c9912a;box-shadow:0 8px 0 #c9912a}
+.locs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,1.6rem);margin-top:clamp(1.8rem,4vw,2.6rem)}
+.loc{background:#fff;border:3px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 12px 0 rgba(43,26,14,.16)}
+.loc .lh{background:var(--orange);color:#fff;padding:1rem 1.3rem;display:flex;align-items:center;gap:.6rem}
+.loc .lh .e{font-size:1.5rem}
+.loc .lh b{font-family:var(--f-display);font-weight:800;font-size:1.25rem;display:block;line-height:1}
+.loc .lh span{font-size:.78rem;opacity:.92;font-weight:600}
+.loc .lb{padding:1.1rem 1.3rem 1.3rem}
+.loc .lb .addr{font-weight:600;font-size:.96rem;margin-bottom:.2rem}
+.loc .lb .meta{font-size:.84rem;color:var(--muted);font-weight:600;margin-bottom:1rem}
+.loc .lb .lcta{display:flex;gap:.5rem;flex-wrap:wrap}
+@media(max-width:680px){.locs{grid-template-columns:1fr}}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:rgba(255,243,223,.7);padding:clamp(3rem,7vh,4.5rem) 0 7rem;position:relative;overflow:hidden}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;align-items:flex-start;padding-bottom:2rem;border-bottom:1px solid rgba(255,243,223,.14)}
+.foot-brand{max-width:32ch}
+.foot-brand .fb{font-family:var(--f-display);font-weight:800;font-size:2rem;color:#fff;display:flex;align-items:center;gap:.4rem;margin-bottom:.5rem}
+.foot-brand p{font-size:.9rem;line-height:1.6}
+.foot-col h4{font-family:var(--f-display);font-weight:800;font-size:.74rem;letter-spacing:.08em;color:var(--yellow-2);text-transform:uppercase;margin-bottom:.9rem}
+.foot-col a,.foot-col p{display:block;font-size:.9rem;margin-bottom:.5rem;color:rgba(255,243,223,.7)}
+.foot-col a:hover{color:#fff}
+.foot-bottom{margin-top:1.6rem;font-size:.74rem;color:rgba(255,243,223,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.foot-wm{display:block;width:100%;height:auto;margin-top:1rem;overflow:visible;user-select:none}
+.foot-wm text{font-family:var(--f-display);font-weight:800;font-size:100px;fill:rgba(255,243,223,.06);letter-spacing:-.02em}
+
+/* ===== STICKY ORDER ===== */
+.order-bar{position:fixed;left:0;right:0;bottom:0;z-index:95;display:flex;gap:.6rem;justify-content:center;padding:.7rem var(--side) calc(.7rem + env(safe-area-inset-bottom));background:rgba(255,243,223,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 -2px 0 rgba(43,26,14,.08);transform:translateY(120%);transition:transform .4s var(--bounce)}
+.order-bar.show{transform:none}
+.order-bar .btn{flex:1;max-width:240px;justify-content:center}
+@media(min-width:821px){.order-bar{display:none}footer{padding-bottom:clamp(3rem,7vh,4.5rem)}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .pop,.spin-in{opacity:1!important;transform:none!important}.preloader{display:none!important}
+}
+</style>
+</head>
+<body class="loading">
+<a class="skip" href="#main">Saltar al contenido</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-wing" viewBox="0 0 24 24"><path d="M14.8 2.6a6.4 6.4 0 0 1 1.7 12.6c-.8 2.5-3.1 4.3-5.8 4.3-.8 0-1.5-.2-2.2-.5l-3.1 3.1a1.7 1.7 0 0 1-2.4-2.4l3.1-3.1a6 6 0 0 1-.5-2.2 6 6 0 0 1 4.3-5.8 6 6 0 0 1 4.9-6z" fill="#E8943C"/><circle cx="5.3" cy="18.7" r="2.3" fill="#F7E2BD"/><circle cx="3.5" cy="20.5" r="1.5" fill="#F7E2BD"/></symbol>
+<symbol id="i-chili" viewBox="0 0 24 24"><path d="M5.5 9C3 9 1.8 11.4 2.6 13.7c1 2.9 4 5.3 8.4 5.3 5.6 0 9-4.4 9-9 0-1-.8-1.8-1.8-1.8-.8 0-1.5.5-1.7 1.3C13 8 9.8 9 5.5 9z" fill="#E22A1C"/><path d="M17 8.8c-.5-1.6 0-3.4 1.5-4.4.5-.3.6-.9.3-1.4-.3-.5-.9-.6-1.4-.3-2.2 1.5-3 4-2.3 6.5.1.5.7.8 1.2.6.5-.1.8-.6.7-1z" fill="#5FA92E"/></symbol>
+<symbol id="i-lime" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="#7BC53F"/><circle cx="12" cy="12" r="6.6" fill="#D7EDAE"/><g stroke="#7BC53F" stroke-width="1.3"><path d="M12 5.6V12M12 12l5.6-3.2M12 12l5.6 3.2M12 12v6.4M12 12l-5.6 3.2M12 12L6.4 8.8"/></g><circle cx="12" cy="12" r="1.4" fill="#7BC53F"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M13 2c.3 3-1.5 4.2-3 6-1.7 2-3 3.6-3 6.3C7 18 9.2 21 12 21s5-2.6 5-6c0-2.4-1.3-3.8-2.3-5.2-.3 1-.9 1.8-1.7 2.2.6-2.2-.3-4.6-2-6 .9 2.3-1.4 3.5-1.4 5.3 0 .6-.8.7-1 .2C8 13.5 9 11.6 9 10c0-2.8 2.2-4.6 4-8z" fill="#F58320"/><path d="M12 10c.2 1.8-1.6 2.6-1.6 4.6C10.4 16.4 11.1 18 12 18s2-1.4 2-3.2c0-1.2-.8-1.9-1.3-2.6-.2.6-.5 1-1 1.2.4-1.2-.2-2.4 0-3.4z" fill="#FBB30E"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M6.2 8h11.6l-1.1 11.4c-.1 1.1-1 1.9-2 1.9H9.3c-1.1 0-2-.8-2.1-1.9L6.2 8z" fill="#E22A1C"/><rect x="4.8" y="6" width="14.4" height="2.6" rx="1.3" fill="#B81C16"/><path d="M13.5 6V2.4" stroke="#FBB30E" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-chick" viewBox="0 0 24 24"><circle cx="12" cy="13.2" r="7.8" fill="#FBB30E"/><circle cx="12" cy="6.6" r="4.4" fill="#FFD03C"/><path d="M15.4 6.3l3-.9-2.5 2z" fill="#ED6A1E"/><circle cx="10.5" cy="6.1" r="1" fill="#2B1A0E"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.8l-5.8 3.2 1.4-6.4-4.9-4.4 6.5-.7z" fill="#FBB30E"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2c-4.2 0-7.6 3.4-7.6 7.6 0 5.2 6.7 11.2 7 11.5.3.3.8.3 1.1 0 .3-.3 7-6.3 7-11.5C19.6 5.4 16.2 2 12 2z" fill="#E22A1C"/><circle cx="12" cy="9.6" r="2.9" fill="#fff"/></symbol>
+<symbol id="i-scoot" viewBox="0 0 32 24"><circle cx="7.5" cy="17.5" r="4.2" fill="#2B1A0E"/><circle cx="7.5" cy="17.5" r="1.6" fill="#fff"/><circle cx="24" cy="17.5" r="4.2" fill="#2B1A0E"/><circle cx="24" cy="17.5" r="1.6" fill="#fff"/><path d="M7.5 17.5l3.5-8.5H15l3.5 8.5" fill="none" stroke="#E22A1C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 9H7.5" stroke="#2B1A0E" stroke-width="2.2" stroke-linecap="round"/><rect x="17.5" y="5.5" width="7.5" height="6.5" rx="1.3" fill="#06C167"/></symbol>
+<symbol id="i-corn" viewBox="0 0 24 24"><path d="M11.5 3.5c3.4 0 5.8 4 5.8 8.8s-2.4 8.2-5.8 8.2-5.8-3.4-5.8-8.2 2.4-8.8 5.8-8.8z" fill="#FBB30E"/><path d="M6.5 12.5c-2.2-1.2-4.4-.6-5 1.6 2.2.6 4 0 5-1.6z" fill="#5FA92E"/><g fill="#E8943C" opacity=".55"><circle cx="10" cy="8" r=".8"/><circle cx="13" cy="9" r=".8"/><circle cx="10.5" cy="12" r=".8"/><circle cx="13" cy="13" r=".8"/><circle cx="11" cy="16" r=".8"/></g></symbol>
+<symbol id="i-bowl" viewBox="0 0 24 24"><path d="M2.5 10.5h19c0 5.2-4.3 9.3-9.5 9.3S2.5 15.7 2.5 10.5z" fill="#C9461A"/><path d="M2.5 10.5h19" stroke="#8a3010" stroke-width="1.4"/><circle cx="9" cy="7.5" r="1.1" fill="#E8943C"/><circle cx="12" cy="6" r="1.1" fill="#FBB30E"/><circle cx="15" cy="7.5" r="1.1" fill="#E8943C"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2c.9 4.8 2.9 6.8 7.7 7.7-4.8.9-6.8 2.9-7.7 7.7-.9-4.8-2.9-6.8-7.7-7.7C9.1 8.8 11.1 6.8 12 2z" fill="#FBB30E"/><path d="M19.5 14.5c.4 2.1 1.2 2.9 3.3 3.3-2.1.4-2.9 1.2-3.3 3.3-.4-2.1-1.2-2.9-3.3-3.3 2.1-.4 2.9-1.2 3.3-3.3z" fill="#ED6A1E"/></symbol>
+<symbol id="i-peru" viewBox="0 0 24 24"><clipPath id="pclip"><rect x="3" y="6.5" width="18" height="11" rx="2.4"/></clipPath><g clip-path="url(#pclip)"><rect x="3" y="6.5" width="6" height="11" fill="#D8232A"/><rect x="9" y="6.5" width="6" height="11" fill="#fff"/><rect x="15" y="6.5" width="6" height="11" fill="#D8232A"/></g></symbol>
+</defs></svg>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div style="text-align:center">
+    <div class="pre-emoji" id="preEmoji"><svg viewBox="0 0 24 24"><use href="#i-wing"/></svg></div>
+    <div class="pre-name" id="preName">ALA MADRID</div>
+    <div class="pre-bar" id="preBar"></div>
+  </div>
+</div>
+
+<!-- TOPBAR -->
+<header class="topbar" id="topbar">
+  <a class="brand" href="#main" aria-label="Ala Madrid inicio"><span class="ico"><svg class="ic"><use href="#i-wing"/></svg></span>Ala<b>Madrid</b></a>
+  <nav class="nav-actions" aria-label="Principal">
+    <a class="nav-link" href="#sabores">Sabores</a>
+    <a class="nav-link" href="#mas">La carta</a>
+    <a class="nav-link" href="#pedir">Locales</a>
+    <a class="btn red" href="#pedir">Pedir <svg class="ic-scoot"><use href="#i-scoot"/></svg></a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="blobs" id="heroBlobs" aria-hidden="true">
+      <span class="blob" style="width:46vw;height:46vw;left:-10vw;top:-8vw;background:radial-gradient(circle,var(--yellow),transparent 70%)"></span>
+      <span class="blob" style="width:40vw;height:40vw;right:-12vw;top:10vh;background:radial-gradient(circle,var(--orange),transparent 70%)"></span>
+      <span class="blob" style="width:34vw;height:34vw;left:20vw;bottom:-14vw;background:radial-gradient(circle,var(--red),transparent 70%);opacity:.4"></span>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="hero-badge pop"><span class="dot"></span>Alitas peruanas · Madrid &amp; Getafe</span>
+        <h1><span class="l1 pop">¡Hala,</span><span class="l2 pop" style="--delay:.06s">qué <span class="pep">alitas!</span></span></h1>
+        <p class="hero-sub pop" style="--delay:.12s">Las alitas que están <span class="u">petando Madrid</span> <svg class="ic"><use href="#i-flame"/></svg></p>
+        <p class="hero-desc pop" style="--delay:.18s">Broaster, BBQ, acevichada, al rokoto… sabor peruano de verdad, en su punto crujiente. Para comer aquí o que te las llevemos a casa.</p>
+        <div class="hero-ctas pop" style="--delay:.24s">
+          <a class="btn red lg" href="#pedir">Pedir ahora <svg class="ic-scoot"><use href="#i-scoot"/></svg></a>
+          <a class="btn wht lg" href="#sabores">Ver sabores</a>
+        </div>
+        <div class="hero-meta pop" style="--delay:.3s">
+          <div class="m"><span class="e"><svg class="ic"><use href="#i-star"/></svg></span><div class="t"><b>4,7</b><span>599 reseñas</span></div></div>
+          <div class="m"><span class="e"><svg class="ic"><use href="#i-pin"/></svg></span><div class="t"><b>2 locales</b><span>Pueblo Nuevo · Getafe</span></div></div>
+          <div class="m"><span class="e"><svg class="ic"><use href="#i-peru"/></svg></span><div class="t"><b>100% peruano</b><span>sabor de allá</span></div></div>
+        </div>
+      </div>
+      <div class="hero-art spin-in" style="--delay:.15s">
+        <div class="hero-disc" id="heroDisc"></div>
+        <div class="hero-food" id="heroFood"><img src="img/saucy.webp" alt="Alitas peruanas de Ala Madrid en papel de la casa" width="777" height="1036" loading="eager" decoding="async" fetchpriority="high" /></div>
+        <span class="hero-tag t1">¡Crujientes!</span>
+        <span class="hero-tag t2">+7 sabores</span>
+        <span class="float" data-sp="1.3" style="top:-5%;right:8%"><svg><use href="#i-lime"/></svg></span>
+        <span class="float" data-sp="1.5" style="bottom:-3%;left:7%"><svg><use href="#i-flame"/></svg></span>
+        <span class="float" data-sp="1.2" style="top:31%;left:-8%"><svg><use href="#i-chili"/></svg></span>
+        <span class="float" data-sp="1.6" style="top:53%;right:-8%"><svg><use href="#i-chick"/></svg></span>
+        <span class="float" data-sp="1.4" style="top:-7%;left:36%"><svg><use href="#i-cup"/></svg></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDS -->
+  <div class="bands" aria-hidden="true">
+    <div class="band b1"><div class="band-track"><span>ALITAS PERUANAS · BROASTER · BBQ · ACEVICHADA · AL ROKOTO · ANTICUCHERA · CHIFERA ·</span><span>ALITAS PERUANAS · BROASTER · BBQ · ACEVICHADA · AL ROKOTO · ANTICUCHERA · CHIFERA ·</span></div></div>
+    <div class="band b2"><div class="band-track" data-dir="rtl"><span>CHAUFA AMAZÓNICO · CHICHA MORADA · PAPAS · A DOMICILIO · UBER EATS · GLOVO ·</span><span>CHAUFA AMAZÓNICO · CHICHA MORADA · PAPAS · A DOMICILIO · UBER EATS · GLOVO ·</span></div></div>
+  </div>
+
+  <!-- SABORES -->
+  <section class="sec sabores" id="sabores">
+    <div class="blobs" aria-hidden="true"><span class="blob" style="width:30vw;height:30vw;right:-8vw;top:5vh;background:radial-gradient(circle,var(--yellow),transparent 70%);opacity:.3"></span></div>
+    <div class="wrap" style="position:relative;z-index:2">
+      <div class="sab-head">
+        <div>
+          <span class="eyebrow pop"><svg class="ic"><use href="#i-chili"/></svg> Elige tu picante</span>
+          <h2 class="h2 pop">Los <span class="c1">sabores</span></h2>
+          <p class="lead pop">Siete formas de petarte unas alitas. Desde las suavecitas hasta las que te hacen sudar. Desliza →</p>
+        </div>
+        <span class="sab-hint pop">👉 desliza para verlos todos</span>
+      </div>
+    </div>
+    <div class="rail" id="rail">
+      <article class="flav pop" style="--fc:#C9461A">
+        <span class="flav-num">01</span><span class="flav-chip">La estrella</span>
+        <div class="flav-img"><img src="img/broaster.webp" alt="Alitas broaster doradas y crujientes" loading="lazy" decoding="async"/></div>
+        <div class="flav-body"><h3>Broaster</h3><p>Doradas, súper crujientes y jugosas por dentro. La que pide todo el mundo.</p><div class="flav-heat"><span class="heat"><svg class="ic"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg></span></div></div>
+      </article>
+      <article class="flav pop" style="--fc:#B81C16;--delay:.05s">
+        <span class="flav-num">02</span>
+        <div class="flav-img"><img src="img/tallarin.webp" alt="Alitas BBQ glaseadas" loading="lazy" decoding="async"/></div>
+        <div class="flav-body"><h3>BBQ</h3><p>Glaseado dulce y ahumado que se pega a los dedos. Imposible parar.</p><div class="flav-heat"><span class="heat"><svg class="ic"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg></span></div></div>
+      </article>
+      <article class="flav pop" style="--fc:#4f8f24;--delay:.1s">
+        <span class="flav-num">03</span><span class="flav-chip">Muy peruana</span>
+        <div class="flav-img"><img src="img/saucy.webp" alt="Alitas acevichadas estilo ceviche" loading="lazy" decoding="async"/></div>
+        <div class="flav-body"><h3>Acevichada</h3><p>El toque ceviche: ají amarillo, lima y leche de tigre. Fresca y con punch.</p><div class="flav-heat"><span class="heat"><svg class="ic"><use href="#i-chili"/></svg><svg class="ic"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg></span></div></div>
+      </article>
+      <article class="flav pop" style="--fc:#D8232A;--delay:.15s">
+        <span class="flav-num">04</span><span class="flav-chip"><svg class="ic"><use href="#i-flame"/></svg> Picante</span>
+        <div class="flav-img"><img src="img/spread.webp" alt="Alitas al rokoto picantes" loading="lazy" decoding="async"/></div>
+        <div class="flav-body"><h3>Al Rokoto</h3><p>El rocoto peruano sin piedad. Pica, pica de verdad. Solo para valientes.</p><div class="flav-heat"><span class="heat"><svg class="ic"><use href="#i-chili"/></svg><svg class="ic"><use href="#i-chili"/></svg><svg class="ic"><use href="#i-chili"/></svg></span></div></div>
+      </article>
+      <article class="flav pop" style="--fc:#C9461A;--delay:.2s">
+        <span class="flav-num">05</span>
+        <div class="flav-img"><img src="img/serving.webp" alt="Alitas anticucheras" loading="lazy" decoding="async"/></div>
+        <div class="flav-body"><h3>Anticuchera</h3><p>La salsa del anticucho de la calle de Lima. Profunda, especiada, adictiva.</p><div class="flav-heat"><span class="heat"><svg class="ic"><use href="#i-chili"/></svg><svg class="ic"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg></span></div></div>
+      </article>
+      <article class="flav pop" style="--fc:#2C74E0;--delay:.25s">
+        <span class="flav-num">06</span>
+        <div class="flav-img"><img src="img/chaufa.webp" alt="Alitas chiferas estilo chifa" loading="lazy" decoding="async"/></div>
+        <div class="flav-body"><h3>Chifera</h3><p>Estilo chifa: sillao, jengibre y wok. El Perú-China en una alita.</p><div class="flav-heat"><span class="heat"><svg class="ic"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg><svg class="ic dim"><use href="#i-chili"/></svg></span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MÁS QUE ALITAS -->
+  <section class="sec mas" id="mas">
+    <div class="blobs" aria-hidden="true"><span class="blob" style="width:36vw;height:36vw;left:-10vw;bottom:-12vw;background:radial-gradient(circle,var(--red),transparent 70%);opacity:.5"></span></div>
+    <div class="wrap" style="position:relative;z-index:2">
+      <span class="eyebrow pop">No solo alitas</span>
+      <h2 class="h2 pop">También cae un <span class="c2">chaufa</span></h2>
+      <p class="lead pop">Porque una buena alita necesita compañía. Lo de acompañar, también lo hacemos bien.</p>
+      <div class="mas-grid">
+        <div class="mcard pop"><div class="ph"><img src="img/chaufa-hero.webp" alt="Chaufa amazónico con pollo a la huancaína" loading="lazy" decoding="async"/></div><div class="tx"><h3>Chaufa amazónico</h3><p>Arroz frito al wok con su toque selvático. El acompañante perfecto.</p></div></div>
+        <div class="mcard pop" style="--delay:.08s"><div class="ph"><img src="img/papas.webp" alt="Papas fritas de la casa" loading="lazy" decoding="async"/></div><div class="tx"><h3>Papas de la casa</h3><p>Gruesas, doradas y crujientes. Para mojar en todas las salsas.</p></div></div>
+        <div class="mcard pop" style="--delay:.16s"><div class="ph"><img src="img/huancaina.webp" alt="Pollo a la huancaína sobre chaufa" loading="lazy" decoding="async"/></div><div class="tx"><h3>A la huancaína</h3><p>Esa crema de ají amarillo que lo arregla todo. Pura nostalgia limeña.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMBOS -->
+  <section class="sec" id="combos">
+    <div class="blobs" aria-hidden="true"><span class="blob" style="width:30vw;height:30vw;right:-8vw;top:0;background:radial-gradient(circle,var(--orange),transparent 70%);opacity:.25"></span></div>
+    <div class="wrap" style="position:relative;z-index:2">
+      <span class="eyebrow pop"><svg class="ic"><use href="#i-wing"/></svg> Para compartir (o no)</span>
+      <h2 class="h2 pop">Los <span class="c2">combos</span></h2>
+      <p class="lead pop">Vienes solo, en pareja o con la cuadrilla entera: hay combo para cada hambre. Bebida incluida.</p>
+      <div class="combos-grid">
+        <div class="combo pop">
+          <div class="k">Personal</div><div class="price">12,90€</div>
+          <ul><li>8 alitas (1 sabor)</li><li>Porción de patatas</li><li>Bebida a elección</li></ul>
+        </div>
+        <div class="combo feat pop" style="--delay:.08s">
+          <span class="ribbon">El más pedido</span>
+          <div class="k">Para dos</div><div class="price">19,90€</div>
+          <ul><li>15 alitas (3 sabores)</li><li>2 porciones de patatas</li><li>2 bebidas</li></ul>
+        </div>
+        <div class="combo pop" style="--delay:.16s">
+          <div class="k">Tres y cuatro</div><div class="price">28€</div>
+          <ul><li>20 alitas (4 sabores)</li><li>3 porciones de patatas</li><li>3 bebidas</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERU -->
+  <section class="sec peru" id="peru">
+    <div class="kraft" id="kraft" aria-hidden="true"></div>
+    <div class="wrap peru-in">
+      <div>
+        <span class="eyebrow pop"><svg class="ic"><use href="#i-peru"/></svg> Hecho con cariño</span>
+        <h2 class="h2 pop">De Perú,<br>para <span class="c2">Madrid</span></h2>
+        <p class="pop">Cada salsa, cada arroz y cada alita lleva sabor de allá. Lo que en Lima se come en la calle, aquí lo servimos en su punto: con ají, con cariño y con esa alegría peruana que se nota en cada bocado.</p>
+        <div class="peru-pills pop">
+          <span class="peru-pill"><svg class="ic"><use href="#i-corn"/></svg> Chicha morada</span>
+          <span class="peru-pill"><svg class="ic"><use href="#i-bowl"/></svg> Chaufa amazónico</span>
+          <span class="peru-pill"><svg class="ic"><use href="#i-chili"/></svg> Ají de verdad</span>
+          <span class="peru-pill"><svg class="ic"><use href="#i-spark"/></svg> Eventos "Disfruta Perú"</span>
+        </div>
+      </div>
+      <div class="peru-art spin-in"><img src="img/spread2.webp" alt="Mesa con alitas, chaufa y salsas de Ala Madrid" width="900" height="818" loading="lazy" decoding="async"/></div>
+    </div>
+  </section>
+
+  <!-- PEDIR -->
+  <section class="sec pedir" id="pedir">
+    <div class="blobs" aria-hidden="true"><span class="blob" style="width:34vw;height:34vw;left:-10vw;top:0;background:radial-gradient(circle,var(--yellow),transparent 70%);opacity:.35"></span></div>
+    <div class="wrap" style="position:relative;z-index:2">
+      <span class="eyebrow pop"><svg class="ic-scoot"><use href="#i-scoot"/></svg> Te las llevamos</span>
+      <h2 class="h2 pop">Pídelas <span class="c1">ya</span></h2>
+      <p class="lead pop">A domicilio en un momento, o pásate a recogerlas calentitas. Tú eliges.</p>
+      <div class="deliv pop">
+        <a class="uber" href="https://www.ubereats.com/es/search?q=Ala%20Madrid" target="_blank" rel="noopener"><svg class="ic-scoot" style="width:1.7em;height:1.2em"><use href="#i-scoot"/></svg>Uber Eats</a>
+        <a class="glovo" href="https://glovoapp.com/es/es/madrid/" target="_blank" rel="noopener"><svg class="ic-scoot" style="width:1.7em;height:1.2em"><use href="#i-scoot"/></svg>Glovo</a>
+        <a class="btn grn lg" href="https://wa.me/34613619996?text=%C2%A1Hola%21%20Quiero%20pedir%20alitas%20%F0%9F%8D%97" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="locs">
+        <div class="loc pop">
+          <div class="lh"><span class="e"><svg class="ic"><use href="#i-pin"/></svg></span><div><b>Madrid · Pueblo Nuevo</b><span>Ciudad Lineal</span></div></div>
+          <div class="lb">
+            <div class="addr">C/ Federico Gutiérrez, 29</div>
+            <div class="meta">28027 Madrid · abre a las 13:30</div>
+            <div class="lcta">
+              <a class="btn org" href="https://www.google.com/maps/dir/?api=1&destination=Calle+Federico+Gutierrez+29,+28027+Madrid" target="_blank" rel="noopener">Cómo llegar</a>
+              <a class="btn wht" href="tel:+34613619996">Llamar</a>
+            </div>
+          </div>
+        </div>
+        <div class="loc pop" style="--delay:.08s">
+          <div class="lh"><span class="e"><svg class="ic"><use href="#i-pin"/></svg></span><div><b>Getafe</b><span>Centro</span></div></div>
+          <div class="lb">
+            <div class="addr">C/ Pizarro, 9</div>
+            <div class="meta">28901 Getafe · abre a las 13:30</div>
+            <div class="lcta">
+              <a class="btn org" href="https://www.google.com/maps/dir/?api=1&destination=Calle+Pizarro+9,+28901+Getafe" target="_blank" rel="noopener">Cómo llegar</a>
+              <a class="btn wht" href="tel:+34613619996">Llamar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="blobs" aria-hidden="true"><span class="blob" style="width:30vw;height:30vw;right:-8vw;top:-8vw;background:radial-gradient(circle,var(--orange),transparent 70%);opacity:.3"></span></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="fb"><span class="ico"><svg class="ic"><use href="#i-wing"/></svg></span>Ala Madrid</div>
+        <p>Las alitas peruanas que están petando Madrid. Broaster, BBQ, acevichada y mucho más. ¡Hala, qué alitas!</p>
+      </div>
+      <div class="foot-col"><h4>Carta</h4><a href="#sabores">Sabores</a><a href="#mas">Chaufa &amp; papas</a><a href="#combos">Combos</a></div>
+      <div class="foot-col"><h4>Locales</h4><p>C/ Federico Gutiérrez 29, Madrid</p><p>C/ Pizarro 9, Getafe</p></div>
+      <div class="foot-col"><h4>Pedir</h4><a href="https://wa.me/34613619996" target="_blank" rel="noopener">WhatsApp · 613 61 99 96</a><a href="https://www.ubereats.com/es/search?q=Ala%20Madrid" target="_blank" rel="noopener">Uber Eats</a><a href="https://www.instagram.com/alamadrid.es/" target="_blank" rel="noopener">@alamadrid.es</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Ala Madrid · Alitas peruanas. Todos los derechos reservados.</span><span>Demo de rediseño · no es la web oficial</span></div>
+    <svg class="foot-wm" viewBox="0 0 1000 132" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><text x="500" y="100" text-anchor="middle" textLength="972" lengthAdjust="spacingAndGlyphs">¡HALA, QUÉ ALITAS!</text></svg>
+  </div>
+</footer>
+
+<!-- STICKY ORDER -->
+<div class="order-bar" id="orderBar" aria-hidden="true">
+  <a class="btn red" href="#pedir">Pedir <svg class="ic-scoot"><use href="#i-scoot"/></svg></a>
+  <a class="btn grn" href="https://wa.me/34613619996?text=%C2%A1Hola%21%20Quiero%20pedir%20alitas" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var HAS=!!(window.gsap&&window.ScrollTrigger);
+  if(HAS){ gsap.registerPlugin(ScrollTrigger,ScrollToPlugin); ScrollTrigger.config({ignoreMobileResize:true}); }
+
+  var topbar=document.getElementById('topbar');
+  window.addEventListener('scroll',function(){ topbar.classList.toggle('scrolled',window.scrollY>30); },{passive:true});
+  var prog=document.getElementById('progress');
+  window.addEventListener('scroll',function(){ var h=document.documentElement,sc=h.scrollHeight-h.clientHeight; prog.style.transform='scaleX('+(sc>0?window.scrollY/sc:0)+')'; },{passive:true});
+
+  var pre=document.getElementById('preloader');
+  function finishLoad(){ document.body.classList.remove('loading'); }
+  setTimeout(function(){ if(pre)pre.style.display='none'; finishLoad();
+    document.querySelectorAll('.hero .pop, .hero .spin-in').forEach(function(e){e.classList.add('in');});
+  },2600);
+
+  if(!HAS||reduce){
+    if(pre)pre.style.display='none'; finishLoad();
+    document.querySelectorAll('.pop,.spin-in').forEach(function(e){e.classList.add('in');});
+    revealOrderBar();
+    return;
+  }
+
+  /* preloader */
+  var ptl=gsap.timeline({onComplete:finishLoad});
+  ptl.to('#preEmoji',{scale:1,duration:.6,ease:'back.out(2)'})
+     .to('#preEmoji',{rotation:18,duration:.3,yoyo:true,repeat:3,ease:'sine.inOut'},'-=.1')
+     .to('#preName',{opacity:1,y:0,duration:.4,ease:'power2.out'},'-=.6')
+     .to('#preBar',{width:'160px',duration:.6,ease:'power2.inOut'},'-=.3')
+     .to(pre,{yPercent:-100,duration:.7,ease:'power4.inOut'},'+=.15')
+     .add(startHero,'-=.35')
+     .set(pre,{display:'none'});
+
+  function startHero(){
+    document.querySelectorAll('.hero .pop, .hero .spin-in').forEach(function(e){e.classList.add('in');});
+    floatEmojis(); floatBlobs(); spinDisc(); wobbleFood();
+  }
+
+  /* pop reveals + catch-up */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);
+    var el=e.target; setTimeout(function(){el.style.opacity='1';el.style.transform='none';},1200);
+  }});},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('.pop,.spin-in').forEach(function(el){ if(el.closest('.hero'))return; io.observe(el); });
+  (function(){ var pend=Array.prototype.slice.call(document.querySelectorAll('.pop,.spin-in')).filter(function(el){return !el.closest('.hero');}); var tick=false;
+    function run(){tick=false;var vh=window.innerHeight;for(var i=pend.length-1;i>=0;i--){var el=pend[i];if(el.getBoundingClientRect().top<vh*.95){el.classList.add('in');io.unobserve(el);pend.splice(i,1);}}if(!pend.length)window.removeEventListener('scroll',os);}
+    function os(){if(!tick){tick=true;requestAnimationFrame(run);}} window.addEventListener('scroll',os,{passive:true});
+  })();
+
+  /* floating emojis (parallax + bob) */
+  function floatEmojis(){
+    document.querySelectorAll('.float').forEach(function(s,i){
+      gsap.to(s,{y:(i%2?14:-14),rotation:(i%2?9:-9),duration:2.2+i*.35,ease:'sine.inOut',yoyo:true,repeat:-1});
+    });
+  }
+  function floatBlobs(){
+    document.querySelectorAll('.blob').forEach(function(b,i){
+      gsap.to(b,{x:(i%2?40:-40),y:(i%2?-30:30),duration:6+i*1.5,ease:'sine.inOut',yoyo:true,repeat:-1});
+    });
+  }
+  function spinDisc(){ var d=document.getElementById('heroDisc'); if(d)gsap.to(d,{rotation:360,duration:26,ease:'none',repeat:-1}); }
+  function wobbleFood(){ var f=document.getElementById('heroFood'); if(f)gsap.to(f,{rotation:3,y:-8,duration:2.4,ease:'sine.inOut',yoyo:true,repeat:-1}); }
+
+  /* bands marquee */
+  document.querySelectorAll('.band-track').forEach(function(track){
+    var unit=track.scrollWidth/2, dir=track.dataset.dir==='rtl';
+    gsap.set(track,{x:dir?-unit:0});
+    gsap.to(track,{x:dir?0:-unit,duration:Math.max(14,unit/70),ease:'none',repeat:-1});
+  });
+
+  /* sabores horizontal scrub on desktop (rail also free-scroll/drag on touch) */
+  var rail=document.getElementById('rail');
+  if(rail && window.matchMedia('(min-width:821px)').matches){
+    var extra=rail.scrollWidth-rail.clientWidth;
+    if(extra>40){
+      gsap.to(rail,{scrollLeft:extra,ease:'none',scrollTrigger:{trigger:'.sabores',start:'top 60%',end:'+='+extra,scrub:.4}});
+    }
+  }
+
+  /* kraft pattern drift */
+  var kraft=document.getElementById('kraft');
+  if(kraft){ kraft.style.backgroundImage="url('img/kraft.webp')"; gsap.to(kraft,{backgroundPositionX:'200px',backgroundPositionY:'120px',duration:20,ease:'none',repeat:-1}); }
+
+  /* combos / cards pop with slight rotation via ScrollTrigger batch already handled by .pop */
+  /* sticky order bar */
+  revealOrderBar();
+  function revealOrderBar(){
+    var bar=document.getElementById('orderBar'); if(!bar)return;
+    if(window.matchMedia('(min-width:821px)').matches) return;
+    ScrollTrigger?ScrollTrigger.create({start:'top -300',onUpdate:function(self){ bar.classList.toggle('show', self.scroll()>300 && self.scroll() < (document.documentElement.scrollHeight-window.innerHeight-300)); }}) : bar.classList.add('show');
+    window.addEventListener('scroll',function(){ var y=window.scrollY,max=document.documentElement.scrollHeight-window.innerHeight; bar.classList.toggle('show', y>320 && y<max-260); },{passive:true});
+  }
+
+  /* smooth anchors */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){ var id=a.getAttribute('href'); if(id==='#'||id.length<2)return; var t=document.querySelector(id); if(!t)return; e.preventDefault(); gsap.to(window,{duration:.9,ease:'power3.inOut',scrollTo:{y:t,offsetY:54}}); });
+  });
+
+  ScrollTrigger.refresh();
+})();
+</script>
+</body>
+</html>
