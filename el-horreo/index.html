@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Hórreo · Cocina gallega y más · Viladecans</title>
+<meta name="description" content="El Hórreo, bar restaurante de cocina gallega en Viladecans. Pulpo gallego, chuletón a la brasa, mariscos y platos de autor. La despensa del Atlántico en el Baix Llobregat.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="El Hórreo · Cocina gallega y más">
+<meta property="og:description" content="La despensa del Atlántico, en Viladecans. Pulpo gallego, brasa y producto del mar.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abismo:#0b1317; --pizarra:#101e26; --marea:#15323e; --marea2:#0f2932;
+  --niebla:#e6dcc9; --hueso:#f4efe3; --tenue:#a9b6b9;
+  --oro:#cf9b46; --oro-cl:#e6bd6c; --cobalto:#46a0cf; --cobalto-h:#1f5570; --pimenton:#c1492b;
+  --linea:rgba(230,220,201,.15); --linea-f:rgba(230,220,201,.28);
+  --display:'Ibarra Real Nova',Georgia,'Times New Roman',serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,sans-serif;
+  --side:clamp(1.25rem,3vw + .5rem,3rem);
+  --maxw:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);background:var(--abismo);color:var(--niebla);
+  line-height:1.65;font-weight:400;overflow-x:clip;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--oro);color:var(--abismo)}
+:focus-visible{outline:2px solid var(--oro);outline-offset:2px;border-radius:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--side)}
+
+/* ---------- tipografía base ---------- */
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spacing:-.01em}
+.eyebrow{
+  font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--oro);display:inline-flex;align-items:center;gap:.8em;
+}
+.eyebrow::before{content:"";width:1.9rem;height:1px;background:var(--oro);opacity:.7;display:inline-block;transform-origin:left}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:"";width:1.9rem;height:1px;background:var(--oro);opacity:.7;display:inline-block}
+
+/* ---------- iconos ---------- */
+.ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em;fill:none;stroke:currentColor;stroke-width:1.7;flex:none}
+
+/* ---------- preloader ---------- */
+#pre{position:fixed;inset:0;z-index:200;background:var(--abismo);display:grid;place-items:center;gap:0;transition:opacity .7s ease}
+#pre .pl{display:flex;flex-direction:column;align-items:center;gap:1.1rem}
+#pre svg{width:118px;height:auto;color:var(--oro);overflow:visible}
+#pre .pl-name{font-family:var(--display);font-size:1.5rem;letter-spacing:.04em;color:var(--hueso);opacity:0}
+#pre .pl-sub{font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:var(--tenue);opacity:0}
+#pre.done{opacity:0;pointer-events:none}
+.pdraw{stroke:var(--oro);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- topbar ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:90;transition:background .4s ease,box-shadow .4s ease,padding .4s ease;padding:1.1rem 0}
+header.solid{background:rgba(11,19,23,.86);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--linea);padding:.7rem 0}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.66rem}
+.brand svg{width:34px;height:auto;color:var(--oro)}
+.brand b{font-family:var(--display);font-weight:600;font-size:1.16rem;letter-spacing:.02em;color:var(--hueso);line-height:1}
+.brand small{display:block;font-family:var(--sans);font-size:.54rem;letter-spacing:.36em;text-transform:uppercase;color:var(--tenue);margin-top:.18rem}
+nav.links{display:flex;gap:2rem;align-items:center}
+nav.links a{font-size:.82rem;letter-spacing:.04em;color:var(--niebla);opacity:.82;transition:opacity .25s,color .25s;position:relative}
+nav.links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:1px;background:var(--oro);transform:scaleX(0);transform-origin:right;transition:transform .3s ease}
+nav.links a:hover{opacity:1}nav.links a:hover::after{transform:scaleX(1);transform-origin:left}
+.btn{
+  font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.06em;
+  padding:.72em 1.4em;border-radius:999px;cursor:pointer;border:1px solid transparent;
+  display:inline-flex;align-items:center;gap:.5em;transition:transform .25s,background .25s,color .25s,border-color .25s;
+  white-space:nowrap;
+}
+.btn-gold{background:var(--oro);color:#26190a;font-weight:700}
+.btn-gold:hover{background:var(--oro-cl);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--hueso);border-color:var(--linea-f)}
+.btn-ghost:hover{border-color:var(--oro);color:var(--oro);transform:translateY(-2px)}
+.btn-big{padding:.95em 1.8em;font-size:.9rem}
+nav.links .btn{padding:.6em 1.2em}
+.menu-toggle{display:none;background:none;border:0;color:var(--hueso);cursor:pointer;padding:.3rem}
+.menu-toggle svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:8.5rem 0 4rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:
+  radial-gradient(120% 90% at 78% 12%,rgba(70,160,207,.13),transparent 55%),
+  radial-gradient(90% 70% at 6% 92%,rgba(207,155,70,.10),transparent 60%),
+  linear-gradient(180deg,#0c161b 0%,#0a1216 60%,#0b1317 100%)}
+.hero-watermark{position:absolute;right:-6%;top:50%;transform:translateY(-50%);width:min(58vw,760px);color:rgba(230,220,201,.035);z-index:0;pointer-events:none}
+.grain{position:absolute;inset:0;z-index:1;opacity:.4;pointer-events:none;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+.hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center;width:100%}
+.hero-copy{max-width:36rem}
+.hero h1{font-size:clamp(2.9rem,7.4vw,5.6rem);font-weight:600;color:var(--hueso);margin:1.5rem 0 0;letter-spacing:-.022em}
+.hero h1 .it{font-style:italic;font-weight:400;color:var(--oro-cl)}
+.hero h1 .word{display:inline-block;will-change:transform,filter}
+.hero-lead{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--tenue);margin-top:1.6rem;max-width:30rem;line-height:1.7}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--linea);font-size:.82rem;color:var(--tenue)}
+.hero-meta span{display:inline-flex;align-items:center;gap:.5em}
+.hero-meta .ic{color:var(--oro);font-size:1.05em}
+.hero-meta b{color:var(--niebla);font-weight:600}
+/* hero media */
+.hero-media{position:relative;justify-self:center}
+.hero-frame{position:relative;width:min(40vw,420px);aspect-ratio:3/4;border-radius:230px 230px 18px 18px;overflow:hidden;
+  border:1px solid var(--linea-f);box-shadow:0 40px 90px -30px rgba(0,0,0,.8);will-change:transform}
+.hero-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,14,17,.55));z-index:2}
+.hero-frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);will-change:transform}
+.hero-tag{position:absolute;z-index:5;background:rgba(11,19,23,.78);backdrop-filter:blur(6px);border:1px solid var(--linea-f);
+  border-radius:999px;padding:.5rem .95rem;display:inline-flex;align-items:center;gap:.5em;font-size:.74rem;letter-spacing:.04em;color:var(--hueso)}
+.hero-tag .ic{color:var(--oro);font-size:1.1em}
+.hero-tag.t1{left:-1.6rem;top:14%}
+.hero-tag.t2{right:-1.2rem;bottom:16%}
+.hero-tag .price{color:var(--oro);font-weight:700}
+.scrollcue{position:absolute;left:50%;bottom:1.5rem;transform:translateX(-50%);z-index:5;font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--tenue);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0}
+.scrollcue i{width:1px;height:34px;background:linear-gradient(var(--oro),transparent);display:block}
+
+/* ---------- secciones genéricas ---------- */
+section{position:relative}
+.sec-pad{padding:clamp(4.5rem,9vw,8rem) 0}
+.sec-head{max-width:42rem}
+.sec-head.center{margin-inline:auto;text-align:center}
+.sec-title{font-size:clamp(2rem,4.4vw,3.3rem);color:var(--hueso);margin-top:1.1rem;font-weight:600}
+.sec-title .it{font-style:italic;font-weight:400;color:var(--oro-cl)}
+.lead{font-size:1.05rem;color:var(--tenue);margin-top:1.1rem;line-height:1.75}
+
+/* manifiesto */
+.manif{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.manif-grid{display:grid;grid-template-columns:1fr 1px 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.manif .rule-v{background:var(--linea);align-self:stretch;width:1px}
+.manif-lead{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.32;color:var(--niebla);font-weight:400}
+.manif-lead em{font-style:italic;color:var(--oro-cl)}
+.prov{display:flex;flex-direction:column;gap:1.05rem;padding-top:.3rem}
+.prov-item{display:flex;gap:1rem;align-items:flex-start}
+.prov-item .ic{color:var(--oro);font-size:1.5rem;margin-top:.15rem}
+.prov-item b{font-family:var(--display);font-size:1.12rem;color:var(--hueso);font-weight:600;display:block}
+.prov-item span{font-size:.92rem;color:var(--tenue)}
+
+/* espina editorial */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center;padding:clamp(2.5rem,5vw,4.5rem) 0}
+.feat + .feat{border-top:1px solid var(--linea)}
+.feat:nth-child(even) .feat-media{order:2}
+.feat-media{position:relative;overflow:hidden;border-radius:6px}
+.feat-media .clip{overflow:hidden;border-radius:6px}
+.feat-media img{width:100%;height:100%;object-fit:cover;border-radius:6px;will-change:transform}
+.feat-media.tall img{aspect-ratio:4/5}
+.feat-media.wide img{aspect-ratio:5/4}
+.feat-media .num{position:absolute;top:1rem;left:1rem;z-index:3;font-family:var(--display);font-size:.95rem;color:var(--hueso);
+  background:rgba(11,19,23,.6);backdrop-filter:blur(4px);border:1px solid var(--linea-f);border-radius:999px;width:2.6rem;height:2.6rem;display:grid;place-items:center}
+.feat-body{max-width:30rem}
+.feat-kicker{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--cobalto);display:inline-flex;align-items:center;gap:.6em}
+.feat-name{font-size:clamp(1.7rem,3.2vw,2.5rem);color:var(--hueso);margin:.7rem 0 0;font-weight:600}
+.feat-desc{color:var(--tenue);margin-top:.9rem;font-size:1.01rem;line-height:1.7}
+.feat-foot{display:flex;align-items:baseline;gap:1rem;margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid var(--linea)}
+.feat-price{font-family:var(--display);font-size:1.5rem;color:var(--oro);font-weight:600}
+.feat-price small{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tenue);font-family:var(--sans);margin-left:.3rem}
+.feat-note{font-size:.82rem;color:var(--tenue);font-style:italic}
+
+/* banda cinemática */
+.band{position:relative;height:clamp(300px,52vw,520px);overflow:hidden;display:grid;place-items:center;border-block:1px solid var(--linea)}
+.band-media{position:absolute;inset:-12% 0;z-index:0;will-change:transform}
+.band-media img{width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,14,17,.86),rgba(8,14,17,.5) 45%,rgba(8,14,17,.78))}
+.band-copy{position:relative;z-index:2;text-align:center;max-width:40rem;padding-inline:var(--side)}
+.band-copy h2{font-size:clamp(1.9rem,4.6vw,3.4rem);color:var(--hueso);font-weight:600;line-height:1.1}
+.band-copy h2 em{font-style:italic;color:var(--oro-cl)}
+.band-copy p{margin-top:1rem;color:var(--niebla);opacity:.85;font-size:1.02rem}
+
+/* carta y más */
+.carta{background:linear-gradient(180deg,#f4efe3,#e9dcc6);color:#1a2c33}
+.carta-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);margin-top:3rem}
+.carta-col{display:flex;flex-direction:column;gap:2.5rem}
+.cat-title{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-size:1.3rem;color:var(--hueso);font-weight:600;
+  padding-bottom:.8rem;border-bottom:1px solid var(--linea-f);margin-bottom:1.1rem}
+.cat-title .ic{color:var(--oro);font-size:1.35rem}
+.mi{display:flex;align-items:baseline;gap:.6rem;padding:.42rem 0}
+.mi .nm{color:var(--niebla);font-size:1rem}
+.mi .nm em{color:var(--tenue);font-style:normal;font-size:.84rem;display:block;margin-top:.05rem}
+.mi .dots{flex:1;border-bottom:1px dotted var(--linea-f);transform:translateY(-.25rem);min-width:1.5rem}
+.mi .pr{font-family:var(--display);color:var(--oro);font-size:1.02rem;font-weight:600;white-space:nowrap}
+.carta-note{margin-top:2.6rem;text-align:center;color:var(--tenue);font-size:.95rem;font-style:italic;max-width:38rem;margin-inline:auto}
+.grupos-strip{margin-top:2.4rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.2rem;
+  background:rgba(70,160,207,.08);border:1px solid rgba(70,160,207,.25);border-radius:14px;padding:1.4rem 1.8rem;max-width:46rem;margin-inline:auto}
+.grupos-strip .ic{color:var(--cobalto);font-size:1.8rem}
+.grupos-strip b{font-family:var(--display);color:var(--hueso);font-size:1.16rem;font-weight:600}
+.grupos-strip p{font-size:.86rem;color:var(--tenue);margin-top:.1rem}
+.grupos-strip .gtext{flex:1;min-width:14rem}
+
+/* mini galería */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.8rem,1.6vw,1.3rem);margin-top:2.6rem}
+.trio figure{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:4/5}
+.trio img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.trio figure:hover img{transform:scale(1.05)}
+.trio figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:1.4rem 1rem .9rem;font-size:.82rem;letter-spacing:.02em;
+  color:var(--hueso);background:linear-gradient(transparent,rgba(8,14,17,.82))}
+
+/* visita */
+.visita{border-top:1px solid var(--linea)}
+.visita-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,4vw,3.5rem);align-items:stretch;margin-top:2.6rem}
+.map-card{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--linea-f);min-height:360px}
+.map-card iframe{width:100%;height:100%;min-height:360px;border:0;filter:grayscale(.3) contrast(1.05) brightness(.92)}
+.map-card .como{position:absolute;left:1rem;bottom:1rem;z-index:3}
+.info-block{display:flex;flex-direction:column;gap:1.7rem}
+.info-row{display:flex;gap:1rem;align-items:flex-start}
+.info-row .ic{color:var(--oro);font-size:1.45rem;margin-top:.1rem;flex:none}
+.info-row h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--tenue);font-weight:600}
+.info-row p{color:var(--niebla);margin-top:.2rem;font-size:1.02rem}
+.info-row a.line{color:var(--niebla);border-bottom:1px solid var(--linea-f);transition:color .2s,border-color .2s}
+.info-row a.line:hover{color:var(--oro);border-color:var(--oro)}
+.hours{display:flex;flex-direction:column;gap:.3rem;margin-top:.3rem}
+.hday{display:flex;justify-content:space-between;gap:1rem;font-size:.95rem;color:var(--niebla);padding:.18rem 0;max-width:18rem}
+.hday span:last-child{color:var(--tenue)}
+.hday.closed span:last-child{color:var(--pimenton)}
+.hday.today{color:var(--oro)}
+.hday.today b{color:var(--oro)}
+.hday .pill-now{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;background:var(--oro);color:#241803;border-radius:99px;padding:.1rem .5rem;margin-left:.5rem}
+
+/* footer */
+footer{background:#080f12;border-top:1px solid var(--linea);padding:clamp(3.5rem,7vw,6rem) 0 2.5rem;position:relative;overflow:hidden;text-align:center}
+.foot-mark{width:min(86vw,760px);margin:0 auto;color:var(--niebla);opacity:.92}
+.foot-mark svg{width:100%;height:auto;display:block}
+.foot-horreo{width:60px;color:var(--oro);margin:0 auto 1.5rem}
+.foot-sub{font-size:.78rem;letter-spacing:.36em;text-transform:uppercase;color:var(--tenue);margin-top:.4rem}
+.foot-ctas{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin:2.4rem 0 2rem}
+.foot-meta{font-size:.84rem;color:var(--tenue);line-height:2;border-top:1px solid var(--linea);padding-top:2rem;margin-top:1rem}
+.foot-meta a{color:var(--niebla)}
+.foot-credit{font-size:.74rem;color:#4a5a60;margin-top:1.4rem;letter-spacing:.02em}
+
+/* dialog reserva */
+dialog{border:0;padding:0;background:transparent;color:var(--niebla);position:fixed;inset:0;margin:auto;width:fit-content;height:fit-content;max-width:92vw}
+dialog::backdrop{background:rgba(6,11,14,.74);backdrop-filter:blur(5px)}
+.modal{background:var(--pizarra);border:1px solid var(--linea-f);border-radius:16px;padding:2.4rem 2.2rem;width:30rem;max-width:92vw;text-align:center;position:relative}
+.modal .mh{width:48px;color:var(--oro);margin:0 auto 1rem}
+.modal h3{font-size:1.7rem;color:var(--hueso);font-weight:600}
+.modal p{color:var(--tenue);font-size:.95rem;margin-top:.6rem;line-height:1.6}
+.modal .mbtns{display:flex;flex-direction:column;gap:.7rem;margin-top:1.7rem}
+.modal .btn{justify-content:center;width:100%}
+.modal .x{position:absolute;top:.8rem;right:.9rem;background:none;border:0;color:var(--tenue);cursor:pointer;font-size:1.5rem;line-height:1;padding:.2rem .4rem}
+.modal small{display:block;margin-top:1.2rem;font-size:.74rem;color:#5a6a70}
+
+/* reveal base */
+.r-up{opacity:0;transform:translateY(26px)}
+.r-fade{opacity:0}
+.is-clip{clip-path:inset(0 100% 0 0)}
+
+/* ====== fondo animado: orbs ====== */
+.orbs{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(72px);opacity:.42;will-change:transform}
+.orb.o1{width:46vw;height:46vw;max-width:600px;max-height:600px;background:radial-gradient(circle,rgba(70,160,207,.55),transparent 70%);top:-12%;left:-10%}
+.orb.o2{width:40vw;height:40vw;max-width:520px;max-height:520px;background:radial-gradient(circle,rgba(207,155,70,.5),transparent 70%);bottom:-16%;right:-8%}
+.orb.o3{width:30vw;height:30vw;max-width:400px;max-height:400px;background:radial-gradient(circle,rgba(193,74,46,.4),transparent 70%);top:40%;left:54%}
+.orbs.soft .orb{opacity:.22}
+.particles{position:absolute;inset:0;z-index:2;pointer-events:none}
+footer .wrap{position:relative;z-index:1}
+
+/* ====== marquee (cintas de contraste) ====== */
+.marquee{overflow:hidden;white-space:nowrap;position:relative;display:flex}
+.marquee-gold{background:linear-gradient(100deg,var(--oro),var(--oro-cl) 58%,var(--oro));color:#2a1c08;border-block:1px solid rgba(0,0,0,.14)}
+.marquee-cobalt{background:linear-gradient(100deg,var(--cobalto-h),var(--cobalto) 55%,var(--cobalto-h));color:#04121b;border-block:1px solid rgba(0,0,0,.2)}
+.mq-track{display:inline-flex;align-items:center;padding:.95rem 0;will-change:transform;flex:none}
+.mq-set{display:inline-flex;align-items:center;flex:none}
+.mq-item{display:inline-flex;align-items:center;gap:.85rem;padding:0 1.35rem;font-family:var(--display);font-size:clamp(1.05rem,1.9vw,1.5rem);font-weight:600;font-style:italic;letter-spacing:.01em}
+.mq-item .ic{font-size:1.05em;opacity:.85;font-style:normal}
+.mq-sep{width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.42;flex:none}
+
+/* feature: color pops (pimentón + alterna cobalto/oro) */
+.feat:nth-child(even) .feat-kicker{color:var(--oro-cl)}
+.feat-media .num{color:#fff;background:linear-gradient(140deg,var(--pimenton),#9c3a22);border-color:transparent;box-shadow:0 8px 20px -8px rgba(193,74,46,.65)}
+
+/* botón oro: brillo al hover */
+.btn-gold{position:relative;overflow:hidden}
+.btn-gold::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);pointer-events:none}
+.btn-gold:hover::after{animation:shine .85s ease}
+@keyframes shine{from{left:-130%}to{left:170%}}
+
+/* ====== carta CREMA (golpe de contraste claro) ====== */
+.carta .eyebrow{color:#a85f22}
+.carta .eyebrow::before,.carta .eyebrow.center::after{background:#a85f22}
+.carta .sec-title{color:#16252c}
+.carta .sec-title .it{color:#a85f22}
+.carta .lead{color:#516166}
+.carta .cat-title{color:#16252c;border-color:rgba(20,40,48,.2)}
+.carta .cat-title .ic{color:#a85f22}
+.carta .mi .nm{color:#283a41}
+.carta .mi .nm em{color:#6b7b80}
+.carta .mi .dots{border-color:rgba(20,40,48,.32)}
+.carta .mi .pr{color:#a4521f}
+.carta .carta-note{color:#5c6c71}
+.carta .grupos-strip{background:linear-gradient(115deg,var(--cobalto-h),#0f2932);border-color:transparent;box-shadow:0 24px 50px -24px rgba(0,0,0,.5)}
+.carta .grupos-strip .ic{color:var(--oro-cl)}
+.carta .grupos-strip b{color:var(--hueso)}
+.carta .grupos-strip p{color:#c4d6de}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-media{order:-1;justify-self:start}
+  .hero-frame{width:min(72vw,300px)}
+  .hero-tag.t1{left:auto;right:-.4rem;top:8%}
+  .hero-watermark{width:90vw;opacity:.7}
+  .manif-grid{grid-template-columns:1fr;gap:2.2rem}
+  .manif .rule-v{display:none}
+  .feat{grid-template-columns:1fr;gap:1.6rem;padding:2.2rem 0}
+  .feat:nth-child(even) .feat-media{order:0}
+  .carta-grid{grid-template-columns:1fr;gap:2.6rem}
+  .visita-grid{grid-template-columns:1fr}
+  nav.links{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:var(--pizarra);flex-direction:column;
+    justify-content:center;gap:1.8rem;transform:translateX(100%);transition:transform .4s cubic-bezier(.5,0,.2,1);
+    box-shadow:-20px 0 60px rgba(0,0,0,.5);z-index:95;padding:2rem}
+  nav.links.open{transform:translateX(0)}
+  nav.links a{font-size:1.1rem}
+  .menu-toggle{display:block;z-index:96}
+}
+@media(max-width:560px){
+  .hero{padding-top:7rem}
+  .hero h1{font-size:clamp(2.6rem,11vw,3.6rem)}
+  .trio{grid-template-columns:1fr 1fr}
+  .trio figure:last-child{grid-column:1/-1;aspect-ratio:16/9}
+  .hero-meta{gap:.8rem 1.2rem}
+  .scrollcue{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto !important}
+  .r-up,.r-fade{opacity:1 !important;transform:none !important}
+  .is-clip{clip-path:none !important}
+  #pre{display:none}
+  .scrollcue{opacity:1}
+  .hero h1 .word{opacity:1 !important;transform:none !important;filter:none !important}
+}
+/* fallback si GSAP no carga: revelar todo */
+html.no-anim .r-up,html.no-anim .r-fade{opacity:1 !important;transform:none !important}
+html.no-anim .is-clip{clip-path:none !important}
+html.no-anim .hero h1 .word{opacity:1 !important;transform:none !important;filter:none !important}
+html.no-anim .scrollcue{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- ===== SPRITE ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-fish" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z"/><path d="M18 12v.5"/><path d="M16 17.93a9.77 9.77 0 0 1 0-11.86"/><path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33"/><path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4"/><path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98"/></symbol>
+<symbol id="i-shell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44"/></symbol>
+<symbol id="i-wheat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></symbol>
+<symbol id="i-wine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+<symbol id="i-utensils-crossed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></symbol>
+<symbol id="i-soup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M7 21h10"/><path d="M19.5 12 22 6"/><path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62"/><path d="M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62"/><path d="M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62"/></symbol>
+<symbol id="i-beef" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12.5" cy="8.5" r="2.5"/><path d="M12.5 2a6.5 6.5 0 0 0-6.22 4.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.3A6.5 6.5 0 0 0 12.5 2Z"/><path d="m18.5 6 2.19 4.5a6.48 6.48 0 0 1 .31 2 6.49 6.49 0 0 1-2.6 5.2C15.4 20.2 11 22 7 22a3 3 0 0 1-2.68-1.66L2.4 16.5"/></symbol>
+<symbol id="i-salad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"/><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"/><path d="m13 12 4-4"/><path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+<symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-chef-hat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></symbol>
+<symbol id="i-waves" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+<symbol id="i-anchor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></symbol>
+<symbol id="i-croissant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m4.6 13.11 5.79-3.21c1.89-1.05 4.79 1.78 3.71 3.71l-3.22 5.81C8.8 23.16.79 15.23 4.6 13.11Z"/><path d="m10.5 9.5-1-2.29C9.2 6.48 8.8 6 8 6H4.5C2.79 6 2 6.5 2 8.5a7.71 7.71 0 0 0 2 4.83"/><path d="M8 6c0-1.55.24-4-2-4-2 0-2.5 2.17-2.5 4"/><path d="m14.5 13.5 2.29 1c.73.3 1.21.7 1.21 1.5v3.5c0 1.71-.5 2.5-2.5 2.5a7.71 7.71 0 0 1-4.83-2"/><path d="M18 16c1.55 0 4-.24 4 2 0 2-2.17 2.5-4 2.5"/></symbol>
+<symbol id="horreo" viewBox="0 0 140 116" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 48 L34 16 L106 16 L134 48 M16 48 H124 V84 H16 Z M16 66 H124 M34 48 V84 M52 48 V84 M70 48 V84 M88 48 V84 M106 48 V84 M26 84 H52 V90 H26 Z M88 84 H114 V90 H88 Z M34 90 H44 V108 H34 Z M96 90 H106 V108 H96 Z M14 108 H126 M30 16 V4 M24 9 H36 M100 16 L106 7 L112 16"/></symbol>
+</defs></svg>
+
+<!-- ===== PRELOADER ===== -->
+<div id="pre">
+  <div class="pl">
+    <svg viewBox="0 0 140 116" aria-hidden="true"><path class="pdraw" d="M6 48 L34 16 L106 16 L134 48 M16 48 H124 V84 H16 Z M16 66 H124 M34 48 V84 M52 48 V84 M70 48 V84 M88 48 V84 M106 48 V84 M26 84 H52 V90 H26 Z M88 84 H114 V90 H88 Z M34 90 H44 V108 H34 Z M96 90 H106 V108 H96 Z M14 108 H126 M30 16 V4 M24 9 H36 M100 16 L106 7 L112 16"/></svg>
+    <div class="pl-name">El Hórreo</div>
+    <div class="pl-sub">Cocina gallega · Viladecans</div>
+  </div>
+</div>
+
+<!-- ===== TOPBAR ===== -->
+<header id="top">
+  <div class="wrap bar">
+    <a href="#top" class="brand" aria-label="El Hórreo, inicio">
+      <svg viewBox="0 0 140 116" aria-hidden="true"><use href="#horreo"/></svg>
+      <span><b>El Hórreo</b><small>Bar · Restaurante</small></span>
+    </a>
+    <nav class="links" id="nav">
+      <a href="#especialidades">Especialidades</a>
+      <a href="#carta">La carta</a>
+      <a href="#grupos">Grupos</a>
+      <a href="#visita">Visita</a>
+      <button class="btn btn-gold" data-reserva>Reservar</button>
+    </nav>
+    <button class="menu-toggle" id="burger" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="orbs"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+  <svg class="hero-watermark" viewBox="0 0 140 116" aria-hidden="true"><use href="#horreo"/></svg>
+  <div class="grain"></div>
+  <canvas class="particles" id="bubbles" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Comida gallega y más · Viladecans</span>
+      <h1 id="hero-h1">La despensa del <span class="it">Atlántico</span></h1>
+      <p class="hero-lead r-fade">Cocina gallega de raíz —pulpo, brasa y producto del mar— emplatada con mimo en el corazón del Baix Llobregat. Lo de siempre, cuidado como nunca.</p>
+      <div class="hero-cta r-fade">
+        <button class="btn btn-gold btn-big" data-reserva>Reservar mesa</button>
+        <a href="#especialidades" class="btn btn-ghost btn-big">Ver especialidades</a>
+      </div>
+      <div class="hero-meta r-fade">
+        <span><svg class="ic"><use href="#i-star"/></svg> <b data-count="4.2" data-dec="1">4,2</b>&nbsp;· <span data-count="106">106</span> reseñas</span>
+        <span><svg class="ic"><use href="#i-fish"/></svg> Pescado y marisco del día</span>
+        <span><svg class="ic"><use href="#i-map-pin"/></svg> Federico García Lorca, 5</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-frame">
+        <img src="img/pulpo.webp" width="900" height="1200" alt="Pulpo gallego servido entero sobre plato blanco" fetchpriority="high">
+      </div>
+      <span class="hero-tag t1"><svg class="ic"><use href="#i-anchor"/></svg> Pulpo á feira</span>
+      <span class="hero-tag t2">Pulpo gallego <span class="price">22,50€</span></span>
+    </div>
+  </div>
+  <div class="scrollcue">Desliza<i></i></div>
+</section>
+
+<!-- ===== MANIFIESTO ===== -->
+<section class="manif sec-pad" id="casa">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Nuestra casa</span></div>
+    <div class="manif-grid" style="margin-top:1.8rem">
+      <p class="manif-lead r-up">El hórreo es el granero que custodia lo mejor de la cosecha. Aquí guardamos esa idea: <em>traer Galicia y su mar</em> a Viladecans, tratar cada producto con respeto y servirlo sin artificios… pero con una vuelta de autor.</p>
+      <div class="rule-v"></div>
+      <div class="prov">
+        <div class="prov-item r-up"><svg class="ic"><use href="#i-waves"/></svg><div><b>Del Atlántico</b><span>Pulpo, mariscos y pescado que sube de la lonja.</span></div></div>
+        <div class="prov-item r-up"><svg class="ic"><use href="#i-flame"/></svg><div><b>A la brasa</b><span>Chuletón gallego y carnes al fuego, en su punto.</span></div></div>
+        <div class="prov-item r-up"><svg class="ic"><use href="#i-chef-hat"/></svg><div><b>Y algo más</b><span>Ceviches y platos de autor que miran al Pacífico.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CINTA ORO ===== -->
+<div class="marquee marquee-gold" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq-set">
+      <span class="mq-item"><svg class="ic"><use href="#i-anchor"/></svg> Pulpo á feira</span><span class="mq-sep"></span>
+      <span class="mq-item">Arroz negro</span><span class="mq-sep"></span>
+      <span class="mq-item"><svg class="ic"><use href="#i-flame"/></svg> Chuletón a la brasa</span><span class="mq-sep"></span>
+      <span class="mq-item">Lacón gallego</span><span class="mq-sep"></span>
+      <span class="mq-item">Cazón en adobo</span><span class="mq-sep"></span>
+      <span class="mq-item"><svg class="ic"><use href="#i-shell"/></svg> Mariscada</span><span class="mq-sep"></span>
+      <span class="mq-item">Croquetas caseras</span><span class="mq-sep"></span>
+      <span class="mq-item">Empanada gallega</span><span class="mq-sep"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ESPECIALIDADES (espina editorial) ===== -->
+<section class="sec-pad" id="especialidades">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">La carta del mar</span>
+      <h2 class="sec-title">Lo que sale <span class="it">del pase</span></h2>
+      <p class="lead">Una selección que cambia con la lonja y la temporada. Esto es lo que hoy nos enorgullece sacar a la mesa.</p>
+    </div>
+
+    <div class="feat">
+      <div class="feat-media tall"><div class="num">01</div><div class="clip is-clip"><img src="img/langostinos.webp" width="900" height="1200" alt="Gambas rojas sobre crema templada de su coral" loading="lazy"></div></div>
+      <div class="feat-body">
+        <span class="feat-kicker"><svg class="ic"><use href="#i-shell"/></svg> Del mar</span>
+        <h3 class="feat-name">Gamba roja en su bisque</h3>
+        <p class="feat-desc">Gamba a la plancha reposando sobre una crema templada hecha con su propio coral. Pura concentración de mar, sin más adornos que un buen aceite.</p>
+        <div class="feat-foot"><span class="feat-price">11,50€<small>plancha</small></span><span class="feat-note">según mercado</span></div>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-media wide"><div class="num">02</div><div class="clip is-clip"><img src="img/pescado-gallego.webp" width="1080" height="1080" alt="Pescado del día a la plancha sobre cerámica gallega" loading="lazy"></div></div>
+      <div class="feat-body">
+        <span class="feat-kicker"><svg class="ic"><use href="#i-fish"/></svg> De la lonja</span>
+        <h3 class="feat-name">Pescado del día, a la gallega</h3>
+        <p class="feat-desc">Lo que mejor entra esa mañana, a la plancha con cachelos, su sofrito y un toque de pimentón. Servido, como manda la tierra, sobre cerámica gallega.</p>
+        <div class="feat-foot"><span class="feat-price">Según lonja</span><span class="feat-note">pregunta al pase</span></div>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-media wide"><div class="num">03</div><div class="clip is-clip"><img src="img/ceviche.webp" width="1200" height="1003" alt="Ceviche de la casa con maíz y cilantro" loading="lazy"></div></div>
+      <div class="feat-body">
+        <span class="feat-kicker"><svg class="ic"><use href="#i-chef-hat"/></svg> El «y más»</span>
+        <h3 class="feat-name">Ceviche de la casa</h3>
+        <p class="feat-desc">Aquí Galicia mira al Pacífico: leche de tigre cítrica, maíz, cebolla morada y cilantro fresco. Fresco, ácido y vivo. El plato que más sorprende.</p>
+        <div class="feat-foot"><span class="feat-price">Sugerencia</span><span class="feat-note">de temporada</span></div>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-media wide"><div class="num">04</div><div class="clip is-clip"><img src="img/bacalao.webp" width="1080" height="1080" alt="Bacalao confitado con parmentier" loading="lazy"></div></div>
+      <div class="feat-body">
+        <span class="feat-kicker"><svg class="ic"><use href="#i-soup"/></svg> A baja temperatura</span>
+        <h3 class="feat-name">Bacalao confitado</h3>
+        <p class="feat-desc">Lomo de bacalao confitado a baja temperatura, sobre una parmentier suave y un fondo verde de perejil. Delicado por fuera, jugoso por dentro.</p>
+        <div class="feat-foot"><span class="feat-price">Sugerencia</span><span class="feat-note">del chef</span></div>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-media wide"><div class="num">05</div><div class="clip is-clip"><img src="img/causa.webp" width="1200" height="900" alt="Tartar de autor con microbrotes" loading="lazy"></div></div>
+      <div class="feat-body">
+        <span class="feat-kicker"><svg class="ic"><use href="#i-salad"/></svg> Pase frío</span>
+        <h3 class="feat-name">Tartar &amp; causa de autor</h3>
+        <p class="feat-desc">El bocado fresco que reinventamos cada semana según lo que pide el mercado: cítricos, brotes y un punto crujiente. Pequeño, pero memorable.</p>
+        <div class="feat-foot"><span class="feat-price">Sugerencia</span><span class="feat-note">semanal</span></div>
+      </div>
+    </div>
+
+    <div class="feat">
+      <div class="feat-media wide"><div class="num">06</div><div class="clip is-clip"><img src="img/merluza-verde.webp" width="1200" height="900" alt="Merluza en salsa verde con almejas" loading="lazy"></div></div>
+      <div class="feat-body">
+        <span class="feat-kicker"><svg class="ic"><use href="#i-fish"/></svg> Clásico de clásicos</span>
+        <h3 class="feat-name">Merluza en salsa verde</h3>
+        <p class="feat-desc">Merluza, almejas y un fondo emulsionado de perejil y ajo. La receta de toda la vida del norte, hecha con la paciencia que merece.</p>
+        <div class="feat-foot"><span class="feat-price">Sugerencia</span><span class="feat-note">del día</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BANDA CINEMÁTICA ===== -->
+<section class="band">
+  <div class="band-media"><img src="img/arroznegro.webp" width="1200" height="540" alt="Ceviche de la casa sobre plato de cerámica rayada" loading="lazy"></div>
+  <div class="band-copy">
+    <h2 class="r-up">«No hay buen plato sin <em>buen producto</em>»</h2>
+    <p class="r-fade">Por eso elegimos cada mañana, escogemos a mano y cocinamos al momento.</p>
+  </div>
+</section>
+
+<!-- ===== CARTA Y MÁS ===== -->
+<section class="carta sec-pad" id="carta">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow center">La carta</span>
+      <h2 class="sec-title">Gallego, de barrio <span class="it">y de fiesta</span></h2>
+      <p class="lead">Tapas para compartir, brasa, torradas y mucho más. Una selección de la carta —pregunta también por las sugerencias del día.</p>
+    </div>
+
+    <div class="carta-grid">
+      <div class="carta-col">
+        <div class="cat r-up">
+          <div class="cat-title"><svg class="ic"><use href="#i-anchor"/></svg> Tapas gallegas</div>
+          <div class="mi"><span class="nm">Pulpo gallego</span><span class="dots"></span><span class="pr">22,50</span></div>
+          <div class="mi"><span class="nm">Gambas a la plancha</span><span class="dots"></span><span class="pr">11,50</span></div>
+          <div class="mi"><span class="nm">Lacón gallego</span><span class="dots"></span><span class="pr">7,50</span></div>
+          <div class="mi"><span class="nm">Oreja gallega</span><span class="dots"></span><span class="pr">7,25</span></div>
+          <div class="mi"><span class="nm">Cazón en adobo</span><span class="dots"></span><span class="pr">8,50</span></div>
+          <div class="mi"><span class="nm">Croquetas caseras</span><span class="dots"></span><span class="pr">7,50</span></div>
+          <div class="mi"><span class="nm">Patatas bravas</span><span class="dots"></span><span class="pr">6,50</span></div>
+        </div>
+        <div class="cat r-up">
+          <div class="cat-title"><svg class="ic"><use href="#i-flame"/></svg> A la brasa &amp; cazuela</div>
+          <div class="mi"><span class="nm">Chuletón gallego 700&nbsp;g <em>a la brasa, con guarnición</em></span><span class="dots"></span><span class="pr">35,00</span></div>
+          <div class="mi"><span class="nm">Secreto ibérico <em>con guarnición y alioli</em></span><span class="dots"></span><span class="pr">35,00</span></div>
+          <div class="mi"><span class="nm">Huevos rotos con jamón ibérico</span><span class="dots"></span><span class="pr">9,50</span></div>
+          <div class="mi"><span class="nm">Sepia a la plancha</span><span class="dots"></span><span class="pr">12,75</span></div>
+        </div>
+      </div>
+
+      <div class="carta-col">
+        <div class="cat r-up">
+          <div class="cat-title"><svg class="ic"><use href="#i-utensils-crossed"/></svg> Torradas especiales</div>
+          <div class="mi"><span class="nm">Torrada El Hórreo <em>alioli, lomo, jamón, pimientos y tortilla</em></span><span class="dots"></span><span class="pr">12,50</span></div>
+          <div class="mi"><span class="nm">Torrada Cantábrico <em>atún, anchoas, pimientos y olivas</em></span><span class="dots"></span><span class="pr">12,90</span></div>
+          <div class="mi"><span class="nm">Secreto ibérico con queso brie</span><span class="dots"></span><span class="pr">14,50</span></div>
+          <div class="mi"><span class="nm">Torrada jamón ibérico</span><span class="dots"></span><span class="pr">14,90</span></div>
+        </div>
+        <div class="cat r-up">
+          <div class="cat-title"><svg class="ic"><use href="#i-salad"/></svg> Ensaladas &amp; quesos</div>
+          <div class="mi"><span class="nm">Ensalada de queso de cabra</span><span class="dots"></span><span class="pr">8,50</span></div>
+          <div class="mi"><span class="nm">Ensalada César</span><span class="dots"></span><span class="pr">8,50</span></div>
+          <div class="mi"><span class="nm">Tabla de quesos</span><span class="dots"></span><span class="pr">16,50</span></div>
+          <div class="mi"><span class="nm">Plato de jamón ibérico</span><span class="dots"></span><span class="pr">18,50</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="carta-note r-fade">…y la carta completa de bocadillos fríos y calientes, platos combinados y las sugerencias del día.</p>
+
+    <div class="grupos-strip r-up" id="grupos">
+      <svg class="ic"><use href="#i-users"/></svg>
+      <div class="gtext">
+        <b>Menús de grupos con reserva</b>
+        <p>Celebraciones, comidas de empresa y cumpleaños. Preparamos un menú a vuestra medida.</p>
+      </div>
+      <button class="btn btn-gold" data-reserva>Reservar para grupo</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRÍO ===== -->
+<section class="sec-pad" id="maspase" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Y para acabar</span><h2 class="sec-title">Detalles <span class="it">de la casa</span></h2></div>
+    <div class="trio">
+      <figure class="r-up"><img src="img/romesco.webp" width="900" height="1200" alt="Pescado con romesco, espárragos y brotes" loading="lazy"><figcaption>Pescado con romesco y brotes</figcaption></figure>
+      <figure class="r-up"><img src="img/ensalada.webp" width="1200" height="900" alt="Ensalada con queso de cabra, frutos y maíz" loading="lazy"><figcaption>Ensalada de queso de cabra</figcaption></figure>
+      <figure class="r-up"><img src="img/postre.webp" width="1200" height="904" alt="Crema catalana casera" loading="lazy"><figcaption>Crema catalana casera</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CINTA COBALTO ===== -->
+<div class="marquee marquee-cobalt" aria-hidden="true">
+  <div class="mq-track" data-dir="rev">
+    <div class="mq-set">
+      <span class="mq-item"><svg class="ic"><use href="#i-waves"/></svg> Producto del Atlántico</span><span class="mq-sep"></span>
+      <span class="mq-item">Galicia en Viladecans</span><span class="mq-sep"></span>
+      <span class="mq-item"><svg class="ic"><use href="#i-chef-hat"/></svg> Cocina de mercado</span><span class="mq-sep"></span>
+      <span class="mq-item"><svg class="ic"><use href="#i-users"/></svg> Menús de grupo</span><span class="mq-sep"></span>
+      <span class="mq-item">Reserva tu mesa</span><span class="mq-sep"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== VISITA ===== -->
+<section class="visita sec-pad" id="visita">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Dónde encontrarnos</span>
+      <h2 class="sec-title">Te esperamos <span class="it">en Viladecans</span></h2>
+    </div>
+    <div class="visita-grid">
+      <div class="map-card r-fade">
+        <iframe title="Mapa de El Hórreo en Viladecans" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=El%20H%C3%B3rreo%20Carrer%20Federico%20Garc%C3%ADa%20Lorca%205%20Viladecans&output=embed"></iframe>
+        <a class="btn btn-gold como" href="https://www.google.com/maps/dir/?api=1&destination=El+H%C3%B3rreo+Carrer+Federico+Garc%C3%ADa+Lorca+5+Viladecans" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#i-map-pin"/></svg> Cómo llegar
+        </a>
+      </div>
+      <div class="info-block">
+        <div class="info-row r-up"><svg class="ic"><use href="#i-map-pin"/></svg><div><h4>Dirección</h4><p>Carrer de Federico García Lorca, 5<br>08840 Viladecans, Barcelona</p></div></div>
+        <div class="info-row r-up"><svg class="ic"><use href="#i-phone"/></svg><div><h4>Reservas</h4><p><a class="line" href="tel:+34698429361">698 42 93 61</a></p></div></div>
+        <div class="info-row r-up"><svg class="ic"><use href="#i-clock"/></svg><div><h4>Horario</h4>
+          <div class="hours" id="hours">
+            <div class="hday" data-d="1"><b>Lunes</b><span>Cerrado</span></div>
+            <div class="hday" data-d="2"><b>Martes</b><span>Comidas y cenas</span></div>
+            <div class="hday" data-d="3"><b>Miércoles</b><span>Comidas y cenas</span></div>
+            <div class="hday" data-d="4"><b>Jueves</b><span>Comidas y cenas</span></div>
+            <div class="hday" data-d="5"><b>Viernes</b><span>Comidas y cenas</span></div>
+            <div class="hday" data-d="6"><b>Sábado</b><span>Comidas y cenas</span></div>
+            <div class="hday" data-d="0"><b>Domingo</b><span>Comidas y cenas</span></div>
+          </div>
+        </div></div>
+        <div style="margin-top:.4rem"><button class="btn btn-gold btn-big" data-reserva><svg class="ic"><use href="#i-phone"/></svg> Reservar mesa</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="orbs soft"><span class="orb o1"></span><span class="orb o2"></span></div>
+  <div class="wrap">
+    <svg class="foot-horreo" viewBox="0 0 140 116" aria-hidden="true"><use href="#horreo"/></svg>
+    <div class="foot-mark" aria-label="El Hórreo">
+      <svg viewBox="0 0 1000 150" role="img" aria-label="El Hórreo">
+        <text x="500" y="118" text-anchor="middle" textLength="980" lengthAdjust="spacingAndGlyphs"
+          font-family="Ibarra Real Nova, serif" font-weight="600" font-size="150" fill="#e6dcc9">El Hórreo</text>
+      </svg>
+    </div>
+    <div class="foot-sub">Cocina gallega y más · Viladecans</div>
+    <div class="foot-ctas">
+      <button class="btn btn-gold btn-big" data-reserva>Reservar mesa</button>
+      <a class="btn btn-ghost btn-big" href="https://www.google.com/maps/dir/?api=1&destination=El+H%C3%B3rreo+Carrer+Federico+Garc%C3%ADa+Lorca+5+Viladecans" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+    <div class="foot-meta">
+      <a href="tel:+34698429361">698 42 93 61</a> · Carrer de Federico García Lorca, 5 — 08840 Viladecans<br>
+      Martes a domingo · Lunes cerrado
+      <div class="foot-credit">Demostración web · El Hórreo · Hecha con producto real de la casa</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== DIALOG RESERVA ===== -->
+<dialog id="reserva">
+  <div class="modal">
+    <button class="x" aria-label="Cerrar" data-close>&times;</button>
+    <svg class="mh" viewBox="0 0 140 116" aria-hidden="true"><use href="#horreo"/></svg>
+    <h3>Reserva tu mesa</h3>
+    <p>Llámanos o escríbenos por WhatsApp y te confirmamos al momento. Para grupos, preparamos un menú a vuestra medida.</p>
+    <div class="mbtns">
+      <a class="btn btn-gold btn-big" href="tel:+34698429361"><svg class="ic"><use href="#i-phone"/></svg> Llamar · 698 42 93 61</a>
+      <a class="btn btn-ghost btn-big" href="https://wa.me/34698429361?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20mesa%20en%20El%20H%C3%B3rreo" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+    <small>El Hórreo · Carrer Federico García Lorca, 5 · Viladecans</small>
+  </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasGSAP = typeof gsap !== 'undefined';
+  if(hasGSAP){ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin); }
+
+  /* ---- word splitter reutilizable (DOM puro, sin innerHTML) ---- */
+  function splitWords(el){
+    var src = Array.prototype.slice.call(el.childNodes);
+    var frag = document.createDocumentFragment();
+    src.forEach(function(n){
+      if(n.nodeType===3){
+        n.textContent.split(/(\s+)/).forEach(function(t){
+          if(t===''){ return; }
+          if(/^\s+$/.test(t)){ frag.appendChild(document.createTextNode(t)); }
+          else { var s=document.createElement('span'); s.className='word'; s.textContent=t; frag.appendChild(s); }
+        });
+      } else if(n.nodeType===1){ n.classList.add('word'); frag.appendChild(n); }
+    });
+    while(el.firstChild){ el.removeChild(el.firstChild); }
+    el.appendChild(frag);
+  }
+  var h1 = document.getElementById('hero-h1');
+  if(h1 && !reduce){ splitWords(h1); }
+
+  /* ---- preloader + hero reveal ---- */
+  function startReveal(){
+    if(reduce || !hasGSAP) return;
+    var tl = gsap.timeline();
+    var words = h1 ? h1.querySelectorAll('.word') : [];
+    if(words.length){
+      gsap.set(words,{opacity:0,y:24,filter:'blur(8px)'});
+      tl.to(words,{opacity:1,y:0,filter:'blur(0px)',duration:1,stagger:.09,ease:'power3.out'},0);
+    }
+    tl.to('.hero-copy .r-fade',{opacity:1,duration:.9,stagger:.12,ease:'power2.out'},.35)
+      .fromTo('.hero-frame',{opacity:0,y:40,clipPath:'inset(0 0 100% 0)'},{opacity:1,y:0,clipPath:'inset(0 0 0% 0)',duration:1.2,ease:'power3.out'},.2)
+      .to('.hero-frame img',{scale:1,duration:1.6,ease:'power2.out'},.2)
+      .fromTo('.hero-tag',{opacity:0,scale:.8},{opacity:1,scale:1,duration:.5,stagger:.12,ease:'back.out(1.7)'},'-=.7')
+      .to('.scrollcue',{opacity:1,duration:.6},'-=.3');
+    // contadores
+    document.querySelectorAll('.hero [data-count]').forEach(function(el){
+      var t=parseFloat(el.getAttribute('data-count')), dec=el.getAttribute('data-dec')==='1', o={v:0};
+      gsap.to(o,{v:t,duration:1.6,delay:.7,ease:'power2.out',onUpdate:function(){ el.textContent = dec ? o.v.toFixed(1).replace('.',',') : Math.round(o.v); }});
+    });
+  }
+
+  var pre = document.getElementById('pre');
+  function killPre(){
+    if(pre){ pre.classList.add('done'); setTimeout(function(){ pre.style.display='none'; }, 720); }
+    startReveal();
+  }
+  if(reduce || !hasGSAP){
+    document.documentElement.classList.add('no-anim');
+    if(pre){ pre.style.display='none'; }
+  } else {
+    var path = pre ? pre.querySelector('.pdraw') : null;
+    var ptl = gsap.timeline({onComplete:killPre});
+    if(path){
+      var len = path.getTotalLength();
+      gsap.set(path,{strokeDasharray:len,strokeDashoffset:len});
+      ptl.to(path,{strokeDashoffset:0,duration:1.4,ease:'power1.inOut'})
+         .to('#pre .pl-name',{opacity:1,duration:.5},'-=.5')
+         .to('#pre .pl-sub',{opacity:1,duration:.5},'-=.3')
+         .to({},{duration:.35});
+    } else { ptl.to({},{duration:.4}); }
+  }
+  setTimeout(function(){ if(pre && pre.style.display!=='none'){ pre.classList.add('done'); setTimeout(function(){pre.style.display='none';},700); startReveal(); } }, 4200);
+
+  /* ---- topbar solid ---- */
+  var header = document.getElementById('top');
+  function onScroll(){ if(window.scrollY>40) header.classList.add('solid'); else header.classList.remove('solid'); }
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  /* ---- burger menu ---- */
+  var burger=document.getElementById('burger'), nav=document.getElementById('nav');
+  if(burger){ burger.addEventListener('click',function(){ nav.classList.toggle('open'); }); }
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nav.classList.remove('open'); }); });
+
+  /* ---- smooth anchors ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); if(id.length<2) return;
+      var el=document.querySelector(id); if(!el) return;
+      e.preventDefault();
+      if(hasGSAP && !reduce){ gsap.to(window,{duration:1,scrollTo:{y:el,offsetY:64},ease:'power2.inOut'}); }
+      else { el.scrollIntoView({behavior:reduce?'auto':'smooth'}); }
+    });
+  });
+
+  /* ---- scroll reveals ---- */
+  if(hasGSAP && !reduce){
+    gsap.utils.toArray('.r-up').forEach(function(el){
+      gsap.fromTo(el,{opacity:0,y:28},{opacity:1,y:0,duration:.95,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 86%'}});
+    });
+    gsap.utils.toArray('section:not(.hero) .r-fade').forEach(function(el){
+      gsap.fromTo(el,{opacity:0},{opacity:1,duration:1.1,ease:'power2.out',
+        scrollTrigger:{trigger:el,start:'top 88%'}});
+    });
+    gsap.utils.toArray('.is-clip').forEach(function(el){
+      gsap.to(el,{clipPath:'inset(0 0% 0 0)',duration:1.15,ease:'power3.inOut',
+        scrollTrigger:{trigger:el,start:'top 82%'}});
+    });
+    gsap.utils.toArray('.feat-media img').forEach(function(img){
+      gsap.fromTo(img,{yPercent:-4},{yPercent:4,ease:'none',
+        scrollTrigger:{trigger:img,start:'top bottom',end:'bottom top',scrub:true}});
+    });
+    gsap.to('.hero-frame',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.4}});
+    gsap.fromTo('.band-media',{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:'.band',start:'top bottom',end:'bottom top',scrub:true}});
+
+    // títulos de sección: reveal palabra-a-palabra (flip 3D, sin máscara = sin recorte de acentos)
+    gsap.utils.toArray('.sec-head').forEach(function(head){
+      var eb=head.querySelector('.eyebrow'), title=head.querySelector('.sec-title'), lead=head.querySelector('.lead'), words=[];
+      if(title){ splitWords(title); words=title.querySelectorAll('.word'); }
+      var tl=gsap.timeline({scrollTrigger:{trigger:head,start:'top 85%'}});
+      if(eb) tl.from(eb,{opacity:0,y:18,duration:.6,ease:'power2.out'},0);
+      if(words.length) tl.from(words,{opacity:0,yPercent:80,rotationX:-65,transformPerspective:760,transformOrigin:'50% 100%',duration:.72,stagger:.055,ease:'power3.out'},.12);
+      if(lead) tl.from(lead,{opacity:0,y:18,duration:.7,ease:'power2.out'},.4);
+    });
+    // carta: items entran en cascada
+    gsap.utils.toArray('.cat').forEach(function(cat){
+      gsap.from(cat.querySelectorAll('.mi'),{opacity:0,y:16,duration:.5,stagger:.05,ease:'power2.out',scrollTrigger:{trigger:cat,start:'top 86%'}});
+    });
+    // orbs a la deriva (transform-only = barato)
+    gsap.to('.orb.o1',{x:40,y:30,duration:16,ease:'sine.inOut',repeat:-1,yoyo:true});
+    gsap.to('.orb.o2',{x:-50,y:-26,duration:20,ease:'sine.inOut',repeat:-1,yoyo:true});
+    gsap.to('.orb.o3',{x:34,y:-42,duration:14,ease:'sine.inOut',repeat:-1,yoyo:true});
+    // flotación hero
+    gsap.to('.hero-media',{y:14,duration:5,ease:'sine.inOut',repeat:-1,yoyo:true});
+    gsap.to('.hero-tag.t1',{y:9,duration:3.6,ease:'sine.inOut',repeat:-1,yoyo:true});
+    gsap.to('.hero-tag.t2',{y:-9,duration:4.2,ease:'sine.inOut',repeat:-1,yoyo:true,delay:.4});
+    // marquees: bucle infinito sin salto (mover exactamente un set)
+    document.querySelectorAll('.mq-track').forEach(function(track){
+      var rev=track.getAttribute('data-dir')==='rev';
+      while(track.children.length<2){ track.appendChild(track.children[0].cloneNode(true)); }
+      var unit=track.children[1].offsetLeft - track.children[0].offsetLeft, guard=0;
+      while(track.scrollWidth < window.innerWidth + unit + 60 && guard<20){ track.appendChild(track.children[guard%2].cloneNode(true)); guard++; }
+      unit=track.children[1].offsetLeft - track.children[0].offsetLeft;
+      gsap.set(track,{x:rev?-unit:0});
+      gsap.to(track,{x:rev?0:-unit,duration:Math.max(16,unit/65),ease:'none',repeat:-1});
+    });
+  }
+
+  /* ---- burbujas del Atlántico (canvas, sin shadowBlur) ---- */
+  (function(){
+    var cv=document.getElementById('bubbles'); if(!cv || reduce) return;
+    var ctx=cv.getContext('2d'), W=0,H=0,parts=[],raf=null;
+    function size(){ var p=cv.parentElement.getBoundingClientRect(); W=cv.width=Math.max(1,Math.round(p.width)); H=cv.height=Math.max(1,Math.round(p.height)); }
+    size();
+    var N=Math.max(10,Math.min(22,Math.round(W/64)));
+    for(var i=0;i<N;i++){ parts.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.4,s:.18+Math.random()*.5,a:.12+Math.random()*.38}); }
+    function draw(){
+      ctx.clearRect(0,0,W,H); ctx.globalCompositeOperation='lighter';
+      for(var i=0;i<parts.length;i++){ var p=parts[i]; p.y-=p.s; p.x+=Math.sin(p.y*0.012)*0.22;
+        if(p.y<-10){ p.y=H+10; p.x=Math.random()*W; }
+        ctx.beginPath(); ctx.fillStyle='rgba(214,176,96,'+p.a+')'; ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fill(); }
+      raf=requestAnimationFrame(draw);
+    }
+    draw();
+    var rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(size,200); });
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){
+        if(e.isIntersecting){ if(!raf) draw(); } else if(raf){ cancelAnimationFrame(raf); raf=null; }
+      }); },{threshold:0}).observe(cv.parentElement);
+    }
+  })();
+
+  /* ---- horario: marcar día actual ---- */
+  try{
+    var today = new Date().getDay();
+    document.querySelectorAll('#hours .hday').forEach(function(d){
+      var dd = parseInt(d.getAttribute('data-d'),10);
+      if(dd===1) d.classList.add('closed');
+      if(dd===today){
+        d.classList.add('today');
+        var tag=document.createElement('span'); tag.className='pill-now'; tag.textContent='Hoy';
+        d.querySelector('b').appendChild(tag);
+      }
+    });
+  }catch(e){}
+
+  /* ---- dialog reserva ---- */
+  var dlg=document.getElementById('reserva');
+  document.querySelectorAll('[data-reserva]').forEach(function(b){
+    b.addEventListener('click',function(){ if(dlg && dlg.showModal) dlg.showModal(); else if(dlg) dlg.setAttribute('open',''); });
+  });
+  if(dlg){
+    dlg.addEventListener('click',function(e){ if(e.target===dlg) dlg.close(); });
+    var xb=dlg.querySelector('[data-close]'); if(xb){ xb.addEventListener('click',function(){ dlg.close(); }); }
+  }
+})();
+</script>
+</body>
+</html>
