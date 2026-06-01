@@ -170,8 +170,7 @@ nav.links a:hover::after{transform:scaleX(1)}
 .cantina .lead{color:#d8ccb8}
 .neon{font-family:var(--display);color:var(--turq);text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);animation:neonflk 4s linear infinite}
 @keyframes neonflk{0%,88%,100%{text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);color:var(--turq)}90%{text-shadow:none;color:#0a6b63}92%{text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);color:var(--turq)}94%{text-shadow:none;color:#0a6b63}96%{text-shadow:0 0 6px var(--turq),0 0 16px var(--turq-d);color:var(--turq)}}
-.cantina-grid{display:grid;grid-template-columns:1fr minmax(0,430px);gap:clamp(1.5rem,4vw,3.2rem);align-items:center;margin-top:2rem}
-.cantina-photo{order:2}
+.cantina-grid{display:grid;grid-template-columns:minmax(0,430px) 1fr;gap:clamp(1.5rem,4vw,3.2rem);align-items:center;margin-top:2rem}
 .cantina-photo{border:5px solid var(--crudo);border-radius:10px;overflow:hidden;box-shadow:10px 10px 0 var(--rosa);transform:rotate(-1.5deg)}
 .cantina-photo img{width:100%;display:block;height:clamp(300px,34vw,430px);object-fit:cover}
 .drinks{display:flex;flex-direction:column;gap:.8rem}
@@ -623,16 +622,21 @@ html.no-anim #pre{display:none}
     });
     // parallax fachada
     gsap.to('.hero-deco',{backgroundPositionY:'80px',ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
-    // marquees
-    document.querySelectorAll('.mq-track').forEach(function(track){
-      var rev=track.getAttribute('data-dir')==='rev';
-      while(track.children.length<2){ track.appendChild(track.children[0].cloneNode(true)); }
-      var unit=track.children[1].offsetLeft-track.children[0].offsetLeft,g=0;
-      while(track.scrollWidth<window.innerWidth+unit+60 && g<20){ track.appendChild(track.children[g%2].cloneNode(true)); g++; }
-      unit=track.children[1].offsetLeft-track.children[0].offsetLeft;
-      gsap.set(track,{x:rev?-unit:0});
-      gsap.to(track,{x:rev?0:-unit,duration:Math.max(14,unit/70),ease:'none',repeat:-1});
-    });
+    // marquees — medir el periodo DESPUÉS de cargar la fuente (si no, el bucle salta feo)
+    var initMarquees=function(){
+      document.querySelectorAll('.mq-track').forEach(function(track){
+        if(track.dataset.mqReady) return; track.dataset.mqReady='1';
+        var rev=track.getAttribute('data-dir')==='rev';
+        while(track.children.length<2){ track.appendChild(track.children[0].cloneNode(true)); }
+        var unit=track.children[1].offsetLeft-track.children[0].offsetLeft,g=0;
+        while(track.scrollWidth<window.innerWidth+unit+80 && g<24){ track.appendChild(track.children[g%2].cloneNode(true)); g++; }
+        unit=track.children[1].offsetLeft-track.children[0].offsetLeft;
+        gsap.set(track,{x:rev?-unit:0});
+        gsap.to(track,{x:rev?0:-unit,duration:Math.max(14,unit/70),ease:'none',repeat:-1});
+      });
+    };
+    if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(function(){ initMarquees(); if(window.ScrollTrigger)ScrollTrigger.refresh(); }); }
+    else { initMarquees(); }
   }
 
   /* horario hoy */
