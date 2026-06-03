@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#09040f; --bg2:#140620; --card:#1b0a28; --line:rgba(255,255,255,.11);
-  --ink:#fbeefb; --mut:#c8a3da; --mut2:#7d5f93;
+  --bg:#06020b; --bg2:#140620; --card:#1c0a2a; --line:rgba(255,255,255,.17);
+  --ink:#ffffff; --mut:#dcc8ef; --mut2:#9a82b0;
   --mag:#ff1e8c; --pink:#ff5bc4; --vio:#9d4dff; --indigo:#6172ff; --cyan:#2fe6e0; --lime:#b6ff3d; --gold:#ffd23f;
   --side:clamp(1.25rem,3vw + .5rem,2.6rem); --maxw:1220px;
 }
@@ -24,9 +24,9 @@ html,body{overflow-x:clip}
 body{background:var(--bg); color:var(--ink); font-family:'Manrope',system-ui,sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased}
 body::before{content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
   background:
-    radial-gradient(58vw 50vh at 14% 6%, rgba(255,30,140,.20), transparent 60%),
-    radial-gradient(54vw 54vh at 90% 16%, rgba(157,77,255,.18), transparent 62%),
-    radial-gradient(60vw 60vh at 50% 110%, rgba(97,114,255,.16), transparent 60%),
+    radial-gradient(52vw 46vh at 13% 5%, rgba(255,30,140,.16), transparent 58%),
+    radial-gradient(48vw 50vh at 92% 15%, rgba(157,77,255,.12), transparent 60%),
+    radial-gradient(56vw 56vh at 50% 112%, rgba(97,114,255,.10), transparent 60%),
     var(--bg)}
 img{display:block; max-width:100%}
 a{color:inherit; text-decoration:none}
@@ -315,6 +315,8 @@ dialog.modal::backdrop{background:rgba(4,2,8,.74); backdrop-filter:blur(4px)}
 /* ⚡ MÓVIL: fuera los efectos que repintan cada frame (fluidez máxima) */
 @media(max-width:820px){
   .hero .focos{display:none}
+  #confetti{display:none}              /* canvas fuera en móvil: la RAM y el rAF más pesados */
+  .glare,.sparks{display:none}         /* menos capas GPU */
   .word .deseo{animation:none; text-shadow:0 0 8px rgba(255,30,140,.92),0 0 28px rgba(255,30,140,.5),0 0 58px rgba(255,30,140,.32)}
   .hero-art .frame,.vip-art .frame{animation:none}
 }
@@ -646,7 +648,7 @@ body.reduce .glare,body.reduce .sparks,body.reduce #confetti{display:none}
 
   /* ---- CONFETI (hero) ---- */
   (function(){
-    var cv=document.getElementById('confetti'); if(!cv||reduce) return;
+    var cv=document.getElementById('confetti'); if(!cv||reduce||innerWidth<820) return;
     var ctx=cv.getContext('2d'), hero=cv.parentElement, dpr=1, parts=[], raf=0, vis=true;
     var COLORS=['#ff1e8c','#ff5bc4','#9d4dff','#2fe6e0','#b6ff3d','#ffd23f','#ffffff'];
     function size(){ cv.width=hero.offsetWidth*dpr; cv.height=hero.offsetHeight*dpr; }
@@ -693,14 +695,15 @@ body.reduce .glare,body.reduce .sparks,body.reduce #confetti{display:none}
     gsap.to('.mani .snakebig',{y:-12,rotation:6,duration:3,ease:'sine.inOut',yoyo:true,repeat:-1});
     gsap.utils.toArray('.mfloat').forEach(function(el,i){ gsap.to(el,{y:(i%2?18:-18),rotation:(i%2?-10:10),duration:3.2+i*0.5,ease:'sine.inOut',yoyo:true,repeat:-1,delay:i*0.35}); });
 
-    document.querySelectorAll('.hero-art .frame, .vip-art .frame').forEach(function(f,i){ var g=document.createElement('span'); g.className='glare'; g.style.setProperty('--gd',(i*0.7).toFixed(1)+'s'); f.appendChild(g); });
-    (function(){ var cols=['','p','v','c','g'];
-      function sparkle(sel,n){ var host=document.querySelector(sel); if(!host) return; var box=document.createElement('div'); box.className='sparks';
+    if(innerWidth>=820){
+      document.querySelectorAll('.hero-art .frame, .vip-art .frame').forEach(function(f,i){ var g=document.createElement('span'); g.className='glare'; g.style.setProperty('--gd',(i*0.7).toFixed(1)+'s'); f.appendChild(g); });
+      var cols=['','p','v','c','g'];
+      var sparkle=function(sel,n){ var host=document.querySelector(sel); if(!host) return; var box=document.createElement('div'); box.className='sparks';
         for(var k=0;k<n;k++){ var s=document.createElement('span'); s.className='spark '+cols[k%5]; s.style.left=(6+(k*131%80))+'%';
           s.style.setProperty('--dur',(4+(k*0.7)%3).toFixed(1)+'s'); s.style.setProperty('--dl',((k*0.9)%4).toFixed(1)+'s'); box.appendChild(s); }
-        host.appendChild(box); }
-      var SP=innerWidth<820?4:7; sparkle('.hero-art',SP); sparkle('.vip-art',SP-1);
-    })();
+        host.appendChild(box); };
+      sparkle('.hero-art',7); sparkle('.vip-art',6);
+    }
 
     if(matchMedia('(hover:hover) and (pointer:fine)').matches){
       [['.hero','.hero-art'],['#vip','.vip-art']].forEach(function(p){
