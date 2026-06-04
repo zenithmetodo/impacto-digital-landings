@@ -152,6 +152,7 @@ h2.big{font-size:clamp(2.1rem,5vw,3.6rem)}
 #arte{background:var(--ink); color:var(--paper)}
 #arte .eyebrow{color:var(--ochre)} #arte .kicker .ico{color:var(--ochre)} #arte .sc-head h2 em{color:var(--ochre)}
 #arte .sc-head h2{color:var(--paper)}
+#arte .sc-view{perspective:1300px}   /* profundidad real para el giro 3D de los carteles */
 .arte-stage .sc-intro{color:rgba(244,236,224,.82)}
 .arte-stage .sc-dots{color:var(--ochre)}
 .art-slide .frm{position:relative; background:var(--paper); padding:12px; border-radius:2px; box-shadow:0 30px 60px -24px rgba(0,0,0,.85)}
@@ -533,11 +534,13 @@ dialog.modal::backdrop{background:rgba(33,26,19,.5)}
       var prev = slides[i-1];
       // la anterior se va LIMPIA primero; la nueva entra después y aterriza suave (sin solape turbio)
       if(mode==='slide'){
-        tl.to(prev,{autoAlpha:0, xPercent:-10, scale:0.985, duration:0.5, ease:'power2.in'});
-        tl.fromTo(s,{autoAlpha:0, xPercent:12, scale:0.99},{autoAlpha:1, xPercent:0, scale:1, duration:0.85, ease:'power3.out'},'-=0.28');
+        // COCINA · swipe horizontal tipo filmstrip / carta
+        tl.to(prev,{autoAlpha:0, xPercent:-16, duration:0.5, ease:'power2.in'});
+        tl.fromTo(s,{autoAlpha:0, xPercent:18},{autoAlpha:1, xPercent:0, duration:0.85, ease:'power3.out'},'-=0.26');
       } else {
-        tl.to(prev,{autoAlpha:0, scale:1.05, duration:0.5, ease:'power2.in'});
-        tl.fromTo(s,{autoAlpha:0, scale:0.965},{autoAlpha:1, scale:1, duration:0.9, ease:'power3.out'},'-=0.30');
+        // ARTE · giro 3D, como pasar cuadros enmarcados de un portfolio
+        tl.to(prev,{autoAlpha:0, rotationY:-32, z:-90, duration:0.55, ease:'power2.in'});
+        tl.fromTo(s,{autoAlpha:0, rotationY:36, z:-90},{autoAlpha:1, rotationY:0, z:0, duration:0.95, ease:'power3.out'},'-=0.30');
       }
       tl.to({}, {duration:HOLD});                   // descansa en esta imagen
     });
