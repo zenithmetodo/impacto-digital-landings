@@ -232,14 +232,32 @@ dialog.modal::backdrop{background:rgba(33,26,19,.5)}
 .kicker .spark-d{color:var(--ochre)}
 
 @media(max-width:980px){
-  .hero-grid,.arte-inner,.local-grid,.visita-grid{grid-template-columns:minmax(0,1fr)}
+  .hero-grid,.local-grid,.visita-grid{grid-template-columns:minmax(0,1fr)}
   .ag-grid{grid-template-columns:1fr}
   .hero-art{max-width:340px; margin-top:1rem}
-  .arte-stage{align-content:start; padding-top:5rem}
-  .arte-txt{text-align:center} .arte-txt .kicker{justify-content:center} .arte-txt .ll{display:none}
-  #arte{height:250vh} #cocina{height:250vh}
-  .wall{height:62vh; order:2; margin-top:.5rem}
   .local-art{order:-1; max-width:330px}
+
+  /* COCINA + ARTE en móvil/tablet: SIN sticky ni scroll horizontal.
+     Stack vertical — cada foto ENTERA y TODAS visibles (el scroll descansa en cada una) */
+  #cocina,#arte{height:auto}
+  .coc-stage,.arte-stage{position:static; height:auto; overflow:visible; display:block}
+  .coc-stage{padding:clamp(2.5rem,8vw,4rem) 0}
+  .arte-stage{padding-block:clamp(2.5rem,8vw,4rem)}
+  /* cocina → columna de polaroids */
+  .rail{flex-direction:column; height:auto; transform:none!important; gap:1.4rem; padding-inline:var(--side); align-items:stretch; will-change:auto}
+  .fcard{flex:0 0 auto; height:auto; width:auto!important; display:block}
+  .fcard.tcard{padding:.4rem 0 .2rem}
+  .fcard.tcard p,.fcard.tcard h2{max-width:none}
+  .fcard.tcard .hint{display:none}
+  .fcard .pola{display:block}
+  .fcard .pola img{width:100%; height:auto; max-width:100%; max-height:none}
+  /* arte → columna de carteles enmarcados */
+  .arte-inner{display:block}
+  .arte-txt{text-align:left} .arte-txt .kicker{justify-content:flex-start}
+  .wall{position:static; height:auto; display:flex; flex-direction:column; gap:1.5rem; margin-top:1.5rem}
+  .poster{position:relative; left:auto; top:auto; transform:none!important; opacity:1!important; visibility:visible!important; max-width:100%; width:100%; will-change:auto}
+  .poster .frm{display:block}
+  .poster img{width:100%; height:auto; max-width:100%; max-height:none}
 }
 @media(max-width:560px){
   body{font-size:16px}
@@ -333,7 +351,7 @@ body.reduce .poster img{max-width:100%; max-height:none}
       <h2>De la de <span class="uline">casa<i></i></span>, con mucho amor</h2>
     </div>
     <div class="rail" id="rail">
-      <article class="fcard tcard"><h2>Sabor casero,<br><em>sin postureo.</em></h2><p>Gildas, pincho de tortilla, bravas y cócteles bien hechos. Comida tradicional con mucho mucho amor. Desliza →</p><span class="hint"><svg class="ico"><use href="#i-arrow-right"/></svg>Desliza para ver</span></article>
+      <article class="fcard tcard"><h2>Sabor casero,<br><em>sin postureo.</em></h2><p>Gildas, pincho de tortilla, bravas y cócteles bien hechos. Comida tradicional con mucho mucho amor.</p><span class="hint"><svg class="ico"><use href="#i-arrow-right"/></svg>Desliza para ver</span></article>
       <figure class="fcard"><div class="pola"><img loading="lazy" decoding="async" src="img/tortilla.webp" width="640" height="853" alt="Pincho de tortilla de patatas jugosa"><figcaption class="cap">Pincho de tortilla</figcaption></div></figure>
       <figure class="fcard"><div class="pola"><img loading="lazy" decoding="async" src="img/gildas.webp" width="640" height="714" alt="Gildas de anchoa, boquerón, cecina y queso"><figcaption class="cap">Gildas para todos los gustos</figcaption></div></figure>
       <figure class="fcard"><div class="pola"><img loading="lazy" decoding="async" src="img/tapas.webp" width="640" height="427" alt="Tabla de tapas caseras: bravas, embutido y guiso"><figcaption class="cap">De picar y compartir</figcaption></div></figure>
@@ -519,16 +537,19 @@ body.reduce .poster img{max-width:100%; max-height:none}
     }
   }
 
-  /* LA COCINA · filmstrip */
+  /* LA COCINA · filmstrip horizontal (desktop) / stack vertical revelado (móvil) */
+  var bigScreen = innerWidth>980;
   var rail=document.getElementById('rail');
-  if(rail && !reduce){
+  if(rail && !reduce && bigScreen){
     gsap.to(rail,{ x:function(){ return -(rail.scrollWidth - innerWidth + 40); }, ease:'none',
       scrollTrigger:{ trigger:'#cocina', start:'top top', end:'bottom bottom', scrub:.35, invalidateOnRefresh:true }});
+  } else if(rail && !reduce){
+    gsap.utils.toArray('#rail .fcard').forEach(function(el){ gsap.fromTo(el,{y:24,autoAlpha:0},{y:0,autoAlpha:1,duration:.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
   }
 
-  /* ARTE Y CAÑA · crossfade pared de carteles */
+  /* ARTE Y CAÑA · crossfade (desktop) / stack vertical revelado (móvil) */
   var posters=gsap.utils.toArray('#arte .poster');
-  if(posters.length && !reduce){
+  if(posters.length && !reduce && bigScreen){
     posters.forEach(function(p,i){ p._rot=(i%2?2.6:-2.6); });
     gsap.set(posters,{autoAlpha:0,scale:1.05,rotation:function(i,t){return t._rot*1.6;}});
     gsap.set(posters[0],{autoAlpha:1,scale:1,rotation:posters[0]._rot});
@@ -536,6 +557,8 @@ body.reduce .poster img{max-width:100%; max-height:none}
     posters.forEach(function(p,i){ if(i===0)return;
       tlA.fromTo(p,{autoAlpha:0,scale:1.05,rotation:p._rot*1.6},{autoAlpha:1,scale:1,rotation:p._rot,duration:1,ease:'power1.out'},'+=0.45');
       tlA.to(posters[i-1],{autoAlpha:0,scale:.96,duration:.65,ease:'power1.in'},'<'); });
+  } else if(posters.length && !reduce){
+    posters.forEach(function(p){ gsap.fromTo(p,{y:26,autoAlpha:0},{y:0,autoAlpha:1,duration:.6,ease:'power2.out',scrollTrigger:{trigger:p,start:'top 86%'}}); });
   }
 
   /* MARQUEE */
