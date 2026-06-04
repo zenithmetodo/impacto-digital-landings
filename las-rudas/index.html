@@ -85,9 +85,7 @@ section{position:relative}
 .chip .ico{width:1em;height:1em;color:var(--petrol)}
 .hero-art{position:relative; justify-self:center; width:100%; max-width:430px}
 .hero-art .p-main{transform:rotate(-3deg)}
-.hero-art .p-main img{aspect-ratio:1/1; object-fit:cover}
 .hero-art .p-sub{position:absolute; width:46%; right:-5%; bottom:-7%; transform:rotate(6deg); z-index:5}
-.hero-art .p-sub img{aspect-ratio:3/4; object-fit:cover}
 .stamp{position:absolute; z-index:6; width:104px; height:104px; display:grid; place-items:center; border-radius:50%;
   background:var(--teja); color:var(--paper); border:2px dashed var(--paper); box-shadow:0 8px 20px -8px rgba(33,26,19,.6); text-align:center; transform:rotate(-12deg)}
 .stamp .cl{display:inline-flex} .stamp .ico{width:30px;height:30px}
@@ -128,9 +126,10 @@ h2.big{font-size:clamp(2.1rem,5vw,3.6rem)}
 .coc-stage .head{padding:0 var(--side); margin-bottom:1.3rem}
 .coc-stage h2{font-size:clamp(1.9rem,4.5vw,3rem)}
 .rail{display:flex; gap:clamp(18px,2.4vw,40px); align-items:center; padding-inline:var(--side); height:min(64vh,560px); will-change:transform}
-.fcard{flex:0 0 auto; height:100%; position:relative}
-.fcard .pola{height:100%; display:flex; flex-direction:column}
-.fcard .pola img{height:100%; width:auto; max-width:none; object-fit:cover; flex:1; min-height:0}
+.fcard{flex:0 0 auto; height:100%; position:relative; display:flex; align-items:center}
+.fcard .pola{display:flex; flex-direction:column}
+/* imagen ENTERA, ratio nativo, limitada por alto (la tarjeta ancha la define la foto) */
+.fcard .pola img{width:auto; height:auto; max-width:min(78vw,520px); max-height:min(52vh,440px); object-fit:contain; display:block}
 .fcard.tcard{display:grid; place-content:center; width:min(80vw,400px); padding:2rem}
 .fcard.tcard h2{margin-bottom:.5rem}
 .fcard.tcard p{color:var(--ink2); max-width:30ch}
@@ -148,9 +147,10 @@ h2.big{font-size:clamp(2.1rem,5vw,3.6rem)}
 .arte-txt .ll li{list-style:none; display:flex; gap:.7rem; align-items:flex-start; color:var(--paper); font-weight:500}
 .arte-txt .ll .ico{width:1.2em;height:1.2em;color:var(--ochre);flex:0 0 auto;margin-top:.15rem}
 .wall{position:relative; height:min(72vh,620px)}
-.poster{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:min(80%,400px); will-change:transform,opacity}
-.poster .frm{background:var(--paper); padding:14px; border-radius:2px; box-shadow:0 30px 60px -24px rgba(0,0,0,.8)}
-.poster img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; display:block}
+.poster{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); will-change:transform,opacity}
+.poster .frm{background:var(--paper); padding:12px; border-radius:2px; box-shadow:0 30px 60px -24px rgba(0,0,0,.8); display:flex}
+/* fit-in-box: cada cartel ENTERO (apaisado/cuadrado/vertical) — nunca recorta */
+.poster img{width:auto; height:auto; max-width:min(78vw,380px); max-height:min(58vh,490px); object-fit:contain; display:block}
 .poster .nail{position:absolute; top:-9px; left:50%; transform:translateX(-50%); width:14px; height:14px; border-radius:50%; background:var(--ochre); box-shadow:0 2px 4px rgba(0,0,0,.5), inset 0 -2px 2px rgba(0,0,0,.3); z-index:3}
 
 /* AGENDA */
@@ -176,9 +176,7 @@ h2.big{font-size:clamp(2.1rem,5vw,3.6rem)}
 .local-cta{margin-top:1.8rem; display:flex; flex-wrap:wrap; gap:.7rem}
 .local-art{position:relative; justify-self:center; width:100%; max-width:460px; padding-bottom:14%}
 .local-art .p-a{transform:rotate(2.5deg)}
-.local-art .p-a img{aspect-ratio:4/5; object-fit:cover}
 .local-art .p-b{position:absolute; width:50%; left:-6%; bottom:0; transform:rotate(-6deg); z-index:5}
-.local-art .p-b img{aspect-ratio:1/1; object-fit:cover}
 
 /* VISITA */
 #visita{padding-block:clamp(4rem,9vw,7rem)}
@@ -240,7 +238,7 @@ dialog.modal::backdrop{background:rgba(33,26,19,.5)}
   .arte-stage{align-content:start; padding-top:5rem}
   .arte-txt{text-align:center} .arte-txt .kicker{justify-content:center} .arte-txt .ll{display:none}
   #arte{height:250vh} #cocina{height:250vh}
-  .wall{height:62vh; order:2; margin-top:.5rem} .poster{width:min(86%,360px)}
+  .wall{height:62vh; order:2; margin-top:.5rem}
   .local-art{order:-1; max-width:330px}
 }
 @media(max-width:560px){
@@ -255,7 +253,8 @@ body.reduce .coc-stage,body.reduce .arte-stage{position:static; height:auto; pad
 body.reduce .rail{overflow-x:auto; height:auto}
 body.reduce .fcard{height:58vh}
 body.reduce .wall{position:static; height:auto; display:grid; grid-template-columns:1fr 1fr; gap:1rem}
-body.reduce .poster{position:static; transform:none!important; opacity:1!important; width:100%}
+body.reduce .poster{position:static; transform:none!important; opacity:1!important; max-width:100%}
+body.reduce .poster img{max-width:100%; max-height:none}
 @media(prefers-reduced-motion:reduce){ *{scroll-behavior:auto!important} .uline i{transform:scaleX(1)} }
 </style>
 </head>
@@ -361,7 +360,7 @@ body.reduce .poster{position:static; transform:none!important; opacity:1!importa
         <figure class="poster"><span class="nail"></span><div class="frm"><img loading="lazy" decoding="async" src="img/cartel-bestias.webp" width="640" height="800" alt="Cartel de Arte y Caña: Dioses, bestias y lo que queda en medio, de Álvaro Jiménez"></div></figure>
         <figure class="poster"><span class="nail"></span><div class="frm"><img loading="lazy" decoding="async" src="img/cartel-adulto.webp" width="640" height="800" alt="Cartel de Arte y Caña: Ser adulto es…, de Leidy Cardona"></div></figure>
         <figure class="poster"><span class="nail"></span><div class="frm"><img loading="lazy" decoding="async" src="img/artista.webp" width="640" height="483" alt="Una artista junto a su obra expuesta en Las Rudas"></div></figure>
-        <figure class="poster"><span class="nail"></span><div class="frm"><img loading="lazy" decoding="async" src="img/montaje.webp" width="640" height="1136" alt="Montaje de la exposición, colgando la obra en la pared"></div></figure>
+        <figure class="poster"><span class="nail"></span><div class="frm"><img loading="lazy" decoding="async" src="img/montaje.webp" width="508" height="900" alt="Montaje de la exposición, colgando la obra en la pared"></div></figure>
       </div>
     </div>
   </div>
