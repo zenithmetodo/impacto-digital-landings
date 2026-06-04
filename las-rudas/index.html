@@ -125,27 +125,28 @@ h2.big{font-size:clamp(2.1rem,5vw,3.6rem)}
    Sin JS / motion reducido → flujo normal, stack vertical, cada foto ENTERA.
    Con JS (.js-scrolly) → se PINEA y avanza imagen por imagen, descansando en cada una. */
 .sc-stage{display:flex; flex-direction:column}
-.sc-head{flex:0 0 auto; text-align:center; padding:clamp(1.3rem,4.5svh,2.8rem) var(--side) .3rem}
-.sc-head .kicker{justify-content:center; margin-bottom:.5rem}
-.sc-head h2{font-size:clamp(1.75rem,4.4vw,3rem)}
-.sc-intro{color:var(--ink2); max-width:46ch; margin:.7rem auto 0; font-size:clamp(.98rem,.55vw+.85rem,1.12rem)}
+.sc-head{flex:0 0 auto; text-align:center; padding:clamp(1rem,3.2svh,2.2rem) var(--side) .2rem}
+.sc-head .kicker{justify-content:center; margin-bottom:.4rem}
+.sc-head h2{font-size:clamp(1.7rem,4.2vw,2.9rem); line-height:1.05}
+.sc-intro{color:var(--ink2); max-width:40ch; margin:.55rem auto 0; font-size:clamp(.94rem,.4vw+.84rem,1.06rem); line-height:1.45}
 .sc-view{position:relative; display:flex; flex-direction:column; gap:clamp(1.6rem,4vw,2.6rem); padding:1.2rem var(--side) 2.4rem}
 .sc-slide{position:relative; display:grid; place-items:center; will-change:transform,opacity}
 .sc-dots{display:none}
-.sc-dots b{width:8px; height:8px; border-radius:50%; background:currentColor; opacity:.22; transition:opacity .35s, transform .35s}
-.sc-dots b.on{opacity:1; transform:scale(1.4)}
+.sc-dots b{width:9px; height:9px; border-radius:50%; background:currentColor; opacity:.25; transition:opacity .4s, transform .4s}
+.sc-dots b.on{opacity:1; transform:scale(1.45)}
 /* modo pineado (lo activa el JS al cargar) */
-.js-scrolly{position:relative; height:360vh}
+.js-scrolly{position:relative; height:380vh}
 .js-scrolly .sc-stage{position:sticky; top:0; height:100svh; overflow:hidden}
-.js-scrolly .sc-view{flex:1 1 auto; min-height:0; display:block; gap:0; padding:.4rem var(--side)}
-.js-scrolly .sc-slide{position:absolute; inset:0; padding:.4rem var(--side)}
-.js-scrolly .sc-dots{flex:0 0 auto; display:flex; gap:.5rem; justify-content:center; align-items:center; padding:.7rem 0 clamp(1rem,3.5svh,1.8rem)}
+.js-scrolly .sc-view{flex:1 1 auto; min-height:0; display:block; gap:0; padding:.3rem var(--side)}
+.js-scrolly .sc-slide{position:absolute; inset:0; padding:.3rem var(--side)}
+/* puntitos: claramente abajo, separados del pie de foto */
+.js-scrolly .sc-dots{flex:0 0 auto; display:flex; gap:.55rem; justify-content:center; align-items:center; padding:clamp(1.1rem,3svh,1.7rem) 0 clamp(1.2rem,4svh,2.1rem)}
 
 /* LA COCINA */
 .coc-stage .sc-intro b{color:var(--ink); font-weight:800}
 .coc-stage .sc-dots{color:var(--teja)}
 .sc-slide .pola{display:flex; flex-direction:column; max-width:100%}
-.sc-slide .pola img{width:auto; height:auto; max-width:min(88vw,560px); max-height:min(54svh,500px); object-fit:contain; display:block; margin-inline:auto}
+.sc-slide .pola img{width:auto; height:auto; max-width:min(88vw,540px); max-height:min(48svh,470px); object-fit:contain; display:block; margin-inline:auto}
 
 /* ARTE Y CAÑA */
 #arte{background:var(--ink); color:var(--paper)}
@@ -154,7 +155,7 @@ h2.big{font-size:clamp(2.1rem,5vw,3.6rem)}
 .arte-stage .sc-intro{color:rgba(244,236,224,.82)}
 .arte-stage .sc-dots{color:var(--ochre)}
 .art-slide .frm{position:relative; background:var(--paper); padding:12px; border-radius:2px; box-shadow:0 30px 60px -24px rgba(0,0,0,.85)}
-.art-slide .frm img{width:auto; height:auto; max-width:min(86vw,520px); max-height:min(56svh,520px); object-fit:contain; display:block}
+.art-slide .frm img{width:auto; height:auto; max-width:min(86vw,500px); max-height:min(50svh,490px); object-fit:contain; display:block}
 .art-slide .nail{position:absolute; top:-9px; left:50%; transform:translateX(-50%); width:14px; height:14px; border-radius:50%; background:var(--ochre); box-shadow:0 2px 4px rgba(0,0,0,.5), inset 0 -2px 2px rgba(0,0,0,.3); z-index:3}
 
 /* AGENDA */
@@ -326,7 +327,7 @@ dialog.modal::backdrop{background:rgba(33,26,19,.5)}
     <div class="sc-head">
       <span class="kicker eyebrow"><svg class="ico"><use href="#i-utensils"/></svg>La cocina <svg class="spark-d"><use href="#d-spark"/></svg></span>
       <h2>De la de <span class="uline">casa<i></i></span>, con mucho amor</h2>
-      <p class="sc-intro"><b>Sabor casero, sin postureo.</b> Gildas, pincho de tortilla, bravas y cócteles bien hechos. Tradicional, con mucho mucho amor.</p>
+      <p class="sc-intro"><b>Sabor casero, sin postureo.</b> Gildas, pincho de tortilla, bravas y cócteles con mucho amor.</p>
     </div>
     <div class="sc-view">
       <figure class="sc-slide"><div class="pola"><img loading="lazy" decoding="async" src="img/tortilla.webp" width="640" height="853" alt="Pincho de tortilla de patatas jugosa"><figcaption class="cap">Pincho de tortilla</figcaption></div></figure>
@@ -344,7 +345,7 @@ dialog.modal::backdrop{background:rgba(33,26,19,.5)}
     <div class="sc-head">
       <span class="kicker eyebrow"><svg class="ico"><use href="#i-palette"/></svg>Arte y Caña <svg class="spark-d"><use href="#d-spark"/></svg></span>
       <h2>Las paredes <em>cambian</em> cada semana</h2>
-      <p class="sc-intro">Cada pocos días, un artista toma Las Rudas y cuelga su obra. Te tomas una caña rodeado de arte de verdad — y a veces te lo llevas a casa.</p>
+      <p class="sc-intro">Cada pocos días, un artista cuelga su obra en Las Rudas. Te tomas una caña rodeado de arte de verdad.</p>
     </div>
     <div class="sc-view">
       <figure class="sc-slide art-slide"><div class="frm"><span class="nail"></span><img loading="lazy" decoding="async" src="img/cartel-bestias.webp" width="640" height="800" alt="Cartel de Arte y Caña: Dioses, bestias y lo que queda en medio, de Álvaro Jiménez"></div></figure>
@@ -520,18 +521,23 @@ dialog.modal::backdrop{background:rgba(33,26,19,.5)}
     gsap.set(slides, {autoAlpha:0});
     gsap.set(slides[0], {autoAlpha:1});
     setDot(0);
-    var tl = gsap.timeline({ scrollTrigger:{ trigger:sec, start:'top top', end:'bottom bottom', scrub:.5,
+    // flotación sutil de cada marco (vida / arte), independiente del scrub del scroll
+    slides.forEach(function(s,i){ var fr=s.querySelector('.pola,.frm');
+      if(fr) gsap.to(fr,{y:(i%2?7:-7), rotation:(i%2?0.6:-0.6), duration:4+i*0.4, ease:'sine.inOut', yoyo:true, repeat:-1}); });
+    var tl = gsap.timeline({ scrollTrigger:{ trigger:sec, start:'top top', end:'bottom bottom', scrub:.45,
       invalidateOnRefresh:true,
       onUpdate:function(self){ setDot(Math.min(slides.length-1, Math.round(self.progress*(slides.length-1)))); } }});
-    var HOLD=0.62, TR=1.0;
+    var HOLD=0.85;
     tl.to({}, {duration:HOLD});                     // descansa en la 1ª
     slides.forEach(function(s,i){ if(i===0) return;
+      var prev = slides[i-1];
+      // la anterior se va LIMPIA primero; la nueva entra después y aterriza suave (sin solape turbio)
       if(mode==='slide'){
-        tl.fromTo(s,{autoAlpha:0,xPercent:16},{autoAlpha:1,xPercent:0,duration:TR,ease:'power2.out'});
-        tl.to(slides[i-1],{autoAlpha:0,xPercent:-16,duration:TR,ease:'power2.in'},'<');
+        tl.to(prev,{autoAlpha:0, xPercent:-10, scale:0.985, duration:0.5, ease:'power2.in'});
+        tl.fromTo(s,{autoAlpha:0, xPercent:12, scale:0.99},{autoAlpha:1, xPercent:0, scale:1, duration:0.85, ease:'power3.out'},'-=0.28');
       } else {
-        tl.fromTo(s,{autoAlpha:0,scale:1.05},{autoAlpha:1,scale:1,duration:TR,ease:'power1.out'});
-        tl.to(slides[i-1],{autoAlpha:0,scale:.97,duration:TR*0.7,ease:'power1.in'},'<');
+        tl.to(prev,{autoAlpha:0, scale:1.05, duration:0.5, ease:'power2.in'});
+        tl.fromTo(s,{autoAlpha:0, scale:0.965},{autoAlpha:1, scale:1, duration:0.9, ease:'power3.out'},'-=0.30');
       }
       tl.to({}, {duration:HOLD});                   // descansa en esta imagen
     });
