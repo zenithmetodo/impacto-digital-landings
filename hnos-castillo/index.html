@@ -25,7 +25,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rye&family=Zilla+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rye&family=Zilla+Slab:wght@500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/poster-h.jpg" fetchpriority="high">
 
 <script type="application/ld+json">
@@ -77,7 +77,7 @@ body{
 }
 /* paper grain */
 body::before{
-  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 img{max-width:100%;display:block}
@@ -125,6 +125,8 @@ a{color:inherit;text-decoration:none}
 /* ============ HERO ============ */
 .hero{position:relative;min-height:100svh;min-height:100vh;display:grid;place-items:center;overflow:hidden;background:var(--brown-dark)}
 .hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#1a110b center/cover no-repeat}
+.hero__frozen{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity .45s ease;pointer-events:none}
+.anim-off,.anim-off *{animation-play-state:paused !important}
 .hero__scrim{position:absolute;inset:0;z-index:1;
   background:radial-gradient(120% 108% at 50% 46%, rgba(18,10,6,.5), rgba(18,10,6,.84));
   transition:background 1s ease;}
@@ -472,6 +474,7 @@ a{color:inherit;text-decoration:none}
          poster="img/poster-h.jpg"
          data-src-h="video/hero-h.mp4" data-poster-h="img/poster-h.jpg"
          data-src-v="video/hero-v.mp4" data-poster-v="img/poster-v.webp" aria-hidden="true"></video>
+  <img class="hero__frozen" id="heroFrozen" alt="" aria-hidden="true" data-h="img/hero-end-h.webp" data-v="img/hero-end-v.webp">
   <div class="hero__scrim"></div>
 
   <button class="hero__tapplay" id="heroTap" hidden>
@@ -513,18 +516,13 @@ a{color:inherit;text-decoration:none}
 <!-- RED ALE -->
 <section class="section section--dark" id="red-ale">
   <div class="bubbles" aria-hidden="true">
-    <b style="left:5%;width:16px;height:16px;animation-duration:7s;animation-delay:0s"></b>
-    <b style="left:12%;width:9px;height:9px;animation-duration:9.5s;animation-delay:1.4s"></b>
-    <b style="left:19%;width:22px;height:22px;animation-duration:6.5s;animation-delay:2.6s"></b>
-    <b style="left:27%;width:11px;height:11px;animation-duration:8.5s;animation-delay:.8s"></b>
-    <b style="left:38%;width:7px;height:7px;animation-duration:10s;animation-delay:3.4s"></b>
-    <b style="left:46%;width:15px;height:15px;animation-duration:7.5s;animation-delay:1.9s"></b>
-    <b style="left:57%;width:10px;height:10px;animation-duration:9s;animation-delay:.3s"></b>
-    <b style="left:66%;width:18px;height:18px;animation-duration:6.8s;animation-delay:2.2s"></b>
-    <b style="left:74%;width:8px;height:8px;animation-duration:11s;animation-delay:4s"></b>
-    <b style="left:82%;width:13px;height:13px;animation-duration:8s;animation-delay:1.1s"></b>
-    <b style="left:90%;width:20px;height:20px;animation-duration:7.2s;animation-delay:3s"></b>
-    <b style="left:96%;width:9px;height:9px;animation-duration:9.8s;animation-delay:.6s"></b>
+    <b style="left:8%;width:16px;height:16px;animation-duration:7s;animation-delay:0s"></b>
+    <b style="left:20%;width:11px;height:11px;animation-duration:8.5s;animation-delay:2.6s"></b>
+    <b style="left:34%;width:8px;height:8px;animation-duration:10s;animation-delay:1.2s"></b>
+    <b style="left:48%;width:15px;height:15px;animation-duration:7.5s;animation-delay:3.4s"></b>
+    <b style="left:62%;width:10px;height:10px;animation-duration:9s;animation-delay:.5s"></b>
+    <b style="left:78%;width:18px;height:18px;animation-duration:6.8s;animation-delay:2.2s"></b>
+    <b style="left:92%;width:9px;height:9px;animation-duration:9.8s;animation-delay:1.6s"></b>
   </div>
   <div class="container">
     <div class="insignia">
@@ -613,15 +611,11 @@ a{color:inherit;text-decoration:none}
 <!-- HERMANDAD -->
 <section class="section section--dark" id="hermandad">
   <div class="bubbles" aria-hidden="true">
-    <b style="left:8%;width:13px;height:13px;animation-duration:8s;animation-delay:.5s"></b>
-    <b style="left:17%;width:8px;height:8px;animation-duration:10s;animation-delay:2.2s"></b>
-    <b style="left:29%;width:19px;height:19px;animation-duration:6.8s;animation-delay:1.2s"></b>
-    <b style="left:41%;width:10px;height:10px;animation-duration:9s;animation-delay:3.1s"></b>
-    <b style="left:52%;width:15px;height:15px;animation-duration:7.4s;animation-delay:.2s"></b>
-    <b style="left:63%;width:8px;height:8px;animation-duration:10.5s;animation-delay:2.7s"></b>
-    <b style="left:72%;width:17px;height:17px;animation-duration:7s;animation-delay:1.6s"></b>
-    <b style="left:84%;width:11px;height:11px;animation-duration:8.6s;animation-delay:3.6s"></b>
-    <b style="left:93%;width:14px;height:14px;animation-duration:7.8s;animation-delay:.9s"></b>
+    <b style="left:10%;width:13px;height:13px;animation-duration:8s;animation-delay:.5s"></b>
+    <b style="left:30%;width:9px;height:9px;animation-duration:10s;animation-delay:2.2s"></b>
+    <b style="left:50%;width:16px;height:16px;animation-duration:7.4s;animation-delay:1.2s"></b>
+    <b style="left:70%;width:10px;height:10px;animation-duration:9s;animation-delay:3.1s"></b>
+    <b style="left:88%;width:14px;height:14px;animation-duration:7.8s;animation-delay:.9s"></b>
   </div>
   <div class="container">
     <div class="bro">
@@ -774,6 +768,8 @@ a{color:inherit;text-decoration:none}
   function startVideo(){
     if(started || !video) return;
     started = true;
+    var fr = document.getElementById("heroFrozen");
+    if(fr && !fr.getAttribute("src")){ fr.setAttribute("src", mobile ? fr.getAttribute("data-v") : fr.getAttribute("data-h")); }
     var p = video.play();
     if(p && p.catch){
       p.then(function(){
@@ -794,18 +790,27 @@ a{color:inherit;text-decoration:none}
   }
 
   if(video){
-    var src = mobile ? video.getAttribute("data-src-v") : video.getAttribute("data-src-h");
     var pos = mobile ? video.getAttribute("data-poster-v") : video.getAttribute("data-poster-h");
     video.setAttribute("poster", pos);
-    video.src = src;
-    try{ video.load(); }catch(e){}
-    video.addEventListener("ended", revealB);
 
     if(reduce){
-      // Movimiento reducido: sin autoplay, mostramos el texto de marca sobre el póster
+      // Movimiento reducido: NO cargamos el vídeo → cero RAM de decodificador; texto sobre el póster
       revealB();
     } else {
-      // Arranca cuanto antes; reintenta cuando haya datos por si la 1ª llamada no-opera
+      video.src = mobile ? video.getAttribute("data-src-v") : video.getAttribute("data-src-h");
+      try{ video.load(); }catch(e){}
+      // Al terminar: revela Texto B, congela en imagen estática y LIBERA el vídeo de la RAM
+      video.addEventListener("ended", function(){
+        revealB();
+        var fr = document.getElementById("heroFrozen");
+        if(fr){
+          fr.style.opacity = "1";
+          window.setTimeout(function(){
+            try{ video.pause(); video.removeAttribute("src"); video.load(); }catch(e){}
+            video.style.display = "none";
+          }, 450);
+        }
+      });
       startVideo();
       video.addEventListener("loadeddata", startVideo, {once:true});
     }
@@ -833,6 +838,14 @@ a{color:inherit;text-decoration:none}
 
   /* ---- Year ---- */
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---- Pausa animaciones de secciones fuera de pantalla (ahorra CPU/RAM/batería) ---- */
+  if("IntersectionObserver" in window){
+    var animIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ en.target.classList.toggle("anim-off", !en.isIntersecting); });
+    }, {rootMargin:"140px 0px"});
+    document.querySelectorAll("#inicio, .marquee, #red-ale, #catalogo, #hermandad").forEach(function(el){ animIO.observe(el); });
+  }
 })();
 </script>
 </body>
