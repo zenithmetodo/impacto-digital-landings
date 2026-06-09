@@ -260,6 +260,43 @@ a{color:inherit;text-decoration:none}
 .beer__name{font-family:var(--font-hero);font-weight:600;font-size:1.45rem;line-height:1.05;margin-top:.3rem}
 .beer__style{font-family:var(--font-accent);font-size:.82rem;color:var(--red)}
 .beer__desc{font-size:.95rem;color:var(--ink-soft)}
+/* ====== CARRUSEL DE CERVEZAS ====== */
+.carousel-wrap{max-width:920px;margin:0 auto}
+.carousel{position:relative;display:flex;align-items:center;gap:.7rem}
+.carousel__viewport{overflow:hidden;flex:1;border-radius:var(--radius);touch-action:pan-y}
+.carousel__track{display:flex;transition:transform .55s cubic-bezier(.5,.05,.2,1);will-change:transform}
+.carousel__track.dragging{transition:none;cursor:grabbing}
+.bshow{flex:0 0 100%;width:100%;box-sizing:border-box;display:grid;grid-template-columns:.92fr 1.08fr;
+  gap:clamp(1.2rem,4vw,2.4rem);align-items:center;background:var(--paper);border:3px solid var(--ink);
+  border-radius:var(--radius);box-shadow:0 6px 0 var(--ink);padding:clamp(1.2rem,3vw,1.9rem)}
+.bshow__media{border:3px solid var(--ink);border-radius:14px;overflow:hidden;background:#1a110b;aspect-ratio:1/1;box-shadow:0 5px 0 var(--ink)}
+.bshow__media img{width:100%;height:100%;object-fit:cover;display:block}
+.bshow__info{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem}
+.bshow__name{font-family:var(--font-hero);font-weight:600;font-size:clamp(1.8rem,4.5vw,2.7rem);line-height:1.02}
+.bshow__style{font-family:var(--font-accent);font-size:1rem;color:var(--red)}
+.bshow__desc{font-size:1.02rem;color:var(--ink-soft);max-width:42ch;line-height:1.55}
+.carousel__nav{flex:none;width:48px;height:48px;border-radius:50%;border:2.5px solid var(--ink);background:var(--amber);
+  color:var(--ink);box-shadow:0 4px 0 var(--ink);display:grid;place-items:center;cursor:pointer;
+  transition:transform .15s, box-shadow .15s, background .2s;z-index:2}
+.carousel__nav:hover{background:var(--amber-2);transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
+.carousel__nav:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
+.carousel__nav .ico{width:1.5rem;height:1.5rem}
+.carousel__nav--prev .ico{transform:rotate(90deg)}
+.carousel__nav--next .ico{transform:rotate(-90deg)}
+.carousel__dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.5rem}
+.carousel__dots button{width:11px;height:11px;border-radius:50%;border:2px solid var(--ink);background:transparent;
+  cursor:pointer;padding:0;transition:background .2s, transform .2s}
+.carousel__dots button.active{background:var(--red);transform:scale(1.25)}
+@media(max-width:760px){
+  .carousel{gap:.35rem}
+  .carousel__nav{width:40px;height:40px}
+  .carousel__nav .ico{width:1.25rem;height:1.25rem}
+  .bshow{grid-template-columns:1fr;gap:1rem;text-align:center;padding:1.3rem}
+  .bshow__media{max-width:280px;margin-inline:auto;width:100%}
+  .bshow__info{align-items:center}
+  .bshow__desc{max-width:36ch;font-size:.96rem}
+}
+
 .cat-note{position:relative;margin:3rem auto 0;max-width:540px;display:flex;flex-direction:column;align-items:center;gap:.5rem;
   text-align:center;font-size:.9rem;line-height:1.55;font-weight:500;color:var(--ink-soft);
   background:var(--cream-2);border:2.5px solid var(--ink);border-radius:20px;padding:1.4rem 1.7rem;box-shadow:0 5px 0 var(--ink)}
@@ -565,43 +602,70 @@ a{color:inherit;text-decoration:none}
       <p class="lead reveal d2">Cada cierto tiempo sale una edición que homenajea lo que amamos —cine, series, juguetes, cultura pop— y desaparece cuando se acaba. Si la ves, cáela. Lo único fijo es la Red Ale; el resto es pura experimentación, lote a lote, sin miedo a probar algo distinto.</p>
     </div>
 
-    <div class="grid-beers">
-      <article class="beer reveal">
-        <div class="beer__top"><svg class="ico beer__mug" aria-hidden="true"><use href="#i-mug"/></svg><span class="beer__state beer__state--always">Siempre</span></div>
-        <h3 class="beer__name">Red Ale</h3>
-        <p class="beer__style">Red Ale · la insignia</p>
-        <p class="beer__desc">Maltas tostadas, color cobre y un final que pide la siguiente. La que nos define.</p>
-      </article>
-      <article class="beer reveal d1">
-        <div class="beer__top"><svg class="ico beer__mug" aria-hidden="true"><use href="#i-mug"/></svg><span class="beer__state beer__state--season">Temporada</span></div>
-        <h3 class="beer__name">Doppelbock</h3>
-        <p class="beer__style">Doppelbock · maltosa</p>
-        <p class="beer__desc">Oscura, potente y dulce de malta. El despertar del lagarto: se viene la cuenta regresiva.</p>
-      </article>
-      <article class="beer reveal d2">
-        <div class="beer__top"><svg class="ico beer__mug" aria-hidden="true"><use href="#i-mug"/></svg><span class="beer__state beer__state--always">Suave</span></div>
-        <h3 class="beer__name">Cream Ale</h3>
-        <p class="beer__style">Cream Ale · refrescante</p>
-        <p class="beer__desc">Houston, tenemos una Cream Ale. Ligera, cremosa y peligrosamente fácil de tomar.</p>
-      </article>
-      <article class="beer reveal">
-        <div class="beer__top"><svg class="ico beer__mug" aria-hidden="true"><use href="#i-mug"/></svg><span class="beer__state beer__state--limited">Edición limitada</span></div>
-        <h3 class="beer__name">Smash Wars</h3>
-        <p class="beer__style">IPA · lúpulo Galaxy</p>
-        <p class="beer__desc">Una IPA con lúpulo Galaxy que manda tus sentidos a una galaxia muy, muy lejana.</p>
-      </article>
-      <article class="beer reveal d1">
-        <div class="beer__top"><svg class="ico beer__mug" aria-hidden="true"><use href="#i-mug"/></svg><span class="beer__state beer__state--limited">Edición limitada</span></div>
-        <h3 class="beer__name">Chinese Lager</h3>
-        <p class="beer__style">Lager · tributo</p>
-        <p class="beer__desc">Nuestra lager de año nuevo, reinterpretada. Para celebrar —siempre celebrar—.</p>
-      </article>
-      <article class="beer reveal d2">
-        <div class="beer__top"><svg class="ico beer__mug" aria-hidden="true"><use href="#i-mug"/></svg><span class="beer__state beer__state--limited">Edición limitada</span></div>
-        <h3 class="beer__name">Drunk</h3>
-        <p class="beer__style">American Lager · Springfield</p>
-        <p class="beer__desc">Una lager estilo americano, digna del Bar de Moe. Tributo para los reales fans.</p>
-      </article>
+    <div class="carousel-wrap reveal">
+      <div class="carousel" id="beerCarousel" tabindex="0" aria-label="Carrusel de cervezas">
+        <button class="carousel__nav carousel__nav--prev" id="beerPrev" type="button" aria-label="Cerveza anterior"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="beerTrack">
+            <article class="bshow">
+              <div class="bshow__media"><img src="img/beer-red-ale.webp" alt="Botella Red Ale de Hnos. Castillo" width="820" height="820" loading="lazy"></div>
+              <div class="bshow__info">
+                <span class="beer__state beer__state--always">Siempre</span>
+                <h3 class="bshow__name">Red Ale</h3>
+                <p class="bshow__style">Red Ale · la insignia</p>
+                <p class="bshow__desc">Maltas tostadas, color cobre y un final que pide la siguiente. La que nos define.</p>
+              </div>
+            </article>
+            <article class="bshow">
+              <div class="bshow__media"><img src="img/beer-doppelbock.webp" alt="Botella Doppelbock de Hnos. Castillo" width="820" height="820" loading="lazy"></div>
+              <div class="bshow__info">
+                <span class="beer__state beer__state--season">Temporada</span>
+                <h3 class="bshow__name">Doppelbock</h3>
+                <p class="bshow__style">Doppelbock · maltosa</p>
+                <p class="bshow__desc">Oscura, potente y dulce de malta. El despertar del lagarto: se viene la cuenta regresiva.</p>
+              </div>
+            </article>
+            <article class="bshow">
+              <div class="bshow__media"><img src="img/beer-cream-ale.webp" alt="Botella Cream Ale de Hnos. Castillo" width="820" height="820" loading="lazy"></div>
+              <div class="bshow__info">
+                <span class="beer__state beer__state--always">Suave</span>
+                <h3 class="bshow__name">Cream Ale</h3>
+                <p class="bshow__style">Cream Ale · refrescante</p>
+                <p class="bshow__desc">Houston, tenemos una Cream Ale. Ligera, cremosa y peligrosamente fácil de tomar.</p>
+              </div>
+            </article>
+            <article class="bshow">
+              <div class="bshow__media"><img src="img/beer-smash-wars.webp" alt="Botella Smash Wars IPA de Hnos. Castillo" width="820" height="820" loading="lazy"></div>
+              <div class="bshow__info">
+                <span class="beer__state beer__state--limited">Edición limitada</span>
+                <h3 class="bshow__name">Smash Wars</h3>
+                <p class="bshow__style">IPA · lúpulo Galaxy</p>
+                <p class="bshow__desc">Una IPA con lúpulo Galaxy que manda tus sentidos a una galaxia muy, muy lejana.</p>
+              </div>
+            </article>
+            <article class="bshow">
+              <div class="bshow__media"><img src="img/beer-chinese-lager.webp" alt="Botella Chinese Lager de Hnos. Castillo" width="820" height="820" loading="lazy"></div>
+              <div class="bshow__info">
+                <span class="beer__state beer__state--limited">Edición limitada</span>
+                <h3 class="bshow__name">Chinese Lager</h3>
+                <p class="bshow__style">Lager · tributo</p>
+                <p class="bshow__desc">Nuestra lager de año nuevo, reinterpretada. Para celebrar —siempre celebrar—.</p>
+              </div>
+            </article>
+            <article class="bshow">
+              <div class="bshow__media"><img src="img/beer-drunk.webp" alt="Botella Drunk American Lager de Hnos. Castillo" width="820" height="820" loading="lazy"></div>
+              <div class="bshow__info">
+                <span class="beer__state beer__state--limited">Edición limitada</span>
+                <h3 class="bshow__name">Drunk</h3>
+                <p class="bshow__style">American Lager · Springfield</p>
+                <p class="bshow__desc">Una lager estilo americano, digna del Bar de Moe. Tributo para los reales fans.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carousel__nav carousel__nav--next" id="beerNext" type="button" aria-label="Siguiente cerveza"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="carousel__dots" id="beerDots" role="tablist" aria-label="Ir a cerveza"></div>
     </div>
 
     <p class="cat-note reveal"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg><span>Las ediciones limitadas van y vienen. Síguenos en Instagram para no perderte la próxima.</span></p>
@@ -620,7 +684,7 @@ a{color:inherit;text-decoration:none}
   <div class="container">
     <div class="bro">
       <div class="bro__art reveal">
-        <img class="bro__brothers" src="img/brothers2.webp" alt="Los dos hermanos Castillo brindando con jarras de cerveza, ilustración estilo dibujo animado" width="600" height="280" loading="lazy">
+        <img class="bro__brothers" src="img/brothers-hd.webp" alt="Los dos hermanos Castillo brindando con jarras de cerveza, ilustración estilo dibujo animado de los años 30" width="820" height="820" loading="lazy">
       </div>
       <div class="bro__copy">
         <span class="eyebrow reveal"><svg class="ico" aria-hidden="true"><use href="#i-spark"/></svg> Nuestra historia</span>
@@ -846,6 +910,46 @@ a{color:inherit;text-decoration:none}
     }, {rootMargin:"140px 0px"});
     document.querySelectorAll("#inicio, .marquee, #red-ale, #catalogo, #hermandad").forEach(function(el){ animIO.observe(el); });
   }
+
+  /* ---- Carrusel de cervezas (flechas + puntos + swipe + arrastre + teclado) ---- */
+  (function(){
+    var track = document.getElementById("beerTrack");
+    if(!track) return;
+    var slides = track.children, n = slides.length, i = 0;
+    for(var s=0;s<n;s++){ var im0 = slides[s].querySelector("img"); if(im0) im0.loading = "eager"; }
+    var dotsWrap = document.getElementById("beerDots");
+    var vp = track.parentElement, dots = [];
+    for(var d=0; d<n; d++){
+      var b = document.createElement("button");
+      b.type = "button"; b.setAttribute("aria-label", "Cerveza " + (d+1));
+      (function(idx){ b.addEventListener("click", function(){ go(idx); }); })(d);
+      dotsWrap.appendChild(b); dots.push(b);
+    }
+    function render(){
+      track.style.transform = "translateX(" + (-i*100) + "%)";
+      for(var k=0;k<n;k++) dots[k].classList.toggle("active", k===i);
+    }
+    function go(idx){ i = (idx % n + n) % n; render(); }
+    var prev = document.getElementById("beerPrev"), next = document.getElementById("beerNext");
+    if(prev) prev.addEventListener("click", function(){ go(i-1); });
+    if(next) next.addEventListener("click", function(){ go(i+1); });
+    var car = document.getElementById("beerCarousel");
+    if(car) car.addEventListener("keydown", function(e){
+      if(e.key==="ArrowLeft"){ e.preventDefault(); go(i-1); }
+      else if(e.key==="ArrowRight"){ e.preventDefault(); go(i+1); }
+    });
+    var x0=null, dx=0;
+    function start(x){ x0=x; dx=0; track.classList.add("dragging"); }
+    function moveTo(x){ if(x0===null) return; dx = x - x0; track.style.transform = "translateX(calc(" + (-i*100) + "% + " + dx + "px))"; }
+    function end(){ if(x0===null) return; track.classList.remove("dragging"); var w = vp.offsetWidth || 1; if(Math.abs(dx) > w*0.16){ go(i + (dx<0?1:-1)); } else { render(); } x0=null; dx=0; }
+    vp.addEventListener("touchstart", function(e){ start(e.touches[0].clientX); }, {passive:true});
+    vp.addEventListener("touchmove", function(e){ moveTo(e.touches[0].clientX); }, {passive:true});
+    vp.addEventListener("touchend", end);
+    vp.addEventListener("mousedown", function(e){ e.preventDefault(); start(e.clientX); });
+    window.addEventListener("mousemove", function(e){ if(x0!==null) moveTo(e.clientX); });
+    window.addEventListener("mouseup", end);
+    render();
+  })();
 })();
 </script>
 </body>
