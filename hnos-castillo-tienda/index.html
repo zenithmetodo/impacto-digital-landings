@@ -641,8 +641,16 @@ button{font-family:inherit}
     var url = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
     var cartel = document.getElementById("cartel");
     cartel.classList.add("show"); cartel.setAttribute("aria-hidden", "false");
-    window.setTimeout(function(){ window.location.href = url; }, 1700);
+    window.setTimeout(function(){ hideCartel(); window.location.href = url; }, 1700);
   });
+
+  /* ocultar el cartel ¡SALUD! — al enviar y al volver atrás (bfcache) para que no se quede pegado */
+  function hideCartel(){
+    var c = document.getElementById("cartel");
+    if(c){ c.classList.remove("show"); c.setAttribute("aria-hidden", "true"); }
+  }
+  window.addEventListener("pagehide", hideCartel);   // deja limpio el snapshot que cachea el navegador
+  window.addEventListener("pageshow", hideCartel);   // limpia al restaurar con la flecha "atrás"
 
   /* menú móvil */
   var nav = document.getElementById("nav"), mb = document.getElementById("menuBtn");
