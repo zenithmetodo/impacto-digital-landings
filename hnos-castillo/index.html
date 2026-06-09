@@ -125,10 +125,10 @@ a{color:inherit;text-decoration:none}
 .hero{position:relative;min-height:100svh;min-height:100vh;display:grid;place-items:center;overflow:hidden;background:var(--brown-dark)}
 .hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#1a110b center/cover no-repeat}
 .hero__scrim{position:absolute;inset:0;z-index:1;
-  background:radial-gradient(130% 110% at 50% 42%, rgba(22,13,8,.34), rgba(18,10,6,.82));
-  transition:background .9s ease;}
-.hero.is-playing .hero__scrim{
-  background:linear-gradient(to top, rgba(18,10,6,.86) 4%, rgba(18,10,6,.28) 46%, rgba(18,10,6,.5) 100%);
+  background:radial-gradient(120% 108% at 50% 46%, rgba(18,10,6,.5), rgba(18,10,6,.84));
+  transition:background 1s ease;}
+.hero.text-b .hero__scrim{
+  background:linear-gradient(to top, rgba(18,10,6,.86) 0%, rgba(18,10,6,.32) 48%, rgba(18,10,6,.52) 100%);
 }
 .hero__inner{position:relative;z-index:3;text-align:center;color:var(--cream);padding-top:5rem;padding-bottom:5rem;width:100%}
 .hero__phase{position:absolute;left:0;right:0;padding-inline:var(--side-padding);
@@ -597,42 +597,60 @@ a{color:inherit;text-decoration:none}
     nav.addEventListener("click", function(e){ if(e.target.closest("a")){ nav.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); } });
   }
 
-  /* ---- HERO: source by viewport + timed text/video sequence ---- */
+  /* ---- HERO: el vídeo se reproduce al entrar (Texto A encima); cuando TERMINA, aparece Texto B ---- */
   var video = document.getElementById("heroVideo");
   var phaseA = document.getElementById("phaseA"), phaseB = document.getElementById("phaseB");
   var hero = document.getElementById("inicio"), tap = document.getElementById("heroTap");
   var mobile = window.matchMedia("(max-width: 820px)").matches;
+  var revealed = false, started = false;
+
+  function revealB(){
+    if(revealed) return; revealed = true;
+    phaseA.classList.remove("show");
+    phaseB.classList.add("show");
+    hero.classList.add("text-b");
+  }
+
+  function startVideo(){
+    if(started || !video) return;
+    started = true;
+    var p = video.play();
+    if(p && p.catch){
+      p.then(function(){
+        // Backup por si el evento 'ended' no dispara en algún navegador
+        var left = ((isFinite(video.duration) && video.duration) ? video.duration : 4) - video.currentTime;
+        window.setTimeout(revealB, Math.max(left, 0) * 1000 + 1600);
+      }).catch(function(){
+        // Autoplay bloqueado: dejamos el Texto A sobre el póster y que el usuario lo arranque
+        started = false;
+        if(tap){
+          tap.hidden = false;
+          tap.addEventListener("click", function(){ tap.hidden = true; startVideo(); }, {once:true});
+        } else { revealB(); }
+      });
+    } else {
+      window.setTimeout(revealB, 5600);
+    }
+  }
+
   if(video){
     var src = mobile ? video.getAttribute("data-src-v") : video.getAttribute("data-src-h");
     var pos = mobile ? video.getAttribute("data-poster-v") : video.getAttribute("data-poster-h");
     video.setAttribute("poster", pos);
     video.src = src;
     try{ video.load(); }catch(e){}
-  }
+    video.addEventListener("ended", revealB);
 
-  function revealB(){
-    phaseA.classList.remove("show");
-    phaseB.classList.add("show");
-    hero.classList.add("is-playing");
-  }
-  function startVideo(){
-    if(!video) { revealB(); return; }
-    var p = video.play();
-    if(p && p.catch){
-      p.then(function(){ revealB(); }).catch(function(){
-        // autoplay blocked -> reveal text anyway + offer tap
-        revealB();
-        if(tap){ tap.hidden = false; tap.addEventListener("click", function(){ video.play(); tap.hidden = true; }); }
-      });
-    } else { revealB(); }
-  }
-
-  if(reduce){
-    // No autoplay: show brand text immediately over poster
-    revealB();
+    if(reduce){
+      // Movimiento reducido: sin autoplay, mostramos el texto de marca sobre el póster
+      revealB();
+    } else {
+      // Arranca cuanto antes; reintenta cuando haya datos por si la 1ª llamada no-opera
+      startVideo();
+      video.addEventListener("loadeddata", startVideo, {once:true});
+    }
   } else {
-    // Phase A holds ~3.2s so the line can be read, then the video starts and Phase B appears
-    window.setTimeout(startVideo, 3200);
+    revealB();
   }
 
   /* ---- Reveal on scroll + safety net ---- */
