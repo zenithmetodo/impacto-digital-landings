@@ -544,6 +544,23 @@ strong{font-weight:700;color:var(--ink)}
   .seal-ring{animation:none!important}
   .reveal .wcard__ic,.reveal .bono__ic,.reveal .mod__ic,.reveal-s .mod__ic,.reveal .myth__ic{opacity:1!important;transform:none!important}
 }
+
+/* ===== PERF móvil + gráfica más grande ===== */
+@media(max-width:680px){
+  /* cortar decoraciones animadas continuas (ahorra CPU/GPU en el teléfono) */
+  .blob,.petals{display:none}
+  .grad,.hero__pill{animation:none}
+  .seal-ring,.pricecard__deal svg,.stars svg{animation:none}
+  .scrollcue span::after,.btn--live::after{animation:none}
+  .pricecard__deal,.bono__rib,.scarcity,.mini-timer{animation:none}
+  .myth-punch::before,.close::before,.close::after{animation:none}
+  *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  /* gráfica "Reserva ovárica": etiquetas, puntos y curva más grandes/legibles */
+  .tl__chart{padding:1rem .55rem 1.3rem}
+  .tl__chart svg text{font-size:25px}
+  .tl__chart svg circle{r:9}
+  .tl__chart .tl-curve{stroke-width:6}
+}
 </style>
 </head>
 <body>
