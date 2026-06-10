@@ -280,6 +280,7 @@ strong{font-weight:700;color:var(--ink)}
 .tests{background:#fff}
 .test-feat{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(1.4rem,1rem + 2vw,2.6rem);align-items:center;margin-top:2.6rem;background:var(--cream-tint);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.4rem,1rem + 2vw,2.4rem);box-shadow:var(--shadow-soft)}
 .test-feat__media{aspect-ratio:1/1;border-radius:20px;background:linear-gradient(160deg,var(--mint-soft),var(--coral-soft));display:grid;place-items:center;border:1px solid var(--line);position:relative;overflow:hidden}
+.tf-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;z-index:2}
 .test-feat__media .nm{position:absolute;bottom:1rem;left:1rem;background:rgba(255,255,255,.9);backdrop-filter:blur(6px);border-radius:12px;padding:.5rem .8rem;font-weight:700;color:var(--slate);font-size:.85rem}
 .test-feat__media .nm small{display:block;font-weight:500;color:var(--muted);font-size:.72rem}
 .test-feat blockquote{font-family:var(--font-display);font-style:italic;font-size:clamp(1.15rem,1rem + 1.2vw,1.6rem);line-height:1.35;color:var(--slate);font-weight:500}
@@ -832,23 +833,7 @@ strong{font-weight:700;color:var(--ink)}
     </div>
     <figure class="test-feat reveal-s">
       <div class="test-feat__media">
-        <span class="tf-mono" aria-hidden="true">M</span>
-        <svg class="tf-sprig" viewBox="0 0 120 90" width="120" aria-hidden="true">
-          <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
-            <path d="M60 86V34"/>
-            <path d="M60 66c-13-2-22-12-23-26 14 1 25 12 23 26Z" fill="rgba(255,255,255,.18)"/>
-            <path d="M60 66c13-2 22-12 23-26-14 1-25 12-23 26Z" fill="rgba(255,255,255,.18)"/>
-            <g transform="translate(60 24)" stroke-width="2">
-              <ellipse cx="0" cy="-9" rx="4.5" ry="9" fill="rgba(255,255,255,.2)"/>
-              <ellipse cx="0" cy="-9" rx="4.5" ry="9" fill="rgba(255,255,255,.2)" transform="rotate(72)"/>
-              <ellipse cx="0" cy="-9" rx="4.5" ry="9" fill="rgba(255,255,255,.2)" transform="rotate(144)"/>
-              <ellipse cx="0" cy="-9" rx="4.5" ry="9" fill="rgba(255,255,255,.2)" transform="rotate(216)"/>
-              <ellipse cx="0" cy="-9" rx="4.5" ry="9" fill="rgba(255,255,255,.2)" transform="rotate(288)"/>
-              <circle r="3.4" fill="#fff" stroke="none"/>
-            </g>
-          </g>
-        </svg>
-        <div class="nm">Marta<small>34 años · Madrid</small></div>
+        <img class="tf-photo" src="marta-testimonio-low-ticket.webp" alt="Reseña de 5 estrellas de Marta en Google sobre la Dra. Ana Pérez: su primer positivo tras 4 años de infertilidad" width="828" height="784" loading="lazy">
       </div>
       <div>
         <span class="stars" aria-label="5 estrellas">
@@ -858,8 +843,8 @@ strong{font-weight:700;color:var(--ink)}
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 20.9 7 14 2 9.2l6.9-.9L12 2Z"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 20.9 7 14 2 9.2l6.9-.9L12 2Z"/></svg>
         </span>
-        <blockquote>"Los cuatro años más libres de mi vida empezaron el día que vitrifiqué mis óvulos. Dejé de vivir corriendo, dejé de elegir pareja condicionada. Y creo que por eso encontré al padre de mi hija."</blockquote>
-        <figcaption>Marta llegó con 34 años recién separada. Con todos sus resultados en la mano, eligió vitrificar sin prisa. Cuatro años después escribió: estaba embarazada de forma natural. Nunca llegó a usar sus óvulos — pero por fin dejó de decidir desde el miedo.</figcaption>
+        <blockquote>"Gracias a la doctora he tenido mi primer positivo después de 4 años de infertilidad. Muy clara desde el principio, explicándolo todo punto por punto. Tiene unas manos de oro."</blockquote>
+        <figcaption><strong>Marta</strong> · reseña verificada en Google. Su primer positivo llegó después de 4 años intentándolo — con información clara, sin prisa y sin rodeos.</figcaption>
       </div>
     </figure>
     <div class="test-row">
