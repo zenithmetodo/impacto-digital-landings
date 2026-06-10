@@ -418,10 +418,11 @@ strong{font-weight:700;color:var(--ink)}
 @media(min-width:861px){.sticky-cta{display:none}}
 
 /* ===== reveal ===== */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
-.reveal.in{opacity:1;transform:none}
-.reveal-s{opacity:0;transform:scale(.96);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
-.reveal-s.in{opacity:1;transform:none}
+/* reveals por animación CSS (corren en el render, NO dependen del JS → a prueba de WP Rocket "delay JS") */
+.reveal{animation:revIn .9s var(--ease) both;animation-delay:var(--d,0s)}
+.reveal-s{animation:revInS .8s var(--ease) both;animation-delay:var(--d,0s)}
+@keyframes revIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes revInS{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
 
 /* ===== extra motion (mobile-friendly) ===== */
 .hero .wrap{position:relative;z-index:2}
@@ -451,23 +452,22 @@ strong{font-weight:700;color:var(--ink)}
 .trust-track i{width:6px;height:6px;border-radius:50%;background:var(--coral);flex:none}
 @keyframes scrollX{from{transform:translateX(0)}to{transform:translateX(-100%)}}
 
-/* icon pop on reveal */
+/* icon pop (animación CSS, sin JS) */
 .reveal .wcard__ic,.reveal .bono__ic,.reveal .mod__ic,.reveal-s .mod__ic,.reveal .myth__ic{
-  transform:scale(.55) rotate(-9deg);opacity:0;
-  transition:transform .65s var(--ease-back) .12s,opacity .5s ease .12s
+  animation:icPop .65s var(--ease-back) both;animation-delay:.18s
 }
-.reveal.in .wcard__ic,.reveal.in .bono__ic,.reveal.in .mod__ic,.reveal-s.in .mod__ic,.reveal.in .myth__ic{transform:none;opacity:1}
+@keyframes icPop{from{opacity:0;transform:scale(.55) rotate(-9deg)}to{opacity:1;transform:none}}
 
-/* timeline draw-on */
-.tl-curve{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.9s var(--ease) .25s}
-.tl__chart.in .tl-curve{stroke-dashoffset:0}
-.tl-area{opacity:0;transition:opacity 1.1s ease 1s}
-.tl__chart.in .tl-area{opacity:1}
+/* timeline draw-on (animación CSS, sin JS) */
+.tl-curve{stroke-dasharray:1;stroke-dashoffset:1;animation:tlDraw 1.9s var(--ease) .3s forwards}
+@keyframes tlDraw{to{stroke-dashoffset:0}}
+.tl-area{animation:tlFade 1.1s ease 1s both}
+@keyframes tlFade{from{opacity:0}to{opacity:1}}
 
 /* guarantee seal */
 .seal-ring{transform-origin:60px 60px;animation:spin 18s linear infinite}
-.seal-check{stroke-dasharray:70;stroke-dashoffset:70;transition:stroke-dashoffset 1s var(--ease) .35s}
-.guar__card.in .seal-check{stroke-dashoffset:0}
+.seal-check{stroke-dasharray:70;stroke-dashoffset:70;animation:sealDraw 1s var(--ease) .45s forwards}
+@keyframes sealDraw{to{stroke-dashoffset:0}}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* CTA liveliness */
@@ -517,6 +517,9 @@ strong{font-weight:700;color:var(--ink)}
 /* ===== responsive ===== */
 @media(max-width:860px){
   .hero__grid{grid-template-columns:1fr;gap:2rem}
+  .hero__grid > .reveal{text-align:center}
+  .hero__grid > .reveal > div{margin-inline:auto}
+  .hero__sub{margin-inline:auto}
   .pricecard{max-width:440px;margin-inline:auto;width:100%}
   .founder__grid{grid-template-columns:1fr;gap:1.8rem}
   .medallion{max-width:340px;margin-inline:auto;width:100%}
