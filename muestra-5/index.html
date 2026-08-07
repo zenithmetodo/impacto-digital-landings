@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Suto Barcelona — omakase japonés del chef Yoshikazu Suto en Sants</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="theme-color" content="#f7f5ef">
+
+  <link rel="preload" as="image" href="img/suto-42.webp" fetchpriority="high">
+
+  <!-- ✦ FONTS-PRECONNECT-START ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-PRECONNECT-END ✦ -->
+
+  <!-- ✦ HERO-PRELOAD-START ✦ -->
+  <link rel="preload" as="image" href="img/suto-42.webp" fetchpriority="high">
+  <!-- ✦ HERO-PRELOAD-END ✦ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ✦ FONTS-CSS-PRELOAD-START ✦ -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@400;500&display=swap">
+    <!-- ✦ FONTS-CSS-PRELOAD-END ✦ -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       SUTO — Minimalismo japonés moderno
+       Blanco roto + tinta sumi + indigo profundo + ocre cerámica.
+       Mucho espacio en blanco. Foco en producto, técnica, ritual.
+       Eje narrativo: el ritual del omakase contado en cuatro tiempos.
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+
+    :root {
+      --bg: #f7f5ef;
+      --bg-card: #fdfbf4;
+      --bg-deep: #14171c;
+      --ink: #1a1c20;
+      --ink-soft: #5d6066;
+      --indigo: #1f3a5f;
+      --indigo-deep: #0e2240;
+      --ocre: #b27842;
+      --rojo: #a83632;
+      --line: #d6d2c4;
+
+      --display: 'Cormorant Garamond', 'Times New Roman', serif;
+      --jp: 'Noto Serif JP', 'Cormorant Garamond', serif;
+      --body: 'Inter', system-ui, -apple-system, sans-serif;
+
+      --side-padding: clamp(20px, 4.5vw, 72px);
+      --max: 1180px;
+
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding-left: var(--side-padding);
+      padding-right: var(--side-padding);
+    }
+
+    /* TOPBAR */
+    .top {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .top-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: 18px 0;
+      min-height: 64px;
+    }
+    .brand {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(26px, 2.8vw, 32px);
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-transform: uppercase;
+    }
+    .brand .jp {
+      font-family: var(--jp);
+      font-weight: 500;
+      font-size: 0.7em;
+      margin-left: 6px;
+      color: var(--rojo);
+      letter-spacing: 0;
+    }
+    .top-cta { display: inline-flex; gap: 8px; }
+    .top-cta a {
+      font-family: var(--body);
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 16px;
+      color: var(--ink);
+      min-height: 44px;
+      display: inline-flex; align-items: center;
+      transition: color .2s, background .2s;
+      border: 1px solid transparent;
+    }
+    .top-cta a.primary {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .top-cta a.primary:hover { background: var(--indigo-deep); }
+    .top-cta a.ghost { border-color: var(--line); }
+    .top-cta a.ghost:hover { background: var(--bg-card); border-color: var(--ink); }
+    @media (max-width: 640px) { .top-cta a.ghost { display: none; } }
+
+    /* HERO */
+    .hero {
+      padding-top: clamp(48px, 9vw, 120px);
+      padding-bottom: clamp(60px, 10vw, 140px);
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: clamp(40px, 6vw, 90px);
+      align-items: center;
+    }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    .hero-kicker {
+      font-family: var(--body);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--rojo);
+      margin-bottom: 28px;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+    }
+    .hero-kicker::before { content: '一'; font-family: var(--jp); color: var(--rojo); font-weight: 500; }
+
+    h1.hero-h1 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: clamp(46px, 7.5vw + 0.5rem, 86px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      margin: 0 0 clamp(28px, 4vw, 40px) 0;
+      color: var(--ink);
+      max-width: 18ch;
+    }
+    .hero-h1 em { font-style: italic; color: var(--indigo); font-weight: 400; }
+    .hero-h1 .rojo { color: var(--rojo); font-style: italic; font-weight: 400; }
+
+    .hero-lede {
+      font-size: clamp(17px, 1.2vw + 0.4rem, 19px);
+      line-height: 1.7;
+      max-width: 52ch;
+      color: var(--ink-soft);
+      margin: 0 0 clamp(32px, 4.5vw, 44px) 0;
+    }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      min-height: 52px; padding: 0 24px;
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--body);
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: transform .18s var(--ease), background .18s, color .18s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { background: var(--ink); color: var(--bg); }
+    .btn.primary:hover { background: var(--indigo-deep); border-color: var(--indigo-deep); }
+    .btn.ghost:hover { background: var(--bg-card); }
+
+    .hero-photo { position: relative; }
+    .hero-photo img { width: 100%; height: auto; filter: contrast(1.02); }
+    .hero-photo .frame-label {
+      position: absolute;
+      bottom: -28px; left: 0;
+      font-family: var(--jp);
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      color: var(--ink-soft);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-photo .frame-label::before { content: ''; width: 28px; height: 1px; background: var(--rojo); }
+
+    .hero-stats {
+      margin-top: clamp(64px, 8vw, 100px);
+      padding-top: clamp(32px, 4vw, 44px);
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 720px) { .hero-stats { grid-template-columns: repeat(2, 1fr); } }
+    .hero-stats li {
+      list-style: none;
+      font-family: var(--body);
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .hero-stats li strong {
+      display: block;
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 36px;
+      color: var(--indigo);
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+    .hero-stats li:nth-child(2) strong { color: var(--rojo); }
+    .hero-stats li:nth-child(3) strong { color: var(--ocre); }
+    .hero-stats li:nth-child(4) strong { color: var(--ink); }
+
+    /* FILOSOFIA */
+    .filosofia {
+      padding-top: clamp(70px, 10vw, 140px);
+      padding-bottom: clamp(70px, 10vw, 140px);
+      background: var(--bg-card);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .filosofia-inner { max-width: 900px; margin: 0 auto; text-align: center; position: relative; }
+    .filosofia .kanji {
+      font-family: var(--jp);
+      font-size: clamp(60px, 12vw, 160px);
+      line-height: 0.9;
+      color: var(--rojo);
+      opacity: 0.18;
+      margin: 0; letter-spacing: 0;
+    }
+    .filosofia-quote {
+      font-family: var(--display);
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: clamp(-40px, -4vw, -30px) 0 28px 0;
+      position: relative; z-index: 2;
+    }
+    .filosofia-quote em { color: var(--indigo); }
+    .filosofia-source {
+      font-family: var(--body); font-weight: 500;
+      font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    /* RITUAL */
+    .ritual { padding-top: clamp(60px, 9vw, 120px); padding-bottom: clamp(60px, 9vw, 120px); }
+    .section-head { max-width: 700px; margin-bottom: clamp(48px, 6vw, 72px); }
+    .section-eyebrow {
+      font-family: var(--body); font-weight: 500;
+      font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--rojo); display: inline-block; margin-bottom: 18px;
+    }
+    h2.section-h {
+      font-family: var(--display); font-weight: 500;
+      font-size: clamp(38px, 5.5vw, 64px); line-height: 1.05;
+      letter-spacing: -0.02em; color: var(--ink);
+      margin: 0 0 20px 0; max-width: 20ch;
+    }
+    h2.section-h em { font-style: italic; color: var(--indigo); font-weight: 400; }
+    h2.section-h .rojo { color: var(--rojo); font-style: italic; font-weight: 400; }
+    .section-lede {
+      font-size: 17px; line-height: 1.75;
+      color: var(--ink-soft); max-width: 56ch; margin: 0;
+    }
+    .ritual-list { list-style: none; padding: 0; margin: 0; display: grid; gap: clamp(28px, 4vw, 44px); }
+    .ritual-step {
+      display: grid;
+      grid-template-columns: clamp(80px, 12vw, 140px) minmax(0, 1fr);
+      gap: clamp(28px, 4vw, 48px);
+      padding-bottom: clamp(28px, 4vw, 44px);
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+    .ritual-step:last-child { border-bottom: 0; padding-bottom: 0; }
+    .ritual-step .num {
+      font-family: var(--display); font-style: italic; font-weight: 400;
+      font-size: clamp(40px, 5vw, 64px); color: var(--rojo);
+      letter-spacing: -0.01em; line-height: 1;
+    }
+    .ritual-step .num .ja {
+      display: block; font-family: var(--jp); font-style: normal;
+      font-size: 0.45em; color: var(--ink-soft);
+      margin-top: 8px; letter-spacing: 0.08em;
+    }
+    .ritual-step h3 {
+      font-family: var(--display); font-weight: 500;
+      font-size: clamp(26px, 3vw, 34px); line-height: 1.15;
+      letter-spacing: -0.01em; color: var(--ink);
+      margin: 0 0 14px 0;
+    }
+    .ritual-step p {
+      font-size: 16.5px; line-height: 1.75;
+      color: var(--ink-soft); margin: 0; max-width: 56ch;
+    }
+    .ritual-step strong { color: var(--ink); font-weight: 500; }
+
+    /* OMAKASE */
+    .omakase {
+      padding-top: clamp(60px, 9vw, 120px);
+      padding-bottom: clamp(60px, 9vw, 120px);
+      background: var(--bg-deep); color: var(--bg);
+    }
+    .omakase .section-eyebrow { color: var(--ocre); }
+    .omakase h2.section-h { color: var(--bg); }
+    .omakase h2.section-h em { color: var(--ocre); }
+    .omakase h2.section-h .rojo { color: var(--rojo); }
+    .omakase .section-lede { color: color-mix(in srgb, var(--bg) 75%, transparent); }
+    .omakase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 3vw, 36px);
+      margin-top: clamp(36px, 5vw, 56px);
+    }
+    @media (max-width: 800px) { .omakase-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px) { .omakase-grid { grid-template-columns: 1fr; } }
+    .omakase-card figure { margin: 0; background: var(--bg-card); position: relative; }
+    .omakase-card figure img { width: 100%; height: auto; display: block; }
+    .omakase-card .caption { padding: 18px 0 0 0; }
+    .omakase-card .caption h4 {
+      font-family: var(--display); font-weight: 500;
+      font-size: 22px; letter-spacing: -0.005em; color: var(--bg);
+      margin: 0 0 6px 0;
+    }
+    .omakase-card .caption h4 em { font-style: italic; color: var(--ocre); }
+    .omakase-card .caption p {
+      font-size: 14px; line-height: 1.55;
+      color: color-mix(in srgb, var(--bg) 70%, transparent);
+      margin: 0;
+    }
+    .omakase-card .order {
+      font-family: var(--display); font-style: italic;
+      font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rojo); margin-bottom: 8px; display: inline-block;
+    }
+
+    /* CHEF */
+    .chef { padding-top: clamp(60px, 9vw, 120px); padding-bottom: clamp(60px, 9vw, 120px); }
+    .chef-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: clamp(36px, 5vw, 70px);
+      align-items: center;
+    }
+    @media (max-width: 880px) { .chef-grid { grid-template-columns: 1fr; } }
+    .chef-text p {
+      font-size: 17px; line-height: 1.8;
+      color: var(--ink-soft); margin: 0 0 1.2em 0; max-width: 54ch;
+    }
+    .chef-text strong { color: var(--ink); font-weight: 500; }
+    .chef-cv {
+      list-style: none; padding: 0; margin: 32px 0 0 0;
+      display: grid; gap: 14px;
+      border-top: 1px solid var(--line); padding-top: 24px;
+    }
+    .chef-cv li {
+      display: grid; grid-template-columns: 90px 1fr; gap: 24px;
+      font-family: var(--body); font-size: 15px; color: var(--ink);
+    }
+    .chef-cv .year {
+      font-family: var(--display); font-style: italic; font-weight: 500;
+      font-size: 17px; color: var(--rojo);
+    }
+    .chef-photo { position: relative; }
+    .chef-photo img { width: 100%; height: auto; }
+
+    /* INFO PRACTICA */
+    .info-practica {
+      padding-top: clamp(60px, 9vw, 120px);
+      padding-bottom: clamp(60px, 9vw, 120px);
+      background: var(--bg-card);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(24px, 3.5vw, 40px);
+      margin-top: clamp(40px, 5vw, 60px);
+    }
+    @media (max-width: 800px) { .info-grid { grid-template-columns: 1fr; } }
+    .info-card {
+      padding: clamp(28px, 3.5vw, 40px);
+      border: 1px solid var(--line); background: var(--bg);
+      position: relative;
+    }
+    .info-card .num {
+      font-family: var(--jp);
+      font-size: 36px; color: var(--rojo);
+      letter-spacing: 0; margin-bottom: 14px;
+    }
+    .info-card h3 {
+      font-family: var(--display); font-weight: 500;
+      font-size: 26px; letter-spacing: -0.01em; color: var(--ink);
+      margin: 0 0 14px 0;
+    }
+    .info-card p {
+      font-size: 15.5px; line-height: 1.65;
+      color: var(--ink-soft); margin: 0;
+    }
+    .info-card .precio {
+      margin-top: 18px; padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-family: var(--display); font-style: italic;
+      font-size: 24px; color: var(--indigo);
+    }
+
+    /* FAQ */
+    .faq { padding-top: clamp(60px, 9vw, 120px); padding-bottom: clamp(60px, 9vw, 120px); }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.3fr);
+      gap: clamp(36px, 5vw, 64px);
+      align-items: start;
+    }
+    @media (max-width: 820px) { .faq-grid { grid-template-columns: 1fr; } }
+    .faq-list { list-style: none; padding: 0; margin: 0; }
+    .faq-list details { border-bottom: 1px solid var(--line); padding: 28px 0; }
+    .faq-list details:first-child { border-top: 1px solid var(--line); }
+    .faq-list summary {
+      list-style: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1rem;
+      font-family: var(--display); font-weight: 500;
+      font-size: clamp(22px, 2.4vw, 28px);
+      letter-spacing: -0.01em; color: var(--ink);
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+'; font-family: var(--display); font-weight: 400;
+      font-size: 32px; color: var(--rojo);
+      transition: transform .25s var(--ease);
+    }
+    .faq-list details[open] summary::after { content: '−'; color: var(--indigo); }
+    .faq-list .faq-body {
+      margin-top: 14px; font-size: 16px; line-height: 1.7;
+      color: var(--ink-soft); max-width: 62ch;
+    }
+
+    /* VISITA */
+    .visita {
+      padding-top: clamp(60px, 9vw, 120px);
+      padding-bottom: clamp(60px, 9vw, 120px);
+      background: var(--bg-deep); color: var(--bg);
+    }
+    .visita .section-eyebrow { color: var(--ocre); }
+    .visita h2.section-h { color: var(--bg); }
+    .visita h2.section-h em { color: var(--ocre); }
+    .visita .section-lede { color: color-mix(in srgb, var(--bg) 75%, transparent); }
+    .visita-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      gap: clamp(28px, 4vw, 48px);
+      align-items: stretch;
+      margin-top: clamp(36px, 5vw, 56px);
+    }
+    @media (max-width: 880px) { .visita-grid { grid-template-columns: 1fr; } }
+    .visita-info dl { display: grid; gap: 26px; margin: 0; }
+    .visita-info .row {
+      border-top: 1px solid color-mix(in srgb, var(--bg) 25%, transparent);
+      padding-top: 18px;
+    }
+    .visita-info .row:last-child { border-bottom: 1px solid color-mix(in srgb, var(--bg) 25%, transparent); padding-bottom: 18px; }
+    .visita-info .label {
+      font-family: var(--body); font-weight: 500;
+      font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--ocre); margin-bottom: 10px;
+    }
+    .visita-info .value {
+      font-family: var(--display); font-size: 22px; color: var(--bg);
+      letter-spacing: -0.005em;
+    }
+    .visita-info .value a { border-bottom: 1px solid var(--ocre); }
+    .visita-info .value a:hover { color: var(--ocre); }
+    .visita-info .city {
+      display: block; font-family: var(--body); font-size: 14px;
+      color: color-mix(in srgb, var(--bg) 70%, transparent);
+      margin-top: 6px;
+    }
+    .hours-list { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
+    .hours-list li {
+      display: flex; justify-content: space-between;
+      font-family: var(--body); font-size: 15px; padding: 6px 0;
+    }
+    .hours-list .day { color: color-mix(in srgb, var(--bg) 70%, transparent); }
+    .hours-list .time { color: var(--bg); font-family: var(--body); font-size: 14px; font-weight: 500; }
+    .hours-list li.now { background: color-mix(in srgb, var(--ocre) 22%, transparent); padding: 8px 12px; border-radius: 4px; margin: 0 -12px; }
+    .hours-list li.now .day, .hours-list li.now .time { color: var(--ocre); font-weight: 600; }
+    .hours-list li.now .day::before { content: "●"; color: var(--ocre); font-size: 9px; margin-right: 8px; animation: pulse 1.6s ease-in-out infinite; display: inline-block; }
+    .hours-list li.closed .time { color: color-mix(in srgb, var(--bg) 35%, transparent); font-style: italic; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .mapa-wrap {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border: 1px solid var(--ocre);
+      background: var(--bg);
+      min-height: 360px;
+    }
+    .mapa-wrap iframe { width: 100%; height: 100%; border: 0; filter: invert(0.92) hue-rotate(180deg) saturate(0.85); }
+    .mapa-cta {
+      position: absolute;
+      bottom: 14px; right: 14px;
+      background: var(--ocre); color: var(--bg);
+      padding: 12px 18px;
+      font-family: var(--body); font-weight: 500;
+      font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+      min-height: 44px;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      transition: all .3s;
+    }
+    .mapa-cta:hover { background: var(--bg); color: var(--ink); }
+    @media (max-width: 600px) { .mapa-wrap { aspect-ratio: 1/1; min-height: 320px; } }
+
+    /* FOOTER */
+    footer.foot { padding: clamp(48px, 7vw, 80px) 0; background: var(--bg); }
+    .foot-row {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      gap: 2rem; flex-wrap: wrap;
+    }
+    .foot-brand {
+      font-family: var(--display); font-weight: 500;
+      font-size: clamp(48px, 7vw, 84px);
+      letter-spacing: 0.08em; line-height: 0.9;
+      color: var(--ink); text-transform: uppercase;
+    }
+    .foot-brand .jp {
+      display: block; font-family: var(--jp);
+      font-size: 0.35em; color: var(--rojo);
+      letter-spacing: 0; margin-top: 8px;
+    }
+    .foot-meta {
+      font-family: var(--body); font-size: 12px;
+      letter-spacing: 0.1em; color: var(--ink-soft);
+      text-transform: uppercase; text-align: right; line-height: 1.7;
+    }
+    .foot-attr {
+      margin-top: clamp(28px, 3.5vw, 40px);
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-family: var(--body); font-size: 11px;
+      letter-spacing: 0.08em; color: var(--ink-soft);
+    }
+
+    /* RESERVA DIALOG */
+    .reserva-dialog {
+      border: none; padding: 0;
+      max-width: 500px; width: calc(100% - 2rem);
+      background: var(--bg-card); color: var(--ink);
+      border-radius: 0;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.32);
+      border: 1px solid var(--ink);
+    }
+    .reserva-dialog::backdrop { background: rgba(20, 23, 28, 0.85); backdrop-filter: blur(6px); }
+    .reserva-dialog[open] { animation: dialog-in 0.35s var(--ease); }
+    @keyframes dialog-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .reserva-form { padding: clamp(2rem, 4vw, 2.75rem); display: flex; flex-direction: column; gap: 16px; }
+    .reserva-form h2 {
+      font-family: var(--display); font-weight: 500;
+      font-size: clamp(28px, 4vw, 36px);
+      letter-spacing: -0.01em; color: var(--ink); margin: 0;
+    }
+    .reserva-form h2 em { font-style: italic; color: var(--rojo); }
+    .reserva-intro { font-size: 14.5px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 0.5rem 0; }
+    .reserva-form label {
+      display: flex; flex-direction: column; gap: 6px;
+      font-family: var(--body); font-weight: 500;
+      font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .reserva-form input, .reserva-form select {
+      font: inherit; font-family: var(--body); font-size: 15px; font-weight: 400;
+      letter-spacing: normal; text-transform: none;
+      padding: 12px 14px;
+      border: 1px solid var(--line); background: var(--bg);
+      color: var(--ink); border-radius: 0; min-height: 44px;
+    }
+    .reserva-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .reserva-actions { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+    .reserva-actions button { flex: 1 1 auto; min-height: 48px; padding: 0 22px;
+      font-family: var(--body); font-weight: 500; font-size: 12px; letter-spacing: 0.16em;
+      text-transform: uppercase; border: 1px solid var(--ink); transition: background .2s, color .2s; }
+    .reserva-actions .submit { background: var(--ink); color: var(--bg); }
+    .reserva-actions .submit:hover { background: var(--indigo-deep); border-color: var(--indigo-deep); }
+    .reserva-actions .cancel { background: transparent; color: var(--ink); }
+    .reserva-actions .cancel:hover { background: var(--bg); }
+    .reserva-foot { font-family: var(--body); font-size: 11px; letter-spacing: 0.1em; color: var(--ink-soft); margin-top: 6px; }
+
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  
+/* ✦ OVERFLOW-FIX-START ✦ */
+/* Defensiva: ningún elemento se sale del viewport en ningún viewport. */
+html, body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+/* Wrappers de mapa (3 nombres usados por los 4 sub-agents):
+   map-wrap, mapa-wrap, .map  — todos limitados a su grid cell. */
+.map-wrap, .mapa-wrap, .visita .map, .map.reveal, .map {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+/* Replaced elements: nunca exceden su contenedor.
+   Crítico para iframe Google Maps con aspect-ratio + align-items: stretch. */
+.map-wrap iframe, .mapa-wrap iframe, .visita iframe, .map iframe {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: 0;
+}
+img, video, picture, iframe {
+  max-width: 100%;
+}
+/* CTAs absolutos dentro del wrap: nunca cortados, pero ojo con tamaño. */
+.map-cta, .mapa-cta {
+  max-width: calc(100% - 28px);
+}
+/* Grid items: min-width: 0 evita que el contenido empuje la columna. */
+.visita-grid > *, .visita > * {
+  min-width: 0;
+}
+/* ✦ OVERFLOW-FIX-END ✦ */
+
+/* ✦ VISUAL-BUGS-FIX-START ✦ */
+
+/* ─── BUG 1: dialog HTML5 nativo no se centra solo ───
+   Cubrimos múltiples nombres de clase usados por los sub-agents:
+   .reserva-dialog (batch 16-20 sub-agent #2), genéricos, etc.
+   La doble especificidad dialog.X[open] supera la del CSS sub-agent. */
+dialog[open],
+.reserva-dialog[open],
+.reserva-modal[open],
+.modal[open],
+dialog.reserva-dialog[open],
+dialog.modal[open] {
+  position: fixed !important;
+  inset: 0 !important;
+  margin: auto !important;
+  transform: none !important; /* anula translateY de animación entrada */
+  max-height: calc(100% - 2rem) !important;
+  box-sizing: border-box !important;
+}
+/* Backdrop oscurece el resto para no ver layout debajo (UX modal) */
+dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ─── BUG 2: grids con imágenes de proporciones mixtas dejaban huecos ───
+   Solución: Flex con wrap + align-items: flex-start.
+   - Cada figure ocupa 50% (gap mediante) — orden DOM se respeta left-to-right
+   - align-items: flex-start evita que las celdas se estiren a la altura mayor
+   - CSS Columns era opción pero con 2 elementos balancea mal (apila ambos en col 2) */
+.gal-grid, .galeria, .galeria-grid, .gallery, .gallery-grid,
+[class*="gallery"], [class*="galer"], [class*="gal-grid"] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: clamp(16px, 2.5vw, 32px) !important;
+  align-items: flex-start !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+  column-count: auto !important;
+}
+
+/* Figures dentro: 50% ancho menos mitad del gap, altura natural */
+.gal-figure, .galeria figure, .galeria-grid figure,
+.gallery figure, .gallery-grid figure,
+[class*="galer"] figure, [class*="gallery"] figure,
+figure.reveal {
+  flex: 0 0 calc(50% - clamp(8px, 1.25vw, 16px)) !important;
+  max-width: calc(50% - clamp(8px, 1.25vw, 16px)) !important;
+  margin: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important;
+}
+
+/* Mobile: 1 columna full-width */
+@media (max-width: 640px) {
+  .gal-figure, .galeria figure, .galeria-grid figure,
+  .gallery figure, .gallery-grid figure,
+  [class*="galer"] figure, [class*="gallery"] figure,
+  figure.reveal {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Imágenes en figures: respetar aspect-ratio natural */
+.gal-figure > img, .galeria figure > img, .galeria-grid figure > img,
+.gallery figure > img, .gallery-grid figure > img,
+[class*="galer"] figure > img, [class*="gallery"] figure > img,
+figure.reveal > img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  aspect-ratio: auto !important;
+}
+
+/* ✦ VISUAL-BUGS-FIX-END ✦ */
+</style>
+
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#top">SUTO<span class="jp">須藤</span></a>
+    <nav class="top-cta">
+      <a class="ghost" href="#ritual">Omakase</a>
+      <a class="ghost" href="#chef">Chef</a>
+      <a class="primary" href="tel:+34610908651">Llamar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="hero-kicker">Sants · Estrella Michelin 2024 — 2025</span>
+        <h1 class="hero-h1">Seis comensales. Una <em>barra</em>. Un menú que el chef <span class="rojo">elige</span> esa mañana.</h1>
+        <p class="hero-lede">Suto es un izakaya gastronómico en Sants. El chef Yoshikazu Suto, formado en Azurmendi, Quique Dacosta, Enigma y Disfrutar, cocina un omakase único delante de seis comensales por turno. El menú cambia cada estación según el pescado que encuentra esa mañana en el mercado central.</p>
+        <div class="hero-actions">
+          <button class="btn primary" onclick="document.getElementById('reservaDialog').showModal()">Reservar omakase</button>
+          <a class="btn ghost" href="tel:+34610908651">Llamar 610 90 86 51</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Carrer+de+Violant+d%27Hongria+Reina+d%27Arag%C3%B3+134+08028+Barcelona" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="hero-photo reveal">
+        <img src="img/suto-42.webp" alt="Chef Yoshikazu Suto preparando nigiris detrás de la barra de cocina abierta" width="1000" height="750" fetchpriority="high" loading="eager" decoding="async">
+        <div class="frame-label">Yoshikazu Suto · cocina abierta</div>
+      </div>
+    </div>
+
+    <ul class="hero-stats reveal">
+      <li><strong>6</strong>comensales · barra</li>
+      <li><strong>14 - 16</strong>pases · omakase</li>
+      <li><strong>145 €</strong>menú mediodía</li>
+      <li><strong>★</strong>Michelin 2024 / 2025</li>
+    </ul>
+  </div>
+</section>
+
+<section class="filosofia">
+  <div class="wrap">
+    <div class="filosofia-inner reveal">
+      <p class="kanji">旬</p>
+      <p class="filosofia-quote">"Que el plato hable del <em>momento</em>, no del cocinero. Si el salmonete está perfecto hoy, no tiene sentido cocinarlo mañana."</p>
+      <p class="filosofia-source">— Yoshikazu Suto · chef y propietario</p>
+    </div>
+  </div>
+</section>
+
+<section class="ritual" id="ritual">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">El ritual</span>
+      <h2 class="section-h">Un omakase contado en <em>cuatro tiempos</em>.</h2>
+      <p class="section-lede">Una cena en Suto dura entre dos y dos horas y media. No es un menú de varios servicios independientes: es una secuencia diseñada, donde cada pase prepara el siguiente. Tienes que llegar puntual: empezamos los seis a la vez.</p>
+    </header>
+
+    <ol class="ritual-list">
+      <li class="ritual-step reveal">
+        <div class="num">I<span class="ja">序 · jo</span></div>
+        <div>
+          <h3>Llegada y bienvenida — té y mizu.</h3>
+          <p>Os recibimos en la barra. Té frío de cebada (mugi-cha) y un vasito de agua del manantial. El chef saluda en silencio, encadena la primera pieza. <strong>No hay cubiertos.</strong> Palillos, dedos, cerámica. Os contamos qué pescado hemos escogido hoy en pizarra antes de empezar.</p>
+        </div>
+      </li>
+      <li class="ritual-step reveal">
+        <div class="num">II<span class="ja">破 · ha</span></div>
+        <div>
+          <h3>Los seis primeros pases — cocina caliente y entrantes fríos.</h3>
+          <p>Cocina caliente al fuego de carbón binchotan: ostras gratinadas, daikon ablandado en dashi, foie de pato curado, costillas de cerdo de la dehesa cocidas durante doce horas, encurtidos. Salseado al momento. Entre pase y pase, <strong>el chef explica el origen del producto</strong> en castellano y japonés.</p>
+        </div>
+      </li>
+      <li class="ritual-step reveal">
+        <div class="num">III<span class="ja">急 · kyu</span></div>
+        <div>
+          <h3>Sashimi y nigiri — el corazón del menú.</h3>
+          <p>De siete a nueve piezas de sashimi y nigiri. Atún de Cádiz, lubina del Cantábrico, pez blanco de Palamós, salmón de Noruega, anguila a la brasa. Arroz Koshihikari al vinagre de la casa, soja artesana de Aichi, wasabi rallado al momento. <strong>Cada pieza dura una hora de preparación previa, dos segundos en la boca.</strong></p>
+        </div>
+      </li>
+      <li class="ritual-step reveal">
+        <div class="num">IV<span class="ja">結 · ketsu</span></div>
+        <div>
+          <h3>Sopa, arroz y postre — el cierre.</h3>
+          <p>Un cuenco final de sopa de miso casero con almeja chirla. Bol pequeño de arroz cocido en olla de hierro fundido con encurtidos suaves. Postre simple: helado de matcha o crema dulce de azuki con galleta de soba. <strong>Café o té frío</strong> servido como sello. Se acaba el menú en silencio.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="omakase">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">Algunos pases</span>
+      <h2 class="section-h">Cocina <em>de temporada</em> hecha a la <span class="rojo">vista</span>.</h2>
+      <p class="section-lede">Estos son algunos pases representativos del menú actual. Recordatorio: el menú cambia cada estación. Lo que ves no es lo que vas a comer la noche de tu reserva: es la línea de trabajo del chef.</p>
+    </header>
+
+    <div class="omakase-grid">
+      <article class="omakase-card reveal">
+        <figure><img src="img/suto-44.webp" alt="Pase de izakaya con caldo dashi, cerdo y flor de cerezo en cuenco de cerámica" width="1400" height="1050" loading="lazy" decoding="async"></figure>
+        <div class="caption">
+          <span class="order">Pase I · ha</span>
+          <h4>Costilla en <em>caldo</em></h4>
+          <p>Costilla de cerdo ibérico cocida doce horas en caldo dashi de bonito, con pétalo de flor de cerezo curada.</p>
+        </div>
+      </article>
+      <article class="omakase-card reveal">
+        <figure><img src="img/suto-front-2.webp" alt="Bandeja con seis ostras gratinadas en cuencos de cerámica roja sobre piedras" width="1400" height="1867" loading="lazy" decoding="async"></figure>
+        <div class="caption">
+          <span class="order">Pase II · ha</span>
+          <h4>Ostras al <em>binchotan</em></h4>
+          <p>Ostras del Delta del Ebro gratinadas con mantequilla de miso blanco al carbón binchotan. Servidas sobre piedras del mar.</p>
+        </div>
+      </article>
+      <article class="omakase-card reveal">
+        <figure><img src="img/suto-46.webp" alt="Nigiri de pez blanco con ralladura de yuzu sobre cerámica" width="1400" height="1050" loading="lazy" decoding="async"></figure>
+        <div class="caption">
+          <span class="order">Pase III · kyu</span>
+          <h4>Nigiri pez <em>blanco</em></h4>
+          <p>Lomo de salmonete de Palamós, ralladura de yuzu, arroz Koshihikari templado, gota de soja madurada cinco años.</p>
+        </div>
+      </article>
+      <article class="omakase-card reveal">
+        <figure><img src="img/suto-45.webp" alt="Dos maki: uno con caviar y huevas, otro con cebollino sobre cerámica" width="1400" height="1050" loading="lazy" decoding="async"></figure>
+        <div class="caption">
+          <span class="order">Pase IV · kyu</span>
+          <h4>Maki <em>doble</em></h4>
+          <p>Norimaki de salmón con huevas de salmón curadas en sake. Y norimaki de toro picado con cebollino y caviar.</p>
+        </div>
+      </article>
+      <article class="omakase-card reveal">
+        <figure><img src="img/suto-front-3.webp" alt="Dos bocados de tartar de atún sobre alga nori frita en círculo" width="1400" height="1867" loading="lazy" decoding="async"></figure>
+        <div class="caption">
+          <span class="order">Pase V · kyu</span>
+          <h4>Tartar de <em>otoro</em></h4>
+          <p>Otoro de atún rojo picado a mano, sobre alga nori frita al momento, con tobiko (huevas de pez volador).</p>
+        </div>
+      </article>
+      <article class="omakase-card reveal">
+        <figure><img src="img/suto-4c.webp" alt="Chef Suto cocinando en la cocina abierta detrás de la barra" width="1400" height="1867" loading="lazy" decoding="async"></figure>
+        <div class="caption">
+          <span class="order">El equipo</span>
+          <h4>La cocina <em>abierta</em></h4>
+          <p>El chef Yoshikazu Suto y su segundo de cocina trabajan delante de los comensales durante toda la cena.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="chef" id="chef">
+  <div class="wrap">
+    <div class="chef-grid">
+      <div class="chef-text reveal">
+        <span class="section-eyebrow">El chef</span>
+        <h2 class="section-h">Yoshikazu <em>Suto</em>.</h2>
+        <p>Nacido en Tochigi, en el norte de Tokio, Yoshikazu Suto se formó en cocina kaiseki en Kioto durante seis años antes de mudarse a Europa. Trabajó con <strong>Eneko Atxa en Azurmendi</strong>, con <strong>Quique Dacosta en Denia</strong>, y como sous-chef en <strong>Enigma</strong> y en <strong>Disfrutar</strong> antes de abrir Suto en 2021.</p>
+        <p>Suto es la traducción contemporánea de un <strong>izakaya tradicional</strong>: comida japonesa pensada para acompañar bebida, en un espacio íntimo, con producto del mercado local. Aplica su técnica japonesa a producto del Mediterráneo: <em>"hago cocina japonesa con lo que el Mediterráneo me da hoy"</em>.</p>
+        <p>En 2024 recibió su <strong>primera estrella Michelin</strong> y la mantuvo en 2025. Un Sol Repsol en ambos años. Es uno de los proyectos de autor más singulares de la ciudad: una barra de seis plazas, sin réplica, sin franquicia, sin compromiso con la escalabilidad.</p>
+        <ul class="chef-cv">
+          <li><span class="year">2014</span><span>Inicio formación kaiseki · Kioto · seis años</span></li>
+          <li><span class="year">2018</span><span>Azurmendi · Eneko Atxa · Bilbao</span></li>
+          <li><span class="year">2019</span><span>Quique Dacosta Restaurante · Denia</span></li>
+          <li><span class="year">2020</span><span>Sous-chef en Enigma y Disfrutar · Barcelona</span></li>
+          <li><span class="year">2021</span><span>Abre Suto · Sants · Barcelona</span></li>
+          <li><span class="year">2024</span><span>1 estrella Michelin · 1 Sol Repsol</span></li>
+          <li><span class="year">2025</span><span>Mantiene estrella Michelin y Sol Repsol</span></li>
+        </ul>
+      </div>
+      <div class="chef-photo reveal">
+        <img src="img/suto-4c.webp" alt="Yoshikazu Suto cocinando detrás de la barra abierta de su restaurante en Sants" width="1400" height="1867" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-practica">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">Lo práctico</span>
+      <h2 class="section-h">Tres datos para <em>planificar</em> la cena.</h2>
+      <p class="section-lede">Suto trabaja con turnos cerrados y aforo de seis. Esto significa que la reserva no es flexible: tiene que estar coordinada al detalle. Aquí van los puntos clave para no llevarte sorpresa.</p>
+    </header>
+
+    <div class="info-grid">
+      <article class="info-card reveal">
+        <span class="num">一</span>
+        <h3>Menú único</h3>
+        <p>Solo hay un omakase, decidido por el chef esa mañana. No se puede elegir platos individuales, no hay carta a la vista, no hay sustituciones. Avisa de alergias o intolerancias al reservar con al menos 48 horas.</p>
+        <div class="precio">145 € · mediodía / 165 € · noche</div>
+      </article>
+      <article class="info-card reveal">
+        <span class="num">二</span>
+        <h3>Reserva por turnos</h3>
+        <p>Tres turnos: 13:45 (sólo miércoles y viernes), 20:45, y 22:00 (viernes y sábado). Los seis comienzan a la vez. Si llegáis tarde más de 15 minutos perdéis la reserva y la prepaga.</p>
+        <div class="precio">Pre-pago 50 € · cabeza al confirmar</div>
+      </article>
+      <article class="info-card reveal">
+        <span class="num">三</span>
+        <h3>Bebida y maridaje</h3>
+        <p>Carta breve de vinos (50 € botella) seleccionada por el chef. Sake artesano por copa (12-22 €). Maridaje opcional de cuatro copas (65 €). No es obligatorio: puedes pedir agua o un té frío y comer igual.</p>
+        <div class="precio">Maridaje opcional 65 €</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="preguntas">
+  <div class="wrap">
+    <div class="faq-grid">
+      <header class="section-head reveal" style="margin-bottom: 0;">
+        <span class="section-eyebrow">Preguntas frecuentes</span>
+        <h2 class="section-h">Antes de <em>reservar</em>, esto.</h2>
+        <p class="section-lede" style="margin-top: 20px;">Las dudas que más recibimos por teléfono e Instagram. Si tienes una alergia seria o una necesidad de dieta concreta, contacta antes de reservar para confirmar que podemos adaptarnos.</p>
+      </header>
+      <ul class="faq-list reveal">
+        <li>
+          <details>
+            <summary>¿Qué es exactamente el omakase de Suto?</summary>
+            <div class="faq-body">Omakase significa "lo dejo en tus manos". No hay carta a elegir: el chef Yoshikazu Suto sirve un menú único decidido por él esa mañana, en función de lo que encuentra en el mercado de pescado y de la temporada. Suelen ser entre catorce y dieciséis pases, mezcla de cocina caliente, sashimi, nigiri y postre. Cambia cada estación.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Cuánto cuesta el menú?</summary>
+            <div class="faq-body">El menú omakase tiene un precio fijo de 145 € por persona (mediodía) o 165 € (noche). No incluye bebida. La carta de vinos arranca en 50 € la botella y hay maridaje opcional de cuatro copas por 65 €. También sake japonés por copas desde 12 €. Pago con tarjeta, transferencia o efectivo.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Por qué solo seis comensales?</summary>
+            <div class="faq-body">El chef cocina delante de los seis a la vez para poder cuidar cada pase. Todos empiezan al mismo tiempo y avanzan al mismo ritmo. Eso garantiza que cada pieza llegue a su temperatura óptima. Es lo que llamamos un omakase de barra: experiencia íntima, casi de cocina privada en casa del chef.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Con cuánto tiempo hay que reservar?</summary>
+            <div class="faq-body">Recomendamos reservar con dos meses de antelación para fin de semana, tres semanas para entre semana. Solo aceptamos reservas en grupos cerrados de seis o turnos individuales. Si vais menos de seis, completaremos la barra con otros comensales el día de tu reserva. Sistema de prepago: 50 € por persona al confirmar.</div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>¿Hay opciones para alérgicos al pescado o veganos?</summary>
+            <div class="faq-body">El menú está pensado en torno al pescado y los productos del mar. Adaptamos el menú a alérgicos a mariscos o intolerantes al gluten avisando con 48 horas. Para vegetarianos podemos hacer una versión completamente vegetal, pero hay que confirmarlo al reservar. Para veganos estrictos preferimos que elijáis otro restaurante: nuestro recetario no rinde sin pescado.</div>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visita">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="section-eyebrow">Visítanos</span>
+      <h2 class="section-h">Sants · Violant <em>d'Hongria</em>, 134.</h2>
+      <p class="section-lede" style="margin-top: 14px;">A diez minutos a pie de la estación de Sants. Calle tranquila, fachada discreta, sin ostentación. Llama al timbre marcado "Suto" para acceder al local.</p>
+    </header>
+
+    <div class="visita-grid">
+      <div class="visita-info reveal">
+        <dl>
+          <div class="row">
+            <div class="label">Dirección</div>
+            <div class="value">
+              C. de Violant d'Hongria Reina d'Aragó, 134
+              <span class="city">08028 Barcelona · Sants-Hostafrancs · Metro Sants Estació (L3, L5)</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label">Horarios</div>
+            <ul class="hours-list">
+              <li class="closed"><span class="day">Lunes</span><span class="time">Cerrado</span></li>
+              <li><span class="day">Martes</span><span class="time">20:45 – 00:00</span></li>
+              <li><span class="day">Miércoles</span><span class="time">13:45 – 16:00 · 20:45 – 00:00</span></li>
+              <li><span class="day">Jueves</span><span class="time">20:45 – 00:00</span></li>
+              <li><span class="day">Viernes</span><span class="time">13:45 – 16:00 · 20:45 – 00:00</span></li>
+              <li><span class="day">Sábado</span><span class="time">20:45 – 00:00</span></li>
+              <li class="closed"><span class="day">Domingo</span><span class="time">Cerrado</span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="label">Contacto</div>
+            <div class="value">
+              <a href="tel:+34610908651">+34 610 90 86 51</a>
+              <span class="city">Instagram @suto_barcelona</span>
+            </div>
+          </div>
+        </dl>
+      </div>
+      <div class="mapa-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+de+Violant+d%27Hongria+Reina+d%27Arag%C3%B3+134+08028+Barcelona&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa de Suto en Carrer de Violant d'Hongria Reina d'Aragó 134, Barcelona"></iframe>
+        <a class="mapa-cta" href="https://www.google.com/maps/search/?api=1&query=Carrer+de+Violant+d%27Hongria+Reina+d%27Arag%C3%B3+134+08028+Barcelona" target="_blank" rel="noopener">Cómo llegar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">
+        SUTO
+        <span class="jp">須藤 · バルセロナ</span>
+      </div>
+      <div class="foot-meta">
+        Violant d'Hongria, 134<br>
+        08028 Barcelona · Sants<br>
+        +34 610 90 86 51
+      </div>
+    </div>
+    <p class="foot-attr">Fotografías: Tripadvisor (contenido público del propio restaurante) · Idioma: castellano peninsular · Reservas con prepago · Sistema demo</p>
+  </div>
+</footer>
+
+<dialog id="reservaDialog" class="reserva-dialog" aria-labelledby="reservaTitle">
+  <form method="dialog" class="reserva-form">
+    <h2 id="reservaTitle">Reservar <em>omakase</em></h2>
+    <p class="reserva-intro">El aforo es de 6 plazas por turno. Te confirmamos por WhatsApp con instrucciones de pre-pago (50 € por persona) en menos de 24 horas.</p>
+    <label>Nombre completo
+      <input type="text" name="nombre" required minlength="2" autocomplete="name">
+    </label>
+    <div class="reserva-row">
+      <label>Día
+        <input type="date" name="fecha" required>
+      </label>
+      <label>Turno
+        <select name="turno">
+          <option>20:45 (cena)</option>
+          <option>22:00 (cena · vi/sa)</option>
+          <option>13:45 (mediodía · mi/vi)</option>
+        </select>
+      </label>
+    </div>
+    <div class="reserva-row">
+      <label>Personas
+        <select name="personas">
+          <option>2</option><option>3</option><option>4</option><option>5</option><option>6 (turno completo)</option>
+        </select>
+      </label>
+      <label>Teléfono
+        <input type="tel" name="tel" autocomplete="tel" required>
+      </label>
+    </div>
+    <label>Alergias / restricciones
+      <input type="text" name="alergias" placeholder="Ej.: alergia a marisco, intolerancia gluten, vegetariano">
+    </label>
+    <div class="reserva-actions">
+      <button type="submit" class="submit">Solicitar reserva</button>
+      <button type="button" class="cancel" onclick="document.getElementById('reservaDialog').close()">Cancelar</button>
+    </div>
+    <p class="reserva-foot">Sistema de reservas demo · Confirmación con prepago de 50 € por persona</p>
+  </form>
+</dialog>
+
+<script>
+  (() => {
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('is-visible')); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    els.forEach(el => io.observe(el));
+    setTimeout(() => { document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => el.classList.add('is-visible')); }, 2500);
+  })();
+
+  (() => {
+    const items = document.querySelectorAll('.hours-list li');
+    if (!items.length) return;
+    const jsDay = new Date().getDay();
+    const todayIdx = jsDay === 0 ? 6 : jsDay - 1;
+    items[todayIdx]?.classList.add('now');
+  })();
+
+  document.querySelector('#reservaDialog form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('reservaDialog').close();
+    alert('Solicitud enviada (demo). Te confirmamos por WhatsApp en menos de 24h.');
+  });
+</script>
+</body>
+</html>
